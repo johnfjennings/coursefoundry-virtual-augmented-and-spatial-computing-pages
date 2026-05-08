@@ -132,31 +132,350 @@
   {
     "objectID": "weeks/06-week-06/01-lecture.html",
     "href": "weeks/06-week-06/01-lecture.html",
-    "title": "Week 6 — Lecture",
+    "title": "Virtual, Augmented And Spatial Computing",
     "section": "",
-    "text": "Duration: 1 hour\nIntroduce the main concepts for Week 6. Replace this with your lecture material.\n\n\nBy the end of this lecture, students will be able to:\n\nObjective one\nObjective two\nObjective three\n\n\n\n\n\n\nContent here.\n\n\n\nContent here.\n\n\n\n\n\n\nNote\n\n\n\nKey concept to highlight for this week.",
+    "text": "draft: false author: “Mr. John Jennings”\ntitle: “Week 6: Interaction Design in XR” subtitle: “Analysis, Patterns and Evaluation” format: revealjs: theme: simple slide-number: true chalkboard: false incremental: true transition: slide execute: echo: false —",
     "crumbs": [
       "Week 06",
       "Lecture"
     ]
   },
   {
-    "objectID": "weeks/06-week-06/01-lecture.html#overview",
-    "href": "weeks/06-week-06/01-lecture.html#overview",
-    "title": "Week 6 — Lecture",
-    "section": "",
-    "text": "Duration: 1 hour\nIntroduce the main concepts for Week 6. Replace this with your lecture material.\n\n\nBy the end of this lecture, students will be able to:\n\nObjective one\nObjective two\nObjective three\n\n\n\n\n\n\nContent here.\n\n\n\nContent here.\n\n\n\n\n\n\nNote\n\n\n\nKey concept to highlight for this week.",
+    "objectID": "weeks/06-week-06/01-lecture.html#week-6",
+    "href": "weeks/06-week-06/01-lecture.html#week-6",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Week 6",
+    "text": "Week 6\n\nInteraction Design in XR\nAnalysis, patterns and evaluation\n\nGood design is invisible. Bad design is everywhere.",
     "crumbs": [
       "Week 06",
       "Lecture"
     ]
   },
   {
-    "objectID": "weeks/06-week-06/01-lecture.html#summary",
-    "href": "weeks/06-week-06/01-lecture.html#summary",
-    "title": "Week 6 — Lecture",
-    "section": "Summary",
-    "text": "Summary\nRecap the key points from this lecture in 2–3 sentences.",
+    "objectID": "weeks/06-week-06/01-lecture.html#todays-session",
+    "href": "weeks/06-week-06/01-lecture.html#todays-session",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Today’s session",
+    "text": "Today’s session\n\nInteraction design frameworks for XR\nAnalysing real XR experiences\nInteraction patterns and techniques\nEvaluation methods\nAssessment 2 briefing",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#what-is-interaction-design-in-xr",
+    "href": "weeks/06-week-06/01-lecture.html#what-is-interaction-design-in-xr",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "What is interaction design in XR?",
+    "text": "What is interaction design in XR?\nInteraction design is the practice of designing how users act within a system.\nIn XR this includes:\n\nhow users select objects\nhow users move through space\nhow users manipulate digital content\nhow the system provides feedback",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#why-xr-is-different",
+    "href": "weeks/06-week-06/01-lecture.html#why-xr-is-different",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Why XR is different",
+    "text": "Why XR is different\nTraditional interfaces usually assume:\n\n2D screens\nmouse, keyboard, or touch input\na fixed viewpoint\n\nXR systems introduce:\n\n3D space\nbody-based interaction\ndynamic viewpoint\nspatial audio, haptics, and embodied feedback",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#the-interaction-loop",
+    "href": "weeks/06-week-06/01-lecture.html#the-interaction-loop",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "The interaction loop",
+    "text": "The interaction loop\n\n\n\n\n\nflowchart LR\n  A[User intent] --&gt; B[Input action]\n  B --&gt; C[System response]\n  C --&gt; D[Sensory feedback]\n  D --&gt; A\n  \n\n\n\n\n\n\nIf any part of this loop is weak, the experience feels awkward, confusing, or uncomfortable.",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#core-interaction-questions",
+    "href": "weeks/06-week-06/01-lecture.html#core-interaction-questions",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Core interaction questions",
+    "text": "Core interaction questions\nWhen analysing an XR experience, ask:\n\nWhat is the main input method?\nHow does the user select or manipulate things?\nWhat feedback does the system provide?\nHow does the user move?\nWhat makes the interaction intuitive or frustrating?",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#input-methods-in-xr",
+    "href": "weeks/06-week-06/01-lecture.html#input-methods-in-xr",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Input methods in XR",
+    "text": "Input methods in XR\n\n\n\n\n\n\n\n\nInput type\nExamples\nTypical strengths\n\n\n\n\nControllers\nQuest 2, Vive Pro\nPrecision, reliability\n\n\nHand tracking\nQuest 3, HoloLens 2\nNatural interaction, low abstraction\n\n\nGaze\nPico Neo Eye, HoloLens 2\nHands-free targeting\n\n\nVoice\nHoloLens, mobile AR\nCommand input\n\n\nBody movement\nRoom-scale VR\nEmbodiment and presence",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#selection-techniques",
+    "href": "weeks/06-week-06/01-lecture.html#selection-techniques",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Selection techniques",
+    "text": "Selection techniques\n\n\n\n\n\n\n\n\nTechnique\nDescription\nTypical use\n\n\n\n\nRaycasting\nPointing at a distance\nMenus, distant objects\n\n\nDirect touch\nTouching/grabbing virtual objects\nNear-field interaction\n\n\nGaze and dwell\nLooking at a target for a set time\nAccessibility, hands-free systems\n\n\nPinch gesture\nGesture-confirmed selection\nHand tracking workflows",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#locomotion-techniques",
+    "href": "weeks/06-week-06/01-lecture.html#locomotion-techniques",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Locomotion techniques",
+    "text": "Locomotion techniques\n\n\n\n\n\n\n\n\n\nTechnique\nComfort\nPresence\nNotes\n\n\n\n\nTeleportation\nHigh\nMedium\nReduces sickness but can break flow\n\n\nSmooth locomotion\nMedium to low\nHigh\nMore natural, but can induce discomfort\n\n\nRoom-scale movement\nHigh\nHigh\nExcellent when space allows\n\n\nDash movement\nMedium\nMedium to high\nUseful compromise",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#ui-paradigms",
+    "href": "weeks/06-week-06/01-lecture.html#ui-paradigms",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "UI paradigms",
+    "text": "UI paradigms\n\nDiegetic UI\nUI that exists within the world.\nExamples: - a wrist display - a control panel on a wall - buttons attached to equipment\n\n\nNon-diegetic UI\nUI that exists outside the world fiction.\nExamples: - HUD overlays - floating menus\n\n\nSpatial UI\nUI arranged in 3D space and anchored to the user or environment.\nExamples: - world-locked panels - anchored windows in mixed reality",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#presence-usability-and-comfort",
+    "href": "weeks/06-week-06/01-lecture.html#presence-usability-and-comfort",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Presence, usability and comfort",
+    "text": "Presence, usability and comfort\nGood interaction design in XR should consider:\n\npresence: does the interaction support the feeling of being there?\nusability: can users understand what to do?\ncomfort: does the interaction reduce fatigue, confusion, and motion sickness?\naccessibility: can different users complete tasks successfully?",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#framework-for-analysis-pact",
+    "href": "weeks/06-week-06/01-lecture.html#framework-for-analysis-pact",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Framework for analysis: PACT",
+    "text": "Framework for analysis: PACT\n\n\n\n\n\n\n\nElement\nQuestions\n\n\n\n\nPeople\nWho are the users? What abilities, expectations, or limitations matter?\n\n\nActivities\nWhat are they trying to do?\n\n\nContexts\nWhere and when is the interaction taking place?\n\n\nTechnologies\nWhat hardware, software, sensors, and constraints shape the experience?\n\n\n\nPACT is a useful way to structure your case study.",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#example-1-beat-saber",
+    "href": "weeks/06-week-06/01-lecture.html#example-1-beat-saber",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Example 1: Beat Saber",
+    "text": "Example 1: Beat Saber\n\n\n\nAspect\nObservation\n\n\n\n\nInput\nTwo 6DOF controllers\n\n\nInteraction\nDirect embodied slashing\n\n\nFeedback\nStrong visual, audio, and haptic feedback\n\n\nLocomotion\nStationary\n\n\nStrengths\nIntuitive, immediate, highly embodied\n\n\nWeaknesses\nCan be physically tiring, limited interaction range",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#example-2-pokémon-go",
+    "href": "weeks/06-week-06/01-lecture.html#example-2-pokémon-go",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Example 2: Pokémon GO",
+    "text": "Example 2: Pokémon GO\n\n\n\nAspect\nObservation\n\n\n\n\nInput\nTouchscreen, mobile camera, GPS\n\n\nInteraction\nTap, swipe, movement through physical space\n\n\nFeedback\nVisual and audio\n\n\nLocomotion\nReal-world walking\n\n\nStrengths\nBlends physical and digital context\n\n\nWeaknesses\nEnvironmental constraints, limited depth of interaction",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#example-3-hololens-2-spatial-interface",
+    "href": "weeks/06-week-06/01-lecture.html#example-3-hololens-2-spatial-interface",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Example 3: HoloLens 2 spatial interface",
+    "text": "Example 3: HoloLens 2 spatial interface\n\n\n\n\n\n\n\nAspect\nObservation\n\n\n\n\nInput\nHand tracking, gaze, voice\n\n\nInteraction\nAir tap, grab, spatial manipulation\n\n\nFeedback\nVisual anchoring, audio, gesture response\n\n\nStrengths\nSpatial workflow, mixed reality context\n\n\nWeaknesses\nNarrower field of view than ideal, interaction learning curve",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#evaluating-xr-experiences",
+    "href": "weeks/06-week-06/01-lecture.html#evaluating-xr-experiences",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Evaluating XR experiences",
+    "text": "Evaluating XR experiences\nEvaluation helps us understand:\n\nwhat works well\nwhere breakdowns occur\nwhat should be improved\nwhether the design supports user goals",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#heuristic-evaluation-for-xr",
+    "href": "weeks/06-week-06/01-lecture.html#heuristic-evaluation-for-xr",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Heuristic evaluation for XR",
+    "text": "Heuristic evaluation for XR\nUseful adapted heuristics include:\n\nvisibility of system status\nnatural mappings between action and effect\nuser control and freedom\nconsistency of interaction patterns\nprevention of accidental actions\nclear affordances\nreduced memory load\ncomfort and accessibility",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#quick-user-testing-in-xr",
+    "href": "weeks/06-week-06/01-lecture.html#quick-user-testing-in-xr",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Quick user testing in XR",
+    "text": "Quick user testing in XR\nA small user test can still be valuable.\nRecommended process:\n\nGive the user a short task\nObserve where they hesitate or fail\nAsk what confused them\nNote physical discomfort or awkward movement\nIdentify improvements",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#common-interaction-problems-in-xr",
+    "href": "weeks/06-week-06/01-lecture.html#common-interaction-problems-in-xr",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Common interaction problems in XR",
+    "text": "Common interaction problems in XR\n\nunclear affordances\ninconsistent controls\npoor feedback\novercomplicated gestures\nuncomfortable locomotion\nUI placed too close or too far away\nexcessive physical fatigue",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#linking-this-to-your-assignment",
+    "href": "weeks/06-week-06/01-lecture.html#linking-this-to-your-assignment",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Linking this to your assignment",
+    "text": "Linking this to your assignment\nFor Assessment 2, you will do three things:\n\nAnalyse an existing XR experience\nPrototype one key interaction from that experience\nEvaluate your prototype",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-analyse",
+    "href": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-analyse",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Assessment 2: what to analyse",
+    "text": "Assessment 2: what to analyse\nYour analysis should consider:\n\ninteraction design\ninput and output systems\nfeedback\npresence and immersion\nstrengths and weaknesses\ncomfort and accessibility\nrelevant HCI and XR design principles",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-prototype",
+    "href": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-prototype",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Assessment 2: what to prototype",
+    "text": "Assessment 2: what to prototype\nRecreate one key interaction using Unity or Lens Studio.\nPossible examples:\n\nobject grab and manipulation\nray-based menu selection\ngaze interaction\ngesture input\nteleportation or navigation mechanic\n\nKeep it focused. A simple, functional prototype is better than an over-ambitious broken one.",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-evaluate",
+    "href": "weeks/06-week-06/01-lecture.html#assessment-2-what-to-evaluate",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Assessment 2: what to evaluate",
+    "text": "Assessment 2: what to evaluate\nYou should discuss:\n\nwhat works well in your prototype\nwhat does not work as well as the original\nwhat design compromises you made\nwhat you would improve next",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#suggested-structure-for-the-case-study-report",
+    "href": "weeks/06-week-06/01-lecture.html#suggested-structure-for-the-case-study-report",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Suggested structure for the case study report",
+    "text": "Suggested structure for the case study report\n\nIntroduction to the chosen experience\nCritical analysis of the interaction design\nDescription of the prototype\nEvaluation and reflection\nConclusion",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#what-strong-submissions-usually-do",
+    "href": "weeks/06-week-06/01-lecture.html#what-strong-submissions-usually-do",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "What strong submissions usually do",
+    "text": "What strong submissions usually do\n\nanalyse rather than describe\nconnect theory to examples\nfocus on one interaction and do it well\nidentify clear strengths and limitations\nuse appropriate XR terminology accurately",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#common-mistakes-to-avoid",
+    "href": "weeks/06-week-06/01-lecture.html#common-mistakes-to-avoid",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Common mistakes to avoid",
+    "text": "Common mistakes to avoid\n\nchoosing too many interactions\ndescribing features without critique\nbuilding something unrelated to the analysis\nignoring comfort or usability\nfailing to reflect on limitations",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#week-6-lab-activity",
+    "href": "weeks/06-week-06/01-lecture.html#week-6-lab-activity",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Week 6 lab activity",
+    "text": "Week 6 lab activity\nIn the lab, you should:\n\nchoose your XR experience\nidentify one key interaction\nbegin your analysis notes\nset up your Unity or Lens Studio prototype scene",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#suggested-discussion-prompt",
+    "href": "weeks/06-week-06/01-lecture.html#suggested-discussion-prompt",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Suggested discussion prompt",
+    "text": "Suggested discussion prompt\nChoose an XR application and answer:\n\nwhat is the core interaction?\nwhy does it work?\nwhat assumptions does it make about the user?\nhow could it fail for a novice user?",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#key-takeaway",
+    "href": "weeks/06-week-06/01-lecture.html#key-takeaway",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Key takeaway",
+    "text": "Key takeaway\nA strong XR experience is not just technically impressive.\nIt combines:\n\nappropriate input\nclear feedback\ncomfort\nusability\nmeaningful spatial design",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#next-week",
+    "href": "weeks/06-week-06/01-lecture.html#next-week",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Next week",
+    "text": "Next week\n\nEnvironment design in VR, AR and spatial computing\nWe will move from interaction mechanics to space, layout, atmosphere, and behavioural design.",
+    "crumbs": [
+      "Week 06",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-lecture.html#further-reading",
+    "href": "weeks/06-week-06/01-lecture.html#further-reading",
+    "title": "Virtual, Augmented And Spatial Computing",
+    "section": "Further reading",
+    "text": "Further reading\n\nBowman, Kruijff, LaViola and Poupyrev. 3D User Interfaces: Theory and Practice\nLaViola et al. 3D User Interfaces (2nd ed.)\nSlater. Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments\nNielsen. Usability heuristics for user interface design",
     "crumbs": [
       "Week 06",
       "Lecture"
@@ -1560,22 +1879,112 @@
     ]
   },
   {
-    "objectID": "assessments/01-assessment.html",
-    "href": "assessments/01-assessment.html",
-    "title": "Assessment 1",
+    "objectID": "assessments/02-assessment-grading-sheet.html",
+    "href": "assessments/02-assessment-grading-sheet.html",
+    "title": "Assessment 2 — Grading Sheet",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen"
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#student-details",
+    "href": "assessments/02-assessment-grading-sheet.html#student-details",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "",
+    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen"
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#marking-criteria",
+    "href": "assessments/02-assessment-grading-sheet.html#marking-criteria",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n1. Critical Analysis (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nInsightful critique, strong use of XR/HCI concepts, clear understanding of trade-offs\n70–100%\n\n\n\nClear analysis, good use of terminology, some critical insight\n60–69%\n\n\n\nMostly descriptive, limited critique, some relevant concepts\n50–59%\n\n\n\nSuperficial or inaccurate, lacks engagement with course material\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n2. Interaction Prototype (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nFully functional, strong technical competence, clear understanding of input systems\n70–100%\n\n\n\nFunctional with minor issues, good technical understanding\n60–69%\n\n\n\nBasic implementation, limited robustness\n50–59%\n\n\n\nIncomplete or non-functional\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n3. Application of HCI & XR Principles (20%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nStrong, explicit application of principles, clear design reasoning\n70–100%\n\n\n\nSome clear application of principles\n60–69%\n\n\n\nLimited or implicit use of principles\n50–59%\n\n\n\nNo meaningful application\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 20\nComments:\n\n\n\n\n\n\n4. Evaluation & Reflection (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nThoughtful, critical reflection, clear identification of limitations\n70–100%\n\n\n\nClear evaluation with some insight\n60–69%\n\n\n\nBasic reflection, limited depth\n50–59%\n\n\n\nMinimal or no evaluation\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:\n\n\n\n\n\n\n5. Presentation & Communication (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nClear, well-structured report, effective visuals and video\n70–100%\n\n\n\nMostly clear and organised\n60–69%\n\n\n\nSome structure issues\n50–59%\n\n\n\nPoorly presented or unclear\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:"
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#summary",
+    "href": "assessments/02-assessment-grading-sheet.html#summary",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nComponent\nWeight\nMark\nWeighted\n\n\n\n\nCritical Analysis\n30%\n/30\n\n\n\nPrototype\n30%\n/30\n\n\n\nHCI Application\n20%\n/20\n\n\n\nEvaluation\n10%\n/10\n\n\n\nPresentation\n10%\n/10\n\n\n\nTotal\n100%\n\n/100"
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#overall-feedback",
+    "href": "assessments/02-assessment-grading-sheet.html#overall-feedback",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Overall Feedback",
+    "text": "Overall Feedback\nStrengths:\n\n\n\nAreas for Improvement:\n\n\n\nGrade: _______\nMarker Signature: _______________________ Date: ___________"
+  },
+  {
+    "objectID": "assessments/02-assessment.html",
+    "href": "assessments/02-assessment.html",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
     "crumbs": [
       "Assessments",
       "Assessment"
     ]
   },
   {
-    "objectID": "assessments/01-assessment.html#assessment-1",
-    "href": "assessments/01-assessment.html#assessment-1",
-    "title": "Assessment 1",
+    "objectID": "assessments/02-assessment.html#overview",
+    "href": "assessments/02-assessment.html#overview",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment.html#learning-outcomes",
+    "href": "assessments/02-assessment.html#learning-outcomes",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment.html#task",
+    "href": "assessments/02-assessment.html#task",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Task",
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment.html#submission",
+    "href": "assessments/02-assessment.html#submission",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Submission",
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment.html#marking-criteria",
+    "href": "assessments/02-assessment.html#marking-criteria",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment.html#tips",
+    "href": "assessments/02-assessment.html#tips",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Tips",
+    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional",
     "crumbs": [
       "Assessments",
       "Assessment"
@@ -1604,9 +2013,9 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment.html",
-    "href": "assessments/02-assessment.html",
-    "title": "Assessment 2",
+    "objectID": "assessments/01-assessment.html",
+    "href": "assessments/01-assessment.html",
+    "title": "Assessment 1",
     "section": "",
     "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
     "crumbs": [
@@ -1615,9 +2024,9 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment.html#assessment-2",
-    "href": "assessments/02-assessment.html#assessment-2",
-    "title": "Assessment 2",
+    "objectID": "assessments/01-assessment.html#assessment-1",
+    "href": "assessments/01-assessment.html#assessment-1",
+    "title": "Assessment 1",
     "section": "",
     "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
     "crumbs": [

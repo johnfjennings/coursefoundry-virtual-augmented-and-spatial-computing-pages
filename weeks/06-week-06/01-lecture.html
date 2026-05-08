@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 6 — Lecture – Virtual, Augmented And Spatial Computing</title>
+<title>lecture – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,9 +76,13 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<meta property="og:title" content="Week 6 — Lecture – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -635,84 +638,610 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#week-6" id="toc-week-6" class="nav-link active" data-scroll-target="#week-6">Week 6</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#interaction-design-in-xr" id="toc-interaction-design-in-xr" class="nav-link" data-scroll-target="#interaction-design-in-xr">Interaction Design in XR</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#todays-session" id="toc-todays-session" class="nav-link" data-scroll-target="#todays-session">Today’s session</a></li>
+  <li><a href="#what-is-interaction-design-in-xr" id="toc-what-is-interaction-design-in-xr" class="nav-link" data-scroll-target="#what-is-interaction-design-in-xr">What is interaction design in XR?</a></li>
+  <li><a href="#why-xr-is-different" id="toc-why-xr-is-different" class="nav-link" data-scroll-target="#why-xr-is-different">Why XR is different</a></li>
+  <li><a href="#the-interaction-loop" id="toc-the-interaction-loop" class="nav-link" data-scroll-target="#the-interaction-loop">The interaction loop</a></li>
+  <li><a href="#core-interaction-questions" id="toc-core-interaction-questions" class="nav-link" data-scroll-target="#core-interaction-questions">Core interaction questions</a></li>
+  <li><a href="#input-methods-in-xr" id="toc-input-methods-in-xr" class="nav-link" data-scroll-target="#input-methods-in-xr">Input methods in XR</a></li>
+  <li><a href="#selection-techniques" id="toc-selection-techniques" class="nav-link" data-scroll-target="#selection-techniques">Selection techniques</a></li>
+  <li><a href="#locomotion-techniques" id="toc-locomotion-techniques" class="nav-link" data-scroll-target="#locomotion-techniques">Locomotion techniques</a></li>
+  <li><a href="#ui-paradigms" id="toc-ui-paradigms" class="nav-link" data-scroll-target="#ui-paradigms">UI paradigms</a>
+  <ul class="collapse">
+  <li><a href="#diegetic-ui" id="toc-diegetic-ui" class="nav-link" data-scroll-target="#diegetic-ui">Diegetic UI</a></li>
+  <li><a href="#non-diegetic-ui" id="toc-non-diegetic-ui" class="nav-link" data-scroll-target="#non-diegetic-ui">Non-diegetic UI</a></li>
+  <li><a href="#spatial-ui" id="toc-spatial-ui" class="nav-link" data-scroll-target="#spatial-ui">Spatial UI</a></li>
+  </ul></li>
+  <li><a href="#presence-usability-and-comfort" id="toc-presence-usability-and-comfort" class="nav-link" data-scroll-target="#presence-usability-and-comfort">Presence, usability and comfort</a></li>
+  <li><a href="#framework-for-analysis-pact" id="toc-framework-for-analysis-pact" class="nav-link" data-scroll-target="#framework-for-analysis-pact">Framework for analysis: PACT</a></li>
+  <li><a href="#example-1-beat-saber" id="toc-example-1-beat-saber" class="nav-link" data-scroll-target="#example-1-beat-saber">Example 1: Beat Saber</a></li>
+  <li><a href="#example-2-pokémon-go" id="toc-example-2-pokémon-go" class="nav-link" data-scroll-target="#example-2-pokémon-go">Example 2: Pokémon GO</a></li>
+  <li><a href="#example-3-hololens-2-spatial-interface" id="toc-example-3-hololens-2-spatial-interface" class="nav-link" data-scroll-target="#example-3-hololens-2-spatial-interface">Example 3: HoloLens 2 spatial interface</a></li>
+  <li><a href="#evaluating-xr-experiences" id="toc-evaluating-xr-experiences" class="nav-link" data-scroll-target="#evaluating-xr-experiences">Evaluating XR experiences</a></li>
+  <li><a href="#heuristic-evaluation-for-xr" id="toc-heuristic-evaluation-for-xr" class="nav-link" data-scroll-target="#heuristic-evaluation-for-xr">Heuristic evaluation for XR</a></li>
+  <li><a href="#quick-user-testing-in-xr" id="toc-quick-user-testing-in-xr" class="nav-link" data-scroll-target="#quick-user-testing-in-xr">Quick user testing in XR</a></li>
+  <li><a href="#common-interaction-problems-in-xr" id="toc-common-interaction-problems-in-xr" class="nav-link" data-scroll-target="#common-interaction-problems-in-xr">Common interaction problems in XR</a></li>
+  <li><a href="#linking-this-to-your-assignment" id="toc-linking-this-to-your-assignment" class="nav-link" data-scroll-target="#linking-this-to-your-assignment">Linking this to your assignment</a></li>
+  <li><a href="#assessment-2-what-to-analyse" id="toc-assessment-2-what-to-analyse" class="nav-link" data-scroll-target="#assessment-2-what-to-analyse">Assessment 2: what to analyse</a></li>
+  <li><a href="#assessment-2-what-to-prototype" id="toc-assessment-2-what-to-prototype" class="nav-link" data-scroll-target="#assessment-2-what-to-prototype">Assessment 2: what to prototype</a></li>
+  <li><a href="#assessment-2-what-to-evaluate" id="toc-assessment-2-what-to-evaluate" class="nav-link" data-scroll-target="#assessment-2-what-to-evaluate">Assessment 2: what to evaluate</a></li>
+  <li><a href="#suggested-structure-for-the-case-study-report" id="toc-suggested-structure-for-the-case-study-report" class="nav-link" data-scroll-target="#suggested-structure-for-the-case-study-report">Suggested structure for the case study report</a></li>
+  <li><a href="#what-strong-submissions-usually-do" id="toc-what-strong-submissions-usually-do" class="nav-link" data-scroll-target="#what-strong-submissions-usually-do">What strong submissions usually do</a></li>
+  <li><a href="#common-mistakes-to-avoid" id="toc-common-mistakes-to-avoid" class="nav-link" data-scroll-target="#common-mistakes-to-avoid">Common mistakes to avoid</a></li>
+  <li><a href="#week-6-lab-activity" id="toc-week-6-lab-activity" class="nav-link" data-scroll-target="#week-6-lab-activity">Week 6 lab activity</a></li>
+  <li><a href="#suggested-discussion-prompt" id="toc-suggested-discussion-prompt" class="nav-link" data-scroll-target="#suggested-discussion-prompt">Suggested discussion prompt</a></li>
+  <li><a href="#key-takeaway" id="toc-key-takeaway" class="nav-link" data-scroll-target="#key-takeaway">Key takeaway</a></li>
+  <li><a href="#next-week" id="toc-next-week" class="nav-link" data-scroll-target="#next-week">Next week</a>
+  <ul class="collapse">
+  <li><a href="#environment-design-in-vr-ar-and-spatial-computing" id="toc-environment-design-in-vr-ar-and-spatial-computing" class="nav-link" data-scroll-target="#environment-design-in-vr-ar-and-spatial-computing">Environment design in VR, AR and spatial computing</a></li>
+  </ul></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/06-week-06/01-lecture.html">Week 06</a></li><li class="breadcrumb-item"><a href="../../weeks/06-week-06/01-lecture.html">Lecture</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Week 6 — Lecture</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/06-week-06/01-lecture.html">Week 06</a></li><li class="breadcrumb-item"><a href="../../weeks/06-week-06/01-lecture.html">Lecture</a></li></ol></nav></header>
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 1 hour</p>
-<p>Introduce the main concepts for Week 6. Replace this with your lecture material.</p>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
-<p>By the end of this lecture, students will be able to:</p>
+<hr>
+<p>draft: false author: “Mr.&nbsp;John Jennings”</p>
+<p>title: “Week 6: Interaction Design in XR” subtitle: “Analysis, Patterns and Evaluation” format: revealjs: theme: simple slide-number: true chalkboard: false incremental: true transition: slide execute: echo: false —</p>
+<section id="week-6" class="level2">
+<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
+<section id="interaction-design-in-xr" class="level3">
+<h3 class="anchored" data-anchor-id="interaction-design-in-xr">Interaction Design in XR</h3>
+<p>Analysis, patterns and evaluation</p>
+<blockquote class="blockquote">
+<p>Good design is invisible. Bad design is everywhere.</p>
+</blockquote>
+</section>
+</section>
+<section id="todays-session" class="level2">
+<h2 class="anchored" data-anchor-id="todays-session">Today’s session</h2>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
-<li>Objective three</li>
+<li>Interaction design frameworks for XR</li>
+<li>Analysing real XR experiences</li>
+<li>Interaction patterns and techniques</li>
+<li>Evaluation methods</li>
+<li>Assessment 2 briefing</li>
 </ul>
 </section>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
-<section id="part-1-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-1-topic">Part 1: [Topic]</h4>
-<p>Content here.</p>
+<section id="what-is-interaction-design-in-xr" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-interaction-design-in-xr">What is interaction design in XR?</h2>
+<p>Interaction design is the practice of designing <strong>how users act within a system</strong>.</p>
+<p>In XR this includes:</p>
+<ul>
+<li>how users <strong>select</strong> objects</li>
+<li>how users <strong>move</strong> through space</li>
+<li>how users <strong>manipulate</strong> digital content</li>
+<li>how the system provides <strong>feedback</strong></li>
+</ul>
 </section>
-<section id="part-2-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-2-topic">Part 2: [Topic]</h4>
-<p>Content here.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="why-xr-is-different" class="level2">
+<h2 class="anchored" data-anchor-id="why-xr-is-different">Why XR is different</h2>
+<p>Traditional interfaces usually assume:</p>
+<ul>
+<li>2D screens</li>
+<li>mouse, keyboard, or touch input</li>
+<li>a fixed viewpoint</li>
+</ul>
+<p>XR systems introduce:</p>
+<ul>
+<li>3D space</li>
+<li>body-based interaction</li>
+<li>dynamic viewpoint</li>
+<li>spatial audio, haptics, and embodied feedback</li>
+</ul>
+</section>
+<section id="the-interaction-loop" class="level2">
+<h2 class="anchored" data-anchor-id="the-interaction-loop">The interaction loop</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[User intent] --&gt; B[Input action]
+  B --&gt; C[System response]
+  C --&gt; D[Sensory feedback]
+  D --&gt; A
+  
+</pre>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+<p></p></figure><p></p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Key concept to highlight for this week.</p>
 </div>
-</div>
+<p>If any part of this loop is weak, the experience feels awkward, confusing, or uncomfortable.</p>
+</section>
+<section id="core-interaction-questions" class="level2">
+<h2 class="anchored" data-anchor-id="core-interaction-questions">Core interaction questions</h2>
+<p>When analysing an XR experience, ask:</p>
+<ol type="1">
+<li>What is the main input method?</li>
+<li>How does the user select or manipulate things?</li>
+<li>What feedback does the system provide?</li>
+<li>How does the user move?</li>
+<li>What makes the interaction intuitive or frustrating?</li>
+</ol>
+</section>
+<section id="input-methods-in-xr" class="level2">
+<h2 class="anchored" data-anchor-id="input-methods-in-xr">Input methods in XR</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input type</th>
+<th>Examples</th>
+<th>Typical strengths</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Controllers</td>
+<td>Quest 2, Vive Pro</td>
+<td>Precision, reliability</td>
+</tr>
+<tr class="even">
+<td>Hand tracking</td>
+<td>Quest 3, HoloLens 2</td>
+<td>Natural interaction, low abstraction</td>
+</tr>
+<tr class="odd">
+<td>Gaze</td>
+<td>Pico Neo Eye, HoloLens 2</td>
+<td>Hands-free targeting</td>
+</tr>
+<tr class="even">
+<td>Voice</td>
+<td>HoloLens, mobile AR</td>
+<td>Command input</td>
+</tr>
+<tr class="odd">
+<td>Body movement</td>
+<td>Room-scale VR</td>
+<td>Embodiment and presence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="selection-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="selection-techniques">Selection techniques</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Raycasting</td>
+<td>Pointing at a distance</td>
+<td>Menus, distant objects</td>
+</tr>
+<tr class="even">
+<td>Direct touch</td>
+<td>Touching/grabbing virtual objects</td>
+<td>Near-field interaction</td>
+</tr>
+<tr class="odd">
+<td>Gaze and dwell</td>
+<td>Looking at a target for a set time</td>
+<td>Accessibility, hands-free systems</td>
+</tr>
+<tr class="even">
+<td>Pinch gesture</td>
+<td>Gesture-confirmed selection</td>
+<td>Hand tracking workflows</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="locomotion-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="locomotion-techniques">Locomotion techniques</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Comfort</th>
+<th>Presence</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Teleportation</td>
+<td>High</td>
+<td>Medium</td>
+<td>Reduces sickness but can break flow</td>
+</tr>
+<tr class="even">
+<td>Smooth locomotion</td>
+<td>Medium to low</td>
+<td>High</td>
+<td>More natural, but can induce discomfort</td>
+</tr>
+<tr class="odd">
+<td>Room-scale movement</td>
+<td>High</td>
+<td>High</td>
+<td>Excellent when space allows</td>
+</tr>
+<tr class="even">
+<td>Dash movement</td>
+<td>Medium</td>
+<td>Medium to high</td>
+<td>Useful compromise</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ui-paradigms" class="level2">
+<h2 class="anchored" data-anchor-id="ui-paradigms">UI paradigms</h2>
+<section id="diegetic-ui" class="level3">
+<h3 class="anchored" data-anchor-id="diegetic-ui">Diegetic UI</h3>
+<p>UI that exists <strong>within the world</strong>.</p>
+<p>Examples: - a wrist display - a control panel on a wall - buttons attached to equipment</p>
+</section>
+<section id="non-diegetic-ui" class="level3">
+<h3 class="anchored" data-anchor-id="non-diegetic-ui">Non-diegetic UI</h3>
+<p>UI that exists <strong>outside the world fiction</strong>.</p>
+<p>Examples: - HUD overlays - floating menus</p>
+</section>
+<section id="spatial-ui" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-ui">Spatial UI</h3>
+<p>UI arranged in 3D space and anchored to the user or environment.</p>
+<p>Examples: - world-locked panels - anchored windows in mixed reality</p>
 </section>
 </section>
+<section id="presence-usability-and-comfort" class="level2">
+<h2 class="anchored" data-anchor-id="presence-usability-and-comfort">Presence, usability and comfort</h2>
+<p>Good interaction design in XR should consider:</p>
+<ul>
+<li><strong>presence</strong>: does the interaction support the feeling of being there?</li>
+<li><strong>usability</strong>: can users understand what to do?</li>
+<li><strong>comfort</strong>: does the interaction reduce fatigue, confusion, and motion sickness?</li>
+<li><strong>accessibility</strong>: can different users complete tasks successfully?</li>
+</ul>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Recap the key points from this lecture in 2–3 sentences.</p>
+<section id="framework-for-analysis-pact" class="level2">
+<h2 class="anchored" data-anchor-id="framework-for-analysis-pact">Framework for analysis: PACT</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>People</td>
+<td>Who are the users? What abilities, expectations, or limitations matter?</td>
+</tr>
+<tr class="even">
+<td>Activities</td>
+<td>What are they trying to do?</td>
+</tr>
+<tr class="odd">
+<td>Contexts</td>
+<td>Where and when is the interaction taking place?</td>
+</tr>
+<tr class="even">
+<td>Technologies</td>
+<td>What hardware, software, sensors, and constraints shape the experience?</td>
+</tr>
+</tbody>
+</table>
+<p>PACT is a useful way to structure your case study.</p>
+</section>
+<section id="example-1-beat-saber" class="level2">
+<h2 class="anchored" data-anchor-id="example-1-beat-saber">Example 1: Beat Saber</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input</td>
+<td>Two 6DOF controllers</td>
+</tr>
+<tr class="even">
+<td>Interaction</td>
+<td>Direct embodied slashing</td>
+</tr>
+<tr class="odd">
+<td>Feedback</td>
+<td>Strong visual, audio, and haptic feedback</td>
+</tr>
+<tr class="even">
+<td>Locomotion</td>
+<td>Stationary</td>
+</tr>
+<tr class="odd">
+<td>Strengths</td>
+<td>Intuitive, immediate, highly embodied</td>
+</tr>
+<tr class="even">
+<td>Weaknesses</td>
+<td>Can be physically tiring, limited interaction range</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-2-pokémon-go" class="level2">
+<h2 class="anchored" data-anchor-id="example-2-pokémon-go">Example 2: Pokémon GO</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input</td>
+<td>Touchscreen, mobile camera, GPS</td>
+</tr>
+<tr class="even">
+<td>Interaction</td>
+<td>Tap, swipe, movement through physical space</td>
+</tr>
+<tr class="odd">
+<td>Feedback</td>
+<td>Visual and audio</td>
+</tr>
+<tr class="even">
+<td>Locomotion</td>
+<td>Real-world walking</td>
+</tr>
+<tr class="odd">
+<td>Strengths</td>
+<td>Blends physical and digital context</td>
+</tr>
+<tr class="even">
+<td>Weaknesses</td>
+<td>Environmental constraints, limited depth of interaction</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-3-hololens-2-spatial-interface" class="level2">
+<h2 class="anchored" data-anchor-id="example-3-hololens-2-spatial-interface">Example 3: HoloLens 2 spatial interface</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input</td>
+<td>Hand tracking, gaze, voice</td>
+</tr>
+<tr class="even">
+<td>Interaction</td>
+<td>Air tap, grab, spatial manipulation</td>
+</tr>
+<tr class="odd">
+<td>Feedback</td>
+<td>Visual anchoring, audio, gesture response</td>
+</tr>
+<tr class="even">
+<td>Strengths</td>
+<td>Spatial workflow, mixed reality context</td>
+</tr>
+<tr class="odd">
+<td>Weaknesses</td>
+<td>Narrower field of view than ideal, interaction learning curve</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="evaluating-xr-experiences" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-xr-experiences">Evaluating XR experiences</h2>
+<p>Evaluation helps us understand:</p>
+<ul>
+<li>what works well</li>
+<li>where breakdowns occur</li>
+<li>what should be improved</li>
+<li>whether the design supports user goals</li>
+</ul>
+</section>
+<section id="heuristic-evaluation-for-xr" class="level2">
+<h2 class="anchored" data-anchor-id="heuristic-evaluation-for-xr">Heuristic evaluation for XR</h2>
+<p>Useful adapted heuristics include:</p>
+<ul>
+<li>visibility of system status</li>
+<li>natural mappings between action and effect</li>
+<li>user control and freedom</li>
+<li>consistency of interaction patterns</li>
+<li>prevention of accidental actions</li>
+<li>clear affordances</li>
+<li>reduced memory load</li>
+<li>comfort and accessibility</li>
+</ul>
+</section>
+<section id="quick-user-testing-in-xr" class="level2">
+<h2 class="anchored" data-anchor-id="quick-user-testing-in-xr">Quick user testing in XR</h2>
+<p>A small user test can still be valuable.</p>
+<p>Recommended process:</p>
+<ol type="1">
+<li>Give the user a short task</li>
+<li>Observe where they hesitate or fail</li>
+<li>Ask what confused them</li>
+<li>Note physical discomfort or awkward movement</li>
+<li>Identify improvements</li>
+</ol>
+</section>
+<section id="common-interaction-problems-in-xr" class="level2">
+<h2 class="anchored" data-anchor-id="common-interaction-problems-in-xr">Common interaction problems in XR</h2>
+<ul>
+<li>unclear affordances</li>
+<li>inconsistent controls</li>
+<li>poor feedback</li>
+<li>overcomplicated gestures</li>
+<li>uncomfortable locomotion</li>
+<li>UI placed too close or too far away</li>
+<li>excessive physical fatigue</li>
+</ul>
+</section>
+<section id="linking-this-to-your-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="linking-this-to-your-assignment">Linking this to your assignment</h2>
+<p>For Assessment 2, you will do three things:</p>
+<ol type="1">
+<li><strong>Analyse</strong> an existing XR experience</li>
+<li><strong>Prototype</strong> one key interaction from that experience</li>
+<li><strong>Evaluate</strong> your prototype</li>
+</ol>
+</section>
+<section id="assessment-2-what-to-analyse" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-2-what-to-analyse">Assessment 2: what to analyse</h2>
+<p>Your analysis should consider:</p>
+<ul>
+<li>interaction design</li>
+<li>input and output systems</li>
+<li>feedback</li>
+<li>presence and immersion</li>
+<li>strengths and weaknesses</li>
+<li>comfort and accessibility</li>
+<li>relevant HCI and XR design principles</li>
+</ul>
+</section>
+<section id="assessment-2-what-to-prototype" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-2-what-to-prototype">Assessment 2: what to prototype</h2>
+<p>Recreate <strong>one key interaction</strong> using Unity or Lens Studio.</p>
+<p>Possible examples:</p>
+<ul>
+<li>object grab and manipulation</li>
+<li>ray-based menu selection</li>
+<li>gaze interaction</li>
+<li>gesture input</li>
+<li>teleportation or navigation mechanic</li>
+</ul>
+<p>Keep it focused. A simple, functional prototype is better than an over-ambitious broken one.</p>
+</section>
+<section id="assessment-2-what-to-evaluate" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-2-what-to-evaluate">Assessment 2: what to evaluate</h2>
+<p>You should discuss:</p>
+<ul>
+<li>what works well in your prototype</li>
+<li>what does not work as well as the original</li>
+<li>what design compromises you made</li>
+<li>what you would improve next</li>
+</ul>
+</section>
+<section id="suggested-structure-for-the-case-study-report" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-structure-for-the-case-study-report">Suggested structure for the case study report</h2>
+<ol type="1">
+<li>Introduction to the chosen experience</li>
+<li>Critical analysis of the interaction design</li>
+<li>Description of the prototype</li>
+<li>Evaluation and reflection</li>
+<li>Conclusion</li>
+</ol>
+</section>
+<section id="what-strong-submissions-usually-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-strong-submissions-usually-do">What strong submissions usually do</h2>
+<ul>
+<li>analyse rather than describe</li>
+<li>connect theory to examples</li>
+<li>focus on one interaction and do it well</li>
+<li>identify clear strengths and limitations</li>
+<li>use appropriate XR terminology accurately</li>
+</ul>
+</section>
+<section id="common-mistakes-to-avoid" class="level2">
+<h2 class="anchored" data-anchor-id="common-mistakes-to-avoid">Common mistakes to avoid</h2>
+<ul>
+<li>choosing too many interactions</li>
+<li>describing features without critique</li>
+<li>building something unrelated to the analysis</li>
+<li>ignoring comfort or usability</li>
+<li>failing to reflect on limitations</li>
+</ul>
+</section>
+<section id="week-6-lab-activity" class="level2">
+<h2 class="anchored" data-anchor-id="week-6-lab-activity">Week 6 lab activity</h2>
+<p>In the lab, you should:</p>
+<ul>
+<li>choose your XR experience</li>
+<li>identify one key interaction</li>
+<li>begin your analysis notes</li>
+<li>set up your Unity or Lens Studio prototype scene</li>
+</ul>
+</section>
+<section id="suggested-discussion-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-discussion-prompt">Suggested discussion prompt</h2>
+<p>Choose an XR application and answer:</p>
+<ul>
+<li>what is the core interaction?</li>
+<li>why does it work?</li>
+<li>what assumptions does it make about the user?</li>
+<li>how could it fail for a novice user?</li>
+</ul>
+</section>
+<section id="key-takeaway" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaway">Key takeaway</h2>
+<p>A strong XR experience is not just technically impressive.</p>
+<p>It combines:</p>
+<ul>
+<li>appropriate input</li>
+<li>clear feedback</li>
+<li>comfort</li>
+<li>usability</li>
+<li>meaningful spatial design</li>
+</ul>
+</section>
+<section id="next-week" class="level2">
+<h2 class="anchored" data-anchor-id="next-week">Next week</h2>
+<section id="environment-design-in-vr-ar-and-spatial-computing" class="level3">
+<h3 class="anchored" data-anchor-id="environment-design-in-vr-ar-and-spatial-computing">Environment design in VR, AR and spatial computing</h3>
+<p>We will move from <strong>interaction mechanics</strong> to <strong>space, layout, atmosphere, and behavioural design</strong>.</p>
+</section>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li>Bowman, Kruijff, LaViola and Poupyrev. <em>3D User Interfaces: Theory and Practice</em></li>
+<li>LaViola et al.&nbsp;<em>3D User Interfaces</em> (2nd ed.)</li>
+<li>Slater. Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments</li>
+<li>Nielsen. Usability heuristics for user interface design</li>
+</ul>
 
 
 </section>
@@ -1164,4 +1693,5 @@ Note
 
 
 
+<!-- CourseFoundry feedback embed disabled -->
 </body></html>
