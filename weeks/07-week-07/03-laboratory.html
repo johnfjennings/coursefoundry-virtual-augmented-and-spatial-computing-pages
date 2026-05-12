@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 7 — Laboratory – Virtual, Augmented And Spatial Computing</title>
+<title>Week 7 Lab: AR Foundations – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,8 +78,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 7 — Laboratory – Virtual, Augmented And Spatial Computing">
-<meta property="og:description" content="">
+<meta property="og:title" content="Week 7 Lab: AR Foundations – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="AR Foundation Setup and Tap-to-Place Prototype">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
 
@@ -635,17 +634,36 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#safety-setup" id="toc-safety-setup" class="nav-link" data-scroll-target="#safety-setup">Safety / Setup</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure</a>
+  <li><a href="#lab-overview" id="toc-lab-overview" class="nav-link active" data-scroll-target="#lab-overview">Lab Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#required-software-and-hardware" id="toc-required-software-and-hardware" class="nav-link" data-scroll-target="#required-software-and-hardware">Required Software and Hardware</a>
   <ul class="collapse">
-  <li><a href="#step-1-setup" id="toc-step-1-setup" class="nav-link" data-scroll-target="#step-1-setup">Step 1: Setup</a></li>
-  <li><a href="#step-2-experiment-activity" id="toc-step-2-experiment-activity" class="nav-link" data-scroll-target="#step-2-experiment-activity">Step 2: Experiment / Activity</a></li>
-  <li><a href="#step-3-observations" id="toc-step-3-observations" class="nav-link" data-scroll-target="#step-3-observations">Step 3: Observations</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#hardware" id="toc-hardware" class="nav-link" data-scroll-target="#hardware">Hardware</a></li>
   </ul></li>
-  <li><a href="#results-and-analysis" id="toc-results-and-analysis" class="nav-link" data-scroll-target="#results-and-analysis">Results and Analysis</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#part-1-project-setup" id="toc-part-1-project-setup" class="nav-link" data-scroll-target="#part-1-project-setup">Part 1: Project Setup</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-project" id="toc-create-a-new-project" class="nav-link" data-scroll-target="#create-a-new-project">Create a New Project</a></li>
+  <li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages">Install Packages</a></li>
+  <li><a href="#configure-xr" id="toc-configure-xr" class="nav-link" data-scroll-target="#configure-xr">Configure XR</a></li>
+  </ul></li>
+  <li><a href="#part-2-plane-detection" id="toc-part-2-plane-detection" class="nav-link" data-scroll-target="#part-2-plane-detection">Part 2: Plane Detection</a>
+  <ul class="collapse">
+  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task">Task</a></li>
+  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
+  </ul></li>
+  <li><a href="#part-3-tap-to-place-interaction" id="toc-part-3-tap-to-place-interaction" class="nav-link" data-scroll-target="#part-3-tap-to-place-interaction">Part 3: Tap-to-Place Interaction</a>
+  <ul class="collapse">
+  <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task</a></li>
+  <li><a href="#suggested-prefab" id="toc-suggested-prefab" class="nav-link" data-scroll-target="#suggested-prefab">Suggested Prefab</a></li>
+  </ul></li>
+  <li><a href="#part-4-test-and-evaluate" id="toc-part-4-test-and-evaluate" class="nav-link" data-scroll-target="#part-4-test-and-evaluate">Part 4: Test and Evaluate</a>
+  <ul class="collapse">
+  <li><a href="#questions-to-consider" id="toc-questions-to-consider" class="nav-link" data-scroll-target="#questions-to-consider">Questions to Consider</a></li>
+  </ul></li>
+  <li><a href="#deliverable" id="toc-deliverable" class="nav-link" data-scroll-target="#deliverable">Deliverable</a></li>
+  <li><a href="#extension-task" id="toc-extension-task" class="nav-link" data-scroll-target="#extension-task">Extension Task</a></li>
+  <li><a href="#reflection-prompt" id="toc-reflection-prompt" class="nav-link" data-scroll-target="#reflection-prompt">Reflection Prompt</a></li>
   </ul>
 </nav>
     </div>
@@ -654,19 +672,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/07-week-07/01-lecture.html">Week 07</a></li><li class="breadcrumb-item"><a href="../../weeks/07-week-07/03-laboratory.html">Laboratory</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 7 — Laboratory</h1>
+<h1 class="title">Week 7 Lab: AR Foundations</h1>
+<p class="subtitle lead">AR Foundation Setup and Tap-to-Place Prototype</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -677,43 +690,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
+<section id="lab-overview" class="level1">
+<h1>Lab Overview</h1>
+<p>In this lab, you will build a simple augmented reality prototype using Unity and AR Foundation. The goal is to understand how a device detects surfaces in the real world and how virtual content can be placed meaningfully into that space.</p>
 </section>
-<section id="safety-setup" class="level2">
-<h2 class="anchored" data-anchor-id="safety-setup">Safety / Setup</h2>
-<p>Note any safety requirements or required setup before beginning.</p>
+<section id="learning-objectives" class="level1">
+<h1>Learning Objectives</h1>
+<p>By the end of this lab, you should be able to:</p>
+<ol type="1">
+<li>Set up a Unity project for AR development.</li>
+<li>Install and configure the required AR packages.</li>
+<li>Detect real-world planes using AR Foundation.</li>
+<li>Implement a basic tap-to-place interaction.</li>
+<li>Reflect on how spatial anchoring affects usability and presence.</li>
+</ol>
 </section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<section id="required-software-and-hardware" class="level1">
+<h1>Required Software and Hardware</h1>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
+<li>Unity 2022 LTS</li>
+<li>AR Foundation package</li>
+<li>XR Plug-in Management</li>
+<li>OpenXR Plugin</li>
 </ul>
 </section>
-<section id="procedure" class="level2">
-<h2 class="anchored" data-anchor-id="procedure">Procedure</h2>
-<section id="step-1-setup" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-setup">Step 1: Setup</h3>
-<p>Instructions.</p>
-</section>
-<section id="step-2-experiment-activity" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-experiment-activity">Step 2: Experiment / Activity</h3>
-<p>Instructions.</p>
-</section>
-<section id="step-3-observations" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-observations">Step 3: Observations</h3>
-<p>Record your observations here.</p>
+<section id="hardware" class="level2">
+<h2 class="anchored" data-anchor-id="hardware">Hardware</h2>
+<ul>
+<li>Compatible mobile AR device, or</li>
+<li>Quest 3 with pass-through workflow where applicable, or</li>
+<li>Lab-supported AR hardware as directed</li>
+</ul>
 </section>
 </section>
-<section id="results-and-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h2>
-<p>Present your findings. Include tables or calculations as needed.</p>
+<section id="part-1-project-setup" class="level1">
+<h1>Part 1: Project Setup</h1>
+<section id="create-a-new-project" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-project">Create a New Project</h2>
+<ol type="1">
+<li>Open Unity Hub.</li>
+<li>Create a new <strong>3D (URP)</strong> project.</li>
+<li>Name the project <code>Week7_AR_Foundations</code>.</li>
+</ol>
 </section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
-<p>What did this laboratory session demonstrate?</p>
+<section id="install-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-packages">Install Packages</h2>
+<p>Open <strong>Window &gt; Package Manager</strong> and install: - <code>XR Plug-in Management</code> - <code>AR Foundation</code> - Platform-specific AR support packages as required in the lab</p>
+</section>
+<section id="configure-xr" class="level2">
+<h2 class="anchored" data-anchor-id="configure-xr">Configure XR</h2>
+<p>In <strong>Project Settings</strong>: - Enable the appropriate XR plug-in. - Confirm build support for the target device. - Check camera permissions if deploying to a mobile device.</p>
+</section>
+</section>
+<section id="part-2-plane-detection" class="level1">
+<h1>Part 2: Plane Detection</h1>
+<p>AR systems use computer vision and motion tracking to detect flat surfaces such as floors, desks, and walls.</p>
+<section id="task" class="level2">
+<h2 class="anchored" data-anchor-id="task">Task</h2>
+<ol type="1">
+<li>Add an <strong>AR Session</strong> to the scene.</li>
+<li>Add an <strong>AR Session Origin</strong> or equivalent XR rig setup.</li>
+<li>Add the following components where appropriate:
+<ul>
+<li><code>ARPlaneManager</code></li>
+<li><code>ARRaycastManager</code></li>
+</ul></li>
+<li>Enable plane visualisation so that detected surfaces are visible during testing.</li>
+</ol>
+</section>
+<section id="checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
+<p>By this stage, you should be able to move the device around a room and see detected surfaces appear.</p>
+</section>
+</section>
+<section id="part-3-tap-to-place-interaction" class="level1">
+<h1>Part 3: Tap-to-Place Interaction</h1>
+<p>Now you will allow the user to place a virtual object onto a detected plane.</p>
+<section id="task-1" class="level2">
+<h2 class="anchored" data-anchor-id="task-1">Task</h2>
+<p>Implement a script that: 1. Detects a screen tap or selection event. 2. Uses <code>ARRaycastManager</code> to raycast against detected planes. 3. Instantiates a prefab at the hit position. 4. Aligns the object naturally with the surface.</p>
+</section>
+<section id="suggested-prefab" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-prefab">Suggested Prefab</h2>
+<p>Use a simple object such as: - a cube, - a chair, - a plant, or - a branded 3D object relevant to your project idea.</p>
+</section>
+</section>
+<section id="part-4-test-and-evaluate" class="level1">
+<h1>Part 4: Test and Evaluate</h1>
+<p>Test your prototype in at least two different physical environments.</p>
+<section id="questions-to-consider" class="level2">
+<h2 class="anchored" data-anchor-id="questions-to-consider">Questions to Consider</h2>
+<ul>
+<li>How quickly does the device detect planes?</li>
+<li>Does object placement feel stable?</li>
+<li>What happens in poor lighting?</li>
+<li>Does the object appear convincingly anchored in space?</li>
+</ul>
+</section>
+</section>
+<section id="deliverable" class="level1">
+<h1>Deliverable</h1>
+<p>Submit the following at the end of the session: - A screenshot or short capture of your AR prototype in use. - Your Unity project files as instructed by the lecturer. - A short reflection (150–200 words) on what worked well and what limitations you noticed.</p>
+</section>
+<section id="extension-task" class="level1">
+<h1>Extension Task</h1>
+<p>If you finish early, try one of the following: - Allow the user to reposition the object after placement. - Add a second prefab choice. - Add simple scaling or rotation controls. - Experiment with light estimation or occlusion if supported.</p>
+</section>
+<section id="reflection-prompt" class="level1">
+<h1>Reflection Prompt</h1>
+<p>Write briefly about the relationship between technical tracking quality and user experience. For example, how does unstable placement affect presence, trust, or task success in AR?</p>
 
 
 </section>

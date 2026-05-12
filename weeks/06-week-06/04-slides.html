@@ -6,12 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dbc92dda8186f57fa2e333fbb71d6a9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <meta name="author" content="Mr.&nbsp;John Jennings">
-  <title>Virtual, Augmented And Spatial Computing – Week 6 — Slides</title>
+  <title>Virtual, Augmented And Spatial Computing – Week 6: Interaction Design Frameworks &amp; Experience Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,12 +32,10 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d3a3aa3f54883b7e0db9cb621ccb0be5.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e22d31546a1432fbd564381dda967549.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -127,107 +124,269 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Week 6 — Slides – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 6: Interaction Design Frameworks &amp; Experience Analysis – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="Virtual, Augmented and Spatial Computing">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 6 — Slides</h1>
+  <h1 class="title">Week 6: Interaction Design Frameworks &amp; Experience Analysis</h1>
+  <p class="subtitle">Virtual, Augmented and Spatial Computing</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Mr.&nbsp;John Jennings 
-</div>
-</div>
 </div>
 
 </section>
 <section id="week-6-overview" class="slide level2">
 <h2>Week 6 Overview</h2>
-<p>Replace this with your introduction slide.</p>
-<aside class="notes">
-<p>Welcome to Week 6. Today we will be covering…</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="topic-1" class="slide level2">
-<h2>Topic 1</h2>
 <ul>
-<li class="fragment">Key point one</li>
-<li class="fragment">Key point two</li>
-<li class="fragment">Key point three</li>
+<li>Interaction design frameworks for XR</li>
+<li>Analysing XR experiences critically</li>
+<li>Common interaction patterns and anti-patterns</li>
+<li>Evaluation methods</li>
+<li><strong>Assessment 2 briefing</strong></li>
 </ul>
-<aside class="notes">
-<p>Explain Topic 1 here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="topic-2" class="slide level2">
-<h2>Topic 2</h2>
+<section id="why-frameworks" class="slide level2">
+<h2>Why Frameworks?</h2>
+<blockquote>
+<p>“A framework is a lens — it doesn’t tell you what to see, but it tells you where to look.”</p>
+</blockquote>
+<p>Frameworks help us: - Analyse experiences systematically - Communicate design decisions - Identify problems before building - Compare across different experiences</p>
+</section>
+<section id="framework-1-normans-action-cycle" class="slide level2">
+<h2>Framework 1: Norman’s Action Cycle</h2>
+<p>Donald Norman’s 7-stage action cycle applies directly to XR:</p>
+<ol type="1">
+<li><strong>Form a goal</strong> — what does the user want to do?</li>
+<li><strong>Form an intention</strong> — how will they do it?</li>
+<li><strong>Specify an action</strong> — which gesture/input?</li>
+<li><strong>Execute the action</strong> — perform the input</li>
+<li><strong>Perceive the state</strong> — what changed?</li>
+<li><strong>Interpret the state</strong> — what does it mean?</li>
+<li><strong>Evaluate the outcome</strong> — did it work?</li>
+</ol>
+</section>
+<section id="norman-in-xr-failure-points" class="slide level2">
+<h2>Norman in XR: Failure Points</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Common XR Failure</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Form intention</td>
+<td>No affordance — user doesn’t know what’s interactive</td>
+</tr>
+<tr class="even">
+<td>Specify action</td>
+<td>Gesture not discoverable</td>
+</tr>
+<tr class="odd">
+<td>Execute action</td>
+<td>Tracking failure, fatigue</td>
+</tr>
+<tr class="even">
+<td>Perceive state</td>
+<td>No feedback (visual/audio/haptic)</td>
+</tr>
+<tr class="odd">
+<td>Interpret state</td>
+<td>Ambiguous feedback</td>
+</tr>
+<tr class="even">
+<td>Evaluate outcome</td>
+<td>No confirmation of success</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="framework-2-milgrams-reality-virtuality-continuum" class="slide level2">
+<h2>Framework 2: Milgram’s Reality-Virtuality Continuum</h2>
+<pre><code>Real ←————————————————————————→ Virtual
+Environment    AR    MR    AV    Environment</code></pre>
 <ul>
-<li class="fragment">Key point one</li>
-<li class="fragment">Key point two</li>
-<li class="fragment">Key point three</li>
+<li><strong>AR</strong>: Real world + virtual overlays (Snap Spectacles, Hololens 2)</li>
+<li><strong>MR</strong>: Real and virtual interact (Hololens 2, Quest 3 passthrough)</li>
+<li><strong>AV</strong>: Mostly virtual + some real elements</li>
+<li><strong>VR</strong>: Fully virtual (Quest 2, Vive Pro)</li>
 </ul>
-<aside class="notes">
-<p>Explain Topic 2 here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><strong>Design implication</strong>: Interaction design must match the continuum position.</p>
 </section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
+<section id="framework-3-presence-model-slater" class="slide level2">
+<h2>Framework 3: Presence Model (Slater)</h2>
+<p>Two components of presence:</p>
 <ul>
-<li class="fragment">What we covered this week</li>
-<li class="fragment">Key takeaways</li>
+<li><strong>Place Illusion (PI)</strong>: “I am there” — the sense of being in the virtual space</li>
+<li><strong>Plausibility Illusion (Psi)</strong>: “This is real” — events feel like they’re really happening</li>
 </ul>
-<aside class="notes">
-<p>Wrap up the lecture here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><strong>Interaction design affects both</strong>: - Poor interaction breaks PI (you notice the interface) - Inconsistent physics breaks Psi (the world feels fake)</p>
 </section>
-<section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<p><em>Thank you!</em></p>
+<section id="interaction-patterns" class="slide level2">
+<h2>Interaction Patterns</h2>
+<h3 id="pattern-progressive-disclosure">Pattern: Progressive Disclosure</h3>
+<p>Reveal complexity gradually. Don’t show all options at once.</p>
+<h3 id="pattern-spatial-consistency">Pattern: Spatial Consistency</h3>
+<p>Objects stay where you put them. The world has memory.</p>
+<h3 id="pattern-embodied-metaphor">Pattern: Embodied Metaphor</h3>
+<p>Map virtual actions to real-world physical actions. <em>Example</em>: Pull a lever to open a door (not press a button).</p>
+<h3 id="pattern-graceful-degradation">Pattern: Graceful Degradation</h3>
+<p>If tracking fails, fall back gracefully. Don’t crash or freeze.</p>
+</section>
+<section id="interaction-anti-patterns" class="slide level2">
+<h2>Interaction Anti-Patterns</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Anti-Pattern</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Floating menus</td>
+<td>Break immersion, cause eye strain</td>
+</tr>
+<tr class="even">
+<td>Tiny targets</td>
+<td>Violate Fitts’ Law, cause frustration</td>
+</tr>
+<tr class="odd">
+<td>No feedback</td>
+<td>User doesn’t know if action worked</td>
+</tr>
+<tr class="even">
+<td>Gorilla arm UI</td>
+<td>Causes fatigue in minutes</td>
+</tr>
+<tr class="odd">
+<td>Forced smooth locomotion</td>
+<td>Causes sickness for sensitive users</td>
+</tr>
+<tr class="even">
+<td>Invisible affordances</td>
+<td>User can’t discover interactions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="evaluation-methods-for-xr" class="slide level2">
+<h2>Evaluation Methods for XR</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>When</th>
+<th>What it measures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heuristic evaluation</td>
+<td>Early</td>
+<td>Design problems against principles</td>
+</tr>
+<tr class="even">
+<td>Think-aloud</td>
+<td>Mid</td>
+<td>User mental model</td>
+</tr>
+<tr class="odd">
+<td>SUS (System Usability Scale)</td>
+<td>Post-use</td>
+<td>Overall usability score</td>
+</tr>
+<tr class="even">
+<td>SSQ (Simulator Sickness Questionnaire)</td>
+<td>Post-use</td>
+<td>Comfort/sickness</td>
+</tr>
+<tr class="odd">
+<td>Presence questionnaire</td>
+<td>Post-use</td>
+<td>Sense of presence</td>
+</tr>
+<tr class="even">
+<td>Eye tracking heatmap</td>
+<td>During</td>
+<td>Attention patterns</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="heuristic-evaluation-for-xr" class="slide level2">
+<h2>Heuristic Evaluation for XR</h2>
+<p>Nielsen’s 10 heuristics adapted for XR:</p>
+<ol type="1">
+<li>Visibility of system status → <strong>feedback on every interaction</strong></li>
+<li>Match between system and real world → <strong>embodied metaphors</strong></li>
+<li>User control and freedom → <strong>undo, cancel, exit</strong></li>
+<li>Consistency and standards → <strong>consistent gesture vocabulary</strong></li>
+<li>Error prevention → <strong>confirm before destructive actions</strong></li>
+<li>Recognition over recall → <strong>visible affordances</strong></li>
+<li>Flexibility and efficiency → <strong>shortcuts for expert users</strong></li>
+<li>Aesthetic and minimalist design → <strong>diegetic UI</strong></li>
+<li>Help users recognise errors → <strong>clear error states</strong></li>
+<li>Help and documentation → <strong>in-world tutorials</strong></li>
+</ol>
+</section>
+<section id="assessment-2-case-study-brief" class="slide level2">
+<h2>Assessment 2: Case Study Brief</h2>
+<p><strong>Due: End of Week 8</strong> | <strong>Weight: 30%</strong> | <strong>LO2, LO3, LO4</strong></p>
+<h3 id="three-parts">Three Parts:</h3>
+<ol type="1">
+<li><strong>Experience Analysis</strong> (40%)
+<ul>
+<li>Choose a VR or AR experience</li>
+<li>Apply 2 frameworks from today’s lecture</li>
+<li>Identify 3 interaction strengths and 3 weaknesses</li>
+</ul></li>
+<li><strong>Interaction Prototype</strong> (40%)
+<ul>
+<li>Redesign one weak interaction</li>
+<li>Build a low-fi prototype (Unity or paper)</li>
+<li>Justify design decisions using frameworks</li>
+</ul></li>
+<li><strong>Evaluation</strong> (20%)
+<ul>
+<li>Test with 2 users</li>
+<li>Report findings</li>
+<li>Reflect on what you would change</li>
+</ul></li>
+</ol>
+</section>
+<section id="assessment-2-choosing-an-experience" class="slide level2">
+<h2>Assessment 2: Choosing an Experience</h2>
+<p>Good choices: - Beat Saber (interaction design, rhythm, feedback) - Tilt Brush / Open Brush (creative tools, spatial UI) - Microsoft Flight Simulator VR (complex UI, comfort) - Hololens 2 demos (AR interaction, spatial anchoring) - Snap Spectacles experiences (AR, gesture) - Any experience from our lab hardware</p>
+</section>
+<section id="key-takeaways" class="slide level2">
+<h2>Key Takeaways</h2>
+<ul>
+<li>Frameworks give you a systematic language for analysis</li>
+<li>Norman’s Action Cycle identifies where interactions fail</li>
+<li>Milgram’s continuum positions your design in the XR spectrum</li>
+<li>Presence theory explains why interaction quality matters</li>
+<li>Evaluation methods should match your design stage</li>
+</ul>
+</section>
+<section id="references" class="slide level2">
+<h2>References</h2>
+<ul>
+<li>Norman, D. (2013) <em>The Design of Everyday Things</em> (revised ed.). Basic Books.</li>
+<li>Milgram, P. &amp; Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” <em>IEICE Transactions</em>.</li>
+<li>Slater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” <em>Philosophical Transactions of the Royal Society B</em>.</li>
+<li>Nielsen, J. (1994) “Heuristic evaluation.” In Nielsen &amp; Mack (eds.) <em>Usability Inspection Methods</em>. Wiley.</li>
+</ul>
 
 
 </section>
@@ -245,7 +404,6 @@ Mr.&nbsp;John Jennings
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -267,8 +425,7 @@ Mr.&nbsp;John Jennings
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -394,7 +551,7 @@ Mr.&nbsp;John Jennings
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -439,7 +596,7 @@ Mr.&nbsp;John Jennings
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

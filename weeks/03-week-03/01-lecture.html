@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 3 — Lecture – Virtual, Augmented And Spatial Computing</title>
+<title>Week 3 Lecture Notes: Perception and Presence – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 3 — Lecture – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 3 Lecture Notes: Perception and Presence – Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -635,12 +634,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#presence-and-immersion" id="toc-presence-and-immersion" class="nav-link" data-scroll-target="#presence-and-immersion"><span class="header-section-number">2</span> Presence and Immersion</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#defining-presence" id="toc-defining-presence" class="nav-link" data-scroll-target="#defining-presence"><span class="header-section-number">2.1</span> Defining Presence</a></li>
+  <li><a href="#immersion-as-an-objective-property" id="toc-immersion-as-an-objective-property" class="nav-link" data-scroll-target="#immersion-as-an-objective-property"><span class="header-section-number">2.2</span> Immersion as an Objective Property</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#perceptual-modalities" id="toc-perceptual-modalities" class="nav-link" data-scroll-target="#perceptual-modalities"><span class="header-section-number">3</span> Perceptual Modalities</a>
+  <ul class="collapse">
+  <li><a href="#visual-perception" id="toc-visual-perception" class="nav-link" data-scroll-target="#visual-perception"><span class="header-section-number">3.1</span> Visual Perception</a></li>
+  <li><a href="#auditory-perception" id="toc-auditory-perception" class="nav-link" data-scroll-target="#auditory-perception"><span class="header-section-number">3.2</span> Auditory Perception</a></li>
+  <li><a href="#proprioception" id="toc-proprioception" class="nav-link" data-scroll-target="#proprioception"><span class="header-section-number">3.3</span> Proprioception</a></li>
+  <li><a href="#the-vestibular-system" id="toc-the-vestibular-system" class="nav-link" data-scroll-target="#the-vestibular-system"><span class="header-section-number">3.4</span> The Vestibular System</a></li>
+  <li><a href="#haptic-perception" id="toc-haptic-perception" class="nav-link" data-scroll-target="#haptic-perception"><span class="header-section-number">3.5</span> Haptic Perception</a></li>
+  </ul></li>
+  <li><a href="#proximal-and-distal-stimuli" id="toc-proximal-and-distal-stimuli" class="nav-link" data-scroll-target="#proximal-and-distal-stimuli"><span class="header-section-number">4</span> Proximal and Distal Stimuli</a></li>
+  <li><a href="#simulator-sickness" id="toc-simulator-sickness" class="nav-link" data-scroll-target="#simulator-sickness"><span class="header-section-number">5</span> Simulator Sickness</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-symptoms" id="toc-definition-and-symptoms" class="nav-link" data-scroll-target="#definition-and-symptoms"><span class="header-section-number">5.1</span> Definition and Symptoms</a></li>
+  <li><a href="#causes" id="toc-causes" class="nav-link" data-scroll-target="#causes"><span class="header-section-number">5.2</span> Causes</a></li>
+  <li><a href="#mitigation-strategies" id="toc-mitigation-strategies" class="nav-link" data-scroll-target="#mitigation-strategies"><span class="header-section-number">5.3</span> Mitigation Strategies</a></li>
+  </ul></li>
+  <li><a href="#health-effects-and-ethics" id="toc-health-effects-and-ethics" class="nav-link" data-scroll-target="#health-effects-and-ethics"><span class="header-section-number">6</span> Health Effects and Ethics</a>
+  <ul class="collapse">
+  <li><a href="#physical-health-effects" id="toc-physical-health-effects" class="nav-link" data-scroll-target="#physical-health-effects"><span class="header-section-number">6.1</span> Physical Health Effects</a></li>
+  <li><a href="#ethical-responsibilities" id="toc-ethical-responsibilities" class="nav-link" data-scroll-target="#ethical-responsibilities"><span class="header-section-number">6.2</span> Ethical Responsibilities</a></li>
+  </ul></li>
+  <li><a href="#measuring-presence" id="toc-measuring-presence" class="nav-link" data-scroll-target="#measuring-presence"><span class="header-section-number">7</span> Measuring Presence</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -649,19 +671,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/03-week-03/01-lecture.html">Week 03</a></li><li class="breadcrumb-item"><a href="../../weeks/03-week-03/01-lecture.html">Lecture</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 3 — Lecture</h1>
+<h1 class="title">Week 3 Lecture Notes: Perception and Presence</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -672,47 +688,172 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 1 hour</p>
-<p>Introduce the main concepts for Week 3. Replace this with your lecture material.</p>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
-<p>By the end of this lecture, students will be able to:</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.</p>
+<p>The central concept this week is <strong>presence</strong>: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.</p>
+<hr>
+</section>
+<section id="presence-and-immersion" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="presence-and-immersion"><span class="header-section-number">2</span> Presence and Immersion</h2>
+<section id="defining-presence" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="defining-presence"><span class="header-section-number">2.1</span> Defining Presence</h3>
+<p>Presence is one of the most studied and debated concepts in XR research. At its simplest, it is the feeling of “being there” — the sense that you are actually in the virtual environment rather than observing it from outside.</p>
+<p>Mel Slater, one of the leading researchers in this area, distinguishes two components of presence:</p>
+<p><strong>Place Illusion (PI)</strong> is the strong illusion of being in a place even though you know you are not. It is supported primarily by the quality of the sensorimotor contingencies — the relationship between your movements and the changes in the sensory display. If you turn your head and the visual scene updates correctly, your brain interprets this as evidence that you are in a real place.</p>
+<p><strong>Plausibility Illusion (Psi)</strong> is the illusion that what is happening is really happening. It is supported by the responsiveness of the environment — if you reach out and touch a virtual object and it responds, your brain interprets this as evidence that the event is real.</p>
+<p>Slater argues that both PI and Psi are necessary for full presence. A highly immersive display that shows a completely unresponsive environment will produce PI but not Psi. A responsive environment on a low-quality display may produce Psi but not PI.</p>
+</section>
+<section id="immersion-as-an-objective-property" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="immersion-as-an-objective-property"><span class="header-section-number">2.2</span> Immersion as an Objective Property</h3>
+<p>Immersion is often used interchangeably with presence, but they are distinct. Immersion is an objective, measurable property of the technology — it describes how completely the system replaces the user’s sensory input with synthetic input.</p>
+<p>A system with a wide FOV, high resolution, low latency, and spatial audio is more immersive than one with a narrow FOV and no audio. But a user may feel more present in the less immersive system if the content is more compelling and responsive.</p>
+<p>This distinction has important design implications. You cannot guarantee presence by maximising immersion. You must also design content that supports plausibility.</p>
+<hr>
+</section>
+</section>
+<section id="perceptual-modalities" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="perceptual-modalities"><span class="header-section-number">3</span> Perceptual Modalities</h2>
+<p>The brain integrates information from multiple sensory systems simultaneously. In XR, understanding each modality helps you design experiences that support presence and avoid discomfort.</p>
+<section id="visual-perception" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="visual-perception"><span class="header-section-number">3.1</span> Visual Perception</h3>
+<p>Vision is the dominant sense in most XR systems. The visual system provides information about:</p>
+<p><strong>Stereopsis:</strong> The brain uses the slight difference in the images received by each eye (binocular disparity) to compute depth. HMDs present slightly different images to each eye to simulate this. The effectiveness of stereopsis depends on the accuracy of the interpupillary distance (IPD) setting.</p>
+<p><strong>Motion parallax:</strong> As you move your head, objects at different distances move at different rates across your visual field. This is a powerful depth cue that is well-supported by 6DOF tracking.</p>
+<p><strong>Accommodation and vergence:</strong> As discussed in Week 2, the vergence-accommodation conflict is a significant limitation of current HMDs.</p>
+<p><strong>Peripheral vision:</strong> The peripheral visual field is important for detecting motion and maintaining spatial awareness. A narrow FOV that cuts off peripheral vision reduces immersion and can cause disorientation.</p>
+</section>
+<section id="auditory-perception" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="auditory-perception"><span class="header-section-number">3.2</span> Auditory Perception</h3>
+<p>The auditory system contributes significantly to presence. Research has shown that high-quality spatial audio can increase presence scores substantially, and that audio that does not match the visual scene can break presence rapidly.</p>
+<p>The brain localises sounds using:</p>
+<p><strong>Interaural Time Difference (ITD):</strong> The difference in the time it takes for a sound to reach each ear. Sounds from the left arrive at the left ear slightly before the right ear.</p>
+<p><strong>Interaural Level Difference (ILD):</strong> The difference in the loudness of a sound at each ear. The head creates an acoustic shadow that attenuates sounds on the far side.</p>
+<p><strong>Spectral cues:</strong> The shape of the outer ear (pinna) modifies the frequency content of sounds in ways that depend on the direction of the source. These spectral cues are captured in the HRTF and are particularly important for distinguishing sounds above and below the listener.</p>
+</section>
+<section id="proprioception" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="proprioception"><span class="header-section-number">3.3</span> Proprioception</h3>
+<p>Proprioception is the sense of the position and movement of your own body, provided by receptors in muscles, tendons, and joints. It tells you where your limbs are without looking at them.</p>
+<p>In VR, proprioception can conflict with visual information. If you see your virtual hand in a position that does not match where your real hand is, this creates a conflict that can be disorienting. This is why accurate hand tracking and controller tracking are important for natural interaction.</p>
+</section>
+<section id="the-vestibular-system" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="the-vestibular-system"><span class="header-section-number">3.4</span> The Vestibular System</h3>
+<p>The vestibular system, located in the inner ear, detects:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
-<li>Objective three</li>
+<li>linear acceleration (moving forward, backward, up, down)</li>
+<li>rotational acceleration (turning)</li>
+<li>the direction of gravity</li>
+</ul>
+<p>The vestibular system is the primary cause of simulator sickness in VR. When the visual system detects motion (because the virtual environment is moving) but the vestibular system detects no motion (because the user is stationary), the brain interprets this conflict as a sign of poisoning — a response that evolved to protect against neurotoxins that cause hallucinations. The result is nausea.</p>
+<p>This is called <strong>vection</strong> — the perception of self-motion induced by visual stimulation alone.</p>
+</section>
+<section id="haptic-perception" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="haptic-perception"><span class="header-section-number">3.5</span> Haptic Perception</h3>
+<p>The haptic system encompasses touch (cutaneous sensation) and force (kinaesthetic sensation). It provides information about:</p>
+<ul>
+<li>surface texture</li>
+<li>temperature</li>
+<li>compliance (how much an object deforms under pressure)</li>
+<li>weight and inertia</li>
+</ul>
+<p>Current XR systems provide very limited haptic feedback — primarily vibration from controller motors. The absence of rich haptic feedback is a significant limitation for experiences that involve object manipulation, surface interaction, or social presence (the feeling of being with another person).</p>
+<hr>
+</section>
+</section>
+<section id="proximal-and-distal-stimuli" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="proximal-and-distal-stimuli"><span class="header-section-number">4</span> Proximal and Distal Stimuli</h2>
+<p>This distinction, drawn from perceptual psychology, is useful for understanding how XR works.</p>
+<p>The <strong>distal stimulus</strong> is the actual object or event in the world — a tree, a voice, a surface.</p>
+<p>The <strong>proximal stimulus</strong> is the pattern of energy that reaches the sensory receptor — the pattern of light on the retina, the pressure wave at the eardrum, the pressure on the skin.</p>
+<p>The brain never has direct access to the distal stimulus. It only has access to the proximal stimulus, and it must infer the distal stimulus from that. This inference is based on prior experience, context, and the integration of multiple sensory signals.</p>
+<p>XR works by manipulating the proximal stimulus. We cannot put a real tree in front of the user, but we can create a pattern of light on the retina that is consistent with the presence of a tree. If the proximal stimulus is convincing enough, the brain will infer the presence of the tree — and the user will feel present in a forest.</p>
+<p>This framing helps explain why presence is not simply a function of display quality. The brain is not just checking whether the image is photorealistic. It is checking whether the pattern of sensory input is consistent with being in a real place. Consistency across modalities, responsiveness to movement, and plausible cause-and-effect relationships are all important.</p>
+<hr>
+</section>
+<section id="simulator-sickness" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="simulator-sickness"><span class="header-section-number">5</span> Simulator Sickness</h2>
+<section id="definition-and-symptoms" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="definition-and-symptoms"><span class="header-section-number">5.1</span> Definition and Symptoms</h3>
+<p>Simulator sickness is a form of motion sickness that occurs in simulated environments. Symptoms include:</p>
+<ul>
+<li>nausea and stomach discomfort</li>
+<li>disorientation and dizziness</li>
+<li>eye strain and headache</li>
+<li>fatigue</li>
+<li>pallor and sweating in severe cases</li>
+</ul>
+<p>Symptoms typically develop during or after use and can persist for some time after the headset is removed.</p>
+</section>
+<section id="causes" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="causes"><span class="header-section-number">5.2</span> Causes</h3>
+<p><strong>Latency</strong> is the delay between the user’s head movement and the corresponding update of the display. Even small amounts of latency (above approximately 20 milliseconds) can cause discomfort. Modern HMDs use asynchronous timewarp and reprojection techniques to minimise perceived latency.</p>
+<p><strong>Low frame rate</strong> causes judder — a stuttering of the image during movement. This is both visually unpleasant and a significant cause of sickness. Maintaining a consistent frame rate above 72Hz is essential.</p>
+<p><strong>Vection</strong> — visual motion without vestibular motion — is the primary cause of sickness during smooth locomotion in VR. The visual system detects movement, but the vestibular system does not, creating a conflict.</p>
+<p><strong>FOV mismatch</strong> occurs when the visual motion in the display does not match the expected motion for the user’s real-world movement. This can occur with incorrect camera settings or locomotion implementations.</p>
+</section>
+<section id="mitigation-strategies" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="mitigation-strategies"><span class="header-section-number">5.3</span> Mitigation Strategies</h3>
+<p><strong>Teleportation</strong> eliminates vection by moving the user instantaneously rather than continuously. It is the most effective comfort option for locomotion.</p>
+<p><strong>Vignetting</strong> reduces the peripheral visual field during movement, which reduces the vection signal. Many VR games offer this as a comfort option.</p>
+<p><strong>Snap turning</strong> rotates the user’s view in discrete steps rather than continuously, eliminating rotational vection.</p>
+<p><strong>Frame rate maintenance</strong> is critical. Dropping below the target frame rate is more disorienting than a consistently lower frame rate.</p>
+<p><strong>User control</strong> — allowing users to choose their preferred locomotion method and comfort settings — is important because susceptibility to simulator sickness varies significantly between individuals.</p>
+<hr>
+</section>
+</section>
+<section id="health-effects-and-ethics" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="health-effects-and-ethics"><span class="header-section-number">6</span> Health Effects and Ethics</h2>
+<section id="physical-health-effects" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="physical-health-effects"><span class="header-section-number">6.1</span> Physical Health Effects</h3>
+<p>Beyond simulator sickness, extended XR use can cause:</p>
+<ul>
+<li><strong>Eye strain and fatigue</strong> from the vergence-accommodation conflict and sustained focus at a fixed distance</li>
+<li><strong>Neck and shoulder strain</strong> from the weight of the headset and sustained head positions</li>
+<li><strong>Post-VR disorientation</strong> — a brief period of disorientation after removing the headset, particularly after extended use</li>
+<li><strong>Social isolation</strong> — extended use of fully immersive VR removes the user from their physical social environment</li>
 </ul>
 </section>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
-<section id="part-1-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-1-topic">Part 1: [Topic]</h4>
-<p>Content here.</p>
-</section>
-<section id="part-2-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-2-topic">Part 2: [Topic]</h4>
-<p>Content here.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Key concept to highlight for this week.</p>
-</div>
-</div>
+<section id="ethical-responsibilities" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="ethical-responsibilities"><span class="header-section-number">6.2</span> Ethical Responsibilities</h3>
+<p>The power of presence creates ethical responsibilities for XR designers.</p>
+<p><strong>Disclosure:</strong> Users should be informed of potential health risks before using XR systems, particularly for extended sessions.</p>
+<p><strong>Comfort options:</strong> Experiences should provide comfort options (teleportation, vignetting, session time limits) rather than forcing users into uncomfortable configurations.</p>
+<p><strong>Accessibility:</strong> XR experiences should be designed to be accessible to users with different physical abilities, sensory sensitivities, and susceptibilities to simulator sickness.</p>
+<p><strong>Manipulation:</strong> The sense of presence can be exploited to create powerful emotional responses. This raises questions about the ethics of using XR for persuasion, advertising, or behaviour change. Designers should consider whether their use of presence is in the user’s interest.</p>
+<hr>
 </section>
 </section>
+<section id="measuring-presence" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="measuring-presence"><span class="header-section-number">7</span> Measuring Presence</h2>
+<p>Several standardised questionnaires have been developed to measure presence:</p>
+<p><strong>The Presence Questionnaire (PQ)</strong> (Witmer and Singer, 1998) measures presence across several dimensions including involvement, sensory fidelity, and interface quality.</p>
+<p><strong>The Igroup Presence Questionnaire (IPQ)</strong> (Schubert et al., 2001) measures spatial presence, involvement, and realness.</p>
+<p>These tools are useful for comparing different design decisions and for evaluating the effectiveness of XR experiences. You will use them in Week 11 when we cover evaluation methods.</p>
+<hr>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Recap the key points from this lecture in 2–3 sentences.</p>
+<section id="self-check-questions" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</h2>
+<ol type="1">
+<li>What is the difference between presence and immersion?</li>
+<li>What are Slater’s two components of presence?</li>
+<li>What is vection and why does it cause sickness?</li>
+<li>What is the vestibular system and how does it contribute to simulator sickness?</li>
+<li>What is the difference between proximal and distal stimuli?</li>
+<li>Name three design strategies that can reduce simulator sickness.</li>
+<li>What ethical responsibilities do XR designers have regarding health effects?</li>
+<li>How does spatial audio contribute to presence?</li>
+</ol>
+<hr>
+</section>
+<section id="further-reading" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">9</span> Further Reading</h2>
+<ul>
+<li>Slater, M. (2009) Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments. <em>Philosophical Transactions of the Royal Society B</em>, 364(1535), pp.&nbsp;3549–3557.</li>
+<li>Witmer, B. and Singer, M. (1998) Measuring presence in virtual environments: A presence questionnaire. <em>Presence</em>, 7(3), pp.&nbsp;225–240.</li>
+<li>Jerald, J. (2015) <em>The VR Book</em>, Chapters 4 and 5.</li>
+<li>Kolasinski, E. (1995) Simulator sickness in virtual environments. US Army Research Laboratory Technical Report ARI-TR-1027.</li>
+<li>LaViola, J. (2000) A discussion of cybersickness in virtual environments. <em>ACM SIGCHI Bulletin</em>, 32(1).</li>
+</ul>
 
 
 </section>

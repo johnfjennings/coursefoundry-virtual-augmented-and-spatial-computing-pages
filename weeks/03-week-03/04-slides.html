@@ -10,8 +10,7 @@
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <meta name="author" content="Mr.&nbsp;John Jennings">
-  <title>Virtual, Augmented And Spatial Computing – Week 3 — Slides</title>
+  <title>Virtual, Augmented And Spatial Computing – Week 3: Perception and Presence</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,12 +32,10 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d3a3aa3f54883b7e0db9cb621ccb0be5.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-6564a9e43975916c66505930fa59cc4c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -127,7 +124,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Week 3 — Slides – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 3: Perception and Presence – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="Virtual, Augmented and Spatial Computing">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
 <body class="quarto-light">
@@ -135,99 +133,270 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 — Slides</h1>
+  <h1 class="title">Week 3: Perception and Presence</h1>
+  <p class="subtitle">Virtual, Augmented and Spatial Computing</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Mr.&nbsp;John Jennings 
-</div>
-</div>
 </div>
 
 </section>
-<section id="week-3-overview" class="slide level2">
-<h2>Week 3 Overview</h2>
-<p>Replace this with your introduction slide.</p>
-<aside class="notes">
-<p>Welcome to Week 3. Today we will be covering…</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<section id="week-3" class="slide level2">
+<h2>Week 3</h2>
+<h3 id="perception-and-presence">Perception and Presence</h3>
+<blockquote>
+<p>Presence is not a property of the technology. It is a property of the experience.</p>
+</blockquote>
 </section>
-<section id="topic-1" class="slide level2">
-<h2>Topic 1</h2>
+<section id="todays-session" class="slide level2">
+<h2>Today’s session</h2>
 <ul>
-<li class="fragment">Key point one</li>
-<li class="fragment">Key point two</li>
-<li class="fragment">Key point three</li>
+<li class="fragment">What is presence?</li>
+<li class="fragment">Immersion vs presence</li>
+<li class="fragment">How the brain constructs reality</li>
+<li class="fragment">Perceptual modalities in XR</li>
+<li class="fragment">Simulator sickness</li>
+<li class="fragment">Health effects and mitigation</li>
 </ul>
-<aside class="notes">
-<p>Explain Topic 1 here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="topic-2" class="slide level2">
-<h2>Topic 2</h2>
+<section id="why-perception-matters" class="slide level2">
+<h2>Why perception matters</h2>
+<p>XR works by <strong>deceiving the perceptual system</strong>.</p>
+<p>To design effective XR experiences, you need to understand:</p>
 <ul>
-<li class="fragment">Key point one</li>
-<li class="fragment">Key point two</li>
-<li class="fragment">Key point three</li>
+<li class="fragment">how the brain constructs the experience of being somewhere</li>
+<li class="fragment">what cues it relies on</li>
+<li class="fragment">what happens when those cues conflict</li>
 </ul>
-<aside class="notes">
-<p>Explain Topic 2 here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</section>
+<section id="presence" class="slide level2">
+<h2>Presence</h2>
+<p>Presence is the subjective feeling of <strong>being in a place</strong>.</p>
+<p>Slater (2009) distinguishes two components:</p>
+<ul>
+<li class="fragment"><strong>Place illusion:</strong> the sense of being in the virtual place</li>
+<li class="fragment"><strong>Plausibility illusion:</strong> the sense that what is happening is real</li>
+</ul>
+</section>
+<section id="place-illusion" class="slide level2">
+<h2>Place Illusion</h2>
+<p>The feeling that you are actually in the virtual environment.</p>
+<p>Supported by:</p>
+<ul>
+<li class="fragment">wide field of view</li>
+<li class="fragment">head tracking</li>
+<li class="fragment">spatial audio</li>
+<li class="fragment">physical scale</li>
+</ul>
+<p>Broken by:</p>
+<ul>
+<li class="fragment">tracking errors</li>
+<li class="fragment">low frame rate</li>
+<li class="fragment">visible display edges</li>
+</ul>
+</section>
+<section id="plausibility-illusion" class="slide level2">
+<h2>Plausibility Illusion</h2>
+<p>The feeling that the events in the virtual environment are really happening.</p>
+<p>Supported by:</p>
+<ul>
+<li class="fragment">responsive virtual agents</li>
+<li class="fragment">consistent physics</li>
+<li class="fragment">cause and effect relationships</li>
+</ul>
+<p>Broken by:</p>
+<ul>
+<li class="fragment">objects passing through each other</li>
+<li class="fragment">unresponsive environments</li>
+<li class="fragment">implausible events</li>
+</ul>
+</section>
+<section id="immersion-vs-presence" class="slide level2">
+<h2>Immersion vs Presence</h2>
+<p>These are often confused but are distinct concepts.</p>
+<p><strong>Immersion</strong> is an objective property of the technology.</p>
+<ul>
+<li class="fragment">how much of the sensory field does the system replace?</li>
+<li class="fragment">how accurately does it track movement?</li>
+</ul>
+<p><strong>Presence</strong> is a subjective psychological response.</p>
+<ul>
+<li class="fragment">how much does the user feel they are there?</li>
+</ul>
+<p>High immersion tends to support presence but does not guarantee it.</p>
+</section>
+<section id="the-reality-trade-off" class="slide level2">
+<h2>The Reality Trade-off</h2>
+<p>More immersion is not always better.</p>
+<p>Trade-offs include:</p>
+<ul>
+<li class="fragment">comfort vs presence</li>
+<li class="fragment">cost vs quality</li>
+<li class="fragment">portability vs fidelity</li>
+</ul>
+<p>Design for the <strong>right level of immersion</strong> for the task.</p>
+</section>
+<section id="perceptual-modalities" class="slide level2">
+<h2>Perceptual Modalities</h2>
+<p>The brain integrates information from multiple sensory systems.</p>
+<p>In XR, the most relevant are:</p>
+<ul>
+<li class="fragment">visual</li>
+<li class="fragment">auditory</li>
+<li class="fragment">proprioceptive</li>
+<li class="fragment">vestibular</li>
+<li class="fragment">haptic</li>
+</ul>
+</section>
+<section id="visual-perception" class="slide level2">
+<h2>Visual Perception</h2>
+<p>The dominant sense in most XR systems.</p>
+<p>Key factors:</p>
+<ul>
+<li class="fragment">stereopsis (depth from two eyes)</li>
+<li class="fragment">motion parallax (depth from movement)</li>
+<li class="fragment">accommodation and vergence</li>
+<li class="fragment">peripheral vision</li>
+</ul>
+</section>
+<section id="auditory-perception" class="slide level2">
+<h2>Auditory Perception</h2>
+<p>Spatial audio contributes significantly to presence.</p>
+<p>The brain uses:</p>
+<ul>
+<li class="fragment">interaural time difference (ITD)</li>
+<li class="fragment">interaural level difference (ILD)</li>
+<li class="fragment">spectral cues from the ear shape (HRTF)</li>
+</ul>
+<p>Mismatched audio breaks presence rapidly.</p>
+</section>
+<section id="proprioception" class="slide level2">
+<h2>Proprioception</h2>
+<p>The sense of the position and movement of your own body.</p>
+<p>In VR, proprioception can conflict with visual information.</p>
+<p>Example: your body feels stationary but your visual system sees movement.</p>
+<p>This conflict is a primary cause of simulator sickness.</p>
+</section>
+<section id="vestibular-system" class="slide level2">
+<h2>Vestibular System</h2>
+<p>The inner ear detects:</p>
+<ul>
+<li class="fragment">linear acceleration</li>
+<li class="fragment">rotational acceleration</li>
+<li class="fragment">gravity</li>
+</ul>
+<p>In VR, visual motion without vestibular motion creates conflict.</p>
+<p>This is the main cause of <strong>vection-induced sickness</strong>.</p>
+</section>
+<section id="haptic-perception" class="slide level2">
+<h2>Haptic Perception</h2>
+<p>The sense of touch and force.</p>
+<p>Current XR systems provide limited haptic feedback.</p>
+<p>The absence of haptic feedback is a significant limitation for:</p>
+<ul>
+<li class="fragment">object manipulation</li>
+<li class="fragment">surface interaction</li>
+<li class="fragment">social presence</li>
+</ul>
+</section>
+<section id="proximal-and-distal-stimuli" class="slide level2">
+<h2>Proximal and Distal Stimuli</h2>
+<p><strong>Distal stimulus:</strong> the actual object or event in the world</p>
+<p><strong>Proximal stimulus:</strong> the pattern of energy that reaches the sensory receptor</p>
+<p>In XR, we manipulate the proximal stimulus to create the perception of a distal stimulus that does not exist.</p>
+</section>
+<section id="simulator-sickness" class="slide level2">
+<h2>Simulator Sickness</h2>
+<p>A form of motion sickness caused by sensory conflict in simulated environments.</p>
+<p>Symptoms:</p>
+<ul>
+<li class="fragment">nausea</li>
+<li class="fragment">disorientation</li>
+<li class="fragment">eye strain</li>
+<li class="fragment">headache</li>
+<li class="fragment">fatigue</li>
+</ul>
+</section>
+<section id="causes-of-simulator-sickness" class="slide level2">
+<h2>Causes of Simulator Sickness</h2>
+<ul>
+<li class="fragment"><strong>Latency:</strong> delay between head movement and display update</li>
+<li class="fragment"><strong>Low frame rate:</strong> judder and motion blur</li>
+<li class="fragment"><strong>Vection:</strong> visual motion without vestibular motion</li>
+<li class="fragment"><strong>FOV mismatch:</strong> visual motion at the wrong scale</li>
+<li class="fragment"><strong>Vergence-accommodation conflict</strong></li>
+</ul>
+</section>
+<section id="mitigation-strategies" class="slide level2">
+<h2>Mitigation Strategies</h2>
+<p>Design choices that reduce simulator sickness:</p>
+<ul>
+<li class="fragment">maintain frame rate above 72Hz</li>
+<li class="fragment">minimise motion-to-photon latency (below 20ms)</li>
+<li class="fragment">use teleportation instead of smooth locomotion</li>
+<li class="fragment">add vignette during movement</li>
+<li class="fragment">allow users to choose comfort settings</li>
+<li class="fragment">provide rest breaks</li>
+</ul>
+</section>
+<section id="health-effects" class="slide level2">
+<h2>Health Effects</h2>
+<p>Beyond simulator sickness, extended XR use can cause:</p>
+<ul>
+<li class="fragment">eye strain and fatigue</li>
+<li class="fragment">neck and shoulder strain</li>
+<li class="fragment">disorientation after removal</li>
+<li class="fragment">social isolation</li>
+</ul>
+</section>
+<section id="ethical-considerations" class="slide level2">
+<h2>Ethical Considerations</h2>
+<p>XR designers have a responsibility to:</p>
+<ul>
+<li class="fragment">disclose health risks</li>
+<li class="fragment">provide comfort options</li>
+<li class="fragment">design for accessibility</li>
+<li class="fragment">avoid exploiting presence for manipulation</li>
+</ul>
+</section>
+<section id="todays-lab" class="slide level2">
+<h2>Today’s lab</h2>
+<p>Perception experiments:</p>
+<ul>
+<li class="fragment">latency manipulation</li>
+<li class="fragment">scale manipulation</li>
+<li class="fragment">FOV manipulation</li>
+</ul>
+<p>Observe how each affects comfort and presence.</p>
+</section>
+<section id="key-questions" class="slide level2">
+<h2>Key questions</h2>
+<ul>
+<li class="fragment">What is the difference between presence and immersion?</li>
+<li class="fragment">What causes simulator sickness?</li>
+<li class="fragment">How can design choices mitigate discomfort?</li>
+<li class="fragment">What ethical responsibilities do XR designers have?</li>
+</ul>
+</section>
+<section id="further-reading" class="slide level2">
+<h2>Further reading</h2>
+<ul>
+<li class="fragment">Slater, M. (2009) Place illusion and plausibility</li>
+<li class="fragment">Jerald, J. (2015) <em>The VR Book</em>, Chapters 4 and 5</li>
+<li class="fragment">Kolasinski, E. (1995) Simulator sickness in virtual environments</li>
+</ul>
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
 <ul>
-<li class="fragment">What we covered this week</li>
-<li class="fragment">Key takeaways</li>
+<li class="fragment">Presence is subjective; immersion is objective</li>
+<li class="fragment">Place illusion and plausibility illusion are distinct</li>
+<li class="fragment">Multiple perceptual modalities contribute to presence</li>
+<li class="fragment">Sensory conflict causes simulator sickness</li>
+<li class="fragment">Design choices can mitigate discomfort</li>
 </ul>
-<aside class="notes">
-<p>Wrap up the lecture here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions?</h2>
-<p><em>Thank you!</em></p>
+<blockquote>
+<p>Next week: Input Systems and Interaction Fundamentals</p>
+</blockquote>
 
 
 </section>
@@ -245,7 +414,6 @@ Mr.&nbsp;John Jennings
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -267,8 +435,7 @@ Mr.&nbsp;John Jennings
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -394,7 +561,7 @@ Mr.&nbsp;John Jennings
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -439,7 +606,7 @@ Mr.&nbsp;John Jennings
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

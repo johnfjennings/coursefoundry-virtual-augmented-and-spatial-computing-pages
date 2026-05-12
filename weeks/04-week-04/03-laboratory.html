@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 4 — Laboratory – Virtual, Augmented And Spatial Computing</title>
+<title>Week 4 Lab: Controller &amp; Hand Tracking Interaction – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,8 +78,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 4 — Laboratory – Virtual, Augmented And Spatial Computing">
-<meta property="og:description" content="">
+<meta property="og:title" content="Week 4 Lab: Controller &amp; Hand Tracking Interaction – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="Virtual, Augmented and Spatial Computing">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
 
@@ -635,17 +634,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#safety-setup" id="toc-safety-setup" class="nav-link" data-scroll-target="#safety-setup">Safety / Setup</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure</a>
+  <li><a href="#lab-overview" id="toc-lab-overview" class="nav-link active" data-scroll-target="#lab-overview"><span class="header-section-number">1</span> Lab Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2</span> Learning Objectives</a></li>
+  <li><a href="#part-1-ray-cast-interaction-45-min" id="toc-part-1-ray-cast-interaction-45-min" class="nav-link" data-scroll-target="#part-1-ray-cast-interaction-45-min"><span class="header-section-number">3</span> Part 1: Ray-Cast Interaction (45 min)</a>
   <ul class="collapse">
-  <li><a href="#step-1-setup" id="toc-step-1-setup" class="nav-link" data-scroll-target="#step-1-setup">Step 1: Setup</a></li>
-  <li><a href="#step-2-experiment-activity" id="toc-step-2-experiment-activity" class="nav-link" data-scroll-target="#step-2-experiment-activity">Step 2: Experiment / Activity</a></li>
-  <li><a href="#step-3-observations" id="toc-step-3-observations" class="nav-link" data-scroll-target="#step-3-observations">Step 3: Observations</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup"><span class="header-section-number">3.1</span> Setup</a></li>
+  <li><a href="#task-1.1-add-interactable-objects" id="toc-task-1.1-add-interactable-objects" class="nav-link" data-scroll-target="#task-1.1-add-interactable-objects"><span class="header-section-number">3.2</span> Task 1.1 — Add Interactable Objects</a></li>
+  <li><a href="#task-1.2-configure-ray-interactor" id="toc-task-1.2-configure-ray-interactor" class="nav-link" data-scroll-target="#task-1.2-configure-ray-interactor"><span class="header-section-number">3.3</span> Task 1.2 — Configure Ray Interactor</a></li>
+  <li><a href="#task-1.3-test-observe" id="toc-task-1.3-test-observe" class="nav-link" data-scroll-target="#task-1.3-test-observe"><span class="header-section-number">3.4</span> Task 1.3 — Test &amp; Observe</a></li>
   </ul></li>
-  <li><a href="#results-and-analysis" id="toc-results-and-analysis" class="nav-link" data-scroll-target="#results-and-analysis">Results and Analysis</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#part-2-direct-near-field-interaction-30-min" id="toc-part-2-direct-near-field-interaction-30-min" class="nav-link" data-scroll-target="#part-2-direct-near-field-interaction-30-min"><span class="header-section-number">4</span> Part 2: Direct (Near-Field) Interaction (30 min)</a>
+  <ul class="collapse">
+  <li><a href="#task-2.1-add-direct-interactor" id="toc-task-2.1-add-direct-interactor" class="nav-link" data-scroll-target="#task-2.1-add-direct-interactor"><span class="header-section-number">4.1</span> Task 2.1 — Add Direct Interactor</a></li>
+  <li><a href="#task-2.2-test-direct-grab" id="toc-task-2.2-test-direct-grab" class="nav-link" data-scroll-target="#task-2.2-test-direct-grab"><span class="header-section-number">4.2</span> Task 2.2 — Test Direct Grab</a></li>
+  </ul></li>
+  <li><a href="#part-3-hand-tracking-on-quest-3-30-min" id="toc-part-3-hand-tracking-on-quest-3-30-min" class="nav-link" data-scroll-target="#part-3-hand-tracking-on-quest-3-30-min"><span class="header-section-number">5</span> Part 3: Hand Tracking on Quest 3 (30 min)</a>
+  <ul class="collapse">
+  <li><a href="#task-3.1-enable-hand-tracking" id="toc-task-3.1-enable-hand-tracking" class="nav-link" data-scroll-target="#task-3.1-enable-hand-tracking"><span class="header-section-number">5.1</span> Task 3.1 — Enable Hand Tracking</a></li>
+  <li><a href="#task-3.2-pinch-interaction" id="toc-task-3.2-pinch-interaction" class="nav-link" data-scroll-target="#task-3.2-pinch-interaction"><span class="header-section-number">5.2</span> Task 3.2 — Pinch Interaction</a></li>
+  </ul></li>
+  <li><a href="#part-4-comparative-reflection-15-min" id="toc-part-4-comparative-reflection-15-min" class="nav-link" data-scroll-target="#part-4-comparative-reflection-15-min"><span class="header-section-number">6</span> Part 4: Comparative Reflection (15 min)</a>
+  <ul class="collapse">
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions"><span class="header-section-number">6.1</span> Reflection Questions</a></li>
+  </ul></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">7</span> Submission</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">8</span> Troubleshooting</a></li>
   </ul>
 </nav>
     </div>
@@ -654,19 +667,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/04-week-04/01-lecture.html">Week 04</a></li><li class="breadcrumb-item"><a href="../../weeks/04-week-04/03-laboratory.html">Laboratory</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 4 — Laboratory</h1>
+<h1 class="title">Week 4 Lab: Controller &amp; Hand Tracking Interaction</h1>
+<p class="subtitle lead">Virtual, Augmented and Spatial Computing</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -677,43 +685,265 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
+<section id="lab-overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lab-overview"><span class="header-section-number">1</span> Lab Overview</h2>
+<p><strong>Duration</strong>: 2 hours<br>
+<strong>Hardware</strong>: Quest 2, Quest 3, Hololens 2<br>
+<strong>Software</strong>: Unity 2022 LTS, XR Interaction Toolkit 2.x<br>
+<strong>Deliverable</strong>: Lab journal entry + Unity scene (uploaded to VLE)</p>
+<hr>
 </section>
-<section id="safety-setup" class="level2">
-<h2 class="anchored" data-anchor-id="safety-setup">Safety / Setup</h2>
-<p>Note any safety requirements or required setup before beginning.</p>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<section id="learning-objectives" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2</span> Learning Objectives</h2>
+<p>By the end of this lab you will be able to:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
+<li>Implement ray-cast and direct interaction in Unity using XR Interaction Toolkit</li>
+<li>Enable hand tracking on Quest 3</li>
+<li>Compare the interaction feel of controller vs hand tracking</li>
+<li>Document interaction design observations systematically</li>
 </ul>
+<hr>
 </section>
-<section id="procedure" class="level2">
-<h2 class="anchored" data-anchor-id="procedure">Procedure</h2>
-<section id="step-1-setup" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-setup">Step 1: Setup</h3>
-<p>Instructions.</p>
+<section id="part-1-ray-cast-interaction-45-min" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="part-1-ray-cast-interaction-45-min"><span class="header-section-number">3</span> Part 1: Ray-Cast Interaction (45 min)</h2>
+<section id="setup" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="setup"><span class="header-section-number">3.1</span> Setup</h3>
+<ol type="1">
+<li>Open your Unity project from Week 1 (or create a new URP project)</li>
+<li>Ensure <strong>XR Interaction Toolkit</strong> is installed via Package Manager</li>
+<li>Add the <strong>XR Origin (Action-based)</strong> prefab to your scene</li>
+</ol>
 </section>
-<section id="step-2-experiment-activity" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-experiment-activity">Step 2: Experiment / Activity</h3>
-<p>Instructions.</p>
+<section id="task-1.1-add-interactable-objects" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="task-1.1-add-interactable-objects"><span class="header-section-number">3.2</span> Task 1.1 — Add Interactable Objects</h3>
+<ol type="1">
+<li>Create 3 primitive objects (cube, sphere, cylinder) in the scene</li>
+<li>Add <code>XRGrabInteractable</code> component to each</li>
+<li>Add <code>Rigidbody</code> component to each (enable gravity)</li>
+<li>Position objects at different distances: 0.5m, 1.5m, 3m from origin</li>
+</ol>
 </section>
-<section id="step-3-observations" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-observations">Step 3: Observations</h3>
-<p>Record your observations here.</p>
+<section id="task-1.2-configure-ray-interactor" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="task-1.2-configure-ray-interactor"><span class="header-section-number">3.3</span> Task 1.2 — Configure Ray Interactor</h3>
+<ol type="1">
+<li>Select the <strong>Right Hand</strong> controller object in the XR Origin hierarchy</li>
+<li>Add <code>XRRayInteractor</code> component</li>
+<li>Add <code>XRInteractorLineVisual</code> component (shows the ray)</li>
+<li>Set <strong>Max Raycast Distance</strong> to 5m</li>
+</ol>
+</section>
+<section id="task-1.3-test-observe" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="task-1.3-test-observe"><span class="header-section-number">3.4</span> Task 1.3 — Test &amp; Observe</h3>
+<p>Build and deploy to Quest 2. Test the following:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Observation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Select object at 0.5m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Select object at 1.5m</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Select object at 3m</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Move object while selected</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Release object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Record in your lab journal</strong>: Which distance felt most natural? What visual feedback helped most?</p>
+<hr>
 </section>
 </section>
-<section id="results-and-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h2>
-<p>Present your findings. Include tables or calculations as needed.</p>
+<section id="part-2-direct-near-field-interaction-30-min" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="part-2-direct-near-field-interaction-30-min"><span class="header-section-number">4</span> Part 2: Direct (Near-Field) Interaction (30 min)</h2>
+<section id="task-2.1-add-direct-interactor" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="task-2.1-add-direct-interactor"><span class="header-section-number">4.1</span> Task 2.1 — Add Direct Interactor</h3>
+<ol type="1">
+<li>Add <code>XRDirectInteractor</code> component to the Right Hand controller</li>
+<li>Add a small sphere collider to the controller (set as trigger)</li>
+<li>Disable the Ray Interactor temporarily</li>
+</ol>
 </section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
-<p>What did this laboratory session demonstrate?</p>
+<section id="task-2.2-test-direct-grab" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="task-2.2-test-direct-grab"><span class="header-section-number">4.2</span> Task 2.2 — Test Direct Grab</h3>
+<p>Deploy and test: - Walk up to each object and grab it directly - Try picking up and placing objects precisely - Try stacking objects</p>
+<p><strong>Record in your lab journal</strong>: How does direct grab compare to ray cast? When would you prefer each?</p>
+<hr>
+</section>
+</section>
+<section id="part-3-hand-tracking-on-quest-3-30-min" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="part-3-hand-tracking-on-quest-3-30-min"><span class="header-section-number">5</span> Part 3: Hand Tracking on Quest 3 (30 min)</h2>
+<blockquote class="blockquote">
+<p><strong>Note</strong>: This part requires a Quest 3 headset. If unavailable, use the Quest Hand Tracking Simulator in Unity.</p>
+</blockquote>
+<section id="task-3.1-enable-hand-tracking" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="task-3.1-enable-hand-tracking"><span class="header-section-number">5.1</span> Task 3.1 — Enable Hand Tracking</h3>
+<ol type="1">
+<li>In Unity, go to <strong>Edit → Project Settings → XR Plug-in Management</strong></li>
+<li>Ensure <strong>OpenXR</strong> is selected for Android</li>
+<li>Add <strong>Hand Tracking</strong> feature under OpenXR features</li>
+<li>In the XR Origin, enable the <strong>Hand Tracking</strong> prefab</li>
+</ol>
+</section>
+<section id="task-3.2-pinch-interaction" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="task-3.2-pinch-interaction"><span class="header-section-number">5.2</span> Task 3.2 — Pinch Interaction</h3>
+<ol type="1">
+<li>Replace controller interactors with <code>XRHandInteractorsSetup</code> prefab</li>
+<li>Configure pinch threshold (default: 0.7)</li>
+<li>Deploy to Quest 3</li>
+</ol>
+<p><strong>Test the following:</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Gesture</th>
+<th>Works?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pinch to select (near)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Pinch to select (far ray)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Two-hand grab</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sustained pinch hold</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="part-4-comparative-reflection-15-min" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="part-4-comparative-reflection-15-min"><span class="header-section-number">6</span> Part 4: Comparative Reflection (15 min)</h2>
+<p>Complete the following comparison table in your lab journal:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th>Controller (Ray)</th>
+<th>Controller (Direct)</th>
+<th>Hand Tracking</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ease of learning</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Precision</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fatigue after 5 min</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Immersion feel</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Best use case</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<section id="reflection-questions" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="reflection-questions"><span class="header-section-number">6.1</span> Reflection Questions</h3>
+<ol type="1">
+<li>Which input method would you choose for a <strong>museum exhibit</strong> aimed at first-time XR users? Why?</li>
+<li>Which would you choose for a <strong>surgical training simulation</strong>? Why?</li>
+<li>What feedback (visual/audio/haptic) made the biggest difference to interaction confidence?</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="submission" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="submission"><span class="header-section-number">7</span> Submission</h2>
+<p>Upload to VLE by <strong>end of week</strong>:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Unity scene file (zipped project or <code>.unitypackage</code>)</label></li>
+<li><label><input type="checkbox">Lab journal entry (PDF or markdown) including:</label>
+<ul>
+<li>Completed observation tables</li>
+<li>Comparative reflection table</li>
+<li>Answers to reflection questions</li>
+<li>At least 2 screenshots from your Unity scene</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="troubleshooting" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">8</span> Troubleshooting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ray not visible</td>
+<td>Check <code>XRInteractorLineVisual</code> is on the same object as <code>XRRayInteractor</code></td>
+</tr>
+<tr class="even">
+<td>Objects fall through floor</td>
+<td>Add a plane with a collider to the scene</td>
+</tr>
+<tr class="odd">
+<td>Hand tracking not detected</td>
+<td>Ensure good lighting; remove gloves; check OpenXR feature is enabled</td>
+</tr>
+<tr class="even">
+<td>Build fails for Android</td>
+<td>Check Android Build Support is installed in Unity Hub</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

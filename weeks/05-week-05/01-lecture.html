@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 5 — Lecture – Virtual, Augmented And Spatial Computing</title>
+<title>Week 5 Lecture Notes: Gesture, Locomotion &amp; Spatial UI – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,8 +78,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 5 — Lecture – Virtual, Augmented And Spatial Computing">
-<meta property="og:description" content="">
+<meta property="og:title" content="Week 5 Lecture Notes: Gesture, Locomotion &amp; Spatial UI – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="Virtual, Augmented and Spatial Computing">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
 
@@ -635,12 +634,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#gesture-design" id="toc-gesture-design" class="nav-link" data-scroll-target="#gesture-design"><span class="header-section-number">2</span> 1. Gesture Design</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#principles-of-good-gesture-design" id="toc-principles-of-good-gesture-design" class="nav-link" data-scroll-target="#principles-of-good-gesture-design"><span class="header-section-number">2.1</span> 1.1 Principles of Good Gesture Design</a></li>
+  <li><a href="#standard-gesture-vocabulary" id="toc-standard-gesture-vocabulary" class="nav-link" data-scroll-target="#standard-gesture-vocabulary"><span class="header-section-number">2.2</span> 1.2 Standard Gesture Vocabulary</a></li>
+  <li><a href="#custom-gesture-recognition" id="toc-custom-gesture-recognition" class="nav-link" data-scroll-target="#custom-gesture-recognition"><span class="header-section-number">2.3</span> 1.3 Custom Gesture Recognition</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#locomotion" id="toc-locomotion" class="nav-link" data-scroll-target="#locomotion"><span class="header-section-number">3</span> 2. Locomotion</a>
+  <ul class="collapse">
+  <li><a href="#the-vestibular-conflict" id="toc-the-vestibular-conflict" class="nav-link" data-scroll-target="#the-vestibular-conflict"><span class="header-section-number">3.1</span> 2.1 The Vestibular Conflict</a></li>
+  <li><a href="#locomotion-techniques-in-detail" id="toc-locomotion-techniques-in-detail" class="nav-link" data-scroll-target="#locomotion-techniques-in-detail"><span class="header-section-number">3.2</span> 2.2 Locomotion Techniques in Detail</a></li>
+  <li><a href="#comfort-settings-best-practice" id="toc-comfort-settings-best-practice" class="nav-link" data-scroll-target="#comfort-settings-best-practice"><span class="header-section-number">3.3</span> 2.3 Comfort Settings Best Practice</a></li>
+  </ul></li>
+  <li><a href="#spatial-ui-design" id="toc-spatial-ui-design" class="nav-link" data-scroll-target="#spatial-ui-design"><span class="header-section-number">4</span> 3. Spatial UI Design</a>
+  <ul class="collapse">
+  <li><a href="#why-flat-ui-fails-in-xr" id="toc-why-flat-ui-fails-in-xr" class="nav-link" data-scroll-target="#why-flat-ui-fails-in-xr"><span class="header-section-number">4.1</span> 3.1 Why Flat UI Fails in XR</a></li>
+  <li><a href="#ui-attachment-strategies" id="toc-ui-attachment-strategies" class="nav-link" data-scroll-target="#ui-attachment-strategies"><span class="header-section-number">4.2</span> 3.2 UI Attachment Strategies</a></li>
+  <li><a href="#diegetic-ui-design" id="toc-diegetic-ui-design" class="nav-link" data-scroll-target="#diegetic-ui-design"><span class="header-section-number">4.3</span> 3.3 Diegetic UI Design</a></li>
+  <li><a href="#the-wrist-menu-pattern" id="toc-the-wrist-menu-pattern" class="nav-link" data-scroll-target="#the-wrist-menu-pattern"><span class="header-section-number">4.4</span> 3.4 The Wrist Menu Pattern</a></li>
+  </ul></li>
+  <li><a href="#accessibility" id="toc-accessibility" class="nav-link" data-scroll-target="#accessibility"><span class="header-section-number">5</span> 4. Accessibility</a>
+  <ul class="collapse">
+  <li><a href="#physical-accessibility" id="toc-physical-accessibility" class="nav-link" data-scroll-target="#physical-accessibility"><span class="header-section-number">5.1</span> 4.1 Physical Accessibility</a></li>
+  <li><a href="#perceptual-accessibility" id="toc-perceptual-accessibility" class="nav-link" data-scroll-target="#perceptual-accessibility"><span class="header-section-number">5.2</span> 4.2 Perceptual Accessibility</a></li>
+  <li><a href="#cognitive-accessibility" id="toc-cognitive-accessibility" class="nav-link" data-scroll-target="#cognitive-accessibility"><span class="header-section-number">5.3</span> 4.3 Cognitive Accessibility</a></li>
+  </ul></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">6</span> Self-Check Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -649,19 +670,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/05-week-05/01-lecture.html">Week 05</a></li><li class="breadcrumb-item"><a href="../../weeks/05-week-05/01-lecture.html">Lecture</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 5 — Lecture</h1>
+<h1 class="title">Week 5 Lecture Notes: Gesture, Locomotion &amp; Spatial UI</h1>
+<p class="subtitle lead">Virtual, Augmented and Spatial Computing</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -672,47 +688,197 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 1 hour</p>
-<p>Introduce the main concepts for Week 5. Replace this with your lecture material.</p>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
-<p>By the end of this lecture, students will be able to:</p>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p>Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: <strong>gesture vocabularies</strong>, <strong>locomotion comfort</strong>, and <strong>spatial UI design</strong>. These are the areas where XR design diverges most sharply from conventional UX practice.</p>
+<hr>
+</section>
+<section id="gesture-design" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="gesture-design"><span class="header-section-number">2</span> 1. Gesture Design</h2>
+<section id="principles-of-good-gesture-design" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="principles-of-good-gesture-design"><span class="header-section-number">2.1</span> 1.1 Principles of Good Gesture Design</h3>
+<p>Gesture design in XR is constrained by both the capabilities of tracking systems and the ergonomics of the human hand. A gesture vocabulary should be:</p>
+<p><strong>Distinct</strong>: Each gesture should be clearly different from others in the vocabulary, and from natural resting hand positions. Ambiguous gestures cause false positives.</p>
+<p><strong>Comfortable</strong>: Gestures that require sustained tension (e.g., holding a spread-finger pose) cause rapid fatigue. Prefer gestures that can be performed and released quickly.</p>
+<p><strong>Discoverable</strong>: Users should be able to find gestures through exploration or minimal instruction. Gestures that require memorisation of a specific hand shape are problematic for casual users.</p>
+<p><strong>Reversible</strong>: Every gesture should have a clear cancel or undo path. Users need to feel safe experimenting.</p>
+</section>
+<section id="standard-gesture-vocabulary" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="standard-gesture-vocabulary"><span class="header-section-number">2.2</span> 1.2 Standard Gesture Vocabulary</h3>
+<p>Most XR platforms have converged on a small set of standard gestures:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Gesture</th>
+<th>Trigger</th>
+<th>Common Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Index pinch</td>
+<td>Index + thumb contact</td>
+<td>Primary select</td>
+</tr>
+<tr class="even">
+<td>Middle pinch</td>
+<td>Middle + thumb contact</td>
+<td>Secondary action</td>
+</tr>
+<tr class="odd">
+<td>Open palm</td>
+<td>All fingers extended</td>
+<td>Cancel / stop</td>
+</tr>
+<tr class="even">
+<td>Point</td>
+<td>Index extended, others curled</td>
+<td>Navigate / indicate</td>
+</tr>
+<tr class="odd">
+<td>Two-hand pinch-spread</td>
+<td>Both hands pinch then separate</td>
+<td>Scale</td>
+</tr>
+<tr class="even">
+<td>Two-hand rotate</td>
+<td>Both hands pinch and rotate</td>
+<td>Rotate object</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="custom-gesture-recognition" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="custom-gesture-recognition"><span class="header-section-number">2.3</span> 1.3 Custom Gesture Recognition</h3>
+<p>For custom gestures beyond the standard vocabulary, Unity’s XR Hands package provides a pose detection system. Key considerations:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
-<li>Objective three</li>
+<li>Define poses using joint angle thresholds, not absolute positions</li>
+<li>Test across multiple hand sizes (children, large hands, small hands)</li>
+<li>Provide visual coaching for non-standard gestures</li>
+<li>Log false positive rates during testing</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="locomotion" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="locomotion"><span class="header-section-number">3</span> 2. Locomotion</h2>
+<section id="the-vestibular-conflict" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="the-vestibular-conflict"><span class="header-section-number">3.1</span> 2.1 The Vestibular Conflict</h3>
+<p>Simulator sickness (cybersickness) occurs when visual motion signals conflict with vestibular (inner ear) signals. The vestibular system detects: - Linear acceleration - Rotational acceleration - Gravity direction</p>
+<p>When the visual system shows movement that the vestibular system does not detect, the brain interprets this as potential poisoning (an evolutionary response) and triggers nausea.</p>
+<p><strong>Key insight</strong>: It is not speed that causes sickness — it is <em>acceleration</em>. Constant velocity movement is less sickening than acceleration/deceleration.</p>
+</section>
+<section id="locomotion-techniques-in-detail" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="locomotion-techniques-in-detail"><span class="header-section-number">3.2</span> 2.2 Locomotion Techniques in Detail</h3>
+<section id="teleportation" class="level4" data-number="3.2.1">
+<h4 data-number="3.2.1" class="anchored" data-anchor-id="teleportation"><span class="header-section-number">3.2.1</span> Teleportation</h4>
+<p>The most comfortable locomotion technique. The user points to a destination and is instantly transported. The visual discontinuity is handled by a brief fade or blink.</p>
+<p><strong>Design details:</strong> - Arc trajectory indicator (parabolic, not straight) feels more natural - Colour-code valid (green) and invalid (red) landing zones - Allow user to set facing direction before confirming - Fade duration: 100–200ms (shorter = less disorienting)</p>
+</section>
+<section id="smooth-locomotion" class="level4" data-number="3.2.2">
+<h4 data-number="3.2.2" class="anchored" data-anchor-id="smooth-locomotion"><span class="header-section-number">3.2.2</span> Smooth Locomotion</h4>
+<p>Continuous movement via thumbstick. High immersion, higher sickness risk.</p>
+<p><strong>Comfort mitigations:</strong> - <strong>Vignette</strong>: Dynamically narrow the FOV during movement. Reduces peripheral motion that triggers sickness. - <strong>Speed cap</strong>: 2–3 m/s maximum for general audiences - <strong>Snap turning</strong>: 30° or 45° increments instead of smooth rotation. Eliminates rotational vestibular conflict. - <strong>Acceleration curve</strong>: Ease in/out rather than instant full speed</p>
+</section>
+<section id="room-scale" class="level4" data-number="3.2.3">
+<h4 data-number="3.2.3" class="anchored" data-anchor-id="room-scale"><span class="header-section-number">3.2.3</span> Room-Scale</h4>
+<p>Physical walking within the tracked play area. Most comfortable and immersive, but limited to the physical space available. Quest 2/3 Guardian system defines the safe zone.</p>
+</section>
+<section id="arm-swinging" class="level4" data-number="3.2.4">
+<h4 data-number="3.2.4" class="anchored" data-anchor-id="arm-swinging"><span class="header-section-number">3.2.4</span> Arm-Swinging</h4>
+<p>User swings arms as if walking; system translates this into forward movement. More comfortable than thumbstick because it involves physical movement that partially matches the visual signal.</p>
+</section>
+</section>
+<section id="comfort-settings-best-practice" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="comfort-settings-best-practice"><span class="header-section-number">3.3</span> 2.3 Comfort Settings Best Practice</h3>
+<p>Always provide a <strong>comfort settings menu</strong> with at minimum: - Locomotion type toggle (teleport / smooth) - Vignette on/off - Snap turn angle (15°, 30°, 45°, 60°) - Movement speed slider</p>
+<hr>
+</section>
+</section>
+<section id="spatial-ui-design" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="spatial-ui-design"><span class="header-section-number">4</span> 3. Spatial UI Design</h2>
+<section id="why-flat-ui-fails-in-xr" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="why-flat-ui-fails-in-xr"><span class="header-section-number">4.1</span> 3.1 Why Flat UI Fails in XR</h3>
+<p>Traditional 2D UI (panels, windows, HUDs) creates several problems in XR:</p>
+<p><strong>Vergence-accommodation conflict</strong>: If a UI panel is rendered at a fixed virtual distance (e.g., 2m) but the user’s eyes converge on a real object at 0.5m, the mismatch causes eye strain.</p>
+<p><strong>Depth inconsistency</strong>: A flat panel floating in 3D space looks artificial and breaks immersion.</p>
+<p><strong>Head-locked discomfort</strong>: UI that moves exactly with the head (like a traditional HUD) is uncomfortable — the eye cannot rest because the target never stops moving.</p>
+</section>
+<section id="ui-attachment-strategies" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="ui-attachment-strategies"><span class="header-section-number">4.2</span> 3.2 UI Attachment Strategies</h3>
+<p><strong>World-locked UI</strong>: Attached to a fixed position in the scene. The user must move or look to interact with it. Best for environmental information (signs, labels, control panels).</p>
+<p><strong>Body-locked UI (with lag)</strong>: Follows the user but with a slight delay and damping. Feels more natural than head-locked. The wrist menu is the canonical example.</p>
+<p><strong>Head-locked UI</strong>: Moves exactly with the head. Use sparingly — only for critical persistent information (e.g., a small battery indicator in the corner).</p>
+</section>
+<section id="diegetic-ui-design" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="diegetic-ui-design"><span class="header-section-number">4.3</span> 3.3 Diegetic UI Design</h3>
+<p>Diegetic UI exists within the world of the experience. It is the gold standard for immersive VR because it: - Eliminates vergence-accommodation conflict (rendered at world depth) - Maintains immersion - Provides spatial context</p>
+<p><strong>Examples:</strong> - Health displayed as a glowing bar on the character’s chest armour - Inventory shown as a physical backpack the user opens - Settings accessed via a physical control panel in the environment - Notifications displayed as floating text attached to world objects</p>
+</section>
+<section id="the-wrist-menu-pattern" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="the-wrist-menu-pattern"><span class="header-section-number">4.4</span> 3.4 The Wrist Menu Pattern</h3>
+<p>The wrist menu has become a standard pattern across VR platforms (used in Meta’s system UI, Hololens, and many applications):</p>
+<ol type="1">
+<li>User raises wrist with palm facing up</li>
+<li>Trigger: wrist rotation beyond ~60° from neutral</li>
+<li>Menu appears on inner wrist surface</li>
+<li>User selects items with opposite hand (ray or direct)</li>
+<li>Wrist lowered → menu dismissed</li>
+</ol>
+<p><strong>Design considerations:</strong> - Keep menu items large (minimum 2cm × 2cm) - Limit to 6–8 items maximum - Use icons + text labels - Provide haptic feedback on open/close</p>
+<hr>
+</section>
+</section>
+<section id="accessibility" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="accessibility"><span class="header-section-number">5</span> 4. Accessibility</h2>
+<p>XR accessibility is an emerging but critical area. Key considerations:</p>
+<section id="physical-accessibility" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="physical-accessibility"><span class="header-section-number">5.1</span> 4.1 Physical Accessibility</h3>
+<ul>
+<li><strong>Seated mode</strong>: All interactions must be reachable from a seated position. Test with a chair.</li>
+<li><strong>One-handed mode</strong>: Full functionality with one controller/hand. Map all critical actions to single-hand input.</li>
+<li><strong>Reduced motion mode</strong>: Disable smooth locomotion, limit visual effects.</li>
 </ul>
 </section>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
-<section id="part-1-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-1-topic">Part 1: [Topic]</h4>
-<p>Content here.</p>
+<section id="perceptual-accessibility" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="perceptual-accessibility"><span class="header-section-number">5.2</span> 4.2 Perceptual Accessibility</h3>
+<ul>
+<li><strong>Text size</strong>: Minimum 24pt at 1m viewing distance (approximately 2.4° visual angle)</li>
+<li><strong>Colour contrast</strong>: WCAG AA minimum (4.5:1 ratio). Never use colour as the only differentiator.</li>
+<li><strong>Audio captions</strong>: Provide text alternatives for all audio cues.</li>
+</ul>
 </section>
-<section id="part-2-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-2-topic">Part 2: [Topic]</h4>
-<p>Content here.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Key concept to highlight for this week.</p>
-</div>
-</div>
+<section id="cognitive-accessibility" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="cognitive-accessibility"><span class="header-section-number">5.3</span> 4.3 Cognitive Accessibility</h3>
+<ul>
+<li><strong>Consistent interaction patterns</strong>: Don’t change how things work between scenes</li>
+<li><strong>Undo support</strong>: Allow reversal of actions</li>
+<li><strong>Time limits</strong>: Avoid timed interactions; if unavoidable, allow extension</li>
+</ul>
+<hr>
 </section>
 </section>
+<section id="self-check-questions" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">6</span> Self-Check Questions</h2>
+<ol type="1">
+<li>What is the vestibular conflict and why does it cause simulator sickness?</li>
+<li>Why is teleportation more comfortable than smooth locomotion?</li>
+<li>What is the difference between diegetic and non-diegetic UI?</li>
+<li>Describe the wrist menu pattern and explain why it works well in VR.</li>
+<li>Name three accessibility considerations for XR interaction design.</li>
+</ol>
+<hr>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Recap the key points from this lecture in 2–3 sentences.</p>
+<section id="references" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="references"><span class="header-section-number">7</span> References</h2>
+<ul>
+<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books.</li>
+<li>Bowman, D.A. et al.&nbsp;(2004) <em>3D User Interfaces: Theory and Practice</em>. Pearson.</li>
+<li>Oculus Design Guidelines: <a href="https://developer.oculus.com/design">developer.oculus.com/design</a></li>
+<li>Microsoft Mixed Reality Design: <a href="https://learn.microsoft.com/windows/mixed-reality/design">learn.microsoft.com/windows/mixed-reality/design</a></li>
+<li>XR Access Initiative: <a href="https://xraccess.org">xraccess.org</a></li>
+<li>Kemeny, A. et al.&nbsp;(2020) “Getting over motion sickness.” <em>Communications of the ACM</em>, 63(5), 91–97.</li>
+</ul>
 
 
 </section>

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 1 — Laboratory – Virtual, Augmented And Spatial Computing</title>
+<title>Week 1 Lab: Unity XR Setup and First Deployment – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 1 — Laboratory – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 1 Lab: Unity XR Setup and First Deployment – Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -634,18 +633,18 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#safety-setup" id="toc-safety-setup" class="nav-link" data-scroll-target="#safety-setup">Safety / Setup</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure</a>
   <ul class="collapse">
-  <li><a href="#step-1-setup" id="toc-step-1-setup" class="nav-link" data-scroll-target="#step-1-setup">Step 1: Setup</a></li>
-  <li><a href="#step-2-experiment-activity" id="toc-step-2-experiment-activity" class="nav-link" data-scroll-target="#step-2-experiment-activity">Step 2: Experiment / Activity</a></li>
-  <li><a href="#step-3-observations" id="toc-step-3-observations" class="nav-link" data-scroll-target="#step-3-observations">Step 3: Observations</a></li>
-  </ul></li>
-  <li><a href="#results-and-analysis" id="toc-results-and-analysis" class="nav-link" data-scroll-target="#results-and-analysis">Results and Analysis</a></li>
-  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a></li>
+  <li><a href="#lab-overview" id="toc-lab-overview" class="nav-link active" data-scroll-target="#lab-overview">Lab Overview</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#part-1-create-a-new-unity-project" id="toc-part-1-create-a-new-unity-project" class="nav-link" data-scroll-target="#part-1-create-a-new-unity-project">Part 1: Create a New Unity Project</a></li>
+  <li><a href="#part-2-install-xr-packages" id="toc-part-2-install-xr-packages" class="nav-link" data-scroll-target="#part-2-install-xr-packages">Part 2: Install XR Packages</a></li>
+  <li><a href="#part-3-configure-android-build-settings" id="toc-part-3-configure-android-build-settings" class="nav-link" data-scroll-target="#part-3-configure-android-build-settings">Part 3: Configure Android Build Settings</a></li>
+  <li><a href="#part-4-set-up-the-xr-scene" id="toc-part-4-set-up-the-xr-scene" class="nav-link" data-scroll-target="#part-4-set-up-the-xr-scene">Part 4: Set Up the XR Scene</a></li>
+  <li><a href="#part-5-build-and-deploy-to-quest-2" id="toc-part-5-build-and-deploy-to-quest-2" class="nav-link" data-scroll-target="#part-5-build-and-deploy-to-quest-2">Part 5: Build and Deploy to Quest 2</a></li>
+  <li><a href="#part-6-test-on-device" id="toc-part-6-test-on-device" class="nav-link" data-scroll-target="#part-6-test-on-device">Part 6: Test on Device</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#lab-deliverable" id="toc-lab-deliverable" class="nav-link" data-scroll-target="#lab-deliverable">Lab Deliverable</a></li>
+  <li><a href="#extension-task" id="toc-extension-task" class="nav-link" data-scroll-target="#extension-task">Extension Task</a></li>
   </ul>
 </nav>
     </div>
@@ -654,19 +653,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/03-laboratory.html">Laboratory</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 1 — Laboratory</h1>
+<h1 class="title">Week 1 Lab: Unity XR Setup and First Deployment</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -677,43 +670,205 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
-</section>
-<section id="safety-setup" class="level2">
-<h2 class="anchored" data-anchor-id="safety-setup">Safety / Setup</h2>
-<p>Note any safety requirements or required setup before beginning.</p>
-</section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<section id="lab-overview" class="level2">
+<h2 class="anchored" data-anchor-id="lab-overview">Lab Overview</h2>
+<p>In this lab you will set up a Unity project for XR development and deploy a basic interactive scene to the Meta Quest 2.</p>
+<p>By the end of this lab you should be able to:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
+<li>create a Unity project configured for XR</li>
+<li>install and configure the XR Interaction Toolkit</li>
+<li>build and deploy to the Meta Quest 2</li>
+<li>test basic locomotion and object interaction on device</li>
 </ul>
+<hr>
 </section>
-<section id="procedure" class="level2">
-<h2 class="anchored" data-anchor-id="procedure">Procedure</h2>
-<section id="step-1-setup" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-setup">Step 1: Setup</h3>
-<p>Instructions.</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<ul>
+<li>Unity 2022 LTS or later</li>
+<li>Android Build Support module installed</li>
+<li>Meta Quest 2 headset and USB-C cable</li>
+<li>Developer mode enabled on the Quest 2</li>
+</ul>
+<hr>
 </section>
-<section id="step-2-experiment-activity" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-experiment-activity">Step 2: Experiment / Activity</h3>
-<p>Instructions.</p>
+<section id="part-1-create-a-new-unity-project" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-create-a-new-unity-project">Part 1: Create a New Unity Project</h2>
+<ol type="1">
+<li>Open Unity Hub.</li>
+<li>Click <strong>New Project</strong>.</li>
+<li>Select the <strong>3D (URP)</strong> template.</li>
+<li>Name your project <code>XR_Week01</code>.</li>
+<li>Click <strong>Create Project</strong>.</li>
+</ol>
+<hr>
 </section>
-<section id="step-3-observations" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-observations">Step 3: Observations</h3>
-<p>Record your observations here.</p>
+<section id="part-2-install-xr-packages" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-install-xr-packages">Part 2: Install XR Packages</h2>
+<section id="enable-xr-plugin-management" class="level3">
+<h3 class="anchored" data-anchor-id="enable-xr-plugin-management">Enable XR Plugin Management</h3>
+<ol type="1">
+<li>Go to <strong>Edit &gt; Project Settings</strong>.</li>
+<li>Select <strong>XR Plugin Management</strong>.</li>
+<li>Click <strong>Install XR Plugin Management</strong> if prompted.</li>
+<li>Under the <strong>Android</strong> tab, enable <strong>Oculus</strong>.</li>
+</ol>
+</section>
+<section id="install-xr-interaction-toolkit" class="level3">
+<h3 class="anchored" data-anchor-id="install-xr-interaction-toolkit">Install XR Interaction Toolkit</h3>
+<ol type="1">
+<li>Go to <strong>Window &gt; Package Manager</strong>.</li>
+<li>Select <strong>Unity Registry</strong> from the dropdown.</li>
+<li>Search for <strong>XR Interaction Toolkit</strong>.</li>
+<li>Click <strong>Install</strong>.</li>
+<li>When prompted, import the <strong>Starter Assets</strong> sample.</li>
+</ol>
+<hr>
 </section>
 </section>
-<section id="results-and-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="results-and-analysis">Results and Analysis</h2>
-<p>Present your findings. Include tables or calculations as needed.</p>
+<section id="part-3-configure-android-build-settings" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-configure-android-build-settings">Part 3: Configure Android Build Settings</h2>
+<ol type="1">
+<li>Go to <strong>File &gt; Build Settings</strong>.</li>
+<li>Select <strong>Android</strong> and click <strong>Switch Platform</strong>.</li>
+<li>Click <strong>Player Settings</strong>.</li>
+<li>Under <strong>Other Settings</strong>:
+<ul>
+<li>Set <strong>Minimum API Level</strong> to Android 10 (API 29)</li>
+<li>Set <strong>Target API Level</strong> to Automatic</li>
+</ul></li>
+<li>Under <strong>XR Plug-in Management &gt; Oculus</strong>, enable:
+<ul>
+<li><strong>Quest 2</strong></li>
+<li><strong>Quest 3</strong> (if available)</li>
+</ul></li>
+</ol>
+<hr>
 </section>
-<section id="conclusions" class="level2">
-<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
-<p>What did this laboratory session demonstrate?</p>
+<section id="part-4-set-up-the-xr-scene" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-set-up-the-xr-scene">Part 4: Set Up the XR Scene</h2>
+<section id="add-xr-origin" class="level3">
+<h3 class="anchored" data-anchor-id="add-xr-origin">Add XR Origin</h3>
+<ol type="1">
+<li>Delete the default <strong>Main Camera</strong>.</li>
+<li>Right-click in the Hierarchy.</li>
+<li>Select <strong>XR &gt; XR Origin (VR)</strong>.</li>
+</ol>
+<p>This adds the XR Origin, Camera Offset, Main Camera, and Left/Right Controller objects.</p>
+</section>
+<section id="add-locomotion-system" class="level3">
+<h3 class="anchored" data-anchor-id="add-locomotion-system">Add Locomotion System</h3>
+<ol type="1">
+<li>Right-click in the Hierarchy.</li>
+<li>Select <strong>XR &gt; Locomotion System</strong>.</li>
+<li>Add a <strong>Teleportation Provider</strong> component to the Locomotion System object.</li>
+<li>Add a <strong>Snap Turn Provider</strong> component.</li>
+</ol>
+</section>
+<section id="add-a-teleportation-area" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-teleportation-area">Add a Teleportation Area</h3>
+<ol type="1">
+<li>Create a <strong>Plane</strong> (3D Object &gt; Plane).</li>
+<li>Scale it to fill your scene floor.</li>
+<li>Add a <strong>Teleportation Area</strong> component to the Plane.</li>
+</ol>
+</section>
+<section id="add-an-interactive-object" class="level3">
+<h3 class="anchored" data-anchor-id="add-an-interactive-object">Add an Interactive Object</h3>
+<ol type="1">
+<li>Create a <strong>Cube</strong> (3D Object &gt; Cube).</li>
+<li>Position it at approximately (0, 0.5, 2).</li>
+<li>Add an <strong>XR Grab Interactable</strong> component.</li>
+<li>Add a <strong>Rigidbody</strong> component.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-5-build-and-deploy-to-quest-2" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-build-and-deploy-to-quest-2">Part 5: Build and Deploy to Quest 2</h2>
+<section id="connect-the-headset" class="level3">
+<h3 class="anchored" data-anchor-id="connect-the-headset">Connect the headset</h3>
+<ol type="1">
+<li>Connect the Quest 2 to your computer via USB-C.</li>
+<li>Put on the headset and accept the <strong>Allow USB Debugging</strong> prompt.</li>
+</ol>
+</section>
+<section id="build-and-run" class="level3">
+<h3 class="anchored" data-anchor-id="build-and-run">Build and Run</h3>
+<ol type="1">
+<li>Go to <strong>File &gt; Build Settings</strong>.</li>
+<li>Click <strong>Add Open Scenes</strong>.</li>
+<li>Click <strong>Build and Run</strong>.</li>
+<li>Choose a location to save the APK.</li>
+<li>Unity will build and install the app on the headset.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-6-test-on-device" class="level2">
+<h2 class="anchored" data-anchor-id="part-6-test-on-device">Part 6: Test on Device</h2>
+<p>Put on the headset and test:</p>
+<ul>
+<li>Can you look around freely?</li>
+<li>Can you teleport by pointing and pressing the trigger?</li>
+<li>Can you grab the cube?</li>
+<li>Does the cube respond to physics when released?</li>
+</ul>
+<hr>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Device not detected</td>
+<td>Check USB debugging is enabled and cable is connected</td>
+</tr>
+<tr class="even">
+<td>Build fails</td>
+<td>Check Android SDK and NDK are installed in Unity Hub</td>
+</tr>
+<tr class="odd">
+<td>Controllers not tracked</td>
+<td>Check Oculus plugin is enabled in XR Plugin Management</td>
+</tr>
+<tr class="even">
+<td>Scene is dark</td>
+<td>Add a Directional Light to the scene</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="lab-deliverable" class="level2">
+<h2 class="anchored" data-anchor-id="lab-deliverable">Lab Deliverable</h2>
+<p>Before leaving the lab, show your tutor:</p>
+<ul>
+<li>a working XR scene deployed to the Quest 2</li>
+<li>functional teleportation</li>
+<li>at least one grabbable object</li>
+</ul>
+<p>This contributes to <strong>Assessment 1: Continuous Lab Work</strong>.</p>
+<hr>
+</section>
+<section id="extension-task" class="level2">
+<h2 class="anchored" data-anchor-id="extension-task">Extension Task</h2>
+<p>If you finish early:</p>
+<ul>
+<li>Add a second interactive object with different physics properties</li>
+<li>Add a simple UI canvas to the scene</li>
+<li>Experiment with snap turn vs continuous turn settings</li>
+</ul>
 
 
 </section>

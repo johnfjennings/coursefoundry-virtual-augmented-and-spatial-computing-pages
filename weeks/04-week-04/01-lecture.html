@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 4 — Lecture – Virtual, Augmented And Spatial Computing</title>
+<title>Week 4 Lecture Notes: Input Systems &amp; Interaction Fundamentals – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,8 +78,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Week 4 — Lecture – Virtual, Augmented And Spatial Computing">
-<meta property="og:description" content="">
+<meta property="og:title" content="Week 4 Lecture Notes: Input Systems &amp; Interaction Fundamentals – Virtual, Augmented And Spatial Computing">
+<meta property="og:description" content="Virtual, Augmented and Spatial Computing">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
 
@@ -635,12 +634,39 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#the-input-landscape-in-xr" id="toc-the-input-landscape-in-xr" class="nav-link" data-scroll-target="#the-input-landscape-in-xr"><span class="header-section-number">2</span> 1. The Input Landscape in XR</a></li>
+  <li><a href="#controller-based-interaction" id="toc-controller-based-interaction" class="nav-link" data-scroll-target="#controller-based-interaction"><span class="header-section-number">3</span> 2. Controller-Based Interaction</a>
   <ul class="collapse">
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
+  <li><a href="#ray-casting" id="toc-ray-casting" class="nav-link" data-scroll-target="#ray-casting"><span class="header-section-number">3.1</span> 2.1 Ray Casting</a></li>
+  <li><a href="#direct-interaction" id="toc-direct-interaction" class="nav-link" data-scroll-target="#direct-interaction"><span class="header-section-number">3.2</span> 2.2 Direct Interaction</a></li>
+  <li><a href="#haptic-feedback" id="toc-haptic-feedback" class="nav-link" data-scroll-target="#haptic-feedback"><span class="header-section-number">3.3</span> 2.3 Haptic Feedback</a></li>
   </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#hand-tracking" id="toc-hand-tracking" class="nav-link" data-scroll-target="#hand-tracking"><span class="header-section-number">4</span> 3. Hand Tracking</a>
+  <ul class="collapse">
+  <li><a href="#skeletal-model" id="toc-skeletal-model" class="nav-link" data-scroll-target="#skeletal-model"><span class="header-section-number">4.1</span> 3.1 Skeletal Model</a></li>
+  <li><a href="#gesture-design-principles" id="toc-gesture-design-principles" class="nav-link" data-scroll-target="#gesture-design-principles"><span class="header-section-number">4.2</span> 3.2 Gesture Design Principles</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">4.3</span> 3.3 Limitations</a></li>
+  </ul></li>
+  <li><a href="#gaze-and-eye-tracking" id="toc-gaze-and-eye-tracking" class="nav-link" data-scroll-target="#gaze-and-eye-tracking"><span class="header-section-number">5</span> 4. Gaze and Eye Tracking</a>
+  <ul class="collapse">
+  <li><a href="#gaze-as-input" id="toc-gaze-as-input" class="nav-link" data-scroll-target="#gaze-as-input"><span class="header-section-number">5.1</span> 4.1 Gaze as Input</a></li>
+  <li><a href="#the-midas-touch-problem" id="toc-the-midas-touch-problem" class="nav-link" data-scroll-target="#the-midas-touch-problem"><span class="header-section-number">5.2</span> 4.2 The Midas Touch Problem</a></li>
+  <li><a href="#foveated-rendering" id="toc-foveated-rendering" class="nav-link" data-scroll-target="#foveated-rendering"><span class="header-section-number">5.3</span> 4.3 Foveated Rendering</a></li>
+  <li><a href="#analytics-use" id="toc-analytics-use" class="nav-link" data-scroll-target="#analytics-use"><span class="header-section-number">5.4</span> 4.4 Analytics Use</a></li>
+  </ul></li>
+  <li><a href="#designing-for-physical-constraints" id="toc-designing-for-physical-constraints" class="nav-link" data-scroll-target="#designing-for-physical-constraints"><span class="header-section-number">6</span> 5. Designing for Physical Constraints</a>
+  <ul class="collapse">
+  <li><a href="#gorilla-arm-effect" id="toc-gorilla-arm-effect" class="nav-link" data-scroll-target="#gorilla-arm-effect"><span class="header-section-number">6.1</span> 5.1 Gorilla Arm Effect</a></li>
+  <li><a href="#fitts-law-in-3d" id="toc-fitts-law-in-3d" class="nav-link" data-scroll-target="#fitts-law-in-3d"><span class="header-section-number">6.2</span> 5.2 Fitts’ Law in 3D</a></li>
+  <li><a href="#interaction-zones" id="toc-interaction-zones" class="nav-link" data-scroll-target="#interaction-zones"><span class="header-section-number">6.3</span> 5.3 Interaction Zones</a></li>
+  </ul></li>
+  <li><a href="#interaction-state-design" id="toc-interaction-state-design" class="nav-link" data-scroll-target="#interaction-state-design"><span class="header-section-number">7</span> 6. Interaction State Design</a>
+  <ul class="collapse">
+  <li><a href="#state-design-checklist" id="toc-state-design-checklist" class="nav-link" data-scroll-target="#state-design-checklist"><span class="header-section-number">7.1</span> State Design Checklist</a></li>
+  </ul></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">9</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -649,19 +675,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/04-week-04/01-lecture.html">Week 04</a></li><li class="breadcrumb-item"><a href="../../weeks/04-week-04/01-lecture.html">Lecture</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 4 — Lecture</h1>
+<h1 class="title">Week 4 Lecture Notes: Input Systems &amp; Interaction Fundamentals</h1>
+<p class="subtitle lead">Virtual, Augmented and Spatial Computing</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -672,47 +693,179 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 1 hour</p>
-<p>Introduce the main concepts for Week 4. Replace this with your lecture material.</p>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
-<p>By the end of this lecture, students will be able to:</p>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p>This week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: <strong>how users communicate intent to XR systems</strong>. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.</p>
+<hr>
+</section>
+<section id="the-input-landscape-in-xr" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="the-input-landscape-in-xr"><span class="header-section-number">2</span> 1. The Input Landscape in XR</h2>
+<p>Unlike desktop or mobile computing, XR has no settled input standard. Each platform has made different bets:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
-<li>Objective three</li>
+<li><strong>Meta Quest 2/3</strong>: Touch controllers + hand tracking</li>
+<li><strong>HTC Vive Pro</strong>: Wand controllers + SteamVR tracking</li>
+<li><strong>Pico Neo Eye</strong>: Controller + eye tracking</li>
+<li><strong>Hololens 2</strong>: Hand tracking + gaze (no controller)</li>
+<li><strong>Snap Spectacles</strong>: Tap gesture + voice</li>
+<li><strong>Display glasses</strong>: Typically paired with phone/controller</li>
 </ul>
+<p>This diversity is a design challenge. A well-designed XR experience should either: 1. Target a specific device and optimise for its input, or 2. Abstract input so it degrades gracefully across devices</p>
+<hr>
 </section>
-<section id="content" class="level3">
-<h3 class="anchored" data-anchor-id="content">Content</h3>
-<section id="part-1-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-1-topic">Part 1: [Topic]</h4>
-<p>Content here.</p>
+<section id="controller-based-interaction" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="controller-based-interaction"><span class="header-section-number">3</span> 2. Controller-Based Interaction</h2>
+<section id="ray-casting" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="ray-casting"><span class="header-section-number">3.1</span> 2.1 Ray Casting</h3>
+<p>Ray casting is the most common far-field interaction technique. A ray is projected from the controller tip; when it intersects an interactable object, the user can select it.</p>
+<p><strong>Advantages:</strong> - Works at any distance - Familiar (analogous to a laser pointer) - Low fatigue</p>
+<p><strong>Disadvantages:</strong> - Imprecise for small targets - Breaks immersion (visible ray is artificial) - Difficult for manipulation tasks</p>
 </section>
-<section id="part-2-topic" class="level4">
-<h4 class="anchored" data-anchor-id="part-2-topic">Part 2: [Topic]</h4>
-<p>Content here.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Key concept to highlight for this week.</p>
-</div>
-</div>
+<section id="direct-interaction" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="direct-interaction"><span class="header-section-number">3.2</span> 2.2 Direct Interaction</h3>
+<p>Near-field interaction where the controller (or virtual hand) physically overlaps with an object to grab or activate it.</p>
+<p><strong>Advantages:</strong> - Intuitive — mirrors real-world grasping - High precision for close objects</p>
+<p><strong>Disadvantages:</strong> - Requires moving close to objects - Can cause collisions with virtual geometry</p>
 </section>
+<section id="haptic-feedback" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="haptic-feedback"><span class="header-section-number">3.3</span> 2.3 Haptic Feedback</h3>
+<p>Haptic feedback is a critical but often underused channel. Even simple vibration pulses significantly improve interaction confidence.</p>
+<p><strong>Design guidelines:</strong> - Use short pulses (50–100ms) for selection confirmation - Use sustained vibration for “holding” states - Vary intensity to convey different interaction types - Never use haptics without a corresponding visual cue</p>
+<hr>
 </section>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>Recap the key points from this lecture in 2–3 sentences.</p>
+<section id="hand-tracking" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="hand-tracking"><span class="header-section-number">4</span> 3. Hand Tracking</h2>
+<section id="skeletal-model" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="skeletal-model"><span class="header-section-number">4.1</span> 3.1 Skeletal Model</h3>
+<p>Modern hand tracking systems (Quest 2/3, Hololens 2) track a 26-joint skeletal model per hand in real time. This enables: - Pinch detection (index + thumb proximity) - Custom pose recognition - Full finger articulation for expressive avatars</p>
+</section>
+<section id="gesture-design-principles" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="gesture-design-principles"><span class="header-section-number">4.2</span> 3.2 Gesture Design Principles</h3>
+<p>Not all gestures are equal. Good XR gestures are: - <strong>Distinct</strong> — not easily confused with natural hand movement - <strong>Comfortable</strong> — can be held or repeated without fatigue - <strong>Discoverable</strong> — users can find them without instruction - <strong>Reversible</strong> — easy to cancel or undo</p>
+</section>
+<section id="limitations" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="limitations"><span class="header-section-number">4.3</span> 3.3 Limitations</h3>
+<ul>
+<li><strong>Occlusion</strong>: hands block each other; fingers block joints</li>
+<li><strong>Lighting</strong>: poor lighting degrades tracking quality</li>
+<li><strong>Fatigue</strong>: sustained hand poses are tiring</li>
+<li><strong>Precision</strong>: less precise than controllers for small targets</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="gaze-and-eye-tracking" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="gaze-and-eye-tracking"><span class="header-section-number">5</span> 4. Gaze and Eye Tracking</h2>
+<section id="gaze-as-input" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="gaze-as-input"><span class="header-section-number">5.1</span> 4.1 Gaze as Input</h3>
+<p>Gaze input uses where the user is looking as a selection signal. Two main patterns:</p>
+<p><strong>Dwell selection</strong>: Look at target for a fixed duration (typically 1–2 seconds) to activate. - Pro: completely hands-free - Con: slow, tiring, unnatural</p>
+<p><strong>Gaze + confirm</strong>: Look to target, then use a secondary input (pinch, button, voice) to confirm. - Pro: fast, natural, avoids Midas Touch - Con: requires secondary input channel</p>
+</section>
+<section id="the-midas-touch-problem" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="the-midas-touch-problem"><span class="header-section-number">5.2</span> 4.2 The Midas Touch Problem</h3>
+<p>Named after the mythological king: everything you look at turns to gold (activates). Gaze-only systems must carefully distinguish intentional gaze from casual glancing.</p>
+<p>Mitigations: - Require dwell time - Use gaze + confirm pattern - Provide clear visual feedback of gaze state - Allow users to disable gaze input</p>
+</section>
+<section id="foveated-rendering" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="foveated-rendering"><span class="header-section-number">5.3</span> 4.3 Foveated Rendering</h3>
+<p>Eye tracking enables <strong>foveated rendering</strong>: rendering the area the user is looking at in full resolution, and reducing quality in the periphery. This can dramatically reduce GPU load.</p>
+<p>Available on: Pico Neo Eye (hardware-level), some Quest 3 features.</p>
+</section>
+<section id="analytics-use" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="analytics-use"><span class="header-section-number">5.4</span> 4.4 Analytics Use</h3>
+<p>Eye tracking data is valuable for UX research: - Attention heatmaps - Fixation duration on UI elements - Saccade patterns (rapid eye movements between points)</p>
+<p><strong>Ethics note</strong>: Eye tracking data is biometric. Treat it with the same care as fingerprint or facial recognition data.</p>
+<hr>
+</section>
+</section>
+<section id="designing-for-physical-constraints" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="designing-for-physical-constraints"><span class="header-section-number">6</span> 5. Designing for Physical Constraints</h2>
+<section id="gorilla-arm-effect" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="gorilla-arm-effect"><span class="header-section-number">6.1</span> 5.1 Gorilla Arm Effect</h3>
+<p>Sustained arm elevation causes rapid fatigue. This was first observed in early touchscreen kiosks where users had to reach up to interact. In XR, it’s worse because: - Sessions can be longer - Users may not notice fatigue building - Sudden fatigue can cause loss of balance</p>
+<p><strong>Design rule</strong>: Default interaction zone is <strong>waist to shoulder height, within arm’s reach</strong>.</p>
+</section>
+<section id="fitts-law-in-3d" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="fitts-law-in-3d"><span class="header-section-number">6.2</span> 5.2 Fitts’ Law in 3D</h3>
+<p>Fitts’ Law predicts movement time based on target size and distance:</p>
+<pre><code>MT = a + b × log₂(2D/W)</code></pre>
+<p>Where D = distance to target, W = target width.</p>
+<p>In 3D XR: - Minimum comfortable target size: ~2cm at arm’s length - Targets at the edge of the field of view take longer to acquire - Moving targets are significantly harder to select</p>
+</section>
+<section id="interaction-zones" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="interaction-zones"><span class="header-section-number">6.3</span> 5.3 Interaction Zones</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>Distance</th>
+<th>Best Input</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intimate</td>
+<td>0–0.5m</td>
+<td>Direct grab, touch</td>
+</tr>
+<tr class="even">
+<td>Personal</td>
+<td>0.5–1.5m</td>
+<td>Near ray cast, hand</td>
+</tr>
+<tr class="odd">
+<td>Social</td>
+<td>1.5–3m</td>
+<td>Ray cast, gaze</td>
+</tr>
+<tr class="even">
+<td>Public</td>
+<td>3m+</td>
+<td>Gaze, voice</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="interaction-state-design" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="interaction-state-design"><span class="header-section-number">7</span> 6. Interaction State Design</h2>
+<p>Every interactive object in XR should implement a clear state machine:</p>
+<pre><code>Default → Hover → Selected → Activated → Released</code></pre>
+<p>Each state transition should be communicated through at least two feedback channels (visual + audio, or visual + haptic).</p>
+<section id="state-design-checklist" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="state-design-checklist"><span class="header-section-number">7.1</span> State Design Checklist</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Default state is visually distinct from interactive state</label></li>
+<li><label><input type="checkbox">Hover state provides clear affordance</label></li>
+<li><label><input type="checkbox">Selection is confirmed with feedback</label></li>
+<li><label><input type="checkbox">Activation has clear start and end signals</label></li>
+<li><label><input type="checkbox">Release returns object to appropriate state</label></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="self-check-questions" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</h2>
+<ol type="1">
+<li>What is the Midas Touch Problem and how can it be mitigated?</li>
+<li>Why does Fitts’ Law still apply in 3D XR environments?</li>
+<li>What are the three channels of interaction feedback?</li>
+<li>When would you choose hand tracking over controller input?</li>
+<li>What is foveated rendering and which device in our lab supports it?</li>
+</ol>
+<hr>
+</section>
+<section id="references" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="references"><span class="header-section-number">9</span> References</h2>
+<ul>
+<li>LaViola, J.J. et al.&nbsp;(2017) <em>3D User Interfaces: Theory and Practice</em> (2nd ed.). Addison-Wesley.</li>
+<li>Bowman, D.A. et al.&nbsp;(2004) <em>3D User Interfaces: Theory and Practice</em>. Pearson.</li>
+<li>Fitts, P.M. (1954) “The information capacity of the human motor system in controlling the amplitude of movement.” <em>Journal of Experimental Psychology</em>, 47(6), 381–391.</li>
+<li>Poupyrev, I. et al.&nbsp;(1996) “The go-go interaction technique.” <em>UIST ’96 Proceedings</em>.</li>
+<li>Unity XR Interaction Toolkit: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit">docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit</a></li>
+</ul>
 
 
 </section>
