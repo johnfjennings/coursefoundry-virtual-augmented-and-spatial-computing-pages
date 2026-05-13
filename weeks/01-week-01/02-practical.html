@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -119,6 +154,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
@@ -135,21 +176,62 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">References</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Week 01</span></a>
+ <span class="menu-text">Assessments</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/02-assessment-grading-sheet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Grading Sheet</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/01-assessment-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/02-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/03-assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/02-assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../assessments/01-assessment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/01-week-01/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -178,13 +260,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 02</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/02-week-02/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -213,13 +295,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 03</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/03-week-03/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -248,13 +330,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 04</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/04-week-04/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -283,13 +365,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 05</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/05-week-05/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -318,13 +400,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 06</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/06-week-06/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -353,13 +435,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 07</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/07-week-07/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -388,13 +470,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 08</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/08-week-08/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -423,13 +505,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 09</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/09-week-09/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -458,13 +540,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 10</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/10-week-10/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -493,13 +575,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 11</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/11-week-11/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -528,13 +610,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 12</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/12-week-12/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -563,13 +645,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
  <span class="menu-text">Week 13</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../weeks/13-week-13/01-lecture.html" class="sidebar-item-text sidebar-link">
@@ -596,35 +678,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true">
- <span class="menu-text">Assessments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../assessments/01-assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assessment</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../assessments/02-assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assessment</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../assessments/03-assessment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assessment</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -637,12 +690,19 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#part-1-setup-introduction" id="toc-part-1-setup-introduction" class="nav-link" data-scroll-target="#part-1-setup-introduction">Part 1: [Setup / Introduction]</a></li>
-  <li><a href="#part-2-main-task" id="toc-part-2-main-task" class="nav-link" data-scroll-target="#part-2-main-task">Part 2: [Main Task]</a></li>
+  <li><a href="#part-1-project-setup-with-meta-xr-simulator-30-minutes" id="toc-part-1-project-setup-with-meta-xr-simulator-30-minutes" class="nav-link" data-scroll-target="#part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</a></li>
+  <li><a href="#part-2-capture-screenshots-and-gameplay-video-30-minutes" id="toc-part-2-capture-screenshots-and-gameplay-video-30-minutes" class="nav-link" data-scroll-target="#part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</a></li>
+  <li><a href="#part-3-update-meta-app-store-pdp-assets-45-minutes" id="toc-part-3-update-meta-app-store-pdp-assets-45-minutes" class="nav-link" data-scroll-target="#part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</a></li>
+  <li><a href="#part-4-build-and-upload-apk-30-minutes" id="toc-part-4-build-and-upload-apk-30-minutes" class="nav-link" data-scroll-target="#part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</a></li>
+  <li><a href="#part-5-update-student-repository-documentation-15-minutes" id="toc-part-5-update-student-repository-documentation-15-minutes" class="nav-link" data-scroll-target="#part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</a></li>
   </ul></li>
-  <li><a href="#expected-outcome" id="toc-expected-outcome" class="nav-link" data-scroll-target="#expected-outcome">Expected Outcome</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
   </ul>
 </nav>
     </div>
@@ -677,42 +737,249 @@ ul.task-list li input[type="checkbox"] {
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><strong>Duration:</strong> 2 hours</p>
+<p>In this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.</p>
 </section>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <p>By the end of this practical, you will be able to:</p>
 <ul>
-<li>Objective one</li>
-<li>Objective two</li>
+<li>Set up and test Unity VR projects using the Meta XR Simulator</li>
+<li>Capture high-quality screenshots and gameplay videos for app promotion</li>
+<li>Navigate and update Meta PDP (Product Detail Page) assets</li>
+<li>Build and prepare APK files for Meta App Store submission</li>
+<li>Document project updates professionally in your student repository</li>
+</ul>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Your completed 2nd year Unity VR escape room project</li>
+<li>Unity Hub and Unity Editor installed</li>
+<li>Meta XR SDK and Meta XR Simulator</li>
+<li>Access to your student GitHub repository</li>
+<li>Meta Developer account</li>
 </ul>
 </section>
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<section id="part-1-setup-introduction" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-setup-introduction">Part 1: [Setup / Introduction]</h3>
-<p>Step-by-step instructions here.</p>
+<section id="part-1-project-setup-with-meta-xr-simulator-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</h3>
+<ol type="1">
+<li><strong>Download and Open Your Project</strong>
+<ul>
+<li>Locate your 2nd year Unity VR escape room project files</li>
+<li>Open the project in Unity Hub</li>
+<li>Ensure all assets and scenes load correctly</li>
+<li>Note any missing dependencies or errors in the console</li>
+</ul></li>
+<li><strong>Configure Meta XR Simulator</strong>
+<ul>
+<li>Install the Meta XR Simulator if not already present</li>
+<li>Configure the simulator settings for your escape room environment</li>
+<li>Set up appropriate room boundaries and tracking space</li>
+<li>Test basic functionality (hand tracking, controller input, movement)</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Meta XR Simulator Benefits
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Meta XR Simulator allows you to test VR experiences without wearing a headset, making development and debugging much more efficient.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Initial Testing</strong>
+<ul>
+<li>Run your escape room experience in the Meta XR Simulator</li>
+<li>Verify that all interactive elements work as expected</li>
+<li>Check for any performance issues or visual glitches</li>
+<li>Document any bugs or areas needing improvement</li>
+</ul></li>
+</ol>
 </section>
-<section id="part-2-main-task" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-main-task">Part 2: [Main Task]</h3>
-<p>Step-by-step instructions here.</p>
-</section>
-</section>
-<section id="expected-outcome" class="level2">
-<h2 class="anchored" data-anchor-id="expected-outcome">Expected Outcome</h2>
-<p>Describe what a successful result looks like.</p>
+<section id="part-2-capture-screenshots-and-gameplay-video-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</h3>
+<ol start="4" type="1">
+<li><strong>Screenshot Capture</strong>
+<ul>
+<li>Use the Meta XR Simulator’s built-in screenshot functionality</li>
+<li>Capture at least 5 high-quality screenshots showing:
+<ul>
+<li>The main escape room environment</li>
+<li>Key interactive objects and puzzles</li>
+<li>UI elements and menus</li>
+<li>Player interactions (hand tracking, object manipulation)</li>
+<li>Victory/completion screen</li>
+</ul></li>
+<li>Ensure screenshots are high resolution (minimum 1920x1080)</li>
+</ul></li>
+<li><strong>Gameplay Video Recording</strong>
+<ul>
+<li>Record a 60-90 second gameplay video using screen recording software</li>
+<li>Show a complete puzzle solution or key gameplay loop</li>
+<li>Include audio if your escape room has sound effects or music</li>
+<li>Ensure smooth framerate and clear visuals</li>
+<li>Export in MP4 format at 1080p resolution</li>
+</ul></li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Hint
+<span class="screen-reader-only">Tip</span>Pro Recording Tips
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you get stuck, try [suggestion].</p>
+<ul>
+<li>Use OBS Studio or similar for high-quality recordings</li>
+<li>Record at 60fps for smooth playback</li>
+<li>Keep file sizes reasonable for web upload</li>
+<li>Add brief text overlays to highlight key features</li>
+</ul>
 </div>
 </div>
+</section>
+<section id="part-3-update-meta-app-store-pdp-assets-45-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</h3>
+<ol start="6" type="1">
+<li><strong>Access Your Meta Developer Dashboard</strong>
+<ul>
+<li>Log into your Meta Developer account</li>
+<li>Navigate to your escape room app listing</li>
+<li>Access the Product Detail Page (PDP) management section</li>
+</ul></li>
+<li><strong>Update PDP Visual Assets</strong>
+<ul>
+<li>Upload your new screenshots to replace existing ones</li>
+<li>Organize screenshots in a logical order (environment → gameplay → features)</li>
+<li>Upload your gameplay video as the featured trailer</li>
+<li>Update the app icon if you’ve made improvements</li>
+<li>Ensure all images meet Meta’s size and format requirements</li>
+</ul></li>
+<li><strong>Review and Update Text Content</strong>
+<ul>
+<li>Update the app description to reflect any new features</li>
+<li>Check that keywords and tags are still relevant</li>
+<li>Update version notes with improvements made</li>
+<li>Verify age rating and content warnings are accurate</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Meta PDP Requirements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure all assets meet Meta’s technical requirements: - Screenshots: 1024x1024 minimum - Videos: MP4 format, max 15MB - Icons: 512x512 PNG with transparency</p>
+</div>
+</div>
+</section>
+<section id="part-4-build-and-upload-apk-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</h3>
+<ol start="9" type="1">
+<li><strong>Build Configuration</strong>
+<ul>
+<li>Set Unity build settings to Android platform</li>
+<li>Configure XR settings for Meta Quest</li>
+<li>Set appropriate quality settings for Quest hardware</li>
+<li>Increment version number in Player Settings</li>
+</ul></li>
+<li><strong>Build and Test APK</strong>
+<ul>
+<li>Build the APK file from Unity</li>
+<li>Test the APK on a Quest device if available, or verify build completion</li>
+<li>Check file size and performance metrics</li>
+<li>Ensure all features work in the standalone build</li>
+</ul></li>
+<li><strong>Upload to Meta App Store</strong>
+<ul>
+<li>Navigate to the app submission section in Meta Developer Dashboard</li>
+<li>Upload your new APK file</li>
+<li>Complete the submission checklist</li>
+<li>Submit for review (note: this may take several days)</li>
+</ul></li>
+</ol>
+</section>
+<section id="part-5-update-student-repository-documentation-15-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</h3>
+<ol start="12" type="1">
+<li><strong>Create Professional Documentation</strong>
+<ul>
+<li>Open your student GitHub repository</li>
+<li>Update the README.md file with:
+<ul>
+<li>Project title and brief description</li>
+<li>Screenshots embedded using Markdown syntax</li>
+<li>Link to or embed the gameplay video</li>
+<li>Technical specifications and requirements</li>
+<li>Installation and usage instructions</li>
+<li>Credits and acknowledgments</li>
+</ul></li>
+</ul></li>
+<li><strong>Repository Organization</strong>
+<ul>
+<li>Create an <code>assets/</code> folder for images and videos</li>
+<li>Organize files with clear naming conventions</li>
+<li>Add appropriate file extensions and descriptions</li>
+<li>Ensure all links work correctly</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Markdown Tips for README
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Description](assets/screenshot1.png)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gameplay Video</span><span class="co">](assets/gameplay.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+</section>
+<section id="deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
+<p>By the end of this practical, you should have:</p>
+<ol type="1">
+<li>✅ Working Unity VR project running in Meta XR Simulator</li>
+<li>✅ 5+ high-quality screenshots captured</li>
+<li>✅ 60-90 second gameplay video recorded</li>
+<li>✅ Updated Meta App Store PDP with new assets</li>
+<li>✅ Built and uploaded new APK to Meta App Store</li>
+<li>✅ Professional README.md documentation in student repository</li>
+</ol>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<p><strong>Common Issues:</strong> - <strong>Simulator not launching:</strong> Check Meta XR SDK version compatibility - <strong>Performance issues:</strong> Adjust quality settings in Unity - <strong>Upload failures:</strong> Verify file sizes and formats meet requirements - <strong>Build errors:</strong> Check Android SDK and build tools versions</p>
+</section>
+<section id="reflection-questions" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
+<ol type="1">
+<li>What improvements did you notice when testing with the Meta XR Simulator compared to your original development process?</li>
+<li>How do professional PDP assets impact the perceived quality of your VR application?</li>
+<li>What challenges did you encounter when preparing your project for app store submission?</li>
+<li>How might you use these documentation and promotion skills in future VR projects?</li>
+</ol>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>For next week, consider: - Implementing user feedback if your app receives reviews - Exploring advanced Meta XR features for future updates - Planning additional VR projects using these professional workflows</p>
 
 
 </section>
