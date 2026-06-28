@@ -54,81 +54,53 @@
     "href": "assessments/02-assessment.html",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "",
-    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design."
   },
   {
     "objectID": "assessments/02-assessment.html#overview",
     "href": "assessments/02-assessment.html#overview",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "",
-    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design."
   },
   {
     "objectID": "assessments/02-assessment.html#learning-outcomes",
     "href": "assessments/02-assessment.html#learning-outcomes",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments"
   },
   {
     "objectID": "assessments/02-assessment.html#task",
     "href": "assessments/02-assessment.html#task",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Task",
-    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?"
   },
   {
     "objectID": "assessments/02-assessment.html#submission",
     "href": "assessments/02-assessment.html#submission",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Submission",
-    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)"
   },
   {
     "objectID": "assessments/02-assessment.html#marking-criteria",
     "href": "assessments/02-assessment.html#marking-criteria",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Marking Criteria",
-    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%"
   },
   {
     "objectID": "assessments/02-assessment.html#tips",
     "href": "assessments/02-assessment.html#tips",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Tips",
-    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional"
   },
   {
-    "objectID": "assessments/02-assessment2.html",
-    "href": "assessments/02-assessment2.html",
+    "objectID": "assessments/04-assessment2.html",
+    "href": "assessments/04-assessment2.html",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "",
     "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
@@ -138,8 +110,8 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#overview",
-    "href": "assessments/02-assessment2.html#overview",
+    "objectID": "assessments/04-assessment2.html#overview",
+    "href": "assessments/04-assessment2.html#overview",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "",
     "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
@@ -149,8 +121,8 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#learning-outcomes",
-    "href": "assessments/02-assessment2.html#learning-outcomes",
+    "objectID": "assessments/04-assessment2.html#learning-outcomes",
+    "href": "assessments/04-assessment2.html#learning-outcomes",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Learning Outcomes",
     "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments",
@@ -160,8 +132,8 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#task",
-    "href": "assessments/02-assessment2.html#task",
+    "objectID": "assessments/04-assessment2.html#task",
+    "href": "assessments/04-assessment2.html#task",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Task",
     "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?",
@@ -171,8 +143,8 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#submission",
-    "href": "assessments/02-assessment2.html#submission",
+    "objectID": "assessments/04-assessment2.html#submission",
+    "href": "assessments/04-assessment2.html#submission",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Submission",
     "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
@@ -182,8 +154,8 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#marking-criteria",
-    "href": "assessments/02-assessment2.html#marking-criteria",
+    "objectID": "assessments/04-assessment2.html#marking-criteria",
+    "href": "assessments/04-assessment2.html#marking-criteria",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Marking Criteria",
     "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%",
@@ -193,14 +165,113 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment2.html#tips",
-    "href": "assessments/02-assessment2.html#tips",
+    "objectID": "assessments/04-assessment2.html#tips",
+    "href": "assessments/04-assessment2.html#tips",
     "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Tips",
     "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional",
     "crumbs": [
       "Assessments",
       "Assessment2"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html",
+    "href": "assessments/02-assessment-grading-sheet.html",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "",
+    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen",
+    "crumbs": [
+      "Assessments",
+      "Assessment Grading Sheet"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#student-details",
+    "href": "assessments/02-assessment-grading-sheet.html#student-details",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "",
+    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen",
+    "crumbs": [
+      "Assessments",
+      "Assessment Grading Sheet"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#marking-criteria",
+    "href": "assessments/02-assessment-grading-sheet.html#marking-criteria",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n1. Critical Analysis (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nInsightful critique, strong use of XR/HCI concepts, clear understanding of trade-offs\n70–100%\n\n\n\nClear analysis, good use of terminology, some critical insight\n60–69%\n\n\n\nMostly descriptive, limited critique, some relevant concepts\n50–59%\n\n\n\nSuperficial or inaccurate, lacks engagement with course material\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n2. Interaction Prototype (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nFully functional, strong technical competence, clear understanding of input systems\n70–100%\n\n\n\nFunctional with minor issues, good technical understanding\n60–69%\n\n\n\nBasic implementation, limited robustness\n50–59%\n\n\n\nIncomplete or non-functional\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n3. Application of HCI & XR Principles (20%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nStrong, explicit application of principles, clear design reasoning\n70–100%\n\n\n\nSome clear application of principles\n60–69%\n\n\n\nLimited or implicit use of principles\n50–59%\n\n\n\nNo meaningful application\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 20\nComments:\n\n\n\n\n\n\n4. Evaluation & Reflection (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nThoughtful, critical reflection, clear identification of limitations\n70–100%\n\n\n\nClear evaluation with some insight\n60–69%\n\n\n\nBasic reflection, limited depth\n50–59%\n\n\n\nMinimal or no evaluation\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:\n\n\n\n\n\n\n5. Presentation & Communication (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nClear, well-structured report, effective visuals and video\n70–100%\n\n\n\nMostly clear and organised\n60–69%\n\n\n\nSome structure issues\n50–59%\n\n\n\nPoorly presented or unclear\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:",
+    "crumbs": [
+      "Assessments",
+      "Assessment Grading Sheet"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#summary",
+    "href": "assessments/02-assessment-grading-sheet.html#summary",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nComponent\nWeight\nMark\nWeighted\n\n\n\n\nCritical Analysis\n30%\n/30\n\n\n\nPrototype\n30%\n/30\n\n\n\nHCI Application\n20%\n/20\n\n\n\nEvaluation\n10%\n/10\n\n\n\nPresentation\n10%\n/10\n\n\n\nTotal\n100%\n\n/100",
+    "crumbs": [
+      "Assessments",
+      "Assessment Grading Sheet"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment-grading-sheet.html#overall-feedback",
+    "href": "assessments/02-assessment-grading-sheet.html#overall-feedback",
+    "title": "Assessment 2 — Grading Sheet",
+    "section": "Overall Feedback",
+    "text": "Overall Feedback\nStrengths:\n\n\n\nAreas for Improvement:\n\n\n\nGrade: _______\nMarker Signature: _______________________ Date: ___________",
+    "crumbs": [
+      "Assessments",
+      "Assessment Grading Sheet"
+    ]
+  },
+  {
+    "objectID": "assessments/06-assessment.html",
+    "href": "assessments/06-assessment.html",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/06-assessment.html#assessment-1",
+    "href": "assessments/06-assessment.html#assessment-1",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/03-assessment-1.html",
+    "href": "assessments/03-assessment-1.html",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "assessments/03-assessment-1.html#assessment-1",
+    "href": "assessments/03-assessment-1.html#assessment-1",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
     ]
   },
   {
@@ -208,22 +279,14 @@
     "href": "assessments/03-assessment.html",
     "title": "Assessment 3",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
   },
   {
     "objectID": "assessments/03-assessment.html#assessment-3",
     "href": "assessments/03-assessment.html#assessment-3",
     "title": "Assessment 3",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
   },
   {
     "objectID": "weeks/01-week-01/02-practical.html",
@@ -914,17 +977,97 @@
     "href": "assessments/01-assessment.html",
     "title": "Assessment 1",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
-    "crumbs": [
-      "Assessments",
-      "Assessment"
-    ]
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
   },
   {
     "objectID": "assessments/01-assessment.html#assessment-1",
     "href": "assessments/01-assessment.html#assessment-1",
     "title": "Assessment 1",
     "section": "",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
+  },
+  {
+    "objectID": "assessments/07-assessment.html",
+    "href": "assessments/07-assessment.html",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#overview",
+    "href": "assessments/07-assessment.html#overview",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#learning-outcomes",
+    "href": "assessments/07-assessment.html#learning-outcomes",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#task",
+    "href": "assessments/07-assessment.html#task",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Task",
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#submission",
+    "href": "assessments/07-assessment.html#submission",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Submission",
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#marking-criteria",
+    "href": "assessments/07-assessment.html#marking-criteria",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/07-assessment.html#tips",
+    "href": "assessments/07-assessment.html#tips",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Tips",
+    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional",
+    "crumbs": [
+      "Assessments",
+      "Assessment"
+    ]
+  },
+  {
+    "objectID": "assessments/05-assessment.html",
+    "href": "assessments/05-assessment.html",
+    "title": "Assessment 3",
+    "section": "",
     "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
     "crumbs": [
       "Assessments",
@@ -932,81 +1075,100 @@
     ]
   },
   {
-    "objectID": "assessments/02-assessment-grading-sheet.html",
-    "href": "assessments/02-assessment-grading-sheet.html",
-    "title": "Assessment 2 — Grading Sheet",
+    "objectID": "assessments/05-assessment.html#assessment-3",
+    "href": "assessments/05-assessment.html#assessment-3",
+    "title": "Assessment 3",
     "section": "",
-    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen",
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
     "crumbs": [
       "Assessments",
-      "Assessment Grading Sheet"
+      "Assessment"
     ]
   },
   {
-    "objectID": "assessments/02-assessment-grading-sheet.html#student-details",
-    "href": "assessments/02-assessment-grading-sheet.html#student-details",
-    "title": "Assessment 2 — Grading Sheet",
+    "objectID": "assessments/01-overview.html",
+    "href": "assessments/01-overview.html",
+    "title": "Assessment Overview",
     "section": "",
-    "text": "Student Name\n\n\n\nStudent ID\n\n\n\nMarker\n\n\n\nDate\n\n\n\nExperience Chosen",
+    "text": "Assignments are as follows…",
     "crumbs": [
       "Assessments",
-      "Assessment Grading Sheet"
+      "Overview"
     ]
   },
   {
-    "objectID": "assessments/02-assessment-grading-sheet.html#marking-criteria",
-    "href": "assessments/02-assessment-grading-sheet.html#marking-criteria",
-    "title": "Assessment 2 — Grading Sheet",
+    "objectID": "assessments/01-overview.html#overview",
+    "href": "assessments/01-overview.html#overview",
+    "title": "Assessment Overview",
+    "section": "",
+    "text": "Assignments are as follows…",
+    "crumbs": [
+      "Assessments",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "assessments/02-assessment2.html",
+    "href": "assessments/02-assessment2.html",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design."
+  },
+  {
+    "objectID": "assessments/02-assessment2.html#overview",
+    "href": "assessments/02-assessment2.html#overview",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design."
+  },
+  {
+    "objectID": "assessments/02-assessment2.html#learning-outcomes",
+    "href": "assessments/02-assessment2.html#learning-outcomes",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\n\nLO3: Demonstrate practical competence with XR systems\n\nLO4: Apply HCI principles in immersive environments"
+  },
+  {
+    "objectID": "assessments/02-assessment2.html#task",
+    "href": "assessments/02-assessment2.html#task",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Task",
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse: - Interaction design - Presence and immersion - Spatial design - Strengths and weaknesses - Comfort and usability\nSupport with: - Screenshots or diagrams - References to lecture concepts\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples: - Object manipulation - Gesture interaction - UI selection (ray, gaze) - Navigation system\nYour prototype must: - Be interactive and functional - Demonstrate understanding of XR input/output\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype: - What works well? - What doesn’t? - How does it compare to the original? - What would you improve?"
+  },
+  {
+    "objectID": "assessments/02-assessment2.html#submission",
+    "href": "assessments/02-assessment2.html#submission",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Submission",
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)"
+  },
+  {
+    "objectID": "assessments/02-assessment2.html#marking-criteria",
+    "href": "assessments/02-assessment2.html#marking-criteria",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "section": "Marking Criteria",
-    "text": "Marking Criteria\n\n1. Critical Analysis (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nInsightful critique, strong use of XR/HCI concepts, clear understanding of trade-offs\n70–100%\n\n\n\nClear analysis, good use of terminology, some critical insight\n60–69%\n\n\n\nMostly descriptive, limited critique, some relevant concepts\n50–59%\n\n\n\nSuperficial or inaccurate, lacks engagement with course material\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n2. Interaction Prototype (30%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nFully functional, strong technical competence, clear understanding of input systems\n70–100%\n\n\n\nFunctional with minor issues, good technical understanding\n60–69%\n\n\n\nBasic implementation, limited robustness\n50–59%\n\n\n\nIncomplete or non-functional\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 30\nComments:\n\n\n\n\n\n\n3. Application of HCI & XR Principles (20%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nStrong, explicit application of principles, clear design reasoning\n70–100%\n\n\n\nSome clear application of principles\n60–69%\n\n\n\nLimited or implicit use of principles\n50–59%\n\n\n\nNo meaningful application\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 20\nComments:\n\n\n\n\n\n\n4. Evaluation & Reflection (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nThoughtful, critical reflection, clear identification of limitations\n70–100%\n\n\n\nClear evaluation with some insight\n60–69%\n\n\n\nBasic reflection, limited depth\n50–59%\n\n\n\nMinimal or no evaluation\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:\n\n\n\n\n\n\n5. Presentation & Communication (10%)\n\n\n\n\n\n\n\n\nDescriptor\nMark Range\n✓\n\n\n\n\nClear, well-structured report, effective visuals and video\n70–100%\n\n\n\nMostly clear and organised\n60–69%\n\n\n\nSome structure issues\n50–59%\n\n\n\nPoorly presented or unclear\n&lt;50%\n\n\n\n\nMark Awarded: _______ / 10\nComments:",
-    "crumbs": [
-      "Assessments",
-      "Assessment Grading Sheet"
-    ]
+    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%"
   },
   {
-    "objectID": "assessments/02-assessment-grading-sheet.html#summary",
-    "href": "assessments/02-assessment-grading-sheet.html#summary",
-    "title": "Assessment 2 — Grading Sheet",
-    "section": "Summary",
-    "text": "Summary\n\n\n\nComponent\nWeight\nMark\nWeighted\n\n\n\n\nCritical Analysis\n30%\n/30\n\n\n\nPrototype\n30%\n/30\n\n\n\nHCI Application\n20%\n/20\n\n\n\nEvaluation\n10%\n/10\n\n\n\nPresentation\n10%\n/10\n\n\n\nTotal\n100%\n\n/100",
-    "crumbs": [
-      "Assessments",
-      "Assessment Grading Sheet"
-    ]
-  },
-  {
-    "objectID": "assessments/02-assessment-grading-sheet.html#overall-feedback",
-    "href": "assessments/02-assessment-grading-sheet.html#overall-feedback",
-    "title": "Assessment 2 — Grading Sheet",
-    "section": "Overall Feedback",
-    "text": "Overall Feedback\nStrengths:\n\n\n\nAreas for Improvement:\n\n\n\nGrade: _______\nMarker Signature: _______________________ Date: ___________",
-    "crumbs": [
-      "Assessments",
-      "Assessment Grading Sheet"
-    ]
+    "objectID": "assessments/02-assessment2.html#tips",
+    "href": "assessments/02-assessment2.html#tips",
+    "title": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "section": "Tips",
+    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional"
   },
   {
     "objectID": "assessments/01-assessment-1.html",
     "href": "assessments/01-assessment-1.html",
     "title": "Assessment 1",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
   },
   {
     "objectID": "assessments/01-assessment-1.html#assessment-1",
     "href": "assessments/01-assessment-1.html#assessment-1",
     "title": "Assessment 1",
     "section": "",
-    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
+    "text": "Test your understanding of the course material covered up to this point. Replace the placeholder text in each question with content relevant to your course topic. The option marked ‘.correct-choice’ is revealed as correct when learners submit.\n\nWhat is the definition of [key concept] from this course?\n\n\n\n\n ✗An unrelated process with no bearing on the topic\n\n\n ✓[Write the correct definition here]\n\n\n ✗A simplified version that ignores core principles\n\n\n ✗A legacy approach no longer in use\n\n\n\n\n\n\n\n\n\nUntitled Drawing\n\n\n\nWhich of the following best describes [process or method] covered in this course?\n\n\n\n\n ✓[Write the correct description here]\n\n\n ✗A technique used only in advanced scenarios\n\n\n ✗An optional step that can usually be skipped\n\n\n ✗A method applicable only to a different domain\n\n\n\n\n\n\n\nWhat is the primary benefit of applying [technique] in [context]?\n\n\n\n\n ✗It eliminates the need for all other steps\n\n\n ✗It reduces accuracy in favour of speed\n\n\n ✓[Write the correct benefit here]\n\n\n ✗It is only relevant to large-scale organisations\n\n\n\n\n\n\n\nIn the context of this course, what does [acronym or term] stand for?\n\n\n\n\n ✗[Incorrect expansion A]\n\n\n ✗[Incorrect expansion B]\n\n\n ✗[Incorrect expansion C]\n\n\n ✓[Write the correct expansion here]\n\n\n\n\n\n\n\nWhich statement about [concept] is correct?\n\n\n\n\n ✗It applies only under very specific conditions that are rarely met\n\n\n ✓[Write the correct statement here]\n\n\n ✗It was introduced in [wrong era or context]\n\n\n ✗It contradicts the principles discussed in this course\n\n\n\n\n\n\n\nWhat is the correct sequence of steps for [process]?\n\n\n\n\n ✗Step C → Step A → Step B → Step D\n\n\n ✗Step B → Step D → Step A → Step C\n\n\n ✓[Write the correct sequence here]\n\n\n ✗The steps can be performed in any order\n\n\n\n\n\n\n\nWhich tool or technique is most appropriate for [scenario described in this course]?\n\n\n\n\n ✗[Inappropriate tool A]\n\n\n ✗[Inappropriate tool B]\n\n\n ✓[Write the most appropriate tool here]\n\n\n ✗None — this scenario does not require a specific tool\n\n\n\n\n\n\n\nWhat would happen if [key step or principle] were omitted from [process]?\n\n\n\n\n ✓[Write the correct consequence here]\n\n\n ✗No noticeable difference — the step is redundant\n\n\n ✗The process would complete faster with fewer errors\n\n\n ✗The output would remain valid but formatted differently\n\n\n\n\n\n\n\nWhich of the following is an example of [concept] as discussed in this course?\n\n\n\n\n ✗[Incorrect example A]\n\n\n ✗[Incorrect example B]\n\n\n ✗[Incorrect example C]\n\n\n ✓[Write the correct example here]\n\n\n\n\n\n\n\nA practitioner encounters [realistic scenario]. Based on this course, what is the best course of action?\n\n\n\n\n ✗Escalate immediately without attempting any initial steps\n\n\n ✓[Write the correct course of action here]\n\n\n ✗Apply [incorrect approach] and document the outcome\n\n\n ✗Defer the decision until more data is available"
   },
   {
     "objectID": "schedule.html",
