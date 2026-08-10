@@ -257,168 +257,473 @@
     "href": "weeks/02-week-02/01-lecture.html",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "",
-    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality–virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences."
+    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality–virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#last-week-recap",
     "href": "weeks/02-week-02/01-lecture.html#last-week-recap",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "",
-    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality–virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences."
+    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality–virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#todays-map",
     "href": "weeks/02-week-02/01-lecture.html#todays-map",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "2 Today’s Map",
-    "text": "2 Today’s Map\n\nStandalone VR — Meta Quest 3 / 3S\nMixed reality headsets — Apple Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nPlatform SDKs & app stores — Horizon OS vs visionOS\nA framework for critical comparison"
+    "text": "2 Today’s Map\n\nStandalone VR — Meta Quest 3 / 3S\nMixed reality headsets — Apple Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nPlatform SDKs & app stores — Horizon OS vs visionOS\nA framework for critical comparison",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#standalone-vr-meta-quest-3-3s",
     "href": "weeks/02-week-02/01-lecture.html#standalone-vr-meta-quest-3-3s",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "3 Standalone VR: Meta Quest 3 / 3S",
-    "text": "3 Standalone VR: Meta Quest 3 / 3S\nThe Meta Quest 3 and Quest 3S represent the current mainstream of standalone VR — headsets with all compute, battery, and sensors onboard, requiring no PC or console tether.\n\n3.1 Optics\n\nThe Quest 3 uses pancake lenses, which fold light path through polarisation to produce a thinner, sharper optical stack with less distortion at the edges.\nThe Quest 3S uses more traditional Fresnel lenses, which are cheaper to manufacture but introduce more “god rays” (visible light scatter) and a bulkier form factor.\n\nThis is a useful first lesson in hardware critique: two devices from the same manufacturer, released in the same product generation, can make very different optical trade-offs to hit different price points.\n\n\n3.2 Passthrough and sensing\nBoth devices offer full-colour passthrough — external cameras feed a live video composite of the real world to the internal displays — plus depth sensing that allows virtual objects to be occluded correctly by real furniture and walls. This is what allows the Quest 3 family to market itself as “mixed reality” capable, not purely VR.\n\n\n3.3 Input\n\nInside-out tracked controllers (retaining physical buttons, triggers, and haptics)\nCamera-based hand tracking (no controllers required, lower fidelity, no haptic feedback)\n\n\n\n\n\n\n\nNoteWhy this matters\n\n\n\nStandalone hardware removed the PC-tether barrier that constrained the first consumer VR wave (2016). This is arguably the single biggest driver of mass XR adoption to date — cost, setup complexity, and physical tethering were the primary barriers identified in early VR adoption research."
+    "text": "3 Standalone VR: Meta Quest 3 / 3S\nThe Meta Quest 3 and Quest 3S represent the current mainstream of standalone VR — headsets with all compute, battery, and sensors onboard, requiring no PC or console tether.\n\n3.1 Optics\n\nThe Quest 3 uses pancake lenses, which fold light path through polarisation to produce a thinner, sharper optical stack with less distortion at the edges.\nThe Quest 3S uses more traditional Fresnel lenses, which are cheaper to manufacture but introduce more “god rays” (visible light scatter) and a bulkier form factor.\n\nThis is a useful first lesson in hardware critique: two devices from the same manufacturer, released in the same product generation, can make very different optical trade-offs to hit different price points.\n\n\n3.2 Passthrough and sensing\nBoth devices offer full-colour passthrough — external cameras feed a live video composite of the real world to the internal displays — plus depth sensing that allows virtual objects to be occluded correctly by real furniture and walls. This is what allows the Quest 3 family to market itself as “mixed reality” capable, not purely VR.\n\n\n3.3 Input\n\nInside-out tracked controllers (retaining physical buttons, triggers, and haptics)\nCamera-based hand tracking (no controllers required, lower fidelity, no haptic feedback)\n\n\n\n\n\n\n\nNoteWhy this matters\n\n\n\nStandalone hardware removed the PC-tether barrier that constrained the first consumer VR wave (2016). This is arguably the single biggest driver of mass XR adoption to date — cost, setup complexity, and physical tethering were the primary barriers identified in early VR adoption research.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#mixed-reality-headsets",
     "href": "weeks/02-week-02/01-lecture.html#mixed-reality-headsets",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "4 Mixed Reality Headsets",
-    "text": "4 Mixed Reality Headsets\n\n4.1 Apple Vision Pro\nApple explicitly avoids calling the Vision Pro a VR or AR headset — it is marketed as a “spatial computing” device. This is a deliberate positioning choice, not just a technical one.\nKey characteristics:\n\nvisionOS introduces a new interaction paradigm built around windows, volumes, and spaces — 2D app windows, 3D volumetric content, and fully immersive environments can coexist\nEye tracking + pinch gesture input replaces controllers as the primary interaction model — you look at what you want and pinch to select\nUses passthrough (video see-through), not optical see-through, despite the “spatial computing” framing\n\n\n\n4.2 HoloLens 2\nMicrosoft’s HoloLens 2 takes a different technical approach entirely:\n\nOptical see-through waveguide display — the user looks directly through a transparent lens with light guided into the eye, meaning the real world is never digitised or delayed\nNarrower field of view than consumer VR headsets, a direct consequence of waveguide optics\nStrong hand tracking and eye/gaze tracking, voice input\nPositioned squarely for enterprise and industrial use cases (remote assistance, training, field service) rather than consumer entertainment\n\n\n\n4.3 Passthrough vs Optical See-Through\nThis is one of the most important technical distinctions in the whole module, because it explains many downstream differences in latency, fidelity, and use case.\n\n\n\n\n\n\n\n\n\nPassthrough (Video See-Through)\nOptical See-Through\n\n\n\n\nHow it works\nCameras capture the real world; a composite image is rendered and displayed on internal screens\nA transparent lens/waveguide overlays digital content directly onto the user’s natural view\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by camera resolution, dynamic range, and field of view\nPerfect — the user sees real, direct light\n\n\nLatency risk\nCamera-to-display lag can cause a subtle disconnect between real and virtual\nNone for the real-world view; only virtual content can lag\n\n\nOcclusion of virtual content\nStraightforward (composited digitally)\nHarder — virtual light is added on top of real light, so true occlusion of virtual-behind-real is difficult"
+    "text": "4 Mixed Reality Headsets\n\n4.1 Apple Vision Pro\nApple explicitly avoids calling the Vision Pro a VR or AR headset — it is marketed as a “spatial computing” device. This is a deliberate positioning choice, not just a technical one.\nKey characteristics:\n\nvisionOS introduces a new interaction paradigm built around windows, volumes, and spaces — 2D app windows, 3D volumetric content, and fully immersive environments can coexist\nEye tracking + pinch gesture input replaces controllers as the primary interaction model — you look at what you want and pinch to select\nUses passthrough (video see-through), not optical see-through, despite the “spatial computing” framing\n\n\n\n4.2 HoloLens 2\nMicrosoft’s HoloLens 2 takes a different technical approach entirely:\n\nOptical see-through waveguide display — the user looks directly through a transparent lens with light guided into the eye, meaning the real world is never digitised or delayed\nNarrower field of view than consumer VR headsets, a direct consequence of waveguide optics\nStrong hand tracking and eye/gaze tracking, voice input\nPositioned squarely for enterprise and industrial use cases (remote assistance, training, field service) rather than consumer entertainment\n\n\n\n4.3 Passthrough vs Optical See-Through\nThis is one of the most important technical distinctions in the whole module, because it explains many downstream differences in latency, fidelity, and use case.\n\n\n\n\n\n\n\n\n\nPassthrough (Video See-Through)\nOptical See-Through\n\n\n\n\nHow it works\nCameras capture the real world; a composite image is rendered and displayed on internal screens\nA transparent lens/waveguide overlays digital content directly onto the user’s natural view\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by camera resolution, dynamic range, and field of view\nPerfect — the user sees real, direct light\n\n\nLatency risk\nCamera-to-display lag can cause a subtle disconnect between real and virtual\nNone for the real-world view; only virtual content can lag\n\n\nOcclusion of virtual content\nStraightforward (composited digitally)\nHarder — virtual light is added on top of real light, so true occlusion of virtual-behind-real is difficult",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#ar-glasses-xreal-one-pro-and-peers",
     "href": "weeks/02-week-02/01-lecture.html#ar-glasses-xreal-one-pro-and-peers",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "5 AR Glasses: Xreal One Pro and Peers",
-    "text": "5 AR Glasses: Xreal One Pro and Peers\nA third hardware category sits apart from headsets altogether: lightweight, glasses-form-factor AR devices such as the Xreal One Pro.\nCharacteristics:\n\nDesigned to look and feel like ordinary glasses — lightweight, low profile, socially acceptable to wear in public\nTypically tethered to a phone, laptop, or dedicated puck for compute and battery\nUse birdbath or waveguide optics to project a floating virtual screen in the user’s field of view — commonly used as a private, portable second monitor\nSome newer models add spatial/positional tracking so content can be anchored to the room rather than simply following the user’s head\nOptimised for portability and casual, short-duration wear — not for deep immersion or spatial interaction\n\n\n5.1 AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses (e.g. Xreal One Pro)\nMR/VR Headsets (e.g. Quest 3, Vision Pro)\n\n\n\n\nCompute\nTethered to a host device\nOnboard (standalone)\n\n\nField of view\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal — largely passive viewing\nRich — hands, gaze, controllers\n\n\nPrimary use case\nScreen replacement, private media viewing\nGames, training, spatial computing, social VR"
+    "text": "5 AR Glasses: Xreal One Pro and Peers\nA third hardware category sits apart from headsets altogether: lightweight, glasses-form-factor AR devices such as the Xreal One Pro.\nCharacteristics:\n\nDesigned to look and feel like ordinary glasses — lightweight, low profile, socially acceptable to wear in public\nTypically tethered to a phone, laptop, or dedicated puck for compute and battery\nUse birdbath or waveguide optics to project a floating virtual screen in the user’s field of view — commonly used as a private, portable second monitor\nSome newer models add spatial/positional tracking so content can be anchored to the room rather than simply following the user’s head\nOptimised for portability and casual, short-duration wear — not for deep immersion or spatial interaction\n\n\n5.1 AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses (e.g. Xreal One Pro)\nMR/VR Headsets (e.g. Quest 3, Vision Pro)\n\n\n\n\nCompute\nTethered to a host device\nOnboard (standalone)\n\n\nField of view\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal — largely passive viewing\nRich — hands, gaze, controllers\n\n\nPrimary use case\nScreen replacement, private media viewing\nGames, training, spatial computing, social VR",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#platform-sdks-and-app-stores",
     "href": "weeks/02-week-02/01-lecture.html#platform-sdks-and-app-stores",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "6 Platform SDKs and App Stores",
-    "text": "6 Platform SDKs and App Stores\nHardware is only half the story. The software platform a device runs on determines what developers can build, how it is distributed, and how it is reviewed.\n\n6.1 Meta Horizon OS\n\nBuilt around the Meta XR SDK, with support for Unity, Unreal, and native development\nDistribution via the Meta Horizon Store (curated, reviewed) and App Lab (lighter-touch, more experimental distribution)\nPublishing requires meeting comfort ratings and performance benchmarks before an app can be listed\n\n\n\n6.2 visionOS\n\nBuilt around RealityKit and SwiftUI, developed almost exclusively through Xcode\nDistribution via the Apple App Store, subject to Apple’s standard app review process\nApple publishes spatial-specific Human Interface Guidelines (HIG) that developers are expected to follow — covering topics like comfortable interaction distances, eye-tracking privacy, and window behaviour\n\n\n\n\n\n\n\nImportantConnecting back to Week 1\n\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action — you experienced first-hand how an app moves from build to device via that ecosystem. This week’s practical asks you to research the visionOS pipeline and compare it directly against that experience."
+    "text": "6 Platform SDKs and App Stores\nHardware is only half the story. The software platform a device runs on determines what developers can build, how it is distributed, and how it is reviewed.\n\n6.1 Meta Horizon OS\n\nBuilt around the Meta XR SDK, with support for Unity, Unreal, and native development\nDistribution via the Meta Horizon Store (curated, reviewed) and App Lab (lighter-touch, more experimental distribution)\nPublishing requires meeting comfort ratings and performance benchmarks before an app can be listed\n\n\n\n6.2 visionOS\n\nBuilt around RealityKit and SwiftUI, developed almost exclusively through Xcode\nDistribution via the Apple App Store, subject to Apple’s standard app review process\nApple publishes spatial-specific Human Interface Guidelines (HIG) that developers are expected to follow — covering topics like comfortable interaction distances, eye-tracking privacy, and window behaviour\n\n\n\n\n\n\n\nImportantConnecting back to Week 1\n\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action — you experienced first-hand how an app moves from build to device via that ecosystem. This week’s practical asks you to research the visionOS pipeline and compare it directly against that experience.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#a-framework-for-critical-comparison",
     "href": "weeks/02-week-02/01-lecture.html#a-framework-for-critical-comparison",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "7 A Framework for Critical Comparison",
-    "text": "7 A Framework for Critical Comparison\nRather than memorising specification sheets, use these four criteria to evaluate any XR device you encounter — in this module, in industry, or in a device that has not been released yet:\n\nComfort — weight, weight distribution, fit, and how long a typical user can comfortably use it in one session\nField of view (FOV) — measured in degrees; affects edge clipping and how much of a task or environment is visible without turning the head\nTracking fidelity — the accuracy, latency, and robustness of head, hand, and/or eye tracking, especially in non-ideal conditions\nEcosystem maturity — the strength of the SDK, the size and quality of the app store or distribution channel, and the size of the developer and content community\n\nThese four criteria will recur throughout the module whenever we introduce a new device or platform."
+    "text": "7 A Framework for Critical Comparison\nRather than memorising specification sheets, use these four criteria to evaluate any XR device you encounter — in this module, in industry, or in a device that has not been released yet:\n\nComfort — weight, weight distribution, fit, and how long a typical user can comfortably use it in one session\nField of view (FOV) — measured in degrees; affects edge clipping and how much of a task or environment is visible without turning the head\nTracking fidelity — the accuracy, latency, and robustness of head, hand, and/or eye tracking, especially in non-ideal conditions\nEcosystem maturity — the strength of the SDK, the size and quality of the app store or distribution channel, and the size of the developer and content community\n\nThese four criteria will recur throughout the module whenever we introduce a new device or platform.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#key-questions-to-carry-forward",
     "href": "weeks/02-week-02/01-lecture.html#key-questions-to-carry-forward",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "8 Key Questions to Carry Forward",
-    "text": "8 Key Questions to Carry Forward\n\nIs “spatial computing” a genuinely distinct technical category, or primarily a marketing category used to differentiate Apple’s device?\nDoes the “best” device for a given use case have to be the most technically impressive one?\nHow much should ecosystem maturity weigh against raw hardware specifications when recommending a platform to a client or employer?\n\nKeep these questions in mind for this week’s lab and practical — you will be asked to take a position and justify it."
+    "text": "8 Key Questions to Carry Forward\n\nIs “spatial computing” a genuinely distinct technical category, or primarily a marketing category used to differentiate Apple’s device?\nDoes the “best” device for a given use case have to be the most technically impressive one?\nHow much should ecosystem maturity weigh against raw hardware specifications when recommending a platform to a client or employer?\n\nKeep these questions in mind for this week’s lab and practical — you will be asked to take a position and justify it.",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#this-week-in-the-lab",
     "href": "weeks/02-week-02/01-lecture.html#this-week-in-the-lab",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "9 This Week in the Lab",
-    "text": "9 This Week in the Lab\n\nHands-on device stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nA structured observation template to complete for each device\nA group critical comparison activity, applying the four-criteria framework against a chosen use case"
+    "text": "9 This Week in the Lab\n\nHands-on device stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nA structured observation template to complete for each device\nA group critical comparison activity, applying the four-criteria framework against a chosen use case",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#this-week-in-the-practical",
     "href": "weeks/02-week-02/01-lecture.html#this-week-in-the-practical",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "10 This Week in the Practical",
-    "text": "10 This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS development and distribution pipeline\nBuild a platform comparison matrix and a short written recommendation"
+    "text": "10 This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS development and distribution pipeline\nBuild a platform comparison matrix and a short written recommendation",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#self-check-questions",
     "href": "weeks/02-week-02/01-lecture.html#self-check-questions",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "11 Self-Check Questions",
-    "text": "11 Self-Check Questions\n\nWhat optical technology does the Quest 3 use, and how does it differ from the Quest 3S?\nWhat is the technical difference between passthrough and optical see-through displays? Name a device that uses each.\nWhy is Apple Vision Pro marketed as “spatial computing” rather than VR or AR?\nWhat are the main differences between AR glasses (e.g. Xreal One Pro) and MR/VR headsets in terms of compute, FOV, and interaction?\nCompare Meta Horizon OS and visionOS in terms of SDK, distribution, and review process.\nWhat are the four criteria in the critical comparison framework, and why is each one important?\nWhy might ecosystem maturity matter as much as, or more than, raw hardware specifications when choosing a platform?"
+    "text": "11 Self-Check Questions\n\nWhat optical technology does the Quest 3 use, and how does it differ from the Quest 3S?\nWhat is the technical difference between passthrough and optical see-through displays? Name a device that uses each.\nWhy is Apple Vision Pro marketed as “spatial computing” rather than VR or AR?\nWhat are the main differences between AR glasses (e.g. Xreal One Pro) and MR/VR headsets in terms of compute, FOV, and interaction?\nCompare Meta Horizon OS and visionOS in terms of SDK, distribution, and review process.\nWhat are the four criteria in the critical comparison framework, and why is each one important?\nWhy might ecosystem maturity matter as much as, or more than, raw hardware specifications when choosing a platform?",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#summary",
     "href": "weeks/02-week-02/01-lecture.html#summary",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "12 Summary",
-    "text": "12 Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three genuinely distinct hardware philosophies, not just different price points of the same idea\nPassthrough vs optical see-through is a key technical and experiential distinction with knock-on effects for latency, fidelity, and occlusion\nPlatform choice — Horizon OS vs visionOS — shapes tooling, review processes, and distribution, and should factor into any professional recommendation\nComfort, FOV, tracking fidelity, and ecosystem maturity together form a repeatable, transferable framework for critiquing any XR device\n\n\nNext week: Perception and Presence"
+    "text": "12 Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three genuinely distinct hardware philosophies, not just different price points of the same idea\nPassthrough vs optical see-through is a key technical and experiential distinction with knock-on effects for latency, fidelity, and occlusion\nPlatform choice — Horizon OS vs visionOS — shapes tooling, review processes, and distribution, and should factor into any professional recommendation\nComfort, FOV, tracking fidelity, and ecosystem maturity together form a repeatable, transferable framework for critiquing any XR device\n\n\nNext week: Perception and Presence",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/01-lecture.html#further-reading",
     "href": "weeks/02-week-02/01-lecture.html#further-reading",
     "title": "Week 2 Lecture Notes: The XR Hardware & Platform Ecosystem",
     "section": "13 Further Reading",
-    "text": "13 Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality: A Guide to the Technologies, Applications, and Human Factors for AR and VR (Aukstakalnis 2017)\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice (Schmalstieg and Höllerer 2016)\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina (Cronin et al. 2020)\nMilgram, P., Takemura, H., Utsumi, A. and Kishino, F. (1994) Mixed Reality (MR) Reality-Virtuality (RV) Continuum (Milgram et al. 1994)"
+    "text": "13 Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality: A Guide to the Technologies, Applications, and Human Factors for AR and VR (Aukstakalnis 2017)\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice (Schmalstieg and Höllerer 2016)\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina (Cronin et al. 2020)\nMilgram, P., Takemura, H., Utsumi, A. and Kishino, F. (1994) Mixed Reality (MR) Reality-Virtuality (RV) Continuum (Milgram et al. 1994)",
+    "crumbs": [
+      "Week 02",
+      "Lecture"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html",
     "href": "weeks/02-week-02/03-laboratory.html",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "",
-    "text": "This lab is a structured, hands-on survey of the current XR hardware landscape, spanning standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.\nBy the end of this lab you should be able to:\n\ndescribe the key differences between standalone VR, passthrough MR, optical see-through MR, and AR glasses\nidentify how hardware constraints (optics, tracking, form factor) shape user experience\napply a structured evaluation framework (comfort, FOV, tracking fidelity, ecosystem maturity) to real devices\ndefend a comparative judgement about device suitability for a given use case"
+    "text": "This lab is a structured, hands-on survey of the current XR hardware landscape, spanning standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.\nBy the end of this lab you should be able to:\n\ndescribe the key differences between standalone VR, passthrough MR, optical see-through MR, and AR glasses\nidentify how hardware constraints (optics, tracking, form factor) shape user experience\napply a structured evaluation framework (comfort, FOV, tracking fidelity, ecosystem maturity) to real devices\ndefend a comparative judgement about device suitability for a given use case",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#lab-overview",
     "href": "weeks/02-week-02/03-laboratory.html#lab-overview",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "",
-    "text": "This lab is a structured, hands-on survey of the current XR hardware landscape, spanning standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.\nBy the end of this lab you should be able to:\n\ndescribe the key differences between standalone VR, passthrough MR, optical see-through MR, and AR glasses\nidentify how hardware constraints (optics, tracking, form factor) shape user experience\napply a structured evaluation framework (comfort, FOV, tracking fidelity, ecosystem maturity) to real devices\ndefend a comparative judgement about device suitability for a given use case"
+    "text": "This lab is a structured, hands-on survey of the current XR hardware landscape, spanning standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.\nBy the end of this lab you should be able to:\n\ndescribe the key differences between standalone VR, passthrough MR, optical see-through MR, and AR glasses\nidentify how hardware constraints (optics, tracking, form factor) shape user experience\napply a structured evaluation framework (comfort, FOV, tracking fidelity, ecosystem maturity) to real devices\ndefend a comparative judgement about device suitability for a given use case",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#device-stations",
     "href": "weeks/02-week-02/03-laboratory.html#device-stations",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Device Stations",
-    "text": "Device Stations\nThe lab is organised into stations, grouped by the three hardware categories from this week’s lecture. Spend approximately 15–20 minutes at each station available to you.\n\n\n\n\n\n\n\n\n\nStation\nDevice\nCategory\nFocus\n\n\n\n\nA\nMeta Quest 3 / 3S\nStandalone VR\nPancake lenses, passthrough, hand tracking\n\n\nB\nApple Vision Pro\nMixed reality (passthrough)\nvisionOS interaction model, eye + pinch input\n\n\nC\nHoloLens 2\nMixed reality (optical see-through)\nWaveguide optics, narrow FOV, hand/gaze tracking\n\n\nD\nXreal One Pro (or similar)\nAR glasses\nTethered display, birdbath/waveguide optics, spatial anchoring\n\n\n\n\n\n\n\n\n\nNoteIf a device isn’t physically available\n\n\n\nNot every module will have hands-on access to every device (Vision Pro and Xreal glasses in particular may be limited-availability loan units). Where a device isn’t available, use the manufacturer’s published specifications, official demo videos, and at least one independent third-party review to complete the observation template as a desk-based evaluation, and note clearly in your submission that this station was evaluated second-hand rather than hands-on."
+    "text": "Device Stations\nThe lab is organised into stations, grouped by the three hardware categories from this week’s lecture. Spend approximately 15–20 minutes at each station available to you.\n\n\n\n\n\n\n\n\n\nStation\nDevice\nCategory\nFocus\n\n\n\n\nA\nMeta Quest 3 / 3S\nStandalone VR\nPancake lenses, passthrough, hand tracking\n\n\nB\nApple Vision Pro\nMixed reality (passthrough)\nvisionOS interaction model, eye + pinch input\n\n\nC\nHoloLens 2\nMixed reality (optical see-through)\nWaveguide optics, narrow FOV, hand/gaze tracking\n\n\nD\nXreal One Pro (or similar)\nAR glasses\nTethered display, birdbath/waveguide optics, spatial anchoring\n\n\n\n\n\n\n\n\n\nNoteIf a device isn’t physically available\n\n\n\nNot every module will have hands-on access to every device (Vision Pro and Xreal glasses in particular may be limited-availability loan units). Where a device isn’t available, use the manufacturer’s published specifications, official demo videos, and at least one independent third-party review to complete the observation template as a desk-based evaluation, and note clearly in your submission that this station was evaluated second-hand rather than hands-on.",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#observation-template",
     "href": "weeks/02-week-02/03-laboratory.html#observation-template",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Observation Template",
-    "text": "Observation Template\nUse this template for each device you evaluate, hands-on or desk-based.\n\nDevice Name\nCategory: Standalone VR / MR (passthrough) / MR (optical see-through) / AR glasses\nTracking: Inside-out / Outside-in / Host-device dependent\nStandalone: Yes / No (tethered to: ______)\n\n\n\nComfort\n\nHow heavy does the device feel, and how is weight distributed?\nIs there any pressure on the face, nose, or head strap?\nHow long could you realistically wear it before discomfort sets in?\n\n\n\nField of View (FOV)\n\nHow wide does the field of view feel?\nWhere does content clip or disappear at the edges?\nDoes the FOV feel adequate for the device’s intended use case?\n\n\n\nTracking Fidelity\n\nDoes head/hand/controller tracking feel accurate and low-latency?\nIs there any drift, jitter, or loss of tracking?\nWhat happens when you move quickly, or into low light / low-texture environments?\n\n\n\nInteraction Model\n\nWhat are the primary input methods (controllers, hand tracking, eye + pinch, touch)?\nHow natural or learnable does the interaction feel?\nAre there noticeable latency or precision issues?\n\n\n\nEcosystem Maturity\n\nWhat store/distribution model does this device use?\nHow mature does the app catalogue seem (breadth, quality, update frequency)?\nHow accessible is the SDK/developer documentation, based on this week’s lecture and practical?"
+    "text": "Observation Template\nUse this template for each device you evaluate, hands-on or desk-based.\n\nDevice Name\nCategory: Standalone VR / MR (passthrough) / MR (optical see-through) / AR glasses\nTracking: Inside-out / Outside-in / Host-device dependent\nStandalone: Yes / No (tethered to: ______)\n\n\n\nComfort\n\nHow heavy does the device feel, and how is weight distributed?\nIs there any pressure on the face, nose, or head strap?\nHow long could you realistically wear it before discomfort sets in?\n\n\n\nField of View (FOV)\n\nHow wide does the field of view feel?\nWhere does content clip or disappear at the edges?\nDoes the FOV feel adequate for the device’s intended use case?\n\n\n\nTracking Fidelity\n\nDoes head/hand/controller tracking feel accurate and low-latency?\nIs there any drift, jitter, or loss of tracking?\nWhat happens when you move quickly, or into low light / low-texture environments?\n\n\n\nInteraction Model\n\nWhat are the primary input methods (controllers, hand tracking, eye + pinch, touch)?\nHow natural or learnable does the interaction feel?\nAre there noticeable latency or precision issues?\n\n\n\nEcosystem Maturity\n\nWhat store/distribution model does this device use?\nHow mature does the app catalogue seem (breadth, quality, update frequency)?\nHow accessible is the SDK/developer documentation, based on this week’s lecture and practical?",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#guided-tasks-at-each-station",
     "href": "weeks/02-week-02/03-laboratory.html#guided-tasks-at-each-station",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Guided Tasks at Each Station",
-    "text": "Guided Tasks at Each Station\n\nStation A: Meta Quest 3 / 3S\n\nCompare the Quest 3’s pancake lenses to the Quest 3S’s Fresnel lenses if both are available — note clarity and headset depth differences.\nEnable passthrough and observe colour fidelity and latency between head movement and the passthrough image.\nTry hand tracking versus controller-based interaction for the same simple task. Which feels more reliable?\nNote the FOV — where does the image cut off at the periphery?\n\n\n\nStation B: Apple Vision Pro\n\nComplete the eye and hand calibration process.\nNavigate the visionOS home environment using only eye gaze + pinch.\nOpen a window/volume and observe how it anchors in physical space as you move.\nCompare the passthrough image quality and latency to the Quest 3’s.\n\n\n\nStation C: HoloLens 2\n\nPut on the headset and complete the eye calibration.\nOpen a holographic application and note where the holographic content disappears — this is the FOV boundary.\nTry hand tracking and, if available, gaze + voice interaction.\nCompare the “real world” view (direct optical) to the Quest 3/Vision Pro’s camera-based passthrough. Which feels more natural, and why?\n\n\n\nStation D: Xreal One Pro (or similar AR glasses)\n\nPut on the glasses and connect to the host device (phone/PC/puck).\nNote the size, position, and clarity of the projected virtual screen.\nIf spatial anchoring is supported, move your head and observe whether the screen stays fixed in space or moves with your head.\nCompare the form factor and social conspicuousness to the headset-class devices at the other stations."
+    "text": "Guided Tasks at Each Station\n\nStation A: Meta Quest 3 / 3S\n\nCompare the Quest 3’s pancake lenses to the Quest 3S’s Fresnel lenses if both are available — note clarity and headset depth differences.\nEnable passthrough and observe colour fidelity and latency between head movement and the passthrough image.\nTry hand tracking versus controller-based interaction for the same simple task. Which feels more reliable?\nNote the FOV — where does the image cut off at the periphery?\n\n\n\nStation B: Apple Vision Pro\n\nComplete the eye and hand calibration process.\nNavigate the visionOS home environment using only eye gaze + pinch.\nOpen a window/volume and observe how it anchors in physical space as you move.\nCompare the passthrough image quality and latency to the Quest 3’s.\n\n\n\nStation C: HoloLens 2\n\nPut on the headset and complete the eye calibration.\nOpen a holographic application and note where the holographic content disappears — this is the FOV boundary.\nTry hand tracking and, if available, gaze + voice interaction.\nCompare the “real world” view (direct optical) to the Quest 3/Vision Pro’s camera-based passthrough. Which feels more natural, and why?\n\n\n\nStation D: Xreal One Pro (or similar AR glasses)\n\nPut on the glasses and connect to the host device (phone/PC/puck).\nNote the size, position, and clarity of the projected virtual screen.\nIf spatial anchoring is supported, move your head and observe whether the screen stays fixed in space or moves with your head.\nCompare the form factor and social conspicuousness to the headset-class devices at the other stations.",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#comparison-table",
     "href": "weeks/02-week-02/03-laboratory.html#comparison-table",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Comparison Table",
-    "text": "Comparison Table\nComplete this table after visiting all stations (or completing desk-based evaluations).\n\n\n\nFeature\nQuest 3/3S\nVision Pro\nHoloLens 2\nXreal One Pro\n\n\n\n\nCategory\n\n\n\n\n\n\nComfort (1–5)\n\n\n\n\n\n\nFOV (wide/medium/narrow)\n\n\n\n\n\n\nTracking fidelity (1–5)\n\n\n\n\n\n\nPrimary input\n\n\n\n\n\n\nEcosystem maturity (1–5)\n\n\n\n\n\n\nBest-fit use case"
+    "text": "Comparison Table\nComplete this table after visiting all stations (or completing desk-based evaluations).\n\n\n\nFeature\nQuest 3/3S\nVision Pro\nHoloLens 2\nXreal One Pro\n\n\n\n\nCategory\n\n\n\n\n\n\nComfort (1–5)\n\n\n\n\n\n\nFOV (wide/medium/narrow)\n\n\n\n\n\n\nTracking fidelity (1–5)\n\n\n\n\n\n\nPrimary input\n\n\n\n\n\n\nEcosystem maturity (1–5)\n\n\n\n\n\n\nBest-fit use case",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#critical-comparison-activity-group-work",
     "href": "weeks/02-week-02/03-laboratory.html#critical-comparison-activity-group-work",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Critical Comparison Activity (Group Work)",
-    "text": "Critical Comparison Activity (Group Work)\nForm groups of 3–4. Each group selects 2–3 devices from the stations above (or from the wider market if your group wants to include a device not present in the lab, e.g. PICO 4 Ultra, Samsung Galaxy XR).\n\nUsing your completed comparison table and this week’s lecture criteria — comfort, FOV, tracking fidelity, and ecosystem maturity — produce a ranked evaluation of your chosen devices for a specific use case your group selects (e.g. “classroom-based language learning,” “warehouse pick-and-pack training,” “casual media consumption on a commute,” “competitive VR esports”).\nFor each criterion, justify your ranking with a specific observation from today’s stations or documented specifications — not just a gut impression.\nIdentify at least one criterion where the “best” device for your use case is not the most technically impressive device overall. Explain why.\nPrepare a 3-minute group summary to present to the class.\n\n\n\n\n\n\n\nTipWhat makes a strong evaluation\n\n\n\nA weak evaluation says “Vision Pro felt more premium.” A strong evaluation says “Vision Pro’s passthrough had noticeably less colour distortion than the Quest 3’s, which matters for our use case because accurate colour reproduction is essential for a design-review application — but its higher price and single-vendor ecosystem make Quest 3 a stronger choice for a classroom of 30 students needing devices at scale.”"
+    "text": "Critical Comparison Activity (Group Work)\nForm groups of 3–4. Each group selects 2–3 devices from the stations above (or from the wider market if your group wants to include a device not present in the lab, e.g. PICO 4 Ultra, Samsung Galaxy XR).\n\nUsing your completed comparison table and this week’s lecture criteria — comfort, FOV, tracking fidelity, and ecosystem maturity — produce a ranked evaluation of your chosen devices for a specific use case your group selects (e.g. “classroom-based language learning,” “warehouse pick-and-pack training,” “casual media consumption on a commute,” “competitive VR esports”).\nFor each criterion, justify your ranking with a specific observation from today’s stations or documented specifications — not just a gut impression.\nIdentify at least one criterion where the “best” device for your use case is not the most technically impressive device overall. Explain why.\nPrepare a 3-minute group summary to present to the class.\n\n\n\n\n\n\n\nTipWhat makes a strong evaluation\n\n\n\nA weak evaluation says “Vision Pro felt more premium.” A strong evaluation says “Vision Pro’s passthrough had noticeably less colour distortion than the Quest 3’s, which matters for our use case because accurate colour reproduction is essential for a design-review application — but its higher price and single-vendor ecosystem make Quest 3 a stronger choice for a classroom of 30 students needing devices at scale.”",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#reflection-questions",
     "href": "weeks/02-week-02/03-laboratory.html#reflection-questions",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Reflection Questions",
-    "text": "Reflection Questions\nAnswer these individually in your lab notes after the group activity.\n\nWhich device felt most immersive, and which criterion (comfort, FOV, tracking, ecosystem) mattered most to that judgement?\nWhere did optical see-through (HoloLens 2) versus passthrough (Quest 3, Vision Pro) make the most noticeable difference to your experience?\nHow did the AR glasses form factor change your expectations of what the device should be able to do, compared to the headsets?\nDid your group’s ranking change once you factored in ecosystem maturity, rather than hardware specs alone? Why or why not?\nFor which use case would you choose each of the four device categories, and why?"
+    "text": "Reflection Questions\nAnswer these individually in your lab notes after the group activity.\n\nWhich device felt most immersive, and which criterion (comfort, FOV, tracking, ecosystem) mattered most to that judgement?\nWhere did optical see-through (HoloLens 2) versus passthrough (Quest 3, Vision Pro) make the most noticeable difference to your experience?\nHow did the AR glasses form factor change your expectations of what the device should be able to do, compared to the headsets?\nDid your group’s ranking change once you factored in ecosystem maturity, rather than hardware specs alone? Why or why not?\nFor which use case would you choose each of the four device categories, and why?",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#lab-deliverable",
     "href": "weeks/02-week-02/03-laboratory.html#lab-deliverable",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Lab Deliverable",
-    "text": "Lab Deliverable\nSubmit your completed observation templates, comparison table, and your group’s critical comparison write-up (ranking + justification for your chosen use case).\nThis contributes to Assessment 1: Continuous Lab Work."
+    "text": "Lab Deliverable\nSubmit your completed observation templates, comparison table, and your group’s critical comparison write-up (ranking + justification for your chosen use case).\nThis contributes to Assessment 1: Continuous Lab Work.",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/03-laboratory.html#extension-task",
     "href": "weeks/02-week-02/03-laboratory.html#extension-task",
     "title": "Week 2 Lab: The XR Hardware Landscape — Device Stations and Critical Comparison",
     "section": "Extension Task",
-    "text": "Extension Task\nIf time allows:\n\nResearch the specifications of one device not covered in this lab (e.g. Samsung Galaxy XR, PICO 4 Ultra, Snap Spectacles 2024)\nSlot it into your group’s comparison table and re-run your ranking — does it change your recommendation?"
+    "text": "Extension Task\nIf time allows:\n\nResearch the specifications of one device not covered in this lab (e.g. Samsung Galaxy XR, PICO 4 Ultra, Snap Spectacles 2024)\nSlot it into your group’s comparison table and re-run your ranking — does it change your recommendation?",
+    "crumbs": [
+      "Week 02",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html",
+    "href": "weeks/03-week-03/01-lecture.html",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "",
+    "text": "This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.\nThe central concept this week is presence: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#introduction",
+    "href": "weeks/03-week-03/01-lecture.html#introduction",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "",
+    "text": "This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.\nThe central concept this week is presence: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#presence-and-immersion",
+    "href": "weeks/03-week-03/01-lecture.html#presence-and-immersion",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "2 Presence and Immersion",
+    "text": "2 Presence and Immersion\n\n2.1 Defining Presence\nPresence is one of the most studied and debated concepts in XR research. At its simplest, it is the feeling of “being there” — the sense that you are actually in the virtual environment rather than observing it from outside.\nMel Slater, one of the leading researchers in this area, distinguishes two components of presence:\nPlace Illusion (PI) is the strong illusion of being in a place even though you know you are not. It is supported primarily by the quality of the sensorimotor contingencies — the relationship between your movements and the changes in the sensory display. If you turn your head and the visual scene updates correctly, your brain interprets this as evidence that you are in a real place.\nPlausibility Illusion (Psi) is the illusion that what is happening is really happening. It is supported by the responsiveness of the environment — if you reach out and touch a virtual object and it responds, your brain interprets this as evidence that the event is real.\nSlater argues that both PI and Psi are necessary for full presence. A highly immersive display that shows a completely unresponsive environment will produce PI but not Psi. A responsive environment on a low-quality display may produce Psi but not PI.\n\n\n2.2 Immersion as an Objective Property\nImmersion is often used interchangeably with presence, but they are distinct. Immersion is an objective, measurable property of the technology — it describes how completely the system replaces the user’s sensory input with synthetic input.\nA system with a wide FOV, high resolution, low latency, and spatial audio is more immersive than one with a narrow FOV and no audio. But a user may feel more present in the less immersive system if the content is more compelling and responsive.\nThis distinction has important design implications. You cannot guarantee presence by maximising immersion. You must also design content that supports plausibility.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#perceptual-modalities",
+    "href": "weeks/03-week-03/01-lecture.html#perceptual-modalities",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "3 Perceptual Modalities",
+    "text": "3 Perceptual Modalities\nThe brain integrates information from multiple sensory systems simultaneously. In XR, understanding each modality helps you design experiences that support presence and avoid discomfort.\n\n3.1 Visual Perception\nVision is the dominant sense in most XR systems. The visual system provides information about:\nStereopsis: The brain uses the slight difference in the images received by each eye (binocular disparity) to compute depth. HMDs present slightly different images to each eye to simulate this. The effectiveness of stereopsis depends on the accuracy of the interpupillary distance (IPD) setting.\nMotion parallax: As you move your head, objects at different distances move at different rates across your visual field. This is a powerful depth cue that is well-supported by 6DOF tracking.\nAccommodation and vergence: As discussed in Week 2, the vergence-accommodation conflict is a significant limitation of current HMDs.\nPeripheral vision: The peripheral visual field is important for detecting motion and maintaining spatial awareness. A narrow FOV that cuts off peripheral vision reduces immersion and can cause disorientation.\n\n\n3.2 Auditory Perception\nThe auditory system contributes significantly to presence. Research has shown that high-quality spatial audio can increase presence scores substantially, and that audio that does not match the visual scene can break presence rapidly.\nThe brain localises sounds using:\nInteraural Time Difference (ITD): The difference in the time it takes for a sound to reach each ear. Sounds from the left arrive at the left ear slightly before the right ear.\nInteraural Level Difference (ILD): The difference in the loudness of a sound at each ear. The head creates an acoustic shadow that attenuates sounds on the far side.\nSpectral cues: The shape of the outer ear (pinna) modifies the frequency content of sounds in ways that depend on the direction of the source. These spectral cues are captured in the HRTF and are particularly important for distinguishing sounds above and below the listener.\n\n\n3.3 Proprioception\nProprioception is the sense of the position and movement of your own body, provided by receptors in muscles, tendons, and joints. It tells you where your limbs are without looking at them.\nIn VR, proprioception can conflict with visual information. If you see your virtual hand in a position that does not match where your real hand is, this creates a conflict that can be disorienting. This is why accurate hand tracking and controller tracking are important for natural interaction.\n\n\n3.4 The Vestibular System\nThe vestibular system, located in the inner ear, detects:\n\nlinear acceleration (moving forward, backward, up, down)\nrotational acceleration (turning)\nthe direction of gravity\n\nThe vestibular system is the primary cause of simulator sickness in VR. When the visual system detects motion (because the virtual environment is moving) but the vestibular system detects no motion (because the user is stationary), the brain interprets this conflict as a sign of poisoning — a response that evolved to protect against neurotoxins that cause hallucinations. The result is nausea.\nThis is called vection — the perception of self-motion induced by visual stimulation alone.\n\n\n3.5 Haptic Perception\nThe haptic system encompasses touch (cutaneous sensation) and force (kinaesthetic sensation). It provides information about:\n\nsurface texture\ntemperature\ncompliance (how much an object deforms under pressure)\nweight and inertia\n\nCurrent XR systems provide very limited haptic feedback — primarily vibration from controller motors. The absence of rich haptic feedback is a significant limitation for experiences that involve object manipulation, surface interaction, or social presence (the feeling of being with another person).",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#proximal-and-distal-stimuli",
+    "href": "weeks/03-week-03/01-lecture.html#proximal-and-distal-stimuli",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "4 Proximal and Distal Stimuli",
+    "text": "4 Proximal and Distal Stimuli\nThis distinction, drawn from perceptual psychology, is useful for understanding how XR works.\nThe distal stimulus is the actual object or event in the world — a tree, a voice, a surface.\nThe proximal stimulus is the pattern of energy that reaches the sensory receptor — the pattern of light on the retina, the pressure wave at the eardrum, the pressure on the skin.\nThe brain never has direct access to the distal stimulus. It only has access to the proximal stimulus, and it must infer the distal stimulus from that. This inference is based on prior experience, context, and the integration of multiple sensory signals.\nXR works by manipulating the proximal stimulus. We cannot put a real tree in front of the user, but we can create a pattern of light on the retina that is consistent with the presence of a tree. If the proximal stimulus is convincing enough, the brain will infer the presence of the tree — and the user will feel present in a forest.\nThis framing helps explain why presence is not simply a function of display quality. The brain is not just checking whether the image is photorealistic. It is checking whether the pattern of sensory input is consistent with being in a real place. Consistency across modalities, responsiveness to movement, and plausible cause-and-effect relationships are all important.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#simulator-sickness",
+    "href": "weeks/03-week-03/01-lecture.html#simulator-sickness",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "5 Simulator Sickness",
+    "text": "5 Simulator Sickness\n\n5.1 Definition and Symptoms\nSimulator sickness is a form of motion sickness that occurs in simulated environments. Symptoms include:\n\nnausea and stomach discomfort\ndisorientation and dizziness\neye strain and headache\nfatigue\npallor and sweating in severe cases\n\nSymptoms typically develop during or after use and can persist for some time after the headset is removed.\n\n\n5.2 Causes\nLatency is the delay between the user’s head movement and the corresponding update of the display. Even small amounts of latency (above approximately 20 milliseconds) can cause discomfort. Modern HMDs use asynchronous timewarp and reprojection techniques to minimise perceived latency.\nLow frame rate causes judder — a stuttering of the image during movement. This is both visually unpleasant and a significant cause of sickness. Maintaining a consistent frame rate above 72Hz is essential.\nVection — visual motion without vestibular motion — is the primary cause of sickness during smooth locomotion in VR. The visual system detects movement, but the vestibular system does not, creating a conflict.\nFOV mismatch occurs when the visual motion in the display does not match the expected motion for the user’s real-world movement. This can occur with incorrect camera settings or locomotion implementations.\n\n\n5.3 Mitigation Strategies\nTeleportation eliminates vection by moving the user instantaneously rather than continuously. It is the most effective comfort option for locomotion.\nVignetting reduces the peripheral visual field during movement, which reduces the vection signal. Many VR games offer this as a comfort option.\nSnap turning rotates the user’s view in discrete steps rather than continuously, eliminating rotational vection.\nFrame rate maintenance is critical. Dropping below the target frame rate is more disorienting than a consistently lower frame rate.\nUser control — allowing users to choose their preferred locomotion method and comfort settings — is important because susceptibility to simulator sickness varies significantly between individuals.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#health-effects-and-ethics",
+    "href": "weeks/03-week-03/01-lecture.html#health-effects-and-ethics",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "6 Health Effects and Ethics",
+    "text": "6 Health Effects and Ethics\n\n6.1 Physical Health Effects\nBeyond simulator sickness, extended XR use can cause:\n\nEye strain and fatigue from the vergence-accommodation conflict and sustained focus at a fixed distance\nNeck and shoulder strain from the weight of the headset and sustained head positions\nPost-VR disorientation — a brief period of disorientation after removing the headset, particularly after extended use\nSocial isolation — extended use of fully immersive VR removes the user from their physical social environment\n\n\n\n6.2 Ethical Responsibilities\nThe power of presence creates ethical responsibilities for XR designers.\nDisclosure: Users should be informed of potential health risks before using XR systems, particularly for extended sessions.\nComfort options: Experiences should provide comfort options (teleportation, vignetting, session time limits) rather than forcing users into uncomfortable configurations.\nAccessibility: XR experiences should be designed to be accessible to users with different physical abilities, sensory sensitivities, and susceptibilities to simulator sickness.\nManipulation: The sense of presence can be exploited to create powerful emotional responses. This raises questions about the ethics of using XR for persuasion, advertising, or behaviour change. Designers should consider whether their use of presence is in the user’s interest.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#measuring-presence",
+    "href": "weeks/03-week-03/01-lecture.html#measuring-presence",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "7 Measuring Presence",
+    "text": "7 Measuring Presence\nSeveral standardised questionnaires have been developed to measure presence:\nThe Presence Questionnaire (PQ) (Witmer and Singer, 1998) measures presence across several dimensions including involvement, sensory fidelity, and interface quality.\nThe Igroup Presence Questionnaire (IPQ) (Schubert et al., 2001) measures spatial presence, involvement, and realness.\nThese tools are useful for comparing different design decisions and for evaluating the effectiveness of XR experiences. You will use them in Week 11 when we cover evaluation methods.",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#self-check-questions",
+    "href": "weeks/03-week-03/01-lecture.html#self-check-questions",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "8 Self-Check Questions",
+    "text": "8 Self-Check Questions\n\nWhat is the difference between presence and immersion?\nWhat are Slater’s two components of presence?\nWhat is vection and why does it cause sickness?\nWhat is the vestibular system and how does it contribute to simulator sickness?\nWhat is the difference between proximal and distal stimuli?\nName three design strategies that can reduce simulator sickness.\nWhat ethical responsibilities do XR designers have regarding health effects?\nHow does spatial audio contribute to presence?",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/01-lecture.html#further-reading",
+    "href": "weeks/03-week-03/01-lecture.html#further-reading",
+    "title": "Week 3 Lecture Notes: Perception and Presence",
+    "section": "9 Further Reading",
+    "text": "9 Further Reading\n\nSlater, M. (2009) Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments. Philosophical Transactions of the Royal Society B, 364(1535), pp. 3549–3557.\nWitmer, B. and Singer, M. (1998) Measuring presence in virtual environments: A presence questionnaire. Presence, 7(3), pp. 225–240.\nJerald, J. (2015) The VR Book, Chapters 4 and 5.\nKolasinski, E. (1995) Simulator sickness in virtual environments. US Army Research Laboratory Technical Report ARI-TR-1027.\nLaViola, J. (2000) A discussion of cybersickness in virtual environments. ACM SIGCHI Bulletin, 32(1).",
+    "crumbs": [
+      "Week 03",
+      "Lecture"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html",
+    "href": "weeks/03-week-03/03-laboratory.html",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "",
+    "text": "Duration: 2 hours\nHardware: Quest 2, Quest 3, Hololens 2\nSoftware: Unity 2022 LTS, XR Interaction Toolkit 2.x\nDeliverable: Lab journal entry + Unity scene (uploaded to VLE)",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#lab-overview",
+    "href": "weeks/03-week-03/03-laboratory.html#lab-overview",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "",
+    "text": "Duration: 2 hours\nHardware: Quest 2, Quest 3, Hololens 2\nSoftware: Unity 2022 LTS, XR Interaction Toolkit 2.x\nDeliverable: Lab journal entry + Unity scene (uploaded to VLE)",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#learning-objectives",
+    "href": "weeks/03-week-03/03-laboratory.html#learning-objectives",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "2 Learning Objectives",
+    "text": "2 Learning Objectives\nBy the end of this lab you will be able to:\n\nImplement ray-cast and direct interaction in Unity using XR Interaction Toolkit\nEnable hand tracking on Quest 3\nCompare the interaction feel of controller vs hand tracking\nDocument interaction design observations systematically",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#part-1-ray-cast-interaction-45-min",
+    "href": "weeks/03-week-03/03-laboratory.html#part-1-ray-cast-interaction-45-min",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "3 Part 1: Ray-Cast Interaction (45 min)",
+    "text": "3 Part 1: Ray-Cast Interaction (45 min)\n\n3.1 Setup\n\nOpen your Unity project from Week 1 (or create a new URP project)\nEnsure XR Interaction Toolkit is installed via Package Manager\nAdd the XR Origin (Action-based) prefab to your scene\n\n\n\n3.2 Task 1.1 — Add Interactable Objects\n\nCreate 3 primitive objects (cube, sphere, cylinder) in the scene\nAdd XRGrabInteractable component to each\nAdd Rigidbody component to each (enable gravity)\nPosition objects at different distances: 0.5m, 1.5m, 3m from origin\n\n\n\n3.3 Task 1.2 — Configure Ray Interactor\n\nSelect the Right Hand controller object in the XR Origin hierarchy\nAdd XRRayInteractor component\nAdd XRInteractorLineVisual component (shows the ray)\nSet Max Raycast Distance to 5m\n\n\n\n3.4 Task 1.3 — Test & Observe\nBuild and deploy to Quest 2. Test the following:\n\n\n\nTest\nObservation\n\n\n\n\nSelect object at 0.5m\n\n\n\nSelect object at 1.5m\n\n\n\nSelect object at 3m\n\n\n\nMove object while selected\n\n\n\nRelease object\n\n\n\n\nRecord in your lab journal: Which distance felt most natural? What visual feedback helped most?",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#part-2-direct-near-field-interaction-30-min",
+    "href": "weeks/03-week-03/03-laboratory.html#part-2-direct-near-field-interaction-30-min",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "4 Part 2: Direct (Near-Field) Interaction (30 min)",
+    "text": "4 Part 2: Direct (Near-Field) Interaction (30 min)\n\n4.1 Task 2.1 — Add Direct Interactor\n\nAdd XRDirectInteractor component to the Right Hand controller\nAdd a small sphere collider to the controller (set as trigger)\nDisable the Ray Interactor temporarily\n\n\n\n4.2 Task 2.2 — Test Direct Grab\nDeploy and test: - Walk up to each object and grab it directly - Try picking up and placing objects precisely - Try stacking objects\nRecord in your lab journal: How does direct grab compare to ray cast? When would you prefer each?",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#part-3-hand-tracking-on-quest-3-30-min",
+    "href": "weeks/03-week-03/03-laboratory.html#part-3-hand-tracking-on-quest-3-30-min",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "5 Part 3: Hand Tracking on Quest 3 (30 min)",
+    "text": "5 Part 3: Hand Tracking on Quest 3 (30 min)\n\nNote: This part requires a Quest 3 headset. If unavailable, use the Quest Hand Tracking Simulator in Unity.\n\n\n5.1 Task 3.1 — Enable Hand Tracking\n\nIn Unity, go to Edit → Project Settings → XR Plug-in Management\nEnsure OpenXR is selected for Android\nAdd Hand Tracking feature under OpenXR features\nIn the XR Origin, enable the Hand Tracking prefab\n\n\n\n5.2 Task 3.2 — Pinch Interaction\n\nReplace controller interactors with XRHandInteractorsSetup prefab\nConfigure pinch threshold (default: 0.7)\nDeploy to Quest 3\n\nTest the following:\n\n\n\nGesture\nWorks?\nNotes\n\n\n\n\nPinch to select (near)\n\n\n\n\nPinch to select (far ray)\n\n\n\n\nTwo-hand grab\n\n\n\n\nSustained pinch hold",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#part-4-comparative-reflection-15-min",
+    "href": "weeks/03-week-03/03-laboratory.html#part-4-comparative-reflection-15-min",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "6 Part 4: Comparative Reflection (15 min)",
+    "text": "6 Part 4: Comparative Reflection (15 min)\nComplete the following comparison table in your lab journal:\n\n\n\nCriterion\nController (Ray)\nController (Direct)\nHand Tracking\n\n\n\n\nEase of learning\n\n\n\n\n\nPrecision\n\n\n\n\n\nFatigue after 5 min\n\n\n\n\n\nImmersion feel\n\n\n\n\n\nBest use case\n\n\n\n\n\n\n\n6.1 Reflection Questions\n\nWhich input method would you choose for a museum exhibit aimed at first-time XR users? Why?\nWhich would you choose for a surgical training simulation? Why?\nWhat feedback (visual/audio/haptic) made the biggest difference to interaction confidence?",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#submission",
+    "href": "weeks/03-week-03/03-laboratory.html#submission",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "7 Submission",
+    "text": "7 Submission\nUpload to VLE by end of week:\n\nUnity scene file (zipped project or .unitypackage)\nLab journal entry (PDF or markdown) including:\n\nCompleted observation tables\nComparative reflection table\nAnswers to reflection questions\nAt least 2 screenshots from your Unity scene",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/03-laboratory.html#troubleshooting",
+    "href": "weeks/03-week-03/03-laboratory.html#troubleshooting",
+    "title": "Week 4 Lab: Controller & Hand Tracking Interaction",
+    "section": "8 Troubleshooting",
+    "text": "8 Troubleshooting\n\n\n\n\n\n\n\nProblem\nSolution\n\n\n\n\nRay not visible\nCheck XRInteractorLineVisual is on the same object as XRRayInteractor\n\n\nObjects fall through floor\nAdd a plane with a collider to the scene\n\n\nHand tracking not detected\nEnsure good lighting; remove gloves; check OpenXR feature is enabled\n\n\nBuild fails for Android\nCheck Android Build Support is installed in Unity Hub",
+    "crumbs": [
+      "Week 03",
+      "Laboratory"
+    ]
   },
   {
     "objectID": "01-assessments/04-assessment2.html",
@@ -1197,116 +1502,554 @@
     ]
   },
   {
+    "objectID": "weeks/03-week-03/04-slides.html#week-3",
+    "href": "weeks/03-week-03/04-slides.html#week-3",
+    "title": "Week 3: Perception and Presence",
+    "section": "Week 3",
+    "text": "Week 3\nPerception and Presence\n\nPresence is not a property of the technology. It is a property of the experience.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#todays-session",
+    "href": "weeks/03-week-03/04-slides.html#todays-session",
+    "title": "Week 3: Perception and Presence",
+    "section": "Today’s session",
+    "text": "Today’s session\n\nWhat is presence?\nImmersion vs presence\nHow the brain constructs reality\nPerceptual modalities in XR\nSimulator sickness\nHealth effects and mitigation",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#why-perception-matters",
+    "href": "weeks/03-week-03/04-slides.html#why-perception-matters",
+    "title": "Week 3: Perception and Presence",
+    "section": "Why perception matters",
+    "text": "Why perception matters\nXR works by deceiving the perceptual system.\nTo design effective XR experiences, you need to understand:\n\nhow the brain constructs the experience of being somewhere\nwhat cues it relies on\nwhat happens when those cues conflict",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#presence",
+    "href": "weeks/03-week-03/04-slides.html#presence",
+    "title": "Week 3: Perception and Presence",
+    "section": "Presence",
+    "text": "Presence\nPresence is the subjective feeling of being in a place.\nSlater (2009) distinguishes two components:\n\nPlace illusion: the sense of being in the virtual place\nPlausibility illusion: the sense that what is happening is real",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#place-illusion",
+    "href": "weeks/03-week-03/04-slides.html#place-illusion",
+    "title": "Week 3: Perception and Presence",
+    "section": "Place Illusion",
+    "text": "Place Illusion\nThe feeling that you are actually in the virtual environment.\nSupported by:\n\nwide field of view\nhead tracking\nspatial audio\nphysical scale\n\nBroken by:\n\ntracking errors\nlow frame rate\nvisible display edges",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#plausibility-illusion",
+    "href": "weeks/03-week-03/04-slides.html#plausibility-illusion",
+    "title": "Week 3: Perception and Presence",
+    "section": "Plausibility Illusion",
+    "text": "Plausibility Illusion\nThe feeling that the events in the virtual environment are really happening.\nSupported by:\n\nresponsive virtual agents\nconsistent physics\ncause and effect relationships\n\nBroken by:\n\nobjects passing through each other\nunresponsive environments\nimplausible events",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#immersion-vs-presence",
+    "href": "weeks/03-week-03/04-slides.html#immersion-vs-presence",
+    "title": "Week 3: Perception and Presence",
+    "section": "Immersion vs Presence",
+    "text": "Immersion vs Presence\nThese are often confused but are distinct concepts.\nImmersion is an objective property of the technology.\n\nhow much of the sensory field does the system replace?\nhow accurately does it track movement?\n\nPresence is a subjective psychological response.\n\nhow much does the user feel they are there?\n\nHigh immersion tends to support presence but does not guarantee it.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#the-reality-trade-off",
+    "href": "weeks/03-week-03/04-slides.html#the-reality-trade-off",
+    "title": "Week 3: Perception and Presence",
+    "section": "The Reality Trade-off",
+    "text": "The Reality Trade-off\nMore immersion is not always better.\nTrade-offs include:\n\ncomfort vs presence\ncost vs quality\nportability vs fidelity\n\nDesign for the right level of immersion for the task.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#perceptual-modalities",
+    "href": "weeks/03-week-03/04-slides.html#perceptual-modalities",
+    "title": "Week 3: Perception and Presence",
+    "section": "Perceptual Modalities",
+    "text": "Perceptual Modalities\nThe brain integrates information from multiple sensory systems.\nIn XR, the most relevant are:\n\nvisual\nauditory\nproprioceptive\nvestibular\nhaptic",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#visual-perception",
+    "href": "weeks/03-week-03/04-slides.html#visual-perception",
+    "title": "Week 3: Perception and Presence",
+    "section": "Visual Perception",
+    "text": "Visual Perception\nThe dominant sense in most XR systems.\nKey factors:\n\nstereopsis (depth from two eyes)\nmotion parallax (depth from movement)\naccommodation and vergence\nperipheral vision",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#auditory-perception",
+    "href": "weeks/03-week-03/04-slides.html#auditory-perception",
+    "title": "Week 3: Perception and Presence",
+    "section": "Auditory Perception",
+    "text": "Auditory Perception\nSpatial audio contributes significantly to presence.\nThe brain uses:\n\ninteraural time difference (ITD)\ninteraural level difference (ILD)\nspectral cues from the ear shape (HRTF)\n\nMismatched audio breaks presence rapidly.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#proprioception",
+    "href": "weeks/03-week-03/04-slides.html#proprioception",
+    "title": "Week 3: Perception and Presence",
+    "section": "Proprioception",
+    "text": "Proprioception\nThe sense of the position and movement of your own body.\nIn VR, proprioception can conflict with visual information.\nExample: your body feels stationary but your visual system sees movement.\nThis conflict is a primary cause of simulator sickness.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#vestibular-system",
+    "href": "weeks/03-week-03/04-slides.html#vestibular-system",
+    "title": "Week 3: Perception and Presence",
+    "section": "Vestibular System",
+    "text": "Vestibular System\nThe inner ear detects:\n\nlinear acceleration\nrotational acceleration\ngravity\n\nIn VR, visual motion without vestibular motion creates conflict.\nThis is the main cause of vection-induced sickness.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#haptic-perception",
+    "href": "weeks/03-week-03/04-slides.html#haptic-perception",
+    "title": "Week 3: Perception and Presence",
+    "section": "Haptic Perception",
+    "text": "Haptic Perception\nThe sense of touch and force.\nCurrent XR systems provide limited haptic feedback.\nThe absence of haptic feedback is a significant limitation for:\n\nobject manipulation\nsurface interaction\nsocial presence",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#proximal-and-distal-stimuli",
+    "href": "weeks/03-week-03/04-slides.html#proximal-and-distal-stimuli",
+    "title": "Week 3: Perception and Presence",
+    "section": "Proximal and Distal Stimuli",
+    "text": "Proximal and Distal Stimuli\nDistal stimulus: the actual object or event in the world\nProximal stimulus: the pattern of energy that reaches the sensory receptor\nIn XR, we manipulate the proximal stimulus to create the perception of a distal stimulus that does not exist.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#simulator-sickness",
+    "href": "weeks/03-week-03/04-slides.html#simulator-sickness",
+    "title": "Week 3: Perception and Presence",
+    "section": "Simulator Sickness",
+    "text": "Simulator Sickness\nA form of motion sickness caused by sensory conflict in simulated environments.\nSymptoms:\n\nnausea\ndisorientation\neye strain\nheadache\nfatigue",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#causes-of-simulator-sickness",
+    "href": "weeks/03-week-03/04-slides.html#causes-of-simulator-sickness",
+    "title": "Week 3: Perception and Presence",
+    "section": "Causes of Simulator Sickness",
+    "text": "Causes of Simulator Sickness\n\nLatency: delay between head movement and display update\nLow frame rate: judder and motion blur\nVection: visual motion without vestibular motion\nFOV mismatch: visual motion at the wrong scale\nVergence-accommodation conflict",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#mitigation-strategies",
+    "href": "weeks/03-week-03/04-slides.html#mitigation-strategies",
+    "title": "Week 3: Perception and Presence",
+    "section": "Mitigation Strategies",
+    "text": "Mitigation Strategies\nDesign choices that reduce simulator sickness:\n\nmaintain frame rate above 72Hz\nminimise motion-to-photon latency (below 20ms)\nuse teleportation instead of smooth locomotion\nadd vignette during movement\nallow users to choose comfort settings\nprovide rest breaks",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#health-effects",
+    "href": "weeks/03-week-03/04-slides.html#health-effects",
+    "title": "Week 3: Perception and Presence",
+    "section": "Health Effects",
+    "text": "Health Effects\nBeyond simulator sickness, extended XR use can cause:\n\neye strain and fatigue\nneck and shoulder strain\ndisorientation after removal\nsocial isolation",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#ethical-considerations",
+    "href": "weeks/03-week-03/04-slides.html#ethical-considerations",
+    "title": "Week 3: Perception and Presence",
+    "section": "Ethical Considerations",
+    "text": "Ethical Considerations\nXR designers have a responsibility to:\n\ndisclose health risks\nprovide comfort options\ndesign for accessibility\navoid exploiting presence for manipulation",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#todays-lab",
+    "href": "weeks/03-week-03/04-slides.html#todays-lab",
+    "title": "Week 3: Perception and Presence",
+    "section": "Today’s lab",
+    "text": "Today’s lab\nPerception experiments:\n\nlatency manipulation\nscale manipulation\nFOV manipulation\n\nObserve how each affects comfort and presence.",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#key-questions",
+    "href": "weeks/03-week-03/04-slides.html#key-questions",
+    "title": "Week 3: Perception and Presence",
+    "section": "Key questions",
+    "text": "Key questions\n\nWhat is the difference between presence and immersion?\nWhat causes simulator sickness?\nHow can design choices mitigate discomfort?\nWhat ethical responsibilities do XR designers have?",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#further-reading",
+    "href": "weeks/03-week-03/04-slides.html#further-reading",
+    "title": "Week 3: Perception and Presence",
+    "section": "Further reading",
+    "text": "Further reading\n\nSlater, M. (2009) Place illusion and plausibility\nJerald, J. (2015) The VR Book, Chapters 4 and 5\nKolasinski, E. (1995) Simulator sickness in virtual environments",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/04-slides.html#summary",
+    "href": "weeks/03-week-03/04-slides.html#summary",
+    "title": "Week 3: Perception and Presence",
+    "section": "Summary",
+    "text": "Summary\n\nPresence is subjective; immersion is objective\nPlace illusion and plausibility illusion are distinct\nMultiple perceptual modalities contribute to presence\nSensory conflict causes simulator sickness\nDesign choices can mitigate discomfort\n\n\nNext week: Input Systems and Interaction Fundamentals",
+    "crumbs": [
+      "Week 03",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/02-practical.html",
+    "href": "weeks/03-week-03/02-practical.html",
+    "title": "Week 3 — Practical",
+    "section": "",
+    "text": "Duration: 2 hours",
+    "crumbs": [
+      "Week 03",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/02-practical.html#overview",
+    "href": "weeks/03-week-03/02-practical.html#overview",
+    "title": "Week 3 — Practical",
+    "section": "",
+    "text": "Duration: 2 hours",
+    "crumbs": [
+      "Week 03",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/02-practical.html#objectives",
+    "href": "weeks/03-week-03/02-practical.html#objectives",
+    "title": "Week 3 — Practical",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this practical, you will be able to:\n\nObjective one\nObjective two",
+    "crumbs": [
+      "Week 03",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/02-practical.html#instructions",
+    "href": "weeks/03-week-03/02-practical.html#instructions",
+    "title": "Week 3 — Practical",
+    "section": "Instructions",
+    "text": "Instructions\n\nPart 1: [Setup / Introduction]\nStep-by-step instructions here.\n\n\nPart 2: [Main Task]\nStep-by-step instructions here.",
+    "crumbs": [
+      "Week 03",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/03-week-03/02-practical.html#expected-outcome",
+    "href": "weeks/03-week-03/02-practical.html#expected-outcome",
+    "title": "Week 3 — Practical",
+    "section": "Expected Outcome",
+    "text": "Expected Outcome\nDescribe what a successful result looks like.\n\n\n\n\n\n\nTipHint\n\n\n\nIf you get stuck, try [suggestion].",
+    "crumbs": [
+      "Week 03",
+      "Practical"
+    ]
+  },
+  {
     "objectID": "weeks/02-week-02/04-slides.html#last-week-recap",
     "href": "weeks/02-week-02/04-slides.html#last-week-recap",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Last Week Recap",
-    "text": "Last Week Recap\n\nXR spectrum: VR, AR, MR, Spatial Computing\nThe reality–virtuality continuum (Milgram & Kishino, 1994)\n3DOF vs 6DOF, inside-out vs outside-in tracking\nA brief history from Sutherland (1965) to Vision Pro (2023)"
+    "text": "Last Week Recap\n\nXR spectrum: VR, AR, MR, Spatial Computing\nThe reality–virtuality continuum (Milgram & Kishino, 1994)\n3DOF vs 6DOF, inside-out vs outside-in tracking\nA brief history from Sutherland (1965) to Vision Pro (2023)",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#this-week",
     "href": "weeks/02-week-02/04-slides.html#this-week",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "This Week",
-    "text": "This Week\nThe XR Hardware & Platform Ecosystem\n\nA comparative survey of the current landscape — building the critical vocabulary to evaluate any device, not just memorise specs.\n\nSupports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences."
+    "text": "This Week\nThe XR Hardware & Platform Ecosystem\n\nA comparative survey of the current landscape — building the critical vocabulary to evaluate any device, not just memorise specs.\n\nSupports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#todays-map",
     "href": "weeks/02-week-02/04-slides.html#todays-map",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Today’s Map",
-    "text": "Today’s Map\n\nStandalone VR — Meta Quest 3/3S\nMixed reality headsets — Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nPlatform SDKs & app stores — Horizon OS vs visionOS\nCritical comparison activity"
+    "text": "Today’s Map\n\nStandalone VR — Meta Quest 3/3S\nMixed reality headsets — Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nPlatform SDKs & app stores — Horizon OS vs visionOS\nCritical comparison activity",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#standalone-vr-meta-quest-3-3s",
     "href": "weeks/02-week-02/04-slides.html#standalone-vr-meta-quest-3-3s",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "1. Standalone VR: Meta Quest 3 / 3S",
-    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking\n\n\n\n\n\n\n\nNote\n\n\nStandalone removed the PC-tether barrier — the single biggest driver of mass XR adoption."
+    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking\n\n\n\n\n\n\n\nNote\n\n\nStandalone removed the PC-tether barrier — the single biggest driver of mass XR adoption.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#mixed-reality-headsets",
     "href": "weeks/02-week-02/04-slides.html#mixed-reality-headsets",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "2. Mixed Reality Headsets",
-    "text": "2. Mixed Reality Headsets\n\n\nApple Vision Pro\n\n“Spatial computing,” not VR/AR\nvisionOS: windows, volumes, spaces\nEye tracking + pinch input\nPassthrough (video see-through)\n\n\nHoloLens 2\n\nOptical see-through waveguide\nNarrow FOV, strong hand/gaze tracking\nEnterprise/industrial focus"
+    "text": "2. Mixed Reality Headsets\n\n\nApple Vision Pro\n\n“Spatial computing,” not VR/AR\nvisionOS: windows, volumes, spaces\nEye tracking + pinch input\nPassthrough (video see-through)\n\n\nHoloLens 2\n\nOptical see-through waveguide\nNarrow FOV, strong hand/gaze tracking\nEnterprise/industrial focus",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#passthrough-vs-optical-see-through",
     "href": "weeks/02-week-02/04-slides.html#passthrough-vs-optical-see-through",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Passthrough vs Optical See-Through",
-    "text": "Passthrough vs Optical See-Through\n\n\n\n\nPassthrough\nOptical See-Through\n\n\n\n\nHow\nCameras + screen composite\nTransparent lens overlay\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by cameras\nPerfect (direct light)\n\n\nLatency risk\nCamera-to-display lag\nNone for real world"
+    "text": "Passthrough vs Optical See-Through\n\n\n\n\nPassthrough\nOptical See-Through\n\n\n\n\nHow\nCameras + screen composite\nTransparent lens overlay\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by cameras\nPerfect (direct light)\n\n\nLatency risk\nCamera-to-display lag\nNone for real world",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#ar-glasses-xreal-one-pro-peers",
     "href": "weeks/02-week-02/04-slides.html#ar-glasses-xreal-one-pro-peers",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "3. AR Glasses: Xreal One Pro & Peers",
-    "text": "3. AR Glasses: Xreal One Pro & Peers\n\nLightweight, glasses-form-factor, usually tethered\nBirdbath/waveguide optics project a floating virtual screen\nSome models add spatial/positional tracking for anchored content\nOptimised for portability and casual wear, not immersion"
+    "text": "3. AR Glasses: Xreal One Pro & Peers\n\nLightweight, glasses-form-factor, usually tethered\nBirdbath/waveguide optics project a floating virtual screen\nSome models add spatial/positional tracking for anchored content\nOptimised for portability and casual wear, not immersion",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#ar-glasses-vs-headsets",
     "href": "weeks/02-week-02/04-slides.html#ar-glasses-vs-headsets",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "AR Glasses vs Headsets",
-    "text": "AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses\nMR/VR Headsets\n\n\n\n\nCompute\nTethered to host\nOnboard\n\n\nFOV\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal\nRich (hands, gaze, controllers)\n\n\nUse case\nScreen replacement, media\nGames, training, spatial computing"
+    "text": "AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses\nMR/VR Headsets\n\n\n\n\nCompute\nTethered to host\nOnboard\n\n\nFOV\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal\nRich (hands, gaze, controllers)\n\n\nUse case\nScreen replacement, media\nGames, training, spatial computing",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#platform-sdks-app-stores",
     "href": "weeks/02-week-02/04-slides.html#platform-sdks-app-stores",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "4. Platform SDKs & App Stores",
-    "text": "4. Platform SDKs & App Stores\n\n\nMeta Horizon OS\n\nMeta XR SDK, Unity/Unreal/native\nMeta Horizon Store + App Lab\nComfort ratings, performance benchmarks\n\n\nvisionOS\n\nRealityKit/SwiftUI, Xcode-centric\nApple App Store review\nSpatial-specific HIG requirements"
+    "text": "4. Platform SDKs & App Stores\n\n\nMeta Horizon OS\n\nMeta XR SDK, Unity/Unreal/native\nMeta Horizon Store + App Lab\nComfort ratings, performance benchmarks\n\n\nvisionOS\n\nRealityKit/SwiftUI, Xcode-centric\nApple App Store review\nSpatial-specific HIG requirements",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#connecting-back-to-week-1",
     "href": "weeks/02-week-02/04-slides.html#connecting-back-to-week-1",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Connecting Back to Week 1",
-    "text": "Connecting Back to Week 1\n\n\n\n\n\n\nImportant\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action. This week’s practical asks you to compare that experience directly against visionOS."
+    "text": "Connecting Back to Week 1\n\n\n\n\n\n\nImportant\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action. This week’s practical asks you to compare that experience directly against visionOS.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#a-framework-for-critical-comparison",
     "href": "weeks/02-week-02/04-slides.html#a-framework-for-critical-comparison",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "5. A Framework for Critical Comparison",
-    "text": "5. A Framework for Critical Comparison\nFour criteria to evaluate any XR device:\n\nComfort — weight, fit, session tolerance\nField of view (FOV) — degrees, edge clipping, task impact\nTracking fidelity — accuracy, latency, robustness\nEcosystem maturity — SDK, store, developer/content ecosystem"
+    "text": "5. A Framework for Critical Comparison\nFour criteria to evaluate any XR device:\n\nComfort — weight, fit, session tolerance\nField of view (FOV) — degrees, edge clipping, task impact\nTracking fidelity — accuracy, latency, robustness\nEcosystem maturity — SDK, store, developer/content ecosystem",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#this-week-in-the-lab",
     "href": "weeks/02-week-02/04-slides.html#this-week-in-the-lab",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "This Week in the Lab",
-    "text": "This Week in the Lab\n\nDevice stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nStructured observation template per device\nGroup critical comparison activity against a chosen use case"
+    "text": "This Week in the Lab\n\nDevice stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nStructured observation template per device\nGroup critical comparison activity against a chosen use case",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#this-week-in-the-practical",
     "href": "weeks/02-week-02/04-slides.html#this-week-in-the-practical",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "This Week in the Practical",
-    "text": "This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS pipeline\nBuild a platform comparison matrix + written recommendation"
+    "text": "This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS pipeline\nBuild a platform comparison matrix + written recommendation",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#key-questions-to-carry-forward",
     "href": "weeks/02-week-02/04-slides.html#key-questions-to-carry-forward",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Key Questions to Carry Forward",
-    "text": "Key Questions to Carry Forward\n\nIs “spatial computing” a technical category or a marketing category?\nDoes the “best” device for a use case have to be the most technically impressive?\nHow much does ecosystem maturity matter compared to raw hardware specs?"
+    "text": "Key Questions to Carry Forward\n\nIs “spatial computing” a technical category or a marketing category?\nDoes the “best” device for a use case have to be the most technically impressive?\nHow much does ecosystem maturity matter compared to raw hardware specs?",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#further-reading",
     "href": "weeks/02-week-02/04-slides.html#further-reading",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Further Reading",
-    "text": "Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality. Addison-Wesley.\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice.\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina."
+    "text": "Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality. Addison-Wesley.\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice.\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
   },
   {
     "objectID": "weeks/02-week-02/04-slides.html#summary",
     "href": "weeks/02-week-02/04-slides.html#summary",
     "title": "Week 2: The XR Hardware & Platform Ecosystem",
     "section": "Summary",
-    "text": "Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three distinct hardware philosophies\nPassthrough vs optical see-through is a key technical and experiential distinction\nPlatform choice (Horizon OS vs visionOS) shapes tooling, review, and distribution\nComfort, FOV, tracking fidelity, and ecosystem maturity give you a repeatable critique framework\n\n\nNext week: Perception and Presence"
+    "text": "Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three distinct hardware philosophies\nPassthrough vs optical see-through is a key technical and experiential distinction\nPlatform choice (Horizon OS vs visionOS) shapes tooling, review, and distribution\nComfort, FOV, tracking fidelity, and ecosystem maturity give you a repeatable critique framework\n\n\nNext week: Perception and Presence",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-practical.html",
+    "href": "weeks/02-week-02/02-practical.html",
+    "title": "Week 2 — Practical",
+    "section": "",
+    "text": "Duration: 2 hours",
+    "crumbs": [
+      "Week 02",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-practical.html#overview",
+    "href": "weeks/02-week-02/02-practical.html#overview",
+    "title": "Week 2 — Practical",
+    "section": "",
+    "text": "Duration: 2 hours",
+    "crumbs": [
+      "Week 02",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-practical.html#objectives",
+    "href": "weeks/02-week-02/02-practical.html#objectives",
+    "title": "Week 2 — Practical",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this practical, you will be able to:\n\nObjective one\nObjective two",
+    "crumbs": [
+      "Week 02",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-practical.html#instructions",
+    "href": "weeks/02-week-02/02-practical.html#instructions",
+    "title": "Week 2 — Practical",
+    "section": "Instructions",
+    "text": "Instructions\n\nPart 1: [Setup / Introduction]\nStep-by-step instructions here.\n\n\nPart 2: [Main Task]\nStep-by-step instructions here.",
+    "crumbs": [
+      "Week 02",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-practical.html#expected-outcome",
+    "href": "weeks/02-week-02/02-practical.html#expected-outcome",
+    "title": "Week 2 — Practical",
+    "section": "Expected Outcome",
+    "text": "Expected Outcome\nDescribe what a successful result looks like.\n\n\n\n\n\n\nTipHint\n\n\n\nIf you get stuck, try [suggestion].",
+    "crumbs": [
+      "Week 02",
+      "Practical"
+    ]
   },
   {
     "objectID": "weeks/01-week-01/04-slides.html#welcome",
