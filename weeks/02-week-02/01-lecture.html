@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 1 Lecture Notes: Introduction to Spatial Computing – Virtual, Augmented And Spatial Computing</title>
+<title>Week 2 Lecture Notes: The XR Hardware &amp; Platform Ecosystem – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -33,8 +52,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/01-week-01/02-practical.html" rel="next">
-<link href="../../01-assessments/07-assessment.html" rel="prev">
+<link href="../../weeks/02-week-02/02-practical.html" rel="next">
+<link href="../../weeks/01-week-01/04-slides.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Week 1 Lecture Notes: Introduction to Spatial Computing – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 2 Lecture Notes: The XR Hardware &amp; Platform Ecosystem – Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -95,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Lecture</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-lecture.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-lecture.html">Lecture</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -207,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/01-lecture.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/01-week-01/01-lecture.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture</span></a>
   </div>
 </li>
@@ -242,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/02-week-02/01-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/02-week-02/01-lecture.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture</span></a>
   </div>
 </li>
@@ -276,61 +295,45 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lecture" id="toc-lecture" class="nav-link active" data-scroll-target="#lecture"><span class="header-section-number">1</span> Lecture</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
-  <li><a href="#defining-the-xr-spectrum" id="toc-defining-the-xr-spectrum" class="nav-link" data-scroll-target="#defining-the-xr-spectrum"><span class="header-section-number">3</span> Defining the XR Spectrum</a>
+  <li><a href="#last-week-recap" id="toc-last-week-recap" class="nav-link active" data-scroll-target="#last-week-recap"><span class="header-section-number">1</span> Last Week Recap</a></li>
+  <li><a href="#todays-map" id="toc-todays-map" class="nav-link" data-scroll-target="#todays-map"><span class="header-section-number">2</span> Today’s Map</a></li>
+  <li><a href="#standalone-vr-meta-quest-3-3s" id="toc-standalone-vr-meta-quest-3-3s" class="nav-link" data-scroll-target="#standalone-vr-meta-quest-3-3s"><span class="header-section-number">3</span> Standalone VR: Meta Quest 3 / 3S</a>
   <ul class="collapse">
-  <li><a href="#virtual-reality-vr" id="toc-virtual-reality-vr" class="nav-link" data-scroll-target="#virtual-reality-vr"><span class="header-section-number">3.1</span> Virtual Reality (VR)</a></li>
-  <li><a href="#augmented-reality-ar" id="toc-augmented-reality-ar" class="nav-link" data-scroll-target="#augmented-reality-ar"><span class="header-section-number">3.2</span> Augmented Reality (AR)</a></li>
-  <li><a href="#mixed-reality-mr" id="toc-mixed-reality-mr" class="nav-link" data-scroll-target="#mixed-reality-mr"><span class="header-section-number">3.3</span> Mixed Reality (MR)</a></li>
-  <li><a href="#spatial-computing" id="toc-spatial-computing" class="nav-link" data-scroll-target="#spatial-computing"><span class="header-section-number">3.4</span> Spatial Computing</a></li>
+  <li><a href="#optics" id="toc-optics" class="nav-link" data-scroll-target="#optics"><span class="header-section-number">3.1</span> Optics</a></li>
+  <li><a href="#passthrough-and-sensing" id="toc-passthrough-and-sensing" class="nav-link" data-scroll-target="#passthrough-and-sensing"><span class="header-section-number">3.2</span> Passthrough and sensing</a></li>
+  <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input"><span class="header-section-number">3.3</span> Input</a></li>
   </ul></li>
-  <li><a href="#the-reality-virtuality-continuum" id="toc-the-reality-virtuality-continuum" class="nav-link" data-scroll-target="#the-reality-virtuality-continuum"><span class="header-section-number">4</span> The Reality-Virtuality Continuum</a></li>
-  <li><a href="#a-brief-history-of-xr" id="toc-a-brief-history-of-xr" class="nav-link" data-scroll-target="#a-brief-history-of-xr"><span class="header-section-number">5</span> A Brief History of XR</a>
+  <li><a href="#mixed-reality-headsets" id="toc-mixed-reality-headsets" class="nav-link" data-scroll-target="#mixed-reality-headsets"><span class="header-section-number">4</span> Mixed Reality Headsets</a>
   <ul class="collapse">
-  <li><a href="#early-foundations-1960s1990s" id="toc-early-foundations-1960s1990s" class="nav-link" data-scroll-target="#early-foundations-1960s1990s"><span class="header-section-number">5.1</span> Early Foundations (1960s–1990s)</a></li>
-  <li><a href="#the-first-consumer-wave-20122016" id="toc-the-first-consumer-wave-20122016" class="nav-link" data-scroll-target="#the-first-consumer-wave-20122016"><span class="header-section-number">5.2</span> The First Consumer Wave (2012–2016)</a></li>
-  <li><a href="#standalone-and-spatial-computing-2019present" id="toc-standalone-and-spatial-computing-2019present" class="nav-link" data-scroll-target="#standalone-and-spatial-computing-2019present"><span class="header-section-number">5.3</span> Standalone and Spatial Computing (2019–present)</a></li>
+  <li><a href="#apple-vision-pro" id="toc-apple-vision-pro" class="nav-link" data-scroll-target="#apple-vision-pro"><span class="header-section-number">4.1</span> Apple Vision Pro</a></li>
+  <li><a href="#hololens-2" id="toc-hololens-2" class="nav-link" data-scroll-target="#hololens-2"><span class="header-section-number">4.2</span> HoloLens 2</a></li>
+  <li><a href="#passthrough-vs-optical-see-through" id="toc-passthrough-vs-optical-see-through" class="nav-link" data-scroll-target="#passthrough-vs-optical-see-through"><span class="header-section-number">4.3</span> Passthrough vs Optical See-Through</a></li>
   </ul></li>
-  <li><a href="#degrees-of-freedom" id="toc-degrees-of-freedom" class="nav-link" data-scroll-target="#degrees-of-freedom"><span class="header-section-number">6</span> Degrees of Freedom</a>
+  <li><a href="#ar-glasses-xreal-one-pro-and-peers" id="toc-ar-glasses-xreal-one-pro-and-peers" class="nav-link" data-scroll-target="#ar-glasses-xreal-one-pro-and-peers"><span class="header-section-number">5</span> AR Glasses: Xreal One Pro and Peers</a>
   <ul class="collapse">
-  <li><a href="#dof" id="toc-dof" class="nav-link" data-scroll-target="#dof"><span class="header-section-number">6.1</span> 3DOF</a></li>
-  <li><a href="#dof-1" id="toc-dof-1" class="nav-link" data-scroll-target="#dof-1"><span class="header-section-number">6.2</span> 6DOF</a></li>
+  <li><a href="#ar-glasses-vs-headsets" id="toc-ar-glasses-vs-headsets" class="nav-link" data-scroll-target="#ar-glasses-vs-headsets"><span class="header-section-number">5.1</span> AR Glasses vs Headsets</a></li>
   </ul></li>
-  <li><a href="#tracking-technologies" id="toc-tracking-technologies" class="nav-link" data-scroll-target="#tracking-technologies"><span class="header-section-number">7</span> Tracking Technologies</a>
+  <li><a href="#platform-sdks-and-app-stores" id="toc-platform-sdks-and-app-stores" class="nav-link" data-scroll-target="#platform-sdks-and-app-stores"><span class="header-section-number">6</span> Platform SDKs and App Stores</a>
   <ul class="collapse">
-  <li><a href="#inside-out-tracking" id="toc-inside-out-tracking" class="nav-link" data-scroll-target="#inside-out-tracking"><span class="header-section-number">7.1</span> Inside-Out Tracking</a></li>
-  <li><a href="#outside-in-tracking" id="toc-outside-in-tracking" class="nav-link" data-scroll-target="#outside-in-tracking"><span class="header-section-number">7.2</span> Outside-In Tracking</a></li>
+  <li><a href="#meta-horizon-os" id="toc-meta-horizon-os" class="nav-link" data-scroll-target="#meta-horizon-os"><span class="header-section-number">6.1</span> Meta Horizon OS</a></li>
+  <li><a href="#visionos" id="toc-visionos" class="nav-link" data-scroll-target="#visionos"><span class="header-section-number">6.2</span> visionOS</a></li>
   </ul></li>
-  <li><a href="#the-hardware-in-this-module" id="toc-the-hardware-in-this-module" class="nav-link" data-scroll-target="#the-hardware-in-this-module"><span class="header-section-number">8</span> The Hardware in This Module</a>
-  <ul class="collapse">
-  <li><a href="#meta-quest-2" id="toc-meta-quest-2" class="nav-link" data-scroll-target="#meta-quest-2"><span class="header-section-number">8.1</span> Meta Quest 2</a></li>
-  <li><a href="#meta-quest-3" id="toc-meta-quest-3" class="nav-link" data-scroll-target="#meta-quest-3"><span class="header-section-number">8.2</span> Meta Quest 3</a></li>
-  <li><a href="#htc-vive-pro" id="toc-htc-vive-pro" class="nav-link" data-scroll-target="#htc-vive-pro"><span class="header-section-number">8.3</span> HTC Vive Pro</a></li>
-  <li><a href="#pico-neo-eye" id="toc-pico-neo-eye" class="nav-link" data-scroll-target="#pico-neo-eye"><span class="header-section-number">8.4</span> Pico Neo Eye</a></li>
-  <li><a href="#hololens-2" id="toc-hololens-2" class="nav-link" data-scroll-target="#hololens-2"><span class="header-section-number">8.5</span> HoloLens 2</a></li>
-  <li><a href="#snap-spectacles-2022" id="toc-snap-spectacles-2022" class="nav-link" data-scroll-target="#snap-spectacles-2022"><span class="header-section-number">8.6</span> Snap Spectacles 2022</a></li>
-  <li><a href="#display-glasses" id="toc-display-glasses" class="nav-link" data-scroll-target="#display-glasses"><span class="header-section-number">8.7</span> Display Glasses</a></li>
-  </ul></li>
-  <li><a href="#why-xr-design-is-different" id="toc-why-xr-design-is-different" class="nav-link" data-scroll-target="#why-xr-design-is-different"><span class="header-section-number">9</span> Why XR Design is Different</a>
-  <ul class="collapse">
-  <li><a href="#the-body-is-the-interface" id="toc-the-body-is-the-interface" class="nav-link" data-scroll-target="#the-body-is-the-interface"><span class="header-section-number">9.1</span> The body is the interface</a></li>
-  <li><a href="#space-is-the-canvas" id="toc-space-is-the-canvas" class="nav-link" data-scroll-target="#space-is-the-canvas"><span class="header-section-number">9.2</span> Space is the canvas</a></li>
-  <li><a href="#presence-changes-behaviour" id="toc-presence-changes-behaviour" class="nav-link" data-scroll-target="#presence-changes-behaviour"><span class="header-section-number">9.3</span> Presence changes behaviour</a></li>
-  <li><a href="#comfort-is-a-design-constraint" id="toc-comfort-is-a-design-constraint" class="nav-link" data-scroll-target="#comfort-is-a-design-constraint"><span class="header-section-number">9.4</span> Comfort is a design constraint</a></li>
-  </ul></li>
-  <li><a href="#the-module-in-context" id="toc-the-module-in-context" class="nav-link" data-scroll-target="#the-module-in-context"><span class="header-section-number">10</span> The Module in Context</a></li>
+  <li><a href="#a-framework-for-critical-comparison" id="toc-a-framework-for-critical-comparison" class="nav-link" data-scroll-target="#a-framework-for-critical-comparison"><span class="header-section-number">7</span> A Framework for Critical Comparison</a></li>
+  <li><a href="#key-questions-to-carry-forward" id="toc-key-questions-to-carry-forward" class="nav-link" data-scroll-target="#key-questions-to-carry-forward"><span class="header-section-number">8</span> Key Questions to Carry Forward</a></li>
+  <li><a href="#this-week-in-the-lab" id="toc-this-week-in-the-lab" class="nav-link" data-scroll-target="#this-week-in-the-lab"><span class="header-section-number">9</span> This Week in the Lab</a></li>
+  <li><a href="#this-week-in-the-practical" id="toc-this-week-in-the-practical" class="nav-link" data-scroll-target="#this-week-in-the-practical"><span class="header-section-number">10</span> This Week in the Practical</a></li>
   <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">12</span> Further Reading</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12</span> Summary</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">13</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Lecture</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-lecture.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-lecture.html">Lecture</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 1 Lecture Notes: Introduction to Spatial Computing</h1>
+<h1 class="title">Week 2 Lecture Notes: The XR Hardware &amp; Platform Ecosystem</h1>
 </div>
 
 
@@ -347,238 +350,311 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="lecture" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="lecture"><span class="header-section-number">1</span> Lecture</h2>
-<div class="sp-embed-player" data-id="cOhIlOnt0JL" data-aspect-ratio="1.777778" data-padding-top="56.250000%" style="position:relative;width:100%;padding-top:56.250000%;height:0;">
-<script src="https://go.screenpal.com/player/appearance/cOhIlOnt0JL"></script>
-<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOhIlOnt0JL?ff=1&amp;ahc=1&amp;dcc=1&amp;tl=1&amp;bg=transparent&amp;share=1&amp;download=1&amp;embed=1&amp;cl=1" allowfullscreen="true">
-</iframe>
-</div>
-</section>
-<section id="introduction" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2</span> Introduction</h2>
-<p>This module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.</p>
-<p>This first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.</p>
+<section id="last-week-recap" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="last-week-recap"><span class="header-section-number">1</span> Last Week Recap</h2>
+<p>In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality–virtuality continuum <span class="citation" data-cites="Milgram1994">(<a href="#ref-Milgram1994" role="doc-biblioref">Milgram et al. 1994</a>)</span>, 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” <span class="citation" data-cites="Sutherland1965TheUD">(<a href="#ref-Sutherland1965TheUD" role="doc-biblioref">Sutherland 1965</a>)</span> to the Apple Vision Pro.</p>
+<p>This week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a <strong>critical vocabulary</strong> you can use to evaluate any XR device — including ones that do not exist yet.</p>
+<p>This lecture directly supports <strong>LO2</strong>: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.</p>
 <hr>
 </section>
-<section id="defining-the-xr-spectrum" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="defining-the-xr-spectrum"><span class="header-section-number">3</span> Defining the XR Spectrum</h2>
-<p>The term <strong>XR</strong> (Extended Reality) is an umbrella that covers several related but distinct technologies. Understanding the differences between them is essential because each imposes different design constraints and affords different possibilities.</p>
-<section id="virtual-reality-vr" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="virtual-reality-vr"><span class="header-section-number">3.1</span> Virtual Reality (VR)</h3>
-<p>In a VR system, the user’s visual field is entirely replaced by a synthetic environment. The headset blocks out the physical world and presents a stereoscopic 3D image that responds to the user’s head movement. High-quality VR systems also include spatial audio, hand controllers with haptic feedback, and room-scale tracking.</p>
-<p>The defining characteristic of VR is <strong>sensory substitution</strong> — the system replaces real sensory input with synthetic input. The quality of this substitution determines how convincing the experience feels.</p>
+<section id="todays-map" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="todays-map"><span class="header-section-number">2</span> Today’s Map</h2>
+<ol type="1">
+<li>Standalone VR — Meta Quest 3 / 3S</li>
+<li>Mixed reality headsets — Apple Vision Pro, HoloLens 2</li>
+<li>AR glasses — Xreal One Pro and peers</li>
+<li>Platform SDKs &amp; app stores — Horizon OS vs visionOS</li>
+<li>A framework for critical comparison</li>
+</ol>
+<hr>
 </section>
-<section id="augmented-reality-ar" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="augmented-reality-ar"><span class="header-section-number">3.2</span> Augmented Reality (AR)</h3>
-<p>AR systems overlay digital content onto the user’s view of the real world. This can be achieved through:</p>
+<section id="standalone-vr-meta-quest-3-3s" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="standalone-vr-meta-quest-3-3s"><span class="header-section-number">3</span> Standalone VR: Meta Quest 3 / 3S</h2>
+<p>The Meta Quest 3 and Quest 3S represent the current mainstream of <strong>standalone VR</strong> — headsets with all compute, battery, and sensors onboard, requiring no PC or console tether.</p>
+<section id="optics" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="optics"><span class="header-section-number">3.1</span> Optics</h3>
 <ul>
-<li><strong>optical see-through displays</strong> (the user looks through a transparent lens with digital content projected onto it — HoloLens 2, Snap Spectacles)</li>
-<li><strong>video see-through displays</strong> (cameras capture the real world and the combined image is displayed — Quest 3 passthrough, mobile AR)</li>
-<li><strong>projection-based AR</strong> (digital content is projected directly onto real surfaces)</li>
+<li>The <strong>Quest 3</strong> uses <strong>pancake lenses</strong>, which fold light path through polarisation to produce a thinner, sharper optical stack with less distortion at the edges.</li>
+<li>The <strong>Quest 3S</strong> uses more traditional <strong>Fresnel lenses</strong>, which are cheaper to manufacture but introduce more “god rays” (visible light scatter) and a bulkier form factor.</li>
 </ul>
-<p>The defining characteristic of AR is that the real world remains visible and the digital content must be registered accurately to physical space.</p>
+<p>This is a useful first lesson in hardware critique: two devices from the same manufacturer, released in the same product generation, can make very different optical trade-offs to hit different price points.</p>
 </section>
-<section id="mixed-reality-mr" class="level3" data-number="3.3">
-<h3 data-number="3.3" class="anchored" data-anchor-id="mixed-reality-mr"><span class="header-section-number">3.3</span> Mixed Reality (MR)</h3>
-<p>Mixed reality is a term used in different ways by different organisations. In its most precise sense (following Milgram and Kishino’s taxonomy), MR refers to any point on the reality-virtuality continuum between fully real and fully virtual. In practice, it is often used to describe systems where digital and physical objects interact — for example, a virtual ball that bounces off a real table.</p>
-<p>The HoloLens 2 and Meta Quest 3 are both marketed as mixed reality devices.</p>
+<section id="passthrough-and-sensing" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="passthrough-and-sensing"><span class="header-section-number">3.2</span> Passthrough and sensing</h3>
+<p>Both devices offer <strong>full-colour passthrough</strong> — external cameras feed a live video composite of the real world to the internal displays — plus depth sensing that allows virtual objects to be occluded correctly by real furniture and walls. This is what allows the Quest 3 family to market itself as “mixed reality” capable, not purely VR.</p>
 </section>
-<section id="spatial-computing" class="level3" data-number="3.4">
-<h3 data-number="3.4" class="anchored" data-anchor-id="spatial-computing"><span class="header-section-number">3.4</span> Spatial Computing</h3>
-<p>Spatial computing is a broader paradigm that describes computing systems that understand and interact with three-dimensional space. Rather than confining computation to a screen, spatial computing embeds it in the environment. This includes XR devices but also extends to robotics, autonomous vehicles, and smart environments.</p>
-<p>Apple’s Vision Pro is positioned explicitly as a spatial computing device rather than a VR or AR headset, reflecting a deliberate shift in how the industry frames these technologies.</p>
+<section id="input" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="input"><span class="header-section-number">3.3</span> Input</h3>
+<ul>
+<li>Inside-out tracked controllers (retaining physical buttons, triggers, and haptics)</li>
+<li>Camera-based hand tracking (no controllers required, lower fidelity, no haptic feedback)</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why this matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Standalone hardware removed the PC-tether barrier that constrained the first consumer VR wave (2016). This is arguably the single biggest driver of mass XR adoption to date — cost, setup complexity, and physical tethering were the primary barriers identified in early VR adoption research.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
-<section id="the-reality-virtuality-continuum" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="the-reality-virtuality-continuum"><span class="header-section-number">4</span> The Reality-Virtuality Continuum</h2>
-<p>Milgram and Kishino (1994) proposed a taxonomy of mixed reality visual displays that remains influential today. They described a continuum from fully real environments to fully virtual environments, with augmented reality and augmented virtuality occupying the middle ground.</p>
+<section id="mixed-reality-headsets" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="mixed-reality-headsets"><span class="header-section-number">4</span> Mixed Reality Headsets</h2>
+<section id="apple-vision-pro" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="apple-vision-pro"><span class="header-section-number">4.1</span> Apple Vision Pro</h3>
+<p>Apple explicitly avoids calling the Vision Pro a VR or AR headset — it is marketed as a <strong>“spatial computing”</strong> device. This is a deliberate positioning choice, not just a technical one.</p>
+<p>Key characteristics:</p>
+<ul>
+<li><strong>visionOS</strong> introduces a new interaction paradigm built around <strong>windows</strong>, <strong>volumes</strong>, and <strong>spaces</strong> — 2D app windows, 3D volumetric content, and fully immersive environments can coexist</li>
+<li><strong>Eye tracking + pinch gesture</strong> input replaces controllers as the primary interaction model — you look at what you want and pinch to select</li>
+<li>Uses <strong>passthrough</strong> (video see-through), not optical see-through, despite the “spatial computing” framing</li>
+</ul>
+</section>
+<section id="hololens-2" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="hololens-2"><span class="header-section-number">4.2</span> HoloLens 2</h3>
+<p>Microsoft’s HoloLens 2 takes a different technical approach entirely:</p>
+<ul>
+<li><strong>Optical see-through waveguide display</strong> — the user looks directly through a transparent lens with light guided into the eye, meaning the real world is never digitised or delayed</li>
+<li>Narrower field of view than consumer VR headsets, a direct consequence of waveguide optics</li>
+<li>Strong hand tracking and eye/gaze tracking, voice input</li>
+<li>Positioned squarely for <strong>enterprise and industrial</strong> use cases (remote assistance, training, field service) rather than consumer entertainment</li>
+</ul>
+</section>
+<section id="passthrough-vs-optical-see-through" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="passthrough-vs-optical-see-through"><span class="header-section-number">4.3</span> Passthrough vs Optical See-Through</h3>
+<p>This is one of the most important technical distinctions in the whole module, because it explains many downstream differences in latency, fidelity, and use case.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Real Environment</th>
-<th>Augmented Reality</th>
-<th>Augmented Virtuality</th>
-<th>Virtual Environment</th>
+<th></th>
+<th>Passthrough (Video See-Through)</th>
+<th>Optical See-Through</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Fully real</td>
-<td>Mostly real, some virtual</td>
-<td>Mostly virtual, some real</td>
-<td>Fully virtual</td>
+<td>How it works</td>
+<td>Cameras capture the real world; a composite image is rendered and displayed on internal screens</td>
+<td>A transparent lens/waveguide overlays digital content directly onto the user’s natural view</td>
+</tr>
+<tr class="even">
+<td>Examples</td>
+<td>Quest 3, Vision Pro</td>
+<td>HoloLens 2</td>
+</tr>
+<tr class="odd">
+<td>Real-world fidelity</td>
+<td>Limited by camera resolution, dynamic range, and field of view</td>
+<td>Perfect — the user sees real, direct light</td>
+</tr>
+<tr class="even">
+<td>Latency risk</td>
+<td>Camera-to-display lag can cause a subtle disconnect between real and virtual</td>
+<td>None for the real-world view; only virtual content can lag</td>
+</tr>
+<tr class="odd">
+<td>Occlusion of virtual content</td>
+<td>Straightforward (composited digitally)</td>
+<td>Harder — virtual light is added on top of real light, so true occlusion of virtual-behind-real is difficult</td>
 </tr>
 </tbody>
 </table>
-<p>This framework is useful because it reminds us that the distinction between VR and AR is not binary. Many modern devices can operate at different points on this continuum depending on their mode of use.</p>
 <hr>
 </section>
-<section id="a-brief-history-of-xr" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="a-brief-history-of-xr"><span class="header-section-number">5</span> A Brief History of XR</h2>
-<p>Understanding the history of XR helps contextualise the current moment and avoid repeating past mistakes.</p>
-<section id="early-foundations-1960s1990s" class="level3" data-number="5.1">
-<h3 data-number="5.1" class="anchored" data-anchor-id="early-foundations-1960s1990s"><span class="header-section-number">5.1</span> Early Foundations (1960s–1990s)</h3>
+</section>
+<section id="ar-glasses-xreal-one-pro-and-peers" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="ar-glasses-xreal-one-pro-and-peers"><span class="header-section-number">5</span> AR Glasses: Xreal One Pro and Peers</h2>
+<p>A third hardware category sits apart from headsets altogether: lightweight, <strong>glasses-form-factor</strong> AR devices such as the Xreal One Pro.</p>
+<p>Characteristics:</p>
 <ul>
-<li><strong>1965:</strong> Ivan Sutherland describes the “Ultimate Display” — a room in which the computer can control the existence of matter</li>
-<li><strong>1968:</strong> Sutherland builds the first HMD, the Sword of Damocles</li>
-<li><strong>1987:</strong> Jaron Lanier coins the term “virtual reality”</li>
-<li><strong>1992:</strong> The CAVE (Cave Automatic Virtual Environment) is developed at the University of Illinois</li>
-<li><strong>1994:</strong> Milgram and Kishino publish their taxonomy of mixed reality</li>
+<li>Designed to look and feel like ordinary glasses — lightweight, low profile, socially acceptable to wear in public</li>
+<li>Typically <strong>tethered</strong> to a phone, laptop, or dedicated puck for compute and battery</li>
+<li>Use <strong>birdbath or waveguide optics</strong> to project a floating virtual screen in the user’s field of view — commonly used as a private, portable second monitor</li>
+<li>Some newer models add spatial/positional tracking so content can be anchored to the room rather than simply following the user’s head</li>
+<li>Optimised for <strong>portability and casual, short-duration wear</strong> — not for deep immersion or spatial interaction</li>
+</ul>
+<section id="ar-glasses-vs-headsets" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="ar-glasses-vs-headsets"><span class="header-section-number">5.1</span> AR Glasses vs Headsets</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Factor</th>
+<th>AR Glasses (e.g.&nbsp;Xreal One Pro)</th>
+<th>MR/VR Headsets (e.g.&nbsp;Quest 3, Vision Pro)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compute</td>
+<td>Tethered to a host device</td>
+<td>Onboard (standalone)</td>
+</tr>
+<tr class="even">
+<td>Field of view</td>
+<td>Narrow, screen-like</td>
+<td>Wide, immersive</td>
+</tr>
+<tr class="odd">
+<td>Interaction</td>
+<td>Minimal — largely passive viewing</td>
+<td>Rich — hands, gaze, controllers</td>
+</tr>
+<tr class="even">
+<td>Primary use case</td>
+<td>Screen replacement, private media viewing</td>
+<td>Games, training, spatial computing, social VR</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="platform-sdks-and-app-stores" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="platform-sdks-and-app-stores"><span class="header-section-number">6</span> Platform SDKs and App Stores</h2>
+<p>Hardware is only half the story. The <strong>software platform</strong> a device runs on determines what developers can build, how it is distributed, and how it is reviewed.</p>
+<section id="meta-horizon-os" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="meta-horizon-os"><span class="header-section-number">6.1</span> Meta Horizon OS</h3>
+<ul>
+<li>Built around the <strong>Meta XR SDK</strong>, with support for Unity, Unreal, and native development</li>
+<li>Distribution via the <strong>Meta Horizon Store</strong> (curated, reviewed) and <strong>App Lab</strong> (lighter-touch, more experimental distribution)</li>
+<li>Publishing requires meeting <strong>comfort ratings</strong> and <strong>performance benchmarks</strong> before an app can be listed</li>
 </ul>
 </section>
-<section id="the-first-consumer-wave-20122016" class="level3" data-number="5.2">
-<h3 data-number="5.2" class="anchored" data-anchor-id="the-first-consumer-wave-20122016"><span class="header-section-number">5.2</span> The First Consumer Wave (2012–2016)</h3>
+<section id="visionos" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="visionos"><span class="header-section-number">6.2</span> visionOS</h3>
 <ul>
-<li><strong>2012:</strong> Oculus Rift Kickstarter campaign raises $2.4 million</li>
-<li><strong>2014:</strong> Facebook acquires Oculus for $2 billion</li>
-<li><strong>2016:</strong> Consumer launches of Oculus Rift, HTC Vive, and PlayStation VR</li>
-<li><strong>2016:</strong> Pokémon GO demonstrates mass-market AR</li>
+<li>Built around <strong>RealityKit</strong> and <strong>SwiftUI</strong>, developed almost exclusively through <strong>Xcode</strong></li>
+<li>Distribution via the <strong>Apple App Store</strong>, subject to Apple’s standard app review process</li>
+<li>Apple publishes <strong>spatial-specific Human Interface Guidelines (HIG)</strong> that developers are expected to follow — covering topics like comfortable interaction distances, eye-tracking privacy, and window behaviour</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Connecting back to Week 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your Week 1 practical PDP submission <strong>was</strong> the Meta Horizon OS pipeline in action — you experienced first-hand how an app moves from build to device via that ecosystem. This week’s practical asks you to research the <strong>visionOS</strong> pipeline and compare it directly against that experience.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="a-framework-for-critical-comparison" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="a-framework-for-critical-comparison"><span class="header-section-number">7</span> A Framework for Critical Comparison</h2>
+<p>Rather than memorising specification sheets, use these four criteria to evaluate <strong>any</strong> XR device you encounter — in this module, in industry, or in a device that has not been released yet:</p>
+<ol type="1">
+<li><strong>Comfort</strong> — weight, weight distribution, fit, and how long a typical user can comfortably use it in one session</li>
+<li><strong>Field of view (FOV)</strong> — measured in degrees; affects edge clipping and how much of a task or environment is visible without turning the head</li>
+<li><strong>Tracking fidelity</strong> — the accuracy, latency, and robustness of head, hand, and/or eye tracking, especially in non-ideal conditions</li>
+<li><strong>Ecosystem maturity</strong> — the strength of the SDK, the size and quality of the app store or distribution channel, and the size of the developer and content community</li>
+</ol>
+<p>These four criteria will recur throughout the module whenever we introduce a new device or platform.</p>
+<hr>
+</section>
+<section id="key-questions-to-carry-forward" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="key-questions-to-carry-forward"><span class="header-section-number">8</span> Key Questions to Carry Forward</h2>
+<ul>
+<li>Is “spatial computing” a genuinely distinct technical category, or primarily a marketing category used to differentiate Apple’s device?</li>
+<li>Does the “best” device for a given use case have to be the most technically impressive one?</li>
+<li>How much should ecosystem maturity weigh against raw hardware specifications when recommending a platform to a client or employer?</li>
+</ul>
+<p>Keep these questions in mind for this week’s lab and practical — you will be asked to take a position and justify it.</p>
+<hr>
+</section>
+<section id="this-week-in-the-lab" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="this-week-in-the-lab"><span class="header-section-number">9</span> This Week in the Lab</h2>
+<ul>
+<li>Hands-on device stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro</li>
+<li>A structured observation template to complete for each device</li>
+<li>A group critical comparison activity, applying the four-criteria framework against a chosen use case</li>
 </ul>
 </section>
-<section id="standalone-and-spatial-computing-2019present" class="level3" data-number="5.3">
-<h3 data-number="5.3" class="anchored" data-anchor-id="standalone-and-spatial-computing-2019present"><span class="header-section-number">5.3</span> Standalone and Spatial Computing (2019–present)</h3>
+<section id="this-week-in-the-practical" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="this-week-in-the-practical"><span class="header-section-number">10</span> This Week in the Practical</h2>
 <ul>
-<li><strong>2019:</strong> Meta Quest 1 launches — standalone VR without a PC</li>
-<li><strong>2021:</strong> Meta rebrands from Facebook, announces metaverse strategy</li>
-<li><strong>2022:</strong> Meta Quest Pro introduces mixed reality passthrough</li>
-<li><strong>2023:</strong> Apple announces Vision Pro at WWDC</li>
-<li><strong>2024:</strong> Spatial computing enters enterprise and consumer markets at scale</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="degrees-of-freedom" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="degrees-of-freedom"><span class="header-section-number">6</span> Degrees of Freedom</h2>
-<p>A fundamental concept in XR hardware is <strong>degrees of freedom (DOF)</strong>, which describes how many independent axes of movement a tracking system can detect.</p>
-<section id="dof" class="level3" data-number="6.1">
-<h3 data-number="6.1" class="anchored" data-anchor-id="dof"><span class="header-section-number">6.1</span> 3DOF</h3>
-<p>Three degrees of freedom tracks <strong>rotation only</strong>: - pitch (nodding) - yaw (shaking head) - roll (tilting head)</p>
-<p>3DOF systems cannot detect the user moving through space. They are suitable for 360-degree video viewing but not for interactive VR.</p>
-</section>
-<section id="dof-1" class="level3" data-number="6.2">
-<h3 data-number="6.2" class="anchored" data-anchor-id="dof-1"><span class="header-section-number">6.2</span> 6DOF</h3>
-<p>Six degrees of freedom tracks <strong>rotation and position</strong>: - pitch, yaw, roll (rotation) - x, y, z (position in space)</p>
-<p>6DOF allows the user to physically move through the virtual environment. All primary devices in this module support 6DOF tracking.</p>
-<hr>
-</section>
-</section>
-<section id="tracking-technologies" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="tracking-technologies"><span class="header-section-number">7</span> Tracking Technologies</h2>
-<section id="inside-out-tracking" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="inside-out-tracking"><span class="header-section-number">7.1</span> Inside-Out Tracking</h3>
-<p>Cameras mounted on the headset observe the environment and use computer vision to determine the headset’s position and orientation. This approach requires no external hardware and is used by the Meta Quest 2, Quest 3, and HoloLens 2.</p>
-<p>Advantages: - no external setup required - portable and flexible</p>
-<p>Limitations: - can struggle in low-light or featureless environments - tracking volume limited by camera field of view</p>
-</section>
-<section id="outside-in-tracking" class="level3" data-number="7.2">
-<h3 data-number="7.2" class="anchored" data-anchor-id="outside-in-tracking"><span class="header-section-number">7.2</span> Outside-In Tracking</h3>
-<p>External sensors (base stations or cameras) track the headset and controllers. The HTC Vive Pro uses this approach with SteamVR base stations.</p>
-<p>Advantages: - highly accurate and reliable - large tracking volume possible</p>
-<p>Limitations: - requires setup and calibration - not portable</p>
-<hr>
-</section>
-</section>
-<section id="the-hardware-in-this-module" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="the-hardware-in-this-module"><span class="header-section-number">8</span> The Hardware in This Module</h2>
-<p>You will have access to a range of devices throughout this module. Each offers different capabilities and design constraints.</p>
-<section id="meta-quest-2" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="meta-quest-2"><span class="header-section-number">8.1</span> Meta Quest 2</h3>
-<p>The primary student HMD. Standalone, 6DOF, inside-out tracking, touch controllers with haptics. Widely used in industry and education. The baseline platform for most lab and practical work.</p>
-</section>
-<section id="meta-quest-3" class="level3" data-number="8.2">
-<h3 data-number="8.2" class="anchored" data-anchor-id="meta-quest-3"><span class="header-section-number">8.2</span> Meta Quest 3</h3>
-<p>Adds full-colour passthrough for mixed reality, improved processing, and slimmer form factor. Useful for exploring the boundary between VR and MR.</p>
-</section>
-<section id="htc-vive-pro" class="level3" data-number="8.3">
-<h3 data-number="8.3" class="anchored" data-anchor-id="htc-vive-pro"><span class="header-section-number">8.3</span> HTC Vive Pro</h3>
-<p>A PC-tethered headset with outside-in tracking via SteamVR base stations. Higher visual fidelity than the Quest 2. Useful for understanding the trade-offs between standalone and tethered systems.</p>
-</section>
-<section id="pico-neo-eye" class="level3" data-number="8.4">
-<h3 data-number="8.4" class="anchored" data-anchor-id="pico-neo-eye"><span class="header-section-number">8.4</span> Pico Neo Eye</h3>
-<p>Includes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering. Used in Week 5 for eye tracking exploration.</p>
-</section>
-<section id="hololens-2" class="level3" data-number="8.5">
-<h3 data-number="8.5" class="anchored" data-anchor-id="hololens-2"><span class="header-section-number">8.5</span> HoloLens 2</h3>
-<p>Microsoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The primary platform for spatial computing work in Week 10.</p>
-</section>
-<section id="snap-spectacles-2022" class="level3" data-number="8.6">
-<h3 data-number="8.6" class="anchored" data-anchor-id="snap-spectacles-2022"><span class="header-section-number">8.6</span> Snap Spectacles 2022</h3>
-<p>Lightweight AR glasses with a small display. Used in Week 9 alongside Lens Studio for AR lens development.</p>
-</section>
-<section id="display-glasses" class="level3" data-number="8.7">
-<h3 data-number="8.7" class="anchored" data-anchor-id="display-glasses"><span class="header-section-number">8.7</span> Display Glasses</h3>
-<p>Passive display glasses for comparison and demonstration purposes.</p>
-<hr>
-</section>
-</section>
-<section id="why-xr-design-is-different" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="why-xr-design-is-different"><span class="header-section-number">9</span> Why XR Design is Different</h2>
-<p>Designing for XR requires a fundamentally different mindset from designing for screens.</p>
-<section id="the-body-is-the-interface" class="level3" data-number="9.1">
-<h3 data-number="9.1" class="anchored" data-anchor-id="the-body-is-the-interface"><span class="header-section-number">9.1</span> The body is the interface</h3>
-<p>In XR, the user’s physical body — their hands, head, gaze, voice, and movement — becomes the primary input device. Design must account for physical ergonomics, fatigue, and the limits of human movement.</p>
-</section>
-<section id="space-is-the-canvas" class="level3" data-number="9.2">
-<h3 data-number="9.2" class="anchored" data-anchor-id="space-is-the-canvas"><span class="header-section-number">9.2</span> Space is the canvas</h3>
-<p>Rather than arranging elements on a flat surface, XR designers work in three-dimensional space. Objects have position, scale, and orientation. The user can move around them, look at them from different angles, and interact with them physically.</p>
-</section>
-<section id="presence-changes-behaviour" class="level3" data-number="9.3">
-<h3 data-number="9.3" class="anchored" data-anchor-id="presence-changes-behaviour"><span class="header-section-number">9.3</span> Presence changes behaviour</h3>
-<p>Research has shown that people behave differently in immersive environments than they do in front of screens. They respond emotionally to virtual stimuli, feel genuine discomfort in threatening virtual situations, and can develop real skills through virtual practice. This makes XR a powerful tool — and a significant ethical responsibility.</p>
-</section>
-<section id="comfort-is-a-design-constraint" class="level3" data-number="9.4">
-<h3 data-number="9.4" class="anchored" data-anchor-id="comfort-is-a-design-constraint"><span class="header-section-number">9.4</span> Comfort is a design constraint</h3>
-<p>Unlike screen-based interfaces, XR can cause physical discomfort — motion sickness, eye strain, neck fatigue, and disorientation. Good XR design treats comfort as a first-class design requirement, not an afterthought.</p>
-<hr>
-</section>
-</section>
-<section id="the-module-in-context" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="the-module-in-context"><span class="header-section-number">10</span> The Module in Context</h2>
-<p>This is a third-year module. You are expected to bring critical thinking, not just technical skill. Throughout the module, you will be asked to:</p>
-<ul>
-<li>analyse existing XR experiences, not just build new ones</li>
-<li>justify your design decisions with reference to theory and evidence</li>
-<li>evaluate your work honestly, including its limitations</li>
-<li>consider the ethical implications of immersive design</li>
+<li>Recap the Meta Horizon OS pipeline from Week 1</li>
+<li>Research the visionOS development and distribution pipeline</li>
+<li>Build a platform comparison matrix and a short written recommendation</li>
 </ul>
 <hr>
 </section>
 <section id="self-check-questions" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</h2>
 <ol type="1">
-<li>What is the difference between VR, AR, and MR?</li>
-<li>Where does spatial computing fit in relation to XR?</li>
-<li>What does the reality-virtuality continuum describe?</li>
-<li>What is the difference between 3DOF and 6DOF tracking?</li>
-<li>What are the advantages and limitations of inside-out tracking?</li>
-<li>Name three devices available in this module and describe one unique capability of each.</li>
-<li>Why is comfort a design constraint in XR?</li>
-<li>How does the body function differently as an interface in XR compared to traditional computing?</li>
+<li>What optical technology does the Quest 3 use, and how does it differ from the Quest 3S?</li>
+<li>What is the technical difference between passthrough and optical see-through displays? Name a device that uses each.</li>
+<li>Why is Apple Vision Pro marketed as “spatial computing” rather than VR or AR?</li>
+<li>What are the main differences between AR glasses (e.g.&nbsp;Xreal One Pro) and MR/VR headsets in terms of compute, FOV, and interaction?</li>
+<li>Compare Meta Horizon OS and visionOS in terms of SDK, distribution, and review process.</li>
+<li>What are the four criteria in the critical comparison framework, and why is each one important?</li>
+<li>Why might ecosystem maturity matter as much as, or more than, raw hardware specifications when choosing a platform?</li>
 </ol>
 <hr>
 </section>
-<section id="further-reading" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">12</span> Further Reading</h2>
+<section id="summary" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="summary"><span class="header-section-number">12</span> Summary</h2>
 <ul>
-<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books. Chapters 1 and 2.</li>
-<li>LaViola, J. et al.&nbsp;(2017) <em>3D User Interfaces: Theory and Practice</em> (2nd ed.). Addison-Wesley. Chapter 1.</li>
-<li>Milgram, P. and Kishino, F. (1994) A taxonomy of mixed reality visual displays. <em>IEICE Transactions on Information and Systems</em>, E77-D(12).</li>
-<li>Sutherland, I. (1965) The ultimate display. <em>Proceedings of IFIP Congress</em>.</li>
-<li>Meta Quest developer documentation: <a href="https://developer.oculus.com">https://developer.oculus.com</a></li>
+<li>Standalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three genuinely distinct hardware philosophies, not just different price points of the same idea</li>
+<li>Passthrough vs optical see-through is a key technical and experiential distinction with knock-on effects for latency, fidelity, and occlusion</li>
+<li>Platform choice — Horizon OS vs visionOS — shapes tooling, review processes, and distribution, and should factor into any professional recommendation</li>
+<li>Comfort, FOV, tracking fidelity, and ecosystem maturity together form a repeatable, transferable framework for critiquing any XR device</li>
 </ul>
+<blockquote class="blockquote">
+<p>Next week: Perception and Presence</p>
+</blockquote>
+<hr>
+</section>
+<section id="further-reading" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">13</span> Further Reading</h2>
+<ul>
+<li>Aukstakalnis, S. (2017) <em>Practical Augmented Reality: A Guide to the Technologies, Applications, and Human Factors for AR and VR</em> <span class="citation" data-cites="aukstakalnisPracticalAugmentedReality2017">(<a href="#ref-aukstakalnisPracticalAugmentedReality2017" role="doc-biblioref">Aukstakalnis 2017</a>)</span></li>
+<li>Schmalstieg, D. and Höllerer, T. (2016) <em>Augmented Reality: Principles and Practice</em> <span class="citation" data-cites="schmalstiegAugmentedRealityPrinciples2016">(<a href="#ref-schmalstiegAugmentedRealityPrinciples2016" role="doc-biblioref">Schmalstieg and Höllerer 2016</a>)</span></li>
+<li>Cronin, I., Scoble, R. and Wozniak, S. (2020) <em>The Infinite Retina</em> <span class="citation" data-cites="croninInfiniteRetina2020">(<a href="#ref-croninInfiniteRetina2020" role="doc-biblioref">Cronin et al. 2020</a>)</span></li>
+<li>Milgram, P., Takemura, H., Utsumi, A. and Kishino, F. (1994) Mixed Reality (MR) Reality-Virtuality (RV) Continuum <span class="citation" data-cites="Milgram1994">(<a href="#ref-Milgram1994" role="doc-biblioref">Milgram et al. 1994</a>)</span></li>
+</ul>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aukstakalnisPracticalAugmentedReality2017" class="csl-entry" role="listitem">
+Aukstakalnis, Steve. 2017. <em>Practical Augmented Reality: A Guide to the Technologies, Applications and Human Factors for Ar and Vr</em>. Addison-Wesley.
+</div>
+<div id="ref-croninInfiniteRetina2020" class="csl-entry" role="listitem">
+Cronin, Irena, Robert Scoble, and Steve Wozniak. 2020. <em>The <span>Infinite</span> <span>Retina</span></em>. 1st edition. Packt Publishing.
+</div>
+<div id="ref-Milgram1994" class="csl-entry" role="listitem">
+Milgram, P, H Takemura, A Utsumi, and F Kishino. 1994. <span>“Mixed <span>Reality</span> ( <span>MR</span> ) <span>Reality</span>-<span>Virtuality</span> ( <span>RV</span> ) <span>Continuum</span>.”</span> <em>Systems Research</em> 2351 (Telemanipulator and Telepresence Technologies): 282–92. <a href="https://doi.org/10.1.1.83.6861">https://doi.org/10.1.1.83.6861</a>.
+</div>
+<div id="ref-schmalstiegAugmentedRealityPrinciples2016" class="csl-entry" role="listitem">
+Schmalstieg, Dieter, and Tobias Höllerer. 2016. <em>Augmented Reality: Principles and Practice</em>. Addison-<span>Wesley</span> Usability and <span>HCI</span> Series <span>Always</span> <span>Learning</span>. Addison-Wesley.
+</div>
+<div id="ref-Sutherland1965TheUD" class="csl-entry" role="listitem">
+Sutherland, Ivan E. 1965. <span>“The Ultimate Display.”</span> <a href="https://api.semanticscholar.org/CorpusID:126382308">https://api.semanticscholar.org/CorpusID:126382308</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -981,12 +1057,12 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../01-assessments/07-assessment.html" class="pagination-link" aria-label="Assessment">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assessment</span>
+      <a href="../../weeks/01-week-01/04-slides.html" class="pagination-link" aria-label="Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Slides</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../weeks/01-week-01/02-practical.html" class="pagination-link" aria-label="Practical">
+      <a href="../../weeks/02-week-02/02-practical.html" class="pagination-link" aria-label="Practical">
         <span class="nav-page-text">Practical</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
