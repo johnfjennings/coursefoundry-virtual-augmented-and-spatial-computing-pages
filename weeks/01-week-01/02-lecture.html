@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 1 — Practical – Virtual, Augmented And Spatial Computing</title>
+<title>Week 1 Lecture Notes: Introduction to Spatial Computing – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -69,8 +33,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/01-week-01/03-laboratory.html" rel="next">
-<link href="../../weeks/01-week-01/01-lecture.html" rel="prev">
+<link href="../../weeks/01-week-01/03-practical.html" rel="next">
+<link href="../../weeks/01-week-01/01-slides.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -117,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Week 1 — Practical – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 1 Lecture Notes: Introduction to Spatial Computing – Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -131,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/02-practical.html">Practical</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-slides.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/02-lecture.html">Lecture Notes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -219,26 +183,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/01-lecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture</span></a>
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/02-practical.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/03-practical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/03-laboratory.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/01-week-01/04-laboratory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/04-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Slides</span></a>
   </div>
 </li>
       </ul>
@@ -288,42 +252,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <li><a href="#lecture" id="toc-lecture" class="nav-link active" data-scroll-target="#lecture"><span class="header-section-number">1</span> Lecture</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a></li>
+  <li><a href="#defining-the-xr-spectrum" id="toc-defining-the-xr-spectrum" class="nav-link" data-scroll-target="#defining-the-xr-spectrum"><span class="header-section-number">3</span> Defining the XR Spectrum</a>
   <ul class="collapse">
-  <li><a href="#part-1-project-setup-with-meta-xr-simulator-30-minutes" id="toc-part-1-project-setup-with-meta-xr-simulator-30-minutes" class="nav-link" data-scroll-target="#part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</a></li>
-  <li><a href="#part-2-capture-screenshots-and-gameplay-video-30-minutes" id="toc-part-2-capture-screenshots-and-gameplay-video-30-minutes" class="nav-link" data-scroll-target="#part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</a></li>
-  <li><a href="#part-3-update-meta-app-store-pdp-assets-45-minutes" id="toc-part-3-update-meta-app-store-pdp-assets-45-minutes" class="nav-link" data-scroll-target="#part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</a></li>
-  <li><a href="#part-4-build-and-upload-apk-30-minutes" id="toc-part-4-build-and-upload-apk-30-minutes" class="nav-link" data-scroll-target="#part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</a></li>
-  <li><a href="#part-5-update-student-repository-documentation-15-minutes" id="toc-part-5-update-student-repository-documentation-15-minutes" class="nav-link" data-scroll-target="#part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</a></li>
+  <li><a href="#virtual-reality-vr" id="toc-virtual-reality-vr" class="nav-link" data-scroll-target="#virtual-reality-vr"><span class="header-section-number">3.1</span> Virtual Reality (VR)</a></li>
+  <li><a href="#augmented-reality-ar" id="toc-augmented-reality-ar" class="nav-link" data-scroll-target="#augmented-reality-ar"><span class="header-section-number">3.2</span> Augmented Reality (AR)</a></li>
+  <li><a href="#mixed-reality-mr" id="toc-mixed-reality-mr" class="nav-link" data-scroll-target="#mixed-reality-mr"><span class="header-section-number">3.3</span> Mixed Reality (MR)</a></li>
+  <li><a href="#spatial-computing" id="toc-spatial-computing" class="nav-link" data-scroll-target="#spatial-computing"><span class="header-section-number">3.4</span> Spatial Computing</a></li>
   </ul></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#the-reality-virtuality-continuum" id="toc-the-reality-virtuality-continuum" class="nav-link" data-scroll-target="#the-reality-virtuality-continuum"><span class="header-section-number">4</span> The Reality-Virtuality Continuum</a></li>
+  <li><a href="#a-brief-history-of-xr" id="toc-a-brief-history-of-xr" class="nav-link" data-scroll-target="#a-brief-history-of-xr"><span class="header-section-number">5</span> A Brief History of XR</a>
+  <ul class="collapse">
+  <li><a href="#early-foundations-1960s1990s" id="toc-early-foundations-1960s1990s" class="nav-link" data-scroll-target="#early-foundations-1960s1990s"><span class="header-section-number">5.1</span> Early Foundations (1960s–1990s)</a></li>
+  <li><a href="#the-first-consumer-wave-20122016" id="toc-the-first-consumer-wave-20122016" class="nav-link" data-scroll-target="#the-first-consumer-wave-20122016"><span class="header-section-number">5.2</span> The First Consumer Wave (2012–2016)</a></li>
+  <li><a href="#standalone-and-spatial-computing-2019present" id="toc-standalone-and-spatial-computing-2019present" class="nav-link" data-scroll-target="#standalone-and-spatial-computing-2019present"><span class="header-section-number">5.3</span> Standalone and Spatial Computing (2019–present)</a></li>
+  </ul></li>
+  <li><a href="#degrees-of-freedom" id="toc-degrees-of-freedom" class="nav-link" data-scroll-target="#degrees-of-freedom"><span class="header-section-number">6</span> Degrees of Freedom</a>
+  <ul class="collapse">
+  <li><a href="#dof" id="toc-dof" class="nav-link" data-scroll-target="#dof"><span class="header-section-number">6.1</span> 3DOF</a></li>
+  <li><a href="#dof-1" id="toc-dof-1" class="nav-link" data-scroll-target="#dof-1"><span class="header-section-number">6.2</span> 6DOF</a></li>
+  </ul></li>
+  <li><a href="#tracking-technologies" id="toc-tracking-technologies" class="nav-link" data-scroll-target="#tracking-technologies"><span class="header-section-number">7</span> Tracking Technologies</a>
+  <ul class="collapse">
+  <li><a href="#inside-out-tracking" id="toc-inside-out-tracking" class="nav-link" data-scroll-target="#inside-out-tracking"><span class="header-section-number">7.1</span> Inside-Out Tracking</a></li>
+  <li><a href="#outside-in-tracking" id="toc-outside-in-tracking" class="nav-link" data-scroll-target="#outside-in-tracking"><span class="header-section-number">7.2</span> Outside-In Tracking</a></li>
+  </ul></li>
+  <li><a href="#the-hardware-in-this-module" id="toc-the-hardware-in-this-module" class="nav-link" data-scroll-target="#the-hardware-in-this-module"><span class="header-section-number">8</span> The Hardware in This Module</a>
+  <ul class="collapse">
+  <li><a href="#meta-quest-2" id="toc-meta-quest-2" class="nav-link" data-scroll-target="#meta-quest-2"><span class="header-section-number">8.1</span> Meta Quest 2</a></li>
+  <li><a href="#meta-quest-3" id="toc-meta-quest-3" class="nav-link" data-scroll-target="#meta-quest-3"><span class="header-section-number">8.2</span> Meta Quest 3</a></li>
+  <li><a href="#htc-vive-pro" id="toc-htc-vive-pro" class="nav-link" data-scroll-target="#htc-vive-pro"><span class="header-section-number">8.3</span> HTC Vive Pro</a></li>
+  <li><a href="#pico-neo-eye" id="toc-pico-neo-eye" class="nav-link" data-scroll-target="#pico-neo-eye"><span class="header-section-number">8.4</span> Pico Neo Eye</a></li>
+  <li><a href="#hololens-2" id="toc-hololens-2" class="nav-link" data-scroll-target="#hololens-2"><span class="header-section-number">8.5</span> HoloLens 2</a></li>
+  <li><a href="#snap-spectacles-2022" id="toc-snap-spectacles-2022" class="nav-link" data-scroll-target="#snap-spectacles-2022"><span class="header-section-number">8.6</span> Snap Spectacles 2022</a></li>
+  <li><a href="#display-glasses" id="toc-display-glasses" class="nav-link" data-scroll-target="#display-glasses"><span class="header-section-number">8.7</span> Display Glasses</a></li>
+  </ul></li>
+  <li><a href="#why-xr-design-is-different" id="toc-why-xr-design-is-different" class="nav-link" data-scroll-target="#why-xr-design-is-different"><span class="header-section-number">9</span> Why XR Design is Different</a>
+  <ul class="collapse">
+  <li><a href="#the-body-is-the-interface" id="toc-the-body-is-the-interface" class="nav-link" data-scroll-target="#the-body-is-the-interface"><span class="header-section-number">9.1</span> The body is the interface</a></li>
+  <li><a href="#space-is-the-canvas" id="toc-space-is-the-canvas" class="nav-link" data-scroll-target="#space-is-the-canvas"><span class="header-section-number">9.2</span> Space is the canvas</a></li>
+  <li><a href="#presence-changes-behaviour" id="toc-presence-changes-behaviour" class="nav-link" data-scroll-target="#presence-changes-behaviour"><span class="header-section-number">9.3</span> Presence changes behaviour</a></li>
+  <li><a href="#comfort-is-a-design-constraint" id="toc-comfort-is-a-design-constraint" class="nav-link" data-scroll-target="#comfort-is-a-design-constraint"><span class="header-section-number">9.4</span> Comfort is a design constraint</a></li>
+  </ul></li>
+  <li><a href="#the-module-in-context" id="toc-the-module-in-context" class="nav-link" data-scroll-target="#the-module-in-context"><span class="header-section-number">10</span> The Module in Context</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">12</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/02-practical.html">Practical</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-slides.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/02-lecture.html">Lecture Notes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 1 — Practical</h1>
+<h1 class="title">Week 1 Lecture Notes: Introduction to Spatial Computing</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -334,262 +323,232 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
-<p>In this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.</p>
+<section id="lecture" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lecture"><span class="header-section-number">1</span> Lecture</h2>
+<div class="sp-embed-player" data-id="cOhIlOnt0JL" data-aspect-ratio="1.777778" data-padding-top="56.250000%" style="position:relative;width:100%;padding-top:56.250000%;height:0;">
+<script src="https://go.screenpal.com/player/appearance/cOhIlOnt0JL"></script>
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOhIlOnt0JL?ff=1&amp;ahc=1&amp;dcc=1&amp;tl=1&amp;bg=transparent&amp;share=1&amp;download=1&amp;embed=1&amp;cl=1" allowfullscreen="true">
+</iframe>
+</div>
 </section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>By the end of this practical, you will be able to:</p>
+<section id="introduction" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2</span> Introduction</h2>
+<p>This module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.</p>
+<p>This first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.</p>
+<hr>
+</section>
+<section id="defining-the-xr-spectrum" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="defining-the-xr-spectrum"><span class="header-section-number">3</span> Defining the XR Spectrum</h2>
+<p>The term <strong>XR</strong> (Extended Reality) is an umbrella that covers several related but distinct technologies. Understanding the differences between them is essential because each imposes different design constraints and affords different possibilities.</p>
+<section id="virtual-reality-vr" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="virtual-reality-vr"><span class="header-section-number">3.1</span> Virtual Reality (VR)</h3>
+<p>In a VR system, the user’s visual field is entirely replaced by a synthetic environment. The headset blocks out the physical world and presents a stereoscopic 3D image that responds to the user’s head movement. High-quality VR systems also include spatial audio, hand controllers with haptic feedback, and room-scale tracking.</p>
+<p>The defining characteristic of VR is <strong>sensory substitution</strong> — the system replaces real sensory input with synthetic input. The quality of this substitution determines how convincing the experience feels.</p>
+</section>
+<section id="augmented-reality-ar" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="augmented-reality-ar"><span class="header-section-number">3.2</span> Augmented Reality (AR)</h3>
+<p>AR systems overlay digital content onto the user’s view of the real world. This can be achieved through:</p>
 <ul>
-<li>Set up and test Unity VR projects using the Meta XR Simulator</li>
-<li>Capture high-quality screenshots and gameplay videos for app promotion</li>
-<li>Navigate and update Meta PDP (Product Detail Page) assets</li>
-<li>Build and prepare APK files for Meta App Store submission</li>
-<li>Document project updates professionally in your student repository</li>
+<li><strong>optical see-through displays</strong> (the user looks through a transparent lens with digital content projected onto it — HoloLens 2, Snap Spectacles)</li>
+<li><strong>video see-through displays</strong> (cameras capture the real world and the combined image is displayed — Quest 3 passthrough, mobile AR)</li>
+<li><strong>projection-based AR</strong> (digital content is projected directly onto real surfaces)</li>
+</ul>
+<p>The defining characteristic of AR is that the real world remains visible and the digital content must be registered accurately to physical space.</p>
+</section>
+<section id="mixed-reality-mr" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="mixed-reality-mr"><span class="header-section-number">3.3</span> Mixed Reality (MR)</h3>
+<p>Mixed reality is a term used in different ways by different organisations. In its most precise sense (following Milgram and Kishino’s taxonomy), MR refers to any point on the reality-virtuality continuum between fully real and fully virtual. In practice, it is often used to describe systems where digital and physical objects interact — for example, a virtual ball that bounces off a real table.</p>
+<p>The HoloLens 2 and Meta Quest 3 are both marketed as mixed reality devices.</p>
+</section>
+<section id="spatial-computing" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="spatial-computing"><span class="header-section-number">3.4</span> Spatial Computing</h3>
+<p>Spatial computing is a broader paradigm that describes computing systems that understand and interact with three-dimensional space. Rather than confining computation to a screen, spatial computing embeds it in the environment. This includes XR devices but also extends to robotics, autonomous vehicles, and smart environments.</p>
+<p>Apple’s Vision Pro is positioned explicitly as a spatial computing device rather than a VR or AR headset, reflecting a deliberate shift in how the industry frames these technologies.</p>
+<hr>
+</section>
+</section>
+<section id="the-reality-virtuality-continuum" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="the-reality-virtuality-continuum"><span class="header-section-number">4</span> The Reality-Virtuality Continuum</h2>
+<p>Milgram and Kishino (1994) proposed a taxonomy of mixed reality visual displays that remains influential today. They described a continuum from fully real environments to fully virtual environments, with augmented reality and augmented virtuality occupying the middle ground.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Real Environment</th>
+<th>Augmented Reality</th>
+<th>Augmented Virtuality</th>
+<th>Virtual Environment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fully real</td>
+<td>Mostly real, some virtual</td>
+<td>Mostly virtual, some real</td>
+<td>Fully virtual</td>
+</tr>
+</tbody>
+</table>
+<p>This framework is useful because it reminds us that the distinction between VR and AR is not binary. Many modern devices can operate at different points on this continuum depending on their mode of use.</p>
+<hr>
+</section>
+<section id="a-brief-history-of-xr" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="a-brief-history-of-xr"><span class="header-section-number">5</span> A Brief History of XR</h2>
+<p>Understanding the history of XR helps contextualise the current moment and avoid repeating past mistakes.</p>
+<section id="early-foundations-1960s1990s" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="early-foundations-1960s1990s"><span class="header-section-number">5.1</span> Early Foundations (1960s–1990s)</h3>
+<ul>
+<li><strong>1965:</strong> Ivan Sutherland describes the “Ultimate Display” — a room in which the computer can control the existence of matter</li>
+<li><strong>1968:</strong> Sutherland builds the first HMD, the Sword of Damocles</li>
+<li><strong>1987:</strong> Jaron Lanier coins the term “virtual reality”</li>
+<li><strong>1992:</strong> The CAVE (Cave Automatic Virtual Environment) is developed at the University of Illinois</li>
+<li><strong>1994:</strong> Milgram and Kishino publish their taxonomy of mixed reality</li>
 </ul>
 </section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<section id="the-first-consumer-wave-20122016" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="the-first-consumer-wave-20122016"><span class="header-section-number">5.2</span> The First Consumer Wave (2012–2016)</h3>
 <ul>
-<li>Your completed 2nd year Unity VR escape room project</li>
-<li>Unity Hub and Unity Editor installed</li>
-<li>Meta XR SDK and Meta XR Simulator</li>
-<li>Access to your student GitHub repository</li>
-<li>Meta Developer account</li>
+<li><strong>2012:</strong> Oculus Rift Kickstarter campaign raises $2.4 million</li>
+<li><strong>2014:</strong> Facebook acquires Oculus for $2 billion</li>
+<li><strong>2016:</strong> Consumer launches of Oculus Rift, HTC Vive, and PlayStation VR</li>
+<li><strong>2016:</strong> Pokémon GO demonstrates mass-market AR</li>
 </ul>
 </section>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<section id="part-1-project-setup-with-meta-xr-simulator-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</h3>
+<section id="standalone-and-spatial-computing-2019present" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="standalone-and-spatial-computing-2019present"><span class="header-section-number">5.3</span> Standalone and Spatial Computing (2019–present)</h3>
+<ul>
+<li><strong>2019:</strong> Meta Quest 1 launches — standalone VR without a PC</li>
+<li><strong>2021:</strong> Meta rebrands from Facebook, announces metaverse strategy</li>
+<li><strong>2022:</strong> Meta Quest Pro introduces mixed reality passthrough</li>
+<li><strong>2023:</strong> Apple announces Vision Pro at WWDC</li>
+<li><strong>2024:</strong> Spatial computing enters enterprise and consumer markets at scale</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="degrees-of-freedom" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="degrees-of-freedom"><span class="header-section-number">6</span> Degrees of Freedom</h2>
+<p>A fundamental concept in XR hardware is <strong>degrees of freedom (DOF)</strong>, which describes how many independent axes of movement a tracking system can detect.</p>
+<section id="dof" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="dof"><span class="header-section-number">6.1</span> 3DOF</h3>
+<p>Three degrees of freedom tracks <strong>rotation only</strong>: - pitch (nodding) - yaw (shaking head) - roll (tilting head)</p>
+<p>3DOF systems cannot detect the user moving through space. They are suitable for 360-degree video viewing but not for interactive VR.</p>
+</section>
+<section id="dof-1" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="dof-1"><span class="header-section-number">6.2</span> 6DOF</h3>
+<p>Six degrees of freedom tracks <strong>rotation and position</strong>: - pitch, yaw, roll (rotation) - x, y, z (position in space)</p>
+<p>6DOF allows the user to physically move through the virtual environment. All primary devices in this module support 6DOF tracking.</p>
+<hr>
+</section>
+</section>
+<section id="tracking-technologies" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="tracking-technologies"><span class="header-section-number">7</span> Tracking Technologies</h2>
+<section id="inside-out-tracking" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="inside-out-tracking"><span class="header-section-number">7.1</span> Inside-Out Tracking</h3>
+<p>Cameras mounted on the headset observe the environment and use computer vision to determine the headset’s position and orientation. This approach requires no external hardware and is used by the Meta Quest 2, Quest 3, and HoloLens 2.</p>
+<p>Advantages: - no external setup required - portable and flexible</p>
+<p>Limitations: - can struggle in low-light or featureless environments - tracking volume limited by camera field of view</p>
+</section>
+<section id="outside-in-tracking" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="outside-in-tracking"><span class="header-section-number">7.2</span> Outside-In Tracking</h3>
+<p>External sensors (base stations or cameras) track the headset and controllers. The HTC Vive Pro uses this approach with SteamVR base stations.</p>
+<p>Advantages: - highly accurate and reliable - large tracking volume possible</p>
+<p>Limitations: - requires setup and calibration - not portable</p>
+<hr>
+</section>
+</section>
+<section id="the-hardware-in-this-module" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="the-hardware-in-this-module"><span class="header-section-number">8</span> The Hardware in This Module</h2>
+<p>You will have access to a range of devices throughout this module. Each offers different capabilities and design constraints.</p>
+<section id="meta-quest-2" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="meta-quest-2"><span class="header-section-number">8.1</span> Meta Quest 2</h3>
+<p>The primary student HMD. Standalone, 6DOF, inside-out tracking, touch controllers with haptics. Widely used in industry and education. The baseline platform for most lab and practical work.</p>
+</section>
+<section id="meta-quest-3" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="meta-quest-3"><span class="header-section-number">8.2</span> Meta Quest 3</h3>
+<p>Adds full-colour passthrough for mixed reality, improved processing, and slimmer form factor. Useful for exploring the boundary between VR and MR.</p>
+</section>
+<section id="htc-vive-pro" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="htc-vive-pro"><span class="header-section-number">8.3</span> HTC Vive Pro</h3>
+<p>A PC-tethered headset with outside-in tracking via SteamVR base stations. Higher visual fidelity than the Quest 2. Useful for understanding the trade-offs between standalone and tethered systems.</p>
+</section>
+<section id="pico-neo-eye" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="pico-neo-eye"><span class="header-section-number">8.4</span> Pico Neo Eye</h3>
+<p>Includes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering. Used in Week 5 for eye tracking exploration.</p>
+</section>
+<section id="hololens-2" class="level3" data-number="8.5">
+<h3 data-number="8.5" class="anchored" data-anchor-id="hololens-2"><span class="header-section-number">8.5</span> HoloLens 2</h3>
+<p>Microsoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The primary platform for spatial computing work in Week 10.</p>
+</section>
+<section id="snap-spectacles-2022" class="level3" data-number="8.6">
+<h3 data-number="8.6" class="anchored" data-anchor-id="snap-spectacles-2022"><span class="header-section-number">8.6</span> Snap Spectacles 2022</h3>
+<p>Lightweight AR glasses with a small display. Used in Week 9 alongside Lens Studio for AR lens development.</p>
+</section>
+<section id="display-glasses" class="level3" data-number="8.7">
+<h3 data-number="8.7" class="anchored" data-anchor-id="display-glasses"><span class="header-section-number">8.7</span> Display Glasses</h3>
+<p>Passive display glasses for comparison and demonstration purposes.</p>
+<hr>
+</section>
+</section>
+<section id="why-xr-design-is-different" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="why-xr-design-is-different"><span class="header-section-number">9</span> Why XR Design is Different</h2>
+<p>Designing for XR requires a fundamentally different mindset from designing for screens.</p>
+<section id="the-body-is-the-interface" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="the-body-is-the-interface"><span class="header-section-number">9.1</span> The body is the interface</h3>
+<p>In XR, the user’s physical body — their hands, head, gaze, voice, and movement — becomes the primary input device. Design must account for physical ergonomics, fatigue, and the limits of human movement.</p>
+</section>
+<section id="space-is-the-canvas" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="space-is-the-canvas"><span class="header-section-number">9.2</span> Space is the canvas</h3>
+<p>Rather than arranging elements on a flat surface, XR designers work in three-dimensional space. Objects have position, scale, and orientation. The user can move around them, look at them from different angles, and interact with them physically.</p>
+</section>
+<section id="presence-changes-behaviour" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="presence-changes-behaviour"><span class="header-section-number">9.3</span> Presence changes behaviour</h3>
+<p>Research has shown that people behave differently in immersive environments than they do in front of screens. They respond emotionally to virtual stimuli, feel genuine discomfort in threatening virtual situations, and can develop real skills through virtual practice. This makes XR a powerful tool — and a significant ethical responsibility.</p>
+</section>
+<section id="comfort-is-a-design-constraint" class="level3" data-number="9.4">
+<h3 data-number="9.4" class="anchored" data-anchor-id="comfort-is-a-design-constraint"><span class="header-section-number">9.4</span> Comfort is a design constraint</h3>
+<p>Unlike screen-based interfaces, XR can cause physical discomfort — motion sickness, eye strain, neck fatigue, and disorientation. Good XR design treats comfort as a first-class design requirement, not an afterthought.</p>
+<hr>
+</section>
+</section>
+<section id="the-module-in-context" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="the-module-in-context"><span class="header-section-number">10</span> The Module in Context</h2>
+<p>This is a third-year module. You are expected to bring critical thinking, not just technical skill. Throughout the module, you will be asked to:</p>
+<ul>
+<li>analyse existing XR experiences, not just build new ones</li>
+<li>justify your design decisions with reference to theory and evidence</li>
+<li>evaluate your work honestly, including its limitations</li>
+<li>consider the ethical implications of immersive design</li>
+</ul>
+<hr>
+</section>
+<section id="self-check-questions" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</h2>
 <ol type="1">
-<li><strong>Download and Open Your Project</strong>
-<ul>
-<li>Locate your 2nd year Unity VR escape room project files</li>
-<li>Open the project in Unity Hub</li>
-<li>Ensure all assets and scenes load correctly</li>
-<li>Note any missing dependencies or errors in the console</li>
-</ul></li>
-<li><strong>Configure Meta XR Simulator</strong>
-<ul>
-<li>Install the Meta XR Simulator if not already present</li>
-<li>Configure the simulator settings for your escape room environment</li>
-<li>Set up appropriate room boundaries and tracking space</li>
-<li>Test basic functionality (hand tracking, controller input, movement)</li>
-</ul></li>
+<li>What is the difference between VR, AR, and MR?</li>
+<li>Where does spatial computing fit in relation to XR?</li>
+<li>What does the reality-virtuality continuum describe?</li>
+<li>What is the difference between 3DOF and 6DOF tracking?</li>
+<li>What are the advantages and limitations of inside-out tracking?</li>
+<li>Name three devices available in this module and describe one unique capability of each.</li>
+<li>Why is comfort a design constraint in XR?</li>
+<li>How does the body function differently as an interface in XR compared to traditional computing?</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Meta XR Simulator Benefits
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Meta XR Simulator allows you to test VR experiences without wearing a headset, making development and debugging much more efficient.</p>
-</div>
-</div>
-<ol start="3" type="1">
-<li><strong>Initial Testing</strong>
-<ul>
-<li>Run your escape room experience in the Meta XR Simulator</li>
-<li>Verify that all interactive elements work as expected</li>
-<li>Check for any performance issues or visual glitches</li>
-<li>Document any bugs or areas needing improvement</li>
-</ul></li>
-</ol>
+<hr>
 </section>
-<section id="part-2-capture-screenshots-and-gameplay-video-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</h3>
-<ol start="4" type="1">
-<li><strong>Screenshot Capture</strong>
+<section id="further-reading" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">12</span> Further Reading</h2>
 <ul>
-<li>Use the Meta XR Simulator’s built-in screenshot functionality</li>
-<li>Capture at least 5 high-quality screenshots showing:
-<ul>
-<li>The main escape room environment</li>
-<li>Key interactive objects and puzzles</li>
-<li>UI elements and menus</li>
-<li>Player interactions (hand tracking, object manipulation)</li>
-<li>Victory/completion screen</li>
-</ul></li>
-<li>Ensure screenshots are high resolution (minimum 1920x1080)</li>
-</ul></li>
-<li><strong>Gameplay Video Recording</strong>
-<ul>
-<li>Record a 60-90 second gameplay video using screen recording software</li>
-<li>Show a complete puzzle solution or key gameplay loop</li>
-<li>Include audio if your escape room has sound effects or music</li>
-<li>Ensure smooth framerate and clear visuals</li>
-<li>Export in MP4 format at 1080p resolution</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pro Recording Tips
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Use OBS Studio or similar for high-quality recordings</li>
-<li>Record at 60fps for smooth playback</li>
-<li>Keep file sizes reasonable for web upload</li>
-<li>Add brief text overlays to highlight key features</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="part-3-update-meta-app-store-pdp-assets-45-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</h3>
-<ol start="6" type="1">
-<li><strong>Access Your Meta Developer Dashboard</strong>
-<ul>
-<li>Log into your Meta Developer account</li>
-<li>Navigate to your escape room app listing</li>
-<li>Access the Product Detail Page (PDP) management section</li>
-</ul></li>
-<li><strong>Update PDP Visual Assets</strong>
-<ul>
-<li>Upload your new screenshots to replace existing ones</li>
-<li>Organize screenshots in a logical order (environment → gameplay → features)</li>
-<li>Upload your gameplay video as the featured trailer</li>
-<li>Update the app icon if you’ve made improvements</li>
-<li>Ensure all images meet Meta’s size and format requirements</li>
-</ul></li>
-<li><strong>Review and Update Text Content</strong>
-<ul>
-<li>Update the app description to reflect any new features</li>
-<li>Check that keywords and tags are still relevant</li>
-<li>Update version notes with improvements made</li>
-<li>Verify age rating and content warnings are accurate</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Meta PDP Requirements
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ensure all assets meet Meta’s technical requirements: - Screenshots: 1024x1024 minimum - Videos: MP4 format, max 15MB - Icons: 512x512 PNG with transparency</p>
-</div>
-</div>
-</section>
-<section id="part-4-build-and-upload-apk-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</h3>
-<ol start="9" type="1">
-<li><strong>Build Configuration</strong>
-<ul>
-<li>Set Unity build settings to Android platform</li>
-<li>Configure XR settings for Meta Quest</li>
-<li>Set appropriate quality settings for Quest hardware</li>
-<li>Increment version number in Player Settings</li>
-</ul></li>
-<li><strong>Build and Test APK</strong>
-<ul>
-<li>Build the APK file from Unity</li>
-<li>Test the APK on a Quest device if available, or verify build completion</li>
-<li>Check file size and performance metrics</li>
-<li>Ensure all features work in the standalone build</li>
-</ul></li>
-<li><strong>Upload to Meta App Store</strong>
-<ul>
-<li>Navigate to the app submission section in Meta Developer Dashboard</li>
-<li>Upload your new APK file</li>
-<li>Complete the submission checklist</li>
-<li>Submit for review (note: this may take several days)</li>
-</ul></li>
-</ol>
-</section>
-<section id="part-5-update-student-repository-documentation-15-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</h3>
-<ol start="12" type="1">
-<li><strong>Create Professional Documentation</strong>
-<ul>
-<li>Open your student GitHub repository</li>
-<li>Update the README.md file with:
-<ul>
-<li>Project title and brief description</li>
-<li>Screenshots embedded using Markdown syntax</li>
-<li>Link to or embed the gameplay video</li>
-<li>Technical specifications and requirements</li>
-<li>Installation and usage instructions</li>
-<li>Credits and acknowledgments</li>
-</ul></li>
-</ul></li>
-<li><strong>Repository Organization</strong>
-<ul>
-<li>Create an <code>assets/</code> folder for images and videos</li>
-<li>Organize files with clear naming conventions</li>
-<li>Add appropriate file extensions and descriptions</li>
-<li>Ensure all links work correctly</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Markdown Tips for README
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Description](assets/screenshot1.png)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gameplay Video</span><span class="co">](assets/gameplay.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</section>
-</section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
-<p>By the end of this practical, you should have:</p>
-<ol type="1">
-<li>✅ Working Unity VR project running in Meta XR Simulator</li>
-<li>✅ 5+ high-quality screenshots captured</li>
-<li>✅ 60-90 second gameplay video recorded</li>
-<li>✅ Updated Meta App Store PDP with new assets</li>
-<li>✅ Built and uploaded new APK to Meta App Store</li>
-<li>✅ Professional README.md documentation in student repository</li>
-</ol>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p><strong>Common Issues:</strong></p>
-<ul>
-<li><strong>Simulator not launching:</strong> Check Meta XR SDK version compatibility</li>
-<li><strong>Performance issues:</strong> Adjust quality settings in Unity</li>
-<li><strong>Upload failures:</strong> Verify file sizes and formats meet requirements</li>
-<li><strong>Build errors:</strong> Check Android SDK and build tools versions</li>
-</ul>
-</section>
-<section id="reflection-questions" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
-<ol type="1">
-<li>What improvements did you notice when testing with the Meta XR Simulator compared to your original development process?</li>
-<li>How do professional PDP assets impact the perceived quality of your VR application?</li>
-<li>What challenges did you encounter when preparing your project for app store submission?</li>
-<li>How might you use these documentation and promotion skills in future VR projects?</li>
-</ol>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>For next week, consider:</p>
-<ul>
-<li>Implementing user feedback if your app receives reviews</li>
-<li>Exploring advanced Meta XR features for future updates</li>
-<li>Planning additional VR projects using these professional workflows</li>
+<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books. Chapters 1 and 2.</li>
+<li>LaViola, J. et al.&nbsp;(2017) <em>3D User Interfaces: Theory and Practice</em> (2nd ed.). Addison-Wesley. Chapter 1.</li>
+<li>Milgram, P. and Kishino, F. (1994) A taxonomy of mixed reality visual displays. <em>IEICE Transactions on Information and Systems</em>, E77-D(12).</li>
+<li>Sutherland, I. (1965) The ultimate display. <em>Proceedings of IFIP Congress</em>.</li>
+<li>Meta Quest developer documentation: <a href="https://developer.oculus.com">https://developer.oculus.com</a></li>
 </ul>
 
 
@@ -998,13 +957,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../weeks/01-week-01/01-lecture.html" class="pagination-link" aria-label="Lecture">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture</span>
+      <a href="../../weeks/01-week-01/01-slides.html" class="pagination-link" aria-label="Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Slides</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../weeks/01-week-01/03-laboratory.html" class="pagination-link" aria-label="Laboratory">
-        <span class="nav-page-text">Laboratory</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../weeks/01-week-01/03-practical.html" class="pagination-link" aria-label="Practical">
+        <span class="nav-page-text">Practical</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

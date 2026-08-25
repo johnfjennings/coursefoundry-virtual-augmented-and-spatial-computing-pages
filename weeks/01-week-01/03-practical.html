@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Week 1 Lab: Unity XR Setup and First Deployment – Virtual, Augmented And Spatial Computing</title>
+<title>Week 1 — Practical – Virtual, Augmented And Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -33,8 +69,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/01-week-01/04-slides.html" rel="next">
-<link href="../../weeks/01-week-01/02-practical.html" rel="prev">
+<link href="../../weeks/01-week-01/04-laboratory.html" rel="next">
+<link href="../../weeks/01-week-01/02-lecture.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Week 1 Lab: Unity XR Setup and First Deployment – Virtual, Augmented And Spatial Computing">
+<meta property="og:title" content="Week 1 — Practical – Virtual, Augmented And Spatial Computing">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Virtual, Augmented And Spatial Computing">
 </head>
@@ -95,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/03-laboratory.html">Laboratory</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-slides.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/03-practical.html">Practical</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -183,26 +219,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/01-lecture.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture</span></a>
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Slides</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/02-practical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/03-practical.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Practical</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/03-laboratory.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/01-week-01/04-laboratory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../weeks/01-week-01/04-slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Slides</span></a>
   </div>
 </li>
       </ul>
@@ -251,33 +287,43 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#lab-overview" id="toc-lab-overview" class="nav-link active" data-scroll-target="#lab-overview">Lab Overview</a></li>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#part-1-create-a-new-unity-project" id="toc-part-1-create-a-new-unity-project" class="nav-link" data-scroll-target="#part-1-create-a-new-unity-project">Part 1: Create a New Unity Project</a></li>
-  <li><a href="#part-2-install-xr-packages" id="toc-part-2-install-xr-packages" class="nav-link" data-scroll-target="#part-2-install-xr-packages">Part 2: Install XR Packages</a></li>
-  <li><a href="#part-3-configure-android-build-settings" id="toc-part-3-configure-android-build-settings" class="nav-link" data-scroll-target="#part-3-configure-android-build-settings">Part 3: Configure Android Build Settings</a></li>
-  <li><a href="#part-4-set-up-the-xr-scene" id="toc-part-4-set-up-the-xr-scene" class="nav-link" data-scroll-target="#part-4-set-up-the-xr-scene">Part 4: Set Up the XR Scene</a></li>
-  <li><a href="#part-5-build-and-deploy-to-quest-2" id="toc-part-5-build-and-deploy-to-quest-2" class="nav-link" data-scroll-target="#part-5-build-and-deploy-to-quest-2">Part 5: Build and Deploy to Quest 2</a></li>
-  <li><a href="#part-6-test-on-device" id="toc-part-6-test-on-device" class="nav-link" data-scroll-target="#part-6-test-on-device">Part 6: Test on Device</a></li>
+  <li><a href="#part-1-project-setup-with-meta-xr-simulator-30-minutes" id="toc-part-1-project-setup-with-meta-xr-simulator-30-minutes" class="nav-link" data-scroll-target="#part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</a></li>
+  <li><a href="#part-2-capture-screenshots-and-gameplay-video-30-minutes" id="toc-part-2-capture-screenshots-and-gameplay-video-30-minutes" class="nav-link" data-scroll-target="#part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</a></li>
+  <li><a href="#part-3-update-meta-app-store-pdp-assets-45-minutes" id="toc-part-3-update-meta-app-store-pdp-assets-45-minutes" class="nav-link" data-scroll-target="#part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</a></li>
+  <li><a href="#part-4-build-and-upload-apk-30-minutes" id="toc-part-4-build-and-upload-apk-30-minutes" class="nav-link" data-scroll-target="#part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</a></li>
+  <li><a href="#part-5-update-student-repository-documentation-15-minutes" id="toc-part-5-update-student-repository-documentation-15-minutes" class="nav-link" data-scroll-target="#part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</a></li>
+  </ul></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  <li><a href="#lab-deliverable" id="toc-lab-deliverable" class="nav-link" data-scroll-target="#lab-deliverable">Lab Deliverable</a></li>
-  <li><a href="#extension-task" id="toc-extension-task" class="nav-link" data-scroll-target="#extension-task">Extension Task</a></li>
+  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-lecture.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/03-laboratory.html">Laboratory</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/01-week-01/01-slides.html">Week 01</a></li><li class="breadcrumb-item"><a href="../../weeks/01-week-01/03-practical.html">Practical</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Week 1 Lab: Unity XR Setup and First Deployment</h1>
+<h1 class="title">Week 1 — Practical</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mr.&nbsp;John Jennings </p>
+          </div>
+  </div>
     
   
     
@@ -288,204 +334,262 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="lab-overview" class="level2">
-<h2 class="anchored" data-anchor-id="lab-overview">Lab Overview</h2>
-<p>In this lab you will set up a Unity project for XR development and deploy a basic interactive scene to the Meta Quest 2.</p>
-<p>By the end of this lab you should be able to:</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Duration:</strong> 2 hours</p>
+<p>In this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.</p>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this practical, you will be able to:</p>
 <ul>
-<li>create a Unity project configured for XR</li>
-<li>install and configure the XR Interaction Toolkit</li>
-<li>build and deploy to the Meta Quest 2</li>
-<li>test basic locomotion and object interaction on device</li>
+<li>Set up and test Unity VR projects using the Meta XR Simulator</li>
+<li>Capture high-quality screenshots and gameplay videos for app promotion</li>
+<li>Navigate and update Meta PDP (Product Detail Page) assets</li>
+<li>Build and prepare APK files for Meta App Store submission</li>
+<li>Document project updates professionally in your student repository</li>
 </ul>
-<hr>
 </section>
-<section id="requirements" class="level2">
-<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Unity 2022 LTS or later</li>
-<li>Android Build Support module installed</li>
-<li>Meta Quest 2 headset and USB-C cable</li>
-<li>Developer mode enabled on the Quest 2</li>
+<li>Your completed 2nd year Unity VR escape room project</li>
+<li>Unity Hub and Unity Editor installed</li>
+<li>Meta XR SDK and Meta XR Simulator</li>
+<li>Access to your student GitHub repository</li>
+<li>Meta Developer account</li>
 </ul>
-<hr>
 </section>
-<section id="part-1-create-a-new-unity-project" class="level2">
-<h2 class="anchored" data-anchor-id="part-1-create-a-new-unity-project">Part 1: Create a New Unity Project</h2>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<section id="part-1-project-setup-with-meta-xr-simulator-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</h3>
 <ol type="1">
-<li>Open Unity Hub.</li>
-<li>Click <strong>New Project</strong>.</li>
-<li>Select the <strong>3D (URP)</strong> template.</li>
-<li>Name your project <code>XR_Week01</code>.</li>
-<li>Click <strong>Create Project</strong>.</li>
-</ol>
-<hr>
-</section>
-<section id="part-2-install-xr-packages" class="level2">
-<h2 class="anchored" data-anchor-id="part-2-install-xr-packages">Part 2: Install XR Packages</h2>
-<section id="enable-xr-plugin-management" class="level3">
-<h3 class="anchored" data-anchor-id="enable-xr-plugin-management">Enable XR Plugin Management</h3>
-<ol type="1">
-<li>Go to <strong>Edit &gt; Project Settings</strong>.</li>
-<li>Select <strong>XR Plugin Management</strong>.</li>
-<li>Click <strong>Install XR Plugin Management</strong> if prompted.</li>
-<li>Under the <strong>Android</strong> tab, enable <strong>Oculus</strong>.</li>
-</ol>
-</section>
-<section id="install-xr-interaction-toolkit" class="level3">
-<h3 class="anchored" data-anchor-id="install-xr-interaction-toolkit">Install XR Interaction Toolkit</h3>
-<ol type="1">
-<li>Go to <strong>Window &gt; Package Manager</strong>.</li>
-<li>Select <strong>Unity Registry</strong> from the dropdown.</li>
-<li>Search for <strong>XR Interaction Toolkit</strong>.</li>
-<li>Click <strong>Install</strong>.</li>
-<li>When prompted, import the <strong>Starter Assets</strong> sample.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-3-configure-android-build-settings" class="level2">
-<h2 class="anchored" data-anchor-id="part-3-configure-android-build-settings">Part 3: Configure Android Build Settings</h2>
-<ol type="1">
-<li>Go to <strong>File &gt; Build Settings</strong>.</li>
-<li>Select <strong>Android</strong> and click <strong>Switch Platform</strong>.</li>
-<li>Click <strong>Player Settings</strong>.</li>
-<li>Under <strong>Other Settings</strong>:
+<li><strong>Download and Open Your Project</strong>
 <ul>
-<li>Set <strong>Minimum API Level</strong> to Android 10 (API 29)</li>
-<li>Set <strong>Target API Level</strong> to Automatic</li>
+<li>Locate your 2nd year Unity VR escape room project files</li>
+<li>Open the project in Unity Hub</li>
+<li>Ensure all assets and scenes load correctly</li>
+<li>Note any missing dependencies or errors in the console</li>
 </ul></li>
-<li>Under <strong>XR Plug-in Management &gt; Oculus</strong>, enable:
+<li><strong>Configure Meta XR Simulator</strong>
 <ul>
-<li><strong>Quest 2</strong></li>
-<li><strong>Quest 3</strong> (if available)</li>
+<li>Install the Meta XR Simulator if not already present</li>
+<li>Configure the simulator settings for your escape room environment</li>
+<li>Set up appropriate room boundaries and tracking space</li>
+<li>Test basic functionality (hand tracking, controller input, movement)</li>
 </ul></li>
 </ol>
-<hr>
-</section>
-<section id="part-4-set-up-the-xr-scene" class="level2">
-<h2 class="anchored" data-anchor-id="part-4-set-up-the-xr-scene">Part 4: Set Up the XR Scene</h2>
-<section id="add-xr-origin" class="level3">
-<h3 class="anchored" data-anchor-id="add-xr-origin">Add XR Origin</h3>
-<ol type="1">
-<li>Delete the default <strong>Main Camera</strong>.</li>
-<li>Right-click in the Hierarchy.</li>
-<li>Select <strong>XR &gt; XR Origin (VR)</strong>.</li>
-</ol>
-<p>This adds the XR Origin, Camera Offset, Main Camera, and Left/Right Controller objects.</p>
-</section>
-<section id="add-locomotion-system" class="level3">
-<h3 class="anchored" data-anchor-id="add-locomotion-system">Add Locomotion System</h3>
-<ol type="1">
-<li>Right-click in the Hierarchy.</li>
-<li>Select <strong>XR &gt; Locomotion System</strong>.</li>
-<li>Add a <strong>Teleportation Provider</strong> component to the Locomotion System object.</li>
-<li>Add a <strong>Snap Turn Provider</strong> component.</li>
-</ol>
-</section>
-<section id="add-a-teleportation-area" class="level3">
-<h3 class="anchored" data-anchor-id="add-a-teleportation-area">Add a Teleportation Area</h3>
-<ol type="1">
-<li>Create a <strong>Plane</strong> (3D Object &gt; Plane).</li>
-<li>Scale it to fill your scene floor.</li>
-<li>Add a <strong>Teleportation Area</strong> component to the Plane.</li>
-</ol>
-</section>
-<section id="add-an-interactive-object" class="level3">
-<h3 class="anchored" data-anchor-id="add-an-interactive-object">Add an Interactive Object</h3>
-<ol type="1">
-<li>Create a <strong>Cube</strong> (3D Object &gt; Cube).</li>
-<li>Position it at approximately (0, 0.5, 2).</li>
-<li>Add an <strong>XR Grab Interactable</strong> component.</li>
-<li>Add a <strong>Rigidbody</strong> component.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-5-build-and-deploy-to-quest-2" class="level2">
-<h2 class="anchored" data-anchor-id="part-5-build-and-deploy-to-quest-2">Part 5: Build and Deploy to Quest 2</h2>
-<section id="connect-the-headset" class="level3">
-<h3 class="anchored" data-anchor-id="connect-the-headset">Connect the headset</h3>
-<ol type="1">
-<li>Connect the Quest 2 to your computer via USB-C.</li>
-<li>Put on the headset and accept the <strong>Allow USB Debugging</strong> prompt.</li>
-</ol>
-</section>
-<section id="build-and-run" class="level3">
-<h3 class="anchored" data-anchor-id="build-and-run">Build and Run</h3>
-<ol type="1">
-<li>Go to <strong>File &gt; Build Settings</strong>.</li>
-<li>Click <strong>Add Open Scenes</strong>.</li>
-<li>Click <strong>Build and Run</strong>.</li>
-<li>Choose a location to save the APK.</li>
-<li>Unity will build and install the app on the headset.</li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-6-test-on-device" class="level2">
-<h2 class="anchored" data-anchor-id="part-6-test-on-device">Part 6: Test on Device</h2>
-<p>Put on the headset and test:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Meta XR Simulator Benefits
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Meta XR Simulator allows you to test VR experiences without wearing a headset, making development and debugging much more efficient.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Initial Testing</strong>
 <ul>
-<li>Can you look around freely?</li>
-<li>Can you teleport by pointing and pressing the trigger?</li>
-<li>Can you grab the cube?</li>
-<li>Does the cube respond to physics when released?</li>
+<li>Run your escape room experience in the Meta XR Simulator</li>
+<li>Verify that all interactive elements work as expected</li>
+<li>Check for any performance issues or visual glitches</li>
+<li>Document any bugs or areas needing improvement</li>
+</ul></li>
+</ol>
+</section>
+<section id="part-2-capture-screenshots-and-gameplay-video-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</h3>
+<ol start="4" type="1">
+<li><strong>Screenshot Capture</strong>
+<ul>
+<li>Use the Meta XR Simulator’s built-in screenshot functionality</li>
+<li>Capture at least 5 high-quality screenshots showing:
+<ul>
+<li>The main escape room environment</li>
+<li>Key interactive objects and puzzles</li>
+<li>UI elements and menus</li>
+<li>Player interactions (hand tracking, object manipulation)</li>
+<li>Victory/completion screen</li>
+</ul></li>
+<li>Ensure screenshots are high resolution (minimum 1920x1080)</li>
+</ul></li>
+<li><strong>Gameplay Video Recording</strong>
+<ul>
+<li>Record a 60-90 second gameplay video using screen recording software</li>
+<li>Show a complete puzzle solution or key gameplay loop</li>
+<li>Include audio if your escape room has sound effects or music</li>
+<li>Ensure smooth framerate and clear visuals</li>
+<li>Export in MP4 format at 1080p resolution</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pro Recording Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Use OBS Studio or similar for high-quality recordings</li>
+<li>Record at 60fps for smooth playback</li>
+<li>Keep file sizes reasonable for web upload</li>
+<li>Add brief text overlays to highlight key features</li>
 </ul>
-<hr>
+</div>
+</div>
+</section>
+<section id="part-3-update-meta-app-store-pdp-assets-45-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</h3>
+<ol start="6" type="1">
+<li><strong>Access Your Meta Developer Dashboard</strong>
+<ul>
+<li>Log into your Meta Developer account</li>
+<li>Navigate to your escape room app listing</li>
+<li>Access the Product Detail Page (PDP) management section</li>
+</ul></li>
+<li><strong>Update PDP Visual Assets</strong>
+<ul>
+<li>Upload your new screenshots to replace existing ones</li>
+<li>Organize screenshots in a logical order (environment → gameplay → features)</li>
+<li>Upload your gameplay video as the featured trailer</li>
+<li>Update the app icon if you’ve made improvements</li>
+<li>Ensure all images meet Meta’s size and format requirements</li>
+</ul></li>
+<li><strong>Review and Update Text Content</strong>
+<ul>
+<li>Update the app description to reflect any new features</li>
+<li>Check that keywords and tags are still relevant</li>
+<li>Update version notes with improvements made</li>
+<li>Verify age rating and content warnings are accurate</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Meta PDP Requirements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure all assets meet Meta’s technical requirements: - Screenshots: 1024x1024 minimum - Videos: MP4 format, max 15MB - Icons: 512x512 PNG with transparency</p>
+</div>
+</div>
+</section>
+<section id="part-4-build-and-upload-apk-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</h3>
+<ol start="9" type="1">
+<li><strong>Build Configuration</strong>
+<ul>
+<li>Set Unity build settings to Android platform</li>
+<li>Configure XR settings for Meta Quest</li>
+<li>Set appropriate quality settings for Quest hardware</li>
+<li>Increment version number in Player Settings</li>
+</ul></li>
+<li><strong>Build and Test APK</strong>
+<ul>
+<li>Build the APK file from Unity</li>
+<li>Test the APK on a Quest device if available, or verify build completion</li>
+<li>Check file size and performance metrics</li>
+<li>Ensure all features work in the standalone build</li>
+</ul></li>
+<li><strong>Upload to Meta App Store</strong>
+<ul>
+<li>Navigate to the app submission section in Meta Developer Dashboard</li>
+<li>Upload your new APK file</li>
+<li>Complete the submission checklist</li>
+<li>Submit for review (note: this may take several days)</li>
+</ul></li>
+</ol>
+</section>
+<section id="part-5-update-student-repository-documentation-15-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</h3>
+<ol start="12" type="1">
+<li><strong>Create Professional Documentation</strong>
+<ul>
+<li>Open your student GitHub repository</li>
+<li>Update the README.md file with:
+<ul>
+<li>Project title and brief description</li>
+<li>Screenshots embedded using Markdown syntax</li>
+<li>Link to or embed the gameplay video</li>
+<li>Technical specifications and requirements</li>
+<li>Installation and usage instructions</li>
+<li>Credits and acknowledgments</li>
+</ul></li>
+</ul></li>
+<li><strong>Repository Organization</strong>
+<ul>
+<li>Create an <code>assets/</code> folder for images and videos</li>
+<li>Organize files with clear naming conventions</li>
+<li>Add appropriate file extensions and descriptions</li>
+<li>Ensure all links work correctly</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Markdown Tips for README
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Description](assets/screenshot1.png)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gameplay Video</span><span class="co">](assets/gameplay.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+</section>
+<section id="deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
+<p>By the end of this practical, you should have:</p>
+<ol type="1">
+<li>✅ Working Unity VR project running in Meta XR Simulator</li>
+<li>✅ 5+ high-quality screenshots captured</li>
+<li>✅ 60-90 second gameplay video recorded</li>
+<li>✅ Updated Meta App Store PDP with new assets</li>
+<li>✅ Built and uploaded new APK to Meta App Store</li>
+<li>✅ Professional README.md documentation in student repository</li>
+</ol>
 </section>
 <section id="troubleshooting" class="level2">
 <h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Problem</th>
-<th>Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Device not detected</td>
-<td>Check USB debugging is enabled and cable is connected</td>
-</tr>
-<tr class="even">
-<td>Build fails</td>
-<td>Check Android SDK and NDK are installed in Unity Hub</td>
-</tr>
-<tr class="odd">
-<td>Controllers not tracked</td>
-<td>Check Oculus plugin is enabled in XR Plugin Management</td>
-</tr>
-<tr class="even">
-<td>Scene is dark</td>
-<td>Add a Directional Light to the scene</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="lab-deliverable" class="level2">
-<h2 class="anchored" data-anchor-id="lab-deliverable">Lab Deliverable</h2>
-<p>Before leaving the lab, show your tutor:</p>
+<p><strong>Common Issues:</strong></p>
 <ul>
-<li>a working XR scene deployed to the Quest 2</li>
-<li>functional teleportation</li>
-<li>at least one grabbable object</li>
+<li><strong>Simulator not launching:</strong> Check Meta XR SDK version compatibility</li>
+<li><strong>Performance issues:</strong> Adjust quality settings in Unity</li>
+<li><strong>Upload failures:</strong> Verify file sizes and formats meet requirements</li>
+<li><strong>Build errors:</strong> Check Android SDK and build tools versions</li>
 </ul>
-<p>This contributes to <strong>Assessment 1: Continuous Lab Work</strong>.</p>
-<hr>
 </section>
-<section id="extension-task" class="level2">
-<h2 class="anchored" data-anchor-id="extension-task">Extension Task</h2>
-<p>If you finish early:</p>
+<section id="reflection-questions" class="level2">
+<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
+<ol type="1">
+<li>What improvements did you notice when testing with the Meta XR Simulator compared to your original development process?</li>
+<li>How do professional PDP assets impact the perceived quality of your VR application?</li>
+<li>What challenges did you encounter when preparing your project for app store submission?</li>
+<li>How might you use these documentation and promotion skills in future VR projects?</li>
+</ol>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
+<p>For next week, consider:</p>
 <ul>
-<li>Add a second interactive object with different physics properties</li>
-<li>Add a simple UI canvas to the scene</li>
-<li>Experiment with snap turn vs continuous turn settings</li>
+<li>Implementing user feedback if your app receives reviews</li>
+<li>Exploring advanced Meta XR features for future updates</li>
+<li>Planning additional VR projects using these professional workflows</li>
 </ul>
 
 
@@ -894,13 +998,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../weeks/01-week-01/02-practical.html" class="pagination-link" aria-label="Practical">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Practical</span>
+      <a href="../../weeks/01-week-01/02-lecture.html" class="pagination-link" aria-label="Lecture Notes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture Notes</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../weeks/01-week-01/04-slides.html" class="pagination-link" aria-label="Slides">
-        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../weeks/01-week-01/04-laboratory.html" class="pagination-link" aria-label="Laboratory">
+        <span class="nav-page-text">Laboratory</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
