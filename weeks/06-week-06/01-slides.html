@@ -6,11 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dbc92dda8186f57fa2e333fbb71d6a9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <title>Virtual, Augmented and Spatial Computing – Lecture Slides</title>
+  <title>Virtual, Augmented and Spatial Computing – Week 6 Slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -32,7 +32,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d3a3aa3f54883b7e0db9cb621ccb0be5.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e22d31546a1432fbd564381dda967549.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -124,262 +124,54 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lecture Slides – Virtual, Augmented and Spatial Computing">
+<meta property="og:title" content="Week 6 Slides – Virtual, Augmented and Spatial Computing">
 <meta property="og:description" content="Virtual and augmented reality, also known as immersive reality, is any technology that “replicates an environment, real or imagined, and simulates a user’s physical presence and environment to allow for user interaction. Spatial computing enables immersive interaction by understanding the physical world, knowing and communicating our relation to places in that world, and navigating through those places.">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture Slides</h1>
-  <p class="subtitle">Introduction to Spatial Computing</p>
+  <h1 class="title">Week 6 Slides</h1>
+  <p class="subtitle">Interaction Design Frameworks &amp; Experience Analysis</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
-<h3 id="virtual-augmented-and-spatial-computing">Virtual, Augmented and Spatial Computing</h3>
-<p>BSc in Immersive Digital Media — Year 3</p>
+<section id="week-6-overview" class="slide level2">
+<h2>Week 6 Overview</h2>
+<ul>
+<li>Interaction design frameworks for XR</li>
+<li>Analysing XR experiences critically</li>
+<li>Common interaction patterns and anti-patterns</li>
+<li>Evaluation methods</li>
+<li><strong>Assessment 2 briefing</strong></li>
+</ul>
+</section>
+<section id="why-frameworks" class="slide level2">
+<h2>Why Frameworks?</h2>
 <blockquote>
-<p>We are at the beginning of a new era of computing. The interface is no longer a screen. It is the world.</p>
+<p>“A framework is a lens — it doesn’t tell you what to see, but it tells you where to look.”</p>
 </blockquote>
+<p>Frameworks help us: - Analyse experiences systematically - Communicate design decisions - Identify problems before building - Compare across different experiences</p>
 </section>
-<section id="who-is-this-module-for" class="slide level2" data-background-color="#ffffff">
-<h2>Who Is This Module For?</h2>
-<p>You already know how to:</p>
-<ul>
-<li>build interactive digital experiences</li>
-<li>work with 3D tools and game engines</li>
-<li>think about users and design</li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>This module asks you to apply all of that in <strong>three-dimensional space</strong>.</p>
-</div>
-</div>
-</div>
+<section id="framework-1-normans-action-cycle" class="slide level2">
+<h2>Framework 1: Norman’s Action Cycle</h2>
+<p>Donald Norman’s 7-stage action cycle applies directly to XR:</p>
+<ol type="1">
+<li><strong>Form a goal</strong> — what does the user want to do?</li>
+<li><strong>Form an intention</strong> — how will they do it?</li>
+<li><strong>Specify an action</strong> — which gesture/input?</li>
+<li><strong>Execute the action</strong> — perform the input</li>
+<li><strong>Perceive the state</strong> — what changed?</li>
+<li><strong>Interpret the state</strong> — what does it mean?</li>
+<li><strong>Evaluate the outcome</strong> — did it work?</li>
+</ol>
 </section>
-<section id="what-we-will-cover" class="slide level2">
-<h2>What We Will Cover</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>XR hardware and systems</li>
-<li>Perception and presence</li>
-<li>Interaction design</li>
-<li>Environment and content design</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>AR systems</li>
-<li>Spatial computing</li>
-<li>Evaluation and critique</li>
-</ul>
-</div></div>
-</section>
-<section id="how-the-module-runs" class="slide level2">
-<h2>How the Module Runs</h2>
-<p>Each week consists of three sessions:</p>
-<ul>
-<li><strong>1 hour</strong> — Lecture</li>
-<li><strong>2 hours</strong> — Lab</li>
-<li><strong>2 hours</strong> — Practical</li>
-</ul>
-</section>
-<section id="assessment" class="slide level2">
-<h2>Assessment</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Assessment</th>
-<th>Type</th>
-<th>Weight</th>
-<th>Due</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Continuous Lab Work</td>
-<td>30%</td>
-<td>Ongoing</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>XR Case Study</td>
-<td>30%</td>
-<td>Week 6</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Individual Project</td>
-<td>40%</td>
-<td>Week 12</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="technologies-we-use" class="slide level2">
-<h2>Technologies We Use</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Software</strong></p>
-<ul>
-<li>Unity and XR Interaction Toolkit</li>
-<li>Lens Studio</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Hardware</strong></p>
-<ul>
-<li>Meta Quest 2 and Quest 3</li>
-<li>HTC Vive Pro</li>
-<li>Pico Neo Eye</li>
-<li>HoloLens 2</li>
-<li>Snap Spectacles 2022</li>
-<li>Display Glasses</li>
-</ul>
-</div></div>
-</section>
-<section id="what-is-xr" class="slide level2">
-<h2>What Is XR?</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>XR — eXtended Reality</strong> is an umbrella term for the full spectrum of immersive technologies.</p>
-</div>
-</div>
-</div>
-<p>It covers:</p>
-<ul>
-<li>Virtual Reality (VR)</li>
-<li>Augmented Reality (AR)</li>
-<li>Mixed Reality (MR)</li>
-<li>Spatial Computing</li>
-</ul>
-</section>
-<section id="virtual-reality" class="slide level2">
-<h2>Virtual Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<blockquote>
-<p>The user is placed inside a <strong>fully synthetic environment</strong>.</p>
-</blockquote>
-<ul>
-<li>No view of the real world</li>
-<li>Complete sensory substitution (visual, audio, haptic)</li>
-</ul>
-<p><strong>Examples:</strong> Meta Quest, HTC Vive Pro</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/ai-images/38f8cca5-a629-4f18-9614-a07d7c940b90.png"></p>
-</div></div>
-</section>
-<section id="augmented-reality" class="slide level2">
-<h2>Augmented Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/ai-images/fcf2ab94-c0f7-46d3-8d4c-dcd3f61db704.png"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>Digital content is <strong>overlaid on the real world</strong>.</p>
-</blockquote>
-<ul>
-<li>The real world remains visible</li>
-<li>Digital objects appear to exist in physical space</li>
-</ul>
-<p><strong>Examples:</strong> HoloLens 2, Snap Spectacles, Pokémon GO</p>
-</div></div>
-</section>
-<section id="mixed-reality" class="slide level2">
-<h2>Mixed Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/mr.png"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>A spectrum between fully real and fully virtual.</p>
-</blockquote>
-<ul>
-<li>Digital and physical objects <strong>coexist and interact</strong></li>
-</ul>
-<p><strong>Examples:</strong> HoloLens 2, Meta Quest 3 with passthrough</p>
-</div></div>
-</section>
-<section id="spatial-computing" class="slide level2">
-<h2>Spatial Computing</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/sddefault.webp"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>A broader paradigm shift in how we interact with computers.</p>
-</blockquote>
-<ul>
-<li>Computing moves <strong>into the environment</strong></li>
-<li>Interfaces are no longer confined to screens</li>
-</ul>
-<p><strong>Examples:</strong> Apple Vision Pro, HoloLens 2</p>
-</div></div>
-</section>
-<section id="comparing-xr-modalities" class="slide level2">
-<h2>Comparing XR Modalities</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="replaces-reality">Replaces Reality</h3>
-<p><strong>Virtual Reality</strong><br>
-Fully synthetic — no real world visible</p>
-</div><div class="column" style="width:50%;">
-<h3 id="extends-reality">Extends Reality</h3>
-<p><strong>AR / MR / Spatial Computing</strong><br>
-Digital and physical worlds combined</p>
-</div></div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Most modern XR devices sit somewhere along this spectrum.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-realityvirtuality-continuum" class="slide level2">
-<h2>The Reality–Virtuality Continuum</h2>
-
-<img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/milgram-mr.png" class="r-stretch"><p>Milgram and Kishino (1994) described a spectrum:</p>
-<p>Most modern XR devices sit somewhere in the middle.</p>
-</section>
-<section id="why-does-this-matter-now" class="slide level2">
-<h2>Why Does This Matter Now?</h2>
-<ul>
-<li>Hardware has become affordable and accessible</li>
-<li>Processing power has reached mobile XR</li>
-<li>Spatial computing is entering mainstream use</li>
-<li>Industry demand for XR skills is growing rapidly</li>
-</ul>
-</section>
-<section id="key-industry-moments" class="slide level2">
-<h2>Key Industry Moments</h2>
+<section id="norman-in-xr-failure-points" class="slide level2">
+<h2>Norman in XR: Failure Points</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 50%">
@@ -387,192 +179,214 @@ Digital and physical worlds combined</p>
 </colgroup>
 <thead>
 <tr class="header">
-<th>Year</th>
-<th>Event</th>
+<th>Stage</th>
+<th>Common XR Failure</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2012</td>
-<td>Oculus Rift Kickstarter</td>
+<td>Form intention</td>
+<td>No affordance — user doesn’t know what’s interactive</td>
 </tr>
 <tr class="even">
-<td>2016</td>
-<td>Consumer VR launches (Rift, Vive, PSVR)</td>
+<td>Specify action</td>
+<td>Gesture not discoverable</td>
 </tr>
 <tr class="odd">
-<td>2019</td>
-<td>Quest 1 — standalone VR</td>
+<td>Execute action</td>
+<td>Tracking failure, fatigue</td>
 </tr>
 <tr class="even">
-<td>2021</td>
-<td>Meta rebrands around the metaverse</td>
+<td>Perceive state</td>
+<td>No feedback (visual/audio/haptic)</td>
 </tr>
 <tr class="odd">
-<td>2023</td>
-<td>Apple Vision Pro announced</td>
+<td>Interpret state</td>
+<td>Ambiguous feedback</td>
 </tr>
 <tr class="even">
-<td>2024</td>
-<td>Spatial computing enters enterprise and consumer markets</td>
-</tr>
-<tr class="odd">
-<td>2025</td>
-<td>Smart glasses and AI began a shift in focus from optics &amp; displays</td>
-</tr>
-<tr class="even">
-<td>2026</td>
-<td>Smart glasses became the industry’s center of gravity</td>
+<td>Evaluate outcome</td>
+<td>No confirmation of success</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="hardware-in-this-module" class="slide level2">
-<h2>Hardware in This Module</h2>
+<section id="framework-2-milgrams-reality-virtuality-continuum" class="slide level2">
+<h2>Framework 2: Milgram’s Reality-Virtuality Continuum</h2>
+<pre><code>Real ←————————————————————————→ Virtual
+Environment    AR    MR    AV    Environment</code></pre>
+<ul>
+<li><strong>AR</strong>: Real world + virtual overlays (Snap Spectacles, Hololens 2)</li>
+<li><strong>MR</strong>: Real and virtual interact (Hololens 2, Quest 3 passthrough)</li>
+<li><strong>AV</strong>: Mostly virtual + some real elements</li>
+<li><strong>VR</strong>: Fully virtual (Quest 2, Vive Pro)</li>
+</ul>
+<p><strong>Design implication</strong>: Interaction design must match the continuum position.</p>
+</section>
+<section id="framework-3-presence-model-slater" class="slide level2">
+<h2>Framework 3: Presence Model (Slater)</h2>
+<p>Two components of presence:</p>
+<ul>
+<li><strong>Place Illusion (PI)</strong>: “I am there” — the sense of being in the virtual space</li>
+<li><strong>Plausibility Illusion (Psi)</strong>: “This is real” — events feel like they’re really happening</li>
+</ul>
+<p><strong>Interaction design affects both</strong>: - Poor interaction breaks PI (you notice the interface) - Inconsistent physics breaks Psi (the world feels fake)</p>
+</section>
+<section id="interaction-patterns" class="slide level2">
+<h2>Interaction Patterns</h2>
+<h3 id="pattern-progressive-disclosure">Pattern: Progressive Disclosure</h3>
+<p>Reveal complexity gradually. Don’t show all options at once.</p>
+<h3 id="pattern-spatial-consistency">Pattern: Spatial Consistency</h3>
+<p>Objects stay where you put them. The world has memory.</p>
+<h3 id="pattern-embodied-metaphor">Pattern: Embodied Metaphor</h3>
+<p>Map virtual actions to real-world physical actions. <em>Example</em>: Pull a lever to open a door (not press a button).</p>
+<h3 id="pattern-graceful-degradation">Pattern: Graceful Degradation</h3>
+<p>If tracking fails, fall back gracefully. Don’t crash or freeze.</p>
+</section>
+<section id="interaction-anti-patterns" class="slide level2">
+<h2>Interaction Anti-Patterns</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Device</th>
-<th>Type</th>
-<th>Primary Use</th>
+<th>Anti-Pattern</th>
+<th>Problem</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Quest 2</td>
-<td>VR</td>
-<td>Primary student HMD</td>
+<td>Floating menus</td>
+<td>Break immersion, cause eye strain</td>
 </tr>
 <tr class="even">
-<td>Quest 3</td>
-<td>VR/MR</td>
-<td>Mixed reality and passthrough</td>
+<td>Tiny targets</td>
+<td>Violate Fitts’ Law, cause frustration</td>
 </tr>
 <tr class="odd">
-<td>Vive Pro</td>
-<td>VR</td>
-<td>High-fidelity comparison</td>
+<td>No feedback</td>
+<td>User doesn’t know if action worked</td>
 </tr>
 <tr class="even">
-<td>Pico Neo Eye</td>
-<td>VR</td>
-<td>Eye tracking</td>
+<td>Gorilla arm UI</td>
+<td>Causes fatigue in minutes</td>
 </tr>
 <tr class="odd">
-<td>HoloLens 2</td>
-<td>MR</td>
-<td>Spatial computing</td>
+<td>Forced smooth locomotion</td>
+<td>Causes sickness for sensitive users</td>
 </tr>
 <tr class="even">
-<td>Snap Spectacles</td>
-<td>AR</td>
-<td>Lightweight AR</td>
-</tr>
-<tr class="odd">
-<td>Display Glasses</td>
-<td>Passive display</td>
-<td>Comparison</td>
+<td>Invisible affordances</td>
+<td>User can’t discover interactions</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="dof-vs-3dof" class="slide level2">
-<h2>6DOF vs 3DOF</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="dof">3DOF</h3>
-<p>Tracks <strong>rotation only</strong></p>
-<ul>
-<li>Pitch</li>
-<li>Yaw</li>
-<li>Roll</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="dof-1">6DOF</h3>
-<p>Tracks <strong>rotation AND position</strong></p>
-<ul>
-<li>Pitch, Yaw, Roll</li>
-<li>X, Y, Z translation</li>
-</ul>
-<p><em>Allows the user to physically move through space.</em></p>
-</div></div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>All primary devices in this module are <strong>6DOF</strong>.</p>
-</div>
-</div>
-</div>
+<section id="evaluation-methods-for-xr" class="slide level2">
+<h2>Evaluation Methods for XR</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>When</th>
+<th>What it measures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heuristic evaluation</td>
+<td>Early</td>
+<td>Design problems against principles</td>
+</tr>
+<tr class="even">
+<td>Think-aloud</td>
+<td>Mid</td>
+<td>User mental model</td>
+</tr>
+<tr class="odd">
+<td>SUS (System Usability Scale)</td>
+<td>Post-use</td>
+<td>Overall usability score</td>
+</tr>
+<tr class="even">
+<td>SSQ (Simulator Sickness Questionnaire)</td>
+<td>Post-use</td>
+<td>Comfort/sickness</td>
+</tr>
+<tr class="odd">
+<td>Presence questionnaire</td>
+<td>Post-use</td>
+<td>Sense of presence</td>
+</tr>
+<tr class="even">
+<td>Eye tracking heatmap</td>
+<td>During</td>
+<td>Attention patterns</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="inside-out-vs-outside-in-tracking" class="slide level2">
-<h2>Inside-Out vs Outside-In Tracking</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="inside-out">Inside-Out</h3>
-<p>Cameras <strong>on the headset</strong> track the environment</p>
-<p><em>Examples: Quest 2, Quest 3</em></p>
-</div><div class="column" style="width:50%;">
-<h3 id="outside-in">Outside-In</h3>
-<p><strong>External sensors</strong> track the headset</p>
-<p><em>Examples: Vive Pro (base stations)</em></p>
-</div></div>
+<section id="heuristic-evaluation-for-xr" class="slide level2">
+<h2>Heuristic Evaluation for XR</h2>
+<p>Nielsen’s 10 heuristics adapted for XR:</p>
+<ol type="1">
+<li>Visibility of system status → <strong>feedback on every interaction</strong></li>
+<li>Match between system and real world → <strong>embodied metaphors</strong></li>
+<li>User control and freedom → <strong>undo, cancel, exit</strong></li>
+<li>Consistency and standards → <strong>consistent gesture vocabulary</strong></li>
+<li>Error prevention → <strong>confirm before destructive actions</strong></li>
+<li>Recognition over recall → <strong>visible affordances</strong></li>
+<li>Flexibility and efficiency → <strong>shortcuts for expert users</strong></li>
+<li>Aesthetic and minimalist design → <strong>diegetic UI</strong></li>
+<li>Help users recognise errors → <strong>clear error states</strong></li>
+<li>Help and documentation → <strong>in-world tutorials</strong></li>
+</ol>
 </section>
-<section id="this-week-lab-and-practical" class="slide level2">
-<h2>This Week: Lab and Practical</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="lab">Lab</h3>
+<section id="assessment-2-case-study-brief" class="slide level2">
+<h2>Assessment 2: Case Study Brief</h2>
+<p><strong>Due: End of Week 8</strong> | <strong>Weight: 30%</strong> | <strong>LO2, LO3, LO4</strong></p>
+<h3 id="three-parts">Three Parts:</h3>
+<ol type="1">
+<li><strong>Experience Analysis</strong> (40%)
 <ul>
-<li>Set up Unity XR project</li>
-<li>Install XR Interaction Toolkit</li>
-<li>Deploy a basic scene to Quest 2</li>
-<li>Test locomotion and object interaction</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="practical">Practical</h3>
-<p>Build a minimal XR scene:</p>
+<li>Choose a VR or AR experience</li>
+<li>Apply 2 frameworks from today’s lecture</li>
+<li>Identify 3 interaction strengths and 3 weaknesses</li>
+</ul></li>
+<li><strong>Interaction Prototype</strong> (40%)
 <ul>
-<li>A simple environment</li>
-<li>Basic locomotion</li>
-<li>One interactive object</li>
-</ul>
-</div></div>
+<li>Redesign one weak interaction</li>
+<li>Build a low-fi prototype (Unity or paper)</li>
+<li>Justify design decisions using frameworks</li>
+</ul></li>
+<li><strong>Evaluation</strong> (20%)
+<ul>
+<li>Test with 2 users</li>
+<li>Report findings</li>
+<li>Reflect on what you would change</li>
+</ul></li>
+</ol>
 </section>
-<section id="key-questions-to-carry-through-the-module" class="slide level2">
-<h2>Key Questions to Carry Through the Module</h2>
+<section id="assessment-2-choosing-an-experience" class="slide level2">
+<h2>Assessment 2: Choosing an Experience</h2>
+<p>Good choices: - Beat Saber (interaction design, rhythm, feedback) - Tilt Brush / Open Brush (creative tools, spatial UI) - Microsoft Flight Simulator VR (complex UI, comfort) - Hololens 2 demos (AR interaction, spatial anchoring) - Snap Spectacles experiences (AR, gesture) - Any experience from our lab hardware</p>
+</section>
+<section id="key-takeaways" class="slide level2">
+<h2>Key Takeaways</h2>
 <ul>
-<li>What makes an XR experience feel <em>real</em>?</li>
-<li>What makes an interaction feel <em>natural</em>?</li>
-<li>How do we design for a body in space?</li>
-<li>What are the ethical responsibilities of XR designers?</li>
+<li>Frameworks give you a systematic language for analysis</li>
+<li>Norman’s Action Cycle identifies where interactions fail</li>
+<li>Milgram’s continuum positions your design in the XR spectrum</li>
+<li>Presence theory explains why interaction quality matters</li>
+<li>Evaluation methods should match your design stage</li>
 </ul>
 </section>
-<section id="further-reading" class="slide level2">
-<h2>Further Reading</h2>
+<section id="references" class="slide level2">
+<h2>References</h2>
 <ul>
-<li>Jerald, J. (2015) <em>The VR Book</em>. ACM Books.</li>
-<li>LaViola et al.&nbsp;(2017) <em>3D User Interfaces</em> (2nd ed.)</li>
-<li>Milgram, P. and Kishino, F. (1994) A taxonomy of mixed reality visual displays</li>
+<li>Norman, D. (2013) <em>The Design of Everyday Things</em> (revised ed.). Basic Books.</li>
+<li>Milgram, P. &amp; Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” <em>IEICE Transactions</em>.</li>
+<li>Slater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” <em>Philosophical Transactions of the Royal Society B</em>.</li>
+<li>Nielsen, J. (1994) “Heuristic evaluation.” In Nielsen &amp; Mack (eds.) <em>Usability Inspection Methods</em>. Wiley.</li>
 </ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li>XR covers VR, AR, MR, and spatial computing</li>
-<li>The reality–virtuality continuum describes the spectrum</li>
-<li>Hardware has matured rapidly</li>
-<li>This module combines theory, critique, and practice</li>
-<li>Assessment is continuous, case study, and project</li>
-</ul>
-<blockquote>
-<p>Next week: XR Hardware and Systems</p>
-</blockquote>
 
 
 </section>

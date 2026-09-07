@@ -6,11 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-dbc92dda8186f57fa2e333fbb71d6a9d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <title>Virtual, Augmented and Spatial Computing – Lecture Slides</title>
+  <title>Virtual, Augmented and Spatial Computing – Week 5 Slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,8 +31,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #e1e4e8; background-color: #24292e; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d3a3aa3f54883b7e0db9cb621ccb0be5.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e22d31546a1432fbd564381dda967549.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -124,455 +190,282 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lecture Slides – Virtual, Augmented and Spatial Computing">
+<meta property="og:title" content="Week 5 Slides – Virtual, Augmented and Spatial Computing">
 <meta property="og:description" content="Virtual and augmented reality, also known as immersive reality, is any technology that “replicates an environment, real or imagined, and simulates a user’s physical presence and environment to allow for user interaction. Spatial computing enables immersive interaction by understanding the physical world, knowing and communicating our relation to places in that world, and navigating through those places.">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture Slides</h1>
-  <p class="subtitle">Introduction to Spatial Computing</p>
+  <h1 class="title">Week 5 Slides</h1>
+  <p class="subtitle">Gesture, Locomotion &amp; Spatial UI</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome</h2>
-<h3 id="virtual-augmented-and-spatial-computing">Virtual, Augmented and Spatial Computing</h3>
-<p>BSc in Immersive Digital Media — Year 3</p>
-<blockquote>
-<p>We are at the beginning of a new era of computing. The interface is no longer a screen. It is the world.</p>
-</blockquote>
-</section>
-<section id="who-is-this-module-for" class="slide level2" data-background-color="#ffffff">
-<h2>Who Is This Module For?</h2>
-<p>You already know how to:</p>
+<section id="week-5-overview" class="slide level2">
+<h2>Week 5 Overview</h2>
 <ul>
-<li>build interactive digital experiences</li>
-<li>work with 3D tools and game engines</li>
-<li>think about users and design</li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>This module asks you to apply all of that in <strong>three-dimensional space</strong>.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="what-we-will-cover" class="slide level2">
-<h2>What We Will Cover</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>XR hardware and systems</li>
-<li>Perception and presence</li>
-<li>Interaction design</li>
-<li>Environment and content design</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>AR systems</li>
-<li>Spatial computing</li>
-<li>Evaluation and critique</li>
-</ul>
-</div></div>
-</section>
-<section id="how-the-module-runs" class="slide level2">
-<h2>How the Module Runs</h2>
-<p>Each week consists of three sessions:</p>
-<ul>
-<li><strong>1 hour</strong> — Lecture</li>
-<li><strong>2 hours</strong> — Lab</li>
-<li><strong>2 hours</strong> — Practical</li>
+<li>Gesture design and recognition</li>
+<li>Locomotion techniques in VR</li>
+<li>Spatial UI design principles</li>
+<li>Diegetic vs non-diegetic interfaces</li>
+<li>Comfort and accessibility</li>
 </ul>
 </section>
-<section id="assessment" class="slide level2">
-<h2>Assessment</h2>
+<section id="gesture-design" class="slide level2">
+<h2>Gesture Design</h2>
+<h3 id="what-makes-a-good-xr-gesture">What makes a good XR gesture?</h3>
+<ul>
+<li><strong>Distinct</strong> — not confused with natural movement</li>
+<li><strong>Comfortable</strong> — low fatigue, repeatable</li>
+<li><strong>Discoverable</strong> — findable without instruction</li>
+<li><strong>Reversible</strong> — easy to cancel</li>
+</ul>
+<h3 id="gesture-vocabulary">Gesture Vocabulary</h3>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Assessment</th>
+<th>Gesture</th>
+<th>Common Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pinch</td>
+<td>Select, confirm</td>
+</tr>
+<tr class="even">
+<td>Open palm</td>
+<td>Cancel, stop</td>
+</tr>
+<tr class="odd">
+<td>Point</td>
+<td>Navigate, indicate</td>
+</tr>
+<tr class="even">
+<td>Two-hand spread</td>
+<td>Scale</td>
+</tr>
+<tr class="odd">
+<td>Two-hand rotate</td>
+<td>Rotate object</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gesture-recognition-in-unity" class="slide level2">
+<h2>Gesture Recognition in Unity</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a></a><span class="co">// Example: Detect pinch gesture</span></span>
+<span id="cb1-2"><a></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Hands</span><span class="op">;</span></span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="dt">void</span> <span class="fu">Update</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-5"><a></a>    <span class="dt">var</span> hand <span class="op">=</span> XRHandSubsystem<span class="op">.</span><span class="fu">GetHand</span><span class="op">(</span>Handedness<span class="op">.</span><span class="fu">Right</span><span class="op">);</span></span>
+<span id="cb1-6"><a></a>    <span class="dt">float</span> pinchStrength <span class="op">=</span> hand<span class="op">.</span><span class="fu">GetFingerPinchStrength</span><span class="op">(</span></span>
+<span id="cb1-7"><a></a>        XRHandFingerID<span class="op">.</span><span class="fu">Index</span></span>
+<span id="cb1-8"><a></a>    <span class="op">);</span></span>
+<span id="cb1-9"><a></a>    <span class="kw">if</span> <span class="op">(</span>pinchStrength <span class="op">&gt;</span> <span class="fl">0.9f</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-10"><a></a>        <span class="fu">OnPinch</span><span class="op">();</span></span>
+<span id="cb1-11"><a></a>    <span class="op">}</span></span>
+<span id="cb1-12"><a></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="locomotion-in-vr" class="slide level2">
+<h2>Locomotion in VR</h2>
+<blockquote>
+<p>Locomotion is the #1 cause of simulator sickness</p>
+</blockquote>
+<h3 id="the-core-problem">The Core Problem</h3>
+<ul>
+<li>Physical body stays still</li>
+<li>Virtual body moves</li>
+<li>Vestibular system detects mismatch → nausea</li>
+</ul>
+</section>
+<section id="locomotion-techniques" class="slide level2">
+<h2>Locomotion Techniques</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Comfort</th>
+<th>Immersion</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Teleportation</td>
+<td>★★★★★</td>
+<td>★★★</td>
+<td>General VR</td>
+</tr>
+<tr class="even">
+<td>Smooth locomotion</td>
+<td>★★★</td>
+<td>★★★★★</td>
+<td>Games, training</td>
+</tr>
+<tr class="odd">
+<td>Room-scale</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Small spaces</td>
+</tr>
+<tr class="even">
+<td>Arm-swinging</td>
+<td>★★★★</td>
+<td>★★★★</td>
+<td>Active experiences</td>
+</tr>
+<tr class="odd">
+<td>Redirected walking</td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Large spaces (research)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="teleportation-design" class="slide level2">
+<h2>Teleportation Design</h2>
+<ul>
+<li><strong>Arc indicator</strong> — shows landing zone</li>
+<li><strong>Valid/invalid zones</strong> — colour-coded feedback</li>
+<li><strong>Fade transition</strong> — reduces disorientation</li>
+<li><strong>Orientation control</strong> — let user choose facing direction</li>
+</ul>
+<h3 id="unity-implementation">Unity Implementation</h3>
+<ul>
+<li><code>TeleportationProvider</code> + <code>TeleportationArea</code></li>
+<li><code>XRRayInteractor</code> with teleport mode enabled</li>
+</ul>
+</section>
+<section id="smooth-locomotion-comfort" class="slide level2">
+<h2>Smooth Locomotion Comfort</h2>
+<p>If using smooth locomotion:</p>
+<ul>
+<li><strong>Vignette</strong> — narrow FOV during movement reduces sickness</li>
+<li><strong>Speed limit</strong> — keep below 3 m/s for most users</li>
+<li><strong>Snap turning</strong> — 30–45° increments instead of smooth rotation</li>
+<li><strong>Comfort mode toggle</strong> — always offer teleport as alternative</li>
+</ul>
+</section>
+<section id="spatial-ui-design" class="slide level2">
+<h2>Spatial UI Design</h2>
+<h3 id="the-problem-with-flat-ui-in-xr">The Problem with Flat UI in XR</h3>
+<ul>
+<li>2D panels feel out of place in 3D space</li>
+<li>Fixed HUD elements cause eye strain (vergence conflict)</li>
+<li>Menus that follow the user are annoying</li>
+</ul>
+<h3 id="three-ui-attachment-strategies">Three UI Attachment Strategies</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
 <th>Type</th>
-<th>Weight</th>
-<th>Due</th>
+<th>Attached To</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>Continuous Lab Work</td>
-<td>30%</td>
-<td>Ongoing</td>
+<td>World-locked</td>
+<td>Scene</td>
+<td>Sign, button on wall</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>XR Case Study</td>
-<td>30%</td>
-<td>Week 6</td>
+<td>Body-locked</td>
+<td>User (with lag)</td>
+<td>Wrist menu</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Individual Project</td>
-<td>40%</td>
-<td>Week 12</td>
+<td>Head-locked</td>
+<td>Camera (fixed)</td>
+<td>Crosshair, HUD</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="technologies-we-use" class="slide level2">
-<h2>Technologies We Use</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Software</strong></p>
-<ul>
-<li>Unity and XR Interaction Toolkit</li>
-<li>Lens Studio</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Hardware</strong></p>
-<ul>
-<li>Meta Quest 2 and Quest 3</li>
-<li>HTC Vive Pro</li>
-<li>Pico Neo Eye</li>
-<li>HoloLens 2</li>
-<li>Snap Spectacles 2022</li>
-<li>Display Glasses</li>
-</ul>
-</div></div>
-</section>
-<section id="what-is-xr" class="slide level2">
-<h2>What Is XR?</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p><strong>XR — eXtended Reality</strong> is an umbrella term for the full spectrum of immersive technologies.</p>
-</div>
-</div>
-</div>
-<p>It covers:</p>
-<ul>
-<li>Virtual Reality (VR)</li>
-<li>Augmented Reality (AR)</li>
-<li>Mixed Reality (MR)</li>
-<li>Spatial Computing</li>
-</ul>
-</section>
-<section id="virtual-reality" class="slide level2">
-<h2>Virtual Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<blockquote>
-<p>The user is placed inside a <strong>fully synthetic environment</strong>.</p>
-</blockquote>
-<ul>
-<li>No view of the real world</li>
-<li>Complete sensory substitution (visual, audio, haptic)</li>
-</ul>
-<p><strong>Examples:</strong> Meta Quest, HTC Vive Pro</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/ai-images/38f8cca5-a629-4f18-9614-a07d7c940b90.png"></p>
-</div></div>
-</section>
-<section id="augmented-reality" class="slide level2">
-<h2>Augmented Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/ai-images/fcf2ab94-c0f7-46d3-8d4c-dcd3f61db704.png"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>Digital content is <strong>overlaid on the real world</strong>.</p>
-</blockquote>
-<ul>
-<li>The real world remains visible</li>
-<li>Digital objects appear to exist in physical space</li>
-</ul>
-<p><strong>Examples:</strong> HoloLens 2, Snap Spectacles, Pokémon GO</p>
-</div></div>
-</section>
-<section id="mixed-reality" class="slide level2">
-<h2>Mixed Reality</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/mr.png"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>A spectrum between fully real and fully virtual.</p>
-</blockquote>
-<ul>
-<li>Digital and physical objects <strong>coexist and interact</strong></li>
-</ul>
-<p><strong>Examples:</strong> HoloLens 2, Meta Quest 3 with passthrough</p>
-</div></div>
-</section>
-<section id="spatial-computing" class="slide level2">
-<h2>Spatial Computing</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/sddefault.webp"></p>
-</div><div class="column" style="width:50%;">
-<blockquote>
-<p>A broader paradigm shift in how we interact with computers.</p>
-</blockquote>
-<ul>
-<li>Computing moves <strong>into the environment</strong></li>
-<li>Interfaces are no longer confined to screens</li>
-</ul>
-<p><strong>Examples:</strong> Apple Vision Pro, HoloLens 2</p>
-</div></div>
-</section>
-<section id="comparing-xr-modalities" class="slide level2">
-<h2>Comparing XR Modalities</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="replaces-reality">Replaces Reality</h3>
-<p><strong>Virtual Reality</strong><br>
-Fully synthetic — no real world visible</p>
-</div><div class="column" style="width:50%;">
-<h3 id="extends-reality">Extends Reality</h3>
-<p><strong>AR / MR / Spatial Computing</strong><br>
-Digital and physical worlds combined</p>
-</div></div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Tip</strong></p>
-</div>
-<div class="callout-content">
-<p>Most modern XR devices sit somewhere along this spectrum.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="the-realityvirtuality-continuum" class="slide level2">
-<h2>The Reality–Virtuality Continuum</h2>
-
-<img data-src="https://odvtslzlamhvkuthtsnx.supabase.co/storage/v1/object/public/course-assets/6a209b95-5042-4522-9bd7-91e70bc02ae0/images/milgram-mr.png" class="r-stretch"><p>Milgram and Kishino (1994) described a spectrum:</p>
-<p>Most modern XR devices sit somewhere in the middle.</p>
-</section>
-<section id="why-does-this-matter-now" class="slide level2">
-<h2>Why Does This Matter Now?</h2>
-<ul>
-<li>Hardware has become affordable and accessible</li>
-<li>Processing power has reached mobile XR</li>
-<li>Spatial computing is entering mainstream use</li>
-<li>Industry demand for XR skills is growing rapidly</li>
-</ul>
-</section>
-<section id="key-industry-moments" class="slide level2">
-<h2>Key Industry Moments</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>Event</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2012</td>
-<td>Oculus Rift Kickstarter</td>
-</tr>
-<tr class="even">
-<td>2016</td>
-<td>Consumer VR launches (Rift, Vive, PSVR)</td>
-</tr>
-<tr class="odd">
-<td>2019</td>
-<td>Quest 1 — standalone VR</td>
-</tr>
-<tr class="even">
-<td>2021</td>
-<td>Meta rebrands around the metaverse</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td>Apple Vision Pro announced</td>
-</tr>
-<tr class="even">
-<td>2024</td>
-<td>Spatial computing enters enterprise and consumer markets</td>
-</tr>
-<tr class="odd">
-<td>2025</td>
-<td>Smart glasses and AI began a shift in focus from optics &amp; displays</td>
-</tr>
-<tr class="even">
-<td>2026</td>
-<td>Smart glasses became the industry’s center of gravity</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="hardware-in-this-module" class="slide level2">
-<h2>Hardware in This Module</h2>
+<section id="diegetic-vs-non-diegetic-ui" class="slide level2">
+<h2>Diegetic vs Non-Diegetic UI</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Device</th>
 <th>Type</th>
-<th>Primary Use</th>
+<th>Definition</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Quest 2</td>
-<td>VR</td>
-<td>Primary student HMD</td>
+<td><strong>Diegetic</strong></td>
+<td>Exists in the world</td>
+<td>Health bar on character’s chest</td>
 </tr>
 <tr class="even">
-<td>Quest 3</td>
-<td>VR/MR</td>
-<td>Mixed reality and passthrough</td>
+<td><strong>Non-diegetic</strong></td>
+<td>Overlaid on world</td>
+<td>Traditional HUD</td>
 </tr>
 <tr class="odd">
-<td>Vive Pro</td>
-<td>VR</td>
-<td>High-fidelity comparison</td>
+<td><strong>Spatial</strong></td>
+<td>In world, not on character</td>
+<td>Floating damage numbers</td>
 </tr>
 <tr class="even">
-<td>Pico Neo Eye</td>
-<td>VR</td>
-<td>Eye tracking</td>
-</tr>
-<tr class="odd">
-<td>HoloLens 2</td>
-<td>MR</td>
-<td>Spatial computing</td>
-</tr>
-<tr class="even">
-<td>Snap Spectacles</td>
-<td>AR</td>
-<td>Lightweight AR</td>
-</tr>
-<tr class="odd">
-<td>Display Glasses</td>
-<td>Passive display</td>
-<td>Comparison</td>
+<td><strong>Meta</strong></td>
+<td>Outside the world</td>
+<td>Pause menu</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Best practice for VR</strong>: Prefer diegetic UI — it maintains immersion and avoids vergence issues.</p>
 </section>
-<section id="dof-vs-3dof" class="slide level2">
-<h2>6DOF vs 3DOF</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="dof">3DOF</h3>
-<p>Tracks <strong>rotation only</strong></p>
-<ul>
-<li>Pitch</li>
-<li>Yaw</li>
-<li>Roll</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="dof-1">6DOF</h3>
-<p>Tracks <strong>rotation AND position</strong></p>
-<ul>
-<li>Pitch, Yaw, Roll</li>
-<li>X, Y, Z translation</li>
-</ul>
-<p><em>Allows the user to physically move through space.</em></p>
-</div></div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>All primary devices in this module are <strong>6DOF</strong>.</p>
-</div>
-</div>
-</div>
+<section id="wrist-menu-pattern" class="slide level2">
+<h2>Wrist Menu Pattern</h2>
+<p>A common and effective body-locked UI pattern:</p>
+<ol type="1">
+<li>User raises wrist (palm up)</li>
+<li>Menu appears on inner wrist</li>
+<li>User selects with other hand</li>
+<li>Wrist lowered = menu dismissed</li>
+</ol>
+<p><strong>Advantages</strong>: Discoverable, low fatigue, natural gesture</p>
 </section>
-<section id="inside-out-vs-outside-in-tracking" class="slide level2">
-<h2>Inside-Out vs Outside-In Tracking</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="inside-out">Inside-Out</h3>
-<p>Cameras <strong>on the headset</strong> track the environment</p>
-<p><em>Examples: Quest 2, Quest 3</em></p>
-</div><div class="column" style="width:50%;">
-<h3 id="outside-in">Outside-In</h3>
-<p><strong>External sensors</strong> track the headset</p>
-<p><em>Examples: Vive Pro (base stations)</em></p>
-</div></div>
-</section>
-<section id="this-week-lab-and-practical" class="slide level2">
-<h2>This Week: Lab and Practical</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="lab">Lab</h3>
+<section id="accessibility-in-xr-interaction" class="slide level2">
+<h2>Accessibility in XR Interaction</h2>
 <ul>
-<li>Set up Unity XR project</li>
-<li>Install XR Interaction Toolkit</li>
-<li>Deploy a basic scene to Quest 2</li>
-<li>Test locomotion and object interaction</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h3 id="practical">Practical</h3>
-<p>Build a minimal XR scene:</p>
-<ul>
-<li>A simple environment</li>
-<li>Basic locomotion</li>
-<li>One interactive object</li>
-</ul>
-</div></div>
-</section>
-<section id="key-questions-to-carry-through-the-module" class="slide level2">
-<h2>Key Questions to Carry Through the Module</h2>
-<ul>
-<li>What makes an XR experience feel <em>real</em>?</li>
-<li>What makes an interaction feel <em>natural</em>?</li>
-<li>How do we design for a body in space?</li>
-<li>What are the ethical responsibilities of XR designers?</li>
+<li><strong>Seated mode</strong> — all interactions reachable from chair</li>
+<li><strong>One-handed mode</strong> — full functionality with one controller</li>
+<li><strong>Comfort presets</strong> — locomotion, FOV, speed options</li>
+<li><strong>Text size</strong> — minimum 24pt at 1m viewing distance</li>
+<li><strong>Colour contrast</strong> — don’t rely on colour alone</li>
 </ul>
 </section>
-<section id="further-reading" class="slide level2">
-<h2>Further Reading</h2>
+<section id="lab-preview" class="slide level2">
+<h2>Lab Preview</h2>
+<p>This week’s lab: - Implement teleportation in Unity - Build a wrist menu - Compare diegetic vs non-diegetic UI approaches - Test on Quest 2 and Vive Pro</p>
+</section>
+<section id="key-takeaways" class="slide level2">
+<h2>Key Takeaways</h2>
 <ul>
-<li>Jerald, J. (2015) <em>The VR Book</em>. ACM Books.</li>
-<li>LaViola et al.&nbsp;(2017) <em>3D User Interfaces</em> (2nd ed.)</li>
-<li>Milgram, P. and Kishino, F. (1994) A taxonomy of mixed reality visual displays</li>
+<li>Gesture design requires careful attention to comfort and discoverability</li>
+<li>Locomotion is the biggest comfort challenge in VR — always offer teleport</li>
+<li>Spatial UI should prefer diegetic approaches</li>
+<li>Accessibility is not optional — design for seated, one-handed, and comfort-sensitive users</li>
 </ul>
 </section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
+<section id="references" class="slide level2">
+<h2>References</h2>
 <ul>
-<li>XR covers VR, AR, MR, and spatial computing</li>
-<li>The reality–virtuality continuum describes the spectrum</li>
-<li>Hardware has matured rapidly</li>
-<li>This module combines theory, critique, and practice</li>
-<li>Assessment is continuous, case study, and project</li>
+<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books.</li>
+<li>Bowman, D.A. et al.&nbsp;(2004) <em>3D User Interfaces</em>. Pearson.</li>
+<li>Oculus Design Guidelines: <a href="https://developer.oculus.com/design">developer.oculus.com/design</a></li>
+<li>Microsoft Mixed Reality Design: <a href="https://learn.microsoft.com/windows/mixed-reality/design">learn.microsoft.com/windows/mixed-reality/design</a></li>
 </ul>
-<blockquote>
-<p>Next week: XR Hardware and Systems</p>
-</blockquote>
 
 
 </section>
