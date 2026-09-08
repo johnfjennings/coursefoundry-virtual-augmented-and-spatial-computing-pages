@@ -224,6 +224,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#semester-at-a-glance" id="toc-semester-at-a-glance" class="nav-link active" data-scroll-target="#semester-at-a-glance">Semester at a Glance</a></li>
+  <li><a href="#assessment-milestones" id="toc-assessment-milestones" class="nav-link" data-scroll-target="#assessment-milestones">Assessment Milestones</a></li>
   </ul>
 </nav>
     </div>
@@ -330,56 +331,56 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>7</td>
-<td>[Week 7 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Spatial Mapping, Anchors &amp; Scene Understanding</td>
+<td>The mechanics behind the word <em>spatial</em> in the module title. SLAM, tracking and relocalisation, plane detection and scene meshes, and spatial anchors as the means by which digital content acquires a durable place in a real room. Covers depth-based occlusion, coordinate spaces, and the privacy questions raised by continuous room scanning.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="even">
 <td>8</td>
-<td>[Week 8 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Environment &amp; World Design</td>
+<td>Content creation for a medium where the user owns the viewpoint. Scale and proportion at 1:1, comfort zones and sightlines, wayfinding and affordance expressed through 3D form, lighting as direction, and environmental storytelling — the replacements for the camera control XR does not permit.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="odd">
 <td>9</td>
-<td>[Week 9 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Spatial Audio &amp; Haptics</td>
+<td>Audio as the highest-yield presence technique available on this hardware. HRTF and binaural rendering, spatialisers, attenuation curves and reverb zones; then haptic design as a vocabulary of amplitude, frequency and duration, and the cross-modal illusions that imply physics the simulation never computes.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="even">
 <td>10</td>
-<td>[Week 10 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Performance, Comfort &amp; Optimisation</td>
+<td>Frame rate treated as a comfort and accessibility requirement rather than polish. Motion-to-photon latency and refresh targets, tile-based mobile GPU rendering, draw calls and overdraw, foveated rendering and Application SpaceWarp, and a profiling methodology that measures before it optimises.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="odd">
 <td>11</td>
-<td>[Week 11 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Evaluation Methods &amp; User Testing</td>
+<td>Finding out whether the thing works for people who are not you. Method selection across heuristic evaluation, think-aloud and task-based measurement; the SUS, SSQ, IPQ and NASA-TLX instruments; writing tasks rather than leading questions; and consent and duty of care when a participant is visually isolated.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="even">
 <td>12</td>
-<td>[Week 12 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>Accessibility, Inclusion &amp; Behavioural Ethics</td>
+<td>Who is excluded by the decisions already made, and what the design does to those it reaches. Seated modes, reach calibration, captions in 3D, contrast, and motion and photosensitivity; then the <em>affecting behaviour</em> strand — persuasion and dark patterns at immersive leverage, embodiment effects, and governance of eye, hand and room data.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 </tr>
 <tr class="odd">
 <td>13</td>
-<td>[Week 13 topic]</td>
-<td><em>Summary to be added.</em></td>
+<td>XR Futures, Industry &amp; Showcase</td>
+<td>Where the field is going and how to read the claims made about it. OpenXR and WebXR standardisation, AI in the XR stack, the display roadmap toward lightweight glasses, and applications beyond games. Closes with the project showcase and the Assessment 3 submission clinic.</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
 <td style="text-align: center;">✓</td>
@@ -389,7 +390,8 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Total hours across semester:</strong> 65 hours</p>
 <section id="semester-at-a-glance" class="level2">
 <h2 class="anchored" data-anchor-id="semester-at-a-glance">Semester at a Glance</h2>
-<p>The diagram below summarises the topic flow across the 13 weeks. Weeks 1–6 (confirmed) establish the theoretical, technical and analytical foundations of XR; Weeks 7–13 are placeholders pending topic confirmation.</p>
+<p>Delivery runs as two parallel tracks. The <strong>theoretical track</strong> (the weekly lecture) builds the conceptual and analytical vocabulary of spatial computing. The <strong>practical track</strong> (the practical and laboratory sessions) extends Unity competence on Quest hardware. The two are deliberately coupled each week: the lecture supplies the concept the lab then makes tangible.</p>
+<p>Weeks 1–6 establish foundations; Weeks 7–13 apply them while the individual project is built, with each assessment milestone falling in a session designed to produce it.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -407,30 +409,68 @@ ul.task-list li input[type="checkbox"] {
         W1 --&gt; W2 --&gt; W3 --&gt; W4 --&gt; W5 --&gt; W6
     end
 
-    subgraph T["To Be Defined \(Weeks 7-13\)"]
+    subgraph A["Application \(Weeks 7-13\)"]
         direction LR
-        W7["Week 7"]
-        W8["Week 8"]
-        W9["Week 9"]
-        W10["Week 10"]
-        W11["Week 11"]
-        W12["Week 12"]
-        W13["Week 13"]
+        W7["Week 7&lt;br/&gt;Spatial Mapping,&lt;br/&gt;Anchors &amp;amp; Scene Understanding"]
+        W8["Week 8&lt;br/&gt;Environment &amp;amp;&lt;br/&gt;World Design"]
+        W9["Week 9&lt;br/&gt;Spatial Audio&lt;br/&gt;&amp;amp; Haptics"]
+        W10["Week 10&lt;br/&gt;Performance, Comfort&lt;br/&gt;&amp;amp; Optimisation"]
+        W11["Week 11&lt;br/&gt;Evaluation Methods&lt;br/&gt;&amp;amp; User Testing"]
+        W12["Week 12&lt;br/&gt;Accessibility, Inclusion&lt;br/&gt;&amp;amp; Behavioural Ethics"]
+        W13["Week 13&lt;br/&gt;XR Futures, Industry&lt;br/&gt;&amp;amp; Showcase"]
         W7 --&gt; W8 --&gt; W9 --&gt; W10 --&gt; W11 --&gt; W12 --&gt; W13
     end
 
-    F --&gt; T
+    F --&gt; A
 
-    classDef confirmed fill:#4c8bf5,stroke:#2a5db0,color:#fff;
-    classDef pending fill:#e0e0e0,stroke:#999,color:#333,stroke-dasharray: 4 3;
-    class W1,W2,W3,W4,W5,W6 confirmed;
-    class W7,W8,W9,W10,W11,W12,W13 pending;
+    classDef foundation fill:#2563eb,stroke:#1b3360,color:#fff;
+    classDef application fill:#f97316,stroke:#b4530b,color:#fff;
+    class W1,W2,W3,W4,W5,W6 foundation;
+    class W7,W8,W9,W10,W11,W12,W13 application;
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
+</section>
+<section id="assessment-milestones" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-milestones">Assessment Milestones</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6</td>
+<td><strong>Assessment 2 due</strong> — XR Experience Analysis &amp; Interaction Prototype (30%). Assessment 3 concept agreed and platform chosen.</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td><strong>Assessment 3</strong> — core interaction working on device, demonstrated in the Week 9 lab.</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td><strong>Assessment 3</strong> — testable build evaluated by peers in the Week 11 practical.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td><strong>Assessment 3</strong> — evaluation complete and improvements applied.</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td><strong>Assessment 3 submission</strong> — report, video and build, finalised in the submission clinic.</td>
+</tr>
+</tbody>
+</table>
+<p>Assessment 1 (Practical Evaluation, 30%) runs continuously across all thirteen weeks and is evidenced through the laboratory and practical sessions.</p>
 
 
 </section>
