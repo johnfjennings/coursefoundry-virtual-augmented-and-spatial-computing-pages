@@ -273,11 +273,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lecture-notes" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="lecture-notes"><span class="header-section-number">1</span> Lecture Notes</h2>
+<div class="sp-embed-player" data-id="cOhIlOnt0JL" data-aspect-ratio="1.777778" data-padding-top="56.250000%" style="position:relative;width:100%;padding-top:56.250000%;height:0;">
+<script src="https://go.screenpal.com/player/appearance/cOhIlOnt0JL"></script>
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no" src="https://go.screenpal.com/player/cOhIlOnt0JL?ff=1&amp;ahc=1&amp;dcc=1&amp;tl=1&amp;bg=transparent&amp;share=1&amp;download=1&amp;embed=1&amp;cl=1" allowfullscreen="true">
+</iframe>
+</div>
 </section>
 <section id="introduction" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2</span> Introduction</h2>
 <p>This module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.</p>
 <p>This first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.</p>
+<p>It is worth being honest about why the vocabulary matters, because “getting the definitions right” can look like an academic exercise. It is not. The terms in this lecture map directly onto engineering decisions. Whether a system is optical see-through or video see-through determines what your content can look like, because you cannot render black on an optical display. Whether tracking is 3DOF or 6DOF determines whether a user can lean around an object, which in turn determines whether your scene can contain anything worth leaning around. Whether a device understands the room it is in determines whether your content can sit on a real table or must float in front of the user’s face. Every one of these is a design constraint before it is a technical specification, and the words we use are how we reason about them.</p>
+<p>A second point before we begin. This field has an unusually strong marketing vocabulary running alongside its technical one, and the two frequently disagree. Manufacturers describe their products in whatever terms are currently favourable — the same headset has been sold as VR, as mixed reality, and as spatial computing within a few years, without the hardware changing much. Part of your job on this module is to be able to look past the positioning and describe what a device actually does.</p>
 <hr>
 </section>
 <section id="defining-the-xr-spectrum" class="level2" data-number="3">
@@ -287,6 +294,9 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="3.1" class="anchored" data-anchor-id="virtual-reality-vr"><span class="header-section-number">3.1</span> Virtual Reality (VR)</h3>
 <p>In a VR system, the user’s visual field is entirely replaced by a synthetic environment. The headset blocks out the physical world and presents a stereoscopic 3D image that responds to the user’s head movement. High-quality VR systems also include spatial audio, hand controllers with haptic feedback, and room-scale tracking.</p>
 <p>The defining characteristic of VR is <strong>sensory substitution</strong> — the system replaces real sensory input with synthetic input. The quality of this substitution determines how convincing the experience feels.</p>
+<p>Two consequences follow from total visual replacement, and they shape almost everything in the rest of this module.</p>
+<p>The first is that the system becomes responsible for the user’s safety. Someone in a VR headset cannot see the floor, the furniture, other people, or their own hands unless you draw them. This is why guardian and boundary systems exist, and why every lab session in this module begins by clearing a floor area. It is also why a VR experience that encourages large physical movement carries a duty of care that a screen-based one does not.</p>
+<p>The second is that the system becomes responsible for the user’s comfort in a way no screen is. If the image lags behind head movement, the user’s visual system reports one thing and their vestibular system reports another, and the result is nausea. We return to this properly in Week 3, but note now that this is a physiological response to a technical failure — not a matter of the user being sensitive or insufficiently accustomed.</p>
 </section>
 <section id="augmented-reality-ar" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="augmented-reality-ar"><span class="header-section-number">3.2</span> Augmented Reality (AR)</h3>
@@ -297,16 +307,26 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>projection-based AR</strong> (digital content is projected directly onto real surfaces)</li>
 </ul>
 <p>The defining characteristic of AR is that the real world remains visible and the digital content must be registered accurately to physical space.</p>
+<p>That word <strong>registered</strong> is doing a great deal of work. Registration means the digital content holds its correct position relative to the physical world as the user moves. A virtual object that slides a few centimetres when you turn your head is not augmenting reality; it is floating in front of your eyes. Registration quality is the single clearest technical difference between a convincing AR system and an unconvincing one, and it is why Week 7 spends an entire session on spatial mapping and anchors.</p>
+<p>The distinction between optical and video see-through has consequences that catch people out repeatedly, so it is worth stating plainly:</p>
+<ul>
+<li><strong>You cannot render black on an optical see-through display.</strong> These displays add light to the scene; they cannot subtract it. Black is simply the absence of projected light, which means it is transparent. Dark UI, drop shadows and solid backgrounds all fail. Content must be designed to read as luminous.</li>
+<li><strong>Video see-through can render black, but everything you see is a camera image.</strong> Real-world colour, dynamic range and latency are all mediated by the camera pipeline. The real world is subject to the same frame budget as your content.</li>
+<li><strong>Occlusion works differently in each.</strong> On a video see-through system, you can composite virtual objects behind real ones if you have depth data. On most optical systems, virtual content is additive light and will appear to ghost through real objects regardless.</li>
+</ul>
 </section>
 <section id="mixed-reality-mr" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="mixed-reality-mr"><span class="header-section-number">3.3</span> Mixed Reality (MR)</h3>
 <p>Mixed reality is a term used in different ways by different organisations. In its most precise sense (following Milgram and Kishino’s taxonomy), MR refers to any point on the reality-virtuality continuum between fully real and fully virtual. In practice, it is often used to describe systems where digital and physical objects interact — for example, a virtual ball that bounces off a real table.</p>
 <p>The HoloLens 2 and Meta Quest 3 are both marketed as mixed reality devices.</p>
+<p>The looseness of this term is worth naming rather than resolving. In current industry usage, “mixed reality” most often signals that a headset can show you the real world through passthrough and place content in it with some awareness of geometry. That is a meaningful capability, but it is a narrower claim than Milgram’s, and when you read a specification sheet you should establish which sense is meant. The practical test is to ask what the system knows about the room: a device that merely shows you a camera feed is doing something quite different from one that has detected your walls, floor and furniture and can place a virtual object on your actual desk.</p>
 </section>
 <section id="spatial-computing" class="level3" data-number="3.4">
 <h3 data-number="3.4" class="anchored" data-anchor-id="spatial-computing"><span class="header-section-number">3.4</span> Spatial Computing</h3>
 <p>Spatial computing is a broader paradigm that describes computing systems that understand and interact with three-dimensional space. Rather than confining computation to a screen, spatial computing embeds it in the environment. This includes XR devices but also extends to robotics, autonomous vehicles, and smart environments.</p>
 <p>Apple’s Vision Pro is positioned explicitly as a spatial computing device rather than a VR or AR headset, reflecting a deliberate shift in how the industry frames these technologies.</p>
+<p>The framing shift is not only marketing. It carries a real claim: that the interesting property of these systems is not the display but the <em>spatial awareness</em> — the device’s model of where it is, what is around it, and how the user relates to both. On that reading, a headset is one form factor among several, and the defining capability is persistence. Content that knows where it is, and is still there tomorrow, behaves like part of the environment rather than like an application you launched.</p>
+<p>This is the sense in which the module title uses the term, and it is why the second half of the semester moves from interaction technique into mapping, anchoring and environment design.</p>
 <hr>
 </section>
 </section>
@@ -338,6 +358,10 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>This framework is useful because it reminds us that the distinction between VR and AR is not binary. Many modern devices can operate at different points on this continuum depending on their mode of use.</p>
+<p><strong>Augmented virtuality</strong> is the least familiar of these terms and the most useful for understanding modern hardware. It describes a predominantly virtual environment into which real elements are imported — a virtual meeting room containing a live video feed of a real colleague, or a fully synthetic scene in which your real hands are visible. A Quest 3 running a VR application that shows your real keyboard through passthrough is operating in augmented virtuality, and this is now a common design pattern rather than an exotic one.</p>
+<p>Two cautions about applying the taxonomy.</p>
+<p>First, it is a taxonomy of <strong>visual displays</strong>, published in 1994 and framed accordingly. It says nothing about audio, haptics, interaction technique or social presence, all of which matter as much as the visual channel and some of which we will argue matter more. When you position an experience on the continuum in Week 6, you are describing one dimension of it.</p>
+<p>Second, modern devices move along the continuum at runtime. A single Quest 3 application may open in passthrough, fade to a fully virtual environment for a task, and return. The useful question is therefore not “where does this device sit” but “where does this <em>experience</em> sit, at this moment, and why did the designer choose that point?” That question is the basis of the analysis you will produce for Assessment 2.</p>
 <hr>
 </section>
 <section id="a-brief-history-of-xr" class="level2" data-number="5">
@@ -352,6 +376,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>1992:</strong> The CAVE (Cave Automatic Virtual Environment) is developed at the University of Illinois</li>
 <li><strong>1994:</strong> Milgram and Kishino publish their taxonomy of mixed reality</li>
 </ul>
+<p>Sutherland’s 1965 essay is worth reading in full — it is three pages long and remarkably undated. His formulation of the goal, a display in which matter itself can be controlled by the computer, still describes the ambition better than most contemporary marketing. The 1968 headset that followed was so heavy it had to be suspended from the ceiling, which is where its nickname comes from.</p>
+<p>The early 1990s produced the field’s first consumer wave, and its first collapse. Virtuality arcade machines appeared in shopping centres, Sega announced and then cancelled a headset, and Nintendo shipped the Virtual Boy in 1995 to poor sales and widespread complaints of headaches. The technology could not yet deliver what the concept promised: displays were low resolution, tracking was slow, and latency was high enough to make many users unwell within minutes. The lesson is not that the ideas were wrong but that immersive systems fail ungracefully. A screen application that runs poorly is annoying; an immersive one that runs poorly makes people ill and they do not come back.</p>
 </section>
 <section id="the-first-consumer-wave-20122016" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="the-first-consumer-wave-20122016"><span class="header-section-number">5.2</span> The First Consumer Wave (2012–2016)</h3>
@@ -361,6 +387,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>2016:</strong> Consumer launches of Oculus Rift, HTC Vive, and PlayStation VR</li>
 <li><strong>2016:</strong> Pokémon GO demonstrates mass-market AR</li>
 </ul>
+<p>What changed between 1995 and 2012 was largely borrowed rather than invented. The smartphone industry had driven down the cost of high-density displays, accelerometers, gyroscopes and mobile processors to the point where a headset could be assembled from commodity parts. This is a recurring pattern in the field and a useful lens for evaluating claims about the future: ask which adjacent industry is paying for the component improvements.</p>
+<p>Pokémon GO deserves particular attention because it is the most commercially successful AR product to date and it uses almost none of the technology this module covers. There was no registration to speak of, no depth sensing, no scene understanding. Its achievement was locational and social rather than perceptual, which is a useful corrective to the assumption that technical sophistication drives adoption.</p>
 </section>
 <section id="standalone-and-spatial-computing-2019present" class="level3" data-number="5.3">
 <h3 data-number="5.3" class="anchored" data-anchor-id="standalone-and-spatial-computing-2019present"><span class="header-section-number">5.3</span> Standalone and Spatial Computing (2019–present)</h3>
@@ -371,6 +399,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>2023:</strong> Apple announces Vision Pro at WWDC</li>
 <li><strong>2024:</strong> Spatial computing enters enterprise and consumer markets at scale</li>
 </ul>
+<p>The significant transition here is the removal of the cable. Standalone headsets traded graphical fidelity for the elimination of a PC, a setup process and a tether, and that trade turned out to be strongly favourable for adoption. It also created the constraint you will spend Week 10 working within: a standalone headset is a mobile device with a mobile GPU, rendering two views at 72Hz or better, and your frame budget is correspondingly tight.</p>
+<p>The current period is best understood as unresolved rather than settled. Headsets are capable but bulky; glasses are comfortable but limited; the compelling consumer application has not obviously arrived; and enterprise deployment is growing steadily but with less visibility. You are studying this field during a genuinely open moment, which is more interesting than studying a mature one.</p>
 <hr>
 </section>
 </section>
@@ -379,13 +409,25 @@ ul.task-list li input[type="checkbox"] {
 <p>A fundamental concept in XR hardware is <strong>degrees of freedom (DOF)</strong>, which describes how many independent axes of movement a tracking system can detect.</p>
 <section id="dof" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="dof"><span class="header-section-number">6.1</span> 3DOF</h3>
-<p>Three degrees of freedom tracks <strong>rotation only</strong>: - pitch (nodding) - yaw (shaking head) - roll (tilting head)</p>
+<p>Three degrees of freedom tracks <strong>rotation only</strong>:</p>
+<ul>
+<li>pitch (nodding)</li>
+<li>yaw (shaking head)</li>
+<li>roll (tilting head)</li>
+</ul>
 <p>3DOF systems cannot detect the user moving through space. They are suitable for 360-degree video viewing but not for interactive VR.</p>
+<p>The perceptual consequence is worth experiencing rather than reading about. In a 3DOF system, leaning to look around an object does not work — the world rotates with you but does not shift, so the object stays stubbornly in front of you. Because your vestibular system correctly reports that you moved while your eyes report that the world did not respond, 3DOF systems tend to feel subtly wrong even to users who cannot articulate why, and they provoke discomfort more readily than 6DOF systems during any movement more energetic than sitting still.</p>
 </section>
 <section id="dof-1" class="level3" data-number="6.2">
 <h3 data-number="6.2" class="anchored" data-anchor-id="dof-1"><span class="header-section-number">6.2</span> 6DOF</h3>
-<p>Six degrees of freedom tracks <strong>rotation and position</strong>: - pitch, yaw, roll (rotation) - x, y, z (position in space)</p>
+<p>Six degrees of freedom tracks <strong>rotation and position</strong>:</p>
+<ul>
+<li>pitch, yaw, roll (rotation)</li>
+<li>x, y, z (position in space)</li>
+</ul>
 <p>6DOF allows the user to physically move through the virtual environment. All primary devices in this module support 6DOF tracking.</p>
+<p>6DOF is what makes parallax work, and parallax is a large part of why virtual objects read as solid and located rather than as images. It is also what makes physical crouching, leaning and stepping available as interaction techniques — a design vocabulary with no screen-based equivalent.</p>
+<p>Note that head tracking and controller tracking are separate questions. A headset may be 6DOF while its controllers are 3DOF, which was common in earlier standalone devices and immediately rules out direct manipulation of objects in space.</p>
 <hr>
 </section>
 </section>
@@ -394,27 +436,47 @@ ul.task-list li input[type="checkbox"] {
 <section id="inside-out-tracking" class="level3" data-number="7.1">
 <h3 data-number="7.1" class="anchored" data-anchor-id="inside-out-tracking"><span class="header-section-number">7.1</span> Inside-Out Tracking</h3>
 <p>Cameras mounted on the headset observe the environment and use computer vision to determine the headset’s position and orientation. This approach requires no external hardware and is used by the Meta Quest 2, Quest 3, and HoloLens 2.</p>
-<p>Advantages: - no external setup required - portable and flexible</p>
-<p>Limitations: - can struggle in low-light or featureless environments - tracking volume limited by camera field of view</p>
+<p>Advantages:</p>
+<ul>
+<li>no external setup required</li>
+<li>portable and flexible</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>can struggle in low-light or featureless environments</li>
+<li>tracking volume limited by camera field of view</li>
+</ul>
+<p>The mechanism underneath is worth naming now because Week 7 returns to it in detail. Inside-out tracking is a form of <strong>SLAM</strong> — simultaneous localisation and mapping. The device identifies visual features in the environment, builds a sparse map of them, and continuously estimates its own pose relative to that map. Two practical consequences follow.</p>
+<p>The first is that tracking quality depends on the room. A space with plenty of visual texture — furniture, posters, patterned surfaces — tracks well. A blank white studio, a dark room, or a space dominated by reflective or repetitive surfaces tracks poorly, because the system cannot find or distinguish features. This is a common cause of “the headset is broken” reports that are actually room problems.</p>
+<p>The second is <strong>drift</strong>. Small errors in pose estimation accumulate, so a virtual object left in place may be a few centimetres away from where it was after a period of use. Systems correct for this by recognising previously mapped areas, a process called relocalisation, which is also how content can be restored to the right place in a new session.</p>
 </section>
 <section id="outside-in-tracking" class="level3" data-number="7.2">
 <h3 data-number="7.2" class="anchored" data-anchor-id="outside-in-tracking"><span class="header-section-number">7.2</span> Outside-In Tracking</h3>
 <p>External sensors (base stations or cameras) track the headset and controllers. The HTC Vive Pro uses this approach with SteamVR base stations.</p>
-<p>Advantages: - highly accurate and reliable - large tracking volume possible</p>
-<p>Limitations: - requires setup and calibration - not portable</p>
+<p>Advantages:</p>
+<ul>
+<li>highly accurate and reliable</li>
+<li>large tracking volume possible</li>
+</ul>
+<p>Limitations:</p>
+<ul>
+<li>requires setup and calibration</li>
+<li>not portable</li>
+</ul>
+<p>Outside-in tracking has largely lost the consumer market to inside-out, but it persists where precision matters more than convenience: motion capture, research settings, location-based entertainment and professional training installations. It also has a genuine technical advantage in that it does not depend on the visual texture of the room, and it does not suffer the same drift behaviour, since position is measured against fixed external references rather than an accumulated internal map.</p>
 <hr>
 </section>
 </section>
 <section id="the-hardware-in-this-module" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="the-hardware-in-this-module"><span class="header-section-number">8</span> The Hardware in This Module</h2>
-<p>You will have access to a range of devices throughout this module. Each offers different capabilities and design constraints.</p>
+<p>You will have access to a range of devices throughout this module. Each offers different capabilities and design constraints. Week 2 examines this landscape comparatively; the purpose here is simply to know what is in the room.</p>
 <section id="meta-quest-2" class="level3" data-number="8.1">
 <h3 data-number="8.1" class="anchored" data-anchor-id="meta-quest-2"><span class="header-section-number">8.1</span> Meta Quest 2</h3>
 <p>The primary student HMD. Standalone, 6DOF, inside-out tracking, touch controllers with haptics. Widely used in industry and education. The baseline platform for most lab and practical work.</p>
 </section>
 <section id="meta-quest-3" class="level3" data-number="8.2">
 <h3 data-number="8.2" class="anchored" data-anchor-id="meta-quest-3"><span class="header-section-number">8.2</span> Meta Quest 3</h3>
-<p>Adds full-colour passthrough for mixed reality, improved processing, and slimmer form factor. Useful for exploring the boundary between VR and MR.</p>
+<p>Adds full-colour passthrough for mixed reality, improved processing, and slimmer form factor. Useful for exploring the boundary between VR and MR, and required for the mixed reality and scene understanding work in Week 7.</p>
 </section>
 <section id="htc-vive-pro" class="level3" data-number="8.3">
 <h3 data-number="8.3" class="anchored" data-anchor-id="htc-vive-pro"><span class="header-section-number">8.3</span> HTC Vive Pro</h3>
@@ -422,19 +484,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="pico-neo-eye" class="level3" data-number="8.4">
 <h3 data-number="8.4" class="anchored" data-anchor-id="pico-neo-eye"><span class="header-section-number">8.4</span> Pico Neo Eye</h3>
-<p>Includes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering. Used in Week 5 for eye tracking exploration.</p>
+<p>Includes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering — relevant to the gaze input discussion in Week 4 and to the rendering techniques covered in Week 10.</p>
 </section>
 <section id="hololens-2" class="level3" data-number="8.5">
 <h3 data-number="8.5" class="anchored" data-anchor-id="hololens-2"><span class="header-section-number">8.5</span> HoloLens 2</h3>
-<p>Microsoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The primary platform for spatial computing work in Week 10.</p>
+<p>Microsoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The clearest available demonstration of the optical see-through constraints described above, and a useful comparison point for the spatial mapping work in Week 7.</p>
 </section>
 <section id="snap-spectacles-2022" class="level3" data-number="8.6">
 <h3 data-number="8.6" class="anchored" data-anchor-id="snap-spectacles-2022"><span class="header-section-number">8.6</span> Snap Spectacles 2022</h3>
-<p>Lightweight AR glasses with a small display. Used in Week 9 alongside Lens Studio for AR lens development.</p>
+<p>Lightweight AR glasses with a small display. Useful for understanding the form factor trade-off between glasses and headsets, and available alongside Lens Studio as a platform option for Assessment 2.</p>
 </section>
 <section id="display-glasses" class="level3" data-number="8.7">
 <h3 data-number="8.7" class="anchored" data-anchor-id="display-glasses"><span class="header-section-number">8.7</span> Display Glasses</h3>
-<p>Passive display glasses for comparison and demonstration purposes.</p>
+<p>Passive display glasses for comparison and demonstration purposes. These present a virtual screen without tracking the world, which makes them a useful illustration of where “AR glasses” marketing outruns capability.</p>
 <hr>
 </section>
 </section>
@@ -444,18 +506,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-body-is-the-interface" class="level3" data-number="9.1">
 <h3 data-number="9.1" class="anchored" data-anchor-id="the-body-is-the-interface"><span class="header-section-number">9.1</span> The body is the interface</h3>
 <p>In XR, the user’s physical body — their hands, head, gaze, voice, and movement — becomes the primary input device. Design must account for physical ergonomics, fatigue, and the limits of human movement.</p>
+<p>The practical implication is that interaction has a physical cost that accumulates. An interface element placed slightly too high is a minor annoyance on the first use and a source of genuine shoulder fatigue on the fiftieth. Screen interfaces do not degrade this way, and the habit of ignoring physical cost is one of the harder ones to unlearn. Week 4 gives this a name — gorilla arm — and a measurement method.</p>
 </section>
 <section id="space-is-the-canvas" class="level3" data-number="9.2">
 <h3 data-number="9.2" class="anchored" data-anchor-id="space-is-the-canvas"><span class="header-section-number">9.2</span> Space is the canvas</h3>
 <p>Rather than arranging elements on a flat surface, XR designers work in three-dimensional space. Objects have position, scale, and orientation. The user can move around them, look at them from different angles, and interact with them physically.</p>
+<p>You also lose control of the camera. In film and in most games, the designer decides what the viewer sees and when; in XR, the user decides, and taking that control back is one of the most reliable ways to make someone unwell. Everything you might have done with a cut or a camera move must instead be done with composition, light, sound and motion. Week 8 is largely about the techniques that replace the camera.</p>
 </section>
 <section id="presence-changes-behaviour" class="level3" data-number="9.3">
 <h3 data-number="9.3" class="anchored" data-anchor-id="presence-changes-behaviour"><span class="header-section-number">9.3</span> Presence changes behaviour</h3>
 <p>Research has shown that people behave differently in immersive environments than they do in front of screens. They respond emotionally to virtual stimuli, feel genuine discomfort in threatening virtual situations, and can develop real skills through virtual practice. This makes XR a powerful tool — and a significant ethical responsibility.</p>
+<p>The same mechanism that makes immersive training effective makes immersive persuasion effective, and the user has fewer defences than they do against a screen: they cannot easily look away, the content surrounds them, and the system knows where they are looking. Week 12 addresses this directly, but it is worth holding in mind from the first prototype rather than treating ethics as a topic that arrives near the end of term.</p>
 </section>
 <section id="comfort-is-a-design-constraint" class="level3" data-number="9.4">
 <h3 data-number="9.4" class="anchored" data-anchor-id="comfort-is-a-design-constraint"><span class="header-section-number">9.4</span> Comfort is a design constraint</h3>
 <p>Unlike screen-based interfaces, XR can cause physical discomfort — motion sickness, eye strain, neck fatigue, and disorientation. Good XR design treats comfort as a first-class design requirement, not an afterthought.</p>
+<p>Two specific mechanisms are worth naming now. <strong>Vergence-accommodation conflict</strong> arises because your eyes converge on a virtual object at its apparent distance while remaining focused on the physical display a few centimetres away; the mismatch contributes to eye strain, particularly for near content. <strong>Frame timing</strong> matters because a dropped frame delays the world’s response to head movement, producing exactly the sensory conflict that causes nausea. Both are covered properly later — Week 3 for the perceptual account, Week 10 for the engineering — but note that comfort is where the perceptual and technical halves of this module meet, and that a comfort failure is not a polish issue you can defer.</p>
 <hr>
 </section>
 </section>
@@ -468,6 +534,8 @@ ul.task-list li input[type="checkbox"] {
 <li>evaluate your work honestly, including its limitations</li>
 <li>consider the ethical implications of immersive design</li>
 </ul>
+<p>Concretely, the semester runs as two parallel tracks. The weekly lecture builds the conceptual and analytical vocabulary — what presence is, how perception works, which frameworks let you say precisely why an interaction fails. The practical and laboratory sessions extend your Unity competence on the hardware. The two are deliberately coupled: the concept introduced on the Monday is generally the thing you build or measure later in the week.</p>
+<p>The assessment structure follows the same logic. Assessment 1 runs continuously and rewards evidenced practical work. Assessment 2, at the midpoint, asks you to look outward at an existing experience and deconstruct it, then prove the analysis by rebuilding one of its interactions. Assessment 3 is your own project, where you set the concept and defend the decisions. A recurring theme in the marking criteria is that a design choice you can justify is worth more than a technically impressive one you cannot.</p>
 <hr>
 </section>
 <section id="self-check-questions" class="level2" data-number="11">
@@ -481,6 +549,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Name three devices available in this module and describe one unique capability of each.</li>
 <li>Why is comfort a design constraint in XR?</li>
 <li>How does the body function differently as an interface in XR compared to traditional computing?</li>
+<li>Why can a designer not render solid black on an optical see-through display, and what does that imply for UI design?</li>
+<li>What does it mean for AR content to be <em>registered</em> to the physical world, and why is registration quality so noticeable to users?</li>
+<li>Give an example of augmented virtuality using hardware available in this module.</li>
+<li>Why does inside-out tracking perform poorly in a blank white room?</li>
+<li>What does the failure of the mid-1990s consumer VR wave suggest about the relationship between latency and adoption?</li>
+<li>Give one reason why Pokémon GO’s commercial success is a poor predictor of which XR technologies will succeed.</li>
 </ol>
 <hr>
 </section>
@@ -490,7 +564,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books. Chapters 1 and 2.</li>
 <li>LaViola, J. et al.&nbsp;(2017) <em>3D User Interfaces: Theory and Practice</em> (2nd ed.). Addison-Wesley. Chapter 1.</li>
 <li>Milgram, P. and Kishino, F. (1994) A taxonomy of mixed reality visual displays. <em>IEICE Transactions on Information and Systems</em>, E77-D(12).</li>
-<li>Sutherland, I. (1965) The ultimate display. <em>Proceedings of IFIP Congress</em>.</li>
+<li>Sutherland, I. (1965) The ultimate display. <em>Proceedings of IFIP Congress</em>. Three pages, and still the clearest statement of the field’s ambition.</li>
+<li>Schmalstieg, D. and Höllerer, T. (2016) <em>Augmented Reality: Principles and Practice</em>. Addison-Wesley. Chapter 1 for the display taxonomy, Chapter 3 for tracking.</li>
 <li>Meta Quest developer documentation: <a href="https://developer.oculus.com">https://developer.oculus.com</a></li>
 </ul>
 
