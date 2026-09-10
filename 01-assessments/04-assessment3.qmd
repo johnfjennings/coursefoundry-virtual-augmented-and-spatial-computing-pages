@@ -1,0 +1,119 @@
+---
+title: "Assessment 3"
+subtitle: "Individual Project — Interactive Immersive Application"
+format: html
+draft: true
+author: "Mr. John Jennings"
+---
+
+## Overview
+
+Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.
+
+This is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.
+
+| Item | Detail |
+|---|---|
+| Weighting | 40% |
+| Type | Individual project |
+| Submission | Individual |
+| Due | End of semester |
+
+---
+
+## Learning Outcomes
+
+This assessment covers all four module outcomes:
+
+- **LO1:** Critical understanding of 3D systems and AR/VR principles in a spatial computing context
+- **LO2:** Explore, critique and deconstruct modern VR, AR and spatial computing experiences
+- **LO3:** Theoretical understanding of, and practical competence with, advanced input/output devices and sensors
+- **LO4:** Apply HCI principles to the construction **and evaluation** of immersive systems
+
+---
+
+## The Brief
+
+Build an interactive immersive application on one of the platforms used in this module.
+
+Your project must:
+
+- run on real hardware, not only in the editor
+- support meaningful user interaction beyond looking around
+- make deliberate, defensible design choices about comfort, input and spatial layout
+- be evaluated with real users, however small the sample
+
+The scope is yours to set. **A small, polished, well-evaluated project scores higher than an ambitious broken one.** Depth beats breadth.
+
+### Example directions
+
+- a training or procedural simulation
+- a spatial data or information tool
+- an AR experience anchored to real surfaces or objects
+- an accessibility-focused interaction study
+- an experimental or artistic immersive piece
+
+Talk to me before committing if you are unsure whether your idea has enough substance.
+
+---
+
+## Milestones
+
+These are checkpoints, not separate submissions. They exist to stop projects failing late.
+
+| Point | What you should have |
+|---|---|
+| Week 6 | Concept agreed and platform chosen |
+| Week 9 | Core interaction working on device |
+| Week 11 | Testable build, ready for peer evaluation |
+| Week 12 | Evaluation complete, improvements applied |
+
+---
+
+## Deliverables
+
+1. **Application build** — an installable or runnable build for the target device, plus project source files.
+2. **Demonstration video** — 3 to 5 minutes, captured through the lens or in first-person, showing the application actually running.
+3. **Project report** — 2500 to 3000 words.
+4. **Evaluation evidence** — your test materials, notes or questionnaire responses.
+
+### Report structure
+
+1. Concept and rationale
+2. Design decisions, with reference to module concepts
+3. Technical implementation
+4. Evaluation method and findings
+5. Critical reflection and further work
+
+---
+
+## Marking Criteria
+
+| Component | Weight | What we look for |
+|---|---|---|
+| Technical implementation | 30% | Runs reliably on device. Competent use of the toolchain. Appropriate complexity. |
+| Interaction and experience design | 25% | Deliberate, justified design choices. Comfort and usability taken seriously. |
+| Evaluation | 20% | A real method, honestly applied, with findings that actually informed changes. |
+| Critical reflection | 15% | Engages with module theory. Honest about limitations. |
+| Presentation and documentation | 10% | Clear report and video. Professional communication. |
+
+---
+
+## Marking Bands
+
+| Band | Descriptor |
+|---|---|
+| 70–100 | Ambitious but controlled. Runs reliably. Design choices are explicitly grounded in module theory. Evaluation is genuine and demonstrably changed the work. Reflection is critical and self-aware. |
+| 60–69 | Solid, working application with clear design reasoning. Evaluation carried out competently. Reflection shows good understanding. |
+| 50–59 | Application runs with limitations. Design reasoning present but thin or mostly implicit. Evaluation minimal. Reflection descriptive. |
+| Below 50 | Incomplete or non-functional. Little design rationale, no meaningful evaluation, no critical engagement. |
+
+---
+
+## Tips
+
+- **Lock your scope early.** The most common failure in this module is a concept too large to finish.
+- **Get it onto hardware in week one of building.** Deployment problems found late are fatal.
+- **Test with someone who has not seen it.** You cannot evaluate your own interface.
+- **Write the report as you go.** Design decisions are impossible to reconstruct honestly at the end.
+- **Report what did not work.** Honest evaluation of a flawed prototype scores better than a claim that everything worked perfectly.

@@ -1,0 +1,95 @@
+---
+title: "Assessment 1"
+subtitle: "Practical Evaluation — Continuous Lab Work"
+format: html
+draft: true
+author: "Mr. John Jennings"
+---
+
+## Overview
+
+Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.
+
+The purpose is to build **demonstrable technical competence** with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.
+
+| Item | Detail |
+|---|---|
+| Weighting | 30% |
+| Type | Continuous practical evaluation |
+| Submission | Individual |
+| Due | Ongoing — evidenced weekly, portfolio submitted end of semester |
+
+---
+
+## Learning Outcomes
+
+- **LO1:** Demonstrate a critical understanding of the concepts and principles of 3D systems and augmented and virtual reality in the context of spatial computing
+- **LO2:** Explore, critique and deconstruct modern VR, AR, and spatial computing experiences
+- **LO3:** Demonstrate theoretical understanding of, and practical competence in the use of advanced input and output devices and sensors in an immersive environment
+
+---
+
+## How It Works
+
+Each laboratory and practical session ends with a stated deliverable — a working scene, a deployed build, a configured device, a documented comparison.
+
+For each session you must:
+
+1. **Complete the session deliverable** and have it signed off by your tutor before you leave.
+2. **Record it in your portfolio** — a short entry with what you built, what worked, what did not, and what you changed.
+3. **Commit your project files** to your student repository.
+
+Sign-off is the primary evidence. A portfolio entry without a working deliverable behind it carries no marks.
+
+---
+
+## Portfolio Requirements
+
+Maintain a single running portfolio for the semester. Each weekly entry should contain:
+
+- the session title and date
+- a screenshot, screen capture, or through-the-lens video of the working result
+- a short technical note — 150 to 250 words — covering what you implemented and any problems you solved
+- a link to the relevant commit or project folder
+
+Keep entries short and specific. This is a working log, not an essay.
+
+---
+
+## What Is Being Assessed
+
+| Component | Weight | What we look for |
+|---|---|---|
+| Technical execution | 40% | Deliverables work on the target device. Correct use of the toolchain and SDKs. |
+| Consistency and engagement | 25% | Sustained weekly participation and sign-off across the semester. |
+| Documentation quality | 20% | Clear, accurate, specific portfolio entries with usable evidence. |
+| Problem solving | 15% | Evidence of diagnosing and resolving issues rather than avoiding them. |
+
+---
+
+## Marking Bands
+
+| Band | Descriptor |
+|---|---|
+| 70–100 | Consistent weekly deliverables, all working on device. Confident, independent use of the toolchain. Documentation is precise and shows real diagnostic reasoning. |
+| 60–69 | Most deliverables complete and working. Good technical competence with occasional gaps. Documentation is clear. |
+| 50–59 | Deliverables partially complete or unreliable on device. Basic competence. Documentation thin or inconsistent. |
+| Below 50 | Significant gaps in attendance or deliverables. Work does not run. Little or no usable evidence. |
+
+---
+
+## Practical Notes
+
+- **Sign-off must happen in the session.** Work shown late cannot be verified against the session it belongs to.
+- **Deploy to hardware wherever the session calls for it.** Editor-only results do not demonstrate LO3.
+- **Missed a session?** Speak to me the same week. Catch-up is possible; silent absence is not.
+- **Handle the hardware carefully** and report any damage immediately.
+
+---
+
+## Tips
+
+- Capture evidence *while* the thing is working — not from memory afterwards.
+- Write the technical note the same day. It takes ten minutes then and an hour later.
+- Record failures as well as successes. Diagnosing a problem is assessable; hiding it is not.
+- Keep your repository tidy and current. It is part of the evidence.

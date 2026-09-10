@@ -1,0 +1,111 @@
+---
+title: "Assessment 2"
+subtitle: "XR Experience Analysis & Interaction Prototype"
+format: html
+draft: true
+author: "Mr. John Jennings"
+---
+
+## Overview
+
+In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.
+
+This task combines **analysis, design, and implementation**, allowing you to demonstrate your understanding of XR systems and interaction design.
+
+| Item | Detail |
+|---|---|
+| Weighting | 30% |
+| Type | Case study and prototype |
+| Submission | Individual |
+| Due | Week 6 |
+
+---
+
+## Learning Outcomes
+
+- **LO2:** Critique and deconstruct XR experiences
+- **LO3:** Demonstrate practical competence with XR systems
+- **LO4:** Apply HCI principles in immersive environments
+
+---
+
+## Task
+
+### Part 1 — Experience Analysis
+
+Select an XR experience (VR, AR, or spatial computing).
+
+Analyse:
+
+- Interaction design
+- Presence and immersion
+- Spatial design
+- Strengths and weaknesses
+- Comfort and usability
+
+Support with:
+
+- Screenshots or diagrams
+- References to lecture concepts
+
+---
+
+### Part 2 — Interaction Prototype
+
+Recreate **one key interaction** using Unity or Lens Studio.
+
+Examples:
+
+- Object manipulation
+- Gesture interaction
+- UI selection (ray, gaze)
+- Navigation system
+
+Your prototype must:
+
+- Be interactive and functional
+- Demonstrate understanding of XR input/output
+
+A focused prototype is encouraged. You are **not** expected to recreate the entire original experience.
+
+---
+
+### Part 3 — Evaluation
+
+Evaluate your prototype:
+
+- What works well?
+- What doesn't?
+- How does it compare to the original?
+- What would you improve?
+
+---
+
+## Submission
+
+Submit:
+
+- **Report (1500–2000 words)**
+- **Prototype build (Unity / Lens Studio)**
+- **Video demo (2–3 minutes)**
+
+---
+
+## Marking Criteria
+
+| Component | Weight |
+|----------|--------|
+| Analysis | 30% |
+| Prototype | 30% |
+| HCI Application | 20% |
+| Evaluation | 10% |
+| Presentation | 10% |
+
+---
+
+## Tips
+
+- Be **critical, not descriptive**
+- Focus on **interaction design**
+- Link your work to **module concepts**
+- Keep your prototype **simple but functional**
