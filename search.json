@@ -1,5 +1,192 @@
 [
   {
+    "objectID": "weeks/02-week-02/02-lecture.html",
+    "href": "weeks/02-week-02/02-lecture.html",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality-virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#last-week-recap",
+    "href": "weeks/02-week-02/02-lecture.html#last-week-recap",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality-virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#todays-map",
+    "href": "weeks/02-week-02/02-lecture.html#todays-map",
+    "title": "Lecture Notes",
+    "section": "2 Today’s Map",
+    "text": "2 Today’s Map\n\nStandalone VR — Meta Quest 3 / 3S\nMixed reality headsets — Apple Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nThe numbers that actually matter — optics, displays, field of view\nCompute, thermals, and battery\nPlatform SDKs & app stores — Horizon OS vs visionOS\nA framework for critical comparison",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#standalone-vr-meta-quest-3-3s",
+    "href": "weeks/02-week-02/02-lecture.html#standalone-vr-meta-quest-3-3s",
+    "title": "Lecture Notes",
+    "section": "3 Standalone VR: Meta Quest 3 / 3S",
+    "text": "3 Standalone VR: Meta Quest 3 / 3S\nThe Meta Quest 3 and Quest 3S represent the current mainstream of standalone VR — headsets with all compute, battery, and sensors onboard, requiring no PC or console tether.\n\n3.1 Optics\n\nThe Quest 3 uses pancake lenses, which fold light path through polarisation to produce a thinner, sharper optical stack with less distortion at the edges.\nThe Quest 3S uses more traditional Fresnel lenses, which are cheaper to manufacture but introduce more “god rays” (visible light scatter) and a bulkier form factor.\n\nThis is a useful first lesson in hardware critique: two devices from the same manufacturer, released in the same product generation, can make very different optical trade-offs to hit different price points.\nIt is worth understanding why these two lens types behave differently, because the same physics recurs across every device in this module.\nA Fresnel lens approximates a thick convex lens by collapsing it into concentric ridges. This makes it light and cheap, but each ridge boundary is a discontinuity that scatters light. When a bright object sits on a dark background — white text on black, a moon in a night sky — that scatter appears as radial streaks, the “god rays” users complain about. Fresnel lenses also have a small sweet spot: the image is sharp near the optical centre and degrades toward the edges, which is why users are told to adjust the fit until the image “clicks” into focus.\nA pancake lens instead folds the light path back on itself two or three times inside a thin stack, using polarisation to control which pass exits toward the eye. The optical path length is preserved while the physical depth is not, which is what allows a thinner headset with a much larger sweet spot and far less edge distortion. The cost is light: each fold discards a large proportion of the light — typically most of it — so pancake optics require a substantially brighter and more power-hungry display to reach the same perceived brightness. Pancake optics are therefore a choice that spends battery and cost to buy comfort and clarity.\nThe lesson generalises. Optical designs in XR are not ranked from worse to better; they are trades between clarity, weight, brightness, power and price, and a manufacturer’s choice tells you which of those they prioritised for that product.\n\n\n3.2 Passthrough and sensing\nBoth devices offer full-colour passthrough — external cameras feed a live video composite of the real world to the internal displays — plus depth sensing that allows virtual objects to be occluded correctly by real furniture and walls. This is what allows the Quest 3 family to market itself as “mixed reality” capable, not purely VR.\nPassthrough is harder than it sounds, and understanding why explains most of its visible shortcomings.\nThe cameras are not where your eyes are. They sit on the front of the headset, several centimetres forward and apart from your actual eye positions, so the raw camera image has the wrong viewpoint. The system must reproject that image to your eyes’ perspective, which requires depth information — and where depth is wrong or missing, you get the warping around hands and door frames that users notice immediately.\nEverything in the pipeline costs time. Capture, reprojection, composition and display each add latency, and the real world is now subject to that budget. A small delay between moving your head and the room responding is tolerable; a large one is nauseating, for exactly the reasons covered in Week 3.\nCamera sensors also have far less dynamic range than the eye. A room with a bright window will show either a blown-out window or a dark interior, rarely both, and low-light performance is noticeably grainy. When you evaluate passthrough quality in the lab, look specifically at high-contrast scenes and at your own hands — those are where the pipeline shows its limits.\n\n\n3.3 Input\n\nInside-out tracked controllers (retaining physical buttons, triggers, and haptics)\nCamera-based hand tracking (no controllers required, lower fidelity, no haptic feedback)\n\nControllers are tracked by the same headset cameras that track the world, which has one important consequence: a controller the cameras cannot see is not tracked visually. Behind your back, close to your chest, or held against your body, the system falls back on the controller’s inertial sensors, which drift within about a second. This is why designers avoid interactions that require reaching behind the body, and why the Week 5 wrist menu sits where the cameras can see it.\n\n\n\n\n\n\nNoteWhy this matters\n\n\n\nStandalone hardware removed the PC-tether barrier that constrained the first consumer VR wave (2016). This is arguably the single biggest driver of mass XR adoption to date — cost, setup complexity, and physical tethering were the primary barriers identified in early VR adoption research.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#mixed-reality-headsets",
+    "href": "weeks/02-week-02/02-lecture.html#mixed-reality-headsets",
+    "title": "Lecture Notes",
+    "section": "4 Mixed Reality Headsets",
+    "text": "4 Mixed Reality Headsets\n\n4.1 Apple Vision Pro\nApple explicitly avoids calling the Vision Pro a VR or AR headset — it is marketed as a “spatial computing” device. This is a deliberate positioning choice, not just a technical one.\nKey characteristics:\n\nvisionOS introduces a new interaction paradigm built around windows, volumes, and spaces — 2D app windows, 3D volumetric content, and fully immersive environments can coexist\nEye tracking + pinch gesture input replaces controllers as the primary interaction model — you look at what you want and pinch to select\nUses passthrough (video see-through), not optical see-through, despite the “spatial computing” framing\n\nThe eye-tracking-plus-pinch model deserves attention because it is the clearest current answer to a problem we return to in Week 4: gaze is fast and effortless for pointing, but terrible for selecting, because we look at things constantly without meaning to act on them. Separating the two channels — eyes to indicate, hand to commit — sidesteps that. It also has a privacy dimension that Apple treats seriously: where a user looked is not reported to the application, only what they selected, because gaze data reveals attention, interest and arousal in ways users have no intuition about. We return to that in Week 12.\n\n\n4.2 HoloLens 2\nMicrosoft’s HoloLens 2 takes a different technical approach entirely:\n\nOptical see-through waveguide display — the user looks directly through a transparent lens with light guided into the eye, meaning the real world is never digitised or delayed\nNarrower field of view than consumer VR headsets, a direct consequence of waveguide optics\nStrong hand tracking and eye/gaze tracking, voice input\nPositioned squarely for enterprise and industrial use cases (remote assistance, training, field service) rather than consumer entertainment\n\nA waveguide works by injecting an image into the edge of a transparent pane, bouncing it along by total internal reflection, and extracting it toward the eye with a diffraction grating. The real world passes straight through the glass, which is why there is no latency and no camera pipeline. The costs are structural rather than incidental: gratings are wavelength-dependent, so colour uniformity is difficult; only a fraction of the injected light reaches the eye, so the display must be bright and the image still washes out in daylight; and the field of view is limited by the physics of the extraction optics rather than by cost. This is why optical see-through devices have narrow fields of view and are unlikely to catch up with headsets in that respect soon.\nThe consequence for you as a designer is the one raised in Week 1: additive light cannot produce black. On HoloLens, dark UI is invisible, drop shadows do nothing, and a “dimmed” background does not dim. Content has to be designed as luminous, high-contrast, and sparse.\n\n\n4.3 Passthrough vs Optical See-Through\nThis is one of the most important technical distinctions in the whole module, because it explains many downstream differences in latency, fidelity, and use case.\n\n\n\n\n\n\n\n\n\nPassthrough (Video See-Through)\nOptical See-Through\n\n\n\n\nHow it works\nCameras capture the real world; a composite image is rendered and displayed on internal screens\nA transparent lens/waveguide overlays digital content directly onto the user’s natural view\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by camera resolution, dynamic range, and field of view\nPerfect — the user sees real, direct light\n\n\nLatency risk\nCamera-to-display lag can cause a subtle disconnect between real and virtual\nNone for the real-world view; only virtual content can lag\n\n\nOcclusion of virtual content\nStraightforward (composited digitally)\nHarder — virtual light is added on top of real light, so true occlusion of virtual-behind-real is difficult\n\n\n\nTwo further consequences follow from the table and are worth stating explicitly.\nSafety and failure behaviour differ. If an optical see-through device loses power or crashes, the user is looking through clear glass and can walk away. If a passthrough device does the same, the user is blind until they lift the headset. This matters for any application in a workplace, near machinery, or with vulnerable users.\nSocial visibility differs. Optical devices generally let others see the wearer’s eyes. Passthrough devices do not, which is why Vision Pro renders a synthetic image of the wearer’s eyes on an external display — an expensive engineering solution to a purely social problem, and a good illustration that hardware decisions in this field are frequently about acceptability rather than capability.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#ar-glasses-xreal-one-pro-and-peers",
+    "href": "weeks/02-week-02/02-lecture.html#ar-glasses-xreal-one-pro-and-peers",
+    "title": "Lecture Notes",
+    "section": "5 AR Glasses: Xreal One Pro and Peers",
+    "text": "5 AR Glasses: Xreal One Pro and Peers\nA third hardware category sits apart from headsets altogether: lightweight, glasses-form-factor AR devices such as the Xreal One Pro.\nCharacteristics:\n\nDesigned to look and feel like ordinary glasses — lightweight, low profile, socially acceptable to wear in public\nTypically tethered to a phone, laptop, or dedicated puck for compute and battery\nUse birdbath or waveguide optics to project a floating virtual screen in the user’s field of view — commonly used as a private, portable second monitor\nSome newer models add spatial/positional tracking so content can be anchored to the room rather than simply following the user’s head\nOptimised for portability and casual, short-duration wear — not for deep immersion or spatial interaction\n\nBirdbath optics are worth distinguishing from waveguides, since both appear in this category. A birdbath design reflects the display off a beamsplitter into a curved mirror and back to the eye. It gives better colour and contrast than a waveguide at much lower cost, which is why media-viewing glasses use it — but the optical stack is bulkier and the transparency of the real world is reduced, so these devices look more like tinted sunglasses than clear lenses.\nThe critical question to ask of any device in this category is whether it tracks the world at all. Many “AR glasses” are 3DOF display devices: they show a screen that follows your head, with no knowledge of the room. That is a legitimate product — a private monitor is useful — but it is not augmented reality in the sense Azuma defined it, which requires registration in three dimensions (Azuma 1997). When you evaluate these in the lab, establish first whether content stays put when you walk around it.\n\n5.1 AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses (e.g. Xreal One Pro)\nMR/VR Headsets (e.g. Quest 3, Vision Pro)\n\n\n\n\nCompute\nTethered to a host device\nOnboard (standalone)\n\n\nField of view\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal — largely passive viewing\nRich — hands, gaze, controllers\n\n\nPrimary use case\nScreen replacement, private media viewing\nGames, training, spatial computing, social VR",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#the-numbers-that-actually-matter",
+    "href": "weeks/02-week-02/02-lecture.html#the-numbers-that-actually-matter",
+    "title": "Lecture Notes",
+    "section": "6 The Numbers That Actually Matter",
+    "text": "6 The Numbers That Actually Matter\nSpecification sheets are written to sell devices, and the most prominent numbers are frequently the least informative. Three in particular are worth being able to interpret.\n\n6.1 Resolution, and why it misleads\nA headset advertised at “4K per eye” sounds directly comparable to a 4K television, and is not. On a television, those pixels are spread across a screen occupying perhaps 30 degrees of your vision. In a headset, they are spread across 100 degrees or more. The same pixel count is stretched over three times the angular area, so the perceived sharpness is far lower than the number suggests.\nThe meaningful metric is pixels per degree (PPD) — how many pixels fall within one degree of your visual field. Current consumer headsets sit around 20–35 PPD. Human foveal vision resolves roughly 60 PPD, which is the informal target for “retinal” quality and which no consumer headset has yet reached. When comparing two devices, PPD tells you which will look sharper; raw resolution alone does not, because it says nothing about how widely those pixels are spread.\nLow PPD produces the screen-door effect, where the unlit gaps between pixels become visible as a fine grid. It has largely receded on current hardware but is still noticeable on bright, uniform surfaces.\n\n\n6.2 Field of view, and why quoted figures disagree\nFOV can be quoted horizontally, vertically, or diagonally, and manufacturers naturally quote whichever is largest — usually the diagonal. Two devices claiming “110 degrees” may differ substantially in the horizontal figure that actually determines how much of a scene you see without turning your head.\nThere is also binocular overlap — the portion of the field both eyes see, which is where stereoscopic depth is available. A wide total FOV with poor overlap gives peripheral awareness but a narrower region of genuine depth perception.\nFor AR specifically, FOV is the dominant complaint about optical see-through devices, and it is a physics constraint rather than a cost one. Content that extends beyond the display simply stops at a hard edge, which is far more noticeable than a peripheral limit in VR because the real world continues around it.\n\n\n6.3 Refresh rate\nQuoted in hertz — commonly 72, 90 or 120. This is not a smoothness preference as it would be on a monitor; it sets the ceiling on motion-to-photon latency, the delay between moving your head and the display responding. Below roughly 20 milliseconds, most users are comfortable; above it, discomfort rises quickly.\nThe number on the box is the display’s capability. Whether your application actually achieves it is a separate question, and the subject of Week 10.\n\n\n6.4 Panel technology\n\nLCD — cheaper, good brightness and pixel fill, but weaker blacks and contrast. Used in the Quest series.\nOLED / micro-OLED — true blacks, high contrast, very fast response; more expensive, and micro-OLED enables the small, dense panels that pancake optics and high PPD require. Used in Vision Pro.\n\nPanel choice interacts with optics: pancake lenses discard most of the light, so they pair naturally with the brightness available from micro-OLED.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#compute-thermals-and-battery",
+    "href": "weeks/02-week-02/02-lecture.html#compute-thermals-and-battery",
+    "title": "Lecture Notes",
+    "section": "7 Compute, Thermals, and Battery",
+    "text": "7 Compute, Thermals, and Battery\nA standalone headset is a mobile device. It runs a phone-class system-on-chip, rendering two views of your scene, every frame, while simultaneously running computer vision for tracking, hand detection and passthrough. That workload is substantial before your application does anything at all.\nThree consequences follow, and all three will affect your Assessment 3 project.\nYour frame budget is small. At 72Hz you have under 14 milliseconds per frame for everything, and the system has already spent part of it. This is why Week 10 treats performance as a comfort requirement rather than polish, and why techniques such as foveated rendering exist.\nThermal throttling is real. Sustained load heats the device, and the SoC reduces its clock speed to stay within thermal limits. A build that runs acceptably for five minutes may degrade noticeably after twenty. Test sessions long enough to see this, because your users will.\nBattery constrains session design. Two to three hours is typical, less under heavy load. An experience intended for a classroom or exhibition has to account for charging, and for the fact that a warm headset is an uncomfortable one.\nTethered devices — the Vive Pro, or glasses tethered to a puck — trade mobility for a larger power and thermal envelope, which is precisely why they retain an advantage in visual fidelity. This is the same trade appearing again in a different form.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#platform-sdks-and-app-stores",
+    "href": "weeks/02-week-02/02-lecture.html#platform-sdks-and-app-stores",
+    "title": "Lecture Notes",
+    "section": "8 Platform SDKs and App Stores",
+    "text": "8 Platform SDKs and App Stores\nHardware is only half the story. The software platform a device runs on determines what developers can build, how it is distributed, and how it is reviewed.\n\n8.1 Meta Horizon OS\n\nBuilt around the Meta XR SDK, with support for Unity, Unreal, and native development\nDistribution via the Meta Horizon Store (curated, reviewed) and App Lab (lighter-touch, more experimental distribution)\nPublishing requires meeting comfort ratings and performance benchmarks before an app can be listed\n\nThat last point is unusual and worth dwelling on. Meta will reject an application for failing to hold its frame rate. There are very few software platforms where performance is a review criterion rather than a quality preference — and the reason is the one established in Week 1, that a slow immersive application does not merely feel sluggish, it makes people unwell.\n\n\n8.2 visionOS\n\nBuilt around RealityKit and SwiftUI, developed almost exclusively through Xcode\nDistribution via the Apple App Store, subject to Apple’s standard app review process\nApple publishes spatial-specific Human Interface Guidelines (HIG) that developers are expected to follow — covering topics like comfortable interaction distances, eye-tracking privacy, and window behaviour\n\n\n\n8.3 OpenXR and the portability question\nBoth platforms above are vendor ecosystems, and building directly against either creates lock-in. OpenXR is the cross-vendor standard intended to address this: an application written against OpenXR can, in principle, run on any conformant runtime.\nIn practice, portability is partial. OpenXR covers the common core — sessions, spaces, input actions, rendering — but every vendor exposes distinguishing features through extensions, and those features are frequently the ones you actually want. Scene understanding, passthrough configuration and hand-tracking detail are typically vendor extensions. The realistic position is that OpenXR makes porting substantially cheaper, not free, and that is the assumption you should carry into a platform recommendation.\nThis is why your Unity projects in this module target OpenXR with the Meta feature group enabled: the standard underneath, the vendor’s capabilities on top.\n\n\n\n\n\n\nImportantConnecting back to Week 1\n\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action — you experienced first-hand how an app moves from build to device via that ecosystem. This week’s practical asks you to research the visionOS pipeline and compare it directly against that experience.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#a-framework-for-critical-comparison",
+    "href": "weeks/02-week-02/02-lecture.html#a-framework-for-critical-comparison",
+    "title": "Lecture Notes",
+    "section": "9 A Framework for Critical Comparison",
+    "text": "9 A Framework for Critical Comparison\nRather than memorising specification sheets, use these four criteria to evaluate any XR device you encounter — in this module, in industry, or in a device that has not been released yet:\n\nComfort — weight, weight distribution, fit, and how long a typical user can comfortably use it in one session\nField of view (FOV) — measured in degrees; affects edge clipping and how much of a task or environment is visible without turning the head\nTracking fidelity — the accuracy, latency, and robustness of head, hand, and/or eye tracking, especially in non-ideal conditions\nEcosystem maturity — the strength of the SDK, the size and quality of the app store or distribution channel, and the size of the developer and content community\n\nThese four criteria will recur throughout the module whenever we introduce a new device or platform.\n\n9.1 Using the framework honestly\nTwo notes on applying it.\nFirst, weight distribution matters more than weight. A heavier headset with a rear counterweight is frequently more comfortable over an hour than a lighter one that hangs entirely off the face. Total mass is the number on the spec sheet; the distribution is what the user feels. This is exactly the kind of judgement that only comes from wearing the device, which is what this week’s lab is for.\nSecond, tracking fidelity should be assessed under adverse conditions, not ideal ones. Every device tracks well in a well-lit, textured room while standing still. The differences appear in dim light, near blank walls, with fast head movement, or with a controller held out of camera view.\n\n\n9.2 What the framework leaves out\nNo four-item framework is complete, and being able to say what yours omits is part of using it critically. Three candidates you may wish to add, depending on the brief:\n\nPrice and total cost of ownership — including controllers, facial interfaces, charging infrastructure and the replacement cost when a student drops one\nContent and tooling availability — a technically superior device with no engine support and no content is not the better choice for a twelve-week project\nSocial acceptability and privacy — whether the device can reasonably be worn in front of other people, and what it records about the wearer and the room while doing so\n\nThe fourth criterion, ecosystem maturity, partly captures the second of these, but the framework as stated has nothing to say about cost or privacy — and in a real client recommendation, cost usually decides.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#reading-a-spec-sheet-critically",
+    "href": "weeks/02-week-02/02-lecture.html#reading-a-spec-sheet-critically",
+    "title": "Lecture Notes",
+    "section": "10 Reading a Spec Sheet Critically",
+    "text": "10 Reading a Spec Sheet Critically\nA short checklist you can apply to any device announcement:\n\nIs the resolution given with a field of view? Without both, you cannot compute PPD, and the resolution figure alone tells you little.\nIs the FOV horizontal or diagonal? If unstated, assume diagonal, which is the more flattering figure.\nIs the refresh rate the display’s maximum or a sustained figure? These are different claims.\nIs tracking 6DOF for the headset only, or for the controllers too?\nDoes it understand the room, or only show it? Passthrough is not scene understanding.\nWhat is the battery figure measured doing? Idle, video playback and interactive rendering give very different numbers.\nWhat is missing entirely? Weight distribution, thermal behaviour under sustained load, and daylight legibility are rarely in the marketing material and frequently decide whether a device is usable.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#key-questions-to-carry-forward",
+    "href": "weeks/02-week-02/02-lecture.html#key-questions-to-carry-forward",
+    "title": "Lecture Notes",
+    "section": "11 Key Questions to Carry Forward",
+    "text": "11 Key Questions to Carry Forward\n\nIs “spatial computing” a genuinely distinct technical category, or primarily a marketing category used to differentiate Apple’s device?\nDoes the “best” device for a given use case have to be the most technically impressive one?\nHow much should ecosystem maturity weigh against raw hardware specifications when recommending a platform to a client or employer?\nIf optical see-through cannot render black and cannot match a headset’s field of view, what class of applications is it nonetheless the right choice for?\n\nKeep these questions in mind for this week’s lab and practical — you will be asked to take a position and justify it.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#this-week-in-the-lab",
+    "href": "weeks/02-week-02/02-lecture.html#this-week-in-the-lab",
+    "title": "Lecture Notes",
+    "section": "12 This Week in the Lab",
+    "text": "12 This Week in the Lab\n\nHands-on device stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nA structured observation template to complete for each device\nA group critical comparison activity, applying the four-criteria framework against a chosen use case",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#this-week-in-the-practical",
+    "href": "weeks/02-week-02/02-lecture.html#this-week-in-the-practical",
+    "title": "Lecture Notes",
+    "section": "13 This Week in the Practical",
+    "text": "13 This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS development and distribution pipeline\nBuild a platform comparison matrix and a short written recommendation",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#self-check-questions",
+    "href": "weeks/02-week-02/02-lecture.html#self-check-questions",
+    "title": "Lecture Notes",
+    "section": "14 Self-Check Questions",
+    "text": "14 Self-Check Questions\n\nWhat optical technology does the Quest 3 use, and how does it differ from the Quest 3S?\nWhat is the technical difference between passthrough and optical see-through displays? Name a device that uses each.\nWhy is Apple Vision Pro marketed as “spatial computing” rather than VR or AR?\nWhat are the main differences between AR glasses (e.g. Xreal One Pro) and MR/VR headsets in terms of compute, FOV, and interaction?\nCompare Meta Horizon OS and visionOS in terms of SDK, distribution, and review process.\nWhat are the four criteria in the critical comparison framework, and why is each one important?\nWhy might ecosystem maturity matter as much as, or more than, raw hardware specifications when choosing a platform?\nWhy do pancake lenses require a brighter display than Fresnel lenses?\nTwo headsets both advertise “4K per eye”. What further information do you need before deciding which will look sharper, and why?\nWhy is passthrough imagery reprojected before it is displayed, and what visual artefact appears when the reprojection is wrong?\nWhy does a controller held behind your back lose tracking, and what does that imply for interaction design?\nWhat does OpenXR make portable, and what does it not?\nWhy does Meta treat frame rate as an app review criterion rather than a quality preference?\nName two things the four-criteria framework omits that could decide a real client recommendation.",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#summary",
+    "href": "weeks/02-week-02/02-lecture.html#summary",
+    "title": "Lecture Notes",
+    "section": "15 Summary",
+    "text": "15 Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three genuinely distinct hardware philosophies, not just different price points of the same idea\nOptical designs — Fresnel, pancake, waveguide, birdbath — are trades between clarity, weight, brightness, power and cost, not a ranking from worse to better\nPassthrough vs optical see-through is a key technical and experiential distinction with knock-on effects for latency, fidelity, occlusion, safety and social visibility\nPixels per degree, not raw resolution, determines perceived sharpness; quoted FOV figures are usually diagonal\nA standalone headset is a mobile device with a mobile thermal and power budget, and that budget is the constraint behind most performance advice in this module\nPlatform choice — Horizon OS vs visionOS — shapes tooling, review processes, and distribution; OpenXR reduces lock-in but does not eliminate it\nComfort, FOV, tracking fidelity, and ecosystem maturity together form a repeatable, transferable framework for critiquing any XR device — provided you can also say what it leaves out\n\n\nNext week: Perception and Presence",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/02-lecture.html#further-reading",
+    "href": "weeks/02-week-02/02-lecture.html#further-reading",
+    "title": "Lecture Notes",
+    "section": "16 Further Reading",
+    "text": "16 Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality: A Guide to the Technologies, Applications, and Human Factors for AR and VR (Aukstakalnis 2017)\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice (Schmalstieg and Höllerer 2016) — Chapter 2 for display technologies\nAzuma, R. (1997) A Survey of Augmented Reality (Azuma 1997) — the canonical definition of AR as registered in 3D\nLaViola, J. et al. (2017) 3D User Interfaces: Theory and Practice (LaViola et al. 2017) — Chapters 4 and 5 on output and input hardware\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina (Cronin et al. 2020)\nMilgram, P., Takemura, H., Utsumi, A. and Kishino, F. (1994) Mixed Reality (MR) Reality-Virtuality (RV) Continuum (Milgram et al. 1994)",
+    "crumbs": [
+      "Week 02",
+      "Lecture Notes"
+    ]
+  },
+  {
     "objectID": "weeks/01-week-01/03-practical.html",
     "href": "weeks/01-week-01/03-practical.html",
     "title": "Practical",
@@ -280,6 +467,39 @@
     "title": "Lecture Slides",
     "section": "Early Foundations (1960s–1990s)",
     "text": "Early Foundations (1960s–1990s)\n\n\n\n1965 — Sutherland’s “Ultimate Display” essay\n1968 — Sutherland builds the Sword of Damocles, the first HMD\n1987 — Jaron Lanier coins the term “virtual reality”\n1992 — The CAVE developed at the University of Illinois\n1994 — Milgram and Kishino publish their taxonomy\n\n\n\n\n\n\n\n\nNote\n\n\nThe Sword of Damocles was so heavy it had to be suspended from the ceiling — hence the name.\n\n\n\nThe mid-1990s consumer wave (Virtuality arcades, Nintendo Virtual Boy) failed: low resolution, slow tracking and high latency made many users ill within minutes.",
+    "crumbs": [
+      "Week 01",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/01-week-01/01-slides.html#sword-of-damocles",
+    "href": "weeks/01-week-01/01-slides.html#sword-of-damocles",
+    "title": "Lecture Slides",
+    "section": "Sword of Damocles",
+    "text": "Sword of Damocles\n\n\n\n\n\n1965 — Sutherland’s “Ultimate Display” essay\n1968 — Sutherland builds the Sword of Damocles, the first HMD",
+    "crumbs": [
+      "Week 01",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/01-week-01/01-slides.html#jaron-lanier",
+    "href": "weeks/01-week-01/01-slides.html#jaron-lanier",
+    "title": "Lecture Slides",
+    "section": "Jaron Lanier",
+    "text": "Jaron Lanier\n\n\n\n\n\nVR\n\n\n\n1987 — Jaron Lanier coins the term “virtual reality”",
+    "crumbs": [
+      "Week 01",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/01-week-01/01-slides.html#image-and-text",
+    "href": "weeks/01-week-01/01-slides.html#image-and-text",
+    "title": "Lecture Slides",
+    "section": "Image and text",
+    "text": "Image and text\n\n\n\n\n\n\nDescribe the image\n\n\n\nText alongside the image",
     "crumbs": [
       "Week 01",
       "Lecture Slides"
@@ -799,6 +1019,193 @@
     "crumbs": [
       "Week 01",
       "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#last-week-recap",
+    "href": "weeks/02-week-02/01-slides.html#last-week-recap",
+    "title": "Slides",
+    "section": "Last Week Recap",
+    "text": "Last Week Recap\n\nXR spectrum: VR, AR, MR, Spatial Computing\nThe reality–virtuality continuum (Milgram & Kishino, 1994)\n3DOF vs 6DOF, inside-out vs outside-in tracking\nA brief history from Sutherland (1965) to Vision Pro (2023)",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#this-week",
+    "href": "weeks/02-week-02/01-slides.html#this-week",
+    "title": "Slides",
+    "section": "This Week",
+    "text": "This Week\nThe XR Hardware & Platform Ecosystem\n\nA comparative survey of the current landscape — building the critical vocabulary to evaluate any device, not just memorise specs.\n\nSupports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#todays-map",
+    "href": "weeks/02-week-02/01-slides.html#todays-map",
+    "title": "Slides",
+    "section": "Today’s Map",
+    "text": "Today’s Map\n\nStandalone VR — Meta Quest 2/3/3S\nMixed reality headsets — Vision Pro, HoloLens 2\nAR glasses — Xreal One Pro and peers\nPlatform SDKs & app stores — Horizon OS vs visionOS\nCritical comparison activity",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
+    "href": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
+    "title": "Slides",
+    "section": "1. Standalone VR: Meta Quest 3 / 3S",
+    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking\n\n\n\n\n\n\n\nNote\n\n\nStandalone removed the PC-tether barrier — the single biggest driver of mass XR adoption.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#mixed-reality-headsets",
+    "href": "weeks/02-week-02/01-slides.html#mixed-reality-headsets",
+    "title": "Slides",
+    "section": "2. Mixed Reality Headsets",
+    "text": "2. Mixed Reality Headsets\n\n\nApple Vision Pro\n\n“Spatial computing,” not VR/AR\nvisionOS: windows, volumes, spaces\nEye tracking + pinch input\nPassthrough (video see-through)\n\n\nHoloLens 2\n\nOptical see-through waveguide\nNarrow FOV, strong hand/gaze tracking\nEnterprise/industrial focus",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
+    "href": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
+    "title": "Slides",
+    "section": "Passthrough vs Optical See-Through",
+    "text": "Passthrough vs Optical See-Through\n\n\n\n\nPassthrough\nOptical See-Through\n\n\n\n\nHow\nCameras + screen composite\nTransparent lens overlay\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by cameras\nPerfect (direct light)\n\n\nLatency risk\nCamera-to-display lag\nNone for real world",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#ar-glasses-xreal-one-pro-peers",
+    "href": "weeks/02-week-02/01-slides.html#ar-glasses-xreal-one-pro-peers",
+    "title": "Slides",
+    "section": "3. AR Glasses: Xreal One Pro & Peers",
+    "text": "3. AR Glasses: Xreal One Pro & Peers\n\nLightweight, glasses-form-factor, usually tethered\nBirdbath/waveguide optics project a floating virtual screen\nSome models add spatial/positional tracking for anchored content\nOptimised for portability and casual wear, not immersion",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#ar-glasses-vs-headsets",
+    "href": "weeks/02-week-02/01-slides.html#ar-glasses-vs-headsets",
+    "title": "Slides",
+    "section": "AR Glasses vs Headsets",
+    "text": "AR Glasses vs Headsets\n\n\n\n\n\n\n\n\nFactor\nAR Glasses\nMR/VR Headsets\n\n\n\n\nCompute\nTethered to host\nOnboard\n\n\nFOV\nNarrow, screen-like\nWide, immersive\n\n\nInteraction\nMinimal\nRich (hands, gaze, controllers)\n\n\nUse case\nScreen replacement, media\nGames, training, spatial computing",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#platform-sdks-app-stores",
+    "href": "weeks/02-week-02/01-slides.html#platform-sdks-app-stores",
+    "title": "Slides",
+    "section": "4. Platform SDKs & App Stores",
+    "text": "4. Platform SDKs & App Stores\n\n\nMeta Horizon OS\n\nMeta XR SDK, Unity/Unreal/native\nMeta Horizon Store + App Lab\nComfort ratings, performance benchmarks\n\n\nvisionOS\n\nRealityKit/SwiftUI, Xcode-centric\nApple App Store review\nSpatial-specific HIG requirements",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#connecting-back-to-week-1",
+    "href": "weeks/02-week-02/01-slides.html#connecting-back-to-week-1",
+    "title": "Slides",
+    "section": "Connecting Back to Week 1",
+    "text": "Connecting Back to Week 1\n\n\n\n\n\n\nImportant\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action. This week’s practical asks you to compare that experience directly against visionOS.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#a-framework-for-critical-comparison",
+    "href": "weeks/02-week-02/01-slides.html#a-framework-for-critical-comparison",
+    "title": "Slides",
+    "section": "5. A Framework for Critical Comparison",
+    "text": "5. A Framework for Critical Comparison\nFour criteria to evaluate any XR device:\n\nComfort — weight, fit, session tolerance\nField of view (FOV) — degrees, edge clipping, task impact\nTracking fidelity — accuracy, latency, robustness\nEcosystem maturity — SDK, store, developer/content ecosystem",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#this-week-in-the-lab",
+    "href": "weeks/02-week-02/01-slides.html#this-week-in-the-lab",
+    "title": "Slides",
+    "section": "This Week in the Lab",
+    "text": "This Week in the Lab\n\nDevice stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nStructured observation template per device\nGroup critical comparison activity against a chosen use case",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#this-week-in-the-practical",
+    "href": "weeks/02-week-02/01-slides.html#this-week-in-the-practical",
+    "title": "Slides",
+    "section": "This Week in the Practical",
+    "text": "This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS pipeline\nBuild a platform comparison matrix + written recommendation",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#key-questions-to-carry-forward",
+    "href": "weeks/02-week-02/01-slides.html#key-questions-to-carry-forward",
+    "title": "Slides",
+    "section": "Key Questions to Carry Forward",
+    "text": "Key Questions to Carry Forward\n\nIs “spatial computing” a technical category or a marketing category?\nDoes the “best” device for a use case have to be the most technically impressive?\nHow much does ecosystem maturity matter compared to raw hardware specs?",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#further-reading",
+    "href": "weeks/02-week-02/01-slides.html#further-reading",
+    "title": "Slides",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAukstakalnis, S. (2017) Practical Augmented Reality. Addison-Wesley.\nSchmalstieg, D. and Höllerer, T. (2016) Augmented Reality: Principles and Practice.\nCronin, I., Scoble, R. and Wozniak, S. (2020) The Infinite Retina.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#summary",
+    "href": "weeks/02-week-02/01-slides.html#summary",
+    "title": "Slides",
+    "section": "Summary",
+    "text": "Summary\n\nStandalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three distinct hardware philosophies\nPassthrough vs optical see-through is a key technical and experiential distinction\nPlatform choice (Horizon OS vs visionOS) shapes tooling, review, and distribution\nComfort, FOV, tracking fidelity, and ecosystem maturity give you a repeatable critique framework\n\n\nNext week: Perception and Presence",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#discussion",
+    "href": "weeks/02-week-02/01-slides.html#discussion",
+    "title": "Slides",
+    "section": "Discussion",
+    "text": "Discussion\n\nIs Apple’s “spatial computing” framing for Vision Pro a meaningful technical distinction, or primarily a marketing strategy to differentiate from VR/AR?\nDoes passthrough (video see-through) or optical see-through represent the more promising long-term path for mixed reality, and why?\nHow much weight should ecosystem maturity (SDK quality, app store, developer community) carry against raw hardware specifications when recommending a platform to a client or employer?\nAre glasses-form-factor AR devices like the Xreal One Pro a stepping stone toward full spatial computing, or a fundamentally separate product category?\nWhat trade-offs in FOV, comfort, or tracking fidelity would you accept to gain “social acceptability” in a public-facing AR device?\n\n\nUse these to prompt debate about hardware philosophy and platform strategy — encourage students to take and defend a position.",
+    "crumbs": [
+      "Week 02",
+      "Slides"
     ]
   }
 ]
