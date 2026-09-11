@@ -510,7 +510,29 @@
     "href": "weeks/01-week-01/01-slides.html#the-first-consumer-wave-20122016",
     "title": "Lecture Slides",
     "section": "The First Consumer Wave (2012–2016)",
-    "text": "The First Consumer Wave (2012–2016)\n\n2012 — Oculus Rift Kickstarter raises $2.4 million\n2014 — Facebook acquires Oculus for $2 billion\n2016 — Consumer launches: Oculus Rift, HTC Vive, PlayStation VR\n2016 — Pokémon GO demonstrates mass-market AR\n\n\n\n\n\n\n\nTip\n\n\nWhat changed since 1995? Mostly borrowed, not invented — the smartphone industry drove down the cost of high-density displays, accelerometers, gyroscopes and mobile processors.\n\n\n\nPokémon GO used almost none of the technology this module covers — no registration, no depth sensing, no scene understanding. Its success was locational and social, not perceptual. ## Standalone and Spatial Computing (2019–present) {background-color=“#ffffff”}\n\n2019 — Meta Quest 1 launches: standalone VR, no PC required\n2021 — Meta rebrands from Facebook, announces metaverse strategy\n2022 — Meta Quest Pro introduces mixed reality passthrough\n2023 — Apple announces Vision Pro at WWDC\n2024 — Spatial computing enters enterprise and consumer markets at scale\n\n\n\n\n\n\n\nImportant\n\n\nThe significant transition is removing the cable. Standalone headsets traded graphical fidelity for freedom from a PC, a setup process and a tether — a trade that proved strongly favourable for adoption.\n\n\n\n\nThe current period is unresolved: headsets are capable but bulky, glasses are comfortable but limited, and the compelling consumer application has not obviously arrived. ## Hardware in This Module\n\n\n\n\nDevice\nType\nPrimary Use\n\n\n\n\nQuest 2\nVR\nAccepted fallback\n\n\nQuest 3\nVR/MR\nPrimary target — MR and passthrough\n\n\nVive Pro\nVR\nHigh-fidelity comparison\n\n\nPico Neo Eye\nVR\nEye tracking\n\n\nHoloLens 2\nMR\nSpatial computing\n\n\nSnap Spectacles\nAR\nLightweight AR\n\n\nDisplay Glasses\nPassive display\nComparison",
+    "text": "The First Consumer Wave (2012–2016)\n\n2012 — Oculus Rift Kickstarter raises $2.4 million\n2014 — Facebook acquires Oculus for $2 billion\n2016 — Consumer launches: Oculus Rift, HTC Vive, PlayStation VR\n2016 — Pokémon GO demonstrates mass-market AR\n\n\n\n\n\n\n\nTip\n\n\nWhat changed since 1995? Mostly borrowed, not invented — the smartphone industry drove down the cost of high-density displays, accelerometers, gyroscopes and mobile processors.\n\n\n\nPokémon GO used almost none of the technology this module covers — no registration, no depth sensing, no scene understanding. Its success was locational and social, not perceptual.",
+    "crumbs": [
+      "Week 01",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/01-week-01/01-slides.html#standalone-and-spatial-computing-2019present",
+    "href": "weeks/01-week-01/01-slides.html#standalone-and-spatial-computing-2019present",
+    "title": "Lecture Slides",
+    "section": "Standalone and Spatial Computing (2019–present)",
+    "text": "Standalone and Spatial Computing (2019–present)\n\n2019 — Meta Quest 1 launches: standalone VR, no PC required\n2021 — Meta rebrands from Facebook, announces metaverse strategy\n2022 — Meta Quest Pro introduces mixed reality passthrough\n2023 — Apple announces Vision Pro at WWDC\n2024 — Spatial computing enters enterprise and consumer markets at scale\n\n\n\n\n\n\n\nImportant\n\n\nThe significant transition is removing the cable. Standalone headsets traded graphical fidelity for freedom from a PC, a setup process and a tether — a trade that proved strongly favourable for adoption.\n\n\n\n\nThe current period is unresolved: headsets are capable but bulky, glasses are comfortable but limited, and the compelling consumer application has not obviously arrived.",
+    "crumbs": [
+      "Week 01",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/01-week-01/01-slides.html#hardware-in-this-module",
+    "href": "weeks/01-week-01/01-slides.html#hardware-in-this-module",
+    "title": "Lecture Slides",
+    "section": "Hardware in This Module",
+    "text": "Hardware in This Module\n\n\n\nDevice\nType\nPrimary Use\n\n\n\n\nQuest 2\nVR\nAccepted fallback\n\n\nQuest 3\nVR/MR\nPrimary target — MR and passthrough\n\n\nVive Pro\nVR\nHigh-fidelity comparison\n\n\nPico Neo Eye\nVR\nEye tracking\n\n\nHoloLens 2\nMR\nSpatial computing\n\n\nSnap Spectacles\nAR\nLightweight AR\n\n\nDisplay Glasses\nPassive display\nComparison",
     "crumbs": [
       "Week 01",
       "Lecture Slides"
