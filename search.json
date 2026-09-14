@@ -132,11 +132,22 @@
     ]
   },
   {
-    "objectID": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
-    "href": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
+    "objectID": "weeks/02-week-02/01-slides.html#optical-technologies",
+    "href": "weeks/02-week-02/01-slides.html#optical-technologies",
     "title": "Lecture Slides",
-    "section": "1. Standalone VR: Meta Quest 3 / 3S",
-    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\n\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking",
+    "section": "Optical Technologies",
+    "text": "Optical Technologies",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
+    "href": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
+    "title": "Lecture Slides",
+    "section": "Passthrough vs Optical See-Through",
+    "text": "Passthrough vs Optical See-Through\n\n\n\n\nPassthrough\nOptical See-Through\n\n\n\n\nHow\nCameras + screen composite\nTransparent lens overlay\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by cameras\nPerfect (direct light)\n\n\nLatency risk\nCamera-to-display lag\nNone for real world",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -180,7 +191,7 @@
     "href": "weeks/02-week-02/01-slides.html#waveguide",
     "title": "Lecture Slides",
     "section": "Waveguide",
-    "text": "Waveguide\n\n\nhttps://www.aliexpress.com/item/1005012768250418.html",
+    "text": "Waveguide\n\n\n\nhttps://www.aliexpress.com/item/1005012768250418.html",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -191,18 +202,18 @@
     "href": "weeks/02-week-02/01-slides.html#birdbath",
     "title": "Lecture Slides",
     "section": "Birdbath",
-    "text": "Birdbath",
+    "text": "Birdbath\n\nhttps://www.aliexpress.com/item/1005011843141228.html?src=google&pdp_npi=4%40dis%21EUR%21715.92%21680.18%21%21%21%21%21%40%2112000056757771611%21ppc%21%21%21&src=google-shoparize&albch=shopping&acnt=589-505-6707&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=_c3038Ezj&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en1005011843141228&ds_e_product_merchant_id=5821832355&ds_e_product_country=IE&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=24089107139&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gad_campaignid=24089113421&gbraid=0AAAABDxs7--bQV1XZ0srsrd5WMwLvr06m&gclid=CjwKCAjwtp7VBhBjEiwAJfpV-57l-kgZFrTbYgN_wN6mlTI_dxX8hvVsmahlOYYZovQbEOXp_jQynxoCgT0QAvD_BwE\nhttps://kguttag.com/2017/03/03/near-eye-bird-bath-optics-pros-and-cons-and-immys-different-approach/",
     "crumbs": [
       "Week 02",
       "Slides"
     ]
   },
   {
-    "objectID": "weeks/02-week-02/01-slides.html#sample-of-current-research",
-    "href": "weeks/02-week-02/01-slides.html#sample-of-current-research",
+    "objectID": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
+    "href": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
     "title": "Lecture Slides",
-    "section": "Sample of Current Research",
-    "text": "Sample of Current Research\nhttps://www.nature.com/articles/s41586-024-07386-0?fromPaywallRec=false",
+    "section": "1. Standalone VR: Meta Quest 3 / 3S",
+    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\n\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -213,18 +224,7 @@
     "href": "weeks/02-week-02/01-slides.html#mixed-reality-headsets",
     "title": "Lecture Slides",
     "section": "2. Mixed Reality Headsets",
-    "text": "2. Mixed Reality Headsets\n\n\nApple Vision Pro\n\n“Spatial computing,” not VR/AR\nvisionOS: windows, volumes, spaces\nEye tracking + pinch input\nPassthrough (video see-through)\n\n\n\nHoloLens 2\n\nOptical see-through waveguide\nNarrow FOV, strong hand/gaze tracking\nEnterprise/industrial focus",
-    "crumbs": [
-      "Week 02",
-      "Slides"
-    ]
-  },
-  {
-    "objectID": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
-    "href": "weeks/02-week-02/01-slides.html#passthrough-vs-optical-see-through",
-    "title": "Lecture Slides",
-    "section": "Passthrough vs Optical See-Through",
-    "text": "Passthrough vs Optical See-Through\n\n\n\n\nPassthrough\nOptical See-Through\n\n\n\n\nHow\nCameras + screen composite\nTransparent lens overlay\n\n\nExamples\nQuest 3, Vision Pro\nHoloLens 2\n\n\nReal-world fidelity\nLimited by cameras\nPerfect (direct light)\n\n\nLatency risk\nCamera-to-display lag\nNone for real world",
+    "text": "2. Mixed Reality Headsets\n\n\nApple Vision Pro\n\n“Spatial computing,” not VR/AR\nvisionOS: windows, volumes, spaces\nEye tracking + pinch input\nPassthrough (video see-through)\n\n\nHoloLens 2\n\nOptical see-through waveguide\nNarrow FOV, strong hand/gaze tracking\nEnterprise/industrial focus",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -235,7 +235,7 @@
     "href": "weeks/02-week-02/01-slides.html#ar-glasses-xreal-one-pro-peers",
     "title": "Lecture Slides",
     "section": "3. AR Glasses: Xreal One Pro & Peers",
-    "text": "3. AR Glasses: Xreal One Pro & Peers\n\n\n\nLightweight, glasses-form-factor, usually tethered\nBirdbath/waveguide optics project a floating virtual screen\nSome models add spatial/positional tracking for anchored content\nOptimised for portability and casual wear, not immersion",
+    "text": "3. AR Glasses: Xreal One Pro & Peers\n\nLightweight, glasses-form-factor, usually tethered\nBirdbath/waveguide optics project a floating virtual screen\nSome models add spatial/positional tracking for anchored content\nOptimised for portability and casual wear, not immersion",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -268,7 +268,7 @@
     "href": "weeks/02-week-02/01-slides.html#connecting-back-to-week-1",
     "title": "Lecture Slides",
     "section": "Connecting Back to Week 1",
-    "text": "Connecting Back to Week 1\n\n\n\n\n\n\nImportant\n\n\nYour Week 1/2 practical PDP submission is the Meta Horizon OS pipeline in action.",
+    "text": "Connecting Back to Week 1\n\n\n\n\n\n\nImportant\n\n\nYour Week 1 practical PDP submission was the Meta Horizon OS pipeline in action. This week’s practical asks you to compare that experience directly against visionOS.",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -290,7 +290,7 @@
     "href": "weeks/02-week-02/01-slides.html#this-week-in-the-lab",
     "title": "Lecture Slides",
     "section": "This Week in the Lab",
-    "text": "This Week in the Lab\nIn this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.",
+    "text": "This Week in the Lab\n\nDevice stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nStructured observation template per device\nGroup critical comparison activity against a chosen use case",
     "crumbs": [
       "Week 02",
       "Slides"
@@ -301,7 +301,7 @@
     "href": "weeks/02-week-02/01-slides.html#this-week-in-the-practical",
     "title": "Lecture Slides",
     "section": "This Week in the Practical",
-    "text": "This Week in the Practical\n\nDevice stations: Quest 3/3S, Vision Pro, HoloLens 2, Xreal One Pro\nStructured observation template per device\nGroup critical comparison activity against a chosen use case",
+    "text": "This Week in the Practical\n\nRecap the Meta Horizon OS pipeline from Week 1\nResearch the visionOS pipeline\nBuild a platform comparison matrix + written recommendation",
     "crumbs": [
       "Week 02",
       "Slides"
