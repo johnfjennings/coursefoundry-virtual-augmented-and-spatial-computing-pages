@@ -136,7 +136,40 @@
     "href": "weeks/02-week-02/01-slides.html#standalone-vr-meta-quest-3-3s",
     "title": "Lecture Slides",
     "section": "1. Standalone VR: Meta Quest 3 / 3S",
-    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking\n\n\n\n\n\n\n\nNote\n\n\nStandalone removed the PC-tether barrier — the single biggest driver of mass XR adoption.",
+    "text": "1. Standalone VR: Meta Quest 3 / 3S\n\n\n\nPancake lenses (Quest 3) vs Fresnel lenses (Quest 3S)\nFull-colour passthrough + depth sensing\nInside-out tracked controllers\nCamera-based hand tracking",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#panake-lenses",
+    "href": "weeks/02-week-02/01-slides.html#panake-lenses",
+    "title": "Lecture Slides",
+    "section": "Panake Lenses",
+    "text": "Panake Lenses",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#fresnel-lenses",
+    "href": "weeks/02-week-02/01-slides.html#fresnel-lenses",
+    "title": "Lecture Slides",
+    "section": "Fresnel Lenses",
+    "text": "Fresnel Lenses",
+    "crumbs": [
+      "Week 02",
+      "Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/02-week-02/01-slides.html#pancake-vs-fresnel",
+    "href": "weeks/02-week-02/01-slides.html#pancake-vs-fresnel",
+    "title": "Lecture Slides",
+    "section": "Pancake vs Fresnel",
+    "text": "Pancake vs Fresnel\n\n\n\n\n\n\n\n\nFeature\nPancake Lenses (Meta Quest 3)\nFresnel Lenses (Meta Quest 3S)\n\n\n\n\nClarity\nEdge-to-edge sharpness; the entire image looks clear.\nSharp in the direct center, but gets blurry near the edges.\n\n\nSweet Spot\nMassive; you can move your eyes naturally to look around.\nNarrow; you must move your entire head to keep things in focus.\n\n\nVisual Artifacts\nVery clean; virtually no glare or god rays.\nHigh contrast scenes cause noticeable light halos and rings.\n\n\nHeadset Thickness\nSlim form factor because light bounces internally.\nBulky design because the lens requires a long distance to the screen.\n\n\nIPD Adjustment\nContinuous wheel for a perfectly customized eye match.\n3-step mechanical switch, which may not line up perfectly.",
     "crumbs": [
       "Week 02",
       "Slides"
