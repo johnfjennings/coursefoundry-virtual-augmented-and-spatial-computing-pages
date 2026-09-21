@@ -136,7 +136,7 @@
     "href": "weeks/03-week-03/01-slides.html#why-perception-matters",
     "title": "Slides",
     "section": "Why perception matters",
-    "text": "Why perception matters\nXR works by deceiving the perceptual system.\nTo design effective XR experiences, you need to understand:\n\nhow the brain constructs the experience of being somewhere\nwhat cues it relies on\nwhat happens when those cues conflict",
+    "text": "Why perception matters\n\n\nXR works by deceiving the perceptual system.\nTo design effective XR experiences, you need to understand:\n\nhow the brain constructs the experience of being somewhere\nwhat cues it relies on\nwhat happens when those cues conflict\n\n\n\nThe brain fuses multiple sensory streams into one perceived reality.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -147,7 +147,7 @@
     "href": "weeks/03-week-03/01-slides.html#presence",
     "title": "Slides",
     "section": "Presence",
-    "text": "Presence\nPresence is the subjective feeling of being in a place.\nSlater (2009) distinguishes two components:\n\nPlace illusion: the sense of being in the virtual place\nPlausibility illusion: the sense that what is happening is real",
+    "text": "Presence\n\n\nPresence is the subjective feeling of being in a place.\nSlater (2009) distinguishes two components:\n\nPlace illusion: the sense of being in the virtual place\nPlausibility illusion: the sense that what is happening is real\n\n\n\nPresence emerges from the overlap of place illusion and plausibility illusion.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -158,7 +158,7 @@
     "href": "weeks/03-week-03/01-slides.html#place-illusion",
     "title": "Slides",
     "section": "Place Illusion",
-    "text": "Place Illusion\nThe feeling that you are actually in the virtual environment.\nSupported by:\n\nwide field of view\nhead tracking\nspatial audio\nphysical scale\n\nBroken by:\n\ntracking errors\nlow frame rate\nvisible display edges",
+    "text": "Place Illusion\n\n\nThe feeling that you are actually in the virtual environment.\nSupported by:\n\nwide field of view\nhead tracking\nspatial audio\nphysical scale\n\nBroken by:\n\ntracking errors\nlow frame rate\nvisible display edges\n\n\n\nA wide, stable field of view is central to sustaining place illusion.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -169,7 +169,7 @@
     "href": "weeks/03-week-03/01-slides.html#plausibility-illusion",
     "title": "Slides",
     "section": "Plausibility Illusion",
-    "text": "Plausibility Illusion\nThe feeling that the events in the virtual environment are really happening.\nSupported by:\n\nresponsive virtual agents\nconsistent physics\ncause and effect relationships\n\nBroken by:\n\nobjects passing through each other\nunresponsive environments\nimplausible events",
+    "text": "Plausibility Illusion\n\n\nThe feeling that the events in the virtual environment are really happening.\nSupported by:\n\nresponsive virtual agents\nconsistent physics\ncause and effect relationships\n\nBroken by:\n\nobjects passing through each other\nunresponsive environments\nimplausible events\n\n\n\nConsistent, responsive events sustain the plausibility illusion.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -180,7 +180,7 @@
     "href": "weeks/03-week-03/01-slides.html#immersion-vs-presence",
     "title": "Slides",
     "section": "Immersion vs Presence",
-    "text": "Immersion vs Presence\nThese are often confused but are distinct concepts.\nImmersion is an objective property of the technology.\n\nhow much of the sensory field does the system replace?\nhow accurately does it track movement?\n\nPresence is a subjective psychological response.\n\nhow much does the user feel they are there?\n\nHigh immersion tends to support presence but does not guarantee it.",
+    "text": "Immersion vs Presence\n\n\nThese are often confused but are distinct concepts.\nImmersion is an objective property of the technology.\n\nhow much of the sensory field does the system replace?\nhow accurately does it track movement?\n\nPresence is a subjective psychological response.\n\nhow much does the user feel they are there?\n\nHigh immersion tends to support presence but does not guarantee it.\n\n\nImmersion is measured in hardware; presence is felt by the user.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -191,7 +191,7 @@
     "href": "weeks/03-week-03/01-slides.html#the-reality-trade-off",
     "title": "Slides",
     "section": "The Reality Trade-off",
-    "text": "The Reality Trade-off\nMore immersion is not always better.\nTrade-offs include:\n\ncomfort vs presence\ncost vs quality\nportability vs fidelity\n\nDesign for the right level of immersion for the task.",
+    "text": "The Reality Trade-off\n\n\nMore immersion is not always better.\nTrade-offs include:\n\ncomfort vs presence\ncost vs quality\nportability vs fidelity\n\nDesign for the right level of immersion for the task.\n\n\nEvery gain in fidelity is weighed against cost, comfort and portability.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -202,7 +202,7 @@
     "href": "weeks/03-week-03/01-slides.html#perceptual-modalities",
     "title": "Slides",
     "section": "Perceptual Modalities",
-    "text": "Perceptual Modalities\nThe brain integrates information from multiple sensory systems.\nIn XR, the most relevant are:\n\nvisual\nauditory\nproprioceptive\nvestibular\nhaptic",
+    "text": "Perceptual Modalities\n\n\nThe brain integrates information from multiple sensory systems.\nIn XR, the most relevant are:\n\nvisual\nauditory\nproprioceptive\nvestibular\nhaptic\n\n\n\nFive perceptual channels feed into the brain’s single model of reality.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -213,7 +213,7 @@
     "href": "weeks/03-week-03/01-slides.html#visual-perception",
     "title": "Slides",
     "section": "Visual Perception",
-    "text": "Visual Perception\nThe dominant sense in most XR systems.\nKey factors:\n\nstereopsis (depth from two eyes)\nmotion parallax (depth from movement)\naccommodation and vergence\nperipheral vision",
+    "text": "Visual Perception\n\n\nThe dominant sense in most XR systems.\nKey factors:\n\nstereopsis (depth from two eyes)\nmotion parallax (depth from movement)\naccommodation and vergence\nperipheral vision\n\n\n\nStereopsis: two slightly different retinal images are fused into depth.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -224,7 +224,7 @@
     "href": "weeks/03-week-03/01-slides.html#auditory-perception",
     "title": "Slides",
     "section": "Auditory Perception",
-    "text": "Auditory Perception\nSpatial audio contributes significantly to presence.\nThe brain uses:\n\ninteraural time difference (ITD)\ninteraural level difference (ILD)\nspectral cues from the ear shape (HRTF)\n\nMismatched audio breaks presence rapidly.",
+    "text": "Auditory Perception\n\n\nSpatial audio contributes significantly to presence.\nThe brain uses:\n\ninteraural time difference (ITD)\ninteraural level difference (ILD)\nspectral cues from the ear shape (HRTF)\n\nMismatched audio breaks presence rapidly.\n\n\nTiming and level differences between the ears let us localise sound in space.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -235,7 +235,7 @@
     "href": "weeks/03-week-03/01-slides.html#proprioception",
     "title": "Slides",
     "section": "Proprioception",
-    "text": "Proprioception\nThe sense of the position and movement of your own body.\nIn VR, proprioception can conflict with visual information.\nExample: your body feels stationary but your visual system sees movement.\nThis conflict is a primary cause of simulator sickness.",
+    "text": "Proprioception\n\n\nThe sense of the position and movement of your own body.\nIn VR, proprioception can conflict with visual information.\nExample: your body feels stationary but your visual system sees movement.\nThis conflict is a primary cause of simulator sickness.\n\n\nA mismatch between felt body position and seen motion creates sensory conflict.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -246,7 +246,7 @@
     "href": "weeks/03-week-03/01-slides.html#vestibular-system",
     "title": "Slides",
     "section": "Vestibular System",
-    "text": "Vestibular System\nThe inner ear detects:\n\nlinear acceleration\nrotational acceleration\ngravity\n\nIn VR, visual motion without vestibular motion creates conflict.\nThis is the main cause of vection-induced sickness.",
+    "text": "Vestibular System\n\n\nThe inner ear detects:\n\nlinear acceleration\nrotational acceleration\ngravity\n\nIn VR, visual motion without vestibular motion creates conflict.\nThis is the main cause of vection-induced sickness.\n\n\nThe vestibular system reports no motion while the eyes report movement.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -257,7 +257,7 @@
     "href": "weeks/03-week-03/01-slides.html#haptic-perception",
     "title": "Slides",
     "section": "Haptic Perception",
-    "text": "Haptic Perception\nThe sense of touch and force.\nCurrent XR systems provide limited haptic feedback.\nThe absence of haptic feedback is a significant limitation for:\n\nobject manipulation\nsurface interaction\nsocial presence",
+    "text": "Haptic Perception\n\n\nThe sense of touch and force.\nCurrent XR systems provide limited haptic feedback.\nThe absence of haptic feedback is a significant limitation for:\n\nobject manipulation\nsurface interaction\nsocial presence\n\n\n\nVibration alone stands in for the rich forces of real touch.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -268,7 +268,7 @@
     "href": "weeks/03-week-03/01-slides.html#proximal-and-distal-stimuli",
     "title": "Slides",
     "section": "Proximal and Distal Stimuli",
-    "text": "Proximal and Distal Stimuli\nDistal stimulus: the actual object or event in the world\nProximal stimulus: the pattern of energy that reaches the sensory receptor\nIn XR, we manipulate the proximal stimulus to create the perception of a distal stimulus that does not exist.",
+    "text": "Proximal and Distal Stimuli\n\n\nDistal stimulus: the actual object or event in the world\nProximal stimulus: the pattern of energy that reaches the sensory receptor\nIn XR, we manipulate the proximal stimulus to create the perception of a distal stimulus that does not exist.\n\n\nXR recreates the proximal signal without the distal object ever existing.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -279,7 +279,7 @@
     "href": "weeks/03-week-03/01-slides.html#simulator-sickness",
     "title": "Slides",
     "section": "Simulator Sickness",
-    "text": "Simulator Sickness\nA form of motion sickness caused by sensory conflict in simulated environments.\nSymptoms:\n\nnausea\ndisorientation\neye strain\nheadache\nfatigue",
+    "text": "Simulator Sickness\n\n\nA form of motion sickness caused by sensory conflict in simulated environments.\nSymptoms:\n\nnausea\ndisorientation\neye strain\nheadache\nfatigue\n\n\n\nSensory conflict during use can leave lasting symptoms after removal.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -290,7 +290,7 @@
     "href": "weeks/03-week-03/01-slides.html#causes-of-simulator-sickness",
     "title": "Slides",
     "section": "Causes of Simulator Sickness",
-    "text": "Causes of Simulator Sickness\n\nLatency: delay between head movement and display update\nLow frame rate: judder and motion blur\nVection: visual motion without vestibular motion\nFOV mismatch: visual motion at the wrong scale\nVergence-accommodation conflict",
+    "text": "Causes of Simulator Sickness\n\n\n\nLatency: delay between head movement and display update\nLow frame rate: judder and motion blur\nVection: visual motion without vestibular motion\nFOV mismatch: visual motion at the wrong scale\nVergence-accommodation conflict\n\n\n\nEach contributing cause introduces a mismatch the brain must resolve.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -301,7 +301,7 @@
     "href": "weeks/03-week-03/01-slides.html#mitigation-strategies",
     "title": "Slides",
     "section": "Mitigation Strategies",
-    "text": "Mitigation Strategies\nDesign choices that reduce simulator sickness:\n\nmaintain frame rate above 72Hz\nminimise motion-to-photon latency (below 20ms)\nuse teleportation instead of smooth locomotion\nadd vignette during movement\nallow users to choose comfort settings\nprovide rest breaks",
+    "text": "Mitigation Strategies\n\n\nDesign choices that reduce simulator sickness:\n\nmaintain frame rate above 72Hz\nminimise motion-to-photon latency (below 20ms)\nuse teleportation instead of smooth locomotion\nadd vignette during movement\nallow users to choose comfort settings\nprovide rest breaks\n\n\n\nA vignette narrows the field of view during motion to reduce visual conflict.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -312,7 +312,7 @@
     "href": "weeks/03-week-03/01-slides.html#health-effects",
     "title": "Slides",
     "section": "Health Effects",
-    "text": "Health Effects\nBeyond simulator sickness, extended XR use can cause:\n\neye strain and fatigue\nneck and shoulder strain\ndisorientation after removal\nsocial isolation",
+    "text": "Health Effects\n\n\nBeyond simulator sickness, extended XR use can cause:\n\neye strain and fatigue\nneck and shoulder strain\ndisorientation after removal\nsocial isolation\n\n\n\nExtended sessions place cumulative strain on the eyes, neck and shoulders.",
     "crumbs": [
       "Week 03",
       "Slides"
@@ -323,7 +323,7 @@
     "href": "weeks/03-week-03/01-slides.html#ethical-considerations",
     "title": "Slides",
     "section": "Ethical Considerations",
-    "text": "Ethical Considerations\nXR designers have a responsibility to:\n\ndisclose health risks\nprovide comfort options\ndesign for accessibility\navoid exploiting presence for manipulation",
+    "text": "Ethical Considerations\n\n\nXR designers have a responsibility to:\n\ndisclose health risks\nprovide comfort options\ndesign for accessibility\navoid exploiting presence for manipulation\n\n\n\nDesigning responsibly means weighing persuasive power against user wellbeing.",
     "crumbs": [
       "Week 03",
       "Slides"
