@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Practical – Virtual, Augmented and Spatial Computing</title>
+<title>Lecture Notes – Virtual, Augmented and Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,41 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -69,8 +33,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/03-week-03/01-slides.html" rel="next">
-<link href="../../weeks/02-week-02/02-lecture.html" rel="prev">
+<link href="../../weeks/03-week-03/03-laboratory.html" rel="next">
+<link href="../../weeks/03-week-03/01-slides.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -117,8 +81,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Practical – Virtual, Augmented and Spatial Computing">
-<meta property="og:description" content="Virtual and augmented reality, also known as immersive reality, is any technology that “replicates an environment, real or imagined, and simulates a user’s physical presence and environment to allow for user interaction. Spatial computing enables immersive interaction by understanding the physical world, knowing and communicating our relation to places in that world, and navigating through those places.">
+<meta property="og:title" content="Lecture Notes – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Perception and Presence">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
 </head>
 
@@ -131,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-slides.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/03-practical.html">Practical</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/03-week-03/01-slides.html">Week 03</a></li><li class="breadcrumb-item"><a href="../../weeks/03-week-03/02-lecture.html">Lecture Notes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -242,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical</span></a>
   </div>
 </li>
@@ -265,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture Notes</span></a>
   </div>
 </li>
@@ -287,42 +251,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#presence-and-immersion" id="toc-presence-and-immersion" class="nav-link" data-scroll-target="#presence-and-immersion"><span class="header-section-number">2</span> Presence and Immersion</a>
   <ul class="collapse">
-  <li><a href="#part-1-project-setup-with-meta-xr-simulator-30-minutes" id="toc-part-1-project-setup-with-meta-xr-simulator-30-minutes" class="nav-link" data-scroll-target="#part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</a></li>
-  <li><a href="#part-2-capture-screenshots-and-gameplay-video-30-minutes" id="toc-part-2-capture-screenshots-and-gameplay-video-30-minutes" class="nav-link" data-scroll-target="#part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</a></li>
-  <li><a href="#part-3-update-meta-app-store-pdp-assets-45-minutes" id="toc-part-3-update-meta-app-store-pdp-assets-45-minutes" class="nav-link" data-scroll-target="#part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</a></li>
-  <li><a href="#part-4-build-and-upload-apk-30-minutes" id="toc-part-4-build-and-upload-apk-30-minutes" class="nav-link" data-scroll-target="#part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</a></li>
-  <li><a href="#part-5-update-student-repository-documentation-15-minutes" id="toc-part-5-update-student-repository-documentation-15-minutes" class="nav-link" data-scroll-target="#part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</a></li>
+  <li><a href="#defining-presence" id="toc-defining-presence" class="nav-link" data-scroll-target="#defining-presence"><span class="header-section-number">2.1</span> Defining Presence</a></li>
+  <li><a href="#immersion-as-an-objective-property" id="toc-immersion-as-an-objective-property" class="nav-link" data-scroll-target="#immersion-as-an-objective-property"><span class="header-section-number">2.2</span> Immersion as an Objective Property</a></li>
   </ul></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#perceptual-modalities" id="toc-perceptual-modalities" class="nav-link" data-scroll-target="#perceptual-modalities"><span class="header-section-number">3</span> Perceptual Modalities</a>
+  <ul class="collapse">
+  <li><a href="#visual-perception" id="toc-visual-perception" class="nav-link" data-scroll-target="#visual-perception"><span class="header-section-number">3.1</span> Visual Perception</a></li>
+  <li><a href="#auditory-perception" id="toc-auditory-perception" class="nav-link" data-scroll-target="#auditory-perception"><span class="header-section-number">3.2</span> Auditory Perception</a></li>
+  <li><a href="#proprioception" id="toc-proprioception" class="nav-link" data-scroll-target="#proprioception"><span class="header-section-number">3.3</span> Proprioception</a></li>
+  <li><a href="#the-vestibular-system" id="toc-the-vestibular-system" class="nav-link" data-scroll-target="#the-vestibular-system"><span class="header-section-number">3.4</span> The Vestibular System</a></li>
+  <li><a href="#haptic-perception" id="toc-haptic-perception" class="nav-link" data-scroll-target="#haptic-perception"><span class="header-section-number">3.5</span> Haptic Perception</a></li>
+  </ul></li>
+  <li><a href="#proximal-and-distal-stimuli" id="toc-proximal-and-distal-stimuli" class="nav-link" data-scroll-target="#proximal-and-distal-stimuli"><span class="header-section-number">4</span> Proximal and Distal Stimuli</a></li>
+  <li><a href="#simulator-sickness" id="toc-simulator-sickness" class="nav-link" data-scroll-target="#simulator-sickness"><span class="header-section-number">5</span> Simulator Sickness</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-symptoms" id="toc-definition-and-symptoms" class="nav-link" data-scroll-target="#definition-and-symptoms"><span class="header-section-number">5.1</span> Definition and Symptoms</a></li>
+  <li><a href="#causes" id="toc-causes" class="nav-link" data-scroll-target="#causes"><span class="header-section-number">5.2</span> Causes</a></li>
+  <li><a href="#mitigation-strategies" id="toc-mitigation-strategies" class="nav-link" data-scroll-target="#mitigation-strategies"><span class="header-section-number">5.3</span> Mitigation Strategies</a></li>
+  </ul></li>
+  <li><a href="#health-effects-and-ethics" id="toc-health-effects-and-ethics" class="nav-link" data-scroll-target="#health-effects-and-ethics"><span class="header-section-number">6</span> Health Effects and Ethics</a>
+  <ul class="collapse">
+  <li><a href="#physical-health-effects" id="toc-physical-health-effects" class="nav-link" data-scroll-target="#physical-health-effects"><span class="header-section-number">6.1</span> Physical Health Effects</a></li>
+  <li><a href="#ethical-responsibilities" id="toc-ethical-responsibilities" class="nav-link" data-scroll-target="#ethical-responsibilities"><span class="header-section-number">6.2</span> Ethical Responsibilities</a></li>
+  </ul></li>
+  <li><a href="#measuring-presence" id="toc-measuring-presence" class="nav-link" data-scroll-target="#measuring-presence"><span class="header-section-number">7</span> Measuring Presence</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">9</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-slides.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/03-practical.html">Practical</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/03-week-03/01-slides.html">Week 03</a></li><li class="breadcrumb-item"><a href="../../weeks/03-week-03/02-lecture.html">Lecture Notes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Practical</h1>
+<h1 class="title">Lecture Notes</h1>
+<p class="subtitle lead">Perception and Presence</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Mr.&nbsp;John Jennings </p>
-          </div>
-  </div>
     
   
     
@@ -333,263 +306,171 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
-<p>In this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.</p>
+<p>The central concept this week is <strong>presence</strong>: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.</p>
+<hr>
 </section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>By the end of this practical, you will be able to:</p>
+<section id="presence-and-immersion" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="presence-and-immersion"><span class="header-section-number">2</span> Presence and Immersion</h2>
+<section id="defining-presence" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="defining-presence"><span class="header-section-number">2.1</span> Defining Presence</h3>
+<p>Presence is one of the most studied and debated concepts in XR research. At its simplest, it is the feeling of “being there” — the sense that you are actually in the virtual environment rather than observing it from outside.</p>
+<p>Mel Slater, one of the leading researchers in this area, distinguishes two components of presence:</p>
+<p><strong>Place Illusion (PI)</strong> is the strong illusion of being in a place even though you know you are not. It is supported primarily by the quality of the sensorimotor contingencies — the relationship between your movements and the changes in the sensory display. If you turn your head and the visual scene updates correctly, your brain interprets this as evidence that you are in a real place.</p>
+<p><strong>Plausibility Illusion (Psi)</strong> is the illusion that what is happening is really happening. It is supported by the responsiveness of the environment — if you reach out and touch a virtual object and it responds, your brain interprets this as evidence that the event is real.</p>
+<p>Slater argues that both PI and Psi are necessary for full presence. A highly immersive display that shows a completely unresponsive environment will produce PI but not Psi. A responsive environment on a low-quality display may produce Psi but not PI.</p>
+</section>
+<section id="immersion-as-an-objective-property" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="immersion-as-an-objective-property"><span class="header-section-number">2.2</span> Immersion as an Objective Property</h3>
+<p>Immersion is often used interchangeably with presence, but they are distinct. Immersion is an objective, measurable property of the technology — it describes how completely the system replaces the user’s sensory input with synthetic input.</p>
+<p>A system with a wide FOV, high resolution, low latency, and spatial audio is more immersive than one with a narrow FOV and no audio. But a user may feel more present in the less immersive system if the content is more compelling and responsive.</p>
+<p>This distinction has important design implications. You cannot guarantee presence by maximising immersion. You must also design content that supports plausibility.</p>
+<hr>
+</section>
+</section>
+<section id="perceptual-modalities" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="perceptual-modalities"><span class="header-section-number">3</span> Perceptual Modalities</h2>
+<p>The brain integrates information from multiple sensory systems simultaneously. In XR, understanding each modality helps you design experiences that support presence and avoid discomfort.</p>
+<section id="visual-perception" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="visual-perception"><span class="header-section-number">3.1</span> Visual Perception</h3>
+<p>Vision is the dominant sense in most XR systems. The visual system provides information about:</p>
+<p><strong>Stereopsis:</strong> The brain uses the slight difference in the images received by each eye (binocular disparity) to compute depth. HMDs present slightly different images to each eye to simulate this. The effectiveness of stereopsis depends on the accuracy of the interpupillary distance (IPD) setting.</p>
+<p><strong>Motion parallax:</strong> As you move your head, objects at different distances move at different rates across your visual field. This is a powerful depth cue that is well-supported by 6DOF tracking.</p>
+<p><strong>Accommodation and vergence:</strong> As discussed in Week 2, the vergence-accommodation conflict is a significant limitation of current HMDs.</p>
+<p><strong>Peripheral vision:</strong> The peripheral visual field is important for detecting motion and maintaining spatial awareness. A narrow FOV that cuts off peripheral vision reduces immersion and can cause disorientation.</p>
+</section>
+<section id="auditory-perception" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="auditory-perception"><span class="header-section-number">3.2</span> Auditory Perception</h3>
+<p>The auditory system contributes significantly to presence. Research has shown that high-quality spatial audio can increase presence scores substantially, and that audio that does not match the visual scene can break presence rapidly.</p>
+<p>The brain localises sounds using:</p>
+<p><strong>Interaural Time Difference (ITD):</strong> The difference in the time it takes for a sound to reach each ear. Sounds from the left arrive at the left ear slightly before the right ear.</p>
+<p><strong>Interaural Level Difference (ILD):</strong> The difference in the loudness of a sound at each ear. The head creates an acoustic shadow that attenuates sounds on the far side.</p>
+<p><strong>Spectral cues:</strong> The shape of the outer ear (pinna) modifies the frequency content of sounds in ways that depend on the direction of the source. These spectral cues are captured in the HRTF and are particularly important for distinguishing sounds above and below the listener.</p>
+</section>
+<section id="proprioception" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="proprioception"><span class="header-section-number">3.3</span> Proprioception</h3>
+<p>Proprioception is the sense of the position and movement of your own body, provided by receptors in muscles, tendons, and joints. It tells you where your limbs are without looking at them.</p>
+<p>In VR, proprioception can conflict with visual information. If you see your virtual hand in a position that does not match where your real hand is, this creates a conflict that can be disorienting. This is why accurate hand tracking and controller tracking are important for natural interaction.</p>
+</section>
+<section id="the-vestibular-system" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="the-vestibular-system"><span class="header-section-number">3.4</span> The Vestibular System</h3>
+<p>The vestibular system, located in the inner ear, detects:</p>
 <ul>
-<li>Set up and test Unity VR projects using the Meta XR Simulator</li>
-<li>Capture high-quality screenshots and gameplay videos for app promotion</li>
-<li>Navigate and update Meta PDP (Product Detail Page) assets</li>
-<li>Build and prepare APK files for Meta App Store submission</li>
-<li>Document project updates professionally in your student repository</li>
+<li>linear acceleration (moving forward, backward, up, down)</li>
+<li>rotational acceleration (turning)</li>
+<li>the direction of gravity</li>
+</ul>
+<p>The vestibular system is the primary cause of simulator sickness in VR. When the visual system detects motion (because the virtual environment is moving) but the vestibular system detects no motion (because the user is stationary), the brain interprets this conflict as a sign of poisoning — a response that evolved to protect against neurotoxins that cause hallucinations. The result is nausea.</p>
+<p>This is called <strong>vection</strong> — the perception of self-motion induced by visual stimulation alone.</p>
+</section>
+<section id="haptic-perception" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="haptic-perception"><span class="header-section-number">3.5</span> Haptic Perception</h3>
+<p>The haptic system encompasses touch (cutaneous sensation) and force (kinaesthetic sensation). It provides information about:</p>
+<ul>
+<li>surface texture</li>
+<li>temperature</li>
+<li>compliance (how much an object deforms under pressure)</li>
+<li>weight and inertia</li>
+</ul>
+<p>Current XR systems provide very limited haptic feedback — primarily vibration from controller motors. The absence of rich haptic feedback is a significant limitation for experiences that involve object manipulation, surface interaction, or social presence (the feeling of being with another person).</p>
+<hr>
+</section>
+</section>
+<section id="proximal-and-distal-stimuli" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="proximal-and-distal-stimuli"><span class="header-section-number">4</span> Proximal and Distal Stimuli</h2>
+<p>This distinction, drawn from perceptual psychology, is useful for understanding how XR works.</p>
+<p>The <strong>distal stimulus</strong> is the actual object or event in the world — a tree, a voice, a surface.</p>
+<p>The <strong>proximal stimulus</strong> is the pattern of energy that reaches the sensory receptor — the pattern of light on the retina, the pressure wave at the eardrum, the pressure on the skin.</p>
+<p>The brain never has direct access to the distal stimulus. It only has access to the proximal stimulus, and it must infer the distal stimulus from that. This inference is based on prior experience, context, and the integration of multiple sensory signals.</p>
+<p>XR works by manipulating the proximal stimulus. We cannot put a real tree in front of the user, but we can create a pattern of light on the retina that is consistent with the presence of a tree. If the proximal stimulus is convincing enough, the brain will infer the presence of the tree — and the user will feel present in a forest.</p>
+<p>This framing helps explain why presence is not simply a function of display quality. The brain is not just checking whether the image is photorealistic. It is checking whether the pattern of sensory input is consistent with being in a real place. Consistency across modalities, responsiveness to movement, and plausible cause-and-effect relationships are all important.</p>
+<hr>
+</section>
+<section id="simulator-sickness" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="simulator-sickness"><span class="header-section-number">5</span> Simulator Sickness</h2>
+<section id="definition-and-symptoms" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="definition-and-symptoms"><span class="header-section-number">5.1</span> Definition and Symptoms</h3>
+<p>Simulator sickness is a form of motion sickness that occurs in simulated environments. Symptoms include:</p>
+<ul>
+<li>nausea and stomach discomfort</li>
+<li>disorientation and dizziness</li>
+<li>eye strain and headache</li>
+<li>fatigue</li>
+<li>pallor and sweating in severe cases</li>
+</ul>
+<p>Symptoms typically develop during or after use and can persist for some time after the headset is removed.</p>
+</section>
+<section id="causes" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="causes"><span class="header-section-number">5.2</span> Causes</h3>
+<p><strong>Latency</strong> is the delay between the user’s head movement and the corresponding update of the display. Even small amounts of latency (above approximately 20 milliseconds) can cause discomfort. Modern HMDs use asynchronous timewarp and reprojection techniques to minimise perceived latency.</p>
+<p><strong>Low frame rate</strong> causes judder — a stuttering of the image during movement. This is both visually unpleasant and a significant cause of sickness. Maintaining a consistent frame rate above 72Hz is essential.</p>
+<p><strong>Vection</strong> — visual motion without vestibular motion — is the primary cause of sickness during smooth locomotion in VR. The visual system detects movement, but the vestibular system does not, creating a conflict.</p>
+<p><strong>FOV mismatch</strong> occurs when the visual motion in the display does not match the expected motion for the user’s real-world movement. This can occur with incorrect camera settings or locomotion implementations.</p>
+</section>
+<section id="mitigation-strategies" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="mitigation-strategies"><span class="header-section-number">5.3</span> Mitigation Strategies</h3>
+<p><strong>Teleportation</strong> eliminates vection by moving the user instantaneously rather than continuously. It is the most effective comfort option for locomotion.</p>
+<p><strong>Vignetting</strong> reduces the peripheral visual field during movement, which reduces the vection signal. Many VR games offer this as a comfort option.</p>
+<p><strong>Snap turning</strong> rotates the user’s view in discrete steps rather than continuously, eliminating rotational vection.</p>
+<p><strong>Frame rate maintenance</strong> is critical. Dropping below the target frame rate is more disorienting than a consistently lower frame rate.</p>
+<p><strong>User control</strong> — allowing users to choose their preferred locomotion method and comfort settings — is important because susceptibility to simulator sickness varies significantly between individuals.</p>
+<hr>
+</section>
+</section>
+<section id="health-effects-and-ethics" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="health-effects-and-ethics"><span class="header-section-number">6</span> Health Effects and Ethics</h2>
+<section id="physical-health-effects" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="physical-health-effects"><span class="header-section-number">6.1</span> Physical Health Effects</h3>
+<p>Beyond simulator sickness, extended XR use can cause:</p>
+<ul>
+<li><strong>Eye strain and fatigue</strong> from the vergence-accommodation conflict and sustained focus at a fixed distance</li>
+<li><strong>Neck and shoulder strain</strong> from the weight of the headset and sustained head positions</li>
+<li><strong>Post-VR disorientation</strong> — a brief period of disorientation after removing the headset, particularly after extended use</li>
+<li><strong>Social isolation</strong> — extended use of fully immersive VR removes the user from their physical social environment</li>
 </ul>
 </section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Your completed 2nd year Unity VR escape room project</li>
-<li>Unity Hub and Unity Editor installed</li>
-<li>Meta XR SDK and Meta XR Simulator</li>
-<li>Access to your student GitHub repository</li>
-<li>Meta Developer account</li>
-</ul>
+<section id="ethical-responsibilities" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="ethical-responsibilities"><span class="header-section-number">6.2</span> Ethical Responsibilities</h3>
+<p>The power of presence creates ethical responsibilities for XR designers.</p>
+<p><strong>Disclosure:</strong> Users should be informed of potential health risks before using XR systems, particularly for extended sessions.</p>
+<p><strong>Comfort options:</strong> Experiences should provide comfort options (teleportation, vignetting, session time limits) rather than forcing users into uncomfortable configurations.</p>
+<p><strong>Accessibility:</strong> XR experiences should be designed to be accessible to users with different physical abilities, sensory sensitivities, and susceptibilities to simulator sickness.</p>
+<p><strong>Manipulation:</strong> The sense of presence can be exploited to create powerful emotional responses. This raises questions about the ethics of using XR for persuasion, advertising, or behaviour change. Designers should consider whether their use of presence is in the user’s interest.</p>
+<hr>
 </section>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<section id="part-1-project-setup-with-meta-xr-simulator-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</h3>
+</section>
+<section id="measuring-presence" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="measuring-presence"><span class="header-section-number">7</span> Measuring Presence</h2>
+<p>Several standardised questionnaires have been developed to measure presence:</p>
+<p><strong>The Presence Questionnaire (PQ)</strong> (Witmer and Singer, 1998) measures presence across several dimensions including involvement, sensory fidelity, and interface quality.</p>
+<p><strong>The Igroup Presence Questionnaire (IPQ)</strong> (Schubert et al., 2001) measures spatial presence, involvement, and realness.</p>
+<p>These tools are useful for comparing different design decisions and for evaluating the effectiveness of XR experiences. You will use them in Week 11 when we cover evaluation methods.</p>
+<hr>
+</section>
+<section id="self-check-questions" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">8</span> Self-Check Questions</h2>
 <ol type="1">
-<li><strong>Download and Open Your Project</strong>
-<ul>
-<li>Locate your 2nd year Unity VR escape room project files</li>
-<li>Open the project in Unity Hub</li>
-<li>Ensure all assets and scenes load correctly</li>
-<li>Note any missing dependencies or errors in the console</li>
-</ul></li>
-<li><strong>Configure Meta XR Simulator</strong>
-<ul>
-<li>Install the Meta XR Simulator if not already present</li>
-<li>Configure the simulator settings for your escape room environment</li>
-<li>Set up appropriate room boundaries and tracking space</li>
-<li>Test basic functionality (hand tracking, controller input, movement)</li>
-</ul></li>
+<li>What is the difference between presence and immersion?</li>
+<li>What are Slater’s two components of presence?</li>
+<li>What is vection and why does it cause sickness?</li>
+<li>What is the vestibular system and how does it contribute to simulator sickness?</li>
+<li>What is the difference between proximal and distal stimuli?</li>
+<li>Name three design strategies that can reduce simulator sickness.</li>
+<li>What ethical responsibilities do XR designers have regarding health effects?</li>
+<li>How does spatial audio contribute to presence?</li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Meta XR Simulator Benefits
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Meta XR Simulator allows you to test VR experiences without wearing a headset, making development and debugging much more efficient.</p>
-<p><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/" class="uri">https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/</a></p>
-</div>
-</div>
-<ol start="3" type="1">
-<li><strong>Initial Testing</strong>
-<ul>
-<li>Run your escape room experience in the Meta XR Simulator</li>
-<li>Verify that all interactive elements work as expected</li>
-<li>Check for any performance issues or visual glitches</li>
-<li>Document any bugs or areas needing improvement</li>
-</ul></li>
-</ol>
+<hr>
 </section>
-<section id="part-2-capture-screenshots-and-gameplay-video-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</h3>
-<ol start="4" type="1">
-<li><strong>Screenshot Capture</strong>
+<section id="further-reading" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">9</span> Further Reading</h2>
 <ul>
-<li>Use the Meta XR Simulator’s built-in screenshot functionality</li>
-<li>Capture at least 5 high-quality screenshots showing:
-<ul>
-<li>The main escape room environment</li>
-<li>Key interactive objects and puzzles</li>
-<li>UI elements and menus</li>
-<li>Player interactions (hand tracking, object manipulation)</li>
-<li>Victory/completion screen</li>
-</ul></li>
-<li>Ensure screenshots are high resolution (minimum 1920x1080)</li>
-</ul></li>
-<li><strong>Gameplay Video Recording</strong>
-<ul>
-<li>Record a 60-90 second gameplay video using screen recording software</li>
-<li>Show a complete puzzle solution or key gameplay loop</li>
-<li>Include audio if your escape room has sound effects or music</li>
-<li>Ensure smooth framerate and clear visuals</li>
-<li>Export in MP4 format at 1080p resolution</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pro Recording Tips
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Use OBS Studio or similar for high-quality recordings</li>
-<li>Record at 60fps for smooth playback</li>
-<li>Keep file sizes reasonable for web upload</li>
-<li>Add brief text overlays to highlight key features</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="part-3-update-meta-app-store-pdp-assets-45-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</h3>
-<ol start="6" type="1">
-<li><strong>Access Your Meta Developer Dashboard</strong>
-<ul>
-<li>Log into your Meta Developer account</li>
-<li>Navigate to your escape room app listing</li>
-<li>Access the Product Detail Page (PDP) management section</li>
-</ul></li>
-<li><strong>Update PDP Visual Assets</strong>
-<ul>
-<li>Upload your new screenshots to replace existing ones</li>
-<li>Organize screenshots in a logical order (environment → gameplay → features)</li>
-<li>Upload your gameplay video as the featured trailer</li>
-<li>Update the app icon if you’ve made improvements</li>
-<li>Ensure all images meet Meta’s size and format requirements</li>
-</ul></li>
-<li><strong>Review and Update Text Content</strong>
-<ul>
-<li>Update the app description to reflect any new features</li>
-<li>Check that keywords and tags are still relevant</li>
-<li>Update version notes with improvements made</li>
-<li>Verify age rating and content warnings are accurate</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Meta PDP Requirements
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ensure all assets meet Meta’s technical requirements: - Screenshots: 1024x1024 minimum - Videos: MP4 format, max 15MB - Icons: 512x512 PNG with transparency</p>
-</div>
-</div>
-</section>
-<section id="part-4-build-and-upload-apk-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</h3>
-<ol start="9" type="1">
-<li><strong>Build Configuration</strong>
-<ul>
-<li>Set Unity build settings to Android platform</li>
-<li>Configure XR settings for Meta Quest</li>
-<li>Set appropriate quality settings for Quest hardware</li>
-<li>Increment version number in Player Settings</li>
-</ul></li>
-<li><strong>Build and Test APK</strong>
-<ul>
-<li>Build the APK file from Unity</li>
-<li>Test the APK on a Quest device if available, or verify build completion</li>
-<li>Check file size and performance metrics</li>
-<li>Ensure all features work in the standalone build</li>
-</ul></li>
-<li><strong>Upload to Meta App Store</strong>
-<ul>
-<li>Navigate to the app submission section in Meta Developer Dashboard</li>
-<li>Upload your new APK file</li>
-<li>Complete the submission checklist</li>
-<li>Submit for review (note: this may take several days)</li>
-</ul></li>
-</ol>
-</section>
-<section id="part-5-update-student-repository-documentation-15-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</h3>
-<ol start="12" type="1">
-<li><strong>Create Professional Documentation</strong>
-<ul>
-<li>Open your student GitHub repository</li>
-<li>Update the README.md file with:
-<ul>
-<li>Project title and brief description</li>
-<li>Screenshots embedded using Markdown syntax</li>
-<li>Link to or embed the gameplay video</li>
-<li>Technical specifications and requirements</li>
-<li>Installation and usage instructions</li>
-<li>Credits and acknowledgments</li>
-</ul></li>
-</ul></li>
-<li><strong>Repository Organization</strong>
-<ul>
-<li>Create an <code>assets/</code> folder for images and videos</li>
-<li>Organize files with clear naming conventions</li>
-<li>Add appropriate file extensions and descriptions</li>
-<li>Ensure all links work correctly</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Markdown Tips for README
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Description](assets/screenshot1.png)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gameplay Video</span><span class="co">](assets/gameplay.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</section>
-</section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
-<p>By the end of this practical, you should have:</p>
-<ol type="1">
-<li>✅ Working Unity VR project running in Meta XR Simulator</li>
-<li>✅ 5+ high-quality screenshots captured</li>
-<li>✅ 60-90 second gameplay video recorded</li>
-<li>✅ Updated Meta App Store PDP with new assets</li>
-<li>✅ Built and uploaded new APK to Meta App Store</li>
-<li>✅ Professional README.md documentation in student repository</li>
-</ol>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p><strong>Common Issues:</strong></p>
-<ul>
-<li><strong>Simulator not launching:</strong> Check Meta XR SDK version compatibility</li>
-<li><strong>Performance issues:</strong> Adjust quality settings in Unity</li>
-<li><strong>Upload failures:</strong> Verify file sizes and formats meet requirements</li>
-<li><strong>Build errors:</strong> Check Android SDK and build tools versions</li>
-</ul>
-</section>
-<section id="reflection-questions" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
-<ol type="1">
-<li>What improvements did you notice when testing with the Meta XR Simulator compared to your original development process?</li>
-<li>How do professional PDP assets impact the perceived quality of your VR application?</li>
-<li>What challenges did you encounter when preparing your project for app store submission?</li>
-<li>How might you use these documentation and promotion skills in future VR projects?</li>
-</ol>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>For next week, consider:</p>
-<ul>
-<li>Implementing user feedback if your app receives reviews</li>
-<li>Exploring advanced Meta XR features for future updates</li>
-<li>Planning additional VR projects using these professional workflows</li>
+<li>Slater, M. (2009) Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments. <em>Philosophical Transactions of the Royal Society B</em>, 364(1535), pp.&nbsp;3549–3557.</li>
+<li>Witmer, B. and Singer, M. (1998) Measuring presence in virtual environments: A presence questionnaire. <em>Presence</em>, 7(3), pp.&nbsp;225–240.</li>
+<li>Jerald, J. (2015) <em>The VR Book</em>, Chapters 4 and 5.</li>
+<li>Kolasinski, E. (1995) Simulator sickness in virtual environments. US Army Research Laboratory Technical Report ARI-TR-1027.</li>
+<li>LaViola, J. (2000) A discussion of cybersickness in virtual environments. <em>ACM SIGCHI Bulletin</em>, 32(1).</li>
 </ul>
 
 
@@ -998,13 +879,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../weeks/02-week-02/02-lecture.html" class="pagination-link" aria-label="Lecture Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture Notes</span>
+      <a href="../../weeks/03-week-03/01-slides.html" class="pagination-link" aria-label="Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Slides</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../weeks/03-week-03/01-slides.html" class="pagination-link" aria-label="Slides">
-        <span class="nav-page-text">Slides</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../weeks/03-week-03/03-laboratory.html" class="pagination-link" aria-label="Lab">
+        <span class="nav-page-text">Lab</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
