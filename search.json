@@ -59,7 +59,7 @@
     "href": "weeks/03-week-03/03-laboratory.html#comparison-table",
     "title": "Lab",
     "section": "Comparison Table",
-    "text": "Comparison Table\nComplete this table after visiting all stations (or completing desk-based evaluations).\n\n\n\nFeature\nQuest 3/3S\nVision Pro\nHoloLens 2\nXreal One Pro\n\n\n\n\nCategory\n\n\n\n\n\n\nComfort (1–5)\n\n\n\n\n\n\nFOV (wide/medium/narrow)\n\n\n\n\n\n\nTracking fidelity (1–5)\n\n\n\n\n\n\nPrimary input\n\n\n\n\n\n\nEcosystem maturity (1–5)\n\n\n\n\n\n\nBest-fit use case",
+    "text": "Comparison Table\nComplete this table after visiting all stations (or completing desk-based evaluations).\n\n\n\n\n\n\n\n\n\n\n\nFeature\nQuest 2/3\nPico Neo Eye\nHoloLens 2\nXreal One Pro\nSnap Spectacles\n\n\n\n\nCategory\n\n\n\n\n\n\n\nComfort (1–5)\n\n\n\n\n\n\n\nFOV (wide/medium/narrow)\n\n\n\n\n\n\n\nTracking fidelity (1–5)\n\n\n\n\n\n\n\nPrimary input\n\n\n\n\n\n\n\nEcosystem maturity (1–5)\n\n\n\n\n\n\n\nBest-fit use case",
     "crumbs": [
       "Week 03",
       "Lab"
@@ -70,7 +70,7 @@
     "href": "weeks/03-week-03/03-laboratory.html#critical-comparison-activity-group-work",
     "title": "Lab",
     "section": "Critical Comparison Activity (Group Work)",
-    "text": "Critical Comparison Activity (Group Work)\nForm groups of 3–4. Each group selects 2–3 devices from the stations above (or from the wider market if your group wants to include a device not present in the lab, e.g. PICO 4 Ultra, Samsung Galaxy XR).\n\nUsing your completed comparison table and this week’s lecture criteria — comfort, FOV, tracking fidelity, and ecosystem maturity — produce a ranked evaluation of your chosen devices for a specific use case your group selects (e.g. “classroom-based language learning,” “warehouse pick-and-pack training,” “casual media consumption on a commute,” “competitive VR esports”).\nFor each criterion, justify your ranking with a specific observation from today’s stations or documented specifications — not just a gut impression.\nIdentify at least one criterion where the “best” device for your use case is not the most technically impressive device overall. Explain why.\nPrepare a 3-minute group summary to present to the class.\n\n\n\n\n\n\n\nTipWhat makes a strong evaluation\n\n\n\nA weak evaluation says “Vision Pro felt more premium.” A strong evaluation says “Vision Pro’s passthrough had noticeably less colour distortion than the Quest 3’s, which matters for our use case because accurate colour reproduction is essential for a design-review application — but its higher price and single-vendor ecosystem make Quest 3 a stronger choice for a classroom of 30 students needing devices at scale.”",
+    "text": "Critical Comparison Activity (Group Work)\nForm groups of 3–4. Each group selects 2–3 devices from the stations above\n\nUsing your completed comparison table and this week’s lecture criteria — comfort, FOV, tracking fidelity, and ecosystem maturity — produce a ranked evaluation of your chosen devices for a specific use case your group selects (e.g. “classroom-based language learning,” “warehouse pick-and-pack training,” “casual media consumption on a commute,” “competitive VR esports”).\nFor each criterion, justify your ranking with a specific observation from today’s stations or documented specifications — not just a gut impression.\nIdentify at least one criterion where the “best” device for your use case is not the most technically impressive device overall. Explain why.\nPrepare a 3-minute group summary to present to the class.\n\n\n\n\n\n\n\nTipWhat makes a strong evaluation\n\n\n\nA weak evaluation says “Meta Quest 3 felt more premium.” A strong evaluation says “Meta Quest 3’s passthrough had noticeably less colour distortion than the Quest 3s, which matters for our use case because accurate colour reproduction is essential for a design-review application — but its higher price and single-vendor ecosystem make Quest 3s a stronger choice for a classroom of 30 students needing devices at scale.”",
     "crumbs": [
       "Week 03",
       "Lab"
@@ -93,17 +93,6 @@
     "title": "Lab",
     "section": "Lab Deliverable",
     "text": "Lab Deliverable\nSubmit your completed observation templates, comparison table, and your group’s critical comparison write-up (ranking + justification for your chosen use case).\nThis contributes to Assessment 1: Continuous Lab Work.",
-    "crumbs": [
-      "Week 03",
-      "Lab"
-    ]
-  },
-  {
-    "objectID": "weeks/03-week-03/03-laboratory.html#extension-task",
-    "href": "weeks/03-week-03/03-laboratory.html#extension-task",
-    "title": "Lab",
-    "section": "Extension Task",
-    "text": "Extension Task\nIf time allows:\n\nResearch the specifications of one device not covered in this lab (e.g. Samsung Galaxy XR, PICO 4 Ultra, Snap Spectacles 2024)\nSlot it into your group’s comparison table and re-run your ranking — does it change your recommendation?",
     "crumbs": [
       "Week 03",
       "Lab"
