@@ -286,10 +286,10 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-overview" class="level2">
 <h2 class="anchored" data-anchor-id="lab-overview">Lab Overview</h2>
-<p>This lab is a structured, hands-on survey of the current XR hardware landscape, spanning standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.</p>
+<p>This lab is a structured, hands-on survey of the current XR hardware landscape, spanning tethered PC VR, standalone VR, mixed reality headsets, and lightweight AR glasses. You will experience each category directly, then work in a group to critically evaluate devices against a shared set of evaluation criteria.</p>
 <p>By the end of this lab you should be able to:</p>
 <ul>
-<li>describe the key differences between standalone VR, passthrough MR, optical see-through MR, and AR glasses</li>
+<li>describe the key differences between tethered VR, standalone VR, passthrough MR, optical see-through MR, and AR glasses</li>
 <li>identify how hardware constraints (optics, tracking, form factor) shape user experience</li>
 <li>apply a structured evaluation framework (comfort, FOV, tracking fidelity, ecosystem maturity) to real devices</li>
 <li>defend a comparative judgement about device suitability for a given use case</li>
@@ -363,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Not every module will have hands-on access to every device (Vision Pro and Xreal glasses in particular may be limited-availability loan units). Where a device isn’t available, use the manufacturer’s published specifications, official demo videos, and at least one independent third-party review to complete the observation template as a <strong>desk-based evaluation</strong>, and note clearly in your submission that this station was evaluated second-hand rather than hands-on.</p>
+<p>Not every module will have hands-on access to every device (the HoloLens 2, Snap Spectacles and Xreal glasses in particular may be limited-availability loan units). Where a device isn’t available, use the manufacturer’s published specifications, official demo videos, and at least one independent third-party review to complete the observation template as a <strong>desk-based evaluation</strong>, and note clearly in your submission that this station was evaluated second-hand rather than hands-on.</p>
 </div>
 </div>
 <hr>
@@ -373,7 +373,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Use this template for each device you evaluate, hands-on or desk-based.</p>
 <section id="device-name" class="level3">
 <h3 class="anchored" data-anchor-id="device-name">Device Name</h3>
-<p><strong>Category:</strong> Standalone VR / MR (passthrough) / MR (optical see-through) / AR glasses</p>
+<p><strong>Category:</strong> Tethered VR / Standalone VR / MR (passthrough) / MR (optical see-through) / AR glasses</p>
 <p><strong>Tracking:</strong> Inside-out / Outside-in / Host-device dependent</p>
 <p><strong>Standalone:</strong> Yes / No (tethered to: ______)</p>
 <hr>
@@ -422,40 +422,64 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="guided-tasks-at-each-station" class="level2">
 <h2 class="anchored" data-anchor-id="guided-tasks-at-each-station">Guided Tasks at Each Station</h2>
-<section id="station-a-meta-quest-3-3s" class="level3">
-<h3 class="anchored" data-anchor-id="station-a-meta-quest-3-3s">Station A: Meta Quest 3 / 3S</h3>
+<section id="station-a-htc-vive-pro-tethered-vr" class="level3">
+<h3 class="anchored" data-anchor-id="station-a-htc-vive-pro-tethered-vr">Station A: HTC Vive Pro (Tethered VR)</h3>
 <ol type="1">
-<li>Compare the Quest 3’s pancake lenses to the Quest 3S’s Fresnel lenses if both are available — note clarity and headset depth differences.</li>
-<li>Enable passthrough and observe colour fidelity and latency between head movement and the passthrough image.</li>
+<li>Before putting the headset on, locate the base stations and the cable run to the PC. This is <strong>outside-in</strong> tracking — note how the play area is defined by where the base stations can see.</li>
+<li>Put on the headset and walk to the edge of the play area until the chaperone grid appears. How much does the tether restrict turning and movement compared to the standalone headsets?</li>
+<li>Look at a high-contrast scene and note lens clarity, the size of the sweet spot, and any glare or “god rays” around bright objects.</li>
+<li>Enable the front-camera passthrough and compare its resolution, colour and latency to the passthrough on the Quest and Pico at Stations B and C.</li>
+<li>Briefly stand between the headset and one base station. Does tracking degrade or drop out?</li>
+</ol>
+</section>
+<section id="station-b-meta-quest-2-3-standalone-vr" class="level3">
+<h3 class="anchored" data-anchor-id="station-b-meta-quest-2-3-standalone-vr">Station B: Meta Quest 2 / 3 (Standalone VR)</h3>
+<ol type="1">
+<li>If both headsets are available, compare the Quest 2’s Fresnel lenses to the Quest 3’s pancake lenses — note clarity, sweet spot size and how much thinner the Quest 3 is.</li>
+<li>Enable passthrough and observe colour fidelity (the Quest 2’s is monochrome, the Quest 3’s is colour) and the latency between head movement and the passthrough image.</li>
 <li>Try hand tracking versus controller-based interaction for the same simple task. Which feels more reliable?</li>
 <li>Note the FOV — where does the image cut off at the periphery?</li>
+<li>Compare the freedom of movement to the tethered Vive Pro at Station A.</li>
 </ol>
 </section>
-<section id="station-b-apple-vision-pro" class="level3">
-<h3 class="anchored" data-anchor-id="station-b-apple-vision-pro">Station B: Apple Vision Pro</h3>
+<section id="station-c-pico-neo-eye-standalone-vr-with-eye-tracking" class="level3">
+<h3 class="anchored" data-anchor-id="station-c-pico-neo-eye-standalone-vr-with-eye-tracking">Station C: Pico Neo Eye (Standalone VR with eye tracking)</h3>
 <ol type="1">
-<li>Complete the eye and hand calibration process.</li>
-<li>Navigate the visionOS home environment using only eye gaze + pinch.</li>
-<li>Open a window/volume and observe how it anchors in physical space as you move.</li>
-<li>Compare the passthrough image quality and latency to the Quest 3’s.</li>
+<li>Put on the headset and complete the eye-tracking calibration. Note how long it takes and whether it succeeds first time.</li>
+<li>Open an application that uses gaze — for selection, foveated rendering or an eye-tracking demo — and observe how accurately it follows where you are looking. Try looking at a target from the corner of your eye without turning your head.</li>
+<li>Enable passthrough and compare it to the Quest’s at Station B.</li>
+<li>Note the weight distribution: the battery sits at the rear of the strap. Does this feel more or less balanced than the Quest?</li>
+<li>Note the FOV and lens clarity, and record any differences from the Quest.</li>
 </ol>
 </section>
-<section id="station-c-hololens-2" class="level3">
-<h3 class="anchored" data-anchor-id="station-c-hololens-2">Station C: HoloLens 2</h3>
+<section id="station-d-hololens-2-optical-see-through-mr" class="level3">
+<h3 class="anchored" data-anchor-id="station-d-hololens-2-optical-see-through-mr">Station D: HoloLens 2 (Optical see-through MR)</h3>
 <ol type="1">
 <li>Put on the headset and complete the eye calibration.</li>
 <li>Open a holographic application and note where the holographic content disappears — this is the FOV boundary.</li>
 <li>Try hand tracking and, if available, gaze + voice interaction.</li>
-<li>Compare the “real world” view (direct optical) to the Quest 3/Vision Pro’s camera-based passthrough. Which feels more natural, and why?</li>
+<li>Compare the “real world” view (direct optical) to the camera-based passthrough at Stations A to C. Which feels more natural, and why?</li>
+<li>Note how the holograms look against a bright window or light-coloured wall. What happens to their solidity and contrast?</li>
 </ol>
 </section>
-<section id="station-d-xreal-one-pro-or-similar-ar-glasses" class="level3">
-<h3 class="anchored" data-anchor-id="station-d-xreal-one-pro-or-similar-ar-glasses">Station D: Xreal One Pro (or similar AR glasses)</h3>
+<section id="station-e-snap-spectacles-standalone-ar-glasses" class="level3">
+<h3 class="anchored" data-anchor-id="station-e-snap-spectacles-standalone-ar-glasses">Station E: Snap Spectacles (Standalone AR glasses)</h3>
 <ol type="1">
-<li>Put on the glasses and connect to the host device (phone/PC/puck).</li>
+<li>Put on the glasses — no host device is needed. Note the weight, how they sit on the nose and ears, and the stated battery life.</li>
+<li>Launch a Lens and note where the AR content clips at the edges — this is the FOV boundary. Compare it to the HoloLens 2’s.</li>
+<li>Use hand tracking and pinch gestures to interact with the Lens. How does the tracking compare to the HoloLens 2 and the Quest?</li>
+<li>Place a spatially anchored object, then walk around it and look away and back. Does it stay fixed in the room?</li>
+<li>If possible, step near a window or into brighter light. How well does the waveguide display hold up?</li>
+</ol>
+</section>
+<section id="station-f-xreal-one-pro-tethered-ar-glasses" class="level3">
+<h3 class="anchored" data-anchor-id="station-f-xreal-one-pro-tethered-ar-glasses">Station F: Xreal One Pro (Tethered AR glasses)</h3>
+<ol type="1">
+<li>Put on the glasses and connect to the host device (phone/PC/puck) with the USB-C cable.</li>
 <li>Note the size, position, and clarity of the projected virtual screen.</li>
-<li>If spatial anchoring is supported, move your head and observe whether the screen stays fixed in space or moves with your head.</li>
-<li>Compare the form factor and social conspicuousness to the headset-class devices at the other stations.</li>
+<li>Enable spatial anchoring, then move your head and observe whether the screen stays fixed in space or moves with your head. Try the different anchoring modes if the host software offers them.</li>
+<li>Compare the tethered form factor to the untethered Snap Spectacles at Station E. What does the tether give you (display quality, battery, processing) and what does it cost you?</li>
+<li>Compare the form factor and social conspicuousness to the headset-class devices at Stations A to D.</li>
 </ol>
 <hr>
 </section>
@@ -465,21 +489,23 @@ ul.task-list li input[type="checkbox"] {
 <p>Complete this table after visiting all stations (or completing desk-based evaluations).</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Feature</th>
+<th>Vive Pro</th>
 <th>Quest 2/3</th>
 <th>Pico Neo Eye</th>
 <th>HoloLens 2</th>
+<th>Spectacles</th>
 <th>Xreal One Pro</th>
-<th>Snap Spectacles</th>
 </tr>
 </thead>
 <tbody>
@@ -490,33 +516,56 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td>Tracking (inside-out / outside-in)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>Comfort (1–5)</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>FOV (wide/medium/narrow)</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Tracking fidelity (1–5)</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Primary input</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Primary input</td>
+<td>Ecosystem maturity (1–5)</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -524,15 +573,8 @@ ul.task-list li input[type="checkbox"] {
 <td></td>
 </tr>
 <tr class="even">
-<td>Ecosystem maturity (1–5)</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>Best-fit use case</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -545,7 +587,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="critical-comparison-activity-group-work" class="level2">
 <h2 class="anchored" data-anchor-id="critical-comparison-activity-group-work">Critical Comparison Activity (Group Work)</h2>
-<p>Form groups of 3–4. Each group selects <strong>2–3 devices</strong> from the stations above</p>
+<p>Form groups of 3–4. Each group selects <strong>2–3 devices</strong> from the stations above.</p>
 <ol type="1">
 <li>Using your completed comparison table and this week’s lecture criteria — <strong>comfort, FOV, tracking fidelity, and ecosystem maturity</strong> — produce a ranked evaluation of your chosen devices for a specific use case your group selects (e.g.&nbsp;“classroom-based language learning,” “warehouse pick-and-pack training,” “casual media consumption on a commute,” “competitive VR esports”).</li>
 <li>For each criterion, justify your ranking with a specific observation from today’s stations or documented specifications — not just a gut impression.</li>
@@ -562,7 +604,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A weak evaluation says “Meta Quest 3 felt more premium.” A strong evaluation says “Meta Quest 3’s passthrough had noticeably less colour distortion than the Quest 3s, which matters for our use case because accurate colour reproduction is essential for a design-review application — but its higher price and single-vendor ecosystem make Quest 3s a stronger choice for a classroom of 30 students needing devices at scale.”</p>
+<p>A weak evaluation says “HoloLens 2 felt more futuristic.” A strong evaluation says “HoloLens 2’s optical see-through left the real room undistorted, which matters for our use case because a maintenance technician has to read real gauges and labels accurately — but its narrow FOV, weight and price make Quest 3 a stronger choice for a classroom of 30 students needing devices at scale.”</p>
 </div>
 </div>
 <hr>
@@ -572,10 +614,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Answer these individually in your lab notes after the group activity.</p>
 <ol type="1">
 <li>Which device felt most immersive, and which criterion (comfort, FOV, tracking, ecosystem) mattered most to that judgement?</li>
-<li>Where did optical see-through (HoloLens 2) versus passthrough (Quest 3, Vision Pro) make the most noticeable difference to your experience?</li>
-<li>How did the AR glasses form factor change your expectations of what the device should be able to do, compared to the headsets?</li>
+<li>Where did optical see-through (HoloLens 2, Spectacles) versus camera passthrough (Vive Pro, Quest, Pico) make the most noticeable difference to your experience?</li>
+<li>How did the AR glasses form factor (Spectacles, Xreal) change your expectations of what the device should be able to do, compared to the headsets?</li>
+<li>Did tethering (Vive Pro, Xreal) feel like a limitation, a benefit, or both? Under what conditions would you accept a cable?</li>
 <li>Did your group’s ranking change once you factored in ecosystem maturity, rather than hardware specs alone? Why or why not?</li>
-<li>For which use case would you choose each of the four device categories, and why?</li>
+<li>For which use case would you choose each of the four device categories (tethered VR, standalone VR, optical see-through MR, AR glasses), and why?</li>
 </ol>
 <hr>
 </section>
