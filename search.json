@@ -760,7 +760,205 @@
     "section": "",
     "text": "Aukstakalnis, Steve. 2017. Practical Augmented Reality: A Guide to the Technologies, Applications and Human Factors for Ar and Vr. Addison-Wesley.\n\n\nAzuma, Ronald T. 1997. “A Survey of Augmented Reality.” Presence: Teleoperators and Virtual Environments 6 (4): 355–85. https://doi.org/10.1162/pres.1997.6.4.355.\n\n\nCronin, Irena, Robert Scoble, and Steve Wozniak. 2020. The Infinite Retina. 1st edition. Packt Publishing.\n\n\nDalton, Jeremy. 2021. Reality Check: How Immersive Technologies Can Transform Your Business. KoganPage.\n\n\nDuckham, Matt. 2013. Decentralized Spatial Computing: Foundations of Geosensor Networks. 1st ed. Springer.\n\n\nHillmann, Cornel. 2021. UX for XR: User Experience Design and Strategies for Immersive Technologies. Design Thinking Series. Apress.\n\n\nKrauß, Veronika, Michael Nebeling, Florian Jasche, and Alexander Boden. 2022. “Elements of XR Prototyping: Characterizing the Role and Use of Prototypes in Augmented and Virtual Reality Design.” (New Orleans LA USA), April, 1–18. https://doi.org/10.1145/3491102.3517714.\n\n\nLaViola, Joseph J., Ernst Kruijff, Ryan P. McMahan, Doug A. Bowman, and Ivan Poupyrev. 2017. 3D User Interfaces: Theory and Practice. Second edition. Pearson Always Learning. Addison-Wesley.\n\n\nLinowes, Jonathan. 2020. Unity 2020 Virtual Reality Projects: Learn VR Development by Building Immersive Applications and Games with Unity 2019.4 and Later Versions. Third edition. Packt.\n\n\nMacIntyre, Blair, Maribeth Gandy, Steven Dow, and Jay David Bolter. 2004. “DART: A Toolkit for Rapid Design Exploration of Augmented Reality Experiences.” Proceedings of the 17th Annual ACM Symposium on User Interface Software and Technology (Santa Fe NM USA), October, 197–206. https://doi.org/10.1145/1029632.1029669.\n\n\nMilgram, P, H Takemura, A Utsumi, and F Kishino. 1994. “Mixed Reality ( MR ) Reality-Virtuality ( RV ) Continuum.” Systems Research 2351 (Telemanipulator and Telepresence Technologies): 282–92. https://doi.org/10.1.1.83.6861.\n\n\nPangilinan, Erin, Steve Lukas, and Vasanth Mohan, eds. 2019. Creating Augmented and Virtual Realities: Theory and Practice for Next-Generation Spatial Computing. First edition. O’Reilly Media.\n\n\nRekimoto, Jun, and Katashi Nagao. 1995. “The World Through the Computer: Computer Augmented Interaction with Real World Environments.” Proceedings of the 8th Annual ACM Symposium on User Interface and Software Technology (Pittsburgh Pennsylvania USA), December, 29–36. https://doi.org/10.1145/215585.215639.\n\n\nRUBIN, PETER. 2020. FUTURE PRESENCE: How Virtual Reality Is Changing Human Connection, Intimacy, and the Limits of... Ordinary Life. HARPERONE.\n\n\nSchmalstieg, Dieter, and Tobias Höllerer. 2016. Augmented Reality: Principles and Practice. Addison-Wesley Usability and HCI Series Always Learning. Addison-Wesley.\n\n\nShekhar, Shashi, and Pamela Vold. 2019. Spatial Computing. The MIT Press Essential Knowledge Series. The MIT Press.\n\n\nStevens, Renée. 2021. Designing Immersive 3D Experiences: A Designers Guide to Creating Realistic 3D Experiences for Extended Reality. New Riders.\n\n\nSutherland, Ivan E. 1965. “The Ultimate Display.” https://api.semanticscholar.org/CorpusID:126382308.\n\n\nWalker, Philip. 2020. Unity Certified Programmer: Exam Guide : Expert Tips and Techniques to Pass the Unity Certification Exam at the First Attempt. Packt Publishing.\n\n\nZeltzer, David. 1992. “Autonomy, Interaction, and Presence.” Presence: Teleoperators and Virtual Environments 1 (1): 127–32. https://doi.org/10.1162/pres.1992.1.1.127.",
     "crumbs": [
-      "References"
+      "Bibliography"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html",
+    "href": "01-assessments/04-assessment3.html",
+    "title": "Assessment 3",
+    "section": "",
+    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nDue\nEnd of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#overview",
+    "href": "01-assessments/04-assessment3.html#overview",
+    "title": "Assessment 3",
+    "section": "",
+    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nDue\nEnd of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#learning-outcomes",
+    "href": "01-assessments/04-assessment3.html#learning-outcomes",
+    "title": "Assessment 3",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nThis assessment covers all four module outcomes:\n\nLO1: Critical understanding of 3D systems and AR/VR principles in a spatial computing context\nLO2: Explore, critique and deconstruct modern VR, AR and spatial computing experiences\nLO3: Theoretical understanding of, and practical competence with, advanced input/output devices and sensors\nLO4: Apply HCI principles to the construction and evaluation of immersive systems",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#the-brief",
+    "href": "01-assessments/04-assessment3.html#the-brief",
+    "title": "Assessment 3",
+    "section": "The Brief",
+    "text": "The Brief\nBuild an interactive immersive application on one of the platforms used in this module.\nYour project must:\n\nrun on real hardware, not only in the editor\nsupport meaningful user interaction beyond looking around\nmake deliberate, defensible design choices about comfort, input and spatial layout\nbe evaluated with real users, however small the sample\n\nThe scope is yours to set. A small, polished, well-evaluated project scores higher than an ambitious broken one. Depth beats breadth.\n\nExample directions\n\na training or procedural simulation\na spatial data or information tool\nan AR experience anchored to real surfaces or objects\nan accessibility-focused interaction study\nan experimental or artistic immersive piece\n\nTalk to me before committing if you are unsure whether your idea has enough substance.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#milestones",
+    "href": "01-assessments/04-assessment3.html#milestones",
+    "title": "Assessment 3",
+    "section": "Milestones",
+    "text": "Milestones\nThese are checkpoints, not separate submissions. They exist to stop projects failing late.\n\n\n\nPoint\nWhat you should have\n\n\n\n\nWeek 6\nConcept agreed and platform chosen\n\n\nWeek 9\nCore interaction working on device\n\n\nWeek 11\nTestable build, ready for peer evaluation\n\n\nWeek 12\nEvaluation complete, improvements applied",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#deliverables",
+    "href": "01-assessments/04-assessment3.html#deliverables",
+    "title": "Assessment 3",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nApplication build — an installable or runnable build for the target device, plus project source files.\nDemonstration video — 3 to 5 minutes, captured through the lens or in first-person, showing the application actually running.\nProject report — 2500 to 3000 words.\nEvaluation evidence — your test materials, notes or questionnaire responses.\n\n\nReport structure\n\nConcept and rationale\nDesign decisions, with reference to module concepts\nTechnical implementation\nEvaluation method and findings\nCritical reflection and further work",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#marking-criteria",
+    "href": "01-assessments/04-assessment3.html#marking-criteria",
+    "title": "Assessment 3",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical implementation\n30%\nRuns reliably on device. Competent use of the toolchain. Appropriate complexity.\n\n\nInteraction and experience design\n25%\nDeliberate, justified design choices. Comfort and usability taken seriously.\n\n\nEvaluation\n20%\nA real method, honestly applied, with findings that actually informed changes.\n\n\nCritical reflection\n15%\nEngages with module theory. Honest about limitations.\n\n\nPresentation and documentation\n10%\nClear report and video. Professional communication.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#marking-bands",
+    "href": "01-assessments/04-assessment3.html#marking-bands",
+    "title": "Assessment 3",
+    "section": "Marking Bands",
+    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nAmbitious but controlled. Runs reliably. Design choices are explicitly grounded in module theory. Evaluation is genuine and demonstrably changed the work. Reflection is critical and self-aware.\n\n\n60–69\nSolid, working application with clear design reasoning. Evaluation carried out competently. Reflection shows good understanding.\n\n\n50–59\nApplication runs with limitations. Design reasoning present but thin or mostly implicit. Evaluation minimal. Reflection descriptive.\n\n\nBelow 50\nIncomplete or non-functional. Little design rationale, no meaningful evaluation, no critical engagement.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#tips",
+    "href": "01-assessments/04-assessment3.html#tips",
+    "title": "Assessment 3",
+    "section": "Tips",
+    "text": "Tips\n\nLock your scope early. The most common failure in this module is a concept too large to finish.\nGet it onto hardware in week one of building. Deployment problems found late are fatal.\nTest with someone who has not seen it. You cannot evaluate your own interface.\nWrite the report as you go. Design decisions are impossible to reconstruct honestly at the end.\nReport what did not work. Honest evaluation of a flawed prototype scores better than a claim that everything worked perfectly.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html",
+    "href": "01-assessments/02-assessment1.html",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#overview",
+    "href": "01-assessments/02-assessment1.html#overview",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#learning-outcomes",
+    "href": "01-assessments/02-assessment1.html#learning-outcomes",
+    "title": "Assessment 1",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO1: Demonstrate a critical understanding of the concepts and principles of 3D systems and augmented and virtual reality in the context of spatial computing\nLO2: Explore, critique and deconstruct modern VR, AR, and spatial computing experiences\nLO3: Demonstrate theoretical understanding of, and practical competence in the use of advanced input and output devices and sensors in an immersive environment",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#how-it-works",
+    "href": "01-assessments/02-assessment1.html#how-it-works",
+    "title": "Assessment 1",
+    "section": "How It Works",
+    "text": "How It Works\nEach laboratory and practical session ends with a stated deliverable — a working scene, a deployed build, a configured device, a documented comparison.\nFor each session you must:\n\nComplete the session deliverable and have it signed off by your tutor before you leave.\nRecord it in your portfolio — a short entry with what you built, what worked, what did not, and what you changed.\nCommit your project files to your student repository.\n\nSign-off is the primary evidence. A portfolio entry without a working deliverable behind it carries no marks.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#portfolio-requirements",
+    "href": "01-assessments/02-assessment1.html#portfolio-requirements",
+    "title": "Assessment 1",
+    "section": "Portfolio Requirements",
+    "text": "Portfolio Requirements\nMaintain a single running portfolio for the semester. Each weekly entry should contain:\n\nthe session title and date\na screenshot, screen capture, or through-the-lens video of the working result\na short technical note — 150 to 250 words — covering what you implemented and any problems you solved\na link to the relevant commit or project folder\n\nKeep entries short and specific. This is a working log, not an essay.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#what-is-being-assessed",
+    "href": "01-assessments/02-assessment1.html#what-is-being-assessed",
+    "title": "Assessment 1",
+    "section": "What Is Being Assessed",
+    "text": "What Is Being Assessed\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical execution\n40%\nDeliverables work on the target device. Correct use of the toolchain and SDKs.\n\n\nConsistency and engagement\n25%\nSustained weekly participation and sign-off across the semester.\n\n\nDocumentation quality\n20%\nClear, accurate, specific portfolio entries with usable evidence.\n\n\nProblem solving\n15%\nEvidence of diagnosing and resolving issues rather than avoiding them.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#marking-bands",
+    "href": "01-assessments/02-assessment1.html#marking-bands",
+    "title": "Assessment 1",
+    "section": "Marking Bands",
+    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nConsistent weekly deliverables, all working on device. Confident, independent use of the toolchain. Documentation is precise and shows real diagnostic reasoning.\n\n\n60–69\nMost deliverables complete and working. Good technical competence with occasional gaps. Documentation is clear.\n\n\n50–59\nDeliverables partially complete or unreliable on device. Basic competence. Documentation thin or inconsistent.\n\n\nBelow 50\nSignificant gaps in attendance or deliverables. Work does not run. Little or no usable evidence.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#practical-notes",
+    "href": "01-assessments/02-assessment1.html#practical-notes",
+    "title": "Assessment 1",
+    "section": "Practical Notes",
+    "text": "Practical Notes\n\nSign-off must happen in the session. Work shown late cannot be verified against the session it belongs to.\nDeploy to hardware wherever the session calls for it. Editor-only results do not demonstrate LO3.\nMissed a session? Speak to me the same week. Catch-up is possible; silent absence is not.\nHandle the hardware carefully and report any damage immediately.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#tips",
+    "href": "01-assessments/02-assessment1.html#tips",
+    "title": "Assessment 1",
+    "section": "Tips",
+    "text": "Tips\n\nCapture evidence while the thing is working — not from memory afterwards.\nWrite the technical note the same day. It takes ten minutes then and an hour later.\nRecord failures as well as successes. Diagnosing a problem is assessable; hiding it is not.\nKeep your repository tidy and current. It is part of the evidence.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
     ]
   },
   {
@@ -816,6 +1014,83 @@
     "crumbs": [
       "Assessments",
       "Assessment Overview"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html",
+    "href": "01-assessments/03-assessment2.html",
+    "title": "Assessment 2",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nCase study and prototype\n\n\nSubmission\nIndividual\n\n\nDue\nWeek 6",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#overview",
+    "href": "01-assessments/03-assessment2.html#overview",
+    "title": "Assessment 2",
+    "section": "",
+    "text": "In this assessment, you will critically analyse an existing immersive experience and recreate a key interaction from it as a working prototype.\nThis task combines analysis, design, and implementation, allowing you to demonstrate your understanding of XR systems and interaction design.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nCase study and prototype\n\n\nSubmission\nIndividual\n\n\nDue\nWeek 6",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#learning-outcomes",
+    "href": "01-assessments/03-assessment2.html#learning-outcomes",
+    "title": "Assessment 2",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO2: Critique and deconstruct XR experiences\nLO3: Demonstrate practical competence with XR systems\nLO4: Apply HCI principles in immersive environments",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#task",
+    "href": "01-assessments/03-assessment2.html#task",
+    "title": "Assessment 2",
+    "section": "Task",
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse:\n\nInteraction design\nPresence and immersion\nSpatial design\nStrengths and weaknesses\nComfort and usability\n\nSupport with:\n\nScreenshots or diagrams\nReferences to lecture concepts\n\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples:\n\nObject manipulation\nGesture interaction\nUI selection (ray, gaze)\nNavigation system\n\nYour prototype must:\n\nBe interactive and functional\nDemonstrate understanding of XR input/output\n\nA focused prototype is encouraged. You are not expected to recreate the entire original experience.\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype:\n\nWhat works well?\nWhat doesn’t?\nHow does it compare to the original?\nWhat would you improve?",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#submission",
+    "href": "01-assessments/03-assessment2.html#submission",
+    "title": "Assessment 2",
+    "section": "Submission",
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#marking-criteria",
+    "href": "01-assessments/03-assessment2.html#marking-criteria",
+    "title": "Assessment 2",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
+    ]
+  },
+  {
+    "objectID": "01-assessments/03-assessment2.html#tips",
+    "href": "01-assessments/03-assessment2.html#tips",
+    "title": "Assessment 2",
+    "section": "Tips",
+    "text": "Tips\n\nBe critical, not descriptive\nFocus on interaction design\nLink your work to module concepts\nKeep your prototype simple but functional",
+    "crumbs": [
+      "Assessments",
+      "Assessment 2"
     ]
   },
   {
