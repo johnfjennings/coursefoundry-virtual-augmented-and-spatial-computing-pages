@@ -1,5 +1,214 @@
 [
   {
+    "objectID": "weeks/04-week-04/04-laboratory.html",
+    "href": "weeks/04-week-04/04-laboratory.html",
+    "title": "Lab",
+    "section": "",
+    "text": "Duration: 2 hours\nHardware: Meta Quest 3 / 3S (Quest 2 acceptable), HoloLens 2\nSoftware: Unity 2022 LTS, XR Interaction Toolkit 2.x\nDeliverable: Lab journal entry + Unity scene (uploaded to VLE)",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#lab-overview",
+    "href": "weeks/04-week-04/04-laboratory.html#lab-overview",
+    "title": "Lab",
+    "section": "",
+    "text": "Duration: 2 hours\nHardware: Meta Quest 3 / 3S (Quest 2 acceptable), HoloLens 2\nSoftware: Unity 2022 LTS, XR Interaction Toolkit 2.x\nDeliverable: Lab journal entry + Unity scene (uploaded to VLE)",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#learning-objectives",
+    "href": "weeks/04-week-04/04-laboratory.html#learning-objectives",
+    "title": "Lab",
+    "section": "2 Learning Objectives",
+    "text": "2 Learning Objectives\nBy the end of this lab you will be able to:\n\nImplement ray-cast and direct interaction in Unity using XR Interaction Toolkit\nEnable hand tracking on the headset\nCompare the interaction feel of controller vs hand tracking\nDocument interaction design observations systematically",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#part-1-ray-cast-interaction-45-min",
+    "href": "weeks/04-week-04/04-laboratory.html#part-1-ray-cast-interaction-45-min",
+    "title": "Lab",
+    "section": "3 Part 1: Ray-Cast Interaction (45 min)",
+    "text": "3 Part 1: Ray-Cast Interaction (45 min)\n\n3.1 Setup\n\nOpen your Unity project from Week 1 (or create a new URP project)\nEnsure XR Interaction Toolkit is installed via Package Manager\nAdd the XR Origin (Action-based) prefab to your scene\n\n\n\n3.2 Task 1.1 — Add Interactable Objects\n\nCreate 3 primitive objects (cube, sphere, cylinder) in the scene\nAdd XRGrabInteractable component to each\nAdd Rigidbody component to each (enable gravity)\nPosition objects at different distances: 0.5m, 1.5m, 3m from origin\n\n\n\n3.3 Task 1.2 — Configure Ray Interactor\n\nSelect the Right Hand controller object in the XR Origin hierarchy\nAdd XRRayInteractor component\nAdd XRInteractorLineVisual component (shows the ray)\nSet Max Raycast Distance to 5m\n\n\n\n3.4 Task 1.3 — Test & Observe\nBuild and deploy to your headset. Test the following:\n\n\n\nTest\nObservation\n\n\n\n\nSelect object at 0.5m\n\n\n\nSelect object at 1.5m\n\n\n\nSelect object at 3m\n\n\n\nMove object while selected\n\n\n\nRelease object\n\n\n\n\nRecord in your lab journal: Which distance felt most natural? What visual feedback helped most?",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#part-2-direct-near-field-interaction-30-min",
+    "href": "weeks/04-week-04/04-laboratory.html#part-2-direct-near-field-interaction-30-min",
+    "title": "Lab",
+    "section": "4 Part 2: Direct (Near-Field) Interaction (30 min)",
+    "text": "4 Part 2: Direct (Near-Field) Interaction (30 min)\n\n4.1 Task 2.1 — Add Direct Interactor\n\nAdd XRDirectInteractor component to the Right Hand controller\nAdd a small sphere collider to the controller (set as trigger)\nDisable the Ray Interactor temporarily\n\n\n\n4.2 Task 2.2 — Test Direct Grab\nDeploy and test: - Walk up to each object and grab it directly - Try picking up and placing objects precisely - Try stacking objects\nRecord in your lab journal: How does direct grab compare to ray cast? When would you prefer each?",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#part-3-hand-tracking-30-min",
+    "href": "weeks/04-week-04/04-laboratory.html#part-3-hand-tracking-30-min",
+    "title": "Lab",
+    "section": "5 Part 3: Hand Tracking (30 min)",
+    "text": "5 Part 3: Hand Tracking (30 min)\n\nNote: Hand tracking is supported on Quest 2 as well as Quest 3, so this part runs on either. If no headset is free, use the Quest hand tracking simulator in Unity.\n\n\n5.1 Task 3.1 — Enable Hand Tracking\n\nIn Unity, go to Edit → Project Settings → XR Plug-in Management\nEnsure OpenXR is selected for Android\nAdd Hand Tracking feature under OpenXR features\nIn the XR Origin, enable the Hand Tracking prefab\n\n\n\n5.2 Task 3.2 — Pinch Interaction\n\nReplace controller interactors with XRHandInteractorsSetup prefab\nConfigure pinch threshold (default: 0.7)\nDeploy to your headset\n\nTest the following:\n\n\n\nGesture\nWorks?\nNotes\n\n\n\n\nPinch to select (near)\n\n\n\n\nPinch to select (far ray)\n\n\n\n\nTwo-hand grab\n\n\n\n\nSustained pinch hold",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#part-4-comparative-reflection-15-min",
+    "href": "weeks/04-week-04/04-laboratory.html#part-4-comparative-reflection-15-min",
+    "title": "Lab",
+    "section": "6 Part 4: Comparative Reflection (15 min)",
+    "text": "6 Part 4: Comparative Reflection (15 min)\nComplete the following comparison table in your lab journal:\n\n\n\nCriterion\nController (Ray)\nController (Direct)\nHand Tracking\n\n\n\n\nEase of learning\n\n\n\n\n\nPrecision\n\n\n\n\n\nFatigue after 5 min\n\n\n\n\n\nImmersion feel\n\n\n\n\n\nBest use case\n\n\n\n\n\n\n\n6.1 Reflection Questions\n\nWhich input method would you choose for a museum exhibit aimed at first-time XR users? Why?\nWhich would you choose for a surgical training simulation? Why?\nWhat feedback (visual/audio/haptic) made the biggest difference to interaction confidence?",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#submission",
+    "href": "weeks/04-week-04/04-laboratory.html#submission",
+    "title": "Lab",
+    "section": "7 Submission",
+    "text": "7 Submission\nUpload to VLE by end of week:\n\nUnity scene file (zipped project or .unitypackage)\nLab journal entry (PDF or markdown) including:\n\nCompleted observation tables\nComparative reflection table\nAnswers to reflection questions\nAt least 2 screenshots from your Unity scene",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/04-laboratory.html#troubleshooting",
+    "href": "weeks/04-week-04/04-laboratory.html#troubleshooting",
+    "title": "Lab",
+    "section": "8 Troubleshooting",
+    "text": "8 Troubleshooting\n\n\n\n\n\n\n\nProblem\nSolution\n\n\n\n\nRay not visible\nCheck XRInteractorLineVisual is on the same object as XRRayInteractor\n\n\nObjects fall through floor\nAdd a plane with a collider to the scene\n\n\nHand tracking not detected\nEnsure good lighting; remove gloves; check OpenXR feature is enabled\n\n\nBuild fails for Android\nCheck Android Build Support is installed in Unity Hub",
+    "crumbs": [
+      "Week 04",
+      "Lab"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html",
+    "href": "weeks/04-week-04/02-lecture.html",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "This week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: how users communicate intent to XR systems. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#overview",
+    "href": "weeks/04-week-04/02-lecture.html#overview",
+    "title": "Lecture Notes",
+    "section": "",
+    "text": "This week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: how users communicate intent to XR systems. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#the-input-landscape-in-xr",
+    "href": "weeks/04-week-04/02-lecture.html#the-input-landscape-in-xr",
+    "title": "Lecture Notes",
+    "section": "2 1. The Input Landscape in XR",
+    "text": "2 1. The Input Landscape in XR\nUnlike desktop or mobile computing, XR has no settled input standard. Each platform has made different bets:\n\nMeta Quest 2/3: Touch controllers + hand tracking\nHTC Vive Pro: Wand controllers + SteamVR tracking\nPico Neo Eye: Controller + eye tracking\nHololens 2: Hand tracking + gaze (no controller)\nSnap Spectacles: Tap gesture + voice\nDisplay glasses: Typically paired with phone/controller\n\nThis diversity is a design challenge. A well-designed XR experience should either: 1. Target a specific device and optimise for its input, or 2. Abstract input so it degrades gracefully across devices",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#controller-based-interaction",
+    "href": "weeks/04-week-04/02-lecture.html#controller-based-interaction",
+    "title": "Lecture Notes",
+    "section": "3 2. Controller-Based Interaction",
+    "text": "3 2. Controller-Based Interaction\n\n3.1 2.1 Ray Casting\nRay casting is the most common far-field interaction technique. A ray is projected from the controller tip; when it intersects an interactable object, the user can select it.\nAdvantages: - Works at any distance - Familiar (analogous to a laser pointer) - Low fatigue\nDisadvantages: - Imprecise for small targets - Breaks immersion (visible ray is artificial) - Difficult for manipulation tasks\n\n\n3.2 2.2 Direct Interaction\nNear-field interaction where the controller (or virtual hand) physically overlaps with an object to grab or activate it.\nAdvantages: - Intuitive — mirrors real-world grasping - High precision for close objects\nDisadvantages: - Requires moving close to objects - Can cause collisions with virtual geometry\n\n\n3.3 2.3 Haptic Feedback\nHaptic feedback is a critical but often underused channel. Even simple vibration pulses significantly improve interaction confidence.\nDesign guidelines: - Use short pulses (50–100ms) for selection confirmation - Use sustained vibration for “holding” states - Vary intensity to convey different interaction types - Never use haptics without a corresponding visual cue",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#hand-tracking",
+    "href": "weeks/04-week-04/02-lecture.html#hand-tracking",
+    "title": "Lecture Notes",
+    "section": "4 3. Hand Tracking",
+    "text": "4 3. Hand Tracking\n\n4.1 3.1 Skeletal Model\nModern hand tracking systems (Quest 2/3, Hololens 2) track a 26-joint skeletal model per hand in real time. This enables: - Pinch detection (index + thumb proximity) - Custom pose recognition - Full finger articulation for expressive avatars\n\n\n4.2 3.2 Gesture Design Principles\nNot all gestures are equal. Good XR gestures are: - Distinct — not easily confused with natural hand movement - Comfortable — can be held or repeated without fatigue - Discoverable — users can find them without instruction - Reversible — easy to cancel or undo\n\n\n4.3 3.3 Limitations\n\nOcclusion: hands block each other; fingers block joints\nLighting: poor lighting degrades tracking quality\nFatigue: sustained hand poses are tiring\nPrecision: less precise than controllers for small targets",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#gaze-and-eye-tracking",
+    "href": "weeks/04-week-04/02-lecture.html#gaze-and-eye-tracking",
+    "title": "Lecture Notes",
+    "section": "5 4. Gaze and Eye Tracking",
+    "text": "5 4. Gaze and Eye Tracking\n\n5.1 4.1 Gaze as Input\nGaze input uses where the user is looking as a selection signal. Two main patterns:\nDwell selection: Look at target for a fixed duration (typically 1–2 seconds) to activate. - Pro: completely hands-free - Con: slow, tiring, unnatural\nGaze + confirm: Look to target, then use a secondary input (pinch, button, voice) to confirm. - Pro: fast, natural, avoids Midas Touch - Con: requires secondary input channel\n\n\n5.2 4.2 The Midas Touch Problem\nNamed after the mythological king: everything you look at turns to gold (activates). Gaze-only systems must carefully distinguish intentional gaze from casual glancing.\nMitigations: - Require dwell time - Use gaze + confirm pattern - Provide clear visual feedback of gaze state - Allow users to disable gaze input\n\n\n5.3 4.3 Foveated Rendering\nEye tracking enables foveated rendering: rendering the area the user is looking at in full resolution, and reducing quality in the periphery. This can dramatically reduce GPU load.\nAvailable on: Pico Neo Eye (hardware-level), some Quest 3 features.\n\n\n5.4 4.4 Analytics Use\nEye tracking data is valuable for UX research: - Attention heatmaps - Fixation duration on UI elements - Saccade patterns (rapid eye movements between points)\nEthics note: Eye tracking data is biometric. Treat it with the same care as fingerprint or facial recognition data.",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#designing-for-physical-constraints",
+    "href": "weeks/04-week-04/02-lecture.html#designing-for-physical-constraints",
+    "title": "Lecture Notes",
+    "section": "6 5. Designing for Physical Constraints",
+    "text": "6 5. Designing for Physical Constraints\n\n6.1 5.1 Gorilla Arm Effect\nSustained arm elevation causes rapid fatigue. This was first observed in early touchscreen kiosks where users had to reach up to interact. In XR, it’s worse because: - Sessions can be longer - Users may not notice fatigue building - Sudden fatigue can cause loss of balance\nDesign rule: Default interaction zone is waist to shoulder height, within arm’s reach.\n\n\n6.2 5.2 Fitts’ Law in 3D\nFitts’ Law predicts movement time based on target size and distance:\nMT = a + b × log₂(2D/W)\nWhere D = distance to target, W = target width.\nIn 3D XR: - Minimum comfortable target size: ~2cm at arm’s length - Targets at the edge of the field of view take longer to acquire - Moving targets are significantly harder to select\n\n\n6.3 5.3 Interaction Zones\n\n\n\nZone\nDistance\nBest Input\n\n\n\n\nIntimate\n0–0.5m\nDirect grab, touch\n\n\nPersonal\n0.5–1.5m\nNear ray cast, hand\n\n\nSocial\n1.5–3m\nRay cast, gaze\n\n\nPublic\n3m+\nGaze, voice",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#interaction-state-design",
+    "href": "weeks/04-week-04/02-lecture.html#interaction-state-design",
+    "title": "Lecture Notes",
+    "section": "7 6. Interaction State Design",
+    "text": "7 6. Interaction State Design\nEvery interactive object in XR should implement a clear state machine:\nDefault → Hover → Selected → Activated → Released\nEach state transition should be communicated through at least two feedback channels (visual + audio, or visual + haptic).\n\n7.1 State Design Checklist\n\nDefault state is visually distinct from interactive state\nHover state provides clear affordance\nSelection is confirmed with feedback\nActivation has clear start and end signals\nRelease returns object to appropriate state",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#self-check-questions",
+    "href": "weeks/04-week-04/02-lecture.html#self-check-questions",
+    "title": "Lecture Notes",
+    "section": "8 Self-Check Questions",
+    "text": "8 Self-Check Questions\n\nWhat is the Midas Touch Problem and how can it be mitigated?\nWhy does Fitts’ Law still apply in 3D XR environments?\nWhat are the three channels of interaction feedback?\nWhen would you choose hand tracking over controller input?\nWhat is foveated rendering and which device in our lab supports it?",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/02-lecture.html#references",
+    "href": "weeks/04-week-04/02-lecture.html#references",
+    "title": "Lecture Notes",
+    "section": "9 References",
+    "text": "9 References\n\nLaViola, J.J. et al. (2017) 3D User Interfaces: Theory and Practice (2nd ed.). Addison-Wesley.\nBowman, D.A. et al. (2004) 3D User Interfaces: Theory and Practice. Pearson.\nFitts, P.M. (1954) “The information capacity of the human motor system in controlling the amplitude of movement.” Journal of Experimental Psychology, 47(6), 381–391.\nPoupyrev, I. et al. (1996) “The go-go interaction technique.” UIST ’96 Proceedings.\nUnity XR Interaction Toolkit: docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit",
+    "crumbs": [
+      "Week 04",
+      "Lecture Notes"
+    ]
+  },
+  {
     "objectID": "weeks/03-week-03/04-laboratory.html",
     "href": "weeks/03-week-03/04-laboratory.html",
     "title": "Lab",
@@ -2053,6 +2262,215 @@
     "crumbs": [
       "Week 03",
       "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#week-4-overview",
+    "href": "weeks/04-week-04/01-slides.html#week-4-overview",
+    "title": "Lecture Slides",
+    "section": "Week 4 Overview",
+    "text": "Week 4 Overview\n\nInput modalities in XR\nController-based interaction\nHand tracking fundamentals\nGaze and eye tracking\nDesigning for input constraints",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#the-input-problem-in-xr",
+    "href": "weeks/04-week-04/01-slides.html#the-input-problem-in-xr",
+    "title": "Lecture Slides",
+    "section": "The Input Problem in XR",
+    "text": "The Input Problem in XR\n\n\n\n“In XR, the interface is the world — input must feel natural, not learned.”\n\n\nDesktop: keyboard + mouse (2D, precise)\nMobile: touch (2D, direct)\nXR: 3D, embodied, spatial — no single dominant paradigm\n\n\n\n\n\nPrompt: A three-panel flat vector illustration comparing input paradigms across computing platforms — a desktop keyboard and mouse, a smartphone touchscreen with a tapping finger, and a VR headset with a handheld controller — clean minimalist tech style, dark background, blue and purple accent colours",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#input-modalities",
+    "href": "weeks/04-week-04/01-slides.html#input-modalities",
+    "title": "Lecture Slides",
+    "section": "Input Modalities",
+    "text": "Input Modalities\n\n\n\n\n\n\n\n\n\n\n\nModality\nExamples\nStrengths\nWeaknesses\n\n\n\n\nController\nQuest 2, Vive Pro\nPrecise, haptic\nBreaks immersion\n\n\nHand tracking\nQuest 2/3, Hololens 2\nNatural, no device\nFatigue, occlusion\n\n\nGaze\nPico Neo Eye\nHands-free, fast\nPrivacy, Midas touch\n\n\nVoice\nAll platforms\nAccessible\nNoisy environments\n\n\nBody/pose\nFull-body tracking\nExpressive\nSetup complexity\n\n\n\n\n\n\n\nPrompt: A dark-background icon grid comparing five XR input modalities — a handheld VR controller, a tracked hand mid-pinch gesture, an eye with tracking rings around the iris, a sound wave icon for voice input, and a full-body motion-capture figure — flat vector icon style, consistent blue/purple line-art",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#controller-interaction",
+    "href": "weeks/04-week-04/01-slides.html#controller-interaction",
+    "title": "Lecture Slides",
+    "section": "Controller Interaction",
+    "text": "Controller Interaction\n\n\n\nRay casting — pointing and selecting at distance\nDirect grab — near-field object manipulation\nHaptic feedback — vibration as confirmation signal\nButton mapping — trigger, grip, thumbstick, face buttons\n\nUnity XR Interaction Toolkit\n\nXRRayInteractor — ray-based selection\nXRDirectInteractor — near-field grab\nXRGrabInteractable — objects that can be picked up\n\n\n\n\n\nPrompt: A futuristic 3D render of a VR controller emitting a glowing blue ray-cast beam toward a floating highlighted object, with a second translucent hand directly grasping a nearby cube, dark studio background with neon accent lighting",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#hand-tracking",
+    "href": "weeks/04-week-04/01-slides.html#hand-tracking",
+    "title": "Lecture Slides",
+    "section": "Hand Tracking",
+    "text": "Hand Tracking\n\n\n\nSkeletal model — 26 joints tracked per hand\nPinch gestures — index + thumb = primary select\nPose recognition — custom gesture detection\nLimitations: occlusion, lighting, fatigue\n\nPlatforms\n\nQuest 2/3: built-in hand tracking (no controller required)\nHololens 2: primary input modality\nSnap Spectacles: limited gesture support\n\n\n\n\n\nPrompt: A detailed semi-transparent hand model overlay showing 26 tracked skeletal joints connected by glowing cyan lines against a soft hand silhouette, futuristic AR visualization style, dark background",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#gaze-eye-tracking",
+    "href": "weeks/04-week-04/01-slides.html#gaze-eye-tracking",
+    "title": "Lecture Slides",
+    "section": "Gaze & Eye Tracking",
+    "text": "Gaze & Eye Tracking\n\n\n\nGaze dwell — look at target for N milliseconds to activate\nGaze + gesture — look to target, pinch to confirm\nFoveated rendering — render high detail only where user looks\n\n\n\n\n\n\n\nMidas Touch Problem\n\n\nEverything you look at activates — a core design risk when gaze is used as the sole selection mechanism.\n\n\n\nPico Neo Eye\n\nEye tracking for both interaction and analytics\nUseful for attention heatmaps in research/evaluation\n\n\n\n\n\nPrompt: An illustration of a person wearing a VR headset with a visualized gaze cone pointing at a glowing UI element, surrounded by a foveated rendering blur gradient radiating outward from the focal point, sci-fi interface visualization style, dark background",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#designing-for-input-constraints",
+    "href": "weeks/04-week-04/01-slides.html#designing-for-input-constraints",
+    "title": "Lecture Slides",
+    "section": "Designing for Input Constraints",
+    "text": "Designing for Input Constraints\n\n\n\n\n\n\n\n\nGorilla Arm Effect\n\n\nHolding arms up for extended periods causes fatigue — design for low-effort, short-duration interactions.\n\n\n\nFitts’ Law in 3D\n\nTarget size and distance still matter\nMinimum interactive target: ~2cm at arm’s length\n\nFeedback Triad\n\nVisual — highlight, glow, cursor\nAudio — click, chime, spatial sound\nHaptic — vibration pulse (controllers only)\n\n\n\n\n\nPrompt: A side-view minimalist infographic illustration of a person wearing a VR headset with raised arms highlighted in warm orange to indicate the gorilla-arm fatigue effect, alongside a dashed measurement line showing arm’s-length target distance, clean vector diagram style",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#interaction-states",
+    "href": "weeks/04-week-04/01-slides.html#interaction-states",
+    "title": "Lecture Slides",
+    "section": "Interaction States",
+    "text": "Interaction States\n\n\nEvery interactive object should have clear states:\nDefault → Hover → Selected → Activated → Released\n\nDefault: object at rest\nHover: user is near/pointing at object\nSelected: user has grabbed/chosen object\nActivated: action is executing\nReleased: object returns to default or new state\n\n\n\n\n\nPrompt: A horizontal flow diagram with five connected glowing nodes labeled Default, Hover, Selected, Activated, and Released, each shown as a 3D object changing colour/state, clean UI diagram style, dark background with neon connector lines",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#lab-preview-controller-hand-tracking",
+    "href": "weeks/04-week-04/01-slides.html#lab-preview-controller-hand-tracking",
+    "title": "Lecture Slides",
+    "section": "Lab Preview: Controller & Hand Tracking",
+    "text": "Lab Preview: Controller & Hand Tracking\n\n\n\n\n\n\nThis week’s lab\n\n\n\nImplement ray-cast selection in Unity\nAdd hand tracking support (Quest 3)\nCompare interaction feel between modalities\nDocument observations in lab journal",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#assessment-2-reminder",
+    "href": "weeks/04-week-04/01-slides.html#assessment-2-reminder",
+    "title": "Lecture Slides",
+    "section": "Assessment 2 Reminder",
+    "text": "Assessment 2 Reminder\n\n\n\n\n\n\nCase Study due: Week 6\n\n\n\nChoose an XR experience to analyse\nApply interaction design frameworks\nBuild a low-fi prototype of an improved interaction\nEvaluate with at least 2 users",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#key-takeaways",
+    "href": "weeks/04-week-04/01-slides.html#key-takeaways",
+    "title": "Lecture Slides",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nXR has no single dominant input paradigm — design for the device\nControllers offer precision; hands offer naturalness\nGaze is powerful but requires careful design to avoid Midas Touch\nEvery interaction needs visual, audio, and (where possible) haptic feedback\nDesign for fatigue — arms down, short interactions",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#references",
+    "href": "weeks/04-week-04/01-slides.html#references",
+    "title": "Lecture Slides",
+    "section": "References",
+    "text": "References\n\nLaViola et al. (2017) 3D User Interfaces: Theory and Practice\nBowman et al. (2004) 3D User Interfaces\nFitts, P.M. (1954) — original Fitts’ Law paper\nUnity XR Interaction Toolkit Docs: docs.unity3d.com",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/01-slides.html#discussion",
+    "href": "weeks/04-week-04/01-slides.html#discussion",
+    "title": "Lecture Slides",
+    "section": "Discussion",
+    "text": "Discussion\n\nShould designers optimise for a single input modality per device, or build multimodal experiences that degrade gracefully across platforms? What are the trade-offs?\nWill hand tracking eventually replace physical controllers entirely, or will controllers remain necessary for certain categories of application?\nHow should the Midas Touch problem inform the ethical design of other attention-tracking systems, such as advertising or surveillance technology?\nEye-tracking data is biometric data. What consent and governance models should apply to its collection and use in consumer XR products?\nGiven Fitts’ Law and the gorilla-arm effect, how should default interaction zones change for users with different bodies, reach, or mobility?\n\n\nUse to provoke debate on input design ethics and inclusivity — good lead-in to the lab’s hands-on device comparison.",
+    "crumbs": [
+      "Week 04",
+      "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html",
+    "href": "weeks/04-week-04/03-practical.html",
+    "title": "Practical",
+    "section": "",
+    "text": "Duration: 2 hours\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "crumbs": [
+      "Week 04",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html#overview",
+    "href": "weeks/04-week-04/03-practical.html#overview",
+    "title": "Practical",
+    "section": "",
+    "text": "Duration: 2 hours\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "crumbs": [
+      "Week 04",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html#objectives",
+    "href": "weeks/04-week-04/03-practical.html#objectives",
+    "title": "Practical",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this practical, you will be able to:\n\nImplement one identical task using three distinct input modalities\nDesign and run a fair timed comparison across the group\nQuantify a modality trade-off rather than asserting it",
+    "crumbs": [
+      "Week 04",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html#prerequisites",
+    "href": "weeks/04-week-04/03-practical.html#prerequisites",
+    "title": "Practical",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nA Unity project with the XR Interaction Toolkit configured\nA Quest headset with hand tracking enabled\nThe trial recording sheet supplied on the VLE",
+    "crumbs": [
+      "Week 04",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html#instructions",
+    "href": "weeks/04-week-04/03-practical.html#instructions",
+    "title": "Practical",
+    "section": "Instructions",
+    "text": "Instructions\n\nPart 1: Build the Three Variants (55 minutes)\n\nDefine the Task\n\nThe task is fixed for everyone: select one of nine cubes arranged on an arc and place it into a target socket.\nCube size and arc distance are specified on the VLE so results are comparable across the group.\n\nImplement Each Modality\n\nVariant A: ray interactor with trigger select.\nVariant B: direct interactor requiring the user to reach the object.\nVariant C: gaze or head-pointing combined with a pinch gesture.\nEverything else – lighting, scale, audio, feedback – must be identical across all three.\n\n\n\n\nPart 2: Run the Trials (35 minutes)\n\nProtocol\n\nEach participant completes ten placements per modality.\nRandomise the order of modalities per participant to control for practice effects.\nRecord completion time and any placement errors on the recording sheet.\n\nSubjective Measures\n\nAfter each modality, record a one-to-seven rating for perceived effort.\nNote any comment about arm fatigue, and at which trial number it first appeared.\n\n\n\n\nPart 3: Analysis (30 minutes)\n\nPool and Compare\n\nPool the class results and compare mean completion time and error rate across modalities.\nRelate the pattern to Fitts’ Law: what happened as target distance increased?\n\nDraw a Conclusion\n\nState which modality you would choose for a task performed once, and for a task repeated for twenty minutes.\nThese are frequently different answers. Explain why.",
+    "crumbs": [
+      "Week 04",
+      "Practical"
+    ]
+  },
+  {
+    "objectID": "weeks/04-week-04/03-practical.html#expected-outcome",
+    "href": "weeks/04-week-04/03-practical.html#expected-outcome",
+    "title": "Practical",
+    "section": "Expected Outcome",
+    "text": "Expected Outcome\nThree working variants of the same task, a completed trial dataset across the group, and a short written comparison of completion time, error rate and perceived effort with a justified recommendation for two different usage patterns.\n\n\n\n\n\n\nTipHint\n\n\n\nRandomise the order for every participant. If everyone tries ray casting first, you will have measured how quickly people learn the task rather than how good the modality is.",
+    "crumbs": [
+      "Week 04",
+      "Practical"
     ]
   }
 ]
