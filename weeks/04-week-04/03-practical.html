@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -83,7 +118,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../custom.css">
 <meta property="og:title" content="Practical – Virtual, Augmented and Spatial Computing">
 <meta property="og:description" content="Interaction Technique Bake-Off">
+<meta property="og:image" content="../../figures/week04/cube-socket-task-layout.png">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+<meta property="og:image:alt" content="Top and side views of the task layout. Top view: a user at a fixed standing mark faces nine numbered cubes spaced 15 degrees apart on a 0.6 m arc, with cube 7 highlighted as the target and an arrow showing it being moved to a socket 0.4 m ahead. Side view: cubes at 1.0 m height on a shelf, socket on a pedestal at 0.9 m, both within reach of the standing user.">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -301,6 +338,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#before-the-session-project-setup-3045-minutes" id="toc-before-the-session-project-setup-3045-minutes" class="nav-link" data-scroll-target="#before-the-session-project-setup-3045-minutes">Before the Session: Project Setup (30–45 minutes)</a></li>
+  <li><a href="#no-headset" id="toc-no-headset" class="nav-link" data-scroll-target="#no-headset">Alternative: Working Without a Headset</a>
+  <ul class="collapse">
+  <li><a href="#simulator-setup-in-place-of-the-smoke-test" id="toc-simulator-setup-in-place-of-the-smoke-test" class="nav-link" data-scroll-target="#simulator-setup-in-place-of-the-smoke-test">Simulator Setup (in place of the Smoke Test)</a></li>
+  <li><a href="#what-changes-in-each-part" id="toc-what-changes-in-each-part" class="nav-link" data-scroll-target="#what-changes-in-each-part">What Changes in Each Part</a></li>
+  <li><a href="#what-changes-in-the-trials-and-analysis" id="toc-what-changes-in-the-trials-and-analysis" class="nav-link" data-scroll-target="#what-changes-in-the-trials-and-analysis">What Changes in the Trials and Analysis</a></li>
+  </ul></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
   <li><a href="#part-1-build-the-three-variants-55-minutes" id="toc-part-1-build-the-three-variants-55-minutes" class="nav-link" data-scroll-target="#part-1-build-the-three-variants-55-minutes">Part 1: Build the Three Variants (55 minutes)</a></li>
@@ -342,13 +386,14 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
+<p><strong>Duration:</strong> 2 hours (plus 30–45 minutes of project setup before the session) <strong>Software:</strong> Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR <strong>Hardware:</strong> Meta Quest 3 / 3S with controllers and hand tracking enabled, <em>or</em> a Windows or Apple Silicon Mac computer running the Meta XR Simulator (<a href="#no-headset">see the no-headset alternative</a>)</p>
 <p>The lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.</p>
 </section>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <p>By the end of this practical, you will be able to:</p>
 <ul>
+<li>Configure a Unity 6 project for Meta Quest using OpenXR and the XR Interaction Toolkit 3.x</li>
 <li>Implement one identical task using three distinct input modalities</li>
 <li>Design and run a fair timed comparison across the group</li>
 <li>Quantify a modality trade-off rather than asserting it</li>
@@ -357,43 +402,601 @@ ul.task-list li input[type="checkbox"] {
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>A Unity project with the XR Interaction Toolkit configured</li>
-<li>A Quest headset with hand tracking enabled</li>
+<li>Unity 6.3 LTS installed through Unity Hub <strong>with Android Build Support</strong> (including OpenJDK and Android SDK &amp; NDK Tools)</li>
+<li>A Quest headset in <a href="https://developers.meta.com/horizon/documentation/unity/unity-env-device-setup/">developer mode</a>, with hand tracking switched on in the headset’s settings</li>
 <li>The trial recording sheet supplied on the VLE</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>No Quest headset?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can complete this practical on a Windows or Apple Silicon Mac computer using the <strong>Meta XR Simulator</strong> in place of the headset. Follow the normal project setup, then the changes in <a href="#no-headset">Alternative: Working Without a Headset</a>. Each part of the practical tells you what differs.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Most online tutorials are for XRI 2.x
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The XR Interaction Toolkit changed significantly in version 3.0. If a tutorial tells you to add an <strong>XR Controller (Action-based)</strong> component, or to drag in an <strong>XR Interaction Setup</strong> prefab, it is written for 2.x and those steps no longer apply. In 3.x:</p>
+<ul>
+<li>Input is configured directly on each interactor (Select Input, Activate Input).</li>
+<li>The rig prefab is <strong>XR Origin (XR Rig)</strong>, or <strong>XR Origin Hands (XR Rig)</strong> for hand tracking.</li>
+<li>Scripts need new namespaces, for example <code>UnityEngine.XR.Interaction.Toolkit.Interactables</code> and <code>UnityEngine.XR.Interaction.Toolkit.Interactors</code>.</li>
+</ul>
+<p>The <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/upgrade-guide-3.0.html">XRI 3.0 upgrade guide</a> lists every change.</p>
+</div>
+</div>
+</section>
+<section id="before-the-session-project-setup-3045-minutes" class="level2">
+<h2 class="anchored" data-anchor-id="before-the-session-project-setup-3045-minutes">Before the Session: Project Setup (30–45 minutes)</h2>
+<p>Do this at home or in a free lab slot. Installing packages and building to Android the first time is slow, and it should not eat into the timed parts of the practical.</p>
+<ol type="1">
+<li><strong>Create the Project</strong>
+<ul>
+<li>In Unity Hub, create a new project using the <strong>Universal 3D</strong> (URP) template in Unity 6.3 LTS.</li>
+<li>Open <strong>File &gt; Build Profiles</strong>, select <strong>Meta Quest</strong> and click <strong>Switch Platform</strong>.</li>
+</ul></li>
+<li><strong>Enable OpenXR for Quest</strong>
+<ul>
+<li>Open <strong>Edit &gt; Project Settings &gt; XR Plug-in Management</strong> and install it if prompted.</li>
+<li>On the <strong>Android</strong> tab, tick <strong>OpenXR</strong> and the <strong>Meta Quest</strong> feature group.</li>
+<li>Under <strong>XR Plug-in Management &gt; OpenXR</strong> (Android tab), enable the features <strong>Meta Quest Support</strong>, <strong>Hand Tracking Subsystem</strong> and <strong>Meta Hand Tracking Aim</strong>.</li>
+<li>Under <strong>Enabled Interaction Profiles</strong>, add <strong>Oculus Touch Controller Profile</strong> and <strong>Hand Interaction Profile</strong>.</li>
+<li>Open <strong>Project Validation</strong> (the warning icon on the same page) and click <strong>Fix All</strong> until nothing is left.</li>
+</ul></li>
+<li><strong>Install the Interaction Packages</strong>
+<ul>
+<li>In <strong>Window &gt; Package Manager &gt; Unity Registry</strong>, install <strong>XR Interaction Toolkit</strong> (3.3.2 is the version verified for Unity 6.3; any later 3.x also works) and <strong>XR Hands</strong>.</li>
+<li>On the XR Interaction Toolkit’s <strong>Samples</strong> tab, import <strong>Starter Assets</strong> and then <strong>Hands Interaction Demo</strong>. Accept the prompt to install Shader Graph if it appears.</li>
+</ul></li>
+<li><strong>Smoke Test</strong>
+<ul>
+<li>Open the Hands Interaction Demo scene from the imported samples, then <strong>Build And Run</strong> it to the headset.</li>
+<li>Pick up an object with a controller, put the controllers down, and pinch an object with your hand. If both work, the project is ready.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Setup tutorials and documentation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 1.1: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-1-vr-project-setup">VR Project Setup</a> (targets Unity 6.3)</li>
+<li>Meta: <a href="https://developers.meta.com/horizon/documentation/unity/unity-project-setup/">Set up Unity for VR development</a>. Meta recommends the OpenXR plugin; the older Oculus XR Plugin is deprecated.</li>
+<li>Unity OpenXR: Meta: <a href="https://docs.unity3d.com/Packages/com.unity.xr.meta-openxr@2.6/manual/get-started/project-settings.html">Project settings</a></li>
+<li>Unity Manual: <a href="https://docs.unity3d.com/6000.3/Documentation/Manual/build-profiles.html">Build Profiles</a> and <a href="https://docs.unity3d.com/6000.3/Documentation/Manual/xr-meta-quest-develop.html">Meta Quest build platform</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/installation.html">Installation</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/samples-starter-assets.html">Starter Assets</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/samples-hands-interaction-demo.html">Hands Interaction Demo</a></li>
+<li>Video: Cam Ayres, <a href="https://www.youtube.com/watch?v=rKDuYzS-D2E">Setting Up the XR Interaction Toolkit in Unity 6 for a Meta Quest 3</a> (2024)</li>
+<li>Video playlist: GameDev Blueprint, <a href="https://www.youtube.com/playlist?list=PLaQ0PKVloZTS2GyVag18uDJCAPtrzaC-r">How to Make a VR Game in Unity 6 with XR Interaction Toolkit 3.0</a> (2025)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="no-headset" class="level2">
+<h2 class="anchored" data-anchor-id="no-headset">Alternative: Working Without a Headset</h2>
+<p>The <a href="https://developers.meta.com/horizon/documentation/unity/xrsim-intro/">Meta XR Simulator</a> is a desktop OpenXR runtime that presents a simulated Quest 3 to your application. Unity talks to it exactly as it would talk to a real headset, so your scenes, rig and scripts stay the same. The difference is that you drive the head, controllers and hands with a keyboard and mouse or an Xbox controller, and everything runs in <strong>Play mode</strong> on your computer instead of as an Android build.</p>
+<section id="simulator-setup-in-place-of-the-smoke-test" class="level3">
+<h3 class="anchored" data-anchor-id="simulator-setup-in-place-of-the-smoke-test">Simulator Setup (in place of the Smoke Test)</h3>
+<p>Complete steps 1 to 3 of the project setup above first. You still need the Android/Meta Quest configuration if you want to hand your project to someone with a headset later.</p>
+<ol type="1">
+<li><strong>Check Your Computer</strong>
+<ul>
+<li>Windows 10 or later (64-bit), or macOS on Apple Silicon. Intel Macs are not supported.</li>
+<li>The simulator supports Vulkan, Direct3D 11 or 12 on Windows, and Vulkan or Metal on macOS. It does not support OpenGL. Unity’s defaults already meet this.</li>
+</ul></li>
+<li><strong>Install the Simulator</strong>
+<ul>
+<li>Download and install the standalone app: <a href="https://developers.meta.com/horizon/downloads/package/meta-xr-simulator-windows/">Windows</a> or <a href="https://developers.meta.com/horizon/downloads/package/meta-xr-simulator-mac-arm/">macOS (Apple Silicon)</a>.</li>
+<li>The old <em>Meta XR Simulator</em> package on the Unity Asset Store is deprecated. Do not install it. A project that uses OpenXR needs no extra Unity package.</li>
+</ul></li>
+<li><strong>Enable OpenXR for the Desktop</strong>
+<ul>
+<li>In <strong>Edit &gt; Project Settings &gt; XR Plug-in Management</strong>, open the <strong>Windows, Mac, Linux</strong> tab (the monitor icon) and tick <strong>OpenXR</strong>.</li>
+<li>Under <strong>OpenXR</strong> on the same tab, add <strong>Oculus Touch Controller Profile</strong> and <strong>Hand Interaction Profile</strong>, and enable <strong>Hand Tracking Subsystem</strong> (and <strong>Meta Hand Tracking Aim</strong> if it is listed).</li>
+<li>Run <strong>Project Validation</strong> for this tab and fix all issues.</li>
+<li>In <strong>Edit &gt; Project Settings &gt; XR Interaction Toolkit</strong>, untick <strong>Use XR Interaction Simulator in scenes</strong> if it is ticked. Otherwise Unity’s own simulator and Meta’s simulator will both try to drive the rig.</li>
+</ul></li>
+<li><strong>Make the Simulator the Active OpenXR Runtime</strong>
+<ul>
+<li>Open the Meta XR Simulator app and switch on the <strong>toggle in its top-left corner</strong>. This makes it your computer’s active OpenXR runtime.</li>
+<li>Only one OpenXR runtime can be active at a time. While the simulator is on, <strong>Meta Horizon Link will not work</strong>. Switch the toggle off when you finish, and your previous runtime is restored.</li>
+<li>Full instructions: <a href="https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/">Get Started with Meta XR Simulator</a> and <a href="https://developers.meta.com/horizon/documentation/native/xrsim-getting-started">activating the simulator for OpenXR-only projects</a>.</li>
+</ul></li>
+<li><strong>Smoke Test in Play Mode</strong>
+<ul>
+<li>Open the Hands Interaction Demo scene and press <strong>Play</strong>. The simulator window shows the view from the simulated headset, with a Quest 3 as the default device.</li>
+<li>Move with <strong>W A S D</strong>, and hold the <strong>right mouse button</strong> and move the mouse to look around.</li>
+<li>Open the simulator’s <strong>Input bindings</strong> panel. Note which keys press the grip and trigger, how you switch the active input between controller and hand, and which key makes the hand pinch. Write these on your recording sheet, because you will use them in every trial.</li>
+<li>Pick up an object with a simulated controller, then switch the input to hands and pinch an object. If both work, you are ready.</li>
+<li>Between runs, leave the simulator open and just exit Play mode. The next launch is much faster.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Better input devices
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Keyboard and mouse control is awkward for 3D manipulation. If you have an <strong>Xbox controller</strong>, select it as the Left and Right input source in the simulator’s <strong>Inputs</strong> panel. It gives analogue sticks and triggers that map much more naturally onto Quest controllers. See <a href="https://developers.meta.com/horizon/documentation/unity/xrsim-input-keyboard/">keyboard, mouse and Xbox controller mappings</a>.</p>
+</div>
+</div>
+</section>
+<section id="what-changes-in-each-part" class="level3">
+<h3 class="anchored" data-anchor-id="what-changes-in-each-part">What Changes in Each Part</h3>
+<ul>
+<li><strong>1.1 Shared scene:</strong> no changes. Build it exactly as described.</li>
+<li><strong>1.2 Variant A (ray + trigger):</strong> no changes to the scene. In the simulator, aim the controller ray with the mouse and use the bound trigger key to select.</li>
+<li><strong>1.3 Variant B (direct grab):</strong> no changes to the scene. With the participant standing still, the simulated hand must be moved forward to reach the cubes. The effort of reaching becomes a keyboard task, not a physical one. Record this as a limitation.</li>
+<li><strong>1.4 Variant C (head-gaze + pinch):</strong> set up as described. In the simulator the “head” is the mouse look, so head-gaze becomes mouse-pointing and the pinch is a key press. If simulated hands do not appear, switch the input source to hands in the <strong>Inputs</strong> panel. If they still do not appear, use the <strong>Gaze Assistance</strong> fallback with a controller ray.</li>
+<li><strong>1.5 Feedback:</strong> haptics cannot be felt in the simulator. Turn haptics off in all variants so every participant experiences the same feedback.</li>
+<li><strong>Testing:</strong> press <strong>Play</strong> instead of <strong>Build And Run</strong>. There is no Android build, and there is no need for <code>adb</code> to collect data.</li>
+</ul>
+</section>
+<section id="what-changes-in-the-trials-and-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="what-changes-in-the-trials-and-analysis">What Changes in the Trials and Analysis</h3>
+<ul>
+<li><strong>Data location:</strong> <code>trials.csv</code> is written to your computer at <code>Application.persistentDataPath</code>:
+<ul>
+<li>Windows: <code>%USERPROFILE%\AppData\LocalLow\&lt;Company Name&gt;\&lt;Product Name&gt;\</code></li>
+<li>macOS: <code>~/Library/Application Support/&lt;Company Name&gt;/&lt;Product Name&gt;/</code></li>
+</ul>
+Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</code> if you cannot find it.</li>
+<li><strong>Label your data:</strong> give simulator participants IDs such as <code>S01</code>. Simulator trials are <strong>not</strong> comparable with headset trials, because you are measuring mouse and keyboard skill, not arm movement. Keep them as a separate group when pooling the class results.</li>
+<li><strong>Subjective measures:</strong> still record the one-to-seven effort rating, but interpret it as control effort. Arm and neck fatigue will not appear. Note wrist or hand strain instead.</li>
+<li><strong>Analysis:</strong> answer the Part 3 questions for your simulator data. Then add one paragraph comparing your ranking of the three modalities with the headset group’s ranking. Where do they disagree, and what does the simulator hide about each modality? Think especially about the gorilla-arm effect and about Fitts’ Law, which the simulator turns into mouse travel.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Meta XR Simulator documentation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-intro/">Meta XR Simulator overview</a>: device profiles, application requirements and synthetic rooms</li>
+<li><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/">Get Started with Meta XR Simulator</a>: installation, activation, input setup</li>
+<li><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-input-keyboard/">Keyboard, mouse and Xbox controller input</a></li>
+<li><a href="https://developers.meta.com/horizon/documentation/unity/unity-simulate-xrsim/">Simulate a VR environment with Meta XR Simulator</a></li>
+<li><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-data-forwarding/">Forwarding real Touch controller data</a>, if you have controllers but no headset</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
 <section id="part-1-build-the-three-variants-55-minutes" class="level3">
 <h3 class="anchored" data-anchor-id="part-1-build-the-three-variants-55-minutes">Part 1: Build the Three Variants (55 minutes)</h3>
+<section id="the-shared-task-scene-15-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="the-shared-task-scene-15-minutes">1.1 The Shared Task Scene (15 minutes)</h4>
+<p>The task is fixed for everyone: <strong>select the highlighted cube from nine cubes arranged on an arc and place it into a target socket.</strong> Every group uses the same dimensions so results can be pooled.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/cube-socket-task-layout.png" class="img-fluid figure-img" style="width:90.0%" alt="Top and side views of the task layout. Top view: a user at a fixed standing mark faces nine numbered cubes spaced 15 degrees apart on a 0.6 m arc, with cube 7 highlighted as the target and an arrow showing it being moved to a socket 0.4 m ahead. Side view: cubes at 1.0 m height on a shelf, socket on a pedestal at 0.9 m, both within reach of the standing user."></p>
+<figcaption>The task layout. Nine 6 cm cubes sit on a 120° arc at 0.6 m from the user’s standing mark, at 1.0 m height. The socket is 0.4 m straight ahead at 0.9 m. One cube is highlighted as the target for each trial.</figcaption>
+</figure>
+</div>
 <ol type="1">
-<li><strong>Define the Task</strong>
+<li><strong>Save a Scene Copy</strong>
 <ul>
-<li>The task is fixed for everyone: select one of nine cubes arranged on an arc and place it into a target socket.</li>
-<li>Cube size and arc distance are specified on the VLE so results are comparable across the group.</li>
+<li>Create a new scene called <code>BakeOff_Base</code>. Add a floor plane and a small marker at the origin showing where the participant stands.</li>
+<li>Do <strong>not</strong> add a rig yet. Each variant scene adds its own.</li>
 </ul></li>
-<li><strong>Implement Each Modality</strong>
+<li><strong>Place the Cubes</strong>
 <ul>
-<li>Variant A: ray interactor with trigger select.</li>
-<li>Variant B: direct interactor requiring the user to reach the object.</li>
-<li>Variant C: gaze or head-pointing combined with a pinch gesture.</li>
-<li>Everything else – lighting, scale, audio, feedback – must be identical across all three.</li>
+<li>Create a cube, scale it to <code>0.06</code> and name it <code>Cube_1</code>. Add an <strong>XR Grab Interactable</strong> component, which also adds a Rigidbody.</li>
+<li>On the Rigidbody, untick <strong>Use Gravity</strong> and tick <strong>Is Kinematic</strong>, so the cubes hang in place.</li>
+<li>On the XR Grab Interactable, untick <strong>Throw On Detach</strong>.</li>
+<li>Duplicate the cube until you have nine, positioned on the arc as follows (y = 1.0 for all; rotate each cube by the given Y angle so it faces the user):</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cube</th>
+<th>Angle (Y rotation)</th>
+<th>x (m)</th>
+<th>z (m)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>−60°</td>
+<td>−0.520</td>
+<td>0.300</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>−45°</td>
+<td>−0.424</td>
+<td>0.424</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>−30°</td>
+<td>−0.300</td>
+<td>0.520</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>−15°</td>
+<td>−0.155</td>
+<td>0.580</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0°</td>
+<td>0.000</td>
+<td>0.600</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>15°</td>
+<td>0.155</td>
+<td>0.580</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>30°</td>
+<td>0.300</td>
+<td>0.520</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>45°</td>
+<td>0.424</td>
+<td>0.424</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>60°</td>
+<td>0.520</td>
+<td>0.300</td>
+</tr>
+</tbody>
+</table></li>
+<li><strong>Build the Socket</strong>
+<ul>
+<li>Add a cylinder pedestal whose top sits at 0.9 m, positioned at x = 0, z = 0.4.</li>
+<li>Create an empty GameObject <code>Socket</code> just above the pedestal. Add an <strong>XR Socket Interactor</strong> and a <strong>Sphere Collider</strong> (tick <strong>Is Trigger</strong>, radius <code>0.06</code>).</li>
+<li>Create a child empty called <code>Attach</code> and assign it to the socket’s <strong>Attach Transform</strong>. This is the pose the cube snaps to.</li>
+<li>Leave <strong>Show Interactable Hover Meshes</strong> on. It draws a ghost of the cube when one hovers over the socket, which gives the “hover” state from the lecture for free.</li>
+</ul></li>
+<li><strong>Add the Trial Manager</strong>
+<ul>
+<li>Create two materials, <code>Target</code> (orange) and <code>Distractor</code> (pale blue).</li>
+<li>Create an empty GameObject <code>TrialManager</code> and add the script below. Assign the socket, the nine cubes <strong>in arc order</strong> and the two materials.</li>
 </ul></li>
 </ol>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>TrialManager.cs</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="TrialManager.cs"><pre class="sourceCode csharp code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Collections</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">Collections</span><span class="op">.</span><span class="fu">Generic</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> System<span class="op">.</span><span class="fu">IO</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Interactables</span><span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Interactors</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> TrialManager <span class="op">:</span> MonoBehaviour</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> XRSocketInteractor socket<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> List<span class="op">&lt;</span>XRGrabInteractable<span class="op">&gt;</span> cubes<span class="op">;</span>   <span class="co">// Cube_1 .. Cube_9, in arc order</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> Material targetMaterial<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> Material distractorMaterial<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> <span class="dt">string</span> participant <span class="op">=</span> <span class="st">"P01"</span><span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> <span class="dt">string</span> variant <span class="op">=</span> <span class="st">"A"</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> <span class="dt">int</span> trialsPerBlock <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">readonly</span> List<span class="op">&lt;</span>Pose<span class="op">&gt;</span> homePoses <span class="op">=</span> <span class="kw">new</span><span class="op">();</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> trial<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> target<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> startTime<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Awake</span><span class="op">()</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        <span class="kw">foreach</span> <span class="op">(</span><span class="dt">var</span> cube <span class="kw">in</span> cubes<span class="op">)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            homePoses<span class="op">.</span><span class="fu">Add</span><span class="op">(</span><span class="kw">new</span> <span class="fu">Pose</span><span class="op">(</span>cube<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">position</span><span class="op">,</span> cube<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">rotation</span><span class="op">));</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">OnEnable</span><span class="op">()</span> <span class="op">=&gt;</span> socket<span class="op">.</span><span class="fu">selectEntered</span><span class="op">.</span><span class="fu">AddListener</span><span class="op">(</span>OnPlaced<span class="op">);</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">OnDisable</span><span class="op">()</span> <span class="op">=&gt;</span> socket<span class="op">.</span><span class="fu">selectEntered</span><span class="op">.</span><span class="fu">RemoveListener</span><span class="op">(</span>OnPlaced<span class="op">);</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span><span class="op">()</span> <span class="op">=&gt;</span> <span class="fu">NextTrial</span><span class="op">();</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">NextTrial</span><span class="op">()</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        target <span class="op">=</span> Random<span class="op">.</span><span class="fu">Range</span><span class="op">(</span><span class="dv">0</span><span class="op">,</span> cubes<span class="op">.</span><span class="fu">Count</span><span class="op">);</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> cubes<span class="op">.</span><span class="fu">Count</span><span class="op">;</span> i<span class="op">++)</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>            cubes<span class="op">[</span>i<span class="op">].</span><span class="fu">GetComponent</span><span class="op">&lt;</span>Renderer<span class="op">&gt;().</span><span class="fu">sharedMaterial</span> <span class="op">=</span> i <span class="op">==</span> target <span class="op">?</span> targetMaterial <span class="op">:</span> distractorMaterial<span class="op">;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        startTime <span class="op">=</span> Time<span class="op">.</span><span class="fu">time</span><span class="op">;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">OnPlaced</span><span class="op">(</span>SelectEnterEventArgs args<span class="op">)</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="dt">var</span> placed <span class="op">=</span> args<span class="op">.</span><span class="fu">interactableObject</span> <span class="kw">as</span> XRGrabInteractable<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> placedIndex <span class="op">=</span> cubes<span class="op">.</span><span class="fu">IndexOf</span><span class="op">(</span>placed<span class="op">);</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="dt">float</span> seconds <span class="op">=</span> Time<span class="op">.</span><span class="fu">time</span> <span class="op">-</span> startTime<span class="op">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> error <span class="op">=</span> placedIndex <span class="op">==</span> target <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Written to the headset: Android/data/&lt;your.package&gt;/files/trials.csv</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        File<span class="op">.</span><span class="fu">AppendAllText</span><span class="op">(</span>Path<span class="op">.</span><span class="fu">Combine</span><span class="op">(</span>Application<span class="op">.</span><span class="fu">persistentDataPath</span><span class="op">,</span> <span class="st">"trials.csv"</span><span class="op">),</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>            $<span class="st">"{participant},{variant},{trial + 1},{target + 1},{placedIndex + 1},{seconds:F3},{error}</span><span class="sc">\n</span><span class="st">"</span><span class="op">);</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        <span class="fu">StartCoroutine</span><span class="op">(</span><span class="fu">ResetCube</span><span class="op">(</span>placed<span class="op">,</span> placedIndex<span class="op">));</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    IEnumerator <span class="fu">ResetCube</span><span class="op">(</span>XRGrabInteractable cube<span class="op">,</span> <span class="dt">int</span> index<span class="op">)</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>        <span class="kw">yield</span> <span class="kw">return</span> <span class="kw">null</span><span class="op">;</span>  <span class="co">// let the socket finish its select before we release it</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        socket<span class="op">.</span><span class="fu">interactionManager</span><span class="op">.</span><span class="fu">SelectExit</span><span class="op">(</span>socket<span class="op">,</span> <span class="op">(</span>IXRSelectInteractable<span class="op">)</span>cube<span class="op">);</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>        cube<span class="op">.</span><span class="fu">transform</span><span class="op">.</span><span class="fu">SetPositionAndRotation</span><span class="op">(</span>homePoses<span class="op">[</span>index<span class="op">].</span><span class="fu">position</span><span class="op">,</span> homePoses<span class="op">[</span>index<span class="op">].</span><span class="fu">rotation</span><span class="op">);</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>        trial<span class="op">++;</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>trial <span class="op">&lt;</span> trialsPerBlock<span class="op">)</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>            <span class="fu">NextTrial</span><span class="op">();</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        <span class="kw">else</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>            Debug<span class="op">.</span><span class="fu">Log</span><span class="op">(</span>$<span class="st">"Block {variant} complete for {participant}"</span><span class="op">);</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Placing the wrong cube is logged as an error. Dropping a cube outside the socket is not logged automatically: the observer should tally drops on the recording sheet.</li>
+</ul>
+<ol start="5" type="1">
+<li><strong>Save Three Copies</strong>
+<ul>
+<li>Save <code>BakeOff_Base</code> three times as <code>BakeOff_A_Ray</code>, <code>BakeOff_B_Direct</code> and <code>BakeOff_C_GazePinch</code>. Change only the rig and the <code>variant</code> field in each. Lighting, scale, cube layout, materials and audio must stay identical.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tutorials and documentation: grab interactables and sockets
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 1.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-3-grabbable-gameobjects">Grabbable GameObjects</a></li>
+<li>Unity Learn, <em>Create with VR</em> 1.4: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-4-sockets">Sockets</a> (attach transforms and interaction-layer filtering)</li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-grab-interactable.html">XR Grab Interactable</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-socket-interactor.html">XR Socket Interactor</a></li>
+<li>Official XRI Examples project: <a href="https://github.com/Unity-Technologies/XR-Interaction-Toolkit-Examples/blob/main/Documentation/SocketInteractors.md">Socket Interactors station</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="variant-a-ray-interactor-with-trigger-select-12-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="variant-a-ray-interactor-with-trigger-select-12-minutes">1.2 Variant A: Ray Interactor with Trigger Select (12 minutes)</h4>
+<p>The user points from a distance and pulls the trigger to pick up.</p>
+<ol type="1">
+<li>Open <code>BakeOff_A_Ray</code>. From <code>Samples/XR Interaction Toolkit/&lt;version&gt;/Starter Assets/Prefabs</code>, drag <strong>XR Origin (XR Rig)</strong> onto the standing mark.</li>
+<li>Disable locomotion so the participant cannot walk to the cubes: turn off the <strong>Locomotion</strong> child object and each controller’s <strong>Teleport Interactor</strong>.</li>
+<li>On each controller, disable the <strong>Poke Interactor</strong>.</li>
+<li>Select each controller’s <strong>Near-Far Interactor</strong>:
+<ul>
+<li>Untick <strong>Enable Near Casting</strong> and keep <strong>Enable Far Casting</strong> ticked, so it behaves as a pure ray.</li>
+<li>Under <strong>Input Configuration</strong>, change <strong>Select Input</strong> to that hand’s <strong>Activate</strong> action (the trigger) instead of the default grip action. This matches the lecture’s “ray + trigger” technique.</li>
+</ul></li>
+<li>Build and check: the ray should highlight a cube, the trigger should pick it up, and releasing the trigger over the socket should snap it in.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tutorials and documentation: ray interaction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 2.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-events-and-interactions/tutorial/2-3-near-far-and-ray-interactors">Near-Far and Ray Interactors</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/near-far-interactor.html">Near-Far Interactor</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-ray-interactor.html">XR Ray Interactor</a></li>
+<li>Official XRI Examples project: <a href="https://github.com/Unity-Technologies/XR-Interaction-Toolkit-Examples/blob/main/Documentation/GrabInteractables.md">Grab Interactables station</a> (ray and direct grab side by side)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="variant-b-direct-interactor-12-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="variant-b-direct-interactor-12-minutes">1.3 Variant B: Direct Interactor (12 minutes)</h4>
+<p>The user must physically reach the cube and squeeze the grip.</p>
+<ol type="1">
+<li>Open <code>BakeOff_B_Direct</code> and add the same <strong>XR Origin (XR Rig)</strong>, with locomotion, teleport and poke disabled exactly as in Variant A.</li>
+<li>On each controller’s <strong>Near-Far Interactor</strong>, tick <strong>Enable Near Casting</strong> and untick <strong>Enable Far Casting</strong>. Leave <strong>Select Input</strong> on the default grip action.
+<ul>
+<li>Alternative: disable the Near-Far Interactor and add an <strong>XR Direct Interactor</strong> with a small trigger <strong>Sphere Collider</strong> at the controller tip.</li>
+</ul></li>
+<li>Build and check that a cube can only be picked up when the controller physically overlaps it. At 0.6 m, most participants reach the end cubes (1 and 9) by leaning or stepping. Note on the sheet whether they did.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tutorials and documentation: direct interaction
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 1.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-3-grabbable-gameobjects">Grabbable GameObjects</a> (direct grab section)</li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-direct-interactor.html">XR Direct Interactor</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/near-far-interactor.html">Near-Far Interactor</a> (near casting)</li>
+<li>Video: Valem Tutorials, <a href="https://www.youtube.com/watch?v=H8dWVlZKQu4">How To Make a VR Game in 2 Hours: Complete Beginner Tutorial Unity 6</a> (2026; covers setup and grabbing)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="variant-c-gaze-head-pointing-plus-pinch-16-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="variant-c-gaze-head-pointing-plus-pinch-16-minutes">1.4 Variant C: Gaze (Head Pointing) plus Pinch (16 minutes)</h4>
+<p>The user looks at the cube and pinches to confirm. No controllers are held.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The Quest 3 has no eye tracking
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Only the Quest Pro has eye trackers. On the Quest 3 and 3S, the XR Gaze Interactor falls back to <strong>head pose</strong>: the “gaze” ray comes from the centre of the headset. Record this as <strong>head-gaze</strong> in your write-up, and think about how true eye tracking might change your results.</p>
+</div>
+</div>
+<ol type="1">
+<li>Open <code>BakeOff_C_GazePinch</code>. From the <strong>Hands Interaction Demo</strong> sample, drag <strong>XR Origin Hands (XR Rig)</strong> onto the standing mark. Disable locomotion and teleport as before.</li>
+<li>Find the <strong>Gaze Interactor</strong> under the rig’s <strong>Camera Offset</strong> and enable it. On the <strong>Gaze Input Manager</strong> component, tick <strong>Fallback If Eye Tracking Unavailable</strong>. Without this, the gaze interactor switches itself off on a Quest 3.</li>
+<li>On the <strong>XR Gaze Interactor</strong>:
+<ul>
+<li>Untick <strong>Hover To Select</strong>. We want gaze plus confirm, not dwell selection, which is the Midas Touch problem from the lecture.</li>
+<li>Under <strong>Input Configuration</strong>, set <strong>Select Input</strong> to the right hand’s <strong>Select</strong> action from <em>XRI Default Input Actions</em>. With hands, this action is bound to the pinch.</li>
+</ul></li>
+<li>On every cube’s <strong>XR Grab Interactable</strong>, tick <strong>Allow Gaze Interaction</strong> and <strong>Allow Gaze Select</strong>.</li>
+<li>Disable the hands’ own ray and near interactors so the pinch <strong>only</strong> confirms the gaze target and cannot grab anything by itself.</li>
+<li>Build and test early. Look at a cube, pinch, turn your head towards the socket and release the pinch over it. If the cube jumps towards your face on selection, set the cube’s <strong>Far Attach Mode</strong> to <strong>Far</strong>, so it stays at the distance where it was selected.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Fallback if Variant C will not cooperate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>XRI’s <strong>Gaze Assistance</strong> gives a closely related technique. Keep the hand’s ray interactor enabled and tick <strong>Allow Gaze Assistance</strong> on each cube. The hand ray then snaps to whichever cube you look at, and the pinch confirms. Whichever version you build, record it in your write-up so the class knows which technique was measured.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tutorials and documentation: gaze and hand-tracking pinch
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-gaze-interactor.html">XR Gaze Interactor</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-gaze-assistance.html">Gaze Assistance</a></li>
+<li>Official XRI Examples project: <a href="https://github.com/Unity-Technologies/XR-Interaction-Toolkit-Examples/blob/main/Documentation/Gaze.md">Gaze station</a> (head-tracking fallback, hover-to-select, gaze assistance)</li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/samples-hands-interaction-demo.html">Hands Interaction Demo</a> (how pinch is detected and how the rig switches between hands and controllers)</li>
+<li>XR Hands docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.hands@1.7/manual/index.html">Package manual</a></li>
+<li>Unity blog: <a href="https://unity.com/blog/hand-tracking-tools-for-unity-xr">Hand Tracking in Unity: XR Hand Capture &amp; Simulation</a> (2026; testing pinch gestures without a headset)</li>
+<li>Video: Cam Ayres, <a href="https://www.youtube.com/watch?v=NReWPlKpPNc">XR Hands: Setting Up Your XR Scene in Unity 6</a> (2024, XRI 3.0)</li>
+<li>Background only (<strong>XRI 2.x</strong>, so the steps are out of date): Valem Tutorials, <a href="https://www.youtube.com/watch?v=mJ3fygb9Aw0">Hand Tracking with Unity XR Interaction Toolkit</a> (2023)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="keep-the-feedback-identical" class="level4">
+<h4 class="anchored" data-anchor-id="keep-the-feedback-identical">1.5 Keep the Feedback Identical</h4>
+<p>The lecture’s feedback triad applies here. Feedback must not differ between variants, or you will measure the feedback rather than the modality.</p>
+<ul>
+<li>Add a short click <code>AudioSource</code> to the socket and play it from the socket’s <strong>Select Entered</strong> event, in all three scenes.</li>
+<li>Controllers can vibrate but hands cannot. Either turn haptics off in Variants A and B, or leave them on and record this as a known difference between the conditions. Agree on one choice as a class before anyone runs trials.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Documentation: feedback
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 2.1: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-events-and-interactions/tutorial/2-1-audio-and-haptics-2">Audio and Haptics</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/simple-haptic-feedback.html">Simple Haptic Feedback</a>. The older affordance system is deprecated in XRI 3.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Test in the Editor first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-interaction-simulator.html">XR Interaction Simulator</a> lets you drive the rig with mouse and keyboard in Play mode, including simulated hands. Check that each variant works before you spend time on an Android build.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="part-2-run-the-trials-35-minutes" class="level3">
 <h3 class="anchored" data-anchor-id="part-2-run-the-trials-35-minutes">Part 2: Run the Trials (35 minutes)</h3>
 <ol type="1">
 <li><strong>Protocol</strong>
 <ul>
-<li>Each participant completes ten placements per modality.</li>
-<li>Randomise the order of modalities per participant to control for practice effects.</li>
-<li>Record completion time and any placement errors on the recording sheet.</li>
+<li>Each participant completes ten placements per modality: one block of ten per scene.</li>
+<li>Randomise the order of modalities per participant to control for practice effects. With three variants there are six possible orders (ABC, ACB, BAC, BCA, CAB, CBA), so assign one order to each participant in turn.</li>
+<li>Before each block, set the <code>participant</code> and <code>variant</code> fields on the TrialManager.</li>
+<li>Allow three untimed practice placements per modality before the block starts.</li>
+<li>The participant stands on the marker and does not step off it. The observer tallies dropped cubes and any stepping or leaning on the sheet.</li>
+</ul></li>
+<li><strong>Collect the Data</strong>
+<ul>
+<li><code>trials.csv</code> is written to the headset. Copy it off with Meta Quest Developer Hub (File Manager) or with <code>adb pull /sdcard/Android/data/&lt;your.package.name&gt;/files/trials.csv</code>.</li>
+<li>The columns are: participant, variant, trial, target cube, placed cube, time in seconds, error (1 = wrong cube).</li>
+<li>Using the simulator? The file is on your computer instead. See <a href="#no-headset">What Changes in the Trials and Analysis</a>.</li>
 </ul></li>
 <li><strong>Subjective Measures</strong>
 <ul>
 <li>After each modality, record a one-to-seven rating for perceived effort.</li>
-<li>Note any comment about arm fatigue, and at which trial number it first appeared.</li>
+<li>Note any comment about arm or neck fatigue, and at which trial number it first appeared. Head-gaze tends to move the fatigue from the arm to the neck.</li>
 </ul></li>
 </ol>
 </section>
@@ -402,13 +1005,14 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><strong>Pool and Compare</strong>
 <ul>
-<li>Pool the class results and compare mean completion time and error rate across modalities.</li>
-<li>Relate the pattern to Fitts’ Law: what happened as target distance increased?</li>
+<li>Pool the class CSV files and compare mean completion time and error rate across modalities.</li>
+<li>Relate the pattern to Fitts’ Law. The movement distance <em>D</em> is from the target cube to the socket, so the end cubes (1 and 9) are the long-distance targets and cube 5 is the shortest. Did completion time rise with distance equally for all three modalities?</li>
 </ul></li>
 <li><strong>Draw a Conclusion</strong>
 <ul>
 <li>State which modality you would choose for a task performed once, and for a task repeated for twenty minutes.</li>
 <li>These are frequently different answers. Explain why.</li>
+<li>Note how your Variant C result might change on a headset with true eye tracking.</li>
 </ul></li>
 </ol>
 </section>
