@@ -83,7 +83,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../custom.css">
 <meta property="og:title" content="Lecture Notes – Virtual, Augmented and Spatial Computing">
 <meta property="og:description" content="Input Systems &amp; Interaction Fundamentals">
+<meta property="og:image" content="../../figures/week04/the-input-problem-slide-02.png">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+<meta property="og:image:alt" content="Three panels comparing desktop keyboard and mouse (2D, precise), mobile touch (2D, direct) and an XR headset with controller (3D, embodied, spatial).">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -373,6 +375,18 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Snap Spectacles</strong>: Tap gesture + voice</li>
 <li><strong>Display glasses</strong>: Typically paired with phone/controller</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/the-input-problem-slide-02.png" class="img-fluid figure-img" style="width:70.0%" alt="Three panels comparing desktop keyboard and mouse (2D, precise), mobile touch (2D, direct) and an XR headset with controller (3D, embodied, spatial)."></p>
+<figcaption>Desktop and mobile each settled on a dominant input paradigm; XR has not.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/input-modalities-slide-03.png" class="img-fluid figure-img" style="width:70.0%" alt="Icon grid of five XR input modalities: controller, hand tracking pinch, gaze, voice and full-body pose, each with its main strength."></p>
+<figcaption>The five main XR input modalities.</figcaption>
+</figure>
+</div>
 <p>This diversity is a design challenge. A well-designed XR experience should either: 1. Target a specific device and optimise for its input, or 2. Abstract input so it degrades gracefully across devices</p>
 <hr>
 </section>
@@ -389,6 +403,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Near-field interaction where the controller (or virtual hand) physically overlaps with an object to grab or activate it.</p>
 <p><strong>Advantages:</strong> - Intuitive — mirrors real-world grasping - High precision for close objects</p>
 <p><strong>Disadvantages:</strong> - Requires moving close to objects - Can cause collisions with virtual geometry</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/controller-interaction-slide-04.png" class="img-fluid figure-img" style="width:70.0%" alt="Top: a controller casting a ray onto a highlighted distant sphere. Bottom: a hand directly grasping a nearby cube."></p>
+<figcaption>Ray casting selects at a distance; direct interaction grabs objects within reach.</figcaption>
+</figure>
+</div>
 </section>
 <section id="haptic-feedback" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="haptic-feedback"><span class="header-section-number">3.3</span> 2.3 Haptic Feedback</h3>
@@ -402,6 +422,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="skeletal-model" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="skeletal-model"><span class="header-section-number">4.1</span> 3.1 Skeletal Model</h3>
 <p>Modern hand tracking systems (Quest 2/3, Hololens 2) track a 26-joint skeletal model per hand in real time. This enables: - Pinch detection (index + thumb proximity) - Custom pose recognition - Full finger articulation for expressive avatars</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/hand-tracking-slide-05.png" class="img-fluid figure-img" style="width:60.0%" alt="Hand outline with 26 tracked joints connected by lines from the wrist; thumb tip and index tip are highlighted with a dashed line showing the pinch distance."></p>
+<figcaption>The 26-joint hand skeleton. A pinch is detected from the distance between the thumb tip and index tip.</figcaption>
+</figure>
+</div>
 </section>
 <section id="gesture-design-principles" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="gesture-design-principles"><span class="header-section-number">4.2</span> 3.2 Gesture Design Principles</h3>
@@ -425,6 +451,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Gaze input uses where the user is looking as a selection signal. Two main patterns:</p>
 <p><strong>Dwell selection</strong>: Look at target for a fixed duration (typically 1–2 seconds) to activate. - Pro: completely hands-free - Con: slow, tiring, unnatural</p>
 <p><strong>Gaze + confirm</strong>: Look to target, then use a secondary input (pinch, button, voice) to confirm. - Pro: fast, natural, avoids Midas Touch - Con: requires secondary input channel</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/gaze-and-eye-tracking-slide-06.png" class="img-fluid figure-img" style="width:70.0%" alt="Side profile of a headset wearer with a gaze cone pointing at a Play button, surrounded by concentric rings that fade from sharp focus to reduced peripheral detail."></p>
+<figcaption>Gaze plus confirm: the eyes pick the target and a pinch or voice command confirms it. Foveated rendering keeps full detail only at the focal point.</figcaption>
+</figure>
+</div>
 </section>
 <section id="the-midas-touch-problem" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="the-midas-touch-problem"><span class="header-section-number">5.2</span> 4.2 The Midas Touch Problem</h3>
@@ -449,6 +481,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="6.1" class="anchored" data-anchor-id="gorilla-arm-effect"><span class="header-section-number">6.1</span> 5.1 Gorilla Arm Effect</h3>
 <p>Sustained arm elevation causes rapid fatigue. This was first observed in early touchscreen kiosks where users had to reach up to interact. In XR, it’s worse because: - Sessions can be longer - Users may not notice fatigue building - Sudden fatigue can cause loss of balance</p>
 <p><strong>Design rule</strong>: Default interaction zone is <strong>waist to shoulder height, within arm’s reach</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/designing-for-input-constraints-slide-07.png" class="img-fluid figure-img" style="width:70.0%" alt="Two figures in headsets: one holding an arm raised above the shoulder, marked as causing fatigue; the other reaching at waist-to-shoulder height towards a 2 cm target at arm's length."></p>
+<figcaption>Gorilla arm versus the comfort zone: keep hands between waist and shoulder, and targets at least 2 cm across at arm’s length.</figcaption>
+</figure>
+</div>
 </section>
 <section id="fitts-law-in-3d" class="level3" data-number="6.2">
 <h3 data-number="6.2" class="anchored" data-anchor-id="fitts-law-in-3d"><span class="header-section-number">6.2</span> 5.2 Fitts’ Law in 3D</h3>
@@ -498,6 +536,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Every interactive object in XR should implement a clear state machine:</p>
 <pre><code>Default → Hover → Selected → Activated → Released</code></pre>
 <p>Each state transition should be communicated through at least two feedback channels (visual + audio, or visual + haptic).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../figures/week04/interaction-states-slide-08.png" class="img-fluid figure-img" style="width:70.0%" alt="Five cubes in a row labelled Default, Hover, Selected, Activated and Released, each styled differently, with a dashed arrow from Released back to Default."></p>
+<figcaption>The five interaction states, with a loop from Released back to Default.</figcaption>
+</figure>
+</div>
 <section id="state-design-checklist" class="level3" data-number="7.1">
 <h3 data-number="7.1" class="anchored" data-anchor-id="state-design-checklist"><span class="header-section-number">7.1</span> State Design Checklist</h3>
 <ul class="task-list">
