@@ -338,7 +338,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#before-the-session-project-setup-3045-minutes" id="toc-before-the-session-project-setup-3045-minutes" class="nav-link" data-scroll-target="#before-the-session-project-setup-3045-minutes">Before the Session: Project Setup (30–45 minutes)</a></li>
+  <li><a href="#project-setup" id="toc-project-setup" class="nav-link" data-scroll-target="#project-setup">Project Setup</a></li>
   <li><a href="#no-headset" id="toc-no-headset" class="nav-link" data-scroll-target="#no-headset">Alternative: Working Without a Headset</a>
   <ul class="collapse">
   <li><a href="#simulator-setup-in-place-of-the-smoke-test" id="toc-simulator-setup-in-place-of-the-smoke-test" class="nav-link" data-scroll-target="#simulator-setup-in-place-of-the-smoke-test">Simulator Setup (in place of the Smoke Test)</a></li>
@@ -386,7 +386,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours (plus 30–45 minutes of project setup before the session) <strong>Software:</strong> Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR <strong>Hardware:</strong> Meta Quest 3 / 3S with controllers and hand tracking enabled, <em>or</em> a Windows or Apple Silicon Mac computer running the Meta XR Simulator (<a href="#no-headset">see the no-headset alternative</a>)</p>
+<p><strong>Duration:</strong> 2 hours</p>
+<p><strong>Software:</strong> Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR</p>
+<p><strong>Hardware:</strong> Meta Quest 3 / 3S with controllers and hand tracking enabled, <em>or</em> a Windows or Apple Silicon Mac computer running the Meta XR Simulator (<a href="#no-headset">see the no-headset alternative</a>)</p>
 <p>The lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.</p>
 </section>
 <section id="objectives" class="level2">
@@ -439,9 +441,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="before-the-session-project-setup-3045-minutes" class="level2">
-<h2 class="anchored" data-anchor-id="before-the-session-project-setup-3045-minutes">Before the Session: Project Setup (30–45 minutes)</h2>
-<p>Do this at home or in a free lab slot. Installing packages and building to Android the first time is slow, and it should not eat into the timed parts of the practical.</p>
+<section id="project-setup" class="level2">
+<h2 class="anchored" data-anchor-id="project-setup">Project Setup</h2>
+<p>Installing packages and building to Android the first time is slow.</p>
 <ol type="1">
 <li><strong>Create the Project</strong>
 <ul>
@@ -544,6 +546,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Keyboard and mouse control is awkward for 3D manipulation. If you have an <strong>Xbox controller</strong>, select it as the Left and Right input source in the simulator’s <strong>Inputs</strong> panel. It gives analogue sticks and triggers that map much more naturally onto Quest controllers. See <a href="https://developers.meta.com/horizon/documentation/unity/xrsim-input-keyboard/">keyboard, mouse and Xbox controller mappings</a>.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Unity Crashing ?
+</div>
+</div>
+<section id="force-the-editor-to-use-directx-11-highly-recommended" class="level3 callout-body-container callout-body">
+<h3 class="anchored" data-anchor-id="force-the-editor-to-use-directx-11-highly-recommended">Force the Editor to use DirectX 11 (Highly Recommended)</h3>
+<p>Unity 6 defaults to DX12, but Meta’s XR Simulator runtime has known memory layout incompatibilities with DX12 eye-texture provision flags. Since your Quest build targets an Android/Vulkan architecture anyway, forcing the PC Editor to use DX11 eliminates this bug without affecting the mobile build: - Navigate to Edit &gt; Project Settings &gt; Player.Select the Windows/Standalone tab (the Desktop monitor icon). - Expand Other Settings and look for Graphics APIs. - Uncheck Auto Graphics API if it is active. - Click the plus + icon, add Direct3D11, and drag it to the very top of the list (above Direct3D12). - Restart the Unity Editor to apply the change, then launch the simulator</p>
+</section>
+</div>
 </section>
 <section id="what-changes-in-each-part" class="level3">
 <h3 class="anchored" data-anchor-id="what-changes-in-each-part">What Changes in Each Part</h3>
@@ -570,7 +586,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 <li><strong>Analysis:</strong> answer the Part 3 questions for your simulator data. Then add one paragraph comparing your ranking of the three modalities with the headset group’s ranking. Where do they disagree, and what does the simulator hide about each modality? Think especially about the gorilla-arm effect and about Fitts’ Law, which the simulator turns into mouse travel.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -579,7 +595,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-intro/">Meta XR Simulator overview</a>: device profiles, application requirements and synthetic rooms</li>
@@ -781,7 +797,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </ul></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -790,7 +806,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Unity Learn, <em>Create with VR</em> 1.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-3-grabbable-gameobjects">Grabbable GameObjects</a></li>
@@ -817,7 +833,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 <li>Build and check: the ray should highlight a cube, the trigger should pick it up, and releasing the trigger over the socket should snap it in.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -826,7 +842,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Unity Learn, <em>Create with VR</em> 2.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-events-and-interactions/tutorial/2-3-near-far-and-ray-interactors">Near-Far and Ray Interactors</a></li>
@@ -849,7 +865,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 <li>Build and check that a cube can only be picked up when the controller physically overlaps it. At 0.6 m, most participants reach the end cubes (1 and 9) by leaning or stepping. Note on the sheet whether they did.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -858,7 +874,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Unity Learn, <em>Create with VR</em> 1.3: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-3-grabbable-gameobjects">Grabbable GameObjects</a> (direct grab section)</li>
@@ -911,7 +927,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -920,7 +936,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-gaze-interactor.html">XR Gaze Interactor</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/xr-gaze-assistance.html">Gaze Assistance</a></li>
@@ -943,7 +959,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 <li>Controllers can vibrate but hands cannot. Either turn haptics off in Variants A and B, or leave them on and record this as a known difference between the conditions. Agree on one choice as a class before anyone runs trials.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -952,7 +968,7 @@ Add <code>Debug.Log(Application.persistentDataPath);</code> to <code>Start()</co
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>Unity Learn, <em>Create with VR</em> 2.1: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-events-and-interactions/tutorial/2-1-audio-and-haptics-2">Audio and Haptics</a></li>

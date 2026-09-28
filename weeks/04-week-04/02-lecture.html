@@ -387,7 +387,11 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>The five main XR input modalities.</figcaption>
 </figure>
 </div>
-<p>This diversity is a design challenge. A well-designed XR experience should either: 1. Target a specific device and optimise for its input, or 2. Abstract input so it degrades gracefully across devices</p>
+<p>This diversity is a design challenge. A well-designed XR experience should either:</p>
+<ol type="1">
+<li>Target a specific device and optimise for its input, or</li>
+<li>Abstract input so it degrades gracefully across devices</li>
+</ol>
 <hr>
 </section>
 <section id="controller-based-interaction" class="level2" data-number="3">
@@ -395,14 +399,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="ray-casting" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="ray-casting"><span class="header-section-number">3.1</span> 2.1 Ray Casting</h3>
 <p>Ray casting is the most common far-field interaction technique. A ray is projected from the controller tip; when it intersects an interactable object, the user can select it.</p>
-<p><strong>Advantages:</strong> - Works at any distance - Familiar (analogous to a laser pointer) - Low fatigue</p>
-<p><strong>Disadvantages:</strong> - Imprecise for small targets - Breaks immersion (visible ray is artificial) - Difficult for manipulation tasks</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Works at any distance</li>
+<li>Familiar (analogous to a laser pointer)</li>
+<li>Low fatigue</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Imprecise for small targets</li>
+<li>Breaks immersion (visible ray is artificial)</li>
+<li>Difficult for manipulation tasks</li>
+</ul>
 </section>
 <section id="direct-interaction" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="direct-interaction"><span class="header-section-number">3.2</span> 2.2 Direct Interaction</h3>
 <p>Near-field interaction where the controller (or virtual hand) physically overlaps with an object to grab or activate it.</p>
-<p><strong>Advantages:</strong> - Intuitive — mirrors real-world grasping - High precision for close objects</p>
-<p><strong>Disadvantages:</strong> - Requires moving close to objects - Can cause collisions with virtual geometry</p>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Intuitive — mirrors real-world grasping</li>
+<li>High precision for close objects</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Requires moving close to objects</li>
+<li>Can cause collisions with virtual geometry</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../figures/week04/controller-interaction-slide-04.png" class="img-fluid figure-img" style="width:70.0%" alt="Top: a controller casting a ray onto a highlighted distant sphere. Bottom: a hand directly grasping a nearby cube."></p>
@@ -413,7 +435,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="haptic-feedback" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="haptic-feedback"><span class="header-section-number">3.3</span> 2.3 Haptic Feedback</h3>
 <p>Haptic feedback is a critical but often underused channel. Even simple vibration pulses significantly improve interaction confidence.</p>
-<p><strong>Design guidelines:</strong> - Use short pulses (50–100ms) for selection confirmation - Use sustained vibration for “holding” states - Vary intensity to convey different interaction types - Never use haptics without a corresponding visual cue</p>
+<p><strong>Design guidelines:</strong></p>
+<ul>
+<li>Use short pulses (50–100ms) for selection confirmation</li>
+<li>Use sustained vibration for “holding” states</li>
+<li>Vary intensity to convey different interaction types</li>
+<li>Never use haptics without a corresponding visual cue</li>
+</ul>
 <hr>
 </section>
 </section>
@@ -421,7 +449,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4" class="anchored" data-anchor-id="hand-tracking"><span class="header-section-number">4</span> 3. Hand Tracking</h2>
 <section id="skeletal-model" class="level3" data-number="4.1">
 <h3 data-number="4.1" class="anchored" data-anchor-id="skeletal-model"><span class="header-section-number">4.1</span> 3.1 Skeletal Model</h3>
-<p>Modern hand tracking systems (Quest 2/3, Hololens 2) track a 26-joint skeletal model per hand in real time. This enables: - Pinch detection (index + thumb proximity) - Custom pose recognition - Full finger articulation for expressive avatars</p>
+<p>Modern hand tracking systems (Quest 2/3, Hololens 2) track a 26-joint skeletal model per hand in real time. This enables:</p>
+<ul>
+<li>Pinch detection (index + thumb proximity)</li>
+<li>Custom pose recognition</li>
+<li>Full finger articulation for expressive avatars</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../figures/week04/hand-tracking-slide-05.png" class="img-fluid figure-img" style="width:60.0%" alt="Hand outline with 26 tracked joints connected by lines from the wrist; thumb tip and index tip are highlighted with a dashed line showing the pinch distance."></p>
@@ -449,8 +482,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="gaze-as-input" class="level3" data-number="5.1">
 <h3 data-number="5.1" class="anchored" data-anchor-id="gaze-as-input"><span class="header-section-number">5.1</span> 4.1 Gaze as Input</h3>
 <p>Gaze input uses where the user is looking as a selection signal. Two main patterns:</p>
-<p><strong>Dwell selection</strong>: Look at target for a fixed duration (typically 1–2 seconds) to activate. - Pro: completely hands-free - Con: slow, tiring, unnatural</p>
-<p><strong>Gaze + confirm</strong>: Look to target, then use a secondary input (pinch, button, voice) to confirm. - Pro: fast, natural, avoids Midas Touch - Con: requires secondary input channel</p>
+<p><strong>Dwell selection</strong>: Look at target for a fixed duration (typically 1–2 seconds) to activate.</p>
+<ul>
+<li>Pro: completely hands-free</li>
+<li>Con: slow, tiring, unnatural</li>
+</ul>
+<p><strong>Gaze + confirm</strong>: Look to target, then use a secondary input (pinch, button, voice) to confirm.</p>
+<ul>
+<li>Pro: fast, natural, avoids Midas Touch</li>
+<li>Con: requires secondary input channel</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../figures/week04/gaze-and-eye-tracking-slide-06.png" class="img-fluid figure-img" style="width:70.0%" alt="Side profile of a headset wearer with a gaze cone pointing at a Play button, surrounded by concentric rings that fade from sharp focus to reduced peripheral detail."></p>
@@ -461,7 +502,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-midas-touch-problem" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="the-midas-touch-problem"><span class="header-section-number">5.2</span> 4.2 The Midas Touch Problem</h3>
 <p>Named after the mythological king: everything you look at turns to gold (activates). Gaze-only systems must carefully distinguish intentional gaze from casual glancing.</p>
-<p>Mitigations: - Require dwell time - Use gaze + confirm pattern - Provide clear visual feedback of gaze state - Allow users to disable gaze input</p>
+<p>Mitigations:</p>
+<ul>
+<li>Require dwell time</li>
+<li>Use gaze + confirm pattern</li>
+<li>Provide clear visual feedback of gaze state</li>
+<li>Allow users to disable gaze input</li>
+</ul>
 </section>
 <section id="foveated-rendering" class="level3" data-number="5.3">
 <h3 data-number="5.3" class="anchored" data-anchor-id="foveated-rendering"><span class="header-section-number">5.3</span> 4.3 Foveated Rendering</h3>
@@ -470,7 +517,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="analytics-use" class="level3" data-number="5.4">
 <h3 data-number="5.4" class="anchored" data-anchor-id="analytics-use"><span class="header-section-number">5.4</span> 4.4 Analytics Use</h3>
-<p>Eye tracking data is valuable for UX research: - Attention heatmaps - Fixation duration on UI elements - Saccade patterns (rapid eye movements between points)</p>
+<p>Eye tracking data is valuable for UX research:</p>
+<ul>
+<li>Attention heatmaps</li>
+<li>Fixation duration on UI elements</li>
+<li>Saccade patterns (rapid eye movements between points)</li>
+</ul>
 <p><strong>Ethics note</strong>: Eye tracking data is biometric. Treat it with the same care as fingerprint or facial recognition data.</p>
 <hr>
 </section>
@@ -479,7 +531,12 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="6" class="anchored" data-anchor-id="designing-for-physical-constraints"><span class="header-section-number">6</span> 5. Designing for Physical Constraints</h2>
 <section id="gorilla-arm-effect" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="gorilla-arm-effect"><span class="header-section-number">6.1</span> 5.1 Gorilla Arm Effect</h3>
-<p>Sustained arm elevation causes rapid fatigue. This was first observed in early touchscreen kiosks where users had to reach up to interact. In XR, it’s worse because: - Sessions can be longer - Users may not notice fatigue building - Sudden fatigue can cause loss of balance</p>
+<p>Sustained arm elevation causes rapid fatigue. This was first observed in early touchscreen kiosks where users had to reach up to interact. In XR, it’s worse because:</p>
+<ul>
+<li>Sessions can be longer</li>
+<li>Users may not notice fatigue building</li>
+<li>Sudden fatigue can cause loss of balance</li>
+</ul>
 <p><strong>Design rule</strong>: Default interaction zone is <strong>waist to shoulder height, within arm’s reach</strong>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -493,7 +550,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Fitts’ Law predicts movement time based on target size and distance:</p>
 <pre><code>MT = a + b × log₂(2D/W)</code></pre>
 <p>Where D = distance to target, W = target width.</p>
-<p>In 3D XR: - Minimum comfortable target size: ~2cm at arm’s length - Targets at the edge of the field of view take longer to acquire - Moving targets are significantly harder to select</p>
+<p>In 3D XR:</p>
+<ul>
+<li>Minimum comfortable target size: ~2cm at arm’s length</li>
+<li>Targets at the edge of the field of view take longer to acquire</li>
+<li>Moving targets are significantly harder to select</li>
+</ul>
 </section>
 <section id="interaction-zones" class="level3" data-number="6.3">
 <h3 data-number="6.3" class="anchored" data-anchor-id="interaction-zones"><span class="header-section-number">6.3</span> 5.3 Interaction Zones</h3>
