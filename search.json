@@ -1,10 +1,98 @@
 [
   {
+    "objectID": "weeks/05-week-05/02-lecture.html",
+    "href": "weeks/05-week-05/02-lecture.html",
+    "title": "Week 5 Lecture Notes",
+    "section": "",
+    "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#overview",
+    "href": "weeks/05-week-05/02-lecture.html#overview",
+    "title": "Week 5 Lecture Notes",
+    "section": "",
+    "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#gesture-design",
+    "href": "weeks/05-week-05/02-lecture.html#gesture-design",
+    "title": "Week 5 Lecture Notes",
+    "section": "2 1. Gesture Design",
+    "text": "2 1. Gesture Design\n\n2.1 1.1 Principles of Good Gesture Design\nGesture design in XR is constrained by both the capabilities of tracking systems and the ergonomics of the human hand. A gesture vocabulary should be:\nDistinct: Each gesture should be clearly different from others in the vocabulary, and from natural resting hand positions. Ambiguous gestures cause false positives.\nComfortable: Gestures that require sustained tension (e.g., holding a spread-finger pose) cause rapid fatigue. Prefer gestures that can be performed and released quickly.\nDiscoverable: Users should be able to find gestures through exploration or minimal instruction. Gestures that require memorisation of a specific hand shape are problematic for casual users.\nReversible: Every gesture should have a clear cancel or undo path. Users need to feel safe experimenting.\n\n\n\nThe four tests a gesture vocabulary should pass.\n\n\n\n\n2.2 1.2 Standard Gesture Vocabulary\nMost XR platforms have converged on a small set of standard gestures:\n\n\n\nGesture\nTrigger\nCommon Use\n\n\n\n\nIndex pinch\nIndex + thumb contact\nPrimary select\n\n\nMiddle pinch\nMiddle + thumb contact\nSecondary action\n\n\nOpen palm\nAll fingers extended\nCancel / stop\n\n\nPoint\nIndex extended, others curled\nNavigate / indicate\n\n\nTwo-hand pinch-spread\nBoth hands pinch then separate\nScale\n\n\nTwo-hand rotate\nBoth hands pinch and rotate\nRotate object\n\n\n\n\n\n2.3 1.3 Custom Gesture Recognition\nFor custom gestures beyond the standard vocabulary, Unity’s XR Hands package provides a pose detection system. Key considerations:\n\nDefine poses using joint angle thresholds, not absolute positions\nTest across multiple hand sizes (children, large hands, small hands)\nProvide visual coaching for non-standard gestures\nLog false positive rates during testing\n\n\n\n\nPinch detection: the gesture fires when the thumb tip and index tip come closer than a threshold, typically about 2 cm.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#locomotion",
+    "href": "weeks/05-week-05/02-lecture.html#locomotion",
+    "title": "Week 5 Lecture Notes",
+    "section": "3 2. Locomotion",
+    "text": "3 2. Locomotion\n\n3.1 2.1 The Vestibular Conflict\nSimulator sickness (cybersickness) occurs when visual motion signals conflict with vestibular (inner ear) signals. The vestibular system detects: - Linear acceleration - Rotational acceleration - Gravity direction\nWhen the visual system shows movement that the vestibular system does not detect, the brain interprets this as potential poisoning (an evolutionary response) and triggers nausea.\nKey insight: It is not speed that causes sickness — it is acceleration. Constant velocity movement is less sickening than acceleration/deceleration.\n\n\n\nThe vestibular conflict: the eyes report motion while the inner ear reports stillness.\n\n\n\n\n3.2 2.2 Locomotion Techniques in Detail\n\n\n\nFive locomotion techniques, each trading comfort against immersion differently.\n\n\n\n3.2.1 Teleportation\nThe most comfortable locomotion technique. The user points to a destination and is instantly transported. The visual discontinuity is handled by a brief fade or blink.\nDesign details: - Arc trajectory indicator (parabolic, not straight) feels more natural - Colour-code valid (green) and invalid (red) landing zones - Allow user to set facing direction before confirming - Fade duration: 100–200ms (shorter = less disorienting)\n\n\n\nTeleport design: a parabolic arc previews the landing, invalid zones are marked, the user chooses their facing, and a short fade hides the jump.\n\n\n\n\n3.2.2 Smooth Locomotion\nContinuous movement via thumbstick. High immersion, higher sickness risk.\nComfort mitigations: - Vignette: Dynamically narrow the FOV during movement. Reduces peripheral motion that triggers sickness. - Speed cap: 2–3 m/s maximum for general audiences - Snap turning: 30° or 45° increments instead of smooth rotation. Eliminates rotational vestibular conflict. - Acceleration curve: Ease in/out rather than instant full speed\n\n\n\nSmooth locomotion comfort settings: vignette, speed cap, snap turning and a teleport alternative.\n\n\n\n\n3.2.3 Room-Scale\nPhysical walking within the tracked play area. Most comfortable and immersive, but limited to the physical space available. Quest 2/3 Guardian system defines the safe zone.\n\n\n3.2.4 Arm-Swinging\nUser swings arms as if walking; system translates this into forward movement. More comfortable than thumbstick because it involves physical movement that partially matches the visual signal.\n\n\n\n3.3 2.3 Comfort Settings Best Practice\nAlways provide a comfort settings menu with at minimum: - Locomotion type toggle (teleport / smooth) - Vignette on/off - Snap turn angle (15°, 30°, 45°, 60°) - Movement speed slider",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#spatial-ui-design",
+    "href": "weeks/05-week-05/02-lecture.html#spatial-ui-design",
+    "title": "Week 5 Lecture Notes",
+    "section": "4 3. Spatial UI Design",
+    "text": "4 3. Spatial UI Design\n\n4.1 3.1 Why Flat UI Fails in XR\nTraditional 2D UI (panels, windows, HUDs) creates several problems in XR:\nVergence-accommodation conflict: If a UI panel is rendered at a fixed virtual distance (e.g., 2m) but the user’s eyes converge on a real object at 0.5m, the mismatch causes eye strain.\nDepth inconsistency: A flat panel floating in 3D space looks artificial and breaks immersion.\nHead-locked discomfort: UI that moves exactly with the head (like a traditional HUD) is uncomfortable — the eye cannot rest because the target never stops moving.\n\n\n4.2 3.2 UI Attachment Strategies\nWorld-locked UI: Attached to a fixed position in the scene. The user must move or look to interact with it. Best for environmental information (signs, labels, control panels).\nBody-locked UI (with lag): Follows the user but with a slight delay and damping. Feels more natural than head-locked. The wrist menu is the canonical example.\nHead-locked UI: Moves exactly with the head. Use sparingly — only for critical persistent information (e.g., a small battery indicator in the corner).\n\n\n\nWorld-locked, body-locked and head-locked UI, shown from above as the user turns.\n\n\n\n\n4.3 3.3 Diegetic UI Design\nDiegetic UI exists within the world of the experience. It is the gold standard for immersive VR because it: - Eliminates vergence-accommodation conflict (rendered at world depth) - Maintains immersion - Provides spatial context\nExamples: - Health displayed as a glowing bar on the character’s chest armour - Inventory shown as a physical backpack the user opens - Settings accessed via a physical control panel in the environment - Notifications displayed as floating text attached to world objects\n\n\n\nOne scene, four kinds of interface: diegetic, spatial, non-diegetic and meta.\n\n\n\n\n4.4 3.4 The Wrist Menu Pattern\nThe wrist menu has become a standard pattern across VR platforms (used in Meta’s system UI, Hololens, and many applications):\n\nUser raises wrist with palm facing up\nTrigger: wrist rotation beyond ~60° from neutral\nMenu appears on inner wrist surface\nUser selects items with opposite hand (ray or direct)\nWrist lowered → menu dismissed\n\nDesign considerations: - Keep menu items large (minimum 2cm × 2cm) - Limit to 6–8 items maximum - Use icons + text labels - Provide haptic feedback on open/close\n\n\n\nThe wrist menu: raise, reveal, select with the other hand, lower to dismiss.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#accessibility",
+    "href": "weeks/05-week-05/02-lecture.html#accessibility",
+    "title": "Week 5 Lecture Notes",
+    "section": "5 4. Accessibility",
+    "text": "5 4. Accessibility\nXR accessibility is an emerging but critical area. Key considerations:\n\n\n\nCore XR accessibility features to design in from the start.\n\n\n\n5.1 4.1 Physical Accessibility\n\nSeated mode: All interactions must be reachable from a seated position. Test with a chair.\nOne-handed mode: Full functionality with one controller/hand. Map all critical actions to single-hand input.\nReduced motion mode: Disable smooth locomotion, limit visual effects.\n\n\n\n5.2 4.2 Perceptual Accessibility\n\nText size: Minimum 24pt at 1m viewing distance (approximately 2.4° visual angle)\nColour contrast: WCAG AA minimum (4.5:1 ratio). Never use colour as the only differentiator.\nAudio captions: Provide text alternatives for all audio cues.\n\n\n\n5.3 4.3 Cognitive Accessibility\n\nConsistent interaction patterns: Don’t change how things work between scenes\nUndo support: Allow reversal of actions\nTime limits: Avoid timed interactions; if unavoidable, allow extension",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#self-check-questions",
+    "href": "weeks/05-week-05/02-lecture.html#self-check-questions",
+    "title": "Week 5 Lecture Notes",
+    "section": "6 Self-Check Questions",
+    "text": "6 Self-Check Questions\n\nWhat is the vestibular conflict and why does it cause simulator sickness?\nWhy is teleportation more comfortable than smooth locomotion?\nWhat is the difference between diegetic and non-diegetic UI?\nDescribe the wrist menu pattern and explain why it works well in VR.\nName three accessibility considerations for XR interaction design.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/02-lecture.html#references",
+    "href": "weeks/05-week-05/02-lecture.html#references",
+    "title": "Week 5 Lecture Notes",
+    "section": "7 References",
+    "text": "7 References\n\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nBowman, D.A. et al. (2004) 3D User Interfaces: Theory and Practice. Pearson.\nOculus Design Guidelines: developer.oculus.com/design\nMicrosoft Mixed Reality Design: learn.microsoft.com/windows/mixed-reality/design\nXR Access Initiative: xraccess.org\nKemeny, A. et al. (2020) “Getting over motion sickness.” Communications of the ACM, 63(5), 91–97.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Lecture Notes"
+    ]
+  },
+  {
     "objectID": "weeks/04-week-04/03-practical.html",
     "href": "weeks/04-week-04/03-practical.html",
     "title": "Practical",
     "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 3 / 3S with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 2 / 3 with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
     "crumbs": [
       "Week 04",
       "Practical"
@@ -15,7 +103,7 @@
     "href": "weeks/04-week-04/03-practical.html#overview",
     "title": "Practical",
     "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 3 / 3S with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 2 / 3 with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
     "crumbs": [
       "Week 04",
       "Practical"
@@ -2394,6 +2482,171 @@
     "crumbs": [
       "Week 04",
       "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#week-5-overview",
+    "href": "weeks/05-week-05/01-slides.html#week-5-overview",
+    "title": "Week 5 Slides",
+    "section": "Week 5 Overview",
+    "text": "Week 5 Overview\n\nGesture design and recognition\nLocomotion techniques in VR\nSpatial UI design principles\nDiegetic vs non-diegetic interfaces\nComfort and accessibility",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#gesture-design",
+    "href": "weeks/05-week-05/01-slides.html#gesture-design",
+    "title": "Week 5 Slides",
+    "section": "Gesture Design",
+    "text": "Gesture Design\n\n\n\nWhat makes a good XR gesture?\n\nDistinct — not confused with natural movement\nComfortable — low fatigue, repeatable\nDiscoverable — findable without instruction\nReversible — easy to cancel\n\nGesture Vocabulary\n\n\n\nGesture\nCommon Use\n\n\n\n\nPinch\nSelect, confirm\n\n\nOpen palm\nCancel, stop\n\n\nPoint\nNavigate, indicate\n\n\nTwo-hand spread\nScale\n\n\nTwo-hand rotate\nRotate object",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#gesture-recognition-in-unity",
+    "href": "weeks/05-week-05/01-slides.html#gesture-recognition-in-unity",
+    "title": "Week 5 Slides",
+    "section": "Gesture Recognition in Unity",
+    "text": "Gesture Recognition in Unity\n\n\n\n// Example: detect a pinch with the XR Hands package\nusing UnityEngine;\nusing UnityEngine.XR.Hands;\n\nXRHandSubsystem hands;   // from SubsystemManager.GetSubsystems\n\nvoid Update() {\n    var hand = hands.rightHand;\n    if (!hand.isTracked) return;\n\n    if (hand.GetJoint(XRHandJointID.ThumbTip).TryGetPose(out var thumb) &&\n        hand.GetJoint(XRHandJointID.IndexTip).TryGetPose(out var index) &&\n        Vector3.Distance(thumb.position, index.position) &lt; 0.02f) {\n        OnPinch();   // fingertips closer than 2 cm\n    }\n}",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#locomotion-in-vr",
+    "href": "weeks/05-week-05/01-slides.html#locomotion-in-vr",
+    "title": "Week 5 Slides",
+    "section": "Locomotion in VR",
+    "text": "Locomotion in VR\n\n\n\n\nLocomotion is the #1 cause of simulator sickness\n\nThe Core Problem\n\nPhysical body stays still\nVirtual body moves\nVestibular system detects mismatch → nausea",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#locomotion-techniques",
+    "href": "weeks/05-week-05/01-slides.html#locomotion-techniques",
+    "title": "Week 5 Slides",
+    "section": "Locomotion Techniques",
+    "text": "Locomotion Techniques\n\n\n\n\n\n\nTechnique\nComfort\nImmersion\nUse Case\n\n\n\n\nTeleportation\n★★★★★\n★★★\nGeneral VR\n\n\nSmooth locomotion\n★★★\n★★★★★\nGames, training\n\n\nRoom-scale\n★★★★★\n★★★★★\nSmall spaces\n\n\nArm-swinging\n★★★★\n★★★★\nActive experiences\n\n\nRedirected walking\n★★★★★\n★★★★★\nLarge spaces (research)",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#teleportation-design",
+    "href": "weeks/05-week-05/01-slides.html#teleportation-design",
+    "title": "Week 5 Slides",
+    "section": "Teleportation Design",
+    "text": "Teleportation Design\n\n\n\n\nArc indicator — shows landing zone\nValid/invalid zones — colour-coded feedback\nFade transition — reduces disorientation\nOrientation control — let user choose facing direction\n\nUnity Implementation\n\nTeleportationProvider + TeleportationArea\nXRRayInteractor with teleport mode enabled",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#smooth-locomotion-comfort",
+    "href": "weeks/05-week-05/01-slides.html#smooth-locomotion-comfort",
+    "title": "Week 5 Slides",
+    "section": "Smooth Locomotion Comfort",
+    "text": "Smooth Locomotion Comfort\n\n\n\nIf using smooth locomotion:\n\nVignette — narrow FOV during movement reduces sickness\nSpeed limit — keep below 3 m/s for most users\nSnap turning — 30–45° increments instead of smooth rotation\nComfort mode toggle — always offer teleport as alternative",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#spatial-ui-design",
+    "href": "weeks/05-week-05/01-slides.html#spatial-ui-design",
+    "title": "Week 5 Slides",
+    "section": "Spatial UI Design",
+    "text": "Spatial UI Design\n\n\n\nThe Problem with Flat UI in XR\n\n2D panels feel out of place in 3D space\nFixed HUD elements cause eye strain (vergence conflict)\nMenus that follow the user are annoying\n\nThree UI Attachment Strategies\n\n\n\nType\nAttached To\nExample\n\n\n\n\nWorld-locked\nScene\nSign, button on wall\n\n\nBody-locked\nUser (with lag)\nWrist menu\n\n\nHead-locked\nCamera (fixed)\nCrosshair, HUD",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#diegetic-vs-non-diegetic-ui",
+    "href": "weeks/05-week-05/01-slides.html#diegetic-vs-non-diegetic-ui",
+    "title": "Week 5 Slides",
+    "section": "Diegetic vs Non-Diegetic UI",
+    "text": "Diegetic vs Non-Diegetic UI\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nDiegetic\nExists in the world\nHealth bar on character’s chest\n\n\nNon-diegetic\nOverlaid on world\nTraditional HUD\n\n\nSpatial\nIn world, not on character\nFloating damage numbers\n\n\nMeta\nOutside the world\nPause menu\n\n\n\nBest practice for VR: Prefer diegetic UI — it maintains immersion and avoids vergence issues.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#wrist-menu-pattern",
+    "href": "weeks/05-week-05/01-slides.html#wrist-menu-pattern",
+    "title": "Week 5 Slides",
+    "section": "Wrist Menu Pattern",
+    "text": "Wrist Menu Pattern\n\n\n\nA common and effective body-locked UI pattern:\n\nUser raises wrist (palm up)\nMenu appears on inner wrist\nUser selects with other hand\nWrist lowered = menu dismissed\n\nAdvantages: Discoverable, low fatigue, natural gesture",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#accessibility-in-xr-interaction",
+    "href": "weeks/05-week-05/01-slides.html#accessibility-in-xr-interaction",
+    "title": "Week 5 Slides",
+    "section": "Accessibility in XR Interaction",
+    "text": "Accessibility in XR Interaction\n\n\n\n\nSeated mode — all interactions reachable from chair\nOne-handed mode — full functionality with one controller\nComfort presets — locomotion, FOV, speed options\nText size — minimum 24pt at 1m viewing distance\nColour contrast — don’t rely on colour alone",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#lab-preview",
+    "href": "weeks/05-week-05/01-slides.html#lab-preview",
+    "title": "Week 5 Slides",
+    "section": "Lab Preview",
+    "text": "Lab Preview\nThis week’s lab: - Implement teleportation in Unity - Build a wrist menu - Compare diegetic vs non-diegetic UI approaches - Test on Quest and Vive Pro",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#key-takeaways",
+    "href": "weeks/05-week-05/01-slides.html#key-takeaways",
+    "title": "Week 5 Slides",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nGesture design requires careful attention to comfort and discoverability\nLocomotion is the biggest comfort challenge in VR — always offer teleport\nSpatial UI should prefer diegetic approaches\nAccessibility is not optional — design for seated, one-handed, and comfort-sensitive users",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#references",
+    "href": "weeks/05-week-05/01-slides.html#references",
+    "title": "Week 5 Slides",
+    "section": "References",
+    "text": "References\n\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nBowman, D.A. et al. (2004) 3D User Interfaces. Pearson.\nOculus Design Guidelines: developer.oculus.com/design\nMicrosoft Mixed Reality Design: learn.microsoft.com/windows/mixed-reality/design",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/05-week-05/01-slides.html#discussion",
+    "href": "weeks/05-week-05/01-slides.html#discussion",
+    "title": "Week 5 Slides",
+    "section": "Discussion",
+    "text": "Discussion\n\nIs teleportation an acceptable long-term locomotion solution, or does it fundamentally limit the kinds of experiences XR can offer?\nAre there situations where head-locked UI is actually justified despite its known comfort drawbacks?\nDiegetic UI is often called the “gold standard” — can you think of cases where non-diegetic UI is the better design choice?\nHow should accessibility features (seated mode, one-handed mode, reduced motion) be prioritised against tight production budgets and timelines?\nWhose responsibility is it to validate a gesture vocabulary across diverse hand sizes and physical abilities — the platform holder, the studio, or both?\n\n\nUse to connect locomotion/UI theory to real design trade-offs students will face in their own projects.",
+    "crumbs": [
+      "Week 05",
+      "Week 5 Slides"
     ]
   }
 ]

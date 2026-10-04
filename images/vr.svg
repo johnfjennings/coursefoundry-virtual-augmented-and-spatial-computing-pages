@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-labelledby="title desc">
+  <title id="title">1987: the term "virtual reality" is coined</title>
+  <desc id="desc">Typographic panel. The phrase "virtual reality" set large, dated 1987 and attributed to Jaron Lanier at VPL Research, above schematic outlines of the era's two defining peripherals: a head-mounted display and a wired glove.</desc>
+
+  <defs>
+    <style>
+      .yr   { font-family: "IBM Plex Mono","JetBrains Mono",ui-monospace,monospace; font-size: 22px; fill: #2563eb; font-weight: 600; letter-spacing: 0.18em; }
+      .term { font-family: "Source Sans 3","Source Sans Pro","Segoe UI",system-ui,sans-serif; font-size: 112px; fill: #0f1f3d; font-weight: 700; letter-spacing: -0.025em; }
+      .attr { font-family: "Source Sans 3","Source Sans Pro","Segoe UI",system-ui,sans-serif; font-size: 25px; fill: #33456a; }
+      .who  { font-weight: 600; fill: #0f1f3d; }
+      .cap  { font-family: "Source Sans 3","Source Sans Pro","Segoe UI",system-ui,sans-serif; font-size: 17px; fill: #6a7a9b; }
+      .s-ink  { fill: none; stroke: #0f1f3d; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .s-acc  { fill: none; stroke: #2563eb; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+      .s-warm { fill: none; stroke: #f97316; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect width="900" height="900" fill="#f5f8fd"/>
+  <rect x="0.75" y="0.75" width="898.5" height="898.5" fill="none" stroke="#dae2f2" stroke-width="1.5"/>
+
+  <rect x="84" y="128" width="96" height="6" fill="#f97316"/>
+  <text x="84" y="188" class="yr">1987</text>
+
+  <!-- the coined term -->
+  <text x="84" y="330" class="term">virtual</text>
+  <text x="84" y="444" class="term">reality</text>
+
+  <!-- attribution -->
+  <text x="84" y="520" class="attr">a term coined by <tspan class="who">Jaron Lanier</tspan></text>
+  <text x="84" y="556" class="attr">at VPL Research</text>
+
+  <line x1="84" y1="608" x2="816" y2="608" stroke="#dae2f2" stroke-width="1.5"/>
+
+  <!-- schematic: head-mounted display -->
+  <g transform="translate(200 636) scale(0.7)">
+    <path d="M96 40 C60 40 38 70 38 104 C38 132 50 146 50 166 L50 188 C50 200 60 208 72 208 L96 208" class="s-ink"/>
+    <path d="M96 208 L96 244" class="s-ink"/>
+    <rect x="104" y="76" width="74" height="54" rx="7" class="s-acc"/>
+    <line x1="141" y1="76" x2="141" y2="130" class="s-acc"/>
+    <path d="M52 66 C84 46 120 50 144 70" class="s-acc"/>
+    <path d="M178 118 C210 132 208 172 178 186" class="s-warm"/>
+  </g>
+  <text x="212" y="856" class="cap">head-mounted display</text>
+
+  <!-- schematic: wired glove -->
+  <g transform="translate(524 636) scale(0.7)">
+    <!-- palm -->
+    <path d="M56 116 C56 100 68 90 86 90 L152 90 C170 90 182 100 182 116
+             L182 190 C182 214 164 230 138 230 L100 230 C74 230 56 214 56 190 Z" class="s-ink"/>
+    <!-- four fingers -->
+    <path d="M78 92 L78 26" class="s-ink"/>
+    <path d="M108 92 L108 8"  class="s-ink"/>
+    <path d="M138 92 L138 16" class="s-ink"/>
+    <path d="M166 92 L166 40" class="s-ink"/>
+    <!-- thumb -->
+    <path d="M56 148 C38 158 28 172 24 192" class="s-ink"/>
+    <!-- fibre-optic flex sensors along the back of the fingers -->
+    <path d="M78 58 L108 44 L138 50 L166 68" class="s-acc"/>
+    <circle cx="78"  cy="58" r="5" fill="#2563eb"/>
+    <circle cx="108" cy="44" r="5" fill="#2563eb"/>
+    <circle cx="138" cy="50" r="5" fill="#2563eb"/>
+    <circle cx="166" cy="68" r="5" fill="#2563eb"/>
+    <!-- wrist tether -->
+    <path d="M110 230 C110 256 96 266 74 270" class="s-warm"/>
+  </g>
+  <text x="536" y="856" class="cap">wired glove</text>
+</svg>
