@@ -8,7 +8,7 @@
 
 <meta name="author" content="Mr.&nbsp;John Jennings">
 
-<title>Practical – Virtual, Augmented and Spatial Computing</title>
+<title>Week 5 Practical – Virtual, Augmented and Spatial Computing</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -69,8 +69,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../weeks/03-week-03/01-slides.html" rel="next">
-<link href="../../weeks/02-week-02/02-lecture.html" rel="prev">
+<link href="../../weeks/05-week-05/02-lecture.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -117,8 +116,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../custom.css">
-<meta property="og:title" content="Practical – Virtual, Augmented and Spatial Computing">
-<meta property="og:description" content="Virtual and augmented reality, also known as immersive reality, is any technology that “replicates an environment, real or imagined, and simulates a user’s physical presence and environment to allow for user interaction. Spatial computing enables immersive interaction by understanding the physical world, knowing and communicating our relation to places in that world, and navigating through those places.">
+<meta property="og:title" content="Week 5 Practical – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Locomotion Comfort Study">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
 </head>
 
@@ -131,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-slides.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/03-practical.html">Practical</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/05-week-05/01-slides.html">Week 05</a></li><li class="breadcrumb-item"><a href="../../weeks/05-week-05/03-practical.html">Week 5 Practical</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -260,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Practical</span></a>
   </div>
 </li>
@@ -347,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../weeks/05-week-05/03-practical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../weeks/05-week-05/03-practical.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 5 Practical</span></a>
   </div>
 </li>
@@ -368,25 +367,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
   <ul class="collapse">
-  <li><a href="#part-1-project-setup-with-meta-xr-simulator-30-minutes" id="toc-part-1-project-setup-with-meta-xr-simulator-30-minutes" class="nav-link" data-scroll-target="#part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</a></li>
-  <li><a href="#part-2-capture-screenshots-and-gameplay-video-30-minutes" id="toc-part-2-capture-screenshots-and-gameplay-video-30-minutes" class="nav-link" data-scroll-target="#part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</a></li>
-  <li><a href="#part-3-update-meta-app-store-pdp-assets-45-minutes" id="toc-part-3-update-meta-app-store-pdp-assets-45-minutes" class="nav-link" data-scroll-target="#part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</a></li>
-  <li><a href="#part-4-build-and-upload-apk-30-minutes" id="toc-part-4-build-and-upload-apk-30-minutes" class="nav-link" data-scroll-target="#part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</a></li>
-  <li><a href="#part-5-update-student-repository-documentation-15-minutes" id="toc-part-5-update-student-repository-documentation-15-minutes" class="nav-link" data-scroll-target="#part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</a></li>
+  <li><a href="#part-1-implement-two-schemes-40-minutes" id="toc-part-1-implement-two-schemes-40-minutes" class="nav-link" data-scroll-target="#part-1-implement-two-schemes-40-minutes">Part 1: Implement Two Schemes (40 minutes)</a></li>
+  <li><a href="#part-2-peer-comfort-study-45-minutes" id="toc-part-2-peer-comfort-study-45-minutes" class="nav-link" data-scroll-target="#part-2-peer-comfort-study-45-minutes">Part 2: Peer Comfort Study (45 minutes)</a></li>
+  <li><a href="#part-3-spatial-ui-paper-prototype-35-minutes" id="toc-part-3-spatial-ui-paper-prototype-35-minutes" class="nav-link" data-scroll-target="#part-3-spatial-ui-paper-prototype-35-minutes">Part 3: Spatial UI Paper Prototype (35 minutes)</a></li>
   </ul></li>
-  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
-  <li><a href="#reflection-questions" id="toc-reflection-questions" class="nav-link" data-scroll-target="#reflection-questions">Reflection Questions</a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#expected-outcome" id="toc-expected-outcome" class="nav-link" data-scroll-target="#expected-outcome">Expected Outcome</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/02-week-02/01-slides.html">Week 02</a></li><li class="breadcrumb-item"><a href="../../weeks/02-week-02/03-practical.html">Practical</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/05-week-05/01-slides.html">Week 05</a></li><li class="breadcrumb-item"><a href="../../weeks/05-week-05/03-practical.html">Week 5 Practical</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Practical</h1>
+<h1 class="title">Week 5 Practical</h1>
+<p class="subtitle lead">Locomotion Comfort Study</p>
 </div>
 
 
@@ -411,97 +407,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><strong>Duration:</strong> 2 hours</p>
-<p>In this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.</p>
+<p><strong>Duration:</strong> 2 hours <strong>Software:</strong> Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR <strong>Hardware:</strong> Meta Quest 2 / 3 with controllers, plus the paper-prototyping materials listed in Part 3</p>
+<p>Locomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data, and prototypes spatial UI on paper before any of it is built.</p>
 </section>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <p>By the end of this practical, you will be able to:</p>
 <ul>
-<li>Set up and test Unity VR projects using the Meta XR Simulator</li>
-<li>Capture high-quality screenshots and gameplay videos for app promotion</li>
-<li>Navigate and update Meta PDP (Product Detail Page) assets</li>
-<li>Build and prepare APK files for Meta App Store submission</li>
-<li>Document project updates professionally in your student repository</li>
+<li>Implement and compare two locomotion schemes against peer comfort ratings</li>
+<li>Tune a comfort profile from user feedback rather than personal tolerance</li>
+<li>Sketch and validate spatial UI at true scale before implementation</li>
 </ul>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Your completed 2nd year Unity VR escape room project</li>
-<li>Unity Hub and Unity Editor installed</li>
-<li>Meta XR SDK and Meta XR Simulator</li>
-<li>Access to your student GitHub repository</li>
-<li>Meta Developer account</li>
+<li>The Unity 6.3 project you configured for Quest in the Week 4 practical: OpenXR with the Meta Quest feature group, XR Interaction Toolkit 3.x and its <strong>Starter Assets</strong> sample imported. If you are starting fresh, follow <a href="../../weeks/04-week-04/03-practical.html">Week 4’s “Before the Session: Project Setup”</a> first.</li>
+<li>A completed Week 3 consent briefing. You are about to deliberately make peers uncomfortable, so the duty-of-care rules apply.</li>
+<li>The paper-prototyping materials listed in <a href="#part-3-spatial-ui-paper-prototype-35-minutes">Part 3</a></li>
 </ul>
-</section>
-<section id="instructions" class="level2">
-<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<section id="part-1-project-setup-with-meta-xr-simulator-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-project-setup-with-meta-xr-simulator-30-minutes">Part 1: Project Setup with Meta XR Simulator (30 minutes)</h3>
-<ol type="1">
-<li><strong>Download and Open Your Project</strong>
-<ul>
-<li>Locate your 2nd year Unity VR escape room project files</li>
-<li>Open the project in Unity Hub</li>
-<li>Ensure all assets and scenes load correctly</li>
-<li>Note any missing dependencies or errors in the console</li>
-</ul></li>
-<li><strong>Configure Meta XR Simulator</strong>
-<ul>
-<li>Install the Meta XR Simulator if not already present</li>
-<li>Configure the simulator settings for your escape room environment</li>
-<li>Set up appropriate room boundaries and tracking space</li>
-<li>Test basic functionality (hand tracking, controller input, movement)</li>
-</ul></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Meta XR Simulator Benefits
+<span class="screen-reader-only">Warning</span>Locomotion changed in XRI 3
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The Meta XR Simulator allows you to test VR experiences without wearing a headset, making development and debugging much more efficient.</p>
-<p><a href="https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/" class="uri">https://developers.meta.com/horizon/documentation/unity/xrsim-getting-started/</a></p>
+<p>If a tutorial mentions a <strong>Locomotion System</strong>, <strong>Action-based Continuous Move Provider</strong> or <strong>Device-based Snap Turn Provider</strong>, it is written for XRI 2.x. In 3.x a <strong>Locomotion Mediator</strong> and an <strong>XR Body Transformer</strong> sit on the rig, and there is a single provider of each kind: Teleportation Provider, Continuous Move Provider (the Starter Assets use its subclass, <strong>Dynamic Move Provider</strong>), Snap Turn Provider and Continuous Turn Provider.</p>
 </div>
 </div>
-<ol start="3" type="1">
-<li><strong>Initial Testing</strong>
-<ul>
-<li>Run your escape room experience in the Meta XR Simulator</li>
-<li>Verify that all interactive elements work as expected</li>
-<li>Check for any performance issues or visual glitches</li>
-<li>Document any bugs or areas needing improvement</li>
-</ul></li>
-</ol>
 </section>
-<section id="part-2-capture-screenshots-and-gameplay-video-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-capture-screenshots-and-gameplay-video-30-minutes">Part 2: Capture Screenshots and Gameplay Video (30 minutes)</h3>
-<ol start="4" type="1">
-<li><strong>Screenshot Capture</strong>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<section id="part-1-implement-two-schemes-40-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-implement-two-schemes-40-minutes">Part 1: Implement Two Schemes (40 minutes)</h3>
+<section id="build-the-test-environment-10-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="build-the-test-environment-10-minutes">1.1 Build the Test Environment (10 minutes)</h4>
+<ol type="1">
+<li><strong>Create the Scene</strong>
 <ul>
-<li>Use the Meta XR Simulator’s built-in screenshot functionality</li>
-<li>Capture at least 5 high-quality screenshots showing:
-<ul>
-<li>The main escape room environment</li>
-<li>Key interactive objects and puzzles</li>
-<li>UI elements and menus</li>
-<li>Player interactions (hand tracking, object manipulation)</li>
-<li>Victory/completion screen</li>
+<li>In your Week 4 project, create a new scene, <code>Week5_Locomotion</code>, and delete its default <strong>Main Camera</strong>.</li>
+<li>From <code>Samples/XR Interaction Toolkit/&lt;version&gt;/Starter Assets/Prefabs</code>, drag <strong>XR Origin (XR Rig)</strong> into the scene at the origin.</li>
+<li>Look inside the rig at <strong>Locomotion</strong>. Its children are the providers you will use: <strong>Turn</strong> (Snap Turn Provider and Continuous Turn Provider), <strong>Move</strong> (Dynamic Move Provider), <strong>Teleportation</strong> (Teleportation Provider), plus <strong>Grab Move</strong> and <strong>Climb</strong>, which you can ignore.</li>
 </ul></li>
-<li>Ensure screenshots are high resolution (minimum 1920x1080)</li>
-</ul></li>
-<li><strong>Gameplay Video Recording</strong>
+<li><strong>Lay Out a Route</strong>
 <ul>
-<li>Record a 60-90 second gameplay video using screen recording software</li>
-<li>Show a complete puzzle solution or key gameplay loop</li>
-<li>Include audio if your escape room has sound effects or music</li>
-<li>Ensure smooth framerate and clear visuals</li>
-<li>Export in MP4 format at 1080p resolution</li>
+<li>Add a <strong>Plane</strong> scaled to <code>(4, 1, 4)</code> (a 40 m × 40 m floor). Add a few cubes as walls and obstacles so the route cannot be walked in a straight line.</li>
+<li>Mark a <strong>route of about 30 m</strong> with five numbered markers (thin cylinders or floor decals): <em>Start → 1 → 2 → 3 → Finish</em>. Include at least <strong>one 90° turn</strong> and <strong>one 180° turn</strong>, because turning is where most discomfort appears.</li>
+<li>Every participant walks this same route under both schemes, so do not change it after Part 2 begins.</li>
 </ul></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -510,162 +466,353 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pro Recording Tips
+<span class="screen-reader-only">Tip</span>Short of time?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>Use OBS Studio or similar for high-quality recordings</li>
-<li>Record at 60fps for smooth playback</li>
-<li>Keep file sizes reasonable for web upload</li>
-<li>Add brief text overlays to highlight key features</li>
-</ul>
+<p><code>Starter Assets/Prefabs/Teleportation Environment.prefab</code> is a ready-made floor with teleport areas and anchors. Drop it in and add your obstacles and markers to it.</p>
 </div>
 </div>
 </section>
-<section id="part-3-update-meta-app-store-pdp-assets-45-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-update-meta-app-store-pdp-assets-45-minutes">Part 3: Update Meta App Store PDP Assets (45 minutes)</h3>
-<ol start="6" type="1">
-<li><strong>Access Your Meta Developer Dashboard</strong>
+<section id="scheme-a-teleportation-12-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="scheme-a-teleportation-12-minutes">1.2 Scheme A: Teleportation (12 minutes)</h4>
+<ol type="1">
+<li><strong>Make the Floor a Teleport Target</strong>
 <ul>
-<li>Log into your Meta Developer account</li>
-<li>Navigate to your escape room app listing</li>
-<li>Access the Product Detail Page (PDP) management section</li>
+<li>Select the floor plane and add a <strong>Teleportation Area</strong> component. The plane’s Mesh Collider is what the teleport ray hits.</li>
+<li>Set its <strong>Interaction Layer Mask</strong> to <strong>Teleport</strong>. The Starter Assets’ teleport ray only targets that layer. If <em>Teleport</em> is missing from the list, open <strong>Edit &gt; Project Settings &gt; XR Plug-in Management &gt; Project Validation</strong> and apply the XR Interaction Toolkit fix that adds it.</li>
+<li>Leave obstacles <strong>without</strong> a Teleportation Area, so they become invalid targets. The ray turns red over them, which is the “valid/invalid zone” feedback from the lecture.</li>
 </ul></li>
-<li><strong>Update PDP Visual Assets</strong>
+<li><strong>Add Two Teleport Anchors</strong>
 <ul>
-<li>Upload your new screenshots to replace existing ones</li>
-<li>Organize screenshots in a logical order (environment → gameplay → features)</li>
-<li>Upload your gameplay video as the featured trailer</li>
-<li>Update the app icon if you’ve made improvements</li>
-<li>Ensure all images meet Meta’s size and format requirements</li>
+<li><strong>GameObject &gt; XR &gt; Teleportation Anchor</strong>. Place one at marker 2 and one at the Finish. Set each anchor’s Interaction Layer Mask to <strong>Teleport</strong> as well.</li>
+<li>Rotate each anchor so its blue (forward) arrow faces where the participant should look on arrival. Set <strong>Match Orientation</strong> to <em>Target Up And Forward</em>, so landing on an anchor also sets the user’s facing.</li>
 </ul></li>
-<li><strong>Review and Update Text Content</strong>
+<li><strong>Select Teleport Mode</strong>
 <ul>
-<li>Update the app description to reflect any new features</li>
-<li>Check that keywords and tags are still relevant</li>
-<li>Update version notes with improvements made</li>
-<li>Verify age rating and content warnings are accurate</li>
+<li>Select <strong>Left Controller</strong> and <strong>Right Controller</strong> under the rig. On each one’s <strong>Controller Input Action Manager</strong>, <strong>untick Smooth Motion Enabled</strong> (this enables teleport) and <strong>untick Smooth Turn Enabled</strong> (this gives snap turns).</li>
+</ul></li>
+<li><strong>Test It</strong>
+<ul>
+<li>Build and Run. Push the thumbstick <strong>forward</strong> to show the teleport arc, aim, and release to teleport. Push it left or right to snap-turn.</li>
 </ul></li>
 </ol>
-<div class="callout callout-style-default callout-warning callout-titled">
+</section>
+<section id="scheme-b-smooth-locomotion-10-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="scheme-b-smooth-locomotion-10-minutes">1.3 Scheme B: Smooth Locomotion (10 minutes)</h4>
+<ol type="1">
+<li><strong>Switch to Smooth Movement</strong>
+<ul>
+<li>On both controllers’ <strong>Controller Input Action Manager</strong>, <strong>tick Smooth Motion Enabled</strong>. The left thumbstick now moves continuously and the teleport ray is disabled.</li>
+<li>Decide on turning: tick <strong>Smooth Turn Enabled</strong> for continuous turning, or leave it unticked for snap turns. This is one of the variables you will tune.</li>
+</ul></li>
+<li><strong>Set the Starting Values</strong>
+<ul>
+<li><strong>Locomotion › Move › Dynamic Move Provider</strong>: set <strong>Move Speed</strong> to <code>2</code> m/s. The Starter Assets preset uses 2.5, which is fast for first-time users. Leave <strong>Enable Strafe</strong> ticked.</li>
+<li><strong>Locomotion › Turn › Snap Turn Provider</strong>: <strong>Turn Amount</strong> <code>45</code>°.</li>
+<li><strong>Locomotion › Turn › Continuous Turn Provider</strong>: <strong>Turn Speed</strong> <code>60</code>°/s.</li>
+</ul></li>
+<li><strong>Add the Tunnelling Vignette</strong>
+<ul>
+<li>Find <strong>TunnelingVignette.prefab</strong> in the XR Interaction Toolkit samples (<code>Starter Assets/TunnelingVignette</code>). Drag it onto <strong>XR Origin › Camera Offset › Main Camera</strong>, so it becomes a child of the camera.</li>
+<li>On its <strong>Tunneling Vignette Controller</strong>, add to <strong>Locomotion Vignette Providers</strong> the <strong>Dynamic Move Provider</strong>, the <strong>Continuous Turn Provider</strong> and the <strong>Snap Turn Provider</strong>.</li>
+<li>Starting values: <strong>Aperture Size</strong> <code>0.7</code> (1 = no vignette, lower = narrower view), <strong>Feathering Effect</strong> <code>0.2</code>, <strong>Ease In Time</strong> <code>0.3</code>, <strong>Ease Out Time</strong> <code>0.3</code>.</li>
+<li>Optional, for Scheme A: also add the <strong>Teleportation Provider</strong>, tick <strong>Override Default Parameters</strong>, set Aperture Size <code>0</code>, and set the Teleportation Provider’s <strong>Delay Time</strong> to <code>0.15</code> s. The view now blinks shut for each jump, which is the “fade transition” from the lecture.</li>
+</ul></li>
+</ol>
+</section>
+<section id="expose-the-comfort-settings-8-minutes" class="level4">
+<h4 class="anchored" data-anchor-id="expose-the-comfort-settings-8-minutes">1.4 Expose the Comfort Settings (8 minutes)</h4>
+<p>You will change settings between participants, so put them all on one component instead of hunting through the hierarchy. Create an empty GameObject, <code>ComfortSettings</code>, add this script, and drag in the references.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>ComfortSettings.cs</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="ComfortSettings.cs"><pre class="sourceCode csharp code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Locomotion</span><span class="op">.</span><span class="fu">Comfort</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Locomotion</span><span class="op">.</span><span class="fu">Movement</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Locomotion</span><span class="op">.</span><span class="fu">Turning</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> UnityEngine<span class="op">.</span><span class="fu">XR</span><span class="op">.</span><span class="fu">Interaction</span><span class="op">.</span><span class="fu">Toolkit</span><span class="op">.</span><span class="fu">Samples</span><span class="op">.</span><span class="fu">StarterAssets</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ComfortSettings <span class="op">:</span> MonoBehaviour</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">enum</span> Scheme <span class="op">{</span> Teleport<span class="op">,</span> Smooth <span class="op">}</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="fu">Header</span><span class="op">(</span><span class="st">"Scheme"</span><span class="op">)]</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> Scheme scheme <span class="op">=</span> Scheme<span class="op">.</span><span class="fu">Teleport</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> <span class="dt">bool</span> smoothTurn <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="fu">Header</span><span class="op">(</span><span class="st">"Tuning"</span><span class="op">)]</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">,</span> <span class="fu">Range</span><span class="op">(</span><span class="fl">0.5f</span><span class="op">,</span> <span class="dv">4</span>f<span class="op">)]</span> <span class="dt">float</span> moveSpeed <span class="op">=</span> <span class="dv">2</span>f<span class="op">;</span>          <span class="co">// metres per second</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">,</span> <span class="fu">Range</span><span class="op">(</span><span class="dv">15</span>f<span class="op">,</span> <span class="dv">90</span>f<span class="op">)]</span> <span class="dt">float</span> snapTurnAngle <span class="op">=</span> <span class="dv">45</span>f<span class="op">;</span>     <span class="co">// degrees per snap</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">,</span> <span class="fu">Range</span><span class="op">(</span><span class="dv">30</span>f<span class="op">,</span> <span class="dv">180</span>f<span class="op">)]</span> <span class="dt">float</span> smoothTurnSpeed <span class="op">=</span> <span class="dv">60</span>f<span class="op">;</span>  <span class="co">// degrees per second</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">,</span> <span class="fu">Range</span><span class="op">(</span><span class="dv">0</span>f<span class="op">,</span> <span class="dv">1</span>f<span class="op">)]</span> <span class="dt">float</span> vignetteAperture <span class="op">=</span> <span class="fl">0.7f</span><span class="op">;</span>   <span class="co">// 1 = no vignette</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span><span class="fu">Header</span><span class="op">(</span><span class="st">"References"</span><span class="op">)]</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> ControllerInputActionManager<span class="op">[]</span> controllers<span class="op">;</span>     <span class="co">// Left and Right Controller</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> ContinuousMoveProvider moveProvider<span class="op">;</span>            <span class="co">// Locomotion › Move</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> SnapTurnProvider snapTurn<span class="op">;</span>                      <span class="co">// Locomotion › Turn</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> ContinuousTurnProvider continuousTurn<span class="op">;</span>          <span class="co">// Locomotion › Turn</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">[</span>SerializeField<span class="op">]</span> TunnelingVignetteController vignette<span class="op">;</span>           <span class="co">// under Main Camera</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">Start</span><span class="op">()</span> <span class="op">=&gt;</span> <span class="fu">Apply</span><span class="op">();</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Lets you change values in the Inspector during Play mode (e.g. over Quest Link)</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="dt">void</span> <span class="fu">OnValidate</span><span class="op">()</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> <span class="op">(</span>Application<span class="op">.</span><span class="fu">isPlaying</span><span class="op">)</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>            <span class="fu">Apply</span><span class="op">();</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">Apply</span><span class="op">()</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="kw">foreach</span> <span class="op">(</span><span class="dt">var</span> controller <span class="kw">in</span> controllers<span class="op">)</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>            controller<span class="op">.</span><span class="fu">smoothMotionEnabled</span> <span class="op">=</span> scheme <span class="op">==</span> Scheme<span class="op">.</span><span class="fu">Smooth</span><span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            controller<span class="op">.</span><span class="fu">smoothTurnEnabled</span> <span class="op">=</span> smoothTurn<span class="op">;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        moveProvider<span class="op">.</span><span class="fu">moveSpeed</span> <span class="op">=</span> moveSpeed<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        snapTurn<span class="op">.</span><span class="fu">turnAmount</span> <span class="op">=</span> snapTurnAngle<span class="op">;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        continuousTurn<span class="op">.</span><span class="fu">turnSpeed</span> <span class="op">=</span> smoothTurnSpeed<span class="op">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        vignette<span class="op">.</span><span class="fu">defaultParameters</span><span class="op">.</span><span class="fu">apertureSize</span> <span class="op">=</span> vignetteAperture<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        Debug<span class="op">.</span><span class="fu">Log</span><span class="op">(</span>$<span class="st">"Comfort settings: {scheme}, smoothTurn={smoothTurn}, speed={moveSpeed} m/s, "</span> <span class="op">+</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>                  $<span class="st">"snap={snapTurnAngle}°, turnSpeed={smoothTurnSpeed}°/s, aperture={vignetteAperture}"</span><span class="op">);</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><strong>Fastest way to tune:</strong> on Windows, connect the headset with <strong>Meta Horizon Link</strong> and press <strong>Play</strong>. You can then change values in the Inspector between runs without rebuilding. Otherwise, change the values and <strong>Build And Run</strong> again, which takes a minute or two per change.</li>
+<li>Write the settings for every run on the recording sheet. The <code>Debug.Log</code> line gives you an exact copy in the Console.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Tutorials and documentation: locomotion and comfort
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Unity Learn, <em>Create with VR</em> 1.2: <a href="https://learn.unity.com/course/create-with-vr/unit/vr-basics/tutorial/1-2-vr-locomotion?version=6.3">VR Locomotion</a> (Unity 6.3)</li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/locomotion.html">Locomotion overview</a> (mediator, body transformer and providers) and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation.html">Teleportation</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation-area.html">Teleportation Area</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation-anchor.html">Teleportation Anchor</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/teleportation-provider.html">Teleportation Provider</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/continuous-move-provider.html">Continuous Move Provider</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/snap-turn-provider.html">Snap Turn Provider</a>, <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/continuous-turn-provider.html">Continuous Turn Provider</a></li>
+<li>XRI docs: <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/tunneling-vignette-controller.html">Tunneling Vignette Controller</a> and <a href="https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.3/manual/samples-starter-assets.html">Starter Assets</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="part-2-peer-comfort-study-45-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-peer-comfort-study-45-minutes">Part 2: Peer Comfort Study (45 minutes)</h3>
+<ol type="1">
+<li><strong>Prepare</strong>
+<ul>
+<li>Each participant completes the route <strong>once per scheme</strong>. Alternate which scheme goes first: participant 1 does A then B, participant 2 does B then A, participant 3 does A then B.</li>
+<li>Use the <strong>Fast Motion Sickness Scale (FMS)</strong> for the comfort rating: “On a scale of 0 (no sickness at all) to 20 (frank sickness), how do you feel right now?” Ask it before the first run and at <strong>every marker</strong> during each run, so you capture how discomfort builds. FMS is quick enough to answer without leaving the headset (Keshavarz &amp; Hecht, 2011).</li>
+<li><strong>Stop rule:</strong> end a run at once if FMS reaches <strong>10 or more</strong>, or if the participant asks to stop. Remove the headset, let them sit down, and do not start the second scheme until their FMS is back to its starting value.</li>
+</ul></li>
+<li><strong>Run the Comparison</strong>
+<ul>
+<li>The participant <strong>stands</strong> for both schemes. Note any stepping, swaying or grabbing for support.</li>
+<li>Record for each run: time to complete, FMS at each marker, peak FMS, and the exact comfort settings.</li>
+<li>After both runs, ask which scheme they preferred and why. Write down any spontaneous comment word for word.</li>
+<li>Allow <strong>at least 5 minutes</strong> of rest out of the headset between the two schemes.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Participant</th>
+<th>Order</th>
+<th>Scheme</th>
+<th>Settings</th>
+<th>Time</th>
+<th>FMS (start / 1 / 2 / 3 / finish)</th>
+<th>Peak</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1</td>
+<td>A→B</td>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></li>
+<li><strong>Tune and Re-Test</strong>
+<ul>
+<li>Change <strong>one setting at a time</strong> in response to the feedback, for example vignette aperture 0.7 → 0.5, smooth turn → snap turn, or speed 2 → 1.5 m/s. Changing several at once means you cannot tell which change helped.</li>
+<li>Re-test with at least one participant who found the smooth scheme uncomfortable (after their FMS has returned to baseline), and record whether their peak FMS fell.</li>
+</ul></li>
+</ol>
+</section>
+<section id="part-3-spatial-ui-paper-prototype-35-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-spatial-ui-paper-prototype-35-minutes">Part 3: Spatial UI Paper Prototype (35 minutes)</h3>
+<section id="materials-required" class="level4">
+<h4 class="anchored" data-anchor-id="materials-required">Materials Required</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Quantity (per pair)</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A4 card, 250–300 gsm (white and one colour)</td>
+<td>3 sheets</td>
+<td>The menu panel and buttons</td>
+</tr>
+<tr class="even">
+<td>Sticky notes, 38 × 51 mm or smaller</td>
+<td>1 pad</td>
+<td>Movable buttons and labels</td>
+</tr>
+<tr class="odd">
+<td>Metre rule or tape measure</td>
+<td>1</td>
+<td>Measuring arm’s length and eye distance</td>
+</tr>
+<tr class="even">
+<td>30 cm ruler</td>
+<td>1</td>
+<td>Measuring and ruling the panel</td>
+</tr>
+<tr class="odd">
+<td>Scissors, or craft knife with a cutting mat</td>
+<td>1 set</td>
+<td>Cutting card to size</td>
+</tr>
+<tr class="even">
+<td>Pencil and black fine-liner (0.5 mm)</td>
+<td>1 each</td>
+<td>Sketching, then inking final labels</td>
+</tr>
+<tr class="odd">
+<td>Masking tape</td>
+<td>1 roll</td>
+<td>Holding layouts together</td>
+</tr>
+<tr class="even">
+<td>Elastic band, hair tie or Velcro strap</td>
+<td>2</td>
+<td>Attaching the panel to the forearm</td>
+</tr>
+<tr class="odd">
+<td>Printed text-size test strip (on the VLE)</td>
+<td>1</td>
+<td>Checking label legibility at wrist distance</td>
+</tr>
+<tr class="even">
+<td>Phone camera</td>
+<td>1</td>
+<td>Photographing each iteration for your journal</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Meta PDP Requirements
+<span class="screen-reader-only">Tip</span>Sizes to start from
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ensure all assets meet Meta’s technical requirements: - Screenshots: 1024x1024 minimum - Videos: MP4 format, max 15MB - Icons: 512x512 PNG with transparency</p>
+<ul>
+<li><strong>Buttons:</strong> at least <strong>2 cm × 2 cm</strong> (the lecture’s minimum), with gaps of at least 0.5 cm between them.</li>
+<li><strong>Item count:</strong> no more than <strong>6 to 8</strong> items.</li>
+<li><strong>Text:</strong> the lecture’s minimum of 24 pt at 1 m scales with distance. A wrist menu sits about <strong>40 cm</strong> from the eyes, so its labels need to be at least <strong>10 pt</strong>, and larger is safer.</li>
+</ul>
 </div>
 </div>
-</section>
-<section id="part-4-build-and-upload-apk-30-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-build-and-upload-apk-30-minutes">Part 4: Build and Upload APK (30 minutes)</h3>
-<ol start="9" type="1">
-<li><strong>Build Configuration</strong>
+<ol type="1">
+<li><strong>Sketch at Scale</strong>
 <ul>
-<li>Set Unity build settings to Android platform</li>
-<li>Configure XR settings for Meta Quest</li>
-<li>Set appropriate quality settings for Quest hardware</li>
-<li>Increment version number in Player Settings</li>
+<li>Strap a piece of card to the inner forearm with an elastic band, about where a watch face would sit. Raise the wrist, palm up, into the position from the lecture’s wrist-menu pattern.</li>
+<li>Measure the distance from the card to the eyes with the metre rule and write it down.</li>
+<li>Cut a card panel to the size your wrist menu would occupy, and lay out your buttons on it with sticky notes. Most first designs are far too large for a forearm. Measure, do not estimate.</li>
 </ul></li>
-<li><strong>Build and Test APK</strong>
+<li><strong>Test the Reach</strong>
 <ul>
-<li>Build the APK file from Unity</li>
-<li>Test the APK on a Quest device if available, or verify build completion</li>
-<li>Check file size and performance metrics</li>
-<li>Ensure all features work in the standalone build</li>
+<li>With the panel on one arm, have your partner press each button with the index finger of the other hand. Check that every control is reachable <strong>without shoulder strain</strong> and <strong>without twisting the wrist</strong> past comfortable.</li>
+<li>Check legibility at the measured distance using the text-size test strip. Every label must be readable <strong>without leaning in</strong>.</li>
+<li>Hold the pose for 30 seconds and note when the raised arm starts to tire. That is the menu’s time budget.</li>
 </ul></li>
-<li><strong>Upload to Meta App Store</strong>
+<li><strong>Finalise</strong>
 <ul>
-<li>Navigate to the app submission section in Meta Developer Dashboard</li>
-<li>Upload your new APK file</li>
-<li>Complete the submission checklist</li>
-<li>Submit for review (note: this may take several days)</li>
-</ul></li>
-</ol>
-</section>
-<section id="part-5-update-student-repository-documentation-15-minutes" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-update-student-repository-documentation-15-minutes">Part 5: Update Student Repository Documentation (15 minutes)</h3>
-<ol start="12" type="1">
-<li><strong>Create Professional Documentation</strong>
-<ul>
-<li>Open your student GitHub repository</li>
-<li>Update the README.md file with:
-<ul>
-<li>Project title and brief description</li>
-<li>Screenshots embedded using Markdown syntax</li>
-<li>Link to or embed the gameplay video</li>
-<li>Technical specifications and requirements</li>
-<li>Installation and usage instructions</li>
-<li>Credits and acknowledgments</li>
-</ul></li>
-</ul></li>
-<li><strong>Repository Organization</strong>
-<ul>
-<li>Create an <code>assets/</code> folder for images and videos</li>
-<li>Organize files with clear naming conventions</li>
-<li>Add appropriate file extensions and descriptions</li>
-<li>Ensure all links work correctly</li>
+<li>Ink the final layout on fresh card with <strong>dimensions</strong> (panel size, button sizes, gaps, text size) and photograph it before you build anything in Unity.</li>
 </ul></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Taking it into Unity later
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>When you build the menu in the lab, Unity Learn’s <em>Create with VR</em> 2.4 <a href="https://learn.unity.com/course/create-with-vr/unit/vr-events-and-interactions/tutorial/2-4-user-interface-2?version=6.3">User Interface</a> shows how to set up world-space UI that works with the XR Interaction Toolkit. Your dimensioned paper prototype gives you the canvas size in metres.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="expected-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="expected-outcome">Expected Outcome</h2>
+<p>Two working locomotion schemes with exposed comfort settings, a record of peer comfort ratings before and after tuning, and a dimensioned paper prototype of a wrist menu validated for reach and legibility.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Markdown Tips for README
+<span class="screen-reader-only">Tip</span>Hint
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Screenshot Description](assets/screenshot1.png)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Gameplay Video</span><span class="co">](assets/gameplay.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your own comfort is not evidence. Developers build tolerance to locomotion discomfort within days, which is exactly why the ratings that matter here are somebody else’s.</p>
 </div>
 </div>
 </section>
-</section>
-<section id="deliverables" class="level2">
-<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
-<p>By the end of this practical, you should have:</p>
-<ol type="1">
-<li>✅ Working Unity VR project running in Meta XR Simulator</li>
-<li>✅ 5+ high-quality screenshots captured</li>
-<li>✅ 60-90 second gameplay video recorded</li>
-<li>✅ Updated Meta App Store PDP with new assets</li>
-<li>✅ Built and uploaded new APK to Meta App Store</li>
-<li>✅ Professional README.md documentation in student repository</li>
-</ol>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
-<p><strong>Common Issues:</strong></p>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
 <ul>
-<li><strong>Simulator not launching:</strong> Check Meta XR SDK version compatibility</li>
-<li><strong>Performance issues:</strong> Adjust quality settings in Unity</li>
-<li><strong>Upload failures:</strong> Verify file sizes and formats meet requirements</li>
-<li><strong>Build errors:</strong> Check Android SDK and build tools versions</li>
-</ul>
-</section>
-<section id="reflection-questions" class="level2">
-<h2 class="anchored" data-anchor-id="reflection-questions">Reflection Questions</h2>
-<ol type="1">
-<li>What improvements did you notice when testing with the Meta XR Simulator compared to your original development process?</li>
-<li>How do professional PDP assets impact the perceived quality of your VR application?</li>
-<li>What challenges did you encounter when preparing your project for app store submission?</li>
-<li>How might you use these documentation and promotion skills in future VR projects?</li>
-</ol>
-</section>
-<section id="next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>For next week, consider:</p>
-<ul>
-<li>Implementing user feedback if your app receives reviews</li>
-<li>Exploring advanced Meta XR features for future updates</li>
-<li>Planning additional VR projects using these professional workflows</li>
+<li>Keshavarz, B. and Hecht, H. (2011) “Validating an efficient method to quantify motion sickness.” <em>Human Factors</em>, 53(4), 415–426.</li>
 </ul>
 
 
@@ -1074,14 +1221,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../weeks/02-week-02/02-lecture.html" class="pagination-link" aria-label="Lecture Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture Notes</span>
+      <a href="../../weeks/05-week-05/02-lecture.html" class="pagination-link" aria-label="Week 5 Lecture Notes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 5 Lecture Notes</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../weeks/03-week-03/01-slides.html" class="pagination-link" aria-label="Lecture Slides">
-        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
