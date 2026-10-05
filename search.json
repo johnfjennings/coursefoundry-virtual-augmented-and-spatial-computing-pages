@@ -62,7 +62,7 @@
     "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -73,7 +73,7 @@
     "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -84,7 +84,7 @@
     "text": "2 1. Gesture Design\n\n2.1 1.1 Principles of Good Gesture Design\nGesture design in XR is constrained by both the capabilities of tracking systems and the ergonomics of the human hand. A gesture vocabulary should be:\nDistinct: Each gesture should be clearly different from others in the vocabulary, and from natural resting hand positions. Ambiguous gestures cause false positives.\nComfortable: Gestures that require sustained tension (e.g., holding a spread-finger pose) cause rapid fatigue. Prefer gestures that can be performed and released quickly.\nDiscoverable: Users should be able to find gestures through exploration or minimal instruction. Gestures that require memorisation of a specific hand shape are problematic for casual users.\nReversible: Every gesture should have a clear cancel or undo path. Users need to feel safe experimenting.\n\n\n\nThe four tests a gesture vocabulary should pass.\n\n\n\n\n2.2 1.2 Standard Gesture Vocabulary\nMost XR platforms have converged on a small set of standard gestures:\n\n\n\nGesture\nTrigger\nCommon Use\n\n\n\n\nIndex pinch\nIndex + thumb contact\nPrimary select\n\n\nMiddle pinch\nMiddle + thumb contact\nSecondary action\n\n\nOpen palm\nAll fingers extended\nCancel / stop\n\n\nPoint\nIndex extended, others curled\nNavigate / indicate\n\n\nTwo-hand pinch-spread\nBoth hands pinch then separate\nScale\n\n\nTwo-hand rotate\nBoth hands pinch and rotate\nRotate object\n\n\n\n\n\n2.3 1.3 Custom Gesture Recognition\nFor custom gestures beyond the standard vocabulary, Unity’s XR Hands package provides a pose detection system. Key considerations:\n\nDefine poses using joint angle thresholds, not absolute positions\nTest across multiple hand sizes (children, large hands, small hands)\nProvide visual coaching for non-standard gestures\nLog false positive rates during testing\n\n\n\n\nPinch detection: the gesture fires when the thumb tip and index tip come closer than a threshold, typically about 2 cm.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -95,7 +95,7 @@
     "text": "3 2. Locomotion\n\n3.1 2.1 The Vestibular Conflict\nSimulator sickness (cybersickness) occurs when visual motion signals conflict with vestibular (inner ear) signals. The vestibular system detects: - Linear acceleration - Rotational acceleration - Gravity direction\nWhen the visual system shows movement that the vestibular system does not detect, the brain interprets this as potential poisoning (an evolutionary response) and triggers nausea.\nKey insight: It is not speed that causes sickness — it is acceleration. Constant velocity movement is less sickening than acceleration/deceleration.\n\n\n\nThe vestibular conflict: the eyes report motion while the inner ear reports stillness.\n\n\n\n\n3.2 2.2 Locomotion Techniques in Detail\n\n\n\nFive locomotion techniques, each trading comfort against immersion differently.\n\n\n\n3.2.1 Teleportation\nThe most comfortable locomotion technique. The user points to a destination and is instantly transported. The visual discontinuity is handled by a brief fade or blink.\nDesign details:\n\nArc trajectory indicator (parabolic, not straight) feels more natural\nColour-code valid (green) and invalid (red) landing zones\nAllow user to set facing direction before confirming\nFade duration: 100–200ms (shorter = less disorienting)\n\n\n\n\nTeleport design: a parabolic arc previews the landing, invalid zones are marked, the user chooses their facing, and a short fade hides the jump.\n\n\n\n\n3.2.2 Smooth Locomotion\nContinuous movement via thumbstick. High immersion, higher sickness risk.\nComfort mitigations:\n\nVignette: Dynamically narrow the FOV during movement. Reduces peripheral motion that triggers sickness.\nSpeed cap: 2–3 m/s maximum for general audiences\nSnap turning: 30° or 45° increments instead of smooth rotation. Eliminates rotational vestibular conflict.\nAcceleration curve: Ease in/out rather than instant full speed\n\n\n\n\nSmooth locomotion comfort settings: vignette, speed cap, snap turning and a teleport alternative.\n\n\n\n\n3.2.3 Room-Scale\nPhysical walking within the tracked play area. Most comfortable and immersive, but limited to the physical space available. Quest 2/3 Guardian system defines the safe zone.\n\n\n3.2.4 Arm-Swinging\nUser swings arms as if walking; system translates this into forward movement. More comfortable than thumbstick because it involves physical movement that partially matches the visual signal.\n\n\n\n3.3 2.3 Comfort Settings Best Practice\nAlways provide a comfort settings menu with at minimum: - Locomotion type toggle (teleport / smooth) - Vignette on/off - Snap turn angle (15°, 30°, 45°, 60°) - Movement speed slider",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -106,7 +106,7 @@
     "text": "4 3. Spatial UI Design\n\n4.1 3.1 Why Flat UI Fails in XR\nTraditional 2D UI (panels, windows, HUDs) creates several problems in XR:\nVergence-accommodation conflict: If a UI panel is rendered at a fixed virtual distance (e.g., 2m) but the user’s eyes converge on a real object at 0.5m, the mismatch causes eye strain.\nDepth inconsistency: A flat panel floating in 3D space looks artificial and breaks immersion.\nHead-locked discomfort: UI that moves exactly with the head (like a traditional HUD) is uncomfortable — the eye cannot rest because the target never stops moving.\n\n\n4.2 3.2 UI Attachment Strategies\nWorld-locked UI: Attached to a fixed position in the scene. The user must move or look to interact with it. Best for environmental information (signs, labels, control panels).\nBody-locked UI (with lag): Follows the user but with a slight delay and damping. Feels more natural than head-locked. The wrist menu is the canonical example.\nHead-locked UI: Moves exactly with the head. Use sparingly — only for critical persistent information (e.g., a small battery indicator in the corner).\n\n\n\nWorld-locked, body-locked and head-locked UI, shown from above as the user turns.\n\n\n\n\n4.3 3.3 Diegetic UI Design\nDiegetic UI exists within the world of the experience. It is the gold standard for immersive VR because it: - Eliminates vergence-accommodation conflict (rendered at world depth) - Maintains immersion - Provides spatial context\nExamples:\n\nHealth displayed as a glowing bar on the character’s chest armour\nInventory shown as a physical backpack the user opens\nSettings accessed via a physical control panel in the environment\nNotifications displayed as floating text attached to world objects\n\n\n\n\nOne scene, four kinds of interface: diegetic, spatial, non-diegetic and meta.\n\n\n\n\n4.4 3.4 The Wrist Menu Pattern\nThe wrist menu has become a standard pattern across VR platforms (used in Meta’s system UI, Hololens, and many applications):\n\nUser raises wrist with palm facing up\nTrigger: wrist rotation beyond ~60° from neutral\nMenu appears on inner wrist surface\nUser selects items with opposite hand (ray or direct)\nWrist lowered → menu dismissed\n\nDesign considerations:\n\nKeep menu items large (minimum 2cm × 2cm)\nLimit to 6–8 items maximum\nUse icons + text labels\nProvide haptic feedback on open/close\n\n\n\n\nThe wrist menu: raise, reveal, select with the other hand, lower to dismiss.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -117,7 +117,7 @@
     "text": "5 4. Accessibility\nXR accessibility is an emerging but critical area. Key considerations:\n\n\n\nCore XR accessibility features to design in from the start.\n\n\n\n5.1 4.1 Physical Accessibility\n\nSeated mode: All interactions must be reachable from a seated position. Test with a chair.\nOne-handed mode: Full functionality with one controller/hand. Map all critical actions to single-hand input.\nReduced motion mode: Disable smooth locomotion, limit visual effects.\n\n\n\n5.2 4.2 Perceptual Accessibility\n\nText size: Minimum 24pt at 1m viewing distance (approximately 2.4° visual angle)\nColour contrast: WCAG AA minimum (4.5:1 ratio). Never use colour as the only differentiator.\nAudio captions: Provide text alternatives for all audio cues.\n\n\n\n5.3 4.3 Cognitive Accessibility\n\nConsistent interaction patterns: Don’t change how things work between scenes\nUndo support: Allow reversal of actions\nTime limits: Avoid timed interactions; if unavoidable, allow extension",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -128,7 +128,7 @@
     "text": "6 Self-Check Questions\n\nWhat is the vestibular conflict and why does it cause simulator sickness?\nWhy is teleportation more comfortable than smooth locomotion?\nWhat is the difference between diegetic and non-diegetic UI?\nDescribe the wrist menu pattern and explain why it works well in VR.\nName three accessibility considerations for XR interaction design.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -139,7 +139,7 @@
     "text": "7 References\n\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nBowman, D.A. et al. (2004) 3D User Interfaces: Theory and Practice. Pearson.\nOculus Design Guidelines: developer.oculus.com/design\nMicrosoft Mixed Reality Design: learn.microsoft.com/windows/mixed-reality/design\nXR Access Initiative: xraccess.org\nKemeny, A. et al. (2020) “Getting over motion sickness.” Communications of the ACM, 63(5), 91–97.",
     "crumbs": [
       "Week 05",
-      "Week 5 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -2547,7 +2547,7 @@
     "text": "Week 5 Overview\n\nGesture design and recognition\nLocomotion techniques in VR\nSpatial UI design principles\nDiegetic vs non-diegetic interfaces\nComfort and accessibility",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2558,7 +2558,7 @@
     "text": "Gesture Design\n\n\n\nWhat makes a good XR gesture?\n\nDistinct — not confused with natural movement\nComfortable — low fatigue, repeatable\nDiscoverable — findable without instruction\nReversible — easy to cancel\n\nGesture Vocabulary\n\n\n\nGesture\nCommon Use\n\n\n\n\nPinch\nSelect, confirm\n\n\nOpen palm\nCancel, stop\n\n\nPoint\nNavigate, indicate\n\n\nTwo-hand spread\nScale\n\n\nTwo-hand rotate\nRotate object",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2569,7 +2569,7 @@
     "text": "Gesture Recognition in Unity\n\n\n\n// Example: detect a pinch with the XR Hands package\nusing UnityEngine;\nusing UnityEngine.XR.Hands;\n\nXRHandSubsystem hands;   // from SubsystemManager.GetSubsystems\n\nvoid Update() {\n    var hand = hands.rightHand;\n    if (!hand.isTracked) return;\n\n    if (hand.GetJoint(XRHandJointID.ThumbTip).TryGetPose(out var thumb) &&\n        hand.GetJoint(XRHandJointID.IndexTip).TryGetPose(out var index) &&\n        Vector3.Distance(thumb.position, index.position) &lt; 0.02f) {\n        OnPinch();   // fingertips closer than 2 cm\n    }\n}",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2580,7 +2580,7 @@
     "text": "Locomotion in VR\n\n\n\n\nLocomotion is the #1 cause of simulator sickness\n\nThe Core Problem\n\nPhysical body stays still\nVirtual body moves\nVestibular system detects mismatch → nausea",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2591,7 +2591,7 @@
     "text": "Locomotion Techniques\n\n\n\n\n\n\nTechnique\nComfort\nImmersion\nUse Case\n\n\n\n\nTeleportation\n★★★★★\n★★★\nGeneral VR\n\n\nSmooth locomotion\n★★★\n★★★★★\nGames, training\n\n\nRoom-scale\n★★★★★\n★★★★★\nSmall spaces\n\n\nArm-swinging\n★★★★\n★★★★\nActive experiences\n\n\nRedirected walking\n★★★★★\n★★★★★\nLarge spaces (research)",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2602,7 +2602,7 @@
     "text": "Teleportation Design\n\n\n\n\nArc indicator — shows landing zone\nValid/invalid zones — colour-coded feedback\nFade transition — reduces disorientation\nOrientation control — let user choose facing direction\n\nUnity Implementation\n\nTeleportationProvider + TeleportationArea\nXRRayInteractor with teleport mode enabled",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2613,7 +2613,7 @@
     "text": "Smooth Locomotion Comfort\n\n\n\nIf using smooth locomotion:\n\nVignette — narrow FOV during movement reduces sickness\nSpeed limit — keep below 3 m/s for most users\nSnap turning — 30–45° increments instead of smooth rotation\nComfort mode toggle — always offer teleport as alternative",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2624,7 +2624,7 @@
     "text": "Spatial UI Design\n\n\n\nThe Problem with Flat UI in XR\n\n2D panels feel out of place in 3D space\nFixed HUD elements cause eye strain (vergence conflict)\nMenus that follow the user are annoying\n\nThree UI Attachment Strategies\n\n\n\nType\nAttached To\nExample\n\n\n\n\nWorld-locked\nScene\nSign, button on wall\n\n\nBody-locked\nUser (with lag)\nWrist menu\n\n\nHead-locked\nCamera (fixed)\nCrosshair, HUD",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2635,7 +2635,7 @@
     "text": "Diegetic vs Non-Diegetic UI\n\n\n\n\n\n\nType\nDefinition\nExample\n\n\n\n\nDiegetic\nExists in the world\nHealth bar on character’s chest\n\n\nNon-diegetic\nOverlaid on world\nTraditional HUD\n\n\nSpatial\nIn world, not on character\nFloating damage numbers\n\n\nMeta\nOutside the world\nPause menu\n\n\n\nBest practice for VR: Prefer diegetic UI — it maintains immersion and avoids vergence issues.",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2646,7 +2646,7 @@
     "text": "Wrist Menu Pattern\n\n\n\nA common and effective body-locked UI pattern:\n\nUser raises wrist (palm up)\nMenu appears on inner wrist\nUser selects with other hand\nWrist lowered = menu dismissed\n\nAdvantages: Discoverable, low fatigue, natural gesture",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2657,7 +2657,7 @@
     "text": "Accessibility in XR Interaction\n\n\n\n\nSeated mode — all interactions reachable from chair\nOne-handed mode — full functionality with one controller\nComfort presets — locomotion, FOV, speed options\nText size — minimum 24pt at 1m viewing distance\nColour contrast — don’t rely on colour alone",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2668,7 +2668,7 @@
     "text": "Lab Preview\nThis week’s lab: - Implement teleportation in Unity - Build a wrist menu - Compare diegetic vs non-diegetic UI approaches - Test on Quest and Vive Pro",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2679,7 +2679,7 @@
     "text": "Key Takeaways\n\nGesture design requires careful attention to comfort and discoverability\nLocomotion is the biggest comfort challenge in VR — always offer teleport\nSpatial UI should prefer diegetic approaches\nAccessibility is not optional — design for seated, one-handed, and comfort-sensitive users",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2690,7 +2690,7 @@
     "text": "References\n\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nBowman, D.A. et al. (2004) 3D User Interfaces. Pearson.\nOculus Design Guidelines: developer.oculus.com/design\nMicrosoft Mixed Reality Design: learn.microsoft.com/windows/mixed-reality/design",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2701,7 +2701,7 @@
     "text": "Discussion\n\nIs teleportation an acceptable long-term locomotion solution, or does it fundamentally limit the kinds of experiences XR can offer?\nAre there situations where head-locked UI is actually justified despite its known comfort drawbacks?\nDiegetic UI is often called the “gold standard” — can you think of cases where non-diegetic UI is the better design choice?\nHow should accessibility features (seated mode, one-handed mode, reduced motion) be prioritised against tight production budgets and timelines?\nWhose responsibility is it to validate a gesture vocabulary across diverse hand sizes and physical abilities — the platform holder, the studio, or both?\n\n\nUse to connect locomotion/UI theory to real design trade-offs students will face in their own projects.",
     "crumbs": [
       "Week 05",
-      "Week 5 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -2712,7 +2712,7 @@
     "text": "Duration: 2 hours Software: Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR Hardware: Meta Quest 2 / 3 with controllers, plus the paper-prototyping materials listed in Part 3\nLocomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data, and prototypes spatial UI on paper before any of it is built.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2723,7 +2723,7 @@
     "text": "Duration: 2 hours Software: Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR Hardware: Meta Quest 2 / 3 with controllers, plus the paper-prototyping materials listed in Part 3\nLocomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data, and prototypes spatial UI on paper before any of it is built.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2734,7 +2734,7 @@
     "text": "Objectives\nBy the end of this practical, you will be able to:\n\nImplement and compare two locomotion schemes against peer comfort ratings\nTune a comfort profile from user feedback rather than personal tolerance\nSketch and validate spatial UI at true scale before implementation",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2745,7 +2745,7 @@
     "text": "Prerequisites\n\nThe Unity 6.3 project you configured for Quest in the Week 4 practical: OpenXR with the Meta Quest feature group, XR Interaction Toolkit 3.x and its Starter Assets sample imported. If you are starting fresh, follow Week 4’s “Before the Session: Project Setup” first.\nA completed Week 5 consent briefing. You are about to deliberately make peers uncomfortable, so the duty-of-care rules apply.\nThe paper-prototyping materials listed in Part 3\n\n\n\n\n\n\n\nWarningLocomotion changed in XRI 3\n\n\n\nIf a tutorial mentions a Locomotion System, Action-based Continuous Move Provider or Device-based Snap Turn Provider, it is written for XRI 2.x. In 3.x a Locomotion Mediator and an XR Body Transformer sit on the rig, and there is a single provider of each kind: Teleportation Provider, Continuous Move Provider (the Starter Assets use its subclass, Dynamic Move Provider), Snap Turn Provider and Continuous Turn Provider.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2756,7 +2756,7 @@
     "text": "Instructions\n\nPart 1: Implement Two Schemes (40 minutes)\n\n1.1 Build the Test Environment (10 minutes)\n\nCreate the Scene\n\nIn your Week 4 project, create a new scene, Week5_Locomotion, and delete its default Main Camera.\nFrom Samples/XR Interaction Toolkit/&lt;version&gt;/Starter Assets/Prefabs, drag XR Origin (XR Rig) into the scene at the origin.\nLook inside the rig at Locomotion. Its children are the providers you will use: Turn (Snap Turn Provider and Continuous Turn Provider), Move (Dynamic Move Provider), Teleportation (Teleportation Provider), plus Grab Move and Climb, which you can ignore.\n\nLay Out a Route\n\nAdd a Plane scaled to (4, 1, 4) (a 40 m × 40 m floor). Add a few cubes as walls and obstacles so the route cannot be walked in a straight line.\nMark a route of about 30 m with five numbered markers (thin cylinders or floor decals): Start → 1 → 2 → 3 → Finish. Include at least one 90° turn and one 180° turn, because turning is where most discomfort appears.\nEvery participant walks this same route under both schemes, so do not change it after Part 2 begins.\n\n\n\n\n\n\n\n\nTipShort of time?\n\n\n\nStarter Assets/Prefabs/Teleportation Environment.prefab is a ready-made floor with teleport areas and anchors. Drop it in and add your obstacles and markers to it.\n\n\n\n\n1.2 Scheme A: Teleportation (12 minutes)\n\nMake the Floor a Teleport Target\n\nSelect the floor plane and add a Teleportation Area component. The plane’s Mesh Collider is what the teleport ray hits.\nSet its Interaction Layer Mask to Teleport. The Starter Assets’ teleport ray only targets that layer. If Teleport is missing from the list, open Edit &gt; Project Settings &gt; XR Plug-in Management &gt; Project Validation and apply the XR Interaction Toolkit fix that adds it.\nLeave obstacles without a Teleportation Area, so they become invalid targets. The ray turns red over them, which is the “valid/invalid zone” feedback from the lecture.\n\nAdd Two Teleport Anchors\n\nGameObject &gt; XR &gt; Teleportation Anchor. Place one at marker 2 and one at the Finish. Set each anchor’s Interaction Layer Mask to Teleport as well.\nRotate each anchor so its blue (forward) arrow faces where the participant should look on arrival. Set Match Orientation to Target Up And Forward, so landing on an anchor also sets the user’s facing.\n\nSelect Teleport Mode\n\nSelect Left Controller and Right Controller under the rig. On each one’s Controller Input Action Manager, untick Smooth Motion Enabled (this enables teleport) and untick Smooth Turn Enabled (this gives snap turns).\n\nTest It\n\nBuild and Run. Push the thumbstick forward to show the teleport arc, aim, and release to teleport. Push it left or right to snap-turn.\n\n\n\n\n1.3 Scheme B: Smooth Locomotion (10 minutes)\n\nSwitch to Smooth Movement\n\nOn both controllers’ Controller Input Action Manager, tick Smooth Motion Enabled. The left thumbstick now moves continuously and the teleport ray is disabled.\nDecide on turning: tick Smooth Turn Enabled for continuous turning, or leave it unticked for snap turns. This is one of the variables you will tune.\n\nSet the Starting Values\n\nLocomotion › Move › Dynamic Move Provider: set Move Speed to 2 m/s. The Starter Assets preset uses 2.5, which is fast for first-time users. Leave Enable Strafe ticked.\nLocomotion › Turn › Snap Turn Provider: Turn Amount 45°.\nLocomotion › Turn › Continuous Turn Provider: Turn Speed 60°/s.\n\nAdd the Tunnelling Vignette\n\nFind TunnelingVignette.prefab in the XR Interaction Toolkit samples (Starter Assets/TunnelingVignette). Drag it onto XR Origin › Camera Offset › Main Camera, so it becomes a child of the camera.\nOn its Tunneling Vignette Controller, add to Locomotion Vignette Providers the Dynamic Move Provider, the Continuous Turn Provider and the Snap Turn Provider.\nStarting values: Aperture Size 0.7 (1 = no vignette, lower = narrower view), Feathering Effect 0.2, Ease In Time 0.3, Ease Out Time 0.3.\nOptional, for Scheme A: also add the Teleportation Provider, tick Override Default Parameters, set Aperture Size 0, and set the Teleportation Provider’s Delay Time to 0.15 s. The view now blinks shut for each jump, which is the “fade transition” from the lecture.\n\n\n\n\n1.4 Expose the Comfort Settings (8 minutes)\nYou will change settings between participants, so put them all on one component instead of hunting through the hierarchy. Create an empty GameObject, ComfortSettings, add this script, and drag in the references.\n\n\nComfortSettings.cs\n\nusing UnityEngine;\nusing UnityEngine.XR.Interaction.Toolkit.Locomotion.Comfort;\nusing UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;\nusing UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;\nusing UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;\n\npublic class ComfortSettings : MonoBehaviour\n{\n    public enum Scheme { Teleport, Smooth }\n\n    [Header(\"Scheme\")]\n    [SerializeField] Scheme scheme = Scheme.Teleport;\n    [SerializeField] bool smoothTurn = false;\n\n    [Header(\"Tuning\")]\n    [SerializeField, Range(0.5f, 4f)] float moveSpeed = 2f;          // metres per second\n    [SerializeField, Range(15f, 90f)] float snapTurnAngle = 45f;     // degrees per snap\n    [SerializeField, Range(30f, 180f)] float smoothTurnSpeed = 60f;  // degrees per second\n    [SerializeField, Range(0f, 1f)] float vignetteAperture = 0.7f;   // 1 = no vignette\n\n    [Header(\"References\")]\n    [SerializeField] ControllerInputActionManager[] controllers;     // Left and Right Controller\n    [SerializeField] ContinuousMoveProvider moveProvider;            // Locomotion › Move\n    [SerializeField] SnapTurnProvider snapTurn;                      // Locomotion › Turn\n    [SerializeField] ContinuousTurnProvider continuousTurn;          // Locomotion › Turn\n    [SerializeField] TunnelingVignetteController vignette;           // under Main Camera\n\n    void Start() =&gt; Apply();\n\n    // Lets you change values in the Inspector during Play mode (e.g. over Quest Link)\n    void OnValidate()\n    {\n        if (Application.isPlaying)\n            Apply();\n    }\n\n    public void Apply()\n    {\n        foreach (var controller in controllers)\n        {\n            controller.smoothMotionEnabled = scheme == Scheme.Smooth;\n            controller.smoothTurnEnabled = smoothTurn;\n        }\n        moveProvider.moveSpeed = moveSpeed;\n        snapTurn.turnAmount = snapTurnAngle;\n        continuousTurn.turnSpeed = smoothTurnSpeed;\n        vignette.defaultParameters.apertureSize = vignetteAperture;\n\n        Debug.Log($\"Comfort settings: {scheme}, smoothTurn={smoothTurn}, speed={moveSpeed} m/s, \" +\n                  $\"snap={snapTurnAngle}°, turnSpeed={smoothTurnSpeed}°/s, aperture={vignetteAperture}\");\n    }\n}\n\n\nFastest way to tune: on Windows, connect the headset with Meta Horizon Link and press Play. You can then change values in the Inspector between runs without rebuilding. Otherwise, change the values and Build And Run again, which takes a minute or two per change.\nWrite the settings for every run on the recording sheet. The Debug.Log line gives you an exact copy in the Console.\n\n\n\n\n\n\n\nNoteTutorials and documentation: locomotion and comfort\n\n\n\n\n\n\nUnity Learn, Create with VR 1.2: VR Locomotion (Unity 6.3)\nXRI docs: Locomotion overview (mediator, body transformer and providers) and Teleportation\nXRI docs: Teleportation Area, Teleportation Anchor, Teleportation Provider\nXRI docs: Continuous Move Provider, Snap Turn Provider, Continuous Turn Provider\nXRI docs: Tunneling Vignette Controller and Starter Assets\n\n\n\n\n\n\n\nPart 2: Peer Comfort Study (45 minutes)\n\nPrepare\n\nEach participant completes the route once per scheme. Alternate which scheme goes first: participant 1 does A then B, participant 2 does B then A, participant 3 does A then B.\nUse the Fast Motion Sickness Scale (FMS) for the comfort rating: “On a scale of 0 (no sickness at all) to 20 (frank sickness), how do you feel right now?” Ask it before the first run and at every marker during each run, so you capture how discomfort builds. FMS is quick enough to answer without leaving the headset (Keshavarz & Hecht, 2011).\nStop rule: end a run at once if FMS reaches 10 or more, or if the participant asks to stop. Remove the headset, let them sit down, and do not start the second scheme until their FMS is back to its starting value.\n\nRun the Comparison\n\nThe participant stands for both schemes. Note any stepping, swaying or grabbing for support.\nRecord for each run: time to complete, FMS at each marker, peak FMS, and the exact comfort settings.\nAfter both runs, ask which scheme they preferred and why. Write down any spontaneous comment word for word.\nAllow at least 5 minutes of rest out of the headset between the two schemes.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParticipant\nOrder\nScheme\nSettings\nTime\nFMS (start / 1 / 2 / 3 / finish)\nPeak\nComment\n\n\n\n\nP1\nA→B\nA\n\n\n\n\n\n\n\n\nTune and Re-Test\n\nChange one setting at a time in response to the feedback, for example vignette aperture 0.7 → 0.5, smooth turn → snap turn, or speed 2 → 1.5 m/s. Changing several at once means you cannot tell which change helped.\nRe-test with at least one participant who found the smooth scheme uncomfortable (after their FMS has returned to baseline), and record whether their peak FMS fell.\n\n\n\n\nPart 3: Spatial UI Paper Prototype (35 minutes)\n\nMaterials Required\n\n\n\n\n\n\n\n\nItem\nQuantity (per pair)\nUsed for\n\n\n\n\nA4 card, 250–300 gsm (white and one colour)\n3 sheets\nThe menu panel and buttons\n\n\nSticky notes, 38 × 51 mm or smaller\n1 pad\nMovable buttons and labels\n\n\nMetre rule or tape measure\n1\nMeasuring arm’s length and eye distance\n\n\n30 cm ruler\n1\nMeasuring and ruling the panel\n\n\nScissors, or craft knife with a cutting mat\n1 set\nCutting card to size\n\n\nPencil and black fine-liner (0.5 mm)\n1 each\nSketching, then inking final labels\n\n\nMasking tape\n1 roll\nHolding layouts together\n\n\nElastic band, hair tie or Velcro strap\n2\nAttaching the panel to the forearm\n\n\nPrinted text-size test strip (on the VLE)\n1\nChecking label legibility at wrist distance\n\n\nPhone camera\n1\nPhotographing each iteration for your journal\n\n\n\n\n\n\n\n\n\nTipSizes to start from\n\n\n\n\nButtons: at least 2 cm × 2 cm (the lecture’s minimum), with gaps of at least 0.5 cm between them.\nItem count: no more than 6 to 8 items.\nText: the lecture’s minimum of 24 pt at 1 m scales with distance. A wrist menu sits about 40 cm from the eyes, so its labels need to be at least 10 pt, and larger is safer.\n\n\n\n\nSketch at Scale\n\nStrap a piece of card to the inner forearm with an elastic band, about where a watch face would sit. Raise the wrist, palm up, into the position from the lecture’s wrist-menu pattern.\nMeasure the distance from the card to the eyes with the metre rule and write it down.\nCut a card panel to the size your wrist menu would occupy, and lay out your buttons on it with sticky notes. Most first designs are far too large for a forearm. Measure, do not estimate.\n\nTest the Reach\n\nWith the panel on one arm, have your partner press each button with the index finger of the other hand. Check that every control is reachable without shoulder strain and without twisting the wrist past comfortable.\nCheck legibility at the measured distance using the text-size test strip. Every label must be readable without leaning in.\nHold the pose for 30 seconds and note when the raised arm starts to tire. That is the menu’s time budget.\n\nFinalise\n\nInk the final layout on fresh card with dimensions (panel size, button sizes, gaps, text size) and photograph it before you build anything in Unity.\n\n\n\n\n\n\n\n\nNoteTaking it into Unity later\n\n\n\n\n\nWhen you build the menu in the lab, Unity Learn’s Create with VR 2.4 User Interface shows how to set up world-space UI that works with the XR Interaction Toolkit. Your dimensioned paper prototype gives you the canvas size in metres.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2767,7 +2767,7 @@
     "text": "Expected Outcome\nTwo working locomotion schemes with exposed comfort settings, a record of peer comfort ratings before and after tuning, and a dimensioned paper prototype of a wrist menu validated for reach and legibility.\n\n\n\n\n\n\nTipHint\n\n\n\nYour own comfort is not evidence. Developers build tolerance to locomotion discomfort within days, which is exactly why the ratings that matter here are somebody else’s.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   },
   {
@@ -2778,7 +2778,7 @@
     "text": "References\n\nKeshavarz, B. and Hecht, H. (2011) “Validating an efficient method to quantify motion sickness.” Human Factors, 53(4), 415–426.",
     "crumbs": [
       "Week 05",
-      "Week 5 Practical"
+      "Practical"
     ]
   }
 ]
