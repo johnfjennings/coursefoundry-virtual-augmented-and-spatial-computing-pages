@@ -1,5 +1,137 @@
 [
   {
+    "objectID": "weeks/06-week-06/02-lecture.html",
+    "href": "weeks/06-week-06/02-lecture.html",
+    "title": "Week 6 Lecture Notes",
+    "section": "",
+    "text": "Week 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1–2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4–5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality–virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#overview",
+    "href": "weeks/06-week-06/02-lecture.html#overview",
+    "title": "Week 6 Lecture Notes",
+    "section": "",
+    "text": "Week 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1–2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4–5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality–virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#why-frameworks-matter",
+    "href": "weeks/06-week-06/02-lecture.html#why-frameworks-matter",
+    "title": "Week 6 Lecture Notes",
+    "section": "2 1. Why Frameworks Matter",
+    "text": "2 1. Why Frameworks Matter\nDesign frameworks are not rigid rules — they are structured lenses that help us:\n\nAnalyse existing experiences systematically rather than impressionistically\nCommunicate design decisions to collaborators and stakeholders\nIdentify problems before committing to implementation\nCompare experiences across different platforms and contexts\n\nWithout frameworks, XR critique tends to collapse into “it felt good” or “it felt bad” — subjective impressions that cannot drive improvement.\n\n\n\nA framework turns vague impressions into specific questions you can answer.\n\n\nNo single framework covers everything. Each one this week answers a different question:\n\n\n\n\n\n\n\nFramework\nQuestion it answers\n\n\n\n\nNorman’s action cycle\nWhere in an interaction does the user get stuck?\n\n\nMilgram’s continuum\nWhat kind of XR experience is this, and what does that constrain?\n\n\nSlater’s presence model\nWhy does a usability problem also damage the experience?\n\n\nHeuristics\nWhich established principles does the design violate, and how badly?\n\n\n\nA strong analysis combines two or more lenses: for example, Norman to find the failure point and Slater to explain its effect on presence.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#normans-action-cycle",
+    "href": "weeks/06-week-06/02-lecture.html#normans-action-cycle",
+    "title": "Week 6 Lecture Notes",
+    "section": "3 2. Norman’s Action Cycle",
+    "text": "3 2. Norman’s Action Cycle\nDonald Norman’s seven-stage action cycle (from The Design of Everyday Things, 1988, revised 2013) describes how humans interact with any system:\n\nForm a goal: What does the user want to achieve?\nForm an intention: How do they plan to achieve it?\nSpecify an action: Which specific action will they take?\nExecute the action: Perform the physical action\nPerceive the state of the world: What changed?\nInterpret the state: What does the change mean?\nEvaluate the outcome: Did it achieve the goal?\n\nStages 2–4 form the execution side of the cycle (getting from a goal to an action in the world); stages 5–7 form the evaluation side (getting from a change in the world back to a judgement about the goal). In practice users cycle through these stages many times a second, and often skip or reorder them — the model is a diagnostic tool, not a literal description of thought.\n\n\n\nNorman’s seven stages: three to act on the world, three to make sense of the result.\n\n\n\n3.1 2.1 Applying the Cycle to XR\nThe cycle is particularly useful for XR because it maps directly onto the interaction design challenges we’ve covered:\n\n\n\nStage\nXR Design Question\n\n\n\n\nForm goal\nIs the goal clear from the environment?\n\n\nForm intention\nDoes the user know what actions are possible?\n\n\nSpecify action\nIs the correct gesture/input discoverable?\n\n\nExecute action\nIs the input reliable and comfortable?\n\n\nPerceive state\nIs there clear feedback?\n\n\nInterpret state\nIs the feedback unambiguous?\n\n\nEvaluate outcome\nDoes the user know if they succeeded?\n\n\n\n\n\n3.2 2.2 The Gulf of Execution and Gulf of Evaluation\nNorman identifies two key gaps:\nGulf of Execution: The gap between what the user wants to do and what actions are available. In XR, this manifests as invisible affordances — objects that can be interacted with but give no indication of this — undiscoverable gestures, and inputs that fail because of tracking loss or fatigue.\nGulf of Evaluation: The gap between the system’s state and the user’s perception of it. In XR, this manifests as missing or ambiguous feedback — the user performs an action but doesn’t know if it worked.\nGood XR design minimises both gulfs.\n\n\n\nWhere XR interactions fail: execution problems on the way in, evaluation problems on the way back.\n\n\n\n\n3.3 2.3 Norman’s Design Principles in XR\nNorman pairs the action cycle with a set of design principles. These are the levers a designer uses to close the two gulfs:\n\n\n\n\n\n\n\n\nPrinciple\nMeaning\nXR example\n\n\n\n\nAffordance\nWhat actions an object makes possible\nA handle-shaped object can be grabbed\n\n\nSignifier\nA perceivable cue that shows where and how to act\nA hover glow, a hand-shaped outline on a lever\n\n\nMapping\nThe relationship between control and effect\nTwisting the wrist rotates the held object the same way\n\n\nFeedback\nImmediate, informative response to an action\nA click sound and a haptic pulse when a button is pressed\n\n\nConstraints\nLimits that prevent wrong actions\nTeleport arc refuses to land inside walls\n\n\nConceptual model\nThe user’s understanding of how the system works\n“Grip to hold, trigger to use” applied consistently\n\n\n\nNorman’s revised edition stresses the difference between affordances and signifiers. In XR almost anything could be interactive, so affordances alone are not enough: designers must add signifiers that tell the user which objects actually respond. Many “invisible affordance” problems are really missing signifiers.\n\n\n3.4 2.4 Worked Example: Picking Up a Key\nConsider a hypothetical VR escape room where the user must pick up a key from a desk.\n\n\n\n\n\n\n\n\n\nStage\nWhat happens\nProblem\nFix\n\n\n\n\nGoal\n“Unlock the door”\n—\n—\n\n\nIntention\nUser looks for something to open the door\nKey looks identical to static props\nSubtle highlight on interactable items (signifier)\n\n\nSpecify\nUser tries to pinch the key\nGame expects a grip press\nAccept both, or show a grip hint on hover\n\n\nExecute\nUser reaches down to the desk\nDesk is below seated reach\nRaise the desk or support remote grab\n\n\nPerceive\nKey appears in hand\nNo sound or haptic\nAdd a pickup sound and a short haptic pulse\n\n\nInterpret\nUser is unsure whether it is “held”\nKey jitters in hand\nSnap to a stable held pose\n\n\nEvaluate\nUser walks to the door\n—\n—\n\n\n\nThis kind of table, built for one interaction, is exactly the form of analysis expected in Assessment 2.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#milgrams-reality-virtuality-continuum",
+    "href": "weeks/06-week-06/02-lecture.html#milgrams-reality-virtuality-continuum",
+    "title": "Week 6 Lecture Notes",
+    "section": "4 3. Milgram’s Reality-Virtuality Continuum",
+    "text": "4 3. Milgram’s Reality-Virtuality Continuum\nPaul Milgram and Fumio Kishino (1994) proposed a continuum from fully real to fully virtual environments. The two ends are the real environment and the virtual environment; mixed reality (MR) is not a single point but the whole span between them:\nReal ←———————————— Mixed Reality (MR) ————————————→ Virtual\nEnvironment        AR              AV              Environment\n\n\n\nThe reality–virtuality continuum: mixed reality covers everything between the two ends.\n\n\nAugmented Reality (AR): Primarily real world with virtual overlays. The user sees the real world and virtual content is added. Examples: Snap Spectacles, HoloLens 2, phone-based AR.\nAugmented Virtuality (AV): Primarily virtual with real elements incorporated — for example a real keyboard or the user’s real hands shown inside a virtual scene. Rare in consumer products.\nVirtual Reality (VR): Fully virtual environment. Examples: Quest 2, Vive Pro, Pico Neo Eye.\n\n4.1 3.1 How “Mixed Reality” Is Used Today\nIn Milgram’s original sense, AR and AV are both forms of mixed reality. Industry usage has drifted: vendors now often use “mixed reality” to mean AR in which virtual objects are anchored to and interact with the physical room — occluded by real furniture, resting on real tables. Microsoft used it for HoloLens; Meta uses it for colour-passthrough features on Quest 3.\nPassthrough headsets also blur the continuum because one device can move along it at runtime: the same Quest 3 can show the real room with a few virtual objects, a virtual room with a “window” onto reality, or a fully virtual scene. When you analyse an experience, describe where the experience sits, not just which device it runs on.\n\n\n4.2 3.2 Design Implications\nThe position on the continuum determines fundamental interaction design decisions:\n\n\n\n\n\n\n\nContinuum Position\nInteraction Considerations\n\n\n\n\nAR\nMust work in unpredictable real environments; lighting varies; user is mobile; virtual content must not hide real hazards\n\n\nMR (anchored to the room)\nSpatial anchoring critical; virtual objects must respect real-world surfaces and occlusion\n\n\nAV\nReal elements must be tracked and aligned precisely, or the illusion breaks\n\n\nVR\nFull control of environment; can design for specific hardware; comfort and physical safety (guardian/boundary) are primary concerns",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#presence-theory-slater",
+    "href": "weeks/06-week-06/02-lecture.html#presence-theory-slater",
+    "title": "Week 6 Lecture Notes",
+    "section": "5 4. Presence Theory (Slater)",
+    "text": "5 4. Presence Theory (Slater)\nMel Slater’s presence model (2009) distinguishes two components:\nPlace Illusion (PI): The sense of “being there” — the feeling that you are physically located in the virtual space. PI is primarily driven by perceptual factors: field of view, tracking quality, latency, stereoscopy. Slater ties PI to sensorimotor contingencies: the more ways you can perceive the world with your body as you would in reality (turning your head, leaning to look around an object), the stronger the illusion.\nPlausibility Illusion (Psi): The sense that “this is really happening” — that events in the virtual world are real events, not simulations. Psi is driven by the coherence and responsiveness of the virtual world, especially events that respond to you (a character that turns to look at you, an object that reacts when you touch it).\nRecall from Week 3 that immersion is an objective property of the system (what it can deliver), while presence is the subjective response it produces. PI and Psi are two parts of that response.\n\n\n\nPlace Illusion and Plausibility Illusion, and how interaction breaks each.\n\n\n\n5.1 4.1 How Interaction Affects Presence\nPoor interaction design breaks both components:\n\nBreaks PI: When you notice the interface (floating menus, visible ray casters, controller models that don’t match your hands), you are reminded that you are in a simulation.\nBreaks Psi: When the world doesn’t respond consistently (objects that don’t fall, physics that behaves unexpectedly, interactions that don’t work), the plausibility of the experience collapses.\n\nThis is why interaction design is not just a usability concern — it is a fundamental component of the XR experience itself.\n\n\n5.2 4.2 Embodiment\nA closely related concept is the sense of embodiment (Kilteni, Groten & Slater, 2012): the feeling that a virtual body is your own. It has three parts — self-location (where I am), agency (I control this body) and body ownership (this body is mine). Interaction design affects all three: virtual hands that track accurately and respond instantly strengthen agency, while hands that pass through solid objects or lag behind real movement weaken it.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#interaction-patterns",
+    "href": "weeks/06-week-06/02-lecture.html#interaction-patterns",
+    "title": "Week 6 Lecture Notes",
+    "section": "6 5. Interaction Patterns",
+    "text": "6 5. Interaction Patterns\nA pattern is a reusable solution to a recurring design problem. Naming patterns lets designers discuss solutions quickly and lets analysts recognise when a known good solution has been used — or ignored.\n\n\n\nFour interaction patterns that recur in well-designed XR.\n\n\n\n6.1 5.1 Progressive Disclosure\nReveal complexity gradually. Present only the options relevant to the current task; reveal additional options as the user progresses.\nXR application: Don’t present all menu options at once. Start with the primary action; reveal secondary options through exploration or explicit request. Introduce new mechanics one at a time, each with a moment to practise before the next.\n\n\n6.2 5.2 Spatial Consistency\nObjects stay where the user places them. The virtual world has memory. This is a fundamental expectation users bring from the real world.\nXR application: Avoid resetting object positions between scenes or sessions without explicit user action. If objects must reset, provide clear visual indication. In AR, use persistent spatial anchors so content reappears in the same physical place.\n\n\n6.3 5.3 Embodied Metaphor\nMap virtual actions to real-world physical actions. Leverage the user’s existing physical knowledge.\nExamples:\n\nPull a lever to open a door (not press a button)\nThrow an object by physically throwing (not pressing a button)\nWrite by physically writing (not typing)\n\nEmbodied metaphors reduce the Gulf of Execution because the user already knows the action. They must be balanced against fatigue: a metaphor that requires large, repeated arm movements may be natural but tiring.\n\n\n6.4 5.4 Graceful Degradation\nWhen tracking fails, input is lost, or the system encounters an error, degrade gracefully rather than crashing or freezing.\nXR application: If hand tracking is lost, fall back to controller input. If a gesture fails, provide an alternative button input. Always give the user a way out.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#interaction-anti-patterns",
+    "href": "weeks/06-week-06/02-lecture.html#interaction-anti-patterns",
+    "title": "Week 6 Lecture Notes",
+    "section": "7 6. Interaction Anti-Patterns",
+    "text": "7 6. Interaction Anti-Patterns\nAn anti-pattern is a common solution that looks reasonable but reliably causes problems. Most XR anti-patterns are desktop or mobile conventions carried into 3D without adaptation.\n\n\n\nSix common XR anti-patterns, each with the usual fix.\n\n\n\n\n\n\n\n\n\n\nAnti-Pattern\nWhy It Fails\nBetter Alternative\n\n\n\n\nFloating menus\nBreak immersion, vergence conflict\nDiegetic UI, wrist menu\n\n\nTiny targets\nViolate Fitts’ Law\nMinimum 2cm at arm’s length\n\n\nNo feedback\nUser doesn’t know if action worked\nVisual + audio + haptic\n\n\nGorilla arm UI\nFatigue in minutes\nWaist-height interaction zone\n\n\nForced smooth locomotion\nSickness for sensitive users\nAlways offer teleport\n\n\nInvisible affordances\nUser can’t discover interactions\nHighlight, glow, audio cue\n\n\nIrreversible actions\nUser afraid to explore\nConfirm dialogs, undo\n\n\n\nEach anti-pattern can be traced to one of this week’s frameworks: tiny targets and invisible affordances widen the Gulf of Execution, missing feedback widens the Gulf of Evaluation, and floating menus break Place Illusion.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#evaluation-methods",
+    "href": "weeks/06-week-06/02-lecture.html#evaluation-methods",
+    "title": "Week 6 Lecture Notes",
+    "section": "8 7. Evaluation Methods",
+    "text": "8 7. Evaluation Methods\nEvaluation methods fall into two broad families:\n\nInspection methods — experts review the design against principles. No users are needed, so they are fast and cheap and can be used before anything is built.\nEmpirical methods — real users try the design while you observe, measure or ask them. These find problems experts miss, but cost more time.\n\nThe right choice depends on the stage of the design and the question you are asking.\n\n\n\nMatch the evaluation method to the stage of the design.\n\n\n\n8.1 7.1 Heuristic Evaluation\nExpert review against a set of established principles. Fast and cheap — can be done without users.\nProcess:\n\nSelect 3–5 evaluators\nEach evaluator independently reviews the experience against the heuristics\nEvaluators rate severity of each violation (0–4 scale)\nAggregate findings and prioritise\n\nNielsen’s 10 heuristics adapted for XR:\n\n\n\n\n\n\n\n\n#\nNielsen heuristic\nXR translation\n\n\n\n\n1\nVisibility of system status\nFeedback on every interaction\n\n\n2\nMatch between system and real world\nEmbodied metaphors\n\n\n3\nUser control and freedom\nUndo, cancel, exit\n\n\n4\nConsistency and standards\nConsistent gesture vocabulary\n\n\n5\nError prevention\nConfirm before destructive actions\n\n\n6\nRecognition rather than recall\nVisible affordances and signifiers\n\n\n7\nFlexibility and efficiency of use\nShortcuts for expert users\n\n\n8\nAesthetic and minimalist design\nDiegetic, uncluttered UI\n\n\n9\nHelp users recognise, diagnose and recover from errors\nClear error states\n\n\n10\nHelp and documentation\nIn-world tutorials\n\n\n\n\n\n\nNielsen’s ten heuristics translated for XR, with the 0–4 severity scale.\n\n\nSeverity ratings (Nielsen):\n\n\n\nRating\nMeaning\n\n\n\n\n0\nNot a usability problem\n\n\n1\nCosmetic — fix only if time allows\n\n\n2\nMinor — low priority\n\n\n3\nMajor — important to fix\n\n\n4\nCatastrophe — must fix before release\n\n\n\nSeverity combines how often the problem occurs, how badly it affects users, and whether users can work around it. Nielsen’s heuristics were written for desktop software, so XR-specific sets add comfort, presence and physical safety. Sutcliffe and Gault (2004), for example, proposed heuristics for virtual environments that include natural engagement, compatibility with the user’s task and sense of presence.\n\n\n8.2 7.2 Think-Aloud Protocol\nUsers verbalise their thoughts while using the experience. Reveals mental models and points of confusion.\nXR challenge: Verbalising while wearing a headset is awkward. Consider:\n\nRecording audio from inside the headset\nUsing a mirrored display so an observer can see what the user sees\nBrief the user before starting — they often go quiet in XR\nA retrospective think-aloud, where the user watches a recording of their session afterwards and comments on it, avoids interrupting immersion\n\n\n\n8.3 7.3 Observation and Task Metrics\nWatching what users do — not just what they say — gives objective evidence:\n\nTask completion: did they succeed?\nTime on task: how long did it take?\nErrors: wrong actions, missed targets, repeated attempts\nRequests for help: where did they get stuck?\n\nRecord the mirrored view and, where possible, a camera view of the user’s body. Many XR problems (reaching, stooping, turning to find UI) are only visible from outside the headset.\n\n\n8.4 7.4 Standardised Questionnaires\n\n\n\nQuestionnaire\nMeasures\nItems\n\n\n\n\nSUS (System Usability Scale)\nOverall usability\n10 items\n\n\nSSQ (Simulator Sickness Questionnaire)\nComfort/sickness\n16 items\n\n\nIPQ (Igroup Presence Questionnaire)\nSense of presence\n14 items\n\n\nNASA-TLX\nPerceived workload\n6 dimensions\n\n\n\nSUS produces a score from 0 to 100; scores above about 68 are generally considered above average. The SSQ gives three subscales — nausea, oculomotor discomfort and disorientation — and a total. It is good practice to give the SSQ both before and after exposure so you can see the change, not just the end state.\nWhen evaluating your Assessment 2 prototype, SUS is recommended as a minimum. SSQ is recommended if your prototype involves locomotion. Use the consent form and SSQ from Week 5.\n\n\n8.5 7.5 Choosing a Method\n\n\n\nIf you want to know…\nUse\n\n\n\n\nWhat design problems exist before building\nHeuristic evaluation\n\n\nWhy users struggle\nThink-aloud, observation\n\n\nHow well users perform\nTask metrics\n\n\nHow usable it feels overall\nSUS\n\n\nWhether it makes people unwell\nSSQ (before and after)\n\n\nWhether users feel present\nIPQ\n\n\nHow mentally demanding it is\nNASA-TLX\n\n\n\nSmall user tests are still worthwhile: a handful of participants will reveal the most frequent problems, though not every problem. Combine an inspection method with at least one empirical method, and be honest in your report about what a small sample can and cannot show.\n\n\n8.6 7.6 Ethics and Safety in XR Evaluation\nUser testing in XR carries physical and wellbeing risks that desktop testing does not:\n\nObtain informed consent and explain that participants can stop at any time without giving a reason\nScreen for conditions such as photosensitive epilepsy or susceptibility to motion sickness\nClear the play space and keep an observer beside the participant\nKeep sessions short and stop immediately if sickness symptoms appear\nStore any recordings and questionnaire data securely and anonymise results",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#structuring-an-experience-analysis",
+    "href": "weeks/06-week-06/02-lecture.html#structuring-an-experience-analysis",
+    "title": "Week 6 Lecture Notes",
+    "section": "9 8. Structuring an Experience Analysis",
+    "text": "9 8. Structuring an Experience Analysis\nAssessment 2 asks you to analyse an existing experience. A clear structure is:\n\nDescribe the experience briefly: platform, input, position on Milgram’s continuum, target user\nSelect two or three key interactions to focus on — depth beats breadth\nAnalyse each interaction with a framework (for example, an action-cycle table as in Section 2.4)\nExplain the effect on presence and comfort using Slater’s model and Week 3–5 concepts\nJudge strengths and weaknesses against heuristics, with severity ratings\nSupport every claim with evidence: screenshots, recordings, observations or questionnaire results\n\nAvoid description without critique. “The menu is on the wrist” is description; “the wrist menu keeps controls within reach and avoids head-locked UI, but it has no haptic confirmation, so users repeat selections” is analysis.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#self-check-questions",
+    "href": "weeks/06-week-06/02-lecture.html#self-check-questions",
+    "title": "Week 6 Lecture Notes",
+    "section": "10 Self-Check Questions",
+    "text": "10 Self-Check Questions\n\nApply Norman’s Action Cycle to a specific interaction in an XR experience you have used. Where does it fail?\nWhat is the difference between an affordance and a signifier? Give an XR example of each.\nWhere on Milgram’s continuum would you place the HoloLens 2? The Quest 2? The Snap Spectacles? Why is the Quest 3 harder to place?\nWhat is the difference between Place Illusion and Plausibility Illusion?\nName three interaction anti-patterns and explain which gulf, or which presence component, each one damages.\nWhen would you use a heuristic evaluation rather than a user test?\nWhy should the SSQ be given both before and after an XR session?",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/02-lecture.html#references",
+    "href": "weeks/06-week-06/02-lecture.html#references",
+    "title": "Week 6 Lecture Notes",
+    "section": "11 References",
+    "text": "11 References\n\nNorman, D. (2013) The Design of Everyday Things (revised ed.). Basic Books.\nMilgram, P. & Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” IEICE Transactions on Information and Systems, E77-D(12), 1321–1329.\nSlater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” Philosophical Transactions of the Royal Society B, 364(1535), 3549–3557.\nKilteni, K., Groten, R. & Slater, M. (2012) “The sense of embodiment in virtual reality.” Presence: Teleoperators and Virtual Environments, 21(4), 373–387.\nNielsen, J. (1994) “Heuristic evaluation.” In Nielsen, J. & Mack, R.L. (eds.) Usability Inspection Methods. Wiley.\nSutcliffe, A. & Gault, B. (2004) “Heuristic evaluation of virtual reality applications.” Interacting with Computers, 16(4), 831–849.\nBrooke, J. (1996) “SUS: A ‘quick and dirty’ usability scale.” In Jordan et al. (eds.) Usability Evaluation in Industry. Taylor & Francis.\nKennedy, R.S. et al. (1993) “Simulator sickness questionnaire.” International Journal of Aviation Psychology, 3(3), 203–220.\nSchubert, T., Friedmann, F. & Regenbrecht, H. (2001) “The experience of presence: Factor analytic insights.” Presence: Teleoperators and Virtual Environments, 10(3), 266–281.\nHart, S.G. & Staveland, L.E. (1988) “Development of NASA-TLX (Task Load Index).” In Hancock, P.A. & Meshkati, N. (eds.) Human Mental Workload. North-Holland.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Lecture Notes"
+    ]
+  },
+  {
     "objectID": "weeks/05-week-05/05-ssq-questionnaire.html",
     "href": "weeks/05-week-05/05-ssq-questionnaire.html",
     "title": "Simulator Sickness Questionnaire",
@@ -1049,7 +1181,7 @@
     "href": "weeks/01-week-01/02-lecture.html#the-hardware-in-this-module",
     "title": "Lecture Notes",
     "section": "8 The Hardware in This Module",
-    "text": "8 The Hardware in This Module\nYou will have access to a range of devices throughout this module. Each offers different capabilities and design constraints. Week 2 examines this landscape comparatively; the purpose here is simply to know what is in the room.\n\n8.1 Meta Quest 2\nStandalone, 6DOF, inside-out tracking, touch controllers with haptics, and hand tracking. Still widely used in industry and education, and accepted for any session in this module that does not need colour passthrough.\n\n\n8.2 Meta Quest 3\nThe primary target platform for this module. Adds full-colour passthrough for mixed reality, improved processing, and a slimmer form factor. Required rather than preferred from Week 7, where the mixed reality and scene understanding work depends on passthrough and room capture.\n\n\n8.3 HTC Vive Pro\nA PC-tethered headset with outside-in tracking via SteamVR base stations. Higher visual fidelity than the Quest 2. Useful for understanding the trade-offs between standalone and tethered systems.\n\n\n8.4 Pico Neo Eye\nIncludes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering — relevant to the gaze input discussion in Week 4 and to the rendering techniques covered in Week 10.\n\n\n8.5 HoloLens 2\nMicrosoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The clearest available demonstration of the optical see-through constraints described above, and a useful comparison point for the spatial mapping work in Week 7.\n\n\n8.6 Snap Spectacles 2022\nLightweight AR glasses with a small display. Useful for understanding the form factor trade-off between glasses and headsets, and available alongside Lens Studio as a platform option for Assessment 2.\n\n\n8.7 Xreal One Pro AR Display Glasses\nLightweight tethered AR display glasses presenting a virtual screen without full world tracking. These present a virtual screen without tracking the world, which makes them a useful illustration of where “AR glasses” marketing outruns capability.",
+    "text": "8 The Hardware in This Module\nYou will have access to a range of devices throughout this module. Each offers different capabilities and design constraints. Week 2 examines this landscape comparatively; the purpose here is simply to know what is in the room.\n\n8.1 Meta Quest 2\nStandalone, 6DOF, inside-out tracking, touch controllers with haptics, and hand tracking. Still widely used in industry and education, and accepted for any session in this module that does not need colour passthrough.\n\n\n8.2 Meta Quest 3\nThe primary target platform for this module. Adds full-colour passthrough for mixed reality, improved processing, and a slimmer form factor. Required rather than preferred from Week 7, where the mixed reality and scene understanding work depends on passthrough and room capture.\n\n\n8.3 HTC Vive Pro\nA PC-tethered headset with outside-in tracking via SteamVR base stations. Higher visual fidelity than the Quest 2. Useful for understanding the trade-offs between standalone and tethered systems.\n\n\n8.4 Pico Neo Eye\nIncludes integrated eye tracking hardware. Enables gaze-based interaction and foveated rendering — relevant to the gaze input discussion in Week 4 and to the rendering techniques covered in Week 10.\n\n\n8.5 HoloLens 2\nMicrosoft’s mixed reality headset. Optical see-through display, hand tracking, gaze tracking, voice input. The clearest available demonstration of the optical see-through constraints described above, and a useful comparison point for the spatial mapping work in Week 7.\n\n\n8.6 Snap Spectacles 2022\nLightweight AR glasses with a small display. Useful for understanding the form factor trade-off between glasses and headsets.\n\n\n8.7 Xreal One Pro AR Display Glasses\nLightweight tethered AR display glasses presenting a virtual screen without full world tracking. These present a virtual screen without tracking the world, which makes them a useful illustration of where “AR glasses” marketing outruns capability.",
     "crumbs": [
       "Week 01",
       "Lecture Notes"
@@ -1450,7 +1582,7 @@
     "href": "01-assessments/03-assessment2.html#task",
     "title": "Assessment 2",
     "section": "Task",
-    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse:\n\nInteraction design\nPresence and immersion\nSpatial design\nStrengths and weaknesses\nComfort and usability\n\nSupport with:\n\nScreenshots or diagrams\nReferences to lecture concepts\n\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity or Lens Studio.\nExamples:\n\nObject manipulation\nGesture interaction\nUI selection (ray, gaze)\nNavigation system\n\nYour prototype must:\n\nBe interactive and functional\nDemonstrate understanding of XR input/output\n\nA focused prototype is encouraged. You are not expected to recreate the entire original experience.\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype:\n\nWhat works well?\nWhat doesn’t?\nHow does it compare to the original?\nWhat would you improve?",
+    "text": "Task\n\nPart 1 — Experience Analysis\nSelect an XR experience (VR, AR, or spatial computing).\nAnalyse:\n\nInteraction design\nPresence and immersion\nSpatial design\nStrengths and weaknesses\nComfort and usability\n\nSupport with:\n\nScreenshots or diagrams\nReferences to lecture concepts\n\n\n\n\nPart 2 — Interaction Prototype\nRecreate one key interaction using Unity.\nExamples:\n\nObject manipulation\nGesture interaction\nUI selection (ray, gaze)\nNavigation system\n\nYour prototype must:\n\nBe interactive and functional\nDemonstrate understanding of XR input/output\n\nA focused prototype is encouraged. You are not expected to recreate the entire original experience.\n\n\n\nPart 3 — Evaluation\nEvaluate your prototype:\n\nWhat works well?\nWhat doesn’t?\nHow does it compare to the original?\nWhat would you improve?",
     "crumbs": [
       "Assessments",
       "Assessment 2"
@@ -1461,7 +1593,7 @@
     "href": "01-assessments/03-assessment2.html#submission",
     "title": "Assessment 2",
     "section": "Submission",
-    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity / Lens Studio)\nVideo demo (2–3 minutes)",
+    "text": "Submission\nSubmit:\n\nReport (1500–2000 words)\nPrototype build (Unity)\nVideo demo (2–3 minutes)",
     "crumbs": [
       "Assessments",
       "Assessment 2"
@@ -2555,7 +2687,7 @@
     "href": "weeks/04-week-04/01-slides.html#assessment-2-reminder",
     "title": "Lecture Slides",
     "section": "Assessment 2 Reminder",
-    "text": "Assessment 2 Reminder\n\n\n\n\n\n\nCase Study due: Week 6\n\n\n\nChoose an XR experience to analyse\nApply interaction design frameworks\nBuild a low-fi prototype of an improved interaction\nEvaluate with at least 2 users",
+    "text": "Assessment 2 Reminder\n\n\n\n\n\n\nExperience Analysis & Interaction Prototype due: Week 6\n\n\n\nChoose an XR experience to analyse\nApply interaction design frameworks\nRecreate one key interaction from it in Unity\nEvaluate your prototype against the original",
     "crumbs": [
       "Week 04",
       "Lecture Slides"
@@ -2823,6 +2955,171 @@
     "crumbs": [
       "Week 05",
       "Participant Consent Form"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#week-6-overview",
+    "href": "weeks/06-week-06/01-slides.html#week-6-overview",
+    "title": "Week 6 Slides",
+    "section": "Week 6 Overview",
+    "text": "Week 6 Overview\n\nInteraction design frameworks for XR\nAnalysing XR experiences critically\nCommon interaction patterns and anti-patterns\nEvaluation methods\nAssessment 2 briefing",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#why-frameworks",
+    "href": "weeks/06-week-06/01-slides.html#why-frameworks",
+    "title": "Week 6 Slides",
+    "section": "Why Frameworks?",
+    "text": "Why Frameworks?\n\n\n\n\n“A framework is a lens — it doesn’t tell you what to see, but it tells you where to look.”\n\nFrameworks help us:\n\nAnalyse experiences systematically\nCommunicate design decisions\nIdentify problems before building\nCompare across different experiences\n\nWithout them, critique collapses into “it felt good” or “it felt bad”.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#framework-1-normans-action-cycle",
+    "href": "weeks/06-week-06/01-slides.html#framework-1-normans-action-cycle",
+    "title": "Week 6 Slides",
+    "section": "Framework 1: Norman’s Action Cycle",
+    "text": "Framework 1: Norman’s Action Cycle\n\n\n\nDonald Norman’s 7-stage action cycle applies directly to XR:\n\nForm a goal — what does the user want to do?\nForm an intention — how will they do it?\nSpecify an action — which gesture/input?\nExecute the action — perform the input\nPerceive the state — what changed?\nInterpret the state — what does it mean?\nEvaluate the outcome — did it work?",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#norman-in-xr-failure-points",
+    "href": "weeks/06-week-06/01-slides.html#norman-in-xr-failure-points",
+    "title": "Week 6 Slides",
+    "section": "Norman in XR: Failure Points",
+    "text": "Norman in XR: Failure Points\n\n\n\n\n\n\n\n\n\n\nStage\nCommon XR Failure\n\n\n\n\nForm intention\nNo affordance — user doesn’t know what’s interactive\n\n\nSpecify action\nGesture not discoverable\n\n\nExecute action\nTracking failure, fatigue\n\n\nPerceive state\nNo feedback (visual/audio/haptic)\n\n\nInterpret state\nAmbiguous feedback\n\n\nEvaluate outcome\nNo confirmation of success\n\n\n\n\nGulf of Execution: can I work out what to do, and how?\nGulf of Evaluation: can I tell what happened?",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#framework-2-milgrams-reality-virtuality-continuum",
+    "href": "weeks/06-week-06/01-slides.html#framework-2-milgrams-reality-virtuality-continuum",
+    "title": "Week 6 Slides",
+    "section": "Framework 2: Milgram’s Reality-Virtuality Continuum",
+    "text": "Framework 2: Milgram’s Reality-Virtuality Continuum\n\n\n\nReal environment ⟷ Virtual environment: everything in between is Mixed Reality (MR)\n\nAR: real world + virtual overlays (Snap Spectacles, HoloLens 2, phone AR)\nAV: mostly virtual + some real elements (rare in consumer products)\nVR: fully virtual (Quest 2, Vive Pro)\nPassthrough headsets (Quest 3) can move along the continuum at runtime\n\nDesign implication: interaction design must match the continuum position.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#framework-3-presence-model-slater",
+    "href": "weeks/06-week-06/01-slides.html#framework-3-presence-model-slater",
+    "title": "Week 6 Slides",
+    "section": "Framework 3: Presence Model (Slater)",
+    "text": "Framework 3: Presence Model (Slater)\n\n\n\nTwo components of presence:\n\nPlace Illusion (PI): “I am there” — the sense of being in the virtual space\nPlausibility Illusion (Psi): “This is real” — events feel like they’re really happening\n\nInteraction design affects both:\n\nPoor interaction breaks PI (you notice the interface)\nInconsistent physics breaks Psi (the world feels fake)",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#interaction-patterns",
+    "href": "weeks/06-week-06/01-slides.html#interaction-patterns",
+    "title": "Week 6 Slides",
+    "section": "Interaction Patterns",
+    "text": "Interaction Patterns\n\n\n\nProgressive Disclosure\nReveal complexity gradually. Don’t show all options at once.\nSpatial Consistency\nObjects stay where you put them. The world has memory.\nEmbodied Metaphor\nMap virtual actions to real-world physical actions. Example: pull a lever to open a door (not press a button).\nGraceful Degradation\nIf tracking fails, fall back gracefully. Don’t crash or freeze.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#interaction-anti-patterns",
+    "href": "weeks/06-week-06/01-slides.html#interaction-anti-patterns",
+    "title": "Week 6 Slides",
+    "section": "Interaction Anti-Patterns",
+    "text": "Interaction Anti-Patterns\n\n\n\n\n\n\nAnti-Pattern\nProblem\n\n\n\n\nFloating menus\nBreak immersion, cause eye strain\n\n\nTiny targets\nViolate Fitts’ Law, cause frustration\n\n\nNo feedback\nUser doesn’t know if action worked\n\n\nGorilla arm UI\nCauses fatigue in minutes\n\n\nForced smooth locomotion\nCauses sickness for sensitive users\n\n\nInvisible affordances\nUser can’t discover interactions\n\n\nIrreversible actions\nUser is afraid to explore",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#evaluation-methods-for-xr",
+    "href": "weeks/06-week-06/01-slides.html#evaluation-methods-for-xr",
+    "title": "Week 6 Slides",
+    "section": "Evaluation Methods for XR",
+    "text": "Evaluation Methods for XR\n\n\n\n\n\n\n\n\n\n\n\nMethod\nWhen\nWhat it measures\n\n\n\n\nHeuristic evaluation\nEarly\nDesign problems against principles\n\n\nThink-aloud\nMid\nUser mental model\n\n\nObservation / task metrics\nDuring\nErrors, time on task, completion\n\n\nEye tracking heatmap\nDuring\nAttention patterns\n\n\nSUS (System Usability Scale)\nPost-use\nOverall usability score\n\n\nSSQ (Simulator Sickness Questionnaire)\nPost-use\nComfort/sickness\n\n\nIPQ (Igroup Presence Questionnaire)\nPost-use\nSense of presence\n\n\nNASA-TLX\nPost-use\nPerceived workload",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#heuristic-evaluation-for-xr",
+    "href": "weeks/06-week-06/01-slides.html#heuristic-evaluation-for-xr",
+    "title": "Week 6 Slides",
+    "section": "Heuristic Evaluation for XR",
+    "text": "Heuristic Evaluation for XR\n\n\n\nNielsen’s 10 heuristics adapted for XR:\n\nVisibility of system status → feedback on every interaction\nMatch between system and real world → embodied metaphors\nUser control and freedom → undo, cancel, exit\nConsistency and standards → consistent gesture vocabulary\nError prevention → confirm before destructive actions\nRecognition over recall → visible affordances\nFlexibility and efficiency → shortcuts for expert users\nAesthetic and minimalist design → diegetic UI\nHelp users recognise errors → clear error states\nHelp and documentation → in-world tutorials\n\nRate each problem for severity: 0 (not a problem) to 4 (catastrophe).",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#assessment-2-xr-experience-analysis-interaction-prototype",
+    "href": "weeks/06-week-06/01-slides.html#assessment-2-xr-experience-analysis-interaction-prototype",
+    "title": "Week 6 Slides",
+    "section": "Assessment 2: XR Experience Analysis & Interaction Prototype",
+    "text": "Assessment 2: XR Experience Analysis & Interaction Prototype\nDue: Week 6 | Weight: 30% | Individual | LO2, LO3, LO4\n\n\n\nExperience Analysis\n\nChoose an XR experience (VR, AR or spatial computing)\nAnalyse interaction design, presence and immersion, spatial design, comfort and usability\nIdentify strengths and weaknesses, supported by screenshots and this week’s frameworks\n\nInteraction Prototype\n\nRecreate one key interaction in Unity\nInteractive and functional on device: focused, not the whole experience\n\nEvaluation\n\nWhat works, what doesn’t, how it compares to the original, what you would improve\n\n\n\nSubmit\n\nReport (1500–2000 words)\nPrototype build (Unity)\nVideo demo (2–3 minutes)\n\nMarking\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%\n\n\n\nFull brief: Assessment 2",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#assessment-2-choosing-an-experience",
+    "href": "weeks/06-week-06/01-slides.html#assessment-2-choosing-an-experience",
+    "title": "Week 6 Slides",
+    "section": "Assessment 2: Choosing an Experience",
+    "text": "Assessment 2: Choosing an Experience\nGood choices: - Beat Saber (interaction design, rhythm, feedback) - Tilt Brush / Open Brush (creative tools, spatial UI) - Microsoft Flight Simulator VR (complex UI, comfort) - Hololens 2 demos (AR interaction, spatial anchoring) - Snap Spectacles experiences (AR, gesture) - Any experience from our lab hardware",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#key-takeaways",
+    "href": "weeks/06-week-06/01-slides.html#key-takeaways",
+    "title": "Week 6 Slides",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nFrameworks give you a systematic language for analysis\nNorman’s Action Cycle identifies where interactions fail\nMilgram’s continuum positions your design in the XR spectrum\nPresence theory explains why interaction quality matters\nEvaluation methods should match your design stage",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#references",
+    "href": "weeks/06-week-06/01-slides.html#references",
+    "title": "Week 6 Slides",
+    "section": "References",
+    "text": "References\n\nNorman, D. (2013) The Design of Everyday Things (revised ed.). Basic Books.\nMilgram, P. & Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” IEICE Transactions.\nSlater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” Philosophical Transactions of the Royal Society B.\nNielsen, J. (1994) “Heuristic evaluation.” In Nielsen & Mack (eds.) Usability Inspection Methods. Wiley.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/06-week-06/01-slides.html#discussion",
+    "href": "weeks/06-week-06/01-slides.html#discussion",
+    "title": "Week 6 Slides",
+    "section": "Discussion",
+    "text": "Discussion\n\nPick an XR experience you have used — where does it break down under Norman’s Action Cycle, and how would you redesign it?\nIs Milgram’s Reality-Virtuality Continuum still the right lens for categorising devices today, or does it need revision for devices like smart glasses?\nCan Plausibility Illusion (Psi) be engineered deliberately through specific design choices, or does it only emerge as a by-product of otherwise good design?\nWhich interaction anti-pattern have you personally experienced, and what made it so disruptive to your sense of presence?\nWith limited time and budget, should a team prioritise heuristic evaluation or user testing (think-aloud, SUS/SSQ/IPQ) — and why?\n\n\nUseful as a bridge into Assessment 2 — students should be forming opinions about which framework(s) they will apply to their chosen experience.",
+    "crumbs": [
+      "Week 06",
+      "Week 6 Slides"
     ]
   }
 ]

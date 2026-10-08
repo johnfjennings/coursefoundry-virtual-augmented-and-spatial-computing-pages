@@ -13,7 +13,7 @@
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.36">
 
-  <title>Virtual, Augmented and Spatial Computing – Lecture Slides</title>
+  <title>Virtual, Augmented and Spatial Computing – Week 6 Slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -128,8 +128,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lecture Slides – Virtual, Augmented and Spatial Computing">
-<meta property="og:description" content="Input Systems &amp; Interaction Fundamentals">
+<meta property="og:title" content="Week 6 Slides – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Interaction Design Frameworks &amp; Experience Analysis">
 <meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
 </head>
 <body class="quarto-dark">
@@ -137,287 +137,398 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture Slides</h1>
-  <p class="subtitle">Input Systems &amp; Interaction Fundamentals</p>
+  <h1 class="title">Week 6 Slides</h1>
+  <p class="subtitle">Interaction Design Frameworks &amp; Experience Analysis</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="week-4-overview" class="slide level2">
-<h2>Week 4 Overview</h2>
+<section id="week-6-overview" class="slide level2">
+<h2>Week 6 Overview</h2>
 <ul>
-<li class="fragment">Input modalities in XR</li>
-<li class="fragment">Controller-based interaction</li>
-<li class="fragment">Hand tracking fundamentals</li>
-<li class="fragment">Gaze and eye tracking</li>
-<li class="fragment">Designing for input constraints</li>
+<li>Interaction design frameworks for XR</li>
+<li>Analysing XR experiences critically</li>
+<li>Common interaction patterns and anti-patterns</li>
+<li>Evaluation methods</li>
+<li><strong>Assessment 2 briefing</strong></li>
 </ul>
 </section>
-<section id="the-input-problem-in-xr" class="slide level2">
-<h2>The Input Problem in XR</h2>
+<section id="why-frameworks" class="slide level2">
+<h2>Why Frameworks?</h2>
+<!-- Image prompt: A large magnifying lens with a teal rim and coral handle held over a scatter of grey, jumbled shapes labelled ‘it felt good’ and ‘it felt bad’; inside the lens the clutter resolves into three tidy checklist rows (goal clear? ✓, feedback? ✗, affordance? ✓), with four cards below reading Analyse, Communicate, Catch early, Compare; flat vector, cream background, teal and coral. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <blockquote>
-<p>“In XR, the interface <em>is</em> the world — input must feel natural, not learned.”</p>
+<p>“A framework is a lens — it doesn’t tell you what to see, but it tells you where to look.”</p>
 </blockquote>
+<p>Frameworks help us:</p>
 <ul>
-<li class="fragment">Desktop: keyboard + mouse (2D, precise)</li>
-<li class="fragment">Mobile: touch (2D, direct)</li>
-<li class="fragment">XR: <strong>3D, embodied, spatial</strong> — no single dominant paradigm</li>
+<li>Analyse experiences systematically</li>
+<li>Communicate design decisions</li>
+<li>Identify problems before building</li>
+<li>Compare across different experiences</li>
 </ul>
+<p>Without them, critique collapses into “it felt good” or “it felt bad”.</p>
 </div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/the-input-problem-slide-02.png"></p>
+<p><img data-src="../../images/week06/why-frameworks-slide-02.png" alt="A magnifying lens over scattered shapes turns vague impressions into a checklist; four cards read analyse, communicate, catch early and compare."></p>
 </div></div>
 </section>
-<section id="input-modalities" class="slide level2">
-<h2>Input Modalities</h2>
+<section id="framework-1-normans-action-cycle" class="slide level2">
+<h2>Framework 1: Norman’s Action Cycle</h2>
+<!-- Image prompt: Circular diagram of Norman’s seven stages of action: ‘Goal’ at the top, three teal execution stages (Intention, Specify, Execute) running down the left, a dark ‘the world’ box at the bottom, and three coral evaluation stages (Perceive, Interpret, Evaluate) rising up the right back towards the goal; numbered pills, with ‘EXECUTION – how do I act?’ and ‘EVALUATION – what happened?’ in the centre; flat vector, cream background. -->
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:55%;">
+<p>Donald Norman’s 7-stage action cycle applies directly to XR:</p>
+<ol type="1">
+<li><strong>Form a goal</strong> — what does the user want to do?</li>
+<li><strong>Form an intention</strong> — how will they do it?</li>
+<li><strong>Specify an action</strong> — which gesture/input?</li>
+<li><strong>Execute the action</strong> — perform the input</li>
+<li><strong>Perceive the state</strong> — what changed?</li>
+<li><strong>Interpret the state</strong> — what does it mean?</li>
+<li><strong>Evaluate the outcome</strong> — did it work?</li>
+</ol>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../../images/week06/action-cycle-slide-03.png" alt="Norman's seven stages in a loop: goal, then intention, specify and execute on the execution side, the world at the bottom, then perceive, interpret and evaluate on the evaluation side."></p>
+</div></div>
+</section>
+<section id="norman-in-xr-failure-points" class="slide level2 smaller">
+<h2>Norman in XR: Failure Points</h2>
+<!-- Image prompt: The two gulfs: a stick figure in a headset on the left and a teal cube ‘system’ on a plinth on the right, separated by a pale coral gap; a teal arrow arcs from user to system labelled ‘Gulf of Execution – what can I do, and how?’ with failure tags (no affordance, gesture not discoverable, tracking fails), and a coral arrow returns labelled ‘Gulf of Evaluation – what happened, and did it work?’ with tags (no feedback, ambiguous feedback, no sign of success); flat vector, cream background. -->
+<div class="columns">
+<div class="column" style="width:55%;">
 <table class="caption-top">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 50%">
+<col style="width: 50%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Modality</th>
-<th>Examples</th>
-<th>Strengths</th>
-<th>Weaknesses</th>
+<th>Stage</th>
+<th>Common XR Failure</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Controller</td>
-<td>Quest 2, Vive Pro</td>
-<td>Precise, haptic</td>
-<td>Breaks immersion</td>
+<td>Form intention</td>
+<td>No affordance — user doesn’t know what’s interactive</td>
 </tr>
 <tr class="even">
-<td>Hand tracking</td>
-<td>Quest 2/3, Hololens 2</td>
-<td>Natural, no device</td>
-<td>Fatigue, occlusion</td>
+<td>Specify action</td>
+<td>Gesture not discoverable</td>
 </tr>
 <tr class="odd">
-<td>Gaze</td>
-<td>Pico Neo Eye</td>
-<td>Hands-free, fast</td>
-<td>Privacy, Midas touch</td>
+<td>Execute action</td>
+<td>Tracking failure, fatigue</td>
 </tr>
 <tr class="even">
-<td>Voice</td>
-<td>All platforms</td>
-<td>Accessible</td>
-<td>Noisy environments</td>
+<td>Perceive state</td>
+<td>No feedback (visual/audio/haptic)</td>
 </tr>
 <tr class="odd">
-<td>Body/pose</td>
-<td>Full-body tracking</td>
-<td>Expressive</td>
-<td>Setup complexity</td>
+<td>Interpret state</td>
+<td>Ambiguous feedback</td>
+</tr>
+<tr class="even">
+<td>Evaluate outcome</td>
+<td>No confirmation of success</td>
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:40%;">
-<p><img data-src="../../figures/week04/input-modalities-slide-03.png"></p>
-</div></div>
-</section>
-<section id="controller-interaction" class="slide level2">
-<h2>Controller Interaction</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
 <ul>
-<li class="fragment"><strong>Ray casting</strong> — pointing and selecting at distance</li>
-<li class="fragment"><strong>Direct grab</strong> — near-field object manipulation</li>
-<li class="fragment"><strong>Haptic feedback</strong> — vibration as confirmation signal</li>
-<li class="fragment"><strong>Button mapping</strong> — trigger, grip, thumbstick, face buttons</li>
-</ul>
-<h3 id="unity-xr-interaction-toolkit">Unity XR Interaction Toolkit</h3>
-<ul>
-<li><code>XRRayInteractor</code> — ray-based selection</li>
-<li><code>XRDirectInteractor</code> — near-field grab</li>
-<li><code>XRGrabInteractable</code> — objects that can be picked up</li>
+<li><strong>Gulf of Execution</strong>: can I work out <em>what</em> to do, and <em>how</em>?</li>
+<li><strong>Gulf of Evaluation</strong>: can I tell <em>what happened</em>?</li>
 </ul>
 </div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/controller-interaction-slide-04.png"></p>
+<p><img data-src="../../images/week06/norman-failure-points-slide-04.png" alt="A user and a system separated by two gulfs: execution failures above (no affordance, undiscoverable gesture, tracking failure) and evaluation failures below (no feedback, ambiguous feedback, no sign of success)."></p>
 </div></div>
 </section>
-<section id="hand-tracking" class="slide level2">
-<h2>Hand Tracking</h2>
+<section id="framework-2-milgrams-reality-virtuality-continuum" class="slide level2 smaller">
+<h2>Framework 2: Milgram’s Reality-Virtuality Continuum</h2>
+<!-- Image prompt: A horizontal continuum bar shading from warm grey (real) to teal (virtual) with four markers — Real environment, Augmented reality, Augmented virtuality, Virtual environment — each under a small scene thumbnail (a real room; the room with floating teal UI; a virtual landscape with one real object; a fully virtual landscape), a coral bracket spanning everything between the two ends labelled ‘Mixed Reality (MR)’, and example devices underneath; flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
+<p><strong>Real environment</strong> ⟷ <strong>Virtual environment</strong>: everything in between is <strong>Mixed Reality (MR)</strong></p>
 <ul>
-<li class="fragment"><strong>Skeletal model</strong> — 26 joints tracked per hand</li>
-<li class="fragment"><strong>Pinch gestures</strong> — index + thumb = primary select</li>
-<li class="fragment"><strong>Pose recognition</strong> — custom gesture detection</li>
-<li class="fragment"><strong>Limitations</strong>: occlusion, lighting, fatigue</li>
+<li><strong>AR</strong>: real world + virtual overlays (Snap Spectacles, HoloLens 2, phone AR)</li>
+<li><strong>AV</strong>: mostly virtual + some real elements (rare in consumer products)</li>
+<li><strong>VR</strong>: fully virtual (Quest 2, Vive Pro)</li>
+<li>Passthrough headsets (Quest 3) can move along the continuum at runtime</li>
 </ul>
-<h3 id="platforms">Platforms</h3>
+<p><strong>Design implication</strong>: interaction design must match the continuum position.</p>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../../images/week06/milgram-continuum-slide-05.png" alt="A continuum from real to virtual environment with augmented reality and augmented virtuality between them; a bracket marks everything between the ends as mixed reality; example devices are listed below."></p>
+</div></div>
+</section>
+<section id="framework-3-presence-model-slater" class="slide level2">
+<h2>Framework 3: Presence Model (Slater)</h2>
+<!-- Image prompt: Two side-by-side cards: ‘Place Illusion – I am there’ shows a headset wearer standing inside a teal landscape, with drivers ‘field of view, tracking, latency, stereo’ and a coral warning ‘broken by noticing the interface’; ‘Plausibility Illusion – this is really happening’ shows the figure reaching for a cup tumbling off a table, with drivers ‘coherent physics, a world that responds to you’ and a coral warning ‘broken by inconsistent physics or responses’; flat vector, cream background. -->
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Two components of presence:</p>
 <ul>
-<li>Quest 2/3: built-in hand tracking (no controller required)</li>
-<li>Hololens 2: primary input modality</li>
-<li>Snap Spectacles: limited gesture support</li>
+<li><strong>Place Illusion (PI)</strong>: “I am there” — the sense of being in the virtual space</li>
+<li><strong>Plausibility Illusion (Psi)</strong>: “This is real” — events feel like they’re really happening</li>
+</ul>
+<p><strong>Interaction design affects both</strong>:</p>
+<ul>
+<li>Poor interaction breaks PI (you notice the interface)</li>
+<li>Inconsistent physics breaks Psi (the world feels fake)</li>
 </ul>
 </div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/hand-tracking-slide-05.png"></p>
+<p><img data-src="../../images/week06/presence-model-slide-06.png" alt="Two cards: place illusion, a person inside a virtual landscape, broken by noticing the interface; plausibility illusion, a person reaching for a falling cup, broken by inconsistent physics."></p>
 </div></div>
 </section>
-<section id="gaze-eye-tracking" class="slide level2">
-<h2>Gaze &amp; Eye Tracking</h2>
+<section id="interaction-patterns" class="slide level2 smaller">
+<h2>Interaction Patterns</h2>
+<!-- Image prompt: 2×2 grid of pattern cards: Progressive disclosure (a big teal Play button with an arrow to three fading secondary buttons), Spatial consistency (a cube on a table with a circular arrow and ‘next session: still here’), Embodied metaphor (a lever being pulled with a coral motion arrow, opening a teal door) and Graceful degradation (a dashed ‘tracking lost’ hand with an arrow to a controller casting a ray, labelled ‘fallback’); flat vector, cream background, teal and coral. -->
 <div class="columns">
 <div class="column" style="width:55%;">
-<ul>
-<li><strong>Gaze dwell</strong> — look at target for N milliseconds to activate</li>
-<li><strong>Gaze + gesture</strong> — look to target, pinch to confirm</li>
-<li><strong>Foveated rendering</strong> — render high detail only where user looks</li>
-</ul>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Midas Touch Problem</strong></p>
-</div>
-<div class="callout-content">
-<p>Everything you look at activates — a core design risk when gaze is used as the sole selection mechanism.</p>
-</div>
-</div>
-</div>
-<h3 id="pico-neo-eye">Pico Neo Eye</h3>
-<ul>
-<li>Eye tracking for both interaction and analytics</li>
-<li>Useful for attention heatmaps in research/evaluation</li>
-</ul>
+<h3 id="progressive-disclosure">Progressive Disclosure</h3>
+<p>Reveal complexity gradually. Don’t show all options at once.</p>
+<h3 id="spatial-consistency">Spatial Consistency</h3>
+<p>Objects stay where you put them. The world has memory.</p>
+<h3 id="embodied-metaphor">Embodied Metaphor</h3>
+<p>Map virtual actions to real-world physical actions. <em>Example</em>: pull a lever to open a door (not press a button).</p>
+<h3 id="graceful-degradation">Graceful Degradation</h3>
+<p>If tracking fails, fall back gracefully. Don’t crash or freeze.</p>
 </div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/gaze-and-eye-tracking-slide-06.png"></p>
+<p><img data-src="../../images/week06/interaction-patterns-slide-07.png" alt="Four cards: progressive disclosure, spatial consistency, embodied metaphor and graceful degradation, each with a small illustration."></p>
 </div></div>
 </section>
-<section id="designing-for-input-constraints" class="slide level2">
-<h2>Designing for Input Constraints</h2>
+<section id="interaction-anti-patterns" class="slide level2 smaller">
+<h2>Interaction Anti-Patterns</h2>
+<!-- Image prompt: 3×2 grid of anti-pattern cards, each with a coral ✗ badge and a teal ‘→ fix’ line: a menu floating in front of a user’s face (→ diegetic or wrist menu), a tiny dot target with a cursor (→ ≥2 cm at arm’s length), a button with a question mark (→ visual + audio + haptic), a figure with an arm raised overhead (→ waist-to-chest zone), a figure with speed lines and a dizzy swirl (→ always offer teleport) and a dashed invisible object with a crossed-out eye (→ highlight, glow, sound); flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Gorilla Arm Effect</strong></p>
-</div>
-<div class="callout-content">
-<p>Holding arms up for extended periods causes fatigue — design for <strong>low-effort, short-duration</strong> interactions.</p>
-</div>
-</div>
-</div>
-<h3 id="fitts-law-in-3d">Fitts’ Law in 3D</h3>
-<ul>
-<li>Target size and distance still matter</li>
-<li>Minimum interactive target: <strong>~2cm at arm’s length</strong></li>
-</ul>
-<h3 id="feedback-triad">Feedback Triad</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Anti-Pattern</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Floating menus</td>
+<td>Break immersion, cause eye strain</td>
+</tr>
+<tr class="even">
+<td>Tiny targets</td>
+<td>Violate Fitts’ Law, cause frustration</td>
+</tr>
+<tr class="odd">
+<td>No feedback</td>
+<td>User doesn’t know if action worked</td>
+</tr>
+<tr class="even">
+<td>Gorilla arm UI</td>
+<td>Causes fatigue in minutes</td>
+</tr>
+<tr class="odd">
+<td>Forced smooth locomotion</td>
+<td>Causes sickness for sensitive users</td>
+</tr>
+<tr class="even">
+<td>Invisible affordances</td>
+<td>User can’t discover interactions</td>
+</tr>
+<tr class="odd">
+<td>Irreversible actions</td>
+<td>User is afraid to explore</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../../images/week06/anti-patterns-slide-08.png" alt="Six anti-pattern cards, each with its fix: floating menus, tiny targets, no feedback, gorilla-arm UI, forced smooth motion and invisible affordances."></p>
+</div></div>
+</section>
+<section id="evaluation-methods-for-xr" class="slide level2 smaller">
+<h2>Evaluation Methods for XR</h2>
+<!-- Image prompt: A left-to-right timeline with four stages — Early (concept, wireframe), Mid (working prototype), During use (live session), Post-use (after the session) — with method chips stacked under each: heuristic evaluation in coral (no users needed); think-aloud, eye tracking, observation, SUS, SSQ, IPQ and NASA-TLX in teal (needs real users); a small legend underneath; flat vector, cream background. -->
+<div class="columns">
+<div class="column" style="width:58%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>When</th>
+<th>What it measures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Heuristic evaluation</td>
+<td>Early</td>
+<td>Design problems against principles</td>
+</tr>
+<tr class="even">
+<td>Think-aloud</td>
+<td>Mid</td>
+<td>User mental model</td>
+</tr>
+<tr class="odd">
+<td>Observation / task metrics</td>
+<td>During</td>
+<td>Errors, time on task, completion</td>
+</tr>
+<tr class="even">
+<td>Eye tracking heatmap</td>
+<td>During</td>
+<td>Attention patterns</td>
+</tr>
+<tr class="odd">
+<td>SUS (System Usability Scale)</td>
+<td>Post-use</td>
+<td>Overall usability score</td>
+</tr>
+<tr class="even">
+<td>SSQ (Simulator Sickness Questionnaire)</td>
+<td>Post-use</td>
+<td>Comfort/sickness</td>
+</tr>
+<tr class="odd">
+<td>IPQ (Igroup Presence Questionnaire)</td>
+<td>Post-use</td>
+<td>Sense of presence</td>
+</tr>
+<tr class="even">
+<td>NASA-TLX</td>
+<td>Post-use</td>
+<td>Perceived workload</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:42%;">
+<p><img data-src="../../images/week06/evaluation-methods-slide-09.png" alt="A timeline from early to post-use with evaluation methods under each stage: heuristic evaluation early, think-aloud mid, eye tracking and observation during use, and SUS, SSQ, IPQ and NASA-TLX after use."></p>
+</div></div>
+</section>
+<section id="heuristic-evaluation-for-xr" class="slide level2 smaller">
+<h2>Heuristic Evaluation for XR</h2>
+<!-- Image prompt: Ten numbered tiles in two columns translating Nielsen’s heuristics for XR — system status → feedback on every interaction, real-world match → embodied metaphors, control & freedom → undo, cancel, exit, consistency → one gesture vocabulary, error prevention → confirm destructive actions, recognition → visible affordances, flexibility → shortcuts for experts, minimalism → diegetic, uncluttered UI, recover from errors → clear error states, help → in-world tutorials — above a 0–4 severity strip shading from grey to deep coral; flat vector, cream background, teal numbers. -->
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Nielsen’s 10 heuristics adapted for XR:</p>
 <ol type="1">
-<li><strong>Visual</strong> — highlight, glow, cursor</li>
-<li><strong>Audio</strong> — click, chime, spatial sound</li>
-<li><strong>Haptic</strong> — vibration pulse (controllers only)</li>
+<li>Visibility of system status → <strong>feedback on every interaction</strong></li>
+<li>Match between system and real world → <strong>embodied metaphors</strong></li>
+<li>User control and freedom → <strong>undo, cancel, exit</strong></li>
+<li>Consistency and standards → <strong>consistent gesture vocabulary</strong></li>
+<li>Error prevention → <strong>confirm before destructive actions</strong></li>
+<li>Recognition over recall → <strong>visible affordances</strong></li>
+<li>Flexibility and efficiency → <strong>shortcuts for expert users</strong></li>
+<li>Aesthetic and minimalist design → <strong>diegetic UI</strong></li>
+<li>Help users recognise errors → <strong>clear error states</strong></li>
+<li>Help and documentation → <strong>in-world tutorials</strong></li>
+</ol>
+<p>Rate each problem for severity: <strong>0</strong> (not a problem) to <strong>4</strong> (catastrophe).</p>
+</div><div class="column" style="width:45%;">
+<p><img data-src="../../images/week06/xr-heuristics-slide-10.png" alt="Ten numbered tiles translating Nielsen's heuristics into XR terms, above a severity scale from 0, not a problem, to 4, catastrophe."></p>
+</div></div>
+</section>
+<section id="assessment-2-xr-experience-analysis-interaction-prototype" class="slide level2 smaller">
+<h2>Assessment 2: XR Experience Analysis &amp; Interaction Prototype</h2>
+<p><strong>Due: Week 6</strong> | <strong>Weight: 30%</strong> | <strong>Individual</strong> | <strong>LO2, LO3, LO4</strong></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ol type="1">
+<li><strong>Experience Analysis</strong>
+<ul>
+<li>Choose an XR experience (VR, AR or spatial computing)</li>
+<li>Analyse interaction design, presence and immersion, spatial design, comfort and usability</li>
+<li>Identify strengths and weaknesses, supported by screenshots and this week’s frameworks</li>
+</ul></li>
+<li><strong>Interaction Prototype</strong>
+<ul>
+<li>Recreate <strong>one key interaction</strong> in Unity</li>
+<li>Interactive and functional on device: focused, not the whole experience</li>
+</ul></li>
+<li><strong>Evaluation</strong>
+<ul>
+<li>What works, what doesn’t, how it compares to the original, what you would improve</li>
+</ul></li>
 </ol>
 </div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/designing-for-input-constraints-slide-07.png"></p>
+<h3 id="submit">Submit</h3>
+<ul>
+<li>Report (1500–2000 words)</li>
+<li>Prototype build (Unity)</li>
+<li>Video demo (2–3 minutes)</li>
+</ul>
+<h3 id="marking">Marking</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Analysis</td>
+<td>30%</td>
+</tr>
+<tr class="even">
+<td>Prototype</td>
+<td>30%</td>
+</tr>
+<tr class="odd">
+<td>HCI Application</td>
+<td>20%</td>
+</tr>
+<tr class="even">
+<td>Evaluation</td>
+<td>10%</td>
+</tr>
+<tr class="odd">
+<td>Presentation</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<p>Full brief: <a href="../../01-assessments/03-assessment2.html">Assessment 2</a></p>
 </div></div>
 </section>
-<section id="interaction-states" class="slide level2">
-<h2>Interaction States</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p>Every interactive object should have clear states:</p>
-<pre><code>Default → Hover → Selected → Activated → Released</code></pre>
-<ul>
-<li class="fragment"><strong>Default</strong>: object at rest</li>
-<li class="fragment"><strong>Hover</strong>: user is near/pointing at object</li>
-<li class="fragment"><strong>Selected</strong>: user has grabbed/chosen object</li>
-<li class="fragment"><strong>Activated</strong>: action is executing</li>
-<li class="fragment"><strong>Released</strong>: object returns to default or new state</li>
-</ul>
-</div><div class="column" style="width:45%;">
-<p><img data-src="../../figures/week04/interaction-states-slide-08.png"></p>
-</div></div>
-</section>
-<section id="lab-preview-controller-hand-tracking" class="slide level2">
-<h2>Lab Preview: Controller &amp; Hand Tracking</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>This week’s lab</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li class="fragment">Implement ray-cast selection in Unity</li>
-<li class="fragment">Add hand tracking support (Quest 3)</li>
-<li class="fragment">Compare interaction feel between modalities</li>
-<li class="fragment">Document observations in lab journal</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="assessment-2-reminder" class="slide level2">
-<h2>Assessment 2 Reminder</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Experience Analysis &amp; Interaction Prototype due: Week 6</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li class="fragment">Choose an XR experience to analyse</li>
-<li class="fragment">Apply interaction design frameworks</li>
-<li class="fragment">Recreate one key interaction from it in Unity</li>
-<li class="fragment">Evaluate your prototype against the original</li>
-</ul>
-</div>
-</div>
-</div>
+<section id="assessment-2-choosing-an-experience" class="slide level2">
+<h2>Assessment 2: Choosing an Experience</h2>
+<p>Good choices: - Beat Saber (interaction design, rhythm, feedback) - Tilt Brush / Open Brush (creative tools, spatial UI) - Microsoft Flight Simulator VR (complex UI, comfort) - Hololens 2 demos (AR interaction, spatial anchoring) - Snap Spectacles experiences (AR, gesture) - Any experience from our lab hardware</p>
 </section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
 <ul>
-<li class="fragment">XR has no single dominant input paradigm — design for the device</li>
-<li class="fragment">Controllers offer precision; hands offer naturalness</li>
-<li class="fragment">Gaze is powerful but requires careful design to avoid Midas Touch</li>
-<li class="fragment">Every interaction needs visual, audio, and (where possible) haptic feedback</li>
-<li class="fragment">Design for fatigue — arms down, short interactions</li>
+<li>Frameworks give you a systematic language for analysis</li>
+<li>Norman’s Action Cycle identifies where interactions fail</li>
+<li>Milgram’s continuum positions your design in the XR spectrum</li>
+<li>Presence theory explains why interaction quality matters</li>
+<li>Evaluation methods should match your design stage</li>
 </ul>
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
 <ul>
-<li>LaViola et al.&nbsp;(2017) <em>3D User Interfaces: Theory and Practice</em></li>
-<li>Bowman et al.&nbsp;(2004) <em>3D User Interfaces</em></li>
-<li>Fitts, P.M. (1954) — original Fitts’ Law paper</li>
-<li>Unity XR Interaction Toolkit Docs: <a href="https://docs.unity3d.com">docs.unity3d.com</a></li>
+<li>Norman, D. (2013) <em>The Design of Everyday Things</em> (revised ed.). Basic Books.</li>
+<li>Milgram, P. &amp; Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” <em>IEICE Transactions</em>.</li>
+<li>Slater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” <em>Philosophical Transactions of the Royal Society B</em>.</li>
+<li>Nielsen, J. (1994) “Heuristic evaluation.” In Nielsen &amp; Mack (eds.) <em>Usability Inspection Methods</em>. Wiley.</li>
 </ul>
 </section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
 <ul>
-<li class="fragment">Should designers optimise for a single input modality per device, or build multimodal experiences that degrade gracefully across platforms? What are the trade-offs?</li>
-<li class="fragment">Will hand tracking eventually replace physical controllers entirely, or will controllers remain necessary for certain categories of application?</li>
-<li class="fragment">How should the Midas Touch problem inform the ethical design of other attention-tracking systems, such as advertising or surveillance technology?</li>
-<li class="fragment">Eye-tracking data is biometric data. What consent and governance models should apply to its collection and use in consumer XR products?</li>
-<li class="fragment">Given Fitts’ Law and the gorilla-arm effect, how should default interaction zones change for users with different bodies, reach, or mobility?</li>
+<li>Pick an XR experience you have used — where does it break down under Norman’s Action Cycle, and how would you redesign it?</li>
+<li>Is Milgram’s Reality-Virtuality Continuum still the right lens for categorising devices today, or does it need revision for devices like smart glasses?</li>
+<li>Can Plausibility Illusion (Psi) be engineered deliberately through specific design choices, or does it only emerge as a by-product of otherwise good design?</li>
+<li>Which interaction anti-pattern have you personally experienced, and what made it so disruptive to your sense of presence?</li>
+<li>With limited time and budget, should a team prioritise heuristic evaluation or user testing (think-aloud, SUS/SSQ/IPQ) — and why?</li>
 </ul>
 <aside class="notes">
-<p>Use to provoke debate on input design ethics and inclusivity — good lead-in to the lab’s hands-on device comparison.</p>
+<p>Useful as a bridge into Assessment 2 — students should be forming opinions about which framework(s) they will apply to their chosen experience.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
