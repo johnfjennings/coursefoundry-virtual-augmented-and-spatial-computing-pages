@@ -63,13 +63,11 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-axe/axe-check.js" type="module"></script>
-<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-d3c0b480f84bb0670dcfa532640fe11f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-d3c0b480f84bb0670dcfa532640fe11f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-d3c0b480f84bb0670dcfa532640fe11f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -528,7 +526,7 @@ div.csl-indent {
 <li><strong>Eye tracking + pinch gesture</strong> input replaces controllers as the primary interaction model — you look at what you want and pinch to select</li>
 <li>Uses <strong>passthrough</strong> (video see-through), not optical see-through, despite the “spatial computing” framing</li>
 </ul>
-<p>The eye-tracking-plus-pinch model deserves attention because it is the clearest current answer to a problem we return to in Week 4: gaze is fast and effortless for <em>pointing</em>, but terrible for <em>selecting</em>, because we look at things constantly without meaning to act on them. Separating the two channels — eyes to indicate, hand to commit — sidesteps that. It also has a privacy dimension that Apple treats seriously: where a user looked is not reported to the application, only what they selected, because gaze data reveals attention, interest and arousal in ways users have no intuition about. We return to that in Week 12.</p>
+<p>The eye-tracking-plus-pinch model deserves attention because it is the clearest current answer to a problem we return to in Week 4: gaze is fast and effortless for <em>pointing</em>, but terrible for <em>selecting</em>, because we look at things constantly without meaning to act on them. Separating the two channels — eyes to indicate, hand to commit — sidesteps that. It also has a privacy dimension that Apple treats seriously: where a user looked is not reported to the application, only what they selected, because gaze data reveals attention, interest and arousal in ways users have no intuition about. We return to that in Week 13.</p>
 </section>
 <section id="hololens-2" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="hololens-2"><span class="header-section-number">4.2</span> HoloLens 2</h3>
@@ -664,7 +662,7 @@ div.csl-indent {
 <section id="refresh-rate" class="level3" data-number="6.3">
 <h3 data-number="6.3" class="anchored" data-anchor-id="refresh-rate"><span class="header-section-number">6.3</span> Refresh rate</h3>
 <p>Quoted in hertz — commonly 72, 90 or 120. This is not a smoothness preference as it would be on a monitor; it sets the ceiling on <strong>motion-to-photon latency</strong>, the delay between moving your head and the display responding. Below roughly 20 milliseconds, most users are comfortable; above it, discomfort rises quickly.</p>
-<p>The number on the box is the <em>display’s</em> capability. Whether your application actually achieves it is a separate question, and the subject of Week 10.</p>
+<p>The number on the box is the <em>display’s</em> capability. Whether your application actually achieves it is a separate question, and the subject of Week 11.</p>
 </section>
 <section id="panel-technology" class="level3" data-number="6.4">
 <h3 data-number="6.4" class="anchored" data-anchor-id="panel-technology"><span class="header-section-number">6.4</span> Panel technology</h3>
@@ -680,7 +678,7 @@ div.csl-indent {
 <h2 data-number="7" class="anchored" data-anchor-id="compute-thermals-and-battery"><span class="header-section-number">7</span> Compute, Thermals, and Battery</h2>
 <p>A standalone headset is a mobile device. It runs a phone-class system-on-chip, rendering two views of your scene, every frame, while simultaneously running computer vision for tracking, hand detection and passthrough. That workload is substantial before your application does anything at all.</p>
 <p>Three consequences follow, and all three will affect your Assessment 3 project.</p>
-<p><strong>Your frame budget is small.</strong> At 72Hz you have under 14 milliseconds per frame for everything, and the system has already spent part of it. This is why Week 10 treats performance as a comfort requirement rather than polish, and why techniques such as foveated rendering exist.</p>
+<p><strong>Your frame budget is small.</strong> At 72Hz you have under 14 milliseconds per frame for everything, and the system has already spent part of it. This is why Week 11 treats performance as a comfort requirement rather than polish, and why techniques such as foveated rendering exist.</p>
 <p><strong>Thermal throttling is real.</strong> Sustained load heats the device, and the SoC reduces its clock speed to stay within thermal limits. A build that runs acceptably for five minutes may degrade noticeably after twenty. Test sessions long enough to see this, because your users will.</p>
 <p><strong>Battery constrains session design.</strong> Two to three hours is typical, less under heavy load. An experience intended for a classroom or exhibition has to account for charging, and for the fact that a warm headset is an uncomfortable one.</p>
 <p>Tethered devices — the Vive Pro, or glasses tethered to a puck — trade mobility for a larger power and thermal envelope, which is precisely why they retain an advantage in visual fidelity. This is the same trade appearing again in a different form.</p>

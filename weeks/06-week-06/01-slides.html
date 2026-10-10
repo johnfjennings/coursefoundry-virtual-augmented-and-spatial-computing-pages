@@ -434,32 +434,33 @@
 </section>
 <section id="assessment-2-xr-experience-analysis-interaction-prototype" class="slide level2 smaller">
 <h2>Assessment 2: XR Experience Analysis &amp; Interaction Prototype</h2>
-<p><strong>Due: Week 6</strong> | <strong>Weight: 30%</strong> | <strong>Individual</strong> | <strong>LO2, LO3, LO4</strong></p>
+<p><strong>Due: Week 8 (reading week)</strong> | <strong>Weight: 30%</strong> | <strong>Individual</strong> | <strong>LO2, LO3, LO4</strong></p>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ol type="1">
 <li><strong>Experience Analysis</strong>
 <ul>
-<li>Choose an XR experience (VR, AR or spatial computing)</li>
-<li>Analyse interaction design, presence and immersion, spatial design, comfort and usability</li>
-<li>Identify strengths and weaknesses, supported by screenshots and this week’s frameworks</li>
+<li>Analyse a VR or AR application <strong>you have used yourself</strong></li>
+<li>Interaction design, presence and immersion, spatial design, comfort and usability</li>
+<li>Two or three key interactions, judged with this week’s frameworks</li>
 </ul></li>
 <li><strong>Interaction Prototype</strong>
 <ul>
-<li>Recreate <strong>one key interaction</strong> in Unity</li>
-<li>Interactive and functional on device: focused, not the whole experience</li>
+<li>Rebuild <strong>one key interaction</strong> as a <strong>Unity VR or AR application</strong></li>
+<li>Working on a <strong>real device</strong>, with clear input, response and feedback</li>
 </ul></li>
 <li><strong>Evaluation</strong>
 <ul>
-<li>What works, what doesn’t, how it compares to the original, what you would improve</li>
+<li>Heuristic review plus a small user test (SUS minimum, SSQ for locomotion)</li>
+<li>Compare with the original; what would you improve?</li>
 </ul></li>
 </ol>
 </div><div class="column" style="width:45%;">
 <h3 id="submit">Submit</h3>
 <ul>
 <li>Report (1500–2000 words)</li>
-<li>Prototype build (Unity)</li>
-<li>Video demo (2–3 minutes)</li>
+<li>Unity project and build</li>
+<li>Video demo on a real device (2–3 minutes)</li>
 </ul>
 <h3 id="marking">Marking</h3>
 <table class="caption-top">
@@ -495,9 +496,233 @@
 <p>Full brief: <a href="../../01-assessments/03-assessment2.html">Assessment 2</a></p>
 </div></div>
 </section>
-<section id="assessment-2-choosing-an-experience" class="slide level2">
-<h2>Assessment 2: Choosing an Experience</h2>
-<p>Good choices: - Beat Saber (interaction design, rhythm, feedback) - Tilt Brush / Open Brush (creative tools, spatial UI) - Microsoft Flight Simulator VR (complex UI, comfort) - Hololens 2 demos (AR interaction, spatial anchoring) - Snap Spectacles experiences (AR, gesture) - Any experience from our lab hardware</p>
+<section id="assessment-2-the-two-rules" class="slide level2 smaller">
+<h2>Assessment 2: The Two Rules</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="analyse-anything-you-can-use-hands-on">1. Analyse anything you can use hands-on</h3>
+<ul>
+<li><strong>Any type</strong> of VR or AR application: games, training, creative tools, fitness, system UI, phone AR</li>
+<li>It must run on <strong>TUS equipment</strong> or <strong>your own equipment</strong></li>
+<li>You must have used it yourself: no video-only analyses</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="build-the-prototype-in-unity">2. Build the prototype in Unity</h3>
+<ul>
+<li>A <strong>Unity VR or AR application</strong>: no Unreal, Godot, WebXR, Lens Studio, …</li>
+<li>Running on a <strong>real device</strong> (simulators are fine for development)</li>
+<li>The device can differ from the original: a HoloLens 2 interaction can be rebuilt on a Quest 3</li>
+</ul>
+</div></div>
+</section>
+<section id="assessment-2-equipment" class="slide level2 smaller">
+<h2>Assessment 2: Equipment</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Device</th>
+<th style="text-align: center;">Analyse</th>
+<th>Unity prototype</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Meta Quest 3 / 3S</td>
+<td style="text-align: center;">✓</td>
+<td>✓ <strong>Recommended</strong>: the lab setup</td>
+</tr>
+<tr class="even">
+<td>Meta Quest 2</td>
+<td style="text-align: center;">✓</td>
+<td>✓ VR only, no colour passthrough</td>
+</tr>
+<tr class="odd">
+<td>Pico Neo Eye, HTC Vive Pro</td>
+<td style="text-align: center;">✓</td>
+<td>✓ Agree it with me first</td>
+</tr>
+<tr class="even">
+<td>HoloLens 2, Xreal One Pro</td>
+<td style="text-align: center;">✓</td>
+<td>By agreement only</td>
+</tr>
+<tr class="odd">
+<td>Snap Spectacles</td>
+<td style="text-align: center;">✓</td>
+<td>✗ Lens Studio, not Unity</td>
+</tr>
+<tr class="even">
+<td>Cardboard viewer + phone</td>
+<td style="text-align: center;">✓</td>
+<td>✓ 3DOF, gaze and one button</td>
+</tr>
+<tr class="odd">
+<td>Your own Android / iPhone</td>
+<td style="text-align: center;">✓</td>
+<td>✓ AR Foundation (iOS needs a Mac)</td>
+</tr>
+<tr class="even">
+<td>Your own headset</td>
+<td style="text-align: center;">✓</td>
+<td>If Unity can build to it: agree it with me</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assessment-2-choosing-an-application" class="slide level2 smaller">
+<h2>Assessment 2: Choosing an Application</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Example</th>
+<th>Interaction you could rebuild</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rhythm game</td>
+<td>Beat Saber</td>
+<td>Hitting a block, with haptic and audio feedback</td>
+</tr>
+<tr class="even">
+<td>Tutorial</td>
+<td>Meta’s <em>First Steps</em></td>
+<td>Picking up, throwing and stacking</td>
+</tr>
+<tr class="odd">
+<td>Creative tool</td>
+<td>Open Brush</td>
+<td>Drawing a 3D stroke; a hand-held palette</td>
+</tr>
+<tr class="even">
+<td>Puzzle / escape room</td>
+<td><em>I Expect You To Die</em></td>
+<td>Key into a lock, door opens</td>
+</tr>
+<tr class="odd">
+<td>Education / training</td>
+<td>Anatomy viewers</td>
+<td>Two-handed rotate and scale</td>
+</tr>
+<tr class="even">
+<td>System UI</td>
+<td>Quest or HoloLens 2 menus</td>
+<td>Ray-select a panel button; wrist menu</td>
+</tr>
+<tr class="odd">
+<td>Mobile AR</td>
+<td>Furniture preview, Apple <em>Measure</em></td>
+<td>Tap-to-place; measure between two points</td>
+</tr>
+<tr class="even">
+<td>360° / Cardboard</td>
+<td>Cardboard demos</td>
+<td>Gaze-and-dwell selection</td>
+</tr>
+</tbody>
+</table>
+<p>Great to analyse but too big to rebuild whole: location AR, multiplayer social VR. <strong>Analyse the whole app, rebuild one small interaction.</strong></p>
+</section>
+<section id="assessment-2-scoping-your-prototype" class="slide level2 smaller">
+<h2>Assessment 2: Scoping Your Prototype</h2>
+<blockquote>
+<p>If you can’t describe it in <strong>one sentence</strong> and build a first version in <strong>two lab sessions</strong>, cut it down.</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="core">Core</h3>
+<ul>
+<li>Grab, move, release</li>
+<li>Ray-select a UI button</li>
+<li>Gaze-and-dwell select</li>
+<li>Tap-to-place on a plane</li>
+<li>Teleport</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="developing">Developing</h3>
+<ul>
+<li>Socket: key into lock</li>
+<li>Hit moving targets</li>
+<li>Draw in 3D</li>
+<li>Wrist / palm menu</li>
+<li>Two-handed scale</li>
+<li>AR measure</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="avoid">Avoid</h3>
+<ul>
+<li>Multiplayer</li>
+<li>Cloud anchors, GPS AR</li>
+<li>Avatars and IK</li>
+<li>Whole game loops</li>
+<li>AI characters</li>
+<li>Custom shaders</li>
+</ul>
+</div></div>
+<p><strong>A Core interaction that works well beats an ambitious one that is broken.</strong> Scope and polish are not marked.</p>
+</section>
+<section id="assessment-2-worked-examples" class="slide level2 smaller">
+<h2>Assessment 2: Worked Examples</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">VR: Beat Saber</a></li><li><a href="#tabset-1-2">AR: Furniture placement</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<ul>
+<li><strong>Interaction:</strong> hitting an incoming block with a saber</li>
+<li><strong>Prototype:</strong> cubes spawn and move towards the player; a capsule “saber” on the controller destroys them on contact, with a hit sound, a haptic pulse and a hit counter</li>
+<li><strong>Left out:</strong> music, beat sync, slicing direction, menus</li>
+<li><strong>Evaluation:</strong> test with feedback on and off: what does haptics add?</li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<ul>
+<li><strong>Interaction:</strong> placing a piece of furniture on the floor</li>
+<li><strong>Prototype:</strong> AR Foundation plane detection, a placement indicator, tap to place a primitive chair, drag to move, two-finger twist to rotate</li>
+<li><strong>Left out:</strong> catalogue, scale checking, saving</li>
+<li><strong>Evaluation:</strong> do users understand when the floor is detected and where the object will appear?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="assessment-2-key-dates" class="slide level2">
+<h2>Assessment 2: Key Dates</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Week 6 practical</strong></td>
+<td>Assessment 2 clinic: application and interaction <strong>agreed with me</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Week 6 lab</strong></td>
+<td>Working session: build the Core interaction on the device</td>
+</tr>
+<tr class="odd">
+<td><strong>Week 7 lab</strong></td>
+<td>AR Foundation and tap-to-place: useful for AR prototypes</td>
+</tr>
+<tr class="even">
+<td><strong>Week 8 (reading week)</strong></td>
+<td><strong>Submission</strong></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="key-takeaways" class="slide level2">
 <h2>Key Takeaways</h2>
