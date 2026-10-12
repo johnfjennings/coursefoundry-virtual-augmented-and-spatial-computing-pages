@@ -34,7 +34,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e22d31546a1432fbd564381dda967549.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -156,7 +175,7 @@
 </section>
 <section id="why-frameworks" class="slide level2">
 <h2>Why Frameworks?</h2>
-<!-- Image prompt: A large magnifying lens with a teal rim and coral handle held over a scatter of grey, jumbled shapes labelled ‘it felt good’ and ‘it felt bad’; inside the lens the clutter resolves into three tidy checklist rows (goal clear? ✓, feedback? ✗, affordance? ✓), with four cards below reading Analyse, Communicate, Catch early, Compare; flat vector, cream background, teal and coral. -->
+<!-- Image prompt: A large magnifying lens with a teal rim and coral handle held over a scatter of grey, jumbled shapes labelled 'it felt good' and 'it felt bad'; inside the lens the clutter resolves into three tidy checklist rows (goal clear? ✓, feedback? ✗, affordance? ✓), with four cards below reading Analyse, Communicate, Catch early, Compare; flat vector, cream background, teal and coral. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <blockquote>
@@ -176,7 +195,7 @@
 </section>
 <section id="framework-1-normans-action-cycle" class="slide level2">
 <h2>Framework 1: Norman’s Action Cycle</h2>
-<!-- Image prompt: Circular diagram of Norman’s seven stages of action: ‘Goal’ at the top, three teal execution stages (Intention, Specify, Execute) running down the left, a dark ‘the world’ box at the bottom, and three coral evaluation stages (Perceive, Interpret, Evaluate) rising up the right back towards the goal; numbered pills, with ‘EXECUTION – how do I act?’ and ‘EVALUATION – what happened?’ in the centre; flat vector, cream background. -->
+<!-- Image prompt: Circular diagram of Norman's seven stages of action: 'Goal' at the top, three teal execution stages (Intention, Specify, Execute) running down the left, a dark 'the world' box at the bottom, and three coral evaluation stages (Perceive, Interpret, Evaluate) rising up the right back towards the goal; numbered pills, with 'EXECUTION – how do I act?' and 'EVALUATION – what happened?' in the centre; flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <p>Donald Norman’s 7-stage action cycle applies directly to XR:</p>
@@ -195,7 +214,7 @@
 </section>
 <section id="norman-in-xr-failure-points" class="slide level2 smaller">
 <h2>Norman in XR: Failure Points</h2>
-<!-- Image prompt: The two gulfs: a stick figure in a headset on the left and a teal cube ‘system’ on a plinth on the right, separated by a pale coral gap; a teal arrow arcs from user to system labelled ‘Gulf of Execution – what can I do, and how?’ with failure tags (no affordance, gesture not discoverable, tracking fails), and a coral arrow returns labelled ‘Gulf of Evaluation – what happened, and did it work?’ with tags (no feedback, ambiguous feedback, no sign of success); flat vector, cream background. -->
+<!-- Image prompt: The two gulfs: a stick figure in a headset on the left and a teal cube 'system' on a plinth on the right, separated by a pale coral gap; a teal arrow arcs from user to system labelled 'Gulf of Execution – what can I do, and how?' with failure tags (no affordance, gesture not discoverable, tracking fails), and a coral arrow returns labelled 'Gulf of Evaluation – what happened, and did it work?' with tags (no feedback, ambiguous feedback, no sign of success); flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <table class="caption-top">
@@ -246,7 +265,7 @@
 </section>
 <section id="framework-2-milgrams-reality-virtuality-continuum" class="slide level2 smaller">
 <h2>Framework 2: Milgram’s Reality-Virtuality Continuum</h2>
-<!-- Image prompt: A horizontal continuum bar shading from warm grey (real) to teal (virtual) with four markers — Real environment, Augmented reality, Augmented virtuality, Virtual environment — each under a small scene thumbnail (a real room; the room with floating teal UI; a virtual landscape with one real object; a fully virtual landscape), a coral bracket spanning everything between the two ends labelled ‘Mixed Reality (MR)’, and example devices underneath; flat vector, cream background. -->
+<!-- Image prompt: A horizontal continuum bar shading from warm grey (real) to teal (virtual) with four markers — Real environment, Augmented reality, Augmented virtuality, Virtual environment — each under a small scene thumbnail (a real room; the room with floating teal UI; a virtual landscape with one real object; a fully virtual landscape), a coral bracket spanning everything between the two ends labelled 'Mixed Reality (MR)', and example devices underneath; flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong>Real environment</strong> ⟷ <strong>Virtual environment</strong>: everything in between is <strong>Mixed Reality (MR)</strong></p>
@@ -263,7 +282,7 @@
 </section>
 <section id="framework-3-presence-model-slater" class="slide level2">
 <h2>Framework 3: Presence Model (Slater)</h2>
-<!-- Image prompt: Two side-by-side cards: ‘Place Illusion – I am there’ shows a headset wearer standing inside a teal landscape, with drivers ‘field of view, tracking, latency, stereo’ and a coral warning ‘broken by noticing the interface’; ‘Plausibility Illusion – this is really happening’ shows the figure reaching for a cup tumbling off a table, with drivers ‘coherent physics, a world that responds to you’ and a coral warning ‘broken by inconsistent physics or responses’; flat vector, cream background. -->
+<!-- Image prompt: Two side-by-side cards: 'Place Illusion – I am there' shows a headset wearer standing inside a teal landscape, with drivers 'field of view, tracking, latency, stereo' and a coral warning 'broken by noticing the interface'; 'Plausibility Illusion – this is really happening' shows the figure reaching for a cup tumbling off a table, with drivers 'coherent physics, a world that responds to you' and a coral warning 'broken by inconsistent physics or responses'; flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <p>Two components of presence:</p>
@@ -282,7 +301,7 @@
 </section>
 <section id="interaction-patterns" class="slide level2 smaller">
 <h2>Interaction Patterns</h2>
-<!-- Image prompt: 2×2 grid of pattern cards: Progressive disclosure (a big teal Play button with an arrow to three fading secondary buttons), Spatial consistency (a cube on a table with a circular arrow and ‘next session: still here’), Embodied metaphor (a lever being pulled with a coral motion arrow, opening a teal door) and Graceful degradation (a dashed ‘tracking lost’ hand with an arrow to a controller casting a ray, labelled ‘fallback’); flat vector, cream background, teal and coral. -->
+<!-- Image prompt: 2×2 grid of pattern cards: Progressive disclosure (a big teal Play button with an arrow to three fading secondary buttons), Spatial consistency (a cube on a table with a circular arrow and 'next session: still here'), Embodied metaphor (a lever being pulled with a coral motion arrow, opening a teal door) and Graceful degradation (a dashed 'tracking lost' hand with an arrow to a controller casting a ray, labelled 'fallback'); flat vector, cream background, teal and coral. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <h3 id="progressive-disclosure">Progressive Disclosure</h3>
@@ -299,7 +318,7 @@
 </section>
 <section id="interaction-anti-patterns" class="slide level2 smaller">
 <h2>Interaction Anti-Patterns</h2>
-<!-- Image prompt: 3×2 grid of anti-pattern cards, each with a coral ✗ badge and a teal ‘→ fix’ line: a menu floating in front of a user’s face (→ diegetic or wrist menu), a tiny dot target with a cursor (→ ≥2 cm at arm’s length), a button with a question mark (→ visual + audio + haptic), a figure with an arm raised overhead (→ waist-to-chest zone), a figure with speed lines and a dizzy swirl (→ always offer teleport) and a dashed invisible object with a crossed-out eye (→ highlight, glow, sound); flat vector, cream background. -->
+<!-- Image prompt: 3×2 grid of anti-pattern cards, each with a coral ✗ badge and a teal '→ fix' line: a menu floating in front of a user's face (→ diegetic or wrist menu), a tiny dot target with a cursor (→ ≥2 cm at arm's length), a button with a question mark (→ visual + audio + haptic), a figure with an arm raised overhead (→ waist-to-chest zone), a figure with speed lines and a dizzy swirl (→ always offer teleport) and a dashed invisible object with a crossed-out eye (→ highlight, glow, sound); flat vector, cream background. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <table class="caption-top">
@@ -411,7 +430,7 @@
 </section>
 <section id="heuristic-evaluation-for-xr" class="slide level2 smaller">
 <h2>Heuristic Evaluation for XR</h2>
-<!-- Image prompt: Ten numbered tiles in two columns translating Nielsen’s heuristics for XR — system status → feedback on every interaction, real-world match → embodied metaphors, control & freedom → undo, cancel, exit, consistency → one gesture vocabulary, error prevention → confirm destructive actions, recognition → visible affordances, flexibility → shortcuts for experts, minimalism → diegetic, uncluttered UI, recover from errors → clear error states, help → in-world tutorials — above a 0–4 severity strip shading from grey to deep coral; flat vector, cream background, teal numbers. -->
+<!-- Image prompt: Ten numbered tiles in two columns translating Nielsen's heuristics for XR — system status → feedback on every interaction, real-world match → embodied metaphors, control & freedom → undo, cancel, exit, consistency → one gesture vocabulary, error prevention → confirm destructive actions, recognition → visible affordances, flexibility → shortcuts for experts, minimalism → diegetic, uncluttered UI, recover from errors → clear error states, help → in-world tutorials — above a 0–4 severity strip shading from grey to deep coral; flat vector, cream background, teal numbers. -->
 <div class="columns">
 <div class="column" style="width:55%;">
 <p>Nielsen’s 10 heuristics adapted for XR:</p>
@@ -434,7 +453,7 @@
 </section>
 <section id="assessment-2-xr-experience-analysis-interaction-prototype" class="slide level2 smaller">
 <h2>Assessment 2: XR Experience Analysis &amp; Interaction Prototype</h2>
-<p><strong>Due: Week 8 (reading week)</strong> | <strong>Weight: 30%</strong> | <strong>Individual</strong> | <strong>LO2, LO3, LO4</strong></p>
+<p><strong>Due: Wed 4 Nov 2026, 17:00</strong> | <strong>Weight: 30%</strong> | <strong>Individual</strong> | <strong>LO2, LO3, LO4</strong></p>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ol type="1">
@@ -451,7 +470,7 @@
 </ul></li>
 <li><strong>Evaluation</strong>
 <ul>
-<li>Heuristic review plus a small user test (SUS minimum, SSQ for locomotion)</li>
+<li>Small user test: SSQ before and after, SUS after</li>
 <li>Compare with the original; what would you improve?</li>
 </ul></li>
 </ol>
@@ -706,19 +725,19 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Week 6 practical</strong></td>
-<td>Assessment 2 clinic: application and interaction <strong>agreed with me</strong></td>
-</tr>
-<tr class="even">
 <td><strong>Week 6 lab</strong></td>
 <td>Working session: build the Core interaction on the device</td>
+</tr>
+<tr class="even">
+<td><strong>Week 7 practical</strong></td>
+<td>Assessment 2 clinic: application and interaction <strong>agreed with me</strong>; user-test dry run</td>
 </tr>
 <tr class="odd">
 <td><strong>Week 7 lab</strong></td>
 <td>AR Foundation and tap-to-place: useful for AR prototypes</td>
 </tr>
 <tr class="even">
-<td><strong>Week 8 (reading week)</strong></td>
+<td><strong>Wednesday 4 November 2026, 17:00</strong></td>
 <td><strong>Submission</strong></td>
 </tr>
 </tbody>
@@ -734,23 +753,18 @@
 <li>Evaluation methods should match your design stage</li>
 </ul>
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <ul>
-<li>Norman, D. (2013) <em>The Design of Everyday Things</em> (revised ed.). Basic Books.</li>
-<li>Milgram, P. &amp; Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” <em>IEICE Transactions</em>.</li>
-<li>Slater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” <em>Philosophical Transactions of the Royal Society B</em>.</li>
-<li>Nielsen, J. (1994) “Heuristic evaluation.” In Nielsen &amp; Mack (eds.) <em>Usability Inspection Methods</em>. Wiley.</li>
-</ul>
-</section>
-<section id="discussion" class="slide level2">
-<h2>Discussion</h2>
-<ul>
-<li>Pick an XR experience you have used — where does it break down under Norman’s Action Cycle, and how would you redesign it?</li>
-<li>Is Milgram’s Reality-Virtuality Continuum still the right lens for categorising devices today, or does it need revision for devices like smart glasses?</li>
-<li>Can Plausibility Illusion (Psi) be engineered deliberately through specific design choices, or does it only emerge as a by-product of otherwise good design?</li>
-<li>Which interaction anti-pattern have you personally experienced, and what made it so disruptive to your sense of presence?</li>
-<li>With limited time and budget, should a team prioritise heuristic evaluation or user testing (think-aloud, SUS/SSQ/IPQ) — and why?</li>
+<li><p>Norman, D. (2013) <em>The Design of Everyday Things</em> (revised ed.). Basic Books.</p></li>
+<li><p>Milgram, P. &amp; Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” <em>IEICE Transactions</em>. <span class="citation" data-cites="Milgram1994">(<a href="#/references" role="doc-biblioref" onclick="">Milgram et al. 1994</a>)</span></p></li>
+<li><p>Slater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” <em>Philosophical Transactions of the Royal Society B</em>.</p></li>
+<li><p>Nielsen, J. (1994) “Heuristic evaluation.” In Nielsen &amp; Mack (eds.) <em>Usability Inspection Methods</em>. Wiley. ## Discussion</p></li>
+<li><p>Pick an XR experience you have used — where does it break down under Norman’s Action Cycle, and how would you redesign it?</p></li>
+<li><p>Is Milgram’s Reality-Virtuality Continuum still the right lens for categorising devices today, or does it need revision for devices like smart glasses?</p></li>
+<li><p>Can Plausibility Illusion (Psi) be engineered deliberately through specific design choices, or does it only emerge as a by-product of otherwise good design?</p></li>
+<li><p>Which interaction anti-pattern have you personally experienced, and what made it so disruptive to your sense of presence?</p></li>
+<li><p>With limited time and budget, should a team prioritise heuristic evaluation or user testing (think-aloud, SUS/SSQ/IPQ) — and why?</p></li>
 </ul>
 <aside class="notes">
 <p>Useful as a bridge into Assessment 2 — students should be forming opinions about which framework(s) they will apply to their chosen experience.</p>
@@ -767,6 +781,11 @@
       }</style></aside>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Milgram1994" class="csl-entry" role="listitem">
+Milgram, P, H Takemura, A Utsumi, and F Kishino. 1994. <span>“Mixed <span>Reality</span> ( <span>MR</span> ) <span>Reality</span>-<span>Virtuality</span> ( <span>RV</span> ) <span>Continuum</span>.”</span> <em>Systems Research</em> 2351 (Telemanipulator and Telepresence Technologies): 282–92. <a href="https://doi.org/10.1.1.83.6861">https://doi.org/10.1.1.83.6861</a>.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

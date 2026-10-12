@@ -34,7 +34,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-d3a3aa3f54883b7e0db9cb621ccb0be5.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -148,13 +167,10 @@
 <h2>Last Week Recap</h2>
 <ul>
 <li class="fragment">XR spectrum: VR, AR, MR, Spatial Computing</li>
-<li class="fragment">The reality–virtuality continuum (Milgram &amp; Kishino, 1994)</li>
+<li class="fragment">The reality–virtuality continuum (Milgram &amp; Kishino, 1994) <span class="citation" data-cites="Milgram1994">(<a href="#/discussion" role="doc-biblioref" onclick="">Milgram et al. 1994</a>)</span></li>
 <li class="fragment">3DOF vs 6DOF, inside-out vs outside-in tracking</li>
-<li class="fragment">A brief history from Sutherland (1965) to Vision Pro (2023)</li>
+<li class="fragment">A brief history from Sutherland (1965) <span class="citation" data-cites="Sutherland1965TheUD">(<a href="#/discussion" role="doc-biblioref" onclick="">Sutherland 1965</a>)</span> to Vision Pro (2023) ## This Week</li>
 </ul>
-</section>
-<section id="this-week" class="slide level2">
-<h2>This Week</h2>
 <h3 id="the-xr-hardware-platform-ecosystem">The XR Hardware &amp; Platform Ecosystem</h3>
 <blockquote>
 <p>A comparative survey of the current landscape — building the critical vocabulary to evaluate any device, not just memorise specs.</p>
@@ -441,24 +457,19 @@
 <section id="further-reading" class="slide level2">
 <h2>Further Reading</h2>
 <ul>
-<li class="fragment">Aukstakalnis, S. (2017) <em>Practical Augmented Reality</em>. Addison-Wesley.</li>
-<li class="fragment">Schmalstieg, D. and Höllerer, T. (2016) <em>Augmented Reality: Principles and Practice</em>.</li>
-<li class="fragment">Cronin, I., Scoble, R. and Wozniak, S. (2020) <em>The Infinite Retina</em>.</li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li class="fragment">Standalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three distinct hardware philosophies</li>
-<li class="fragment">Passthrough vs optical see-through is a key technical and experiential distinction</li>
-<li class="fragment">Platform choice (Horizon OS vs visionOS) shapes tooling, review, and distribution</li>
-<li class="fragment">Comfort, FOV, tracking fidelity, and ecosystem maturity give you a repeatable critique framework</li>
+<li class="fragment"><p>Aukstakalnis, S. (2017) <em>Practical Augmented Reality</em>. Addison-Wesley. <span class="citation" data-cites="aukstakalnisPracticalAugmentedReality2017">(<a href="#/discussion" role="doc-biblioref" onclick="">Aukstakalnis 2017</a>)</span></p></li>
+<li class="fragment"><p>Schmalstieg, D. and Höllerer, T. (2016) <em>Augmented Reality: Principles and Practice</em>. <span class="citation" data-cites="schmalstiegAugmentedRealityPrinciples2016">(<a href="#/discussion" role="doc-biblioref" onclick="">Schmalstieg and Höllerer 2016</a>)</span></p></li>
+<li class="fragment"><p>Cronin, I., Scoble, R. and Wozniak, S. (2020) <em>The Infinite Retina</em>. <span class="citation" data-cites="croninInfiniteRetina2020">(<a href="#/discussion" role="doc-biblioref" onclick="">Cronin et al. 2020</a>)</span> ## Summary</p></li>
+<li class="fragment"><p>Standalone VR (Quest 3/3S), MR headsets (Vision Pro, HoloLens 2), and AR glasses (Xreal One Pro) represent three distinct hardware philosophies</p></li>
+<li class="fragment"><p>Passthrough vs optical see-through is a key technical and experiential distinction</p></li>
+<li class="fragment"><p>Platform choice (Horizon OS vs visionOS) shapes tooling, review, and distribution</p></li>
+<li class="fragment"><p>Comfort, FOV, tracking fidelity, and ecosystem maturity give you a repeatable critique framework</p></li>
 </ul>
 <blockquote>
 <p>Next week: Perception and Presence</p>
 </blockquote>
 </section>
-<section id="discussion" class="slide level2">
+<section id="discussion" class="slide level2 smaller scrollable">
 <h2>Discussion</h2>
 <ul>
 <li class="fragment">Is Apple’s “spatial computing” framing for Vision Pro a meaningful technical distinction, or primarily a marketing strategy to differentiate from VR/AR?</li>
@@ -482,6 +493,23 @@
       }</style></aside>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aukstakalnisPracticalAugmentedReality2017" class="csl-entry" role="listitem">
+Aukstakalnis, Steve. 2017. <em>Practical Augmented Reality: A Guide to the Technologies, Applications and Human Factors for Ar and Vr</em>. Addison-Wesley.
+</div>
+<div id="ref-croninInfiniteRetina2020" class="csl-entry" role="listitem">
+Cronin, Irena, Robert Scoble, and Steve Wozniak. 2020. <em>The <span>Infinite</span> <span>Retina</span></em>. 1st edition. Packt Publishing.
+</div>
+<div id="ref-Milgram1994" class="csl-entry" role="listitem">
+Milgram, P, H Takemura, A Utsumi, and F Kishino. 1994. <span>“Mixed <span>Reality</span> ( <span>MR</span> ) <span>Reality</span>-<span>Virtuality</span> ( <span>RV</span> ) <span>Continuum</span>.”</span> <em>Systems Research</em> 2351 (Telemanipulator and Telepresence Technologies): 282–92. <a href="https://doi.org/10.1.1.83.6861">https://doi.org/10.1.1.83.6861</a>.
+</div>
+<div id="ref-schmalstiegAugmentedRealityPrinciples2016" class="csl-entry" role="listitem">
+Schmalstieg, Dieter, and Tobias Höllerer. 2016. <em>Augmented Reality: Principles and Practice</em>. Addison-<span>Wesley</span> Usability and <span>HCI</span> Series <span>Always</span> <span>Learning</span>. Addison-Wesley.
+</div>
+<div id="ref-Sutherland1965TheUD" class="csl-entry" role="listitem">
+Sutherland, Ivan E. 1965. <span>“The Ultimate Display.”</span> <a href="https://api.semanticscholar.org/CorpusID:126382308">https://api.semanticscholar.org/CorpusID:126382308</a>.
+</div>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
