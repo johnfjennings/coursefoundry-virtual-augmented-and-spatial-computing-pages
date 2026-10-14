@@ -312,7 +312,7 @@
     "href": "weeks/04-week-04/03-practical.html",
     "title": "Practical",
     "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 2 / 3 with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "text": "NoteTL;DR\n\n\n\nSet up a Unity 6 / XRI 3.x project for Quest (or the Meta XR Simulator) and build the same cube-to-socket task three ways: ray, direct grab and gaze-plus-pinch. Launch all three from one menu so you can compare speed, accuracy and effort between input modalities.",
     "crumbs": [
       "Week 04",
       "Practical"
@@ -322,8 +322,8 @@
     "objectID": "weeks/04-week-04/03-practical.html#overview",
     "href": "weeks/04-week-04/03-practical.html#overview",
     "title": "Practical",
-    "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 2 / 3 with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
+    "section": "Overview",
+    "text": "Overview\nDuration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x, XR Hands, OpenXR\nHardware: Meta Quest 2 / 3 with controllers and hand tracking enabled, or a Windows or Apple Silicon Mac computer running the Meta XR Simulator (see the no-headset alternative)\nThe lecture introduced ray casting, direct manipulation and gaze-plus-pinch as alternatives with different costs. This practical stops the argument being theoretical: you implement the same task three ways and measure which is actually faster, more accurate and less tiring.",
     "crumbs": [
       "Week 04",
       "Practical"
@@ -642,7 +642,7 @@
     "href": "weeks/02-week-02/03-practical.html",
     "title": "Practical",
     "section": "",
-    "text": "Duration: 2 hours\nIn this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.",
+    "text": "NoteTL;DR\n\n\n\nReopen your 2nd year VR escape room, get it running in the Meta XR Simulator, capture fresh screenshots and a 60-90 second gameplay video, refresh the Meta App Store page, upload a new APK, and document the update in your repository README.",
     "crumbs": [
       "Week 02",
       "Practical"
@@ -652,8 +652,8 @@
     "objectID": "weeks/02-week-02/03-practical.html#overview",
     "href": "weeks/02-week-02/03-practical.html#overview",
     "title": "Practical",
-    "section": "",
-    "text": "Duration: 2 hours\nIn this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.",
+    "section": "Overview",
+    "text": "Overview\nDuration: 2 hours\nIn this practical, you’ll revisit your 2nd year Unity VR escape room project and modernize it using the latest Meta XR development tools. You’ll test it with the new Meta XR Simulator, capture promotional materials, and prepare it for Meta App Store submission.",
     "crumbs": [
       "Week 02",
       "Practical"
@@ -3139,7 +3139,7 @@
     "href": "weeks/06-week-06/03-practical.html",
     "title": "Practical",
     "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR\nHardware: Meta Quest 2 / 3 with controllers\nLocomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data.",
+    "text": "NoteTL;DR\n\n\n\nBuild teleportation and smooth locomotion with exposed comfort settings, then tune them using peer comfort ratings rather than your own tolerance, recording ratings before and after tuning.",
     "crumbs": [
       "Week 06",
       "Practical"
@@ -3149,8 +3149,8 @@
     "objectID": "weeks/06-week-06/03-practical.html#overview",
     "href": "weeks/06-week-06/03-practical.html#overview",
     "title": "Practical",
-    "section": "",
-    "text": "Duration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR\nHardware: Meta Quest 2 / 3 with controllers\nLocomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data.",
+    "section": "Overview",
+    "text": "Overview\nDuration: 2 hours\nSoftware: Unity 6.3 LTS, XR Interaction Toolkit 3.x (Starter Assets sample), OpenXR\nHardware: Meta Quest 2 / 3 with controllers\nLocomotion is the single largest cause of discomfort in XR, and developers are systematically the worst judges of it – prolonged exposure builds tolerance most users do not have. This practical replaces your own tolerance with peer data.",
     "crumbs": [
       "Week 06",
       "Practical"
