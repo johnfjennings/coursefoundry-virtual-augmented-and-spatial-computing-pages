@@ -48,7 +48,7 @@
     "href": "weeks/06-week-06/02-lecture.html",
     "title": "Week 6 Lecture Notes",
     "section": "",
-    "text": "Week 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1-2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4-5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality-virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
+    "text": "TipTL;DR\n\n\n\n\nFrameworks are structured lenses that replace “it felt good” with systematic analysis; each answers a different question, so a strong analysis combines two or more.\nNorman’s seven-stage action cycle locates where an interaction fails across the Gulf of Execution and Gulf of Evaluation, which designers close with signifiers, mapping, feedback and constraints.\nMilgram’s continuum treats mixed reality as the whole span between real and virtual, and where an experience sits on it — not just its device — shapes interaction design.\nSlater separates Place Illusion from Plausibility Illusion: noticing the interface breaks PI and inconsistent world responses break Psi, so interaction design is part of the experience itself.\nPatterns such as progressive disclosure and graceful degradation are reusable solutions, while most anti-patterns are desktop or mobile conventions carried into 3D without adaptation.\nCombine an inspection method such as heuristic evaluation with empirical methods, test ethically, and in Assessment 2 analyse with frameworks and evidence rather than merely describe.",
     "crumbs": [
       "Week 06",
       "Week 6 Lecture Notes"
@@ -58,8 +58,8 @@
     "objectID": "weeks/06-week-06/02-lecture.html#overview",
     "href": "weeks/06-week-06/02-lecture.html#overview",
     "title": "Week 6 Lecture Notes",
-    "section": "",
-    "text": "Week 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1-2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4-5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality-virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
+    "section": "1 Overview",
+    "text": "1 Overview\nWeek 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1-2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4-5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality-virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
     "crumbs": [
       "Week 06",
       "Week 6 Lecture Notes"
@@ -224,7 +224,7 @@
     "href": "weeks/05-week-05/02-lecture.html",
     "title": "Lecture Notes",
     "section": "",
-    "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
+    "text": "TipTL;DR\n\n\n\n\nA gesture vocabulary should be distinct, comfortable, discoverable and reversible; platforms share a small standard set, and custom poses should use joint-angle thresholds tested across hand sizes.\nCybersickness comes from the vestibular conflict between what the eyes and inner ear report, and it is acceleration, not speed, that causes it.\nTeleportation is the most comfortable locomotion; smooth locomotion needs vignettes, speed caps, snap turning and eased acceleration, and a comfort settings menu should always be provided.\nFlat UI fails in XR through vergence-accommodation conflict, depth inconsistency and head-locked discomfort, so prefer world-locked or lagged body-locked UI and use head-locked UI sparingly.\nDiegetic UI is the gold standard for immersive VR, and the wrist menu has become a standard pattern: raise the wrist, select with the other hand, lower to dismiss.\nAccessibility belongs in the design from the start: seated and one-handed modes, reduced motion, readable text and contrast, captions, consistent patterns, undo and no forced time limits.",
     "crumbs": [
       "Week 05",
       "Lecture Notes"
@@ -234,8 +234,8 @@
     "objectID": "weeks/05-week-05/02-lecture.html#overview",
     "href": "weeks/05-week-05/02-lecture.html#overview",
     "title": "Lecture Notes",
-    "section": "",
-    "text": "Week 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
+    "section": "1 Overview",
+    "text": "1 Overview\nWeek 5 builds on the input fundamentals from Week 4 to address three interconnected design challenges: gesture vocabularies, locomotion comfort, and spatial UI design. These are the areas where XR design diverges most sharply from conventional UX practice.",
     "crumbs": [
       "Week 05",
       "Lecture Notes"
@@ -532,7 +532,7 @@
     "href": "weeks/03-week-03/02-lecture.html",
     "title": "Lecture Notes",
     "section": "",
-    "text": "This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.\nThe central concept this week is presence: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.",
+    "text": "TipTL;DR\n\n\n\n\nPresence is the subjective feeling of “being there”, and Slater argues it needs both Place Illusion and Plausibility Illusion.\nImmersion is an objective property of the technology, so maximising it cannot guarantee presence — content must also support plausibility.\nThe brain integrates visual, auditory, proprioceptive, vestibular and haptic input, and XR works by manipulating the proximal stimulus so it is consistent with being in a real place.\nSimulator sickness stems from latency, low frame rate, FOV mismatch and especially vection — visual motion that the vestibular system does not detect.\nTeleportation, vignetting, snap turning, a maintained frame rate and user choice of comfort settings all reduce sickness, since susceptibility varies significantly between individuals.\nPresence brings ethical responsibilities — disclosure, comfort options, accessibility and care around manipulation — and can be measured with the PQ and IPQ questionnaires.",
     "crumbs": [
       "Week 03",
       "Lecture Notes"
@@ -542,8 +542,8 @@
     "objectID": "weeks/03-week-03/02-lecture.html#introduction",
     "href": "weeks/03-week-03/02-lecture.html#introduction",
     "title": "Lecture Notes",
-    "section": "",
-    "text": "This week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.\nThe central concept this week is presence: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.",
+    "section": "1 Introduction",
+    "text": "1 Introduction\nThis week we move from hardware to the human. Understanding how the brain constructs the experience of being somewhere is fundamental to XR design. Every design decision — from frame rate to spatial audio to locomotion technique — has its roots in human perception.\nThe central concept this week is presence: the subjective feeling of being in a place. Presence is what makes XR powerful. It is also what makes it potentially harmful if designed carelessly.",
     "crumbs": [
       "Week 03",
       "Lecture Notes"
@@ -1896,7 +1896,7 @@
     "href": "weeks/01-week-01/02-lecture.html",
     "title": "Lecture Notes",
     "section": "",
-    "text": "This module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.\nThis first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.\nIt is worth being honest about why the vocabulary matters, because “getting the definitions right” can look like an academic exercise. It is not. The terms in this lecture map directly onto engineering decisions. Whether a system is optical see-through or video see-through determines what your content can look like, because you cannot render black on an optical display. Whether tracking is 3DOF or 6DOF determines whether a user can lean around an object, which in turn determines whether your scene can contain anything worth leaning around. Whether a device understands the room it is in determines whether your content can sit on a real table or must float in front of the user’s face. Every one of these is a design constraint before it is a technical specification, and the words we use are how we reason about them.\nA second point before we begin. This field has an unusually strong marketing vocabulary running alongside its technical one, and the two frequently disagree. Manufacturers describe their products in whatever terms are currently favourable — the same headset has been sold as VR, as mixed reality, and as spatial computing within a few years, without the hardware changing much. Part of your job on this module is to be able to look past the positioning and describe what a device actually does. The hype cycle section below gives you a framework for doing exactly that.",
+    "text": "TipTL;DR\n\n\n\n\nXR spans VR (sensory substitution), AR (content registered to the real world), mixed reality and spatial computing, and each imposes different design constraints and possibilities.\nMilgram and Kishino’s reality-virtuality continuum shows VR and AR are not binary, and modern devices move along it at runtime — so ask where an experience sits, and why.\nXR’s history and Gartner’s Hype Cycle show expectations repeatedly outrunning capability, so learn to separate what a device demonstrably does from how its category is marketed.\n6DOF tracking enables parallax and physical movement, while inside-out tracking relies on SLAM, so its quality depends on the room’s visual texture and suffers from drift.\nXR design differs from screen design: the body is the interface, space is the canvas, presence changes behaviour, and comfort is a first-class design constraint.\nThroughout the module and its assessments, a design choice you can justify with theory and evidence is worth more than a technically impressive one you cannot.",
     "crumbs": [
       "Week 01",
       "Lecture Notes"
@@ -1906,8 +1906,8 @@
     "objectID": "weeks/01-week-01/02-lecture.html#introduction",
     "href": "weeks/01-week-01/02-lecture.html#introduction",
     "title": "Lecture Notes",
-    "section": "",
-    "text": "This module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.\nThis first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.\nIt is worth being honest about why the vocabulary matters, because “getting the definitions right” can look like an academic exercise. It is not. The terms in this lecture map directly onto engineering decisions. Whether a system is optical see-through or video see-through determines what your content can look like, because you cannot render black on an optical display. Whether tracking is 3DOF or 6DOF determines whether a user can lean around an object, which in turn determines whether your scene can contain anything worth leaning around. Whether a device understands the room it is in determines whether your content can sit on a real table or must float in front of the user’s face. Every one of these is a design constraint before it is a technical specification, and the words we use are how we reason about them.\nA second point before we begin. This field has an unusually strong marketing vocabulary running alongside its technical one, and the two frequently disagree. Manufacturers describe their products in whatever terms are currently favourable — the same headset has been sold as VR, as mixed reality, and as spatial computing within a few years, without the hardware changing much. Part of your job on this module is to be able to look past the positioning and describe what a device actually does. The hype cycle section below gives you a framework for doing exactly that.",
+    "section": "1 Introduction",
+    "text": "1 Introduction\nThis module sits at the intersection of technology, design, and human experience. By the time you finish it, you should be able to think critically about immersive systems, build functional XR prototypes, and evaluate them against established principles of human-computer interaction.\nThis first week establishes the conceptual landscape. Before we can design or build anything, we need a shared vocabulary and a clear understanding of what XR actually is, where it came from, and where it is going.\nIt is worth being honest about why the vocabulary matters, because “getting the definitions right” can look like an academic exercise. It is not. The terms in this lecture map directly onto engineering decisions. Whether a system is optical see-through or video see-through determines what your content can look like, because you cannot render black on an optical display. Whether tracking is 3DOF or 6DOF determines whether a user can lean around an object, which in turn determines whether your scene can contain anything worth leaning around. Whether a device understands the room it is in determines whether your content can sit on a real table or must float in front of the user’s face. Every one of these is a design constraint before it is a technical specification, and the words we use are how we reason about them.\nA second point before we begin. This field has an unusually strong marketing vocabulary running alongside its technical one, and the two frequently disagree. Manufacturers describe their products in whatever terms are currently favourable — the same headset has been sold as VR, as mixed reality, and as spatial computing within a few years, without the hardware changing much. Part of your job on this module is to be able to look past the positioning and describe what a device actually does. The hype cycle section below gives you a framework for doing exactly that.",
     "crumbs": [
       "Week 01",
       "Lecture Notes"
@@ -2039,7 +2039,7 @@
     "href": "weeks/02-week-02/02-lecture.html",
     "title": "Lecture Notes",
     "section": "",
-    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality-virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "text": "TipTL;DR\n\n\n\n\nOptical designs — Fresnel, pancake, waveguide, birdbath — are trades between clarity, weight, brightness, power and cost, not a ranking from worse to better.\nPassthrough and optical see-through differ in latency, fidelity, occlusion, safety and social visibility, and on optical see-through additive light cannot produce black.\nMany AR glasses are 3DOF display devices that show a screen without tracking the world, so first establish whether content stays put when you walk around it.\nPixels per degree (PPD), not raw resolution, determines perceived sharpness; quoted FOV figures are usually diagonal, and refresh rate sets the ceiling on motion-to-photon latency.\nA standalone headset is a mobile device with tight frame, thermal and battery budgets, and OpenXR reduces platform lock-in without eliminating it.\nEvaluate any device on comfort, field of view, tracking fidelity and ecosystem maturity — and be able to say what that framework leaves out, such as cost and privacy.",
     "crumbs": [
       "Week 02",
       "Lecture Notes"
@@ -2049,8 +2049,8 @@
     "objectID": "weeks/02-week-02/02-lecture.html#last-week-recap",
     "href": "weeks/02-week-02/02-lecture.html#last-week-recap",
     "title": "Lecture Notes",
-    "section": "",
-    "text": "In Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality-virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
+    "section": "1 Last Week Recap",
+    "text": "1 Last Week Recap\nIn Week 1 we established the conceptual landscape for this module: the XR spectrum (VR, AR, MR, and spatial computing), the reality-virtuality continuum (Milgram et al. 1994), 3DOF vs 6DOF tracking, inside-out vs outside-in tracking, and a brief history running from Sutherland’s “Ultimate Display” (Sutherland 1965) to the Apple Vision Pro.\nThis week we move from concepts to concrete hardware. Our goal is not to memorise specifications, but to build a critical vocabulary you can use to evaluate any XR device — including ones that do not exist yet.\nThis lecture directly supports LO2: explore, critique, and deconstruct modern VR, AR, and spatial computing experiences.",
     "crumbs": [
       "Week 02",
       "Lecture Notes"
@@ -2600,7 +2600,7 @@
     "href": "weeks/04-week-04/02-lecture.html",
     "title": "Lecture Notes",
     "section": "",
-    "text": "This week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: how users communicate intent to XR systems. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.",
+    "text": "TipTL;DR\n\n\n\n\nXR has no settled input standard, so an experience should either target one device and optimise for its input, or abstract input so it degrades gracefully across devices.\nControllers offer ray casting for far-field selection and direct interaction for near-field grabbing; short haptic pulses improve confidence but should always accompany a visual cue.\nHand tracking uses a 26-joint skeletal model for pinch and pose detection; good gestures are distinct, comfortable, discoverable and reversible, but occlusion, lighting and fatigue limit tracking.\nGaze works best as gaze + confirm to avoid the Midas Touch problem, and eye tracking also enables foveated rendering and attention analytics — though its data is biometric.\nDesign for the body: avoid gorilla arm by keeping interaction between waist and shoulder height, and apply Fitts’ Law with targets of at least ~2cm at arm’s length.\nEvery interactive object needs a clear state machine (Default → Hover → Selected → Activated → Released), with each transition signalled through at least two feedback channels.",
     "crumbs": [
       "Week 04",
       "Lecture Notes"
@@ -2610,8 +2610,8 @@
     "objectID": "weeks/04-week-04/02-lecture.html#overview",
     "href": "weeks/04-week-04/02-lecture.html#overview",
     "title": "Lecture Notes",
-    "section": "",
-    "text": "This week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: how users communicate intent to XR systems. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.",
+    "section": "1 Overview",
+    "text": "1 Overview\nThis week moves from hardware and perception (Weeks 1–3) into the first layer of interaction design: how users communicate intent to XR systems. We examine the full range of input modalities available across our device set and establish design principles that apply regardless of platform.",
     "crumbs": [
       "Week 04",
       "Lecture Notes"
