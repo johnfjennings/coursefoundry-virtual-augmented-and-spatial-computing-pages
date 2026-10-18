@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 7 Lecture Notes – Virtual, Augmented and Spatial Computing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../weeks/07-week-07/03-practical.html" rel="next">
+<link href="../../weeks/07-week-07/01-slides.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../custom.css">
+<meta property="og:title" content="Week 7 Lecture Notes – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Spatial Mapping, Anchors &amp; Scene Understanding">
+<meta property="og:image" content="../../images/week07/spatial-computing-slide-02.png">
+<meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+<meta property="og:image:alt" content="A person in a headset in a room mapped by a mesh; a virtual cube is pinned to a real table. Labels read knows where it is and stays there.">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/07-week-07/01-slides.html">Week 07</a></li><li class="breadcrumb-item"><a href="../../weeks/07-week-07/02-lecture.html">Week 7 Lecture Notes</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Virtual, Augmented and Spatial Computing</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semester Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/01-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/02-assessment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/03-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/04-assessment3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 05</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/03-consent-form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant Consent Form</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/04-ssq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulator Sickness Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 06</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/06-sus-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Usability Scale Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 07</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/02-lecture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 7 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/01-bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/02-index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2</span> Learning Objectives</a></li>
+  <li><a href="#what-makes-computing-spatial" id="toc-what-makes-computing-spatial" class="nav-link" data-scroll-target="#what-makes-computing-spatial"><span class="header-section-number">3</span> 1. What Makes Computing Spatial</a></li>
+  <li><a href="#tracking-and-mapping" id="toc-tracking-and-mapping" class="nav-link" data-scroll-target="#tracking-and-mapping"><span class="header-section-number">4</span> 2. Tracking and Mapping</a>
+  <ul class="collapse">
+  <li><a href="#inside-out-6dof-tracking" id="toc-inside-out-6dof-tracking" class="nav-link" data-scroll-target="#inside-out-6dof-tracking"><span class="header-section-number">4.1</span> 2.1 Inside-Out 6DoF Tracking</a></li>
+  <li><a href="#slam-in-outline" id="toc-slam-in-outline" class="nav-link" data-scroll-target="#slam-in-outline"><span class="header-section-number">4.2</span> 2.2 SLAM in Outline</a></li>
+  <li><a href="#when-tracking-breaks" id="toc-when-tracking-breaks" class="nav-link" data-scroll-target="#when-tracking-breaks"><span class="header-section-number">4.3</span> 2.3 When Tracking Breaks</a></li>
+  </ul></li>
+  <li><a href="#scene-understanding" id="toc-scene-understanding" class="nav-link" data-scroll-target="#scene-understanding"><span class="header-section-number">5</span> 3. Scene Understanding</a>
+  <ul class="collapse">
+  <li><a href="#measured-vs-declared-geometry" id="toc-measured-vs-declared-geometry" class="nav-link" data-scroll-target="#measured-vs-declared-geometry"><span class="header-section-number">5.1</span> 3.1 Measured vs Declared Geometry</a></li>
+  <li><a href="#plane-detection-and-raycasting" id="toc-plane-detection-and-raycasting" class="nav-link" data-scroll-target="#plane-detection-and-raycasting"><span class="header-section-number">5.2</span> 3.2 Plane Detection and Raycasting</a></li>
+  </ul></li>
+  <li><a href="#spatial-anchors" id="toc-spatial-anchors" class="nav-link" data-scroll-target="#spatial-anchors"><span class="header-section-number">6</span> 4. Spatial Anchors</a>
+  <ul class="collapse">
+  <li><a href="#local-persistent-and-shared-anchors" id="toc-local-persistent-and-shared-anchors" class="nav-link" data-scroll-target="#local-persistent-and-shared-anchors"><span class="header-section-number">6.1</span> 4.1 Local, Persistent and Shared Anchors</a></li>
+  <li><a href="#choosing-an-anchoring-strategy" id="toc-choosing-an-anchoring-strategy" class="nav-link" data-scroll-target="#choosing-an-anchoring-strategy"><span class="header-section-number">6.2</span> 4.2 Choosing an Anchoring Strategy</a></li>
+  <li><a href="#anchor-drift-and-its-limits" id="toc-anchor-drift-and-its-limits" class="nav-link" data-scroll-target="#anchor-drift-and-its-limits"><span class="header-section-number">6.3</span> 4.3 Anchor Drift and Its Limits</a></li>
+  </ul></li>
+  <li><a href="#occlusion-depth-and-coordinate-spaces" id="toc-occlusion-depth-and-coordinate-spaces" class="nav-link" data-scroll-target="#occlusion-depth-and-coordinate-spaces"><span class="header-section-number">7</span> 5. Occlusion, Depth and Coordinate Spaces</a>
+  <ul class="collapse">
+  <li><a href="#occlusion-and-depth" id="toc-occlusion-and-depth" class="nav-link" data-scroll-target="#occlusion-and-depth"><span class="header-section-number">7.1</span> 5.1 Occlusion and Depth</a></li>
+  <li><a href="#coordinate-spaces" id="toc-coordinate-spaces" class="nav-link" data-scroll-target="#coordinate-spaces"><span class="header-section-number">7.2</span> 5.2 Coordinate Spaces</a></li>
+  </ul></li>
+  <li><a href="#the-privacy-question" id="toc-the-privacy-question" class="nav-link" data-scroll-target="#the-privacy-question"><span class="header-section-number">8</span> 6. The Privacy Question</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9</span> Summary</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">10</span> Self-Check Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">11</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/07-week-07/01-slides.html">Week 07</a></li><li class="breadcrumb-item"><a href="../../weeks/07-week-07/02-lecture.html">Week 7 Lecture Notes</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 7 Lecture Notes</h1>
+<p class="subtitle lead">Spatial Mapping, Anchors &amp; Scene Understanding</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Spatial computing adds <strong>awareness</strong> and <strong>persistence</strong> to VR and overlay AR, delivered by three mechanisms: tracking, scene understanding and anchors.</li>
+<li>Inside-out headsets fuse cameras and an IMU for 6DoF tracking, and use <strong>SLAM</strong> to build a map of the room while localising within it.</li>
+<li>Tracking fails predictably in low light, on blank or repetitive surfaces and with covered cameras, so good apps show tracking state, guide the user and recover gracefully.</li>
+<li>Scene understanding layers planes, meshes and semantic labels, measured live or declared in setup, enabling tap-to-place raycasting and depth-based occlusion of virtual content.</li>
+<li>Anchors (local, persistent or shared) are best estimates that drift with distance: choose by persistence requirement, keep content close, and parent content to anchors, not world coordinates.</li>
+<li>A room scan is a detailed record of someone’s home, so designers must say plainly what is stored, where it goes and what the user was told.</li>
+</ul>
+</div>
+</div>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p><strong>Duration:</strong> 1 hour</p>
+<p>This week addresses the mechanics behind the word <em>spatial</em> in the module title. Where Weeks 1-6 treated the headset largely as a display and an input device, this session looks at how it builds and maintains a model of the room it is standing in, and how digital content can be given a durable place inside that model.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2</span> Learning Objectives</h2>
+<p>By the end of this lecture, students will be able to:</p>
+<ul>
+<li>Explain how a headset builds and maintains a map of a physical space</li>
+<li>Predict the conditions under which tracking and relocalisation will fail, and design for them</li>
+<li>Choose an anchoring strategy appropriate to a stated persistence requirement</li>
+<li>Identify the privacy implications of continuous scene capture and state them plainly</li>
+</ul>
+<hr>
+</section>
+<section id="what-makes-computing-spatial" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="what-makes-computing-spatial"><span class="header-section-number">3</span> 1. What Makes Computing Spatial</h2>
+<p>Spatial computing adds two properties to VR and simple overlay AR:</p>
+<ul>
+<li><strong>Awareness</strong>: the device keeps a live model of the room around it: where the floor, walls and furniture are.</li>
+<li><strong>Persistence</strong>: digital content keeps its place in that room, as the user moves, when the app restarts, and on another day.</li>
+</ul>
+<p>Three mechanisms deliver these properties, and the rest of this lecture takes them in turn:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Mechanism</th>
+<th>Question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tracking</td>
+<td>Where is the <em>device</em> in the room?</td>
+</tr>
+<tr class="even">
+<td>Scene understanding</td>
+<td>What is the <em>room</em> like?</td>
+</tr>
+<tr class="odd">
+<td>Anchors</td>
+<td>Where does the <em>content</em> belong?</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/spatial-computing-slide-02.png" class="img-fluid figure-img" style="width:70.0%" alt="A person in a headset in a room mapped by a mesh; a virtual cube is pinned to a real table. Labels read knows where it is and stays there."></p>
+<figcaption>Spatial computing: content that knows where it is, and stays there.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="tracking-and-mapping" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="tracking-and-mapping"><span class="header-section-number">4</span> 2. Tracking and Mapping</h2>
+<section id="inside-out-6dof-tracking" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="inside-out-6dof-tracking"><span class="header-section-number">4.1</span> 2.1 Inside-Out 6DoF Tracking</h3>
+<p>A tracked headset reports a <strong>pose</strong> many times a second: its position along three axes and its rotation about three axes (yaw, pitch and roll), hence <em>six degrees of freedom</em> (6DoF). Week 2 introduced the distinction between 3DoF and 6DoF devices; this week is about how the six are measured.</p>
+<p>Modern standalone headsets and phones track <strong>inside-out</strong>: the sensors are on the device itself rather than mounted around the room (the <em>outside-in</em> approach of the Vive Pro’s base stations). Two kinds of sensor are combined:</p>
+<ul>
+<li><strong>Cameras</strong> observe visual features in the room. They give an accurate position but only once per camera frame, and they need light and texture.</li>
+<li>An <strong>IMU</strong> (inertial measurement unit: accelerometer and gyroscope) measures acceleration and rotation hundreds of times a second. It is fast but, used alone, drifts within seconds because small errors accumulate.</li>
+</ul>
+<p><strong>Sensor fusion</strong> combines the two: the IMU fills in fast motion between frames and the cameras correct its drift. This combination is often called <em>visual-inertial odometry</em>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/inside-out-tracking-slide-03.png" class="img-fluid figure-img" style="width:70.0%" alt="A headset with four cameras, position axes x, y and z and rotation arcs for yaw and pitch; camera and IMU inputs are fused into a 6DoF pose."></p>
+<figcaption>Inside-out 6DoF tracking fuses camera and IMU data into a single pose.</figcaption>
+</figure>
+</div>
+</section>
+<section id="slam-in-outline" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="slam-in-outline"><span class="header-section-number">4.2</span> 2.2 SLAM in Outline</h3>
+<p>Tracking a device’s motion is only half the problem. To know where it is <em>in a room</em>, the device also needs a map of that room, and it has to build that map while using it. This is <strong>Simultaneous Localisation And Mapping (SLAM)</strong> (Durrant-Whyte &amp; Bailey, 2006).</p>
+<ol type="1">
+<li><strong>Detect features</strong>: find distinctive, repeatable points in each camera image, such as corners, edges and textured patches.</li>
+<li><strong>Estimate pose</strong>: match features between frames to work out how the device has moved.</li>
+<li><strong>Update the map</strong>: add newly seen features to a 3D map of the space.</li>
+<li><strong>Loop closure</strong>: when the device recognises a place it has seen before, it corrects the drift accumulated since then, and the whole map snaps into better alignment.</li>
+<li><strong>Relocalisation</strong>: after tracking is lost, or when an app starts in a known room, the device matches what it sees against a saved map to recover its pose.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/slam-slide-04.png" class="img-fluid figure-img" style="width:70.0%" alt="A loop of SLAM steps: detect features, estimate pose, update the map, loop closure and relocalise, around a cluster of feature points."></p>
+<figcaption>SLAM: work out where you are while building the map you need to do it.</figcaption>
+</figure>
+</div>
+</section>
+<section id="when-tracking-breaks" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="when-tracking-breaks"><span class="header-section-number">4.3</span> 2.3 When Tracking Breaks</h3>
+<p>Because SLAM depends on seeing distinctive features, its failures are predictable:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Condition</th>
+<th>Why it fails</th>
+<th>What the user experiences</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low light</td>
+<td>Cameras see too few features</td>
+<td>Content drifts, then a “tracking lost” message</td>
+</tr>
+<tr class="even">
+<td>Blank walls, glossy or reflective surfaces</td>
+<td>No texture to match</td>
+<td>Content slides across surfaces</td>
+</tr>
+<tr class="odd">
+<td>Repeating patterns (tiles, carpet, shelving)</td>
+<td>Different places look the same</td>
+<td>Pose jumps to the wrong place</td>
+</tr>
+<tr class="even">
+<td>Covered cameras, very fast motion</td>
+<td>Camera frames unusable</td>
+<td>View freezes, then snaps back</td>
+</tr>
+<tr class="odd">
+<td>Moved furniture, a different room</td>
+<td>Saved map no longer matches</td>
+<td>Relocalisation fails; anchored content is missing</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/tracking-failure-slide-05.png" class="img-fluid figure-img" style="width:70.0%" alt="Four cards: low light, blank surfaces, repeating patterns, and covered cameras with fast movement, each with its effect on tracking."></p>
+<figcaption>Tracking needs light, texture and steady views of the room.</figcaption>
+</figure>
+</div>
+<p>These failures are a design problem, not only an engineering one. Good spatial applications:</p>
+<ul>
+<li><strong>Show tracking state</strong> clearly, rather than letting content silently drift</li>
+<li><strong>Guide the user</strong> to look around slowly when the map is thin (most phone AR apps show a “move your phone” animation for this reason)</li>
+<li><strong>Recover gracefully</strong> (the Week 6 graceful degradation pattern): hide or fade content whose anchor cannot be found, rather than leaving it in the wrong place</li>
+<li><strong>Never freeze the view</strong> in a headset, which is a strong trigger for simulator sickness (Week 3)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="scene-understanding" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="scene-understanding"><span class="header-section-number">5</span> 3. Scene Understanding</h2>
+<p>Tracking tells the device where it is. <strong>Scene understanding</strong> tells it what is around it. The model of the room comes in layers:</p>
+<ul>
+<li><strong>Planes</strong>: flat, bounded surfaces such as the floor, walls, ceiling and table tops. Planes are cheap to compute and good for placing objects.</li>
+<li><strong>Meshes</strong>: a triangle surface over everything the device has seen, including irregular objects such as a sofa or a person. Meshes support physics (a virtual ball bouncing off a real chair) and occlusion.</li>
+<li><strong>Semantic labels</strong>: what a surface <em>is</em>: floor, wall, ceiling, table, couch, door, window. Labels let content behave sensibly: a virtual pet sits on the couch, a poster goes on a wall.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/scene-understanding-slide-06.png" class="img-fluid figure-img" style="width:70.0%" alt="A room with the floor and walls detected as planes, a couch covered by a mesh, and labels for wall, floor, table and couch."></p>
+<figcaption>The device’s model of the room: planes, a mesh and semantic labels.</figcaption>
+</figure>
+</div>
+<section id="measured-vs-declared-geometry" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="measured-vs-declared-geometry"><span class="header-section-number">5.1</span> 3.1 Measured vs Declared Geometry</h3>
+<p>There are two ways a device can know about a room, and they fail differently:</p>
+<ul>
+<li><strong>Measured</strong> geometry is detected live by the cameras and, on devices that have one, a depth sensor. It reflects the room as it is now, but it is incomplete until the user has looked around.</li>
+<li><strong>Declared</strong> geometry is captured once in a guided setup and stored. On Quest 3, <em>Space Setup</em> scans the room and lets the user confirm walls and furniture; apps then read this <em>scene model</em>. Declared geometry is complete and labelled from the first frame, but it goes stale when furniture moves.</li>
+</ul>
+<p>When analysing or designing an experience, ask which kind it relies on, and what happens when the room no longer matches.</p>
+</section>
+<section id="plane-detection-and-raycasting" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="plane-detection-and-raycasting"><span class="header-section-number">5.2</span> 3.2 Plane Detection and Raycasting</h3>
+<p>The most common scene-understanding interaction is <strong>tap-to-place</strong>, which is this week’s lab. In Unity’s AR Foundation:</p>
+<ol type="1">
+<li>An <strong>AR Session</strong> manages the tracking session, and an <strong>XR Origin</strong> holds the camera and the detected trackables (older tutorials call this rig <em>AR Session Origin</em>, which was replaced in AR Foundation 5).</li>
+<li><code>ARPlaneManager</code> detects planes and adds a GameObject for each one.</li>
+<li><code>ARRaycastManager</code> casts a ray from the screen tap (or a controller) against the detected planes and returns the hits.</li>
+<li>The app places a prefab at the hit <strong>pose</strong>, which carries rotation as well as position, so the object sits flat on the surface rather than at an arbitrary angle.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/plane-raycast-slide-07.png" class="img-fluid figure-img" style="width:70.0%" alt="A phone casts a ray from a tap onto a detected floor plane and places a cube at the hit point; three steps name ARPlaneManager, ARRaycastManager and placing the prefab."></p>
+<figcaption>Tap to place: detect planes, raycast from the tap, place at the hit pose.</figcaption>
+</figure>
+</div>
+<p>A <strong>placement indicator</strong> (a reticle that follows the detected surface) closes the Gulf of Evaluation from Week 6: the user sees where the object will appear <em>before</em> committing to it.</p>
+<hr>
+</section>
+</section>
+<section id="spatial-anchors" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="spatial-anchors"><span class="header-section-number">6</span> 4. Spatial Anchors</h2>
+<p>An <strong>anchor</strong> is a pose that the device commits to tracking against the real world. Instead of placing content at fixed coordinates, the app attaches it to an anchor, and the device keeps the anchor aligned with the physical place as its understanding of the room improves.</p>
+<section id="local-persistent-and-shared-anchors" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="local-persistent-and-shared-anchors"><span class="header-section-number">6.1</span> 4.1 Local, Persistent and Shared Anchors</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Kind</th>
+<th>Survives</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Local</strong></td>
+<td>The current session only</td>
+<td>Objects placed during a single visit</td>
+</tr>
+<tr class="even">
+<td><strong>Persistent</strong></td>
+<td>App restarts and later days on the same device</td>
+<td>A virtual screen that stays on your wall</td>
+</tr>
+<tr class="odd">
+<td><strong>Shared</strong></td>
+<td>Another user’s device in the same room</td>
+<td>Co-located multi-user experiences, such as two people looking at the same model</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/spatial-anchors-slide-08.png" class="img-fluid figure-img" style="width:70.0%" alt="Three cards: a local anchor lost when the app closes, a persistent anchor saved on the device, and a shared anchor seen by two people."></p>
+<figcaption>Choose the anchor by how long, and for whom, content must stay put.</figcaption>
+</figure>
+</div>
+<p>In AR Foundation, anchors are managed by <code>ARAnchorManager</code>. How persistence and sharing work depends on the platform: Meta’s spatial anchors can be saved on the headset and shared between users through Meta’s services; ARCore offers Cloud Anchors; ARKit can save and reload a world map. Cloud services also come and go: Microsoft retired Azure Spatial Anchors in 2024, and applications built on it had to be rebuilt. For a project, check what your target platform supports before designing around persistence.</p>
+</section>
+<section id="choosing-an-anchoring-strategy" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="choosing-an-anchoring-strategy"><span class="header-section-number">6.2</span> 4.2 Choosing an Anchoring Strategy</h3>
+<p>Start from the persistence requirement, not the technology:</p>
+<ul>
+<li>Does the content only need to stay put while the user is looking at it? A <strong>local</strong> anchor is enough.</li>
+<li>Must it be there tomorrow? You need a <strong>persistent</strong> anchor, plus a plan for when relocalisation fails (the room has changed, or the user is somewhere else).</li>
+<li>Must two people see it in the same place? You need a <strong>shared</strong> anchor, and you inherit network, permission and privacy questions.</li>
+<li>Should it follow the user instead? Then it should not be anchored to the room at all: use the body-locked UI from Week 5.</li>
+</ul>
+</section>
+<section id="anchor-drift-and-its-limits" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="anchor-drift-and-its-limits"><span class="header-section-number">6.3</span> 4.3 Anchor Drift and Its Limits</h3>
+<p>An anchor is the device’s <strong>best estimate</strong> of a real place, and that estimate changes as the map is refined. Two consequences matter for design:</p>
+<ul>
+<li><strong>Error grows with distance.</strong> A small error in an anchor’s <em>rotation</em> becomes a large error in <em>position</em> for content placed far from it, in the same way a slight change in angle moves the end of a long pole a long way.</li>
+<li><strong>Anchors can move.</strong> When the device corrects its map (for example after loop closure), anchored content shifts to match. This is the anchor working as intended, but a visible jump can still surprise the user.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/anchor-drift-slide-09.png" class="img-fluid figure-img" style="width:70.0%" alt="An anchor with widening error rings: content near it stays aligned, content far away is offset from where it should be."></p>
+<figcaption>An anchor is a best estimate, not a fixed point: keep content close to it.</figcaption>
+</figure>
+</div>
+<p>Practical rules:</p>
+<ul>
+<li>Place each anchor <strong>close to the content</strong> it holds, and give separate objects their own anchors</li>
+<li>In large spaces, use <strong>several anchors</strong> rather than one at the centre</li>
+<li>Do not create anchors every frame: each one has a tracking cost</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="occlusion-depth-and-coordinate-spaces" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="occlusion-depth-and-coordinate-spaces"><span class="header-section-number">7</span> 5. Occlusion, Depth and Coordinate Spaces</h2>
+<section id="occlusion-and-depth" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="occlusion-and-depth"><span class="header-section-number">7.1</span> 5.1 Occlusion and Depth</h3>
+<p>By default, virtual content is rendered on top of the camera or passthrough image, so it always appears <strong>in front of</strong> real objects, even when it is meant to be behind them. <strong>Depth-based occlusion</strong> fixes this: the device estimates the distance to real surfaces in every frame, and hides the parts of virtual objects that lie behind them.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/occlusion-slide-10.png" class="img-fluid figure-img" style="width:70.0%" alt="Two panels: without occlusion a cube floats in front of a chair it should be behind; with depth occlusion the chair hides part of the cube."></p>
+<figcaption>Occlusion: real objects must be able to hide virtual ones.</figcaption>
+</figure>
+</div>
+<p>The depth map can come from a dedicated depth sensor (Quest 3, LiDAR on iPhone Pro models) or be estimated from camera motion (the ARCore Depth API). In AR Foundation it is exposed through <code>AROcclusionManager</code>. Depth maps are lower resolution than the camera image, so occlusion edges can look soft or flicker, especially around hands and hair.</p>
+<p>Wrong occlusion is one of the fastest ways to break Plausibility Illusion (Week 6): an object that should be behind the sofa but floats in front of it no longer looks like it is <em>in</em> the room.</p>
+</section>
+<section id="coordinate-spaces" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="coordinate-spaces"><span class="header-section-number">7.2</span> 5.2 Coordinate Spaces</h3>
+<p>A spatial application juggles several coordinate spaces, each with its own origin:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Space</th>
+<th>Origin</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Tracking space</strong></td>
+<td>Wherever tracking started</td>
+<td>Can shift when the user recentres or the device relocalises</td>
+</tr>
+<tr class="even">
+<td><strong>World / scene space</strong></td>
+<td>The application’s chosen origin</td>
+<td>In Unity, usually the XR Origin</td>
+</tr>
+<tr class="odd">
+<td><strong>Anchor space</strong></td>
+<td>A real place in the room</td>
+<td>Updated as tracking improves</td>
+</tr>
+<tr class="even">
+<td><strong>Local (object) space</strong></td>
+<td>The object itself</td>
+<td>Position relative to its parent</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/coordinate-spaces-slide-11.png" class="img-fluid figure-img" style="width:70.0%" alt="A room with coordinate axes for tracking space on the floor, the head pose, and an anchor on a table; an object is positioned relative to the anchor."></p>
+<figcaption>Coordinate spaces: parent content to an anchor, not to the tracking origin.</figcaption>
+</figure>
+</div>
+<p>The device converts between these spaces with <strong>transforms</strong>. The practical rule is simple: parent placed content to an <strong>anchor</strong> rather than placing it at fixed world coordinates. When the device corrects its estimate of the room, the anchor moves with the room and the content moves with the anchor. Content placed at fixed world coordinates stays where the <em>old</em> estimate put it, and visibly drifts away from the real surface.</p>
+<hr>
+</section>
+</section>
+<section id="the-privacy-question" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="the-privacy-question"><span class="header-section-number">8</span> 6. The Privacy Question</h2>
+<p>A room scan is a detailed spatial record of someone’s home. It can reveal:</p>
+<ul>
+<li>The <strong>layout and size</strong> of the home, and which room is the bedroom</li>
+<li><strong>Objects the user owns</strong>, and their value</li>
+<li>Clues to <strong>location</strong>: the view from a window, the orientation of the room</li>
+<li>When combined with camera images, <strong>people, documents and photographs</strong> in the room</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week07/spatial-privacy-slide-12.png" class="img-fluid figure-img" style="width:70.0%" alt="A room scan revealing a window, a family photo, a bedroom layout and a laptop; three questions about storage, sharing and disclosure; and a permission prompt to access spatial data."></p>
+<figcaption>A room scan is a record of a home: disclosure is the designer’s job.</figcaption>
+</figure>
+</div>
+<p>Platforms gate this data. On Quest, for example, an app must request permission before it can read the user’s scene data. But a permission prompt tells the user very little about what <em>this</em> app will do with the data. A designer should be able to answer, plainly and before asking for access:</p>
+<ol type="1">
+<li><strong>What is stored?</strong> Planes and labels only, the full mesh, or camera images?</li>
+<li><strong>Where does it go?</strong> Does it stay on the device, or is it uploaded, shared with other users, or used to train models?</li>
+<li><strong>What did you tell the user?</strong> Was the purpose explained in plain language, at the moment it matters?</li>
+</ol>
+<p>Collect only what the feature needs, keep it on the device where possible, and say so. De Guzman, Thilakarathna and Seneviratne (2019) survey these risks across mixed reality systems in more depth.</p>
+<hr>
+</section>
+<section id="summary" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="summary"><span class="header-section-number">9</span> Summary</h2>
+<p>Spatial computing is distinguished from VR by persistence and awareness: content that knows where it is and stays there. Tracking and SLAM tell the device where it is, and fail predictably in low light, on blank or repetitive surfaces and when the cameras are covered. Scene understanding supplies planes, meshes and labels, some measured live and some declared in setup. Anchors are the mechanism for persistence; they are best estimates that drift with distance, so content should be kept close to them. And because a room scan is a record of a home, both scene understanding and anchors carry privacy obligations that are the designer’s to address.</p>
+<hr>
+</section>
+<section id="self-check-questions" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">10</span> Self-Check Questions</h2>
+<ol type="1">
+<li>Why does a headset need both cameras and an IMU to track its pose? What goes wrong with each on its own?</li>
+<li>Explain loop closure in one sentence. What does the user see when it happens?</li>
+<li>Name four conditions under which tracking degrades, and say what the user experiences in each.</li>
+<li>What is the difference between measured and declared scene geometry? Give one advantage of each.</li>
+<li>A museum wants a virtual exhibit label to appear beside the same painting every day. Which kind of anchor does it need, and what should happen if relocalisation fails?</li>
+<li>Why should content be parented to an anchor rather than placed at fixed world coordinates?</li>
+<li>List three things a room scan can reveal about a user, and three questions a designer should answer before asking for access to it.</li>
+</ol>
+<hr>
+</section>
+<section id="references" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="references"><span class="header-section-number">11</span> References</h2>
+<ul>
+<li>Durrant-Whyte, H. &amp; Bailey, T. (2006) “Simultaneous localization and mapping: part I.” <em>IEEE Robotics &amp; Automation Magazine</em>, 13(2), 99-110.</li>
+<li>Cadena, C., Carlone, L., Carrillo, H., Latif, Y., Scaramuzza, D., Neira, J., Reid, I. &amp; Leonard, J.J. (2016) “Past, present, and future of simultaneous localization and mapping: toward the robust-perception age.” <em>IEEE Transactions on Robotics</em>, 32(6), 1309-1332.</li>
+<li>De Guzman, J.A., Thilakarathna, K. &amp; Seneviratne, A. (2019) “Security and privacy approaches in mixed reality: a literature survey.” <em>ACM Computing Surveys</em>, 52(6), Article 110.</li>
+<li>Unity Technologies. <em>AR Foundation manual</em>: planes, raycasts, anchors and occlusion. <a href="https://docs.unity3d.com">docs.unity3d.com</a></li>
+<li>Meta. <em>Scene, spatial anchors and depth for Meta Quest</em>. <a href="https://developers.meta.com">developers.meta.com</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../weeks/07-week-07/01-slides.html" class="pagination-link" aria-label="Week 7 Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 7 Slides</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../weeks/07-week-07/03-practical.html" class="pagination-link" aria-label="Week 7 Practical">
+        <span class="nav-page-text">Week 7 Practical</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<!-- Render ```mermaid fenced code blocks that Quarto leaves as plain code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var fenced = document.querySelectorAll('pre.sourceCode.mermaid');
+    if (!fenced.length) return;
+    function run() {
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      fenced.forEach(function (pre) {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        var wrapper = pre.closest('div.sourceCode') || pre;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        if (wrapper.parentNode) wrapper.parentNode.replaceChild(div, wrapper);
+      });
+      mermaid.run({ querySelector: '.mermaid' });
+    }
+    if (window.mermaid) {
+      run();
+    } else {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+      s.onload = run;
+      document.head.appendChild(s);
+    }
+  });
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+
+
+
+<!-- CourseFoundry feedback embed disabled -->
+</body></html>
