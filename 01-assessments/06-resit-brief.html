@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mr.&nbsp;John Jennings">
+
+<title>Resit Brief – Virtual, Augmented and Spatial Computing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../weeks/01-week-01/01-slides.html" rel="next">
+<link href="../01-assessments/05-external-examiner-summary.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dfc167e2a818c2b461629ea4095874ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+<meta property="og:title" content="Resit Brief – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Combined Assessment 2 and 3: New XR Analysis, Interaction Prototype and Mini Game">
+<meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-assessments/01-overview.html">Assessments</a></li><li class="breadcrumb-item"><a href="../01-assessments/06-resit-brief.html">Resit Brief</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Virtual, Augmented and Spatial Computing</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semester Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/01-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/02-assessment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/03-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/04-assessment3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/05-external-examiner-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Summary for External Examiners</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../01-assessments/06-resit-brief.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Resit Brief</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/02-week-02/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/02-week-02/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/03-week-03/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/03-week-03/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/04-week-04/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/04-week-04/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/04-week-04/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 05</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/05-week-05/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/05-week-05/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/05-week-05/03-consent-form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant Consent Form</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/05-week-05/04-ssq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulator Sickness Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 06</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/06-week-06/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/06-week-06/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/06-week-06/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/06-week-06/06-sus-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Usability Scale Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 07</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/07-week-07/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/07-week-07/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../weeks/07-week-07/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04-references/01-bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../04-references/02-index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes</a></li>
+  <li><a href="#what-new-means" id="toc-what-new-means" class="nav-link" data-scroll-target="#what-new-means">What “new” means</a></li>
+  <li><a href="#the-rules" id="toc-the-rules" class="nav-link" data-scroll-target="#the-rules">The Rules</a></li>
+  <li><a href="#choosing-a-new-concept" id="toc-choosing-a-new-concept" class="nav-link" data-scroll-target="#choosing-a-new-concept">Choosing a New Concept</a></li>
+  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task">Task</a>
+  <ul class="collapse">
+  <li><a href="#part-1-experience-analysis" id="toc-part-1-experience-analysis" class="nav-link" data-scroll-target="#part-1-experience-analysis">Part 1: Experience Analysis</a></li>
+  <li><a href="#part-2-interaction-prototype-and-mini-game" id="toc-part-2-interaction-prototype-and-mini-game" class="nav-link" data-scroll-target="#part-2-interaction-prototype-and-mini-game">Part 2: Interaction Prototype and Mini Game</a></li>
+  <li><a href="#part-3-evaluation" id="toc-part-3-evaluation" class="nav-link" data-scroll-target="#part-3-evaluation">Part 3: Evaluation</a></li>
+  </ul></li>
+  <li><a href="#concept-approval" id="toc-concept-approval" class="nav-link" data-scroll-target="#concept-approval">Concept Approval</a></li>
+  <li><a href="#milestones" id="toc-milestones" class="nav-link" data-scroll-target="#milestones">Milestones</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a>
+  <ul class="collapse">
+  <li><a href="#report-structure" id="toc-report-structure" class="nav-link" data-scroll-target="#report-structure">Report structure</a></li>
+  </ul></li>
+  <li><a href="#marking-criteria" id="toc-marking-criteria" class="nav-link" data-scroll-target="#marking-criteria">Marking Criteria</a></li>
+  <li><a href="#marking-bands" id="toc-marking-bands" class="nav-link" data-scroll-target="#marking-bands">Marking Bands</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../01-assessments/01-overview.html">Assessments</a></li><li class="breadcrumb-item"><a href="../01-assessments/06-resit-brief.html">Resit Brief</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Resit Brief</h1>
+<p class="subtitle lead">Combined Assessment 2 and 3: New XR Analysis, Interaction Prototype and Mini Game</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mr.&nbsp;John Jennings </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This brief is for students who need to <strong>resit Assessment 2 and Assessment 3</strong> together. It replaces both with <strong>one combined submission</strong>.</p>
+<p>You will analyse an existing VR or AR application, build <strong>one interaction</strong> from it, extend that interaction into a <strong>small, complete mini game</strong> (a vertical slice), and evaluate the result with real users.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The concept must be new
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your resit must be built on a <strong>new concept and a new core interaction</strong>. It must <strong>not</strong> be based on anything you submitted for Assessment 2 or Assessment 3, or on any earlier attempt at either. See <a href="#what-new-means">What “new” means</a> below.</p>
+</div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Replaces</td>
+<td><a href="../01-assessments/03-assessment2.html">Assessment 2</a> (30%) and <a href="../01-assessments/04-assessment3.html">Assessment 3</a> (40%)</td>
+</tr>
+<tr class="even">
+<td>Weighting</td>
+<td>70% of the module (30% + 40%)</td>
+</tr>
+<tr class="odd">
+<td>Type</td>
+<td>Case study, prototype and individual project</td>
+</tr>
+<tr class="even">
+<td>Submission</td>
+<td>Individual</td>
+</tr>
+<tr class="odd">
+<td>Due</td>
+<td>See Moodle Assignment for the resit due date and time</td>
+</tr>
+</tbody>
+</table>
+<p>If you also need to resit Assessment 1 (continuous lab work), you will be given a separate brief for it.</p>
+<hr>
+</section>
+<section id="learning-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
+<ul>
+<li><strong>LO1:</strong> Critical understanding of 3D systems and AR/VR principles in a spatial computing context</li>
+<li><strong>LO2:</strong> Explore, critique and deconstruct modern VR, AR and spatial computing experiences</li>
+<li><strong>LO3:</strong> Theoretical understanding of, and practical competence with, advanced input/output devices and sensors</li>
+<li><strong>LO4:</strong> Apply HCI principles to the construction <strong>and evaluation</strong> of immersive systems</li>
+</ul>
+<hr>
+</section>
+<section id="what-new-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-new-means">What “new” means</h2>
+<p>To count as new, your resit must meet <strong>all</strong> of these conditions:</p>
+<ol type="1">
+<li><strong>A different application.</strong> You analyse an application that is not the one you analysed in Assessment 2.</li>
+<li><strong>A different core interaction.</strong> Your core mechanic must be in a <strong>different interaction category</strong> from your Assessment 2 and Assessment 3 work. For example, if you previously built a throw or grab interaction, a different throwing game is <strong>not</strong> new. Choose something such as a socket, a measure tool, a wrist menu or a draw tool instead. The categories are listed in the table in <a href="#choosing-a-new-concept">Choosing a new concept</a>.</li>
+<li><strong>A different game.</strong> Your mini game is not a variation, reskin or extension of a game you built before.</li>
+<li><strong>Fresh work.</strong> You start a <strong>new Unity project</strong>. Do not reuse code, scenes, prefabs, scripts, artwork, audio or written text from your earlier submissions.</li>
+</ol>
+<p>You <strong>may</strong> reuse:</p>
+<ul>
+<li>skills and techniques you learned in the labs</li>
+<li>the Unity packages and sample assets the module provides (for example XR Interaction Toolkit samples), provided you credit them</li>
+<li>lessons learned from your earlier feedback. Say so in your reflection.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Evidence of originality
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your work will be checked against your earlier submissions. Reusing earlier work is treated as an academic integrity issue. Your repository history, development log and concept approval (see <a href="#submission">Submission</a>) are part of the evidence that this is new work.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-rules" class="level2">
+<h2 class="anchored" data-anchor-id="the-rules">The Rules</h2>
+<p>The same practical rules as Assessment 2 apply. Read them in the <a href="../01-assessments/03-assessment2.html">Assessment 2 brief</a>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>1. Analyse anything you can use hands-on
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may analyse <strong>any VR or AR application</strong> that runs on equipment available from TUS or on your own equipment, as long as you have used it yourself. An analysis based only on videos or reviews is not accepted.</p>
+<section id="build-the-project-in-unity" class="level2">
+<h2 class="anchored" data-anchor-id="build-the-project-in-unity">2. Build the project in Unity</h2>
+<p>Your project must be a <strong>Unity VR or AR application</strong> running on a <strong>real device</strong> from the <a href="../01-assessments/03-assessment2.html#equipment">Assessment 2 equipment table</a>. Other engines are not accepted. You can develop and debug in the <strong>Meta XR Simulator</strong> or the <strong>XR Interaction Simulator</strong>, but your video must show the project running on a real device.</p>
+</section>
+</div>
+</div>
+<hr>
+</section>
+<section id="choosing-a-new-concept" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-new-concept">Choosing a New Concept</h2>
+<p>Choose an application with at least one interaction that is small enough to rebuild. Then plan a mini game around that interaction.</p>
+<p>The table shows the interaction categories and some mini game ideas. The ideas are examples only. <strong>Your concept must be in a category you did not use in Assessment 2 or 3.</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Interaction category</th>
+<th>Core interaction (the prototype)</th>
+<th>Example mini game (the vertical slice)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Grab, move, throw</td>
+<td>Pick up an object and release or throw it</td>
+<td>Bowling alley, target-toss or a recycling-sorting game</td>
+</tr>
+<tr class="even">
+<td>Ray select</td>
+<td>Point a ray at a world-space panel and press a button</td>
+<td>A pattern-matching or memory panel game</td>
+</tr>
+<tr class="odd">
+<td>Socket / snap-in</td>
+<td>Place an object in a slot to trigger a change</td>
+<td>A circuit-building or potion-mixing puzzle</td>
+</tr>
+<tr class="even">
+<td>Hit a moving target</td>
+<td>Strike or shoot incoming targets with feedback</td>
+<td>A whack-a-mole or reflex-training game</td>
+</tr>
+<tr class="odd">
+<td>Draw in 3D</td>
+<td>Leave a trail while a button is held</td>
+<td>A trace-the-shape challenge with a score</td>
+</tr>
+<tr class="even">
+<td>Wrist or palm menu</td>
+<td>A menu appears when the palm turns up</td>
+<td>A cooking or tool-belt game where items are chosen from the menu</td>
+</tr>
+<tr class="odd">
+<td>Two-handed rotate and scale</td>
+<td>Grab a model with both hands to rotate and resize it</td>
+<td>A 3D jigsaw or part-assembly challenge</td>
+</tr>
+<tr class="even">
+<td>Measure (AR)</td>
+<td>Tap two points on real surfaces and show the distance</td>
+<td>An AR estimation game: guess a length, then measure it</td>
+</tr>
+<tr class="odd">
+<td>Tap-to-place (AR)</td>
+<td>Place an object on a detected plane</td>
+<td>A timed AR layout or decorating challenge</td>
+</tr>
+<tr class="even">
+<td>Image-triggered content (AR)</td>
+<td>A model appears on a printed image</td>
+<td>An AR treasure-hunt or poster-based quiz</td>
+</tr>
+<tr class="odd">
+<td>Gaze-and-dwell</td>
+<td>A reticle fills while you look at a target</td>
+<td>A 360° observation or hidden-object game (Cardboard)</td>
+</tr>
+<tr class="even">
+<td>Teleport / locomotion</td>
+<td>Move between points with an arc and marker</td>
+<td>A short navigation or obstacle course</td>
+</tr>
+</tbody>
+</table>
+<p>Your concept must be <strong>agreed with me in writing before you start building</strong> (see <a href="#concept-approval">Concept approval</a>).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some applications are excellent to analyse but too large to rebuild, such as location-based AR or multiplayer social VR. That is fine: analyse the whole application and rebuild one small interaction from it.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="task" class="level2">
+<h2 class="anchored" data-anchor-id="task">Task</h2>
+<p>The task has three linked parts. They are all about the <strong>same new concept</strong>.</p>
+<section id="part-1-experience-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-experience-analysis">Part 1: Experience Analysis</h3>
+<p>Analyse the application you chose, using the frameworks from Weeks 3–6:</p>
+<ul>
+<li><strong>Interaction design:</strong> Norman’s Action Cycle and the Gulfs of Execution and Evaluation</li>
+<li><strong>Presence and immersion:</strong> Slater’s Place Illusion and Plausibility Illusion</li>
+<li><strong>Spatial design:</strong> position on Milgram’s continuum, placement of UI and content</li>
+<li><strong>Comfort and usability:</strong> locomotion, reach, fatigue, simulator sickness, accessibility</li>
+</ul>
+<p>Focus on <strong>one or two key interactions</strong> and say which one you will rebuild and why. Support your analysis with screenshots, photos or recordings you captured yourself, and with at least one diagram (for example an action-cycle table).</p>
+</section>
+<section id="part-2-interaction-prototype-and-mini-game" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-interaction-prototype-and-mini-game">Part 2: Interaction Prototype and Mini Game</h3>
+<p>Build the project in two stages.</p>
+<p><strong>Stage A: Core interaction.</strong> Rebuild <strong>one key interaction</strong> from the application. It must be reliable on a real device and give clear feedback to the user.</p>
+<p><strong>Stage B: Vertical slice.</strong> Extend the interaction into a short, <strong>complete and playable mini game</strong> of about 2–3 minutes. Work through these layers in order, and stop when you run out of time:</p>
+<ol type="1">
+<li><strong>Make the core reliable.</strong></li>
+<li><strong>Add a goal and a loop:</strong> a clear start, a challenge, and an end or result.</li>
+<li><strong>Add multi-modal feedback:</strong> visual effects, spatial audio and haptics (where the device supports them) working together.</li>
+<li><strong>Add essential UI:</strong> instructions, score or progress, and a results state, placed with comfort in mind.</li>
+<li><strong>Polish:</strong> lighting, animation and performance on device.</li>
+</ol>
+<p>Primitive shapes and free assets are fine. Credit any assets you did not make.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Keep the scope small
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A small mini game that works beats an ambitious one that is broken. The <strong>“Avoid” list from <a href="../01-assessments/03-assessment2.html">Assessment 2</a> still applies</strong>: no multiplayer or networking, no persistent, shared or cloud anchors, no full-body avatars, no AI-driven characters, no large content pipelines.</p>
+<p>If you cannot describe your mini game in <strong>two sentences</strong>, cut it down.</p>
+</div>
+</div>
+</section>
+<section id="part-3-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-evaluation">Part 3: Evaluation</h3>
+<p>Because there is no earlier prototype to compare against, you show that evaluation changed your work by testing <strong>twice</strong>:</p>
+<ul>
+<li><strong>Round 1:</strong> test the core interaction (end of Stage A, or the first playable version) with at least <strong>three participants</strong>.</li>
+<li><strong>Improve</strong> the build using what you found.</li>
+<li><strong>Round 2:</strong> test the improved mini game with at least <strong>three participants</strong>. They may include people from Round 1.</li>
+</ul>
+<p>In each round, every participant completes:</p>
+<ul>
+<li>the <strong>SSQ</strong> before and after, so you can report the change</li>
+<li>the <strong>SUS</strong> after</li>
+</ul>
+<p>Use the <a href="../weeks/05-week-05/03-consent-form.html">consent form</a>, the <a href="../weeks/05-week-05/04-ssq-questionnaire.html">SSQ</a> and the <a href="../weeks/06-week-06/06-sus-questionnaire.html">SUS</a>. Report SUS scores and SSQ change for each round, with your observations. Show <strong>what you changed between the rounds, and why</strong>. Be honest about what a small sample can and cannot show.</p>
+<hr>
+</section>
+</section>
+<section id="concept-approval" class="level2">
+<h2 class="anchored" data-anchor-id="concept-approval">Concept Approval</h2>
+<p>Before you start building, submit a short <strong>concept proposal</strong> through the route given on Moodle. It must include:</p>
+<ul>
+<li>the application you will analyse and the device you used it on</li>
+<li>the core interaction you will rebuild and its <strong>interaction category</strong></li>
+<li>a two-sentence description of your mini game</li>
+<li>the target device for your build</li>
+<li>the interaction category, application and game you used in Assessment 2 and Assessment 3, so I can confirm that the new concept is different</li>
+</ul>
+<p>Do not begin building until you have my written approval. Work started without approval may be rejected as not meeting the brief.</p>
+<hr>
+</section>
+<section id="milestones" class="level2">
+<h2 class="anchored" data-anchor-id="milestones">Milestones</h2>
+<p>Exact dates are on Moodle. These are checkpoints, not separate submissions.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Point</th>
+<th>What you should have</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Start of resit period</td>
+<td>Concept proposal sent and approved</td>
+</tr>
+<tr class="even">
+<td>Early</td>
+<td>Application analysed. Core interaction running on a real device</td>
+</tr>
+<tr class="odd">
+<td>Middle</td>
+<td>Round 1 test complete. Mini game loop (start, goal, end) working</td>
+</tr>
+<tr class="even">
+<td>Late</td>
+<td>Multi-modal feedback and UI added. Round 2 test complete</td>
+</tr>
+<tr class="odd">
+<td>Deadline</td>
+<td>Final submission</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Submit:</p>
+<ol type="1">
+<li><strong>Report (3000–3500 words)</strong> covering the analysis, design decisions, a short technical description, both evaluation rounds, and a critical reflection</li>
+<li><strong>Unity project</strong>, zipped, excluding the <code>Library</code>, <code>Temp</code>, <code>Logs</code> and <code>Build</code> folders</li>
+<li><strong>Build</strong> for your target device (an <code>.apk</code> for Quest, Pico or Android; a Windows build for PC VR; for iOS the video is accepted in place of a build)</li>
+<li><strong>Video demo (3–4 minutes)</strong> showing the mini game running on a real device, ideally alongside footage of you using it</li>
+<li><strong>Evaluation evidence:</strong> consent forms (with names removed), completed SSQ and SUS forms or summaries, and your observation notes</li>
+<li><strong>Repository link and development log:</strong> a link to your Git repository with commit history from the resit period, and a short log of what you built and when</li>
+<li><strong>Originality declaration:</strong> a short statement confirming that the concept, code and written work are new, and listing any third-party assets</li>
+</ol>
+<section id="report-structure" class="level3">
+<h3 class="anchored" data-anchor-id="report-structure">Report structure</h3>
+<ol type="1">
+<li>Application analysis (Part 1)</li>
+<li>Concept and design decisions, with reference to module concepts, including how feedback is combined across visual, audio and haptic channels</li>
+<li>Technical implementation</li>
+<li>Evaluation: method, Round 1 findings, changes made, Round 2 findings</li>
+<li>Critical reflection and further work, including what you learned from your earlier attempt</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why one report?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The report is shorter than the two original reports added together. The analysis is focused on one or two interactions, and the testing replaces the comparison with an earlier prototype.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="marking-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="marking-criteria">Marking Criteria</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th style="text-align: center;">Weight</th>
+<th>What is assessed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Experience analysis</td>
+<td style="text-align: center;">15%</td>
+<td>Depth and critical quality of the analysis of the original application. Correct use of the Weeks 3–6 frameworks. Evidence you gathered yourself</td>
+</tr>
+<tr class="even">
+<td>Technical implementation</td>
+<td style="text-align: center;">25%</td>
+<td>The interaction and mini game run reliably on a real device. Competent use of the toolchain. A complete, playable loop with no blocking bugs. Appropriate scope</td>
+</tr>
+<tr class="odd">
+<td>Interaction and experience design</td>
+<td style="text-align: center;">25%</td>
+<td>Deliberate design choices justified with HCI principles (feedback, affordances, comfort, reach, accessibility). Coherent multi-modal feedback. Clear UI and a clear start and end</td>
+</tr>
+<tr class="even">
+<td>Evaluation</td>
+<td style="text-align: center;">20%</td>
+<td>A real method, honestly applied, with SUS and SSQ in two rounds. Findings that visibly changed the work</td>
+</tr>
+<tr class="odd">
+<td>Critical reflection</td>
+<td style="text-align: center;">5%</td>
+<td>Engages with module theory. Honest about limitations. Shows what was learned since the earlier attempt</td>
+</tr>
+<tr class="even">
+<td>Presentation and documentation</td>
+<td style="text-align: center;">10%</td>
+<td>Clear structure and writing, labelled figures, correct referencing, a clear video, and complete supporting documents</td>
+</tr>
+</tbody>
+</table>
+<p>A submission that is not based on a new concept, as defined above, cannot pass the Technical implementation and Interaction design components.</p>
+<hr>
+</section>
+<section id="marking-bands" class="level2">
+<h2 class="anchored" data-anchor-id="marking-bands">Marking Bands</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Band</th>
+<th>Descriptor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>70–100</td>
+<td>Controlled and reliable. Analysis is critical and uses the module frameworks. Design choices are explicitly grounded in module theory. Both evaluation rounds are genuine and demonstrably changed the work. Reflection is self-aware.</td>
+</tr>
+<tr class="even">
+<td>60–69</td>
+<td>Solid, working mini game with clear design reasoning. Evaluation carried out competently in both rounds. Reflection shows good understanding.</td>
+</tr>
+<tr class="odd">
+<td>50–59</td>
+<td>Application runs with limitations. Design reasoning present but thin. Evaluation minimal or only one round. Reflection descriptive.</td>
+</tr>
+<tr class="even">
+<td>Below 50</td>
+<td>Incomplete or non-functional. Little design rationale, no meaningful evaluation, or the concept is not new.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">Tips</h2>
+<ul>
+<li><strong>Get approval first.</strong> A concept that is too similar to your earlier work will be sent back.</li>
+<li><strong>Start fresh and start early.</strong> Get a simple version running on the device in the first week.</li>
+<li><strong>Keep the interaction small.</strong> Build the loop before the effects.</li>
+<li><strong>Test early.</strong> Round 1 is meant to find problems while you can still fix them.</li>
+<li><strong>Test with someone who has not seen it.</strong> You cannot evaluate your own interface.</li>
+<li><strong>Write the report as you go.</strong> Design decisions are impossible to reconstruct honestly at the end.</li>
+<li><strong>Report what did not work.</strong> An honest evaluation of a flawed build scores better than a claim that everything worked.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../01-assessments/05-external-examiner-summary.html" class="pagination-link" aria-label="Assessment Summary for External Examiners">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Assessment Summary for External Examiners</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../weeks/01-week-01/01-slides.html" class="pagination-link" aria-label="Lecture Slides">
+        <span class="nav-page-text">Lecture Slides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<!-- Render ```mermaid fenced code blocks that Quarto leaves as plain code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var fenced = document.querySelectorAll('pre.sourceCode.mermaid');
+    if (!fenced.length) return;
+    function run() {
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      fenced.forEach(function (pre) {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        var wrapper = pre.closest('div.sourceCode') || pre;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        if (wrapper.parentNode) wrapper.parentNode.replaceChild(div, wrapper);
+      });
+      mermaid.run({ querySelector: '.mermaid' });
+    }
+    if (window.mermaid) {
+      run();
+    } else {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+      s.onload = run;
+      document.head.appendChild(s);
+    }
+  });
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+
+
+
+<!-- CourseFoundry feedback embed disabled -->
+</body></html>
