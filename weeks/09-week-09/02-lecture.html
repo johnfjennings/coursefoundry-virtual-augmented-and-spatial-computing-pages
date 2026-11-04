@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 9 Lecture Notes – Virtual, Augmented and Spatial Computing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../04-references/01-bibliography.html" rel="next">
+<link href="../../weeks/09-week-09/01-slides.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-731df62d59345f742ddeaa86f302c789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-731df62d59345f742ddeaa86f302c789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-731df62d59345f742ddeaa86f302c789.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../custom.css">
+<meta property="og:title" content="Week 9 Lecture Notes – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Environment &amp; World Design">
+<meta property="og:image" content="../../images/week09/viewpoint-slide-02.png">
+<meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+<meta property="og:image:alt" content="Film uses cuts, close-ups and camera moves to frame the shot; in XR the user is surrounded by cues of light, landmarks, sound and motion that invite attention.">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/09-week-09/01-slides.html">Week 09</a></li><li class="breadcrumb-item"><a href="../../weeks/09-week-09/02-lecture.html">Week 9 Lecture Notes</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Virtual, Augmented and Spatial Computing</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semester Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/01-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/02-assessment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/03-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/04-assessment3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 05</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/03-consent-form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant Consent Form</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/04-ssq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulator Sickness Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 06</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/06-sus-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Usability Scale Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 07</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 09</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/02-lecture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 9 Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/01-bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/02-index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2</span> Learning Objectives</a></li>
+  <li><a href="#the-user-owns-the-viewpoint" id="toc-the-user-owns-the-viewpoint" class="nav-link" data-scroll-target="#the-user-owns-the-viewpoint"><span class="header-section-number">3</span> 1. The User Owns the Viewpoint</a></li>
+  <li><a href="#scale-and-proportion" id="toc-scale-and-proportion" class="nav-link" data-scroll-target="#scale-and-proportion"><span class="header-section-number">4</span> 2. Scale and Proportion</a>
+  <ul class="collapse">
+  <li><a href="#designing-at-11" id="toc-designing-at-11" class="nav-link" data-scroll-target="#designing-at-11"><span class="header-section-number">4.1</span> 2.1 Designing at 1:1</a></li>
+  <li><a href="#when-scale-goes-wrong" id="toc-when-scale-goes-wrong" class="nav-link" data-scroll-target="#when-scale-goes-wrong"><span class="header-section-number">4.2</span> 2.2 When Scale Goes Wrong</a></li>
+  <li><a href="#breaking-scale-on-purpose" id="toc-breaking-scale-on-purpose" class="nav-link" data-scroll-target="#breaking-scale-on-purpose"><span class="header-section-number">4.3</span> 2.3 Breaking Scale on Purpose</a></li>
+  </ul></li>
+  <li><a href="#comfort-zones-and-sightlines" id="toc-comfort-zones-and-sightlines" class="nav-link" data-scroll-target="#comfort-zones-and-sightlines"><span class="header-section-number">5</span> 3. Comfort Zones and Sightlines</a>
+  <ul class="collapse">
+  <li><a href="#where-content-can-comfortably-go" id="toc-where-content-can-comfortably-go" class="nav-link" data-scroll-target="#where-content-can-comfortably-go"><span class="header-section-number">5.1</span> 3.1 Where Content Can Comfortably Go</a></li>
+  <li><a href="#sightlines" id="toc-sightlines" class="nav-link" data-scroll-target="#sightlines"><span class="header-section-number">5.2</span> 3.2 Sightlines</a></li>
+  </ul></li>
+  <li><a href="#wayfinding-and-affordance-in-3d" id="toc-wayfinding-and-affordance-in-3d" class="nav-link" data-scroll-target="#wayfinding-and-affordance-in-3d"><span class="header-section-number">6</span> 4. Wayfinding and Affordance in 3D</a>
+  <ul class="collapse">
+  <li><a href="#wayfinding" id="toc-wayfinding" class="nav-link" data-scroll-target="#wayfinding"><span class="header-section-number">6.1</span> 4.1 Wayfinding</a></li>
+  <li><a href="#affordance-through-form" id="toc-affordance-through-form" class="nav-link" data-scroll-target="#affordance-through-form"><span class="header-section-number">6.2</span> 4.2 Affordance Through Form</a></li>
+  </ul></li>
+  <li><a href="#lighting-as-direction" id="toc-lighting-as-direction" class="nav-link" data-scroll-target="#lighting-as-direction"><span class="header-section-number">7</span> 5. Lighting as Direction</a>
+  <ul class="collapse">
+  <li><a href="#using-light-to-guide-attention" id="toc-using-light-to-guide-attention" class="nav-link" data-scroll-target="#using-light-to-guide-attention"><span class="header-section-number">7.1</span> 5.1 Using Light to Guide Attention</a></li>
+  <li><a href="#lighting-on-a-mobile-gpu-budget" id="toc-lighting-on-a-mobile-gpu-budget" class="nav-link" data-scroll-target="#lighting-on-a-mobile-gpu-budget"><span class="header-section-number">7.2</span> 5.2 Lighting on a Mobile GPU Budget</a></li>
+  </ul></li>
+  <li><a href="#environmental-storytelling" id="toc-environmental-storytelling" class="nav-link" data-scroll-target="#environmental-storytelling"><span class="header-section-number">8</span> 6. Environmental Storytelling</a></li>
+  <li><a href="#environment-decisions-are-comfort-decisions" id="toc-environment-decisions-are-comfort-decisions" class="nav-link" data-scroll-target="#environment-decisions-are-comfort-decisions"><span class="header-section-number">9</span> 7. Environment Decisions Are Comfort Decisions</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">10</span> Summary</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">12</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/09-week-09/01-slides.html">Week 09</a></li><li class="breadcrumb-item"><a href="../../weeks/09-week-09/02-lecture.html">Week 9 Lecture Notes</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 9 Lecture Notes</h1>
+<p class="subtitle lead">Environment &amp; World Design</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>In XR the user owns the viewpoint, so cuts, close-ups and forced camera moves are lost and attention must be invited through composition, light, form, sound and motion.</li>
+<li>Design at 1:1 (1 unit = 1 metre) with the user’s body as the ruler, check scale from inside the headset, and break scale only deliberately.</li>
+<li>Place content within comfortable reach, mid-field and far-field zones and head-rotation limits, and design <strong>sightlines</strong> as the closest thing XR has to planned shots.</li>
+<li>Guide users with Lynch’s paths, edges, districts, nodes and landmarks, and with signifiers built into the world, using signs and arrows only as a last resort.</li>
+<li>Light directs the eye where a camera cannot, but on a standalone headset’s GPU budget you should bake what does not move and spend realtime lighting sparingly.</li>
+<li>Let the space tell its own story, and remember that environment choices such as ceiling height, patterns, edges and stairs are comfort decisions as much as locomotion is.</li>
+</ul>
+</div>
+</div>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p><strong>Duration:</strong> 1 hour</p>
+<p>Content creation for a medium in which the user owns the viewpoint. Every technique film and conventional games use to control attention – cutting, framing, camera movement – is either unavailable or actively harmful in XR. This session covers what replaces them.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2</span> Learning Objectives</h2>
+<p>By the end of this lecture, students will be able to:</p>
+<ul>
+<li>Compose a scene that guides attention without taking camera control from the user</li>
+<li>Apply human-scale proportion rules, and justify any deliberate departure from them</li>
+<li>Place content within comfortable viewing and reach zones</li>
+<li>Use sightlines, landmarks, form and light for wayfinding instead of UI</li>
+<li>Defend environment decisions against comfort, legibility and performance criteria</li>
+</ul>
+<hr>
+</section>
+<section id="the-user-owns-the-viewpoint" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-user-owns-the-viewpoint"><span class="header-section-number">3</span> 1. The User Owns the Viewpoint</h2>
+<p>Film directs attention with the camera: a cut chooses what you see next, a close-up tells you what matters, and a camera move carries you through a space. Conventional games borrow the same tools, and in third-person games the camera is often moved for the player.</p>
+<p>In XR the user’s head <em>is</em> the camera. That removes the director’s main tools:</p>
+<ul>
+<li>A <strong>forced camera move</strong> creates exactly the visual–vestibular conflict that causes simulator sickness (Weeks 3 and 5).</li>
+<li>A <strong>cut</strong> breaks Place Illusion: one moment you are somewhere, the next you are not.</li>
+<li>A <strong>close-up</strong> is impossible: the user decides how close to stand.</li>
+</ul>
+<p>What remains is the environment itself. Attention has to be <strong>invited</strong> by composition (what is placed where), light (where the eye is drawn), form (what looks usable and where to go), and sound and motion (what turns the head; spatial audio is covered in Week 10).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/viewpoint-slide-02.png" class="img-fluid figure-img" style="width:70.0%" alt="Film uses cuts, close-ups and camera moves to frame the shot; in XR the user is surrounded by cues of light, landmarks, sound and motion that invite attention."></p>
+<figcaption>In XR the environment is the interface: attention is invited, not forced.</figcaption>
+</figure>
+</div>
+<p>The practical consequence is that environment design is not decoration added at the end. It is the interaction design for anything the user has to find, notice or understand.</p>
+<hr>
+</section>
+<section id="scale-and-proportion" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="scale-and-proportion"><span class="header-section-number">4</span> 2. Scale and Proportion</h2>
+<section id="designing-at-11" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="designing-at-11"><span class="header-section-number">4.1</span> 2.1 Designing at 1:1</h3>
+<p>In a headset, the user’s own body is the measuring stick. Everyone has a lifetime of experience of how high a door is, how far away a table edge sits, and how tall a step should be. When a virtual space disagrees with that experience, users notice immediately, even if they cannot say what is wrong.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Object</th>
+<th>Typical real size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standing eye height</td>
+<td>~1.5-1.7 m (varies by person)</td>
+</tr>
+<tr class="even">
+<td>Seated eye height</td>
+<td>~1.1-1.3 m</td>
+</tr>
+<tr class="odd">
+<td>Door</td>
+<td>~2.0 m high, 0.8-0.9 m wide</td>
+</tr>
+<tr class="even">
+<td>Table or desk</td>
+<td>~0.72-0.76 m</td>
+</tr>
+<tr class="odd">
+<td>Kitchen counter</td>
+<td>~0.9 m</td>
+</tr>
+<tr class="even">
+<td>Stair riser</td>
+<td>~0.15-0.18 m</td>
+</tr>
+<tr class="odd">
+<td>Ceiling (domestic)</td>
+<td>~2.4-2.7 m</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/design-at-scale-slide-03.png" class="img-fluid figure-img" style="width:70.0%" alt="A 1.7 m figure beside a 2 m door, a 0.75 m table and a 2.4 to 2.7 m ceiling, with a dashed outline of an oversized 3 m game door."></p>
+<figcaption>Design at 1:1: the user’s body is the ruler.</figcaption>
+</figure>
+</div>
+<p>Environments built to game conventions are often scaled up, with wide corridors and tall doors, so that a third-person camera fits inside them. Viewed in a headset at the correct eye height, the same spaces feel cavernous and empty. In Unity, <strong>1 unit = 1 metre</strong>: model to real dimensions from the start, and import assets at the right scale rather than fixing them later.</p>
+</section>
+<section id="when-scale-goes-wrong" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="when-scale-goes-wrong"><span class="header-section-number">4.2</span> 2.2 When Scale Goes Wrong</h3>
+<p>Incorrect scale changes how users perceive <strong>themselves</strong> as much as the world:</p>
+<ul>
+<li>If the world is too <strong>large</strong>, users feel small, even child-like.</li>
+<li>If it is too <strong>small</strong>, users feel like giants walking through a model.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/scale-wrong-slide-04.png" class="img-fluid figure-img" style="width:70.0%" alt="The same figure beside an oversized chair, a correctly sized chair and a tiny chair: too big, 1:1 and too small."></p>
+<figcaption>The same room at three scales: only one feels right.</figcaption>
+</figure>
+</div>
+<p>Common causes:</p>
+<ul>
+<li>Assets modelled at arbitrary or game scale and never checked</li>
+<li>Camera height set in code rather than taken from tracking, so a seated user sees the world from standing height or vice versa</li>
+<li>A virtual floor that does not match the real floor, so users reach down for objects that are not there (use a <strong>floor-level tracking origin</strong> for standing experiences)</li>
+</ul>
+<p>Scale errors are almost invisible in the editor and obvious the moment you put the headset on. <strong>Check scale from inside</strong>: stand next to objects, reach for them, sit at a table, look out of a window.</p>
+</section>
+<section id="breaking-scale-on-purpose" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="breaking-scale-on-purpose"><span class="header-section-number">4.3</span> 2.3 Breaking Scale on Purpose</h3>
+<p>Sometimes the wrong scale is the point. Making the user tiny in a giant kitchen, or a giant above a miniature city, is a powerful effect precisely because the body notices. If you break 1:1, do it deliberately, make it obvious, and keep the user’s interaction distances comfortable even when the world is not.</p>
+<hr>
+</section>
+</section>
+<section id="comfort-zones-and-sightlines" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="comfort-zones-and-sightlines"><span class="header-section-number">5</span> 3. Comfort Zones and Sightlines</h2>
+<section id="where-content-can-comfortably-go" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="where-content-can-comfortably-go"><span class="header-section-number">5.1</span> 3.1 Where Content Can Comfortably Go</h3>
+<p>Content is comfortable to look at and use only within certain distances and angles:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zone</th>
+<th>Distance</th>
+<th>Use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Reach</strong></td>
+<td>~0.5-0.7 m</td>
+<td>Objects to touch, grab or press</td>
+</tr>
+<tr class="even">
+<td><strong>Mid field</strong></td>
+<td>~1-3 m</td>
+<td>UI, text, focal content</td>
+</tr>
+<tr class="odd">
+<td><strong>Far field</strong></td>
+<td>Beyond ~10 m</td>
+<td>Scenery and landmarks: stereo depth contributes little, so depth is read from size, occlusion and perspective</td>
+</tr>
+</tbody>
+</table>
+<p>Content closer than about 0.5 m is hard to focus on for long, because of the vergence–accommodation conflict covered in Week 3.</p>
+<p>Head rotation matters too. Alger (2015) suggests that turning the head about <strong>30° left or right</strong> is comfortable, and about <strong>55°</strong> is a practical maximum. Looking down is easier than looking up. Important content belongs in front of the user; secondary content can sit to the sides; nothing essential should be only behind them unless the user is given a reason to turn.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/comfort-zones-slide-05.png" class="img-fluid figure-img" style="width:70.0%" alt="A top-down view of reach, mid-field and far-field zones around a user, with comfortable head rotation of plus or minus 30 degrees and a maximum of 55."></p>
+<figcaption>Put content where people can comfortably look and reach.</figcaption>
+</figure>
+</div>
+</section>
+<section id="sightlines" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="sightlines"><span class="header-section-number">5.2</span> 3.2 Sightlines</h3>
+<p>A <strong>sightline</strong> is a view the user is likely to take: the first view on arrival, the view at a turn in a corridor, the view through a doorway. These are the closest thing XR has to planned shots, and they should be designed as carefully.</p>
+<ul>
+<li><strong>Frame</strong> the important thing: doorways, arches and gaps between objects act as natural frames.</li>
+<li><strong>Align</strong> it with the direction of travel, so the user sees it while moving towards it.</li>
+<li><strong>Light</strong> it so it stands out from its surroundings (Section 5).</li>
+<li>Leave <strong>negative space</strong> around it, so it is not lost in clutter.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/sightlines-slide-06.png" class="img-fluid figure-img" style="width:70.0%" alt="A dark corridor leads to a doorway framing a lit landmark; labels read frame it, light it, line it up with the path and leave empty space."></p>
+<figcaption>A sightline is a shot the user chooses to take.</figcaption>
+</figure>
+</div>
+<p>Plan sightlines on the floor plan, then walk them in the headset: a view that works in the editor’s scene camera may be blocked at real eye height.</p>
+<hr>
+</section>
+</section>
+<section id="wayfinding-and-affordance-in-3d" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="wayfinding-and-affordance-in-3d"><span class="header-section-number">6</span> 4. Wayfinding and Affordance in 3D</h2>
+<section id="wayfinding" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="wayfinding"><span class="header-section-number">6.1</span> 4.1 Wayfinding</h3>
+<p>Kevin Lynch’s study of how people form mental maps of cities (Lynch, 1960) identified five elements. They are just as useful for virtual spaces:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Element</th>
+<th>Meaning</th>
+<th>In an XR environment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Paths</strong></td>
+<td>Routes people move along</td>
+<td>Corridors, trails, lit routes, worn floors</td>
+</tr>
+<tr class="even">
+<td><strong>Edges</strong></td>
+<td>Boundaries that limit movement</td>
+<td>Walls, water, cliffs, the play-area boundary</td>
+</tr>
+<tr class="odd">
+<td><strong>Districts</strong></td>
+<td>Areas with a recognisable character</td>
+<td>Zones with a distinct colour, material or soundscape</td>
+</tr>
+<tr class="even">
+<td><strong>Nodes</strong></td>
+<td>Junctions where choices are made</td>
+<td>Rooms, plazas, crossroads</td>
+</tr>
+<tr class="odd">
+<td><strong>Landmarks</strong></td>
+<td>Distinctive reference points</td>
+<td>Tall, unique, lit objects visible from far away</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/wayfinding-slide-07.png" class="img-fluid figure-img" style="width:70.0%" alt="A map with paths, an edge formed by a river, two districts, a node at a junction and a landmark tower."></p>
+<figcaption>Wayfinding: people find their way by structure, not by signs.</figcaption>
+</figure>
+</div>
+<p>A good landmark is visible from many places, unique in shape or colour, and placed where decisions are made. Signs, arrows and floating markers are a last resort: they are UI, and they break presence (Week 6). Use them when the space alone cannot carry the information, such as safety-critical instructions.</p>
+</section>
+<section id="affordance-through-form" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="affordance-through-form"><span class="header-section-number">6.2</span> 4.2 Affordance Through Form</h3>
+<p>Week 6 introduced <strong>signifiers</strong>: perceivable cues that show where and how to act. In a well-designed environment, the signifiers are part of the world rather than overlaid on it:</p>
+<ul>
+<li><strong>Shape</strong>: handles say <em>pull</em>, raised buttons say <em>press</em>, a ledge says <em>stop here</em>.</li>
+<li><strong>Consistency</strong>: one visual signal, such as a rim, a glow or a particular material, used for every interactive object and never for scenery. If some scenery looks interactive and some interactive objects do not, users stop trusting the signal.</li>
+<li><strong>Wear</strong>: scuffed floors, worn handles and fingerprints show where people have been and what they touch.</li>
+<li><strong>Light</strong>: a pool of light says <em>come here</em>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/affordance-form-slide-08.png" class="img-fluid figure-img" style="width:70.0%" alt="Four cards: handles on a drawer, a raised button, a consistent rim on interactive objects, and wear marks leading to a light."></p>
+<figcaption>Affordance through form: signifiers built into the world.</figcaption>
+</figure>
+</div>
+<p>The test is simple: can a first-time user tell where to go and what to touch, without being told? This is exactly what the Week 9 practical’s peer critique checks.</p>
+<hr>
+</section>
+</section>
+<section id="lighting-as-direction" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="lighting-as-direction"><span class="header-section-number">7</span> 5. Lighting as Direction</h2>
+<section id="using-light-to-guide-attention" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="using-light-to-guide-attention"><span class="header-section-number">7.1</span> 5.1 Using Light to Guide Attention</h3>
+<p>When the user can look anywhere, light decides where they look first. The eye is drawn to:</p>
+<ul>
+<li>The <strong>brightest</strong> area, and to strong <strong>luminance contrast</strong></li>
+<li><strong>Warm against cool</strong> colour</li>
+<li><strong>Motion</strong> against a still background</li>
+<li><strong>Faces</strong> and figures</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/lighting-direction-slide-09.png" class="img-fluid figure-img" style="width:70.0%" alt="Two rooms with a cube on a pedestal: with flat lighting the eye wanders; with a pool of light on the pedestal the eye goes straight to it."></p>
+<figcaption>Lighting as direction: the eye goes to the light.</figcaption>
+</figure>
+</div>
+<p>Flat, even lighting gives the eye nowhere to go. A lit doorway at the end of a dim corridor, or a pool of light on the object that matters, does the job a camera cut does in film. Two cautions: a scene that is too dark makes navigation and footing hard (and makes the user’s real-world surroundings feel more present than the virtual ones), and rapid flicker or strobing must be avoided for photosensitive users.</p>
+</section>
+<section id="lighting-on-a-mobile-gpu-budget" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="lighting-on-a-mobile-gpu-budget"><span class="header-section-number">7.2</span> 5.2 Lighting on a Mobile GPU Budget</h3>
+<p>A standalone headset renders <strong>two views</strong> at <strong>72-120 Hz</strong> on a mobile GPU. At 90 Hz the whole frame, for both eyes, must be finished in about <strong>11.1 ms</strong> (13.9 ms at 72 Hz). Dropping frames is not just a visual flaw: it causes judder and contributes to discomfort (Week 11 covers performance in depth).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Runtime cost</th>
+<th>Use for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Baked lightmaps</strong></td>
+<td>Very low: lighting is precomputed into textures</td>
+<td>Static walls, floors and furniture</td>
+</tr>
+<tr class="even">
+<td><strong>Light probes</strong></td>
+<td>Low</td>
+<td>Lighting moving objects so they match a baked scene</td>
+</tr>
+<tr class="odd">
+<td><strong>Reflection probes</strong> (baked)</td>
+<td>Low</td>
+<td>Shiny and metallic surfaces</td>
+</tr>
+<tr class="even">
+<td><strong>Realtime lights</strong></td>
+<td>High, and much higher with realtime shadows</td>
+<td>One key light, if any</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/baked-lighting-slide-10.png" class="img-fluid figure-img" style="width:70.0%" alt="Realtime lights cost a lot of GPU time per frame; baked lightmaps cost little; a frame budget bar shows 11.1 ms at 90 Hz and 13.9 ms at 72 Hz."></p>
+<figcaption>Bake what does not move; spend realtime budget only where it matters.</figcaption>
+</figure>
+</div>
+<p>The trade-off is flexibility: baked lighting cannot change at runtime, so a light switch or a day-night cycle needs a different approach (blending between baked lightmaps, emissive materials, or a single carefully budgeted realtime light). This week’s lab works through lightmap baking, LODs and occlusion culling on a standalone headset.</p>
+<hr>
+</section>
+</section>
+<section id="environmental-storytelling" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="environmental-storytelling"><span class="header-section-number">8</span> 6. Environmental Storytelling</h2>
+<p>The arrangement of a space can convey narrative and state without a word of text. Jenkins (2004) distinguishes several ways game spaces carry story; the most relevant here is <strong>embedded narrative</strong>, where the story has already happened and the user reconstructs it from what they find.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/environmental-storytelling-slide-11.png" class="img-fluid figure-img" style="width:70.0%" alt="A room with a half-eaten meal, a chair knocked over, an open door and footprints leading out: someone left in a hurry."></p>
+<figcaption>Environmental storytelling: the story is discovered, not told.</figcaption>
+</figure>
+</div>
+<p>Guidelines:</p>
+<ul>
+<li>Place clues at <strong>sightline points</strong> and within the <strong>mid field</strong>, where they will be seen.</li>
+<li>Use <strong>changes to the space</strong> to show state: a door now open, a light now on, an object moved since the last visit.</li>
+<li>Layer clues so the experience still makes sense if some are missed, and rewards users who look closely.</li>
+</ul>
+<p>Think back to the experiences you analysed in Week 6. Where did the space tell you something the UI did not, and where did the UI have to explain something the space could have shown?</p>
+<hr>
+</section>
+<section id="environment-decisions-are-comfort-decisions" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="environment-decisions-are-comfort-decisions"><span class="header-section-number">9</span> 7. Environment Decisions Are Comfort Decisions</h2>
+<p>Many environment choices affect comfort as much as locomotion does:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>Why it hurts</th>
+<th>Instead</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low ceilings, tight corridors</td>
+<td>Claustrophobia</td>
+<td>2.4 m or more, unless confinement is intended</td>
+</tr>
+<tr class="even">
+<td>Large high-contrast moving patterns</td>
+<td>Vection: illusory self-motion, a sickness trigger</td>
+<td>Calm textures on large surfaces, especially in the periphery</td>
+</tr>
+<tr class="odd">
+<td>Unprotected heights and edges</td>
+<td>Fear responses; users may step back in the real room</td>
+<td>Railings, or keep the user away from the edge</td>
+</tr>
+<tr class="even">
+<td>Stairs with smooth locomotion</td>
+<td>Repeated vertical bumps</td>
+<td>Ramps, or teleport over stairs</td>
+</tr>
+<tr class="odd">
+<td>Virtual floor not at real floor</td>
+<td>Wrong scale, reaching for nothing, falls</td>
+<td>Floor-level tracking origin</td>
+</tr>
+<tr class="even">
+<td>Small text far away</td>
+<td>Unreadable, encourages leaning in</td>
+<td>Size text for its viewing distance (Week 5)</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week09/environment-comfort-slide-12.png" class="img-fluid figure-img" style="width:70.0%" alt="Six cards: low ceilings, high-contrast stripes, unprotected edges, stairs with smooth motion, floor mismatch and tiny distant text, each with a fix."></p>
+<figcaption>Space, pattern and height affect comfort as much as locomotion does.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="summary" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="summary"><span class="header-section-number">10</span> Summary</h2>
+<p>In XR the environment is the interface. Attention is directed by composition, light and form rather than by camera, and every one of those decisions is also a comfort and performance decision. Model at 1:1 and check scale in the headset; place content within comfortable viewing and reach zones; design sightlines; guide with paths, landmarks and light before reaching for signs; build signifiers into the world; bake what does not move; and let the space tell its own story.</p>
+<hr>
+</section>
+<section id="self-check-questions" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">11</span> Self-Check Questions</h2>
+<ol type="1">
+<li>Name three techniques film uses to direct attention, and explain why each is unavailable or harmful in XR.</li>
+<li>A user says a virtual kitchen “feels huge”. List three possible causes and how you would check each one.</li>
+<li>Where would you place a menu, an object to pick up and a distant landmark, in terms of distance from the user?</li>
+<li>Using Lynch’s five elements, describe how a user would find the exit of a virtual museum without any signs.</li>
+<li>Why should one visual signal be used for every interactive object, and never for scenery?</li>
+<li>Why is baked lighting preferred on a standalone headset, and what does it cost you in flexibility?</li>
+<li>Give two environment design choices that can cause discomfort even when the user is not moving.</li>
+</ol>
+<hr>
+</section>
+<section id="references" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="references"><span class="header-section-number">12</span> References</h2>
+<ul>
+<li>Alger, M. (2015) <em>Visual Design Methods for Virtual Reality</em>. MA thesis, Ravensbourne.</li>
+<li>Jenkins, H. (2004) “Game design as narrative architecture.” In Wardrip-Fruin, N. &amp; Harrigan, P. (eds.) <em>First Person: New Media as Story, Performance, and Game</em>. MIT Press.</li>
+<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books / Morgan &amp; Claypool.</li>
+<li>Lynch, K. (1960) <em>The Image of the City</em>. MIT Press.</li>
+<li>Unity Technologies. <em>Unity Manual</em>: lightmapping, light probes, reflection probes, LOD and occlusion culling. <a href="https://docs.unity3d.com">docs.unity3d.com</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../weeks/09-week-09/01-slides.html" class="pagination-link" aria-label="Week 9 Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 9 Slides</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../04-references/01-bibliography.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<!-- Render ```mermaid fenced code blocks that Quarto leaves as plain code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var fenced = document.querySelectorAll('pre.sourceCode.mermaid');
+    if (!fenced.length) return;
+    function run() {
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      fenced.forEach(function (pre) {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        var wrapper = pre.closest('div.sourceCode') || pre;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        if (wrapper.parentNode) wrapper.parentNode.replaceChild(div, wrapper);
+      });
+      mermaid.run({ querySelector: '.mermaid' });
+    }
+    if (window.mermaid) {
+      run();
+    } else {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+      s.onload = run;
+      document.head.appendChild(s);
+    }
+  });
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+
+
+
+<!-- CourseFoundry feedback embed disabled -->
+</body></html>
