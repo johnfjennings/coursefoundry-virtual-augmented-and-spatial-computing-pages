@@ -2,386 +2,386 @@
   {
     "objectID": "weeks/09-week-09/02-lecture.html",
     "href": "weeks/09-week-09/02-lecture.html",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "",
     "text": "TipTL;DR\n\n\n\n\nIn XR the user owns the viewpoint, so cuts, close-ups and forced camera moves are lost and attention must be invited through composition, light, form, sound and motion.\nDesign at 1:1 (1 unit = 1 metre) with the user’s body as the ruler, check scale from inside the headset, and break scale only deliberately.\nPlace content within comfortable reach, mid-field and far-field zones and head-rotation limits, and design sightlines as the closest thing XR has to planned shots.\nGuide users with Lynch’s paths, edges, districts, nodes and landmarks, and with signifiers built into the world, using signs and arrows only as a last resort.\nLight directs the eye where a camera cannot, but on a standalone headset’s GPU budget you should bake what does not move and spend realtime lighting sparingly.\nLet the space tell its own story, and remember that environment choices such as ceiling height, patterns, edges and stairs are comfort decisions as much as locomotion is.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#overview",
     "href": "weeks/09-week-09/02-lecture.html#overview",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "1 Overview",
     "text": "1 Overview\nDuration: 1 hour\nContent creation for a medium in which the user owns the viewpoint. Every technique film and conventional games use to control attention – cutting, framing, camera movement – is either unavailable or actively harmful in XR. This session covers what replaces them.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#learning-objectives",
     "href": "weeks/09-week-09/02-lecture.html#learning-objectives",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "2 Learning Objectives",
     "text": "2 Learning Objectives\nBy the end of this lecture, students will be able to:\n\nCompose a scene that guides attention without taking camera control from the user\nApply human-scale proportion rules, and justify any deliberate departure from them\nPlace content within comfortable viewing and reach zones\nUse sightlines, landmarks, form and light for wayfinding instead of UI\nDefend environment decisions against comfort, legibility and performance criteria",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#the-user-owns-the-viewpoint",
     "href": "weeks/09-week-09/02-lecture.html#the-user-owns-the-viewpoint",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "3 1. The User Owns the Viewpoint",
     "text": "3 1. The User Owns the Viewpoint\nFilm directs attention with the camera: a cut chooses what you see next, a close-up tells you what matters, and a camera move carries you through a space. Conventional games borrow the same tools, and in third-person games the camera is often moved for the player.\nIn XR the user’s head is the camera. That removes the director’s main tools:\n\nA forced camera move creates exactly the visual–vestibular conflict that causes simulator sickness (Weeks 3 and 5).\nA cut breaks Place Illusion: one moment you are somewhere, the next you are not.\nA close-up is impossible: the user decides how close to stand.\n\nWhat remains is the environment itself. Attention has to be invited by composition (what is placed where), light (where the eye is drawn), form (what looks usable and where to go), and sound and motion (what turns the head; spatial audio is covered in Week 10).\n\n\n\nIn XR the environment is the interface: attention is invited, not forced.\n\n\nThe practical consequence is that environment design is not decoration added at the end. It is the interaction design for anything the user has to find, notice or understand.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#scale-and-proportion",
     "href": "weeks/09-week-09/02-lecture.html#scale-and-proportion",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "4 2. Scale and Proportion",
     "text": "4 2. Scale and Proportion\n\n4.1 2.1 Designing at 1:1\nIn a headset, the user’s own body is the measuring stick. Everyone has a lifetime of experience of how high a door is, how far away a table edge sits, and how tall a step should be. When a virtual space disagrees with that experience, users notice immediately, even if they cannot say what is wrong.\n\n\n\nObject\nTypical real size\n\n\n\n\nStanding eye height\n~1.5-1.7 m (varies by person)\n\n\nSeated eye height\n~1.1-1.3 m\n\n\nDoor\n~2.0 m high, 0.8-0.9 m wide\n\n\nTable or desk\n~0.72-0.76 m\n\n\nKitchen counter\n~0.9 m\n\n\nStair riser\n~0.15-0.18 m\n\n\nCeiling (domestic)\n~2.4-2.7 m\n\n\n\n\n\n\nDesign at 1:1: the user’s body is the ruler.\n\n\nEnvironments built to game conventions are often scaled up, with wide corridors and tall doors, so that a third-person camera fits inside them. Viewed in a headset at the correct eye height, the same spaces feel cavernous and empty. In Unity, 1 unit = 1 metre: model to real dimensions from the start, and import assets at the right scale rather than fixing them later.\n\n\n4.2 2.2 When Scale Goes Wrong\nIncorrect scale changes how users perceive themselves as much as the world:\n\nIf the world is too large, users feel small, even child-like.\nIf it is too small, users feel like giants walking through a model.\n\n\n\n\nThe same room at three scales: only one feels right.\n\n\nCommon causes:\n\nAssets modelled at arbitrary or game scale and never checked\nCamera height set in code rather than taken from tracking, so a seated user sees the world from standing height or vice versa\nA virtual floor that does not match the real floor, so users reach down for objects that are not there (use a floor-level tracking origin for standing experiences)\n\nScale errors are almost invisible in the editor and obvious the moment you put the headset on. Check scale from inside: stand next to objects, reach for them, sit at a table, look out of a window.\n\n\n4.3 2.3 Breaking Scale on Purpose\nSometimes the wrong scale is the point. Making the user tiny in a giant kitchen, or a giant above a miniature city, is a powerful effect precisely because the body notices. If you break 1:1, do it deliberately, make it obvious, and keep the user’s interaction distances comfortable even when the world is not.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#comfort-zones-and-sightlines",
     "href": "weeks/09-week-09/02-lecture.html#comfort-zones-and-sightlines",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "5 3. Comfort Zones and Sightlines",
     "text": "5 3. Comfort Zones and Sightlines\n\n5.1 3.1 Where Content Can Comfortably Go\nContent is comfortable to look at and use only within certain distances and angles:\n\n\n\n\n\n\n\n\nZone\nDistance\nUse it for\n\n\n\n\nReach\n~0.5-0.7 m\nObjects to touch, grab or press\n\n\nMid field\n~1-3 m\nUI, text, focal content\n\n\nFar field\nBeyond ~10 m\nScenery and landmarks: stereo depth contributes little, so depth is read from size, occlusion and perspective\n\n\n\nContent closer than about 0.5 m is hard to focus on for long, because of the vergence–accommodation conflict covered in Week 3.\nHead rotation matters too. Alger (2015) suggests that turning the head about 30° left or right is comfortable, and about 55° is a practical maximum. Looking down is easier than looking up. Important content belongs in front of the user; secondary content can sit to the sides; nothing essential should be only behind them unless the user is given a reason to turn.\n\n\n\nPut content where people can comfortably look and reach.\n\n\n\n\n5.2 3.2 Sightlines\nA sightline is a view the user is likely to take: the first view on arrival, the view at a turn in a corridor, the view through a doorway. These are the closest thing XR has to planned shots, and they should be designed as carefully.\n\nFrame the important thing: doorways, arches and gaps between objects act as natural frames.\nAlign it with the direction of travel, so the user sees it while moving towards it.\nLight it so it stands out from its surroundings (Section 5).\nLeave negative space around it, so it is not lost in clutter.\n\n\n\n\nA sightline is a shot the user chooses to take.\n\n\nPlan sightlines on the floor plan, then walk them in the headset: a view that works in the editor’s scene camera may be blocked at real eye height.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#wayfinding-and-affordance-in-3d",
     "href": "weeks/09-week-09/02-lecture.html#wayfinding-and-affordance-in-3d",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "6 4. Wayfinding and Affordance in 3D",
     "text": "6 4. Wayfinding and Affordance in 3D\n\n6.1 4.1 Wayfinding\nKevin Lynch’s study of how people form mental maps of cities (Lynch, 1960) identified five elements. They are just as useful for virtual spaces:\n\n\n\n\n\n\n\n\nElement\nMeaning\nIn an XR environment\n\n\n\n\nPaths\nRoutes people move along\nCorridors, trails, lit routes, worn floors\n\n\nEdges\nBoundaries that limit movement\nWalls, water, cliffs, the play-area boundary\n\n\nDistricts\nAreas with a recognisable character\nZones with a distinct colour, material or soundscape\n\n\nNodes\nJunctions where choices are made\nRooms, plazas, crossroads\n\n\nLandmarks\nDistinctive reference points\nTall, unique, lit objects visible from far away\n\n\n\n\n\n\nWayfinding: people find their way by structure, not by signs.\n\n\nA good landmark is visible from many places, unique in shape or colour, and placed where decisions are made. Signs, arrows and floating markers are a last resort: they are UI, and they break presence (Week 6). Use them when the space alone cannot carry the information, such as safety-critical instructions.\n\n\n6.2 4.2 Affordance Through Form\nWeek 6 introduced signifiers: perceivable cues that show where and how to act. In a well-designed environment, the signifiers are part of the world rather than overlaid on it:\n\nShape: handles say pull, raised buttons say press, a ledge says stop here.\nConsistency: one visual signal, such as a rim, a glow or a particular material, used for every interactive object and never for scenery. If some scenery looks interactive and some interactive objects do not, users stop trusting the signal.\nWear: scuffed floors, worn handles and fingerprints show where people have been and what they touch.\nLight: a pool of light says come here.\n\n\n\n\nAffordance through form: signifiers built into the world.\n\n\nThe test is simple: can a first-time user tell where to go and what to touch, without being told? This is exactly what the Week 9 practical’s peer critique checks.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#lighting-as-direction",
     "href": "weeks/09-week-09/02-lecture.html#lighting-as-direction",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "7 5. Lighting as Direction",
     "text": "7 5. Lighting as Direction\n\n7.1 5.1 Using Light to Guide Attention\nWhen the user can look anywhere, light decides where they look first. The eye is drawn to:\n\nThe brightest area, and to strong luminance contrast\nWarm against cool colour\nMotion against a still background\nFaces and figures\n\n\n\n\nLighting as direction: the eye goes to the light.\n\n\nFlat, even lighting gives the eye nowhere to go. A lit doorway at the end of a dim corridor, or a pool of light on the object that matters, does the job a camera cut does in film. Two cautions: a scene that is too dark makes navigation and footing hard (and makes the user’s real-world surroundings feel more present than the virtual ones), and rapid flicker or strobing must be avoided for photosensitive users.\n\n\n7.2 5.2 Lighting on a Mobile GPU Budget\nA standalone headset renders two views at 72-120 Hz on a mobile GPU. At 90 Hz the whole frame, for both eyes, must be finished in about 11.1 ms (13.9 ms at 72 Hz). Dropping frames is not just a visual flaw: it causes judder and contributes to discomfort (Week 11 covers performance in depth).\n\n\n\n\n\n\n\n\nTechnique\nRuntime cost\nUse for\n\n\n\n\nBaked lightmaps\nVery low: lighting is precomputed into textures\nStatic walls, floors and furniture\n\n\nLight probes\nLow\nLighting moving objects so they match a baked scene\n\n\nReflection probes (baked)\nLow\nShiny and metallic surfaces\n\n\nRealtime lights\nHigh, and much higher with realtime shadows\nOne key light, if any\n\n\n\n\n\n\nBake what does not move; spend realtime budget only where it matters.\n\n\nThe trade-off is flexibility: baked lighting cannot change at runtime, so a light switch or a day-night cycle needs a different approach (blending between baked lightmaps, emissive materials, or a single carefully budgeted realtime light). This week’s lab works through lightmap baking, LODs and occlusion culling on a standalone headset.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#environmental-storytelling",
     "href": "weeks/09-week-09/02-lecture.html#environmental-storytelling",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "8 6. Environmental Storytelling",
     "text": "8 6. Environmental Storytelling\nThe arrangement of a space can convey narrative and state without a word of text. Jenkins (2004) distinguishes several ways game spaces carry story; the most relevant here is embedded narrative, where the story has already happened and the user reconstructs it from what they find.\n\n\n\nEnvironmental storytelling: the story is discovered, not told.\n\n\nGuidelines:\n\nPlace clues at sightline points and within the mid field, where they will be seen.\nUse changes to the space to show state: a door now open, a light now on, an object moved since the last visit.\nLayer clues so the experience still makes sense if some are missed, and rewards users who look closely.\n\nThink back to the experiences you analysed in Week 6. Where did the space tell you something the UI did not, and where did the UI have to explain something the space could have shown?",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#environment-decisions-are-comfort-decisions",
     "href": "weeks/09-week-09/02-lecture.html#environment-decisions-are-comfort-decisions",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "9 7. Environment Decisions Are Comfort Decisions",
     "text": "9 7. Environment Decisions Are Comfort Decisions\nMany environment choices affect comfort as much as locomotion does:\n\n\n\n\n\n\n\n\nProblem\nWhy it hurts\nInstead\n\n\n\n\nLow ceilings, tight corridors\nClaustrophobia\n2.4 m or more, unless confinement is intended\n\n\nLarge high-contrast moving patterns\nVection: illusory self-motion, a sickness trigger\nCalm textures on large surfaces, especially in the periphery\n\n\nUnprotected heights and edges\nFear responses; users may step back in the real room\nRailings, or keep the user away from the edge\n\n\nStairs with smooth locomotion\nRepeated vertical bumps\nRamps, or teleport over stairs\n\n\nVirtual floor not at real floor\nWrong scale, reaching for nothing, falls\nFloor-level tracking origin\n\n\nSmall text far away\nUnreadable, encourages leaning in\nSize text for its viewing distance (Week 5)\n\n\n\n\n\n\nSpace, pattern and height affect comfort as much as locomotion does.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#summary",
     "href": "weeks/09-week-09/02-lecture.html#summary",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "10 Summary",
     "text": "10 Summary\nIn XR the environment is the interface. Attention is directed by composition, light and form rather than by camera, and every one of those decisions is also a comfort and performance decision. Model at 1:1 and check scale in the headset; place content within comfortable viewing and reach zones; design sightlines; guide with paths, landmarks and light before reaching for signs; build signifiers into the world; bake what does not move; and let the space tell its own story.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#self-check-questions",
     "href": "weeks/09-week-09/02-lecture.html#self-check-questions",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "11 Self-Check Questions",
     "text": "11 Self-Check Questions\n\nName three techniques film uses to direct attention, and explain why each is unavailable or harmful in XR.\nA user says a virtual kitchen “feels huge”. List three possible causes and how you would check each one.\nWhere would you place a menu, an object to pick up and a distant landmark, in terms of distance from the user?\nUsing Lynch’s five elements, describe how a user would find the exit of a virtual museum without any signs.\nWhy should one visual signal be used for every interactive object, and never for scenery?\nWhy is baked lighting preferred on a standalone headset, and what does it cost you in flexibility?\nGive two environment design choices that can cause discomfort even when the user is not moving.",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/02-lecture.html#references",
     "href": "weeks/09-week-09/02-lecture.html#references",
-    "title": "Week 9 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "12 References",
     "text": "12 References\n\nAlger, M. (2015) Visual Design Methods for Virtual Reality. MA thesis, Ravensbourne.\nJenkins, H. (2004) “Game design as narrative architecture.” In Wardrip-Fruin, N. & Harrigan, P. (eds.) First Person: New Media as Story, Performance, and Game. MIT Press.\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books / Morgan & Claypool.\nLynch, K. (1960) The Image of the City. MIT Press.\nUnity Technologies. Unity Manual: lightmapping, light probes, reflection probes, LOD and occlusion culling. docs.unity3d.com",
     "crumbs": [
       "Week 09",
-      "Week 9 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html",
     "href": "weeks/07-week-07/03-practical.html",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "",
     "text": "NoteTL;DR\n\n\n\nGet your Assessment 2 analysis challenged by peers, dry-run your full user test (consent, SSQ before and after, SUS) on a partner and fix the procedure, then pitch your Assessment 3 concept and leave with it signed off around one core interaction and a target platform.",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html#overview",
     "href": "weeks/07-week-07/03-practical.html#overview",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "Overview",
     "text": "Overview\nDuration: 2 hours\nThe first part of this session is the clinic for Assessment 2, a structured critique of your analysis and a dry run of your user test. The second part launches Assessment 3: every concept is pitched, challenged and signed off with a named target platform.",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html#objectives",
     "href": "weeks/07-week-07/03-practical.html#objectives",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "Objectives",
     "text": "Objectives\nBy the end of this practical, you will be able to:\n\nDeliver and defend a critique under questioning\nRun a short user test with the SSQ and SUS and spot problems in your procedure\nCommit to a scoped project concept with a realistic platform choice",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html#prerequisites",
     "href": "weeks/07-week-07/03-practical.html#prerequisites",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "Prerequisites",
     "text": "Prerequisites\n\nA draft of your Assessment 2 experience analysis\nYour recreated interaction running on a device, or a short screen recording of it\nCopies of the consent form, SSQ and SUS\nOne slide or one page describing your proposed Assessment 3 concept",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html#instructions",
     "href": "weeks/07-week-07/03-practical.html#instructions",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "Instructions",
     "text": "Instructions\n\nPart 1: Assessment 2 Critique (40 minutes)\n\nPresent Your Analysis\n\nIn groups of four, each student presents in five minutes: the application, the framework applied, the two most significant findings, and the interaction they rebuilt.\nName the framework explicitly. ‘It felt immersive’ is not an analysis.\n\nStructured Challenge\n\nThe group asks two questions of every presenter: one on the evidence behind the analysis, one on how faithfully the prototype recreates the original interaction.\nThe presenter records the questions rather than answering immediately. Unanswerable questions indicate where the analysis is thin.\n\n\n\n\nPart 2: User Test Dry Run (35 minutes)\n\nSwap and Test\n\nIn pairs, run your full test procedure on your partner: consent, SSQ before, the task, SSQ after, SUS.\nGive the task instructions exactly as you would to a real participant, and do not help unless they are stuck.\n\nDebrief the Procedure\n\nWhich instruction was unclear? Where did your partner hesitate? Did anything in the setup (play space, battery, build) go wrong?\nFix the procedure, not just the prototype. A test that confuses participants produces scores you cannot interpret.\n\n\n\n\nPart 3: Assessment 3 Pitching (45 minutes)\n\nPitch\n\nTwo minutes per student: the concept, the single core interaction, and the target platform.\nThe core interaction is the thing that must work in Week 10. Name it precisely.\nIf your concept places content in the room, say how it will be anchored, using what you found in the Week 6 tracking investigation.\n\nScope Challenge\n\nThe group identifies the part of the concept most likely to be cut, and the part most likely to consume all the available time.\nRevise the scope in response. Ambitious concepts fail here for the right reasons rather than in Week 13 for the wrong ones.\n\nSign-Off\n\nAgree the final concept and platform with the module coordinator. If there is not time for everyone in the session, book a short sign-off slot before the end of Week 7.",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/03-practical.html#expected-outcome",
     "href": "weeks/07-week-07/03-practical.html#expected-outcome",
-    "title": "Week 7 Practical",
+    "title": "Practical",
     "section": "Expected Outcome",
     "text": "Expected Outcome\nA list of the challenges raised on your Assessment 2 analysis, a test procedure (consent, SSQ before and after, SUS) that has been run once end to end, and a signed-off Assessment 3 concept naming one core interaction and a target platform.\n\n\n\n\n\n\nTipHint\n\n\n\nScore your partner’s SUS and SSQ before you leave: if you cannot work out the scores from the forms you collected, you will not be able to from your real participants either. In the pitch, describe the core interaction in a single sentence with a verb in it. If that sentence needs a paragraph of setup, the scope is still too broad.",
     "crumbs": [
       "Week 07",
-      "Week 7 Practical"
+      "Practical"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#week-7-overview",
     "href": "weeks/07-week-07/01-slides.html#week-7-overview",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Week 7 Overview",
     "text": "Week 7 Overview\n\nWhat makes computing spatial\nTracking and SLAM, and where they fail\nScene understanding: planes, meshes and labels\nSpatial anchors: local, persistent and shared\nOcclusion and coordinate spaces\nThe privacy question\n\n\nWeeks 1–6 treated the headset mostly as a display and an input device. This week is about how it models the room it is in, and how content gets a durable place inside that model. The lab puts this straight into practice with AR Foundation tap-to-place.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#what-makes-it-spatial",
     "href": "weeks/07-week-07/01-slides.html#what-makes-it-spatial",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "What Makes It Spatial?",
     "text": "What Makes It Spatial?\n\n\n\nSpatial computing adds two things to VR and simple AR:\n\nAwareness — the device keeps a live model of the room: floor, walls, furniture\nPersistence — content keeps its place in that room: across head movement, restarts and days\n\nThe mechanisms:\n\nTracking tells the device where it is\nScene understanding tells it what the room is like\nAnchors tell content where it belongs",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#inside-out-6dof-tracking",
     "href": "weeks/07-week-07/01-slides.html#inside-out-6dof-tracking",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Inside-Out 6DoF Tracking",
     "text": "Inside-Out 6DoF Tracking\n\n\n\n\n6DoF = 3 axes of position + 3 of rotation (yaw, pitch, roll)\nInside-out: the sensors are on the headset, not mounted in the room\nCameras find visual features and estimate position\nIMU (accelerometer + gyroscope) measures fast motion between camera frames\nSensor fusion combines the two: the IMU is fast but drifts; the cameras correct it\n\nQuest 2/3, HoloLens 2 and phone AR all use this approach. The Vive Pro uses external base stations (outside-in).",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#slam-in-outline",
     "href": "weeks/07-week-07/01-slides.html#slam-in-outline",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "SLAM in Outline",
     "text": "SLAM in Outline\n\n\n\nSimultaneous Localisation And Mapping: work out where you are while building the map you need to do it.\n\nDetect features — distinctive points: corners, edges, texture\nEstimate pose — how the device has moved since the last frame\nUpdate the map — add new features as more of the room is seen\nLoop closure — recognise a place seen before and correct accumulated drift\nRelocalise — after tracking is lost, match the view to the saved map",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#when-tracking-breaks",
     "href": "weeks/07-week-07/01-slides.html#when-tracking-breaks",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "When Tracking Breaks",
     "text": "When Tracking Breaks\n\n\n\n\n\n\n\n\n\n\n\nCondition\nWhy\nWhat the user sees\n\n\n\n\nLow light\nToo few visible features\nDrift, then “tracking lost”\n\n\nBlank walls, glossy floors\nNo texture to track\nContent slides\n\n\nRepeating patterns\nFeatures look alike\nPose jumps\n\n\nCovered cameras, fast motion\nFrames unusable\nFreeze, then snap back\n\n\nMoved furniture\nMap no longer matches\nRelocalisation fails\n\n\n\nDesign for it: show tracking state, guide the user to look around, and never leave them in a frozen view.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#scene-understanding",
     "href": "weeks/07-week-07/01-slides.html#scene-understanding",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Scene Understanding",
     "text": "Scene Understanding\n\n\n\nThe device’s model of the room comes in layers:\n\nPlanes — flat surfaces: floor, walls, table tops\nMesh — a triangle surface over everything, including irregular objects\nSemantic labels — what a surface is: floor, wall, ceiling, table, couch\n\nMeasured vs declared geometry\n\nMeasured: detected live by the cameras and depth sensor\nDeclared: captured once in a guided room setup (Quest 3 Space Setup) and stored",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#plane-detection-raycasting",
     "href": "weeks/07-week-07/01-slides.html#plane-detection-raycasting",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Plane Detection & Raycasting",
     "text": "Plane Detection & Raycasting\n\n\n\nThe core loop of this week’s lab, in AR Foundation:\n\nARPlaneManager detects planes and adds them to the scene\nARRaycastManager casts a ray from the tap (or controller) against those planes\nPlace a prefab at the hit pose: position and rotation, so it sits flat on the surface\n\nThe rig is an XR Origin with an AR Session (older tutorials call it AR Session Origin).",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#spatial-anchors",
     "href": "weeks/07-week-07/01-slides.html#spatial-anchors",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Spatial Anchors",
     "text": "Spatial Anchors\n\n\n\nAn anchor is a pose the device commits to tracking against the real world.\n\n\n\n\n\n\n\n\nKind\nSurvives\nTypical use\n\n\n\n\nLocal\nThis session only\nPlaced objects during one visit\n\n\nPersistent\nApp restart, another day\nA virtual screen that stays on your wall\n\n\nShared\nAnother user’s device\nCo-located multi-user experiences\n\n\n\nIn AR Foundation: ARAnchorManager. Persistence and sharing depend on the platform: Meta, ARCore and ARKit each do it differently.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#anchor-drift-its-limits",
     "href": "weeks/07-week-07/01-slides.html#anchor-drift-its-limits",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Anchor Drift & Its Limits",
     "text": "Anchor Drift & Its Limits\n\n\n\n\nAn anchor is the device’s best estimate, refined as it sees more of the room\nA small error in an anchor’s rotation becomes a large position error far away from it\nKeep content close to its anchor; give separate objects their own anchors\nLarge spaces: use several anchors, not one at the centre\nRelocalisation can fail if the room has changed: plan what the user sees when it does",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#occlusion-depth",
     "href": "weeks/07-week-07/01-slides.html#occlusion-depth",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Occlusion & Depth",
     "text": "Occlusion & Depth\n\n\n\n\nWithout occlusion, virtual objects always draw on top of the real world\nDepth-based occlusion hides the parts of a virtual object that are behind real ones\nNeeds a per-frame depth map: the Quest 3 depth sensor, the ARCore Depth API, LiDAR on iPhone Pro models\nIn AR Foundation: AROcclusionManager\nWrong occlusion is one of the fastest ways to break Plausibility Illusion (Week 6)",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#coordinate-spaces",
     "href": "weeks/07-week-07/01-slides.html#coordinate-spaces",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Coordinate Spaces",
     "text": "Coordinate Spaces\n\n\n\n\n\n\n\n\n\n\n\nSpace\nOrigin\nNotes\n\n\n\n\nTracking space\nWhere tracking started\nCan shift on recentre or relocalisation\n\n\nWorld / scene space\nThe app’s chosen origin\nUsually the XR Origin in Unity\n\n\nAnchor space\nA real place in the room\nUpdated as tracking improves\n\n\n\nRule of thumb: parent placed content to an anchor, so it moves with the room when the device corrects its estimate.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#the-privacy-question",
     "href": "weeks/07-week-07/01-slides.html#the-privacy-question",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "The Privacy Question",
     "text": "The Privacy Question\n\n\n\nA room scan is a detailed record of someone’s home: its layout, size, contents, even clues to where it is.\n\nWhat exactly does your app store: planes, mesh, labels, camera images?\nDoes it stay on the device, or is it uploaded or shared?\nDid you tell the user before asking for access, in plain language?\n\nPlatforms gate scene data behind a permission (on Quest, apps must request access to spatial data). The disclosure is still the designer’s job.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#lab-practical-this-week",
     "href": "weeks/07-week-07/01-slides.html#lab-practical-this-week",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Lab & Practical This Week",
     "text": "Lab & Practical This Week\n\n\nLab: AR Foundation tap-to-place\n\nSet up AR Foundation for Quest 3 or an AR phone\nDetect planes and visualise them\nRaycast from a tap or controller and place a prefab\nTest in two different environments\n\n\nPractical: A2 clinic & A3 pitch\n\nAssessment 2 critique and user-test dry run (SSQ, SUS)\nAssessment 3 concept pitched and signed off\nAssessment 2 due: Wednesday 4 November 2026, 17:00",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#key-takeaways",
     "href": "weeks/07-week-07/01-slides.html#key-takeaways",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\nSpatial computing = awareness of the room + persistence of content in it\nTracking fuses cameras and IMU, and fails predictably: low light, blank or repetitive surfaces, covered cameras\nScene understanding gives planes, meshes and labels; some measured live, some declared in setup\nAnchors are best estimates: keep content close to them and choose local, persistent or shared deliberately\nRoom data is personal data: be explicit about what you store and why",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#references",
     "href": "weeks/07-week-07/01-slides.html#references",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "References",
     "text": "References\n\nDurrant-Whyte, H. & Bailey, T. (2006) “Simultaneous localization and mapping: part I.” IEEE Robotics & Automation Magazine, 13(2).\nCadena, C. et al. (2016) “Past, present, and future of simultaneous localization and mapping.” IEEE Transactions on Robotics, 32(6).\nDe Guzman, J.A., Thilakarathna, K. & Seneviratne, A. (2019) “Security and privacy approaches in mixed reality: a literature survey.” ACM Computing Surveys, 52(6).\nUnity AR Foundation documentation: docs.unity3d.com\nMeta Quest scene and spatial anchor documentation: developers.meta.com",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/07-week-07/01-slides.html#discussion",
     "href": "weeks/07-week-07/01-slides.html#discussion",
-    "title": "Week 7 Slides",
+    "title": "Lecture Slides",
     "section": "Discussion",
     "text": "Discussion\n\nWhen should content be anchored to the room, and when should it follow the user? Give an example of each.\nA furniture app works perfectly in the showroom and fails in a customer’s dim, white-walled flat. Whose problem is that: the platform’s, the developer’s or the user’s?\nShould apps be allowed to upload room scans at all? What would a fair disclosure look like?\nShared anchors let two people see the same object in the same place. What new interaction problems does that create?\nIs “spatial computing” a real category, or a marketing name for AR with better tracking?\n\n\nUse these to connect the technical content to design judgement, and as a bridge to the Assessment 3 pitches: students placing content in a room should be able to say how it will be anchored.",
     "crumbs": [
       "Week 07",
-      "Week 7 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -464,210 +464,210 @@
   {
     "objectID": "weeks/06-week-06/01-slides.html#week-6-overview",
     "href": "weeks/06-week-06/01-slides.html#week-6-overview",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Week 6 Overview",
     "text": "Week 6 Overview\n\nInteraction design frameworks for XR\nAnalysing XR experiences critically\nCommon interaction patterns and anti-patterns\nEvaluation methods\nAssessment 2 briefing",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#why-frameworks",
     "href": "weeks/06-week-06/01-slides.html#why-frameworks",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Why Frameworks?",
     "text": "Why Frameworks?\n\n\n\n\n“A framework is a lens — it doesn’t tell you what to see, but it tells you where to look.”\n\nFrameworks help us:\n\nAnalyse experiences systematically\nCommunicate design decisions\nIdentify problems before building\nCompare across different experiences\n\nWithout them, critique collapses into “it felt good” or “it felt bad”.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#framework-1-normans-action-cycle",
     "href": "weeks/06-week-06/01-slides.html#framework-1-normans-action-cycle",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Framework 1: Norman’s Action Cycle",
     "text": "Framework 1: Norman’s Action Cycle\n\n\n\nDonald Norman’s 7-stage action cycle applies directly to XR:\n\nForm a goal — what does the user want to do?\nForm an intention — how will they do it?\nSpecify an action — which gesture/input?\nExecute the action — perform the input\nPerceive the state — what changed?\nInterpret the state — what does it mean?\nEvaluate the outcome — did it work?",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#norman-in-xr-failure-points",
     "href": "weeks/06-week-06/01-slides.html#norman-in-xr-failure-points",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Norman in XR: Failure Points",
     "text": "Norman in XR: Failure Points\n\n\n\n\n\n\n\n\n\n\nStage\nCommon XR Failure\n\n\n\n\nForm intention\nNo affordance — user doesn’t know what’s interactive\n\n\nSpecify action\nGesture not discoverable\n\n\nExecute action\nTracking failure, fatigue\n\n\nPerceive state\nNo feedback (visual/audio/haptic)\n\n\nInterpret state\nAmbiguous feedback\n\n\nEvaluate outcome\nNo confirmation of success\n\n\n\n\nGulf of Execution: can I work out what to do, and how?\nGulf of Evaluation: can I tell what happened?",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#framework-2-milgrams-reality-virtuality-continuum",
     "href": "weeks/06-week-06/01-slides.html#framework-2-milgrams-reality-virtuality-continuum",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Framework 2: Milgram’s Reality-Virtuality Continuum",
     "text": "Framework 2: Milgram’s Reality-Virtuality Continuum\n\n\n\nReal environment ⟷ Virtual environment: everything in between is Mixed Reality (MR)\n\nAR: real world + virtual overlays (Snap Spectacles, HoloLens 2, phone AR)\nAV: mostly virtual + some real elements (rare in consumer products)\nVR: fully virtual (Quest 2, Vive Pro)\nPassthrough headsets (Quest 3) can move along the continuum at runtime\n\nDesign implication: interaction design must match the continuum position.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#framework-3-presence-model-slater",
     "href": "weeks/06-week-06/01-slides.html#framework-3-presence-model-slater",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Framework 3: Presence Model (Slater)",
     "text": "Framework 3: Presence Model (Slater)\n\n\n\nTwo components of presence:\n\nPlace Illusion (PI): “I am there” — the sense of being in the virtual space\nPlausibility Illusion (Psi): “This is real” — events feel like they’re really happening\n\nInteraction design affects both:\n\nPoor interaction breaks PI (you notice the interface)\nInconsistent physics breaks Psi (the world feels fake)",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#interaction-patterns",
     "href": "weeks/06-week-06/01-slides.html#interaction-patterns",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Interaction Patterns",
     "text": "Interaction Patterns\n\n\n\nProgressive Disclosure\nReveal complexity gradually. Don’t show all options at once.\nSpatial Consistency\nObjects stay where you put them. The world has memory.\nEmbodied Metaphor\nMap virtual actions to real-world physical actions. Example: pull a lever to open a door (not press a button).\nGraceful Degradation\nIf tracking fails, fall back gracefully. Don’t crash or freeze.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#interaction-anti-patterns",
     "href": "weeks/06-week-06/01-slides.html#interaction-anti-patterns",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Interaction Anti-Patterns",
     "text": "Interaction Anti-Patterns\n\n\n\n\n\n\nAnti-Pattern\nProblem\n\n\n\n\nFloating menus\nBreak immersion, cause eye strain\n\n\nTiny targets\nViolate Fitts’ Law, cause frustration\n\n\nNo feedback\nUser doesn’t know if action worked\n\n\nGorilla arm UI\nCauses fatigue in minutes\n\n\nForced smooth locomotion\nCauses sickness for sensitive users\n\n\nInvisible affordances\nUser can’t discover interactions\n\n\nIrreversible actions\nUser is afraid to explore",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#evaluation-methods-for-xr",
     "href": "weeks/06-week-06/01-slides.html#evaluation-methods-for-xr",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Evaluation Methods for XR",
     "text": "Evaluation Methods for XR\n\n\n\n\n\n\n\n\n\n\n\nMethod\nWhen\nWhat it measures\n\n\n\n\nHeuristic evaluation\nEarly\nDesign problems against principles\n\n\nThink-aloud\nMid\nUser mental model\n\n\nObservation / task metrics\nDuring\nErrors, time on task, completion\n\n\nEye tracking heatmap\nDuring\nAttention patterns\n\n\nSUS (System Usability Scale)\nPost-use\nOverall usability score\n\n\nSSQ (Simulator Sickness Questionnaire)\nPost-use\nComfort/sickness\n\n\nIPQ (Igroup Presence Questionnaire)\nPost-use\nSense of presence\n\n\nNASA-TLX\nPost-use\nPerceived workload",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#heuristic-evaluation-for-xr",
     "href": "weeks/06-week-06/01-slides.html#heuristic-evaluation-for-xr",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Heuristic Evaluation for XR",
     "text": "Heuristic Evaluation for XR\n\n\n\nNielsen’s 10 heuristics adapted for XR:\n\nVisibility of system status → feedback on every interaction\nMatch between system and real world → embodied metaphors\nUser control and freedom → undo, cancel, exit\nConsistency and standards → consistent gesture vocabulary\nError prevention → confirm before destructive actions\nRecognition over recall → visible affordances\nFlexibility and efficiency → shortcuts for expert users\nAesthetic and minimalist design → diegetic UI\nHelp users recognise errors → clear error states\nHelp and documentation → in-world tutorials\n\nRate each problem for severity: 0 (not a problem) to 4 (catastrophe).",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-xr-experience-analysis-interaction-prototype",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-xr-experience-analysis-interaction-prototype",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: XR Experience Analysis & Interaction Prototype",
     "text": "Assessment 2: XR Experience Analysis & Interaction Prototype\nDue: Wed 4 Nov 2026, 17:00 | Weight: 30% | Individual | LO2, LO3, LO4\n\n\n\nExperience Analysis\n\nAnalyse a VR or AR application you have used yourself\nInteraction design, presence and immersion, spatial design, comfort and usability\nTwo or three key interactions, judged with this week’s frameworks\n\nInteraction Prototype\n\nRebuild one key interaction as a Unity VR or AR application\nWorking on a real device, with clear input, response and feedback\n\nEvaluation\n\nSmall user test: SSQ before and after, SUS after\nCompare with the original; what would you improve?\n\n\n\nSubmit\n\nReport (1500–2000 words)\nUnity project and build\nVideo demo on a real device (2–3 minutes)\n\nMarking\n\n\n\nComponent\nWeight\n\n\n\n\nAnalysis\n30%\n\n\nPrototype\n30%\n\n\nHCI Application\n20%\n\n\nEvaluation\n10%\n\n\nPresentation\n10%\n\n\n\nFull brief: Assessment 2",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-the-two-rules",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-the-two-rules",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: The Two Rules",
     "text": "Assessment 2: The Two Rules\n\n\n1. Analyse anything you can use hands-on\n\nAny type of VR or AR application: games, training, creative tools, fitness, system UI, phone AR\nIt must run on TUS equipment or your own equipment\nYou must have used it yourself: no video-only analyses\n\n\n2. Build the prototype in Unity\n\nA Unity VR or AR application: no Unreal, Godot, WebXR, Lens Studio, …\nRunning on a real device (simulators are fine for development)\nThe device can differ from the original: a HoloLens 2 interaction can be rebuilt on a Quest 3",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-equipment",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-equipment",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: Equipment",
     "text": "Assessment 2: Equipment\n\n\n\nDevice\nAnalyse\nUnity prototype\n\n\n\n\nMeta Quest 3 / 3S\n✓\n✓ Recommended: the lab setup\n\n\nMeta Quest 2\n✓\n✓ VR only, no colour passthrough\n\n\nPico Neo Eye, HTC Vive Pro\n✓\n✓ Agree it with me first\n\n\nHoloLens 2, Xreal One Pro\n✓\nBy agreement only\n\n\nSnap Spectacles\n✓\n✗ Lens Studio, not Unity\n\n\nCardboard viewer + phone\n✓\n✓ 3DOF, gaze and one button\n\n\nYour own Android / iPhone\n✓\n✓ AR Foundation (iOS needs a Mac)\n\n\nYour own headset\n✓\nIf Unity can build to it: agree it with me",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-choosing-an-application",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-choosing-an-application",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: Choosing an Application",
     "text": "Assessment 2: Choosing an Application\n\n\n\n\n\n\n\n\nType\nExample\nInteraction you could rebuild\n\n\n\n\nRhythm game\nBeat Saber\nHitting a block, with haptic and audio feedback\n\n\nTutorial\nMeta’s First Steps\nPicking up, throwing and stacking\n\n\nCreative tool\nOpen Brush\nDrawing a 3D stroke; a hand-held palette\n\n\nPuzzle / escape room\nI Expect You To Die\nKey into a lock, door opens\n\n\nEducation / training\nAnatomy viewers\nTwo-handed rotate and scale\n\n\nSystem UI\nQuest or HoloLens 2 menus\nRay-select a panel button; wrist menu\n\n\nMobile AR\nFurniture preview, Apple Measure\nTap-to-place; measure between two points\n\n\n360° / Cardboard\nCardboard demos\nGaze-and-dwell selection\n\n\n\nGreat to analyse but too big to rebuild whole: location AR, multiplayer social VR. Analyse the whole app, rebuild one small interaction.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-scoping-your-prototype",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-scoping-your-prototype",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: Scoping Your Prototype",
     "text": "Assessment 2: Scoping Your Prototype\n\nIf you can’t describe it in one sentence and build a first version in two lab sessions, cut it down.\n\n\n\nCore\n\nGrab, move, release\nRay-select a UI button\nGaze-and-dwell select\nTap-to-place on a plane\nTeleport\n\n\nDeveloping\n\nSocket: key into lock\nHit moving targets\nDraw in 3D\nWrist / palm menu\nTwo-handed scale\nAR measure\n\n\nAvoid\n\nMultiplayer\nCloud anchors, GPS AR\nAvatars and IK\nWhole game loops\nAI characters\nCustom shaders\n\n\nA Core interaction that works well beats an ambitious one that is broken. Scope and polish are not marked.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-worked-examples",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-worked-examples",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: Worked Examples",
     "text": "Assessment 2: Worked Examples\n\nVR: Beat SaberAR: Furniture placement\n\n\n\nInteraction: hitting an incoming block with a saber\nPrototype: cubes spawn and move towards the player; a capsule “saber” on the controller destroys them on contact, with a hit sound, a haptic pulse and a hit counter\nLeft out: music, beat sync, slicing direction, menus\nEvaluation: test with feedback on and off: what does haptics add?\n\n\n\n\nInteraction: placing a piece of furniture on the floor\nPrototype: AR Foundation plane detection, a placement indicator, tap to place a primitive chair, drag to move, two-finger twist to rotate\nLeft out: catalogue, scale checking, saving\nEvaluation: do users understand when the floor is detected and where the object will appear?",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#assessment-2-key-dates",
     "href": "weeks/06-week-06/01-slides.html#assessment-2-key-dates",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Assessment 2: Key Dates",
     "text": "Assessment 2: Key Dates\n\n\n\n\n\n\n\nWhen\nWhat\n\n\n\n\nWeek 6 lab\nWorking session: build the Core interaction on the device\n\n\nWeek 7 practical\nAssessment 2 clinic: application and interaction agreed with me; user-test dry run\n\n\nWeek 7 lab\nAR Foundation and tap-to-place: useful for AR prototypes\n\n\nWednesday 4 November 2026, 17:00\nSubmission",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#key-takeaways",
     "href": "weeks/06-week-06/01-slides.html#key-takeaways",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\nFrameworks give you a systematic language for analysis\nNorman’s Action Cycle identifies where interactions fail\nMilgram’s continuum positions your design in the XR spectrum\nPresence theory explains why interaction quality matters\nEvaluation methods should match your design stage",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/06-week-06/01-slides.html#references",
     "href": "weeks/06-week-06/01-slides.html#references",
-    "title": "Week 6 Slides",
+    "title": "Lecture Slides",
     "section": "References",
     "text": "References\n\nNorman, D. (2013) The Design of Everyday Things (revised ed.). Basic Books.\nMilgram, P. & Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” IEICE Transactions. (Milgram et al. 1994)\nSlater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” Philosophical Transactions of the Royal Society B.\nNielsen, J. (1994) “Heuristic evaluation.” In Nielsen & Mack (eds.) Usability Inspection Methods. Wiley. ## Discussion\nPick an XR experience you have used — where does it break down under Norman’s Action Cycle, and how would you redesign it?\nIs Milgram’s Reality-Virtuality Continuum still the right lens for categorising devices today, or does it need revision for devices like smart glasses?\nCan Plausibility Illusion (Psi) be engineered deliberately through specific design choices, or does it only emerge as a by-product of otherwise good design?\nWhich interaction anti-pattern have you personally experienced, and what made it so disruptive to your sense of presence?\nWith limited time and budget, should a team prioritise heuristic evaluation or user testing (think-aloud, SUS/SSQ/IPQ) — and why?\n\n\nUseful as a bridge into Assessment 2 — students should be forming opinions about which framework(s) they will apply to their chosen experience.\n\n\n\n\n\nMilgram, P, H Takemura, A Utsumi, and F Kishino. 1994. “Mixed Reality ( MR ) Reality-Virtuality ( RV ) Continuum.” Systems Research 2351 (Telemanipulator and Telepresence Technologies): 282–92. https://doi.org/10.1.1.83.6861.",
     "crumbs": [
       "Week 06",
-      "Week 6 Slides"
+      "Lecture Slides"
     ]
   },
   {
@@ -3434,133 +3434,133 @@
   {
     "objectID": "weeks/06-week-06/02-lecture.html",
     "href": "weeks/06-week-06/02-lecture.html",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "",
     "text": "TipTL;DR\n\n\n\n\nFrameworks are structured lenses that replace “it felt good” with systematic analysis; each answers a different question, so a strong analysis combines two or more.\nNorman’s seven-stage action cycle locates where an interaction fails across the Gulf of Execution and Gulf of Evaluation, which designers close with signifiers, mapping, feedback and constraints.\nMilgram’s continuum treats mixed reality as the whole span between real and virtual, and where an experience sits on it — not just its device — shapes interaction design.\nSlater separates Place Illusion from Plausibility Illusion: noticing the interface breaks PI and inconsistent world responses break Psi, so interaction design is part of the experience itself.\nPatterns such as progressive disclosure and graceful degradation are reusable solutions, while most anti-patterns are desktop or mobile conventions carried into 3D without adaptation.\nCombine an inspection method such as heuristic evaluation with empirical methods, test ethically, and in Assessment 2 analyse with frameworks and evidence rather than merely describe.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#overview",
     "href": "weeks/06-week-06/02-lecture.html#overview",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "1 Overview",
     "text": "1 Overview\nWeek 6 is the analytical pivot of the module. Having established hardware knowledge (Weeks 1-2), perceptual foundations (Week 3), and interaction mechanics (Weeks 4-5), we now develop the critical vocabulary needed to analyse, evaluate, and improve XR experiences. This week also launches Assessment 2.\nBy the end of this week you should be able to:\n\nApply Norman’s action cycle and design principles to locate where an XR interaction fails\nPosition an experience or device on Milgram’s reality-virtuality continuum and explain what that implies for interaction\nExplain how interaction quality affects Place Illusion and Plausibility Illusion\nRecognise common XR interaction patterns and anti-patterns\nChoose an evaluation method that fits the stage of a design and the question being asked",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#why-frameworks-matter",
     "href": "weeks/06-week-06/02-lecture.html#why-frameworks-matter",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "2 1. Why Frameworks Matter",
     "text": "2 1. Why Frameworks Matter\nDesign frameworks are not rigid rules — they are structured lenses that help us:\n\nAnalyse existing experiences systematically rather than impressionistically\nCommunicate design decisions to collaborators and stakeholders\nIdentify problems before committing to implementation\nCompare experiences across different platforms and contexts\n\nWithout frameworks, XR critique tends to collapse into “it felt good” or “it felt bad” — subjective impressions that cannot drive improvement.\n\n\n\nA framework turns vague impressions into specific questions you can answer.\n\n\nNo single framework covers everything. Each one this week answers a different question:\n\n\n\n\n\n\n\nFramework\nQuestion it answers\n\n\n\n\nNorman’s action cycle\nWhere in an interaction does the user get stuck?\n\n\nMilgram’s continuum\nWhat kind of XR experience is this, and what does that constrain?\n\n\nSlater’s presence model\nWhy does a usability problem also damage the experience?\n\n\nHeuristics\nWhich established principles does the design violate, and how badly?\n\n\n\nA strong analysis combines two or more lenses: for example, Norman to find the failure point and Slater to explain its effect on presence.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#normans-action-cycle",
     "href": "weeks/06-week-06/02-lecture.html#normans-action-cycle",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "3 2. Norman’s Action Cycle",
     "text": "3 2. Norman’s Action Cycle\nDonald Norman’s seven-stage action cycle (from The Design of Everyday Things, 1988, revised 2013) describes how humans interact with any system:\n\nForm a goal: What does the user want to achieve?\nForm an intention: How do they plan to achieve it?\nSpecify an action: Which specific action will they take?\nExecute the action: Perform the physical action\nPerceive the state of the world: What changed?\nInterpret the state: What does the change mean?\nEvaluate the outcome: Did it achieve the goal?\n\nStages 2-4 form the execution side of the cycle (getting from a goal to an action in the world); stages 5-7 form the evaluation side (getting from a change in the world back to a judgement about the goal). In practice users cycle through these stages many times a second, and often skip or reorder them — the model is a diagnostic tool, not a literal description of thought.\n\n\n\nNorman’s seven stages: three to act on the world, three to make sense of the result.\n\n\n\n3.1 2.1 Applying the Cycle to XR\nThe cycle is particularly useful for XR because it maps directly onto the interaction design challenges we’ve covered:\n\n\n\nStage\nXR Design Question\n\n\n\n\nForm goal\nIs the goal clear from the environment?\n\n\nForm intention\nDoes the user know what actions are possible?\n\n\nSpecify action\nIs the correct gesture/input discoverable?\n\n\nExecute action\nIs the input reliable and comfortable?\n\n\nPerceive state\nIs there clear feedback?\n\n\nInterpret state\nIs the feedback unambiguous?\n\n\nEvaluate outcome\nDoes the user know if they succeeded?\n\n\n\n\n\n3.2 2.2 The Gulf of Execution and Gulf of Evaluation\nNorman identifies two key gaps:\nGulf of Execution: The gap between what the user wants to do and what actions are available. In XR, this manifests as invisible affordances — objects that can be interacted with but give no indication of this — undiscoverable gestures, and inputs that fail because of tracking loss or fatigue.\nGulf of Evaluation: The gap between the system’s state and the user’s perception of it. In XR, this manifests as missing or ambiguous feedback — the user performs an action but doesn’t know if it worked.\nGood XR design minimises both gulfs.\n\n\n\nWhere XR interactions fail: execution problems on the way in, evaluation problems on the way back.\n\n\n\n\n3.3 2.3 Norman’s Design Principles in XR\nNorman pairs the action cycle with a set of design principles. These are the levers a designer uses to close the two gulfs:\n\n\n\n\n\n\n\n\nPrinciple\nMeaning\nXR example\n\n\n\n\nAffordance\nWhat actions an object makes possible\nA handle-shaped object can be grabbed\n\n\nSignifier\nA perceivable cue that shows where and how to act\nA hover glow, a hand-shaped outline on a lever\n\n\nMapping\nThe relationship between control and effect\nTwisting the wrist rotates the held object the same way\n\n\nFeedback\nImmediate, informative response to an action\nA click sound and a haptic pulse when a button is pressed\n\n\nConstraints\nLimits that prevent wrong actions\nTeleport arc refuses to land inside walls\n\n\nConceptual model\nThe user’s understanding of how the system works\n“Grip to hold, trigger to use” applied consistently\n\n\n\nNorman’s revised edition stresses the difference between affordances and signifiers. In XR almost anything could be interactive, so affordances alone are not enough: designers must add signifiers that tell the user which objects actually respond. Many “invisible affordance” problems are really missing signifiers.\n\n\n3.4 2.4 Worked Example: Picking Up a Key\nConsider a hypothetical VR escape room where the user must pick up a key from a desk.\n\n\n\n\n\n\n\n\n\nStage\nWhat happens\nProblem\nFix\n\n\n\n\nGoal\n“Unlock the door”\n—\n—\n\n\nIntention\nUser looks for something to open the door\nKey looks identical to static props\nSubtle highlight on interactable items (signifier)\n\n\nSpecify\nUser tries to pinch the key\nGame expects a grip press\nAccept both, or show a grip hint on hover\n\n\nExecute\nUser reaches down to the desk\nDesk is below seated reach\nRaise the desk or support remote grab\n\n\nPerceive\nKey appears in hand\nNo sound or haptic\nAdd a pickup sound and a short haptic pulse\n\n\nInterpret\nUser is unsure whether it is “held”\nKey jitters in hand\nSnap to a stable held pose\n\n\nEvaluate\nUser walks to the door\n—\n—\n\n\n\nThis kind of table, built for one interaction, is exactly the form of analysis expected in Assessment 2.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#milgrams-reality-virtuality-continuum",
     "href": "weeks/06-week-06/02-lecture.html#milgrams-reality-virtuality-continuum",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "4 3. Milgram’s Reality-Virtuality Continuum",
     "text": "4 3. Milgram’s Reality-Virtuality Continuum\nPaul Milgram and Fumio Kishino (1994) proposed a continuum from fully real to fully virtual environments. The two ends are the real environment and the virtual environment; mixed reality (MR) is not a single point but the whole span between them:\nReal ←———————————— Mixed Reality (MR) ————————————→ Virtual\nEnvironment        AR              AV              Environment\n\n\n\nThe reality-virtuality continuum: mixed reality covers everything between the two ends.\n\n\nAugmented Reality (AR): Primarily real world with virtual overlays. The user sees the real world and virtual content is added. Examples: Snap Spectacles, HoloLens 2, phone-based AR.\nAugmented Virtuality (AV): Primarily virtual with real elements incorporated — for example a real keyboard or the user’s real hands shown inside a virtual scene. Rare in consumer products.\nVirtual Reality (VR): Fully virtual environment. Examples: Quest 2, Vive Pro, Pico Neo Eye.\n\n4.1 3.1 How “Mixed Reality” Is Used Today\nIn Milgram’s original sense, AR and AV are both forms of mixed reality. Industry usage has drifted: vendors now often use “mixed reality” to mean AR in which virtual objects are anchored to and interact with the physical room — occluded by real furniture, resting on real tables. Microsoft used it for HoloLens; Meta uses it for colour-passthrough features on Quest 3.\nPassthrough headsets also blur the continuum because one device can move along it at runtime: the same Quest 3 can show the real room with a few virtual objects, a virtual room with a “window” onto reality, or a fully virtual scene. When you analyse an experience, describe where the experience sits, not just which device it runs on.\n\n\n4.2 3.2 Design Implications\nThe position on the continuum determines fundamental interaction design decisions:\n\n\n\n\n\n\n\nContinuum Position\nInteraction Considerations\n\n\n\n\nAR\nMust work in unpredictable real environments; lighting varies; user is mobile; virtual content must not hide real hazards\n\n\nMR (anchored to the room)\nSpatial anchoring critical; virtual objects must respect real-world surfaces and occlusion\n\n\nAV\nReal elements must be tracked and aligned precisely, or the illusion breaks\n\n\nVR\nFull control of environment; can design for specific hardware; comfort and physical safety (guardian/boundary) are primary concerns",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#presence-theory-slater",
     "href": "weeks/06-week-06/02-lecture.html#presence-theory-slater",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "5 4. Presence Theory (Slater)",
     "text": "5 4. Presence Theory (Slater)\nMel Slater’s presence model (2009) distinguishes two components:\nPlace Illusion (PI): The sense of “being there” — the feeling that you are physically located in the virtual space. PI is primarily driven by perceptual factors: field of view, tracking quality, latency, stereoscopy. Slater ties PI to sensorimotor contingencies: the more ways you can perceive the world with your body as you would in reality (turning your head, leaning to look around an object), the stronger the illusion.\nPlausibility Illusion (Psi): The sense that “this is really happening” — that events in the virtual world are real events, not simulations. Psi is driven by the coherence and responsiveness of the virtual world, especially events that respond to you (a character that turns to look at you, an object that reacts when you touch it).\nRecall from Week 3 that immersion is an objective property of the system (what it can deliver), while presence is the subjective response it produces. PI and Psi are two parts of that response.\n\n\n\nPlace Illusion and Plausibility Illusion, and how interaction breaks each.\n\n\n\n5.1 4.1 How Interaction Affects Presence\nPoor interaction design breaks both components:\n\nBreaks PI: When you notice the interface (floating menus, visible ray casters, controller models that don’t match your hands), you are reminded that you are in a simulation.\nBreaks Psi: When the world doesn’t respond consistently (objects that don’t fall, physics that behaves unexpectedly, interactions that don’t work), the plausibility of the experience collapses.\n\nThis is why interaction design is not just a usability concern — it is a fundamental component of the XR experience itself.\n\n\n5.2 4.2 Embodiment\nA closely related concept is the sense of embodiment (Kilteni, Groten & Slater, 2012): the feeling that a virtual body is your own. It has three parts — self-location (where I am), agency (I control this body) and body ownership (this body is mine). Interaction design affects all three: virtual hands that track accurately and respond instantly strengthen agency, while hands that pass through solid objects or lag behind real movement weaken it.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#interaction-patterns",
     "href": "weeks/06-week-06/02-lecture.html#interaction-patterns",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "6 5. Interaction Patterns",
     "text": "6 5. Interaction Patterns\nA pattern is a reusable solution to a recurring design problem. Naming patterns lets designers discuss solutions quickly and lets analysts recognise when a known good solution has been used — or ignored.\n\n\n\nFour interaction patterns that recur in well-designed XR.\n\n\n\n6.1 5.1 Progressive Disclosure\nReveal complexity gradually. Present only the options relevant to the current task; reveal additional options as the user progresses.\nXR application: Don’t present all menu options at once. Start with the primary action; reveal secondary options through exploration or explicit request. Introduce new mechanics one at a time, each with a moment to practise before the next.\n\n\n6.2 5.2 Spatial Consistency\nObjects stay where the user places them. The virtual world has memory. This is a fundamental expectation users bring from the real world.\nXR application: Avoid resetting object positions between scenes or sessions without explicit user action. If objects must reset, provide clear visual indication. In AR, use persistent spatial anchors so content reappears in the same physical place.\n\n\n6.3 5.3 Embodied Metaphor\nMap virtual actions to real-world physical actions. Leverage the user’s existing physical knowledge.\nExamples:\n\nPull a lever to open a door (not press a button)\nThrow an object by physically throwing (not pressing a button)\nWrite by physically writing (not typing)\n\nEmbodied metaphors reduce the Gulf of Execution because the user already knows the action. They must be balanced against fatigue: a metaphor that requires large, repeated arm movements may be natural but tiring.\n\n\n6.4 5.4 Graceful Degradation\nWhen tracking fails, input is lost, or the system encounters an error, degrade gracefully rather than crashing or freezing.\nXR application: If hand tracking is lost, fall back to controller input. If a gesture fails, provide an alternative button input. Always give the user a way out.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#interaction-anti-patterns",
     "href": "weeks/06-week-06/02-lecture.html#interaction-anti-patterns",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "7 6. Interaction Anti-Patterns",
     "text": "7 6. Interaction Anti-Patterns\nAn anti-pattern is a common solution that looks reasonable but reliably causes problems. Most XR anti-patterns are desktop or mobile conventions carried into 3D without adaptation.\n\n\n\nSix common XR anti-patterns, each with the usual fix.\n\n\n\n\n\n\n\n\n\n\nAnti-Pattern\nWhy It Fails\nBetter Alternative\n\n\n\n\nFloating menus\nBreak immersion, vergence conflict\nDiegetic UI, wrist menu\n\n\nTiny targets\nViolate Fitts’ Law\nMinimum 2cm at arm’s length\n\n\nNo feedback\nUser doesn’t know if action worked\nVisual + audio + haptic\n\n\nGorilla arm UI\nFatigue in minutes\nWaist-height interaction zone\n\n\nForced smooth locomotion\nSickness for sensitive users\nAlways offer teleport\n\n\nInvisible affordances\nUser can’t discover interactions\nHighlight, glow, audio cue\n\n\nIrreversible actions\nUser afraid to explore\nConfirm dialogs, undo\n\n\n\nEach anti-pattern can be traced to one of this week’s frameworks: tiny targets and invisible affordances widen the Gulf of Execution, missing feedback widens the Gulf of Evaluation, and floating menus break Place Illusion.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#evaluation-methods",
     "href": "weeks/06-week-06/02-lecture.html#evaluation-methods",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "8 7. Evaluation Methods",
     "text": "8 7. Evaluation Methods\nEvaluation methods fall into two broad families:\n\nInspection methods — experts review the design against principles. No users are needed, so they are fast and cheap and can be used before anything is built.\nEmpirical methods — real users try the design while you observe, measure or ask them. These find problems experts miss, but cost more time.\n\nThe right choice depends on the stage of the design and the question you are asking.\n\n\n\nMatch the evaluation method to the stage of the design.\n\n\n\n8.1 7.1 Heuristic Evaluation\nExpert review against a set of established principles. Fast and cheap — can be done without users.\nProcess:\n\nSelect 3-5 evaluators\nEach evaluator independently reviews the experience against the heuristics\nEvaluators rate severity of each violation (0-4 scale)\nAggregate findings and prioritise\n\nNielsen’s 10 heuristics adapted for XR:\n\n\n\n\n\n\n\n\n#\nNielsen heuristic\nXR translation\n\n\n\n\n1\nVisibility of system status\nFeedback on every interaction\n\n\n2\nMatch between system and real world\nEmbodied metaphors\n\n\n3\nUser control and freedom\nUndo, cancel, exit\n\n\n4\nConsistency and standards\nConsistent gesture vocabulary\n\n\n5\nError prevention\nConfirm before destructive actions\n\n\n6\nRecognition rather than recall\nVisible affordances and signifiers\n\n\n7\nFlexibility and efficiency of use\nShortcuts for expert users\n\n\n8\nAesthetic and minimalist design\nDiegetic, uncluttered UI\n\n\n9\nHelp users recognise, diagnose and recover from errors\nClear error states\n\n\n10\nHelp and documentation\nIn-world tutorials\n\n\n\n\n\n\nNielsen’s ten heuristics translated for XR, with the 0-4 severity scale.\n\n\nSeverity ratings (Nielsen):\n\n\n\nRating\nMeaning\n\n\n\n\n0\nNot a usability problem\n\n\n1\nCosmetic — fix only if time allows\n\n\n2\nMinor — low priority\n\n\n3\nMajor — important to fix\n\n\n4\nCatastrophe — must fix before release\n\n\n\nSeverity combines how often the problem occurs, how badly it affects users, and whether users can work around it. Nielsen’s heuristics were written for desktop software, so XR-specific sets add comfort, presence and physical safety. Sutcliffe and Gault (2004), for example, proposed heuristics for virtual environments that include natural engagement, compatibility with the user’s task and sense of presence.\n\n\n8.2 7.2 Think-Aloud Protocol\nUsers verbalise their thoughts while using the experience. Reveals mental models and points of confusion.\nXR challenge: Verbalising while wearing a headset is awkward. Consider:\n\nRecording audio from inside the headset\nUsing a mirrored display so an observer can see what the user sees\nBrief the user before starting — they often go quiet in XR\nA retrospective think-aloud, where the user watches a recording of their session afterwards and comments on it, avoids interrupting immersion\n\n\n\n8.3 7.3 Observation and Task Metrics\nWatching what users do — not just what they say — gives objective evidence:\n\nTask completion: did they succeed?\nTime on task: how long did it take?\nErrors: wrong actions, missed targets, repeated attempts\nRequests for help: where did they get stuck?\n\nRecord the mirrored view and, where possible, a camera view of the user’s body. Many XR problems (reaching, stooping, turning to find UI) are only visible from outside the headset.\n\n\n8.4 7.4 Standardised Questionnaires\n\n\n\nQuestionnaire\nMeasures\nItems\n\n\n\n\nSUS (System Usability Scale)\nOverall usability\n10 items\n\n\nSSQ (Simulator Sickness Questionnaire)\nComfort/sickness\n16 items\n\n\nIPQ (Igroup Presence Questionnaire)\nSense of presence\n14 items\n\n\nNASA-TLX\nPerceived workload\n6 dimensions\n\n\n\nSUS produces a score from 0 to 100; scores above about 68 are generally considered above average. The SSQ gives three subscales — nausea, oculomotor discomfort and disorientation — and a total. It is good practice to give the SSQ both before and after exposure so you can see the change, not just the end state.\nTo evaluate your Assessment 2 prototype, use both: the SSQ before and after each session, and the SUS afterwards. Use the consent form and SSQ from Week 5.\n\n\n8.5 7.5 Choosing a Method\n\n\n\nIf you want to know…\nUse\n\n\n\n\nWhat design problems exist before building\nHeuristic evaluation\n\n\nWhy users struggle\nThink-aloud, observation\n\n\nHow well users perform\nTask metrics\n\n\nHow usable it feels overall\nSUS\n\n\nWhether it makes people unwell\nSSQ (before and after)\n\n\nWhether users feel present\nIPQ\n\n\nHow mentally demanding it is\nNASA-TLX\n\n\n\nSmall user tests are still worthwhile: a handful of participants will reveal the most frequent problems, though not every problem. Combine an inspection method with at least one empirical method, and be honest in your report about what a small sample can and cannot show.\n\n\n8.6 7.6 Ethics and Safety in XR Evaluation\nUser testing in XR carries physical and wellbeing risks that desktop testing does not:\n\nObtain informed consent and explain that participants can stop at any time without giving a reason\nScreen for conditions such as photosensitive epilepsy or susceptibility to motion sickness\nClear the play space and keep an observer beside the participant\nKeep sessions short and stop immediately if sickness symptoms appear\nStore any recordings and questionnaire data securely and anonymise results",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#structuring-an-experience-analysis",
     "href": "weeks/06-week-06/02-lecture.html#structuring-an-experience-analysis",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "9 8. Structuring an Experience Analysis",
     "text": "9 8. Structuring an Experience Analysis\nAssessment 2 asks you to analyse an existing experience. A clear structure is:\n\nDescribe the experience briefly: platform, input, position on Milgram’s continuum, target user\nSelect two or three key interactions to focus on — depth beats breadth\nAnalyse each interaction with a framework (for example, an action-cycle table as in Section 2.4)\nExplain the effect on presence and comfort using Slater’s model and Week 3-5 concepts\nJudge strengths and weaknesses, citing what you observed and the frameworks above\nSupport every claim with evidence: screenshots, recordings, observations or questionnaire results\n\nAvoid description without critique. “The menu is on the wrist” is description; “the wrist menu keeps controls within reach and avoids head-locked UI, but it has no haptic confirmation, so users repeat selections” is analysis.",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#self-check-questions",
     "href": "weeks/06-week-06/02-lecture.html#self-check-questions",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "10 Self-Check Questions",
     "text": "10 Self-Check Questions\n\nApply Norman’s Action Cycle to a specific interaction in an XR experience you have used. Where does it fail?\nWhat is the difference between an affordance and a signifier? Give an XR example of each.\nWhere on Milgram’s continuum would you place the HoloLens 2? The Quest 2? The Snap Spectacles? Why is the Quest 3 harder to place?\nWhat is the difference between Place Illusion and Plausibility Illusion?\nName three interaction anti-patterns and explain which gulf, or which presence component, each one damages.\nWhen would you use a heuristic evaluation rather than a user test?\nWhy should the SSQ be given both before and after an XR session?",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/06-week-06/02-lecture.html#references",
     "href": "weeks/06-week-06/02-lecture.html#references",
-    "title": "Week 6 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "11 References",
     "text": "11 References\n\nNorman, D. (2013) The Design of Everyday Things (revised ed.). Basic Books. (normanDesignEverydayThings2013?)\nMilgram, P. & Kishino, F. (1994) “A taxonomy of mixed reality visual displays.” IEICE Transactions on Information and Systems, E77-D(12), 1321-1329. (milgramKishinoTaxonomyMixedReality1994?)\nSlater, M. (2009) “Place illusion and plausibility can lead to realistic behaviour in immersive virtual environments.” Philosophical Transactions of the Royal Society B, 364(1535), 3549-3557. (slaterPlaceIllusionPlausibility2009?)\nKilteni, K., Groten, R. & Slater, M. (2012) “The sense of embodiment in virtual reality.” Presence: Teleoperators and Virtual Environments, 21(4), 373-387. (kilteniSenseEmbodimentVirtual2012?)\nNielsen, J. (1994) “Heuristic evaluation.” In Nielsen, J. & Mack, R.L. (eds.) Usability Inspection Methods. Wiley. (nielsenHeuristicEvaluation1994?)\nSutcliffe, A. & Gault, B. (2004) “Heuristic evaluation of virtual reality applications.” Interacting with Computers, 16(4), 831-849. (sutcliffeGaultHeuristicEvaluation2004?)\nBrooke, J. (1996) “SUS: A ‘quick and dirty’ usability scale.” In Jordan et al. (eds.) Usability Evaluation in Industry. Taylor & Francis. (brookeSUSQuickDirty1996?)\nKennedy, R.S. et al. (1993) “Simulator sickness questionnaire.” International Journal of Aviation Psychology, 3(3), 203-220. (kennedySimulatorSicknessQuestionnaire1993?)\nSchubert, T., Friedmann, F. & Regenbrecht, H. (2001) “The experience of presence: Factor analytic insights.” Presence: Teleoperators and Virtual Environments, 10(3), 266-281. (schubertExperiencePresenceFactor2001?)\nHart, S.G. & Staveland, L.E. (1988) “Development of NASA-TLX (Task Load Index).” In Hancock, P.A. & Meshkati, N. (eds.) Human Mental Workload. North-Holland. (hartStavelandNASATLX1988?)",
     "crumbs": [
       "Week 06",
-      "Week 6 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
@@ -3610,309 +3610,309 @@
   {
     "objectID": "weeks/07-week-07/02-lecture.html",
     "href": "weeks/07-week-07/02-lecture.html",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "",
     "text": "TipTL;DR\n\n\n\n\nSpatial computing adds awareness and persistence to VR and overlay AR, delivered by three mechanisms: tracking, scene understanding and anchors.\nInside-out headsets fuse cameras and an IMU for 6DoF tracking, and use SLAM to build a map of the room while localising within it.\nTracking fails predictably in low light, on blank or repetitive surfaces and with covered cameras, so good apps show tracking state, guide the user and recover gracefully.\nScene understanding layers planes, meshes and semantic labels, measured live or declared in setup, enabling tap-to-place raycasting and depth-based occlusion of virtual content.\nAnchors (local, persistent or shared) are best estimates that drift with distance: choose by persistence requirement, keep content close, and parent content to anchors, not world coordinates.\nA room scan is a detailed record of someone’s home, so designers must say plainly what is stored, where it goes and what the user was told.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#overview",
     "href": "weeks/07-week-07/02-lecture.html#overview",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "1 Overview",
     "text": "1 Overview\nDuration: 1 hour\nThis week addresses the mechanics behind the word spatial in the module title. Where Weeks 1-6 treated the headset largely as a display and an input device, this session looks at how it builds and maintains a model of the room it is standing in, and how digital content can be given a durable place inside that model.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#learning-objectives",
     "href": "weeks/07-week-07/02-lecture.html#learning-objectives",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "2 Learning Objectives",
     "text": "2 Learning Objectives\nBy the end of this lecture, students will be able to:\n\nExplain how a headset builds and maintains a map of a physical space\nPredict the conditions under which tracking and relocalisation will fail, and design for them\nChoose an anchoring strategy appropriate to a stated persistence requirement\nIdentify the privacy implications of continuous scene capture and state them plainly",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#what-makes-computing-spatial",
     "href": "weeks/07-week-07/02-lecture.html#what-makes-computing-spatial",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "3 1. What Makes Computing Spatial",
     "text": "3 1. What Makes Computing Spatial\nSpatial computing adds two properties to VR and simple overlay AR:\n\nAwareness: the device keeps a live model of the room around it: where the floor, walls and furniture are.\nPersistence: digital content keeps its place in that room, as the user moves, when the app restarts, and on another day.\n\nThree mechanisms deliver these properties, and the rest of this lecture takes them in turn:\n\n\n\nMechanism\nQuestion it answers\n\n\n\n\nTracking\nWhere is the device in the room?\n\n\nScene understanding\nWhat is the room like?\n\n\nAnchors\nWhere does the content belong?\n\n\n\n\n\n\nSpatial computing: content that knows where it is, and stays there.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#tracking-and-mapping",
     "href": "weeks/07-week-07/02-lecture.html#tracking-and-mapping",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "4 2. Tracking and Mapping",
     "text": "4 2. Tracking and Mapping\n\n4.1 2.1 Inside-Out 6DoF Tracking\nA tracked headset reports a pose many times a second: its position along three axes and its rotation about three axes (yaw, pitch and roll), hence six degrees of freedom (6DoF). Week 2 introduced the distinction between 3DoF and 6DoF devices; this week is about how the six are measured.\nModern standalone headsets and phones track inside-out: the sensors are on the device itself rather than mounted around the room (the outside-in approach of the Vive Pro’s base stations). Two kinds of sensor are combined:\n\nCameras observe visual features in the room. They give an accurate position but only once per camera frame, and they need light and texture.\nAn IMU (inertial measurement unit: accelerometer and gyroscope) measures acceleration and rotation hundreds of times a second. It is fast but, used alone, drifts within seconds because small errors accumulate.\n\nSensor fusion combines the two: the IMU fills in fast motion between frames and the cameras correct its drift. This combination is often called visual-inertial odometry.\n\n\n\nInside-out 6DoF tracking fuses camera and IMU data into a single pose.\n\n\n\n\n4.2 2.2 SLAM in Outline\nTracking a device’s motion is only half the problem. To know where it is in a room, the device also needs a map of that room, and it has to build that map while using it. This is Simultaneous Localisation And Mapping (SLAM) (Durrant-Whyte & Bailey, 2006).\n\nDetect features: find distinctive, repeatable points in each camera image, such as corners, edges and textured patches.\nEstimate pose: match features between frames to work out how the device has moved.\nUpdate the map: add newly seen features to a 3D map of the space.\nLoop closure: when the device recognises a place it has seen before, it corrects the drift accumulated since then, and the whole map snaps into better alignment.\nRelocalisation: after tracking is lost, or when an app starts in a known room, the device matches what it sees against a saved map to recover its pose.\n\n\n\n\nSLAM: work out where you are while building the map you need to do it.\n\n\n\n\n4.3 2.3 When Tracking Breaks\nBecause SLAM depends on seeing distinctive features, its failures are predictable:\n\n\n\n\n\n\n\n\nCondition\nWhy it fails\nWhat the user experiences\n\n\n\n\nLow light\nCameras see too few features\nContent drifts, then a “tracking lost” message\n\n\nBlank walls, glossy or reflective surfaces\nNo texture to match\nContent slides across surfaces\n\n\nRepeating patterns (tiles, carpet, shelving)\nDifferent places look the same\nPose jumps to the wrong place\n\n\nCovered cameras, very fast motion\nCamera frames unusable\nView freezes, then snaps back\n\n\nMoved furniture, a different room\nSaved map no longer matches\nRelocalisation fails; anchored content is missing\n\n\n\n\n\n\nTracking needs light, texture and steady views of the room.\n\n\nThese failures are a design problem, not only an engineering one. Good spatial applications:\n\nShow tracking state clearly, rather than letting content silently drift\nGuide the user to look around slowly when the map is thin (most phone AR apps show a “move your phone” animation for this reason)\nRecover gracefully (the Week 6 graceful degradation pattern): hide or fade content whose anchor cannot be found, rather than leaving it in the wrong place\nNever freeze the view in a headset, which is a strong trigger for simulator sickness (Week 3)",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#scene-understanding",
     "href": "weeks/07-week-07/02-lecture.html#scene-understanding",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "5 3. Scene Understanding",
     "text": "5 3. Scene Understanding\nTracking tells the device where it is. Scene understanding tells it what is around it. The model of the room comes in layers:\n\nPlanes: flat, bounded surfaces such as the floor, walls, ceiling and table tops. Planes are cheap to compute and good for placing objects.\nMeshes: a triangle surface over everything the device has seen, including irregular objects such as a sofa or a person. Meshes support physics (a virtual ball bouncing off a real chair) and occlusion.\nSemantic labels: what a surface is: floor, wall, ceiling, table, couch, door, window. Labels let content behave sensibly: a virtual pet sits on the couch, a poster goes on a wall.\n\n\n\n\nThe device’s model of the room: planes, a mesh and semantic labels.\n\n\n\n5.1 3.1 Measured vs Declared Geometry\nThere are two ways a device can know about a room, and they fail differently:\n\nMeasured geometry is detected live by the cameras and, on devices that have one, a depth sensor. It reflects the room as it is now, but it is incomplete until the user has looked around.\nDeclared geometry is captured once in a guided setup and stored. On Quest 3, Space Setup scans the room and lets the user confirm walls and furniture; apps then read this scene model. Declared geometry is complete and labelled from the first frame, but it goes stale when furniture moves.\n\nWhen analysing or designing an experience, ask which kind it relies on, and what happens when the room no longer matches.\n\n\n5.2 3.2 Plane Detection and Raycasting\nThe most common scene-understanding interaction is tap-to-place, which is this week’s lab. In Unity’s AR Foundation:\n\nAn AR Session manages the tracking session, and an XR Origin holds the camera and the detected trackables (older tutorials call this rig AR Session Origin, which was replaced in AR Foundation 5).\nARPlaneManager detects planes and adds a GameObject for each one.\nARRaycastManager casts a ray from the screen tap (or a controller) against the detected planes and returns the hits.\nThe app places a prefab at the hit pose, which carries rotation as well as position, so the object sits flat on the surface rather than at an arbitrary angle.\n\n\n\n\nTap to place: detect planes, raycast from the tap, place at the hit pose.\n\n\nA placement indicator (a reticle that follows the detected surface) closes the Gulf of Evaluation from Week 6: the user sees where the object will appear before committing to it.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#spatial-anchors",
     "href": "weeks/07-week-07/02-lecture.html#spatial-anchors",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "6 4. Spatial Anchors",
     "text": "6 4. Spatial Anchors\nAn anchor is a pose that the device commits to tracking against the real world. Instead of placing content at fixed coordinates, the app attaches it to an anchor, and the device keeps the anchor aligned with the physical place as its understanding of the room improves.\n\n6.1 4.1 Local, Persistent and Shared Anchors\n\n\n\n\n\n\n\n\nKind\nSurvives\nTypical use\n\n\n\n\nLocal\nThe current session only\nObjects placed during a single visit\n\n\nPersistent\nApp restarts and later days on the same device\nA virtual screen that stays on your wall\n\n\nShared\nAnother user’s device in the same room\nCo-located multi-user experiences, such as two people looking at the same model\n\n\n\n\n\n\nChoose the anchor by how long, and for whom, content must stay put.\n\n\nIn AR Foundation, anchors are managed by ARAnchorManager. How persistence and sharing work depends on the platform: Meta’s spatial anchors can be saved on the headset and shared between users through Meta’s services; ARCore offers Cloud Anchors; ARKit can save and reload a world map. Cloud services also come and go: Microsoft retired Azure Spatial Anchors in 2024, and applications built on it had to be rebuilt. For a project, check what your target platform supports before designing around persistence.\n\n\n6.2 4.2 Choosing an Anchoring Strategy\nStart from the persistence requirement, not the technology:\n\nDoes the content only need to stay put while the user is looking at it? A local anchor is enough.\nMust it be there tomorrow? You need a persistent anchor, plus a plan for when relocalisation fails (the room has changed, or the user is somewhere else).\nMust two people see it in the same place? You need a shared anchor, and you inherit network, permission and privacy questions.\nShould it follow the user instead? Then it should not be anchored to the room at all: use the body-locked UI from Week 5.\n\n\n\n6.3 4.3 Anchor Drift and Its Limits\nAn anchor is the device’s best estimate of a real place, and that estimate changes as the map is refined. Two consequences matter for design:\n\nError grows with distance. A small error in an anchor’s rotation becomes a large error in position for content placed far from it, in the same way a slight change in angle moves the end of a long pole a long way.\nAnchors can move. When the device corrects its map (for example after loop closure), anchored content shifts to match. This is the anchor working as intended, but a visible jump can still surprise the user.\n\n\n\n\nAn anchor is a best estimate, not a fixed point: keep content close to it.\n\n\nPractical rules:\n\nPlace each anchor close to the content it holds, and give separate objects their own anchors\nIn large spaces, use several anchors rather than one at the centre\nDo not create anchors every frame: each one has a tracking cost",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#occlusion-depth-and-coordinate-spaces",
     "href": "weeks/07-week-07/02-lecture.html#occlusion-depth-and-coordinate-spaces",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "7 5. Occlusion, Depth and Coordinate Spaces",
     "text": "7 5. Occlusion, Depth and Coordinate Spaces\n\n7.1 5.1 Occlusion and Depth\nBy default, virtual content is rendered on top of the camera or passthrough image, so it always appears in front of real objects, even when it is meant to be behind them. Depth-based occlusion fixes this: the device estimates the distance to real surfaces in every frame, and hides the parts of virtual objects that lie behind them.\n\n\n\nOcclusion: real objects must be able to hide virtual ones.\n\n\nThe depth map can come from a dedicated depth sensor (Quest 3, LiDAR on iPhone Pro models) or be estimated from camera motion (the ARCore Depth API). In AR Foundation it is exposed through AROcclusionManager. Depth maps are lower resolution than the camera image, so occlusion edges can look soft or flicker, especially around hands and hair.\nWrong occlusion is one of the fastest ways to break Plausibility Illusion (Week 6): an object that should be behind the sofa but floats in front of it no longer looks like it is in the room.\n\n\n7.2 5.2 Coordinate Spaces\nA spatial application juggles several coordinate spaces, each with its own origin:\n\n\n\n\n\n\n\n\nSpace\nOrigin\nNotes\n\n\n\n\nTracking space\nWherever tracking started\nCan shift when the user recentres or the device relocalises\n\n\nWorld / scene space\nThe application’s chosen origin\nIn Unity, usually the XR Origin\n\n\nAnchor space\nA real place in the room\nUpdated as tracking improves\n\n\nLocal (object) space\nThe object itself\nPosition relative to its parent\n\n\n\n\n\n\nCoordinate spaces: parent content to an anchor, not to the tracking origin.\n\n\nThe device converts between these spaces with transforms. The practical rule is simple: parent placed content to an anchor rather than placing it at fixed world coordinates. When the device corrects its estimate of the room, the anchor moves with the room and the content moves with the anchor. Content placed at fixed world coordinates stays where the old estimate put it, and visibly drifts away from the real surface.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#the-privacy-question",
     "href": "weeks/07-week-07/02-lecture.html#the-privacy-question",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "8 6. The Privacy Question",
     "text": "8 6. The Privacy Question\nA room scan is a detailed spatial record of someone’s home. It can reveal:\n\nThe layout and size of the home, and which room is the bedroom\nObjects the user owns, and their value\nClues to location: the view from a window, the orientation of the room\nWhen combined with camera images, people, documents and photographs in the room\n\n\n\n\nA room scan is a record of a home: disclosure is the designer’s job.\n\n\nPlatforms gate this data. On Quest, for example, an app must request permission before it can read the user’s scene data. But a permission prompt tells the user very little about what this app will do with the data. A designer should be able to answer, plainly and before asking for access:\n\nWhat is stored? Planes and labels only, the full mesh, or camera images?\nWhere does it go? Does it stay on the device, or is it uploaded, shared with other users, or used to train models?\nWhat did you tell the user? Was the purpose explained in plain language, at the moment it matters?\n\nCollect only what the feature needs, keep it on the device where possible, and say so. De Guzman, Thilakarathna and Seneviratne (2019) survey these risks across mixed reality systems in more depth.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#summary",
     "href": "weeks/07-week-07/02-lecture.html#summary",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "9 Summary",
     "text": "9 Summary\nSpatial computing is distinguished from VR by persistence and awareness: content that knows where it is and stays there. Tracking and SLAM tell the device where it is, and fail predictably in low light, on blank or repetitive surfaces and when the cameras are covered. Scene understanding supplies planes, meshes and labels, some measured live and some declared in setup. Anchors are the mechanism for persistence; they are best estimates that drift with distance, so content should be kept close to them. And because a room scan is a record of a home, both scene understanding and anchors carry privacy obligations that are the designer’s to address.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#self-check-questions",
     "href": "weeks/07-week-07/02-lecture.html#self-check-questions",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "10 Self-Check Questions",
     "text": "10 Self-Check Questions\n\nWhy does a headset need both cameras and an IMU to track its pose? What goes wrong with each on its own?\nExplain loop closure in one sentence. What does the user see when it happens?\nName four conditions under which tracking degrades, and say what the user experiences in each.\nWhat is the difference between measured and declared scene geometry? Give one advantage of each.\nA museum wants a virtual exhibit label to appear beside the same painting every day. Which kind of anchor does it need, and what should happen if relocalisation fails?\nWhy should content be parented to an anchor rather than placed at fixed world coordinates?\nList three things a room scan can reveal about a user, and three questions a designer should answer before asking for access to it.",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/07-week-07/02-lecture.html#references",
     "href": "weeks/07-week-07/02-lecture.html#references",
-    "title": "Week 7 Lecture Notes",
+    "title": "Lecture Notes",
     "section": "11 References",
     "text": "11 References\n\nDurrant-Whyte, H. & Bailey, T. (2006) “Simultaneous localization and mapping: part I.” IEEE Robotics & Automation Magazine, 13(2), 99-110.\nCadena, C., Carlone, L., Carrillo, H., Latif, Y., Scaramuzza, D., Neira, J., Reid, I. & Leonard, J.J. (2016) “Past, present, and future of simultaneous localization and mapping: toward the robust-perception age.” IEEE Transactions on Robotics, 32(6), 1309-1332.\nDe Guzman, J.A., Thilakarathna, K. & Seneviratne, A. (2019) “Security and privacy approaches in mixed reality: a literature survey.” ACM Computing Surveys, 52(6), Article 110.\nUnity Technologies. AR Foundation manual: planes, raycasts, anchors and occlusion. docs.unity3d.com\nMeta. Scene, spatial anchors and depth for Meta Quest. developers.meta.com",
     "crumbs": [
       "Week 07",
-      "Week 7 Lecture Notes"
+      "Lecture Notes"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#week-9-overview",
     "href": "weeks/09-week-09/01-slides.html#week-9-overview",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Week 9 Overview",
     "text": "Week 9 Overview\n\nThe user owns the viewpoint: what replaces the camera\nDesigning at 1:1 scale, and what goes wrong when you don’t\nComfort zones and sightlines\nWayfinding and affordance through form\nLighting as direction, on a mobile GPU budget\nEnvironmental storytelling and comfort\n\n\nFilm and screen games control attention with the camera. In XR the user holds the camera, so attention has to be invited by the environment itself. This week is about the tools that do that, and why each is also a comfort and performance decision.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#the-user-owns-the-viewpoint",
     "href": "weeks/09-week-09/01-slides.html#the-user-owns-the-viewpoint",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "The User Owns the Viewpoint",
     "text": "The User Owns the Viewpoint\n\n\n\nFilm and conventional games direct attention with the camera:\n\nCuts and close-ups choose what you see\nCamera moves carry you through a space\n\nIn XR these are unavailable or harmful: a forced camera move causes sickness, and a cut breaks presence.\nWhat replaces them:\n\nComposition — what is placed where\nLight — where the eye is drawn\nForm — what looks usable, and where to go\nSound and motion — what turns the head (Week 10)",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#design-at-11",
     "href": "weeks/09-week-09/01-slides.html#design-at-11",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Design at 1:1",
     "text": "Design at 1:1\n\n\n\nIn XR the user’s body is the ruler. Everyone knows how big a door, a table or a step should be.\n\n\n\nObject\nTypical real size\n\n\n\n\nStanding eye height\n~1.5–1.7 m\n\n\nDoor\n~2.0 m high, 0.8–0.9 m wide\n\n\nTable / desk\n~0.75 m\n\n\nKitchen counter\n~0.9 m\n\n\nCeiling\n~2.4–2.7 m\n\n\n\nGames often scale spaces up for a third-person camera. In a headset those spaces feel empty and wrong. 1 Unity unit = 1 metre.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#when-scale-goes-wrong",
     "href": "weeks/09-week-09/01-slides.html#when-scale-goes-wrong",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "When Scale Goes Wrong",
     "text": "When Scale Goes Wrong\n\n\n\nWrong scale changes how users perceive themselves:\n\nToo big: users feel small, even child-like\nToo small: users feel like giants in a model\n\nCommon causes\n\nAssets modelled at game or arbitrary scale\nCamera height set in code instead of from tracking\nA virtual floor that does not match the real floor\n\nCheck scale from inside: stand next to it, reach for it, sit at it. Scale errors are nearly invisible in the editor and obvious in the headset.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#comfort-zones-for-content",
     "href": "weeks/09-week-09/01-slides.html#comfort-zones-for-content",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Comfort Zones for Content",
     "text": "Comfort Zones for Content\n\n\n\n\n\n\nZone\nDistance\nUse it for\n\n\n\n\nReach\n~0.5–0.7 m\nThings to touch and grab\n\n\nMid field\n~1–3 m\nUI, text, focal content\n\n\nFar field\nBeyond ~10 m\nScenery, landmarks\n\n\n\n\nComfortable head rotation is about ±30° left and right, ±55° at most (Alger, 2015)\nLooking down is easier than looking up\nKeep important content in front; place secondary content to the sides, never only behind",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#sightlines",
     "href": "weeks/09-week-09/01-slides.html#sightlines",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Sightlines",
     "text": "Sightlines\n\n\n\nA sightline is a view the user is likely to take: on arrival, at a turn, through a doorway.\n\nFrame the important thing: doorways, arches, gaps between objects\nAlign it with the direction of travel\nLight it so it stands out from its surroundings\nLeave negative space around it, so it is not lost in clutter\n\nPlan sightlines on the floor plan, then walk them in the headset.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#wayfinding",
     "href": "weeks/09-week-09/01-slides.html#wayfinding",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Wayfinding",
     "text": "Wayfinding\n\n\n\nKevin Lynch (1960) found people navigate cities using five elements, and they work in virtual spaces too:\n\n\n\nElement\nIn an XR environment\n\n\n\n\nPaths\nCorridors, trails, lit routes\n\n\nEdges\nWalls, water, cliffs, play-area limits\n\n\nDistricts\nAreas with a distinct look or sound\n\n\nNodes\nJunctions and rooms where choices are made\n\n\nLandmarks\nTall, unique, lit objects visible from far away\n\n\n\nSigns and arrows are a last resort: they are UI, and they break presence.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#affordance-through-form",
     "href": "weeks/09-week-09/01-slides.html#affordance-through-form",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Affordance Through Form",
     "text": "Affordance Through Form\n\n\n\nWeek 6’s signifiers, built into the world instead of into a UI:\n\nShape — handles say pull, raised buttons say press, edges say stop\nConsistency — one visual signal (a rim, a glow, a material) for everything interactive, and never on scenery\nWear — scuffs, worn paths and fingerprints show where people have been\nLight — a pool of light says come here\n\nTest it: can a first-time user tell what to touch without being told?",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#lighting-as-direction",
     "href": "weeks/09-week-09/01-slides.html#lighting-as-direction",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Lighting as Direction",
     "text": "Lighting as Direction\n\n\n\nLight is the closest thing XR has to a camera.\n\nThe eye goes to the brightest area and to contrast\nWarm against cool and motion against stillness pull attention too\nA lit doorway or a pool of light is an invitation\nKeep the rest of the scene readable: too dark and users cannot find their way, or their footing\n\nIf the user can look anywhere, the light decides where they look first.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#lighting-on-a-mobile-gpu-budget",
     "href": "weeks/09-week-09/01-slides.html#lighting-on-a-mobile-gpu-budget",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Lighting on a Mobile GPU Budget",
     "text": "Lighting on a Mobile GPU Budget\n\n\n\nA standalone headset renders two eyes at 72–120 Hz on a mobile GPU: about 11 ms per frame at 90 Hz.\n\n\n\n\n\n\n\n\nTechnique\nCost\nUse for\n\n\n\n\nBaked lightmaps\nVery low at runtime\nStatic walls, floors, furniture\n\n\nLight probes\nLow\nLighting moving objects in a baked scene\n\n\nReflection probes\nLow (baked)\nShiny surfaces\n\n\nRealtime lights\nHigh, especially with shadows\nOne key light at most\n\n\n\nBake what does not move. This week’s lab does exactly this.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#environmental-storytelling",
     "href": "weeks/09-week-09/01-slides.html#environmental-storytelling",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Environmental Storytelling",
     "text": "Environmental Storytelling\n\n\n\nThe arrangement of a space can tell a story with no text at all.\n\nEmbedded narrative (Jenkins, 2004): the story happened before the user arrived, and they piece it together by looking\nClues work best at sightline points and within the mid field\nChange the space to show state: a door now open, a light now on, an object moved\n\nThink back to the experiences you analysed in Week 6: where did the space tell you something the UI did not?",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#environment-decisions-are-comfort-decisions",
     "href": "weeks/09-week-09/01-slides.html#environment-decisions-are-comfort-decisions",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Environment Decisions Are Comfort Decisions",
     "text": "Environment Decisions Are Comfort Decisions\n\n\n\n\n\n\n\n\n\n\n\nProblem\nWhy\nInstead\n\n\n\n\nLow ceilings\nClaustrophobia\n2.4 m or more, unless intended\n\n\nHigh-contrast moving patterns\nVection: illusory self-motion\nCalm textures on large surfaces\n\n\nUnprotected heights\nFear, real stumbles\nRailings, or keep users back\n\n\nStairs with smooth locomotion\nRepeated vertical bumps\nRamps, or teleport\n\n\nVirtual floor ≠ real floor\nWrong scale, falls\nFloor-level tracking origin\n\n\nSmall distant text\nUnreadable\nSize text for its distance",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#lab-practical-this-week",
     "href": "weeks/09-week-09/01-slides.html#lab-practical-this-week",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Lab & Practical This Week",
     "text": "Lab & Practical This Week\n\n\nPractical: greybox walkthrough\n\nBlock out your Assessment 3 environment in primitives, at true scale\nWalk it in the headset\nPeer critique: where to go, what to touch, what the space is for\n\n\nLab: lighting and environment production\n\nBake lighting for a standalone headset\nLODs and occlusion culling\nUse light to draw attention to one focal object\n\nAssessment 2 due: Wednesday 4 November 2026, 17:00 Assessment 3: core interaction working on device by Week 10",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#key-takeaways",
     "href": "weeks/09-week-09/01-slides.html#key-takeaways",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Key Takeaways",
     "text": "Key Takeaways\n\nIn XR the environment is the interface: attention is invited by composition, light, form and sound\nModel at 1:1 and check scale in the headset, not the editor\nPut content where people can comfortably look and reach\nGuide with sightlines, landmarks and light before reaching for signs\nEvery environment decision is also a comfort and a performance decision",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#references",
     "href": "weeks/09-week-09/01-slides.html#references",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "References",
     "text": "References\n\nAlger, M. (2015) Visual Design Methods for Virtual Reality. MA thesis, Ravensbourne.\nJenkins, H. (2004) “Game design as narrative architecture.” In Wardrip-Fruin, N. & Harrigan, P. (eds.) First Person. MIT Press.\nLynch, K. (1960) The Image of the City. MIT Press.\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nUnity Manual: lightmapping, light probes and reflection probes: docs.unity3d.com",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   },
   {
     "objectID": "weeks/09-week-09/01-slides.html#discussion",
     "href": "weeks/09-week-09/01-slides.html#discussion",
-    "title": "Week 9 Slides",
+    "title": "Lecture Slides",
     "section": "Discussion",
     "text": "Discussion\n\nWhen is it right to break 1:1 scale on purpose? Give an example where a deliberately wrong scale is the point.\nSigns and arrows are UI. Are they always a design failure in XR, or are there spaces where they are the honest choice?\nLight draws the eye, but some users have low vision or light sensitivity. How would you guide them through the same space?\nHow much environmental storytelling can a user miss before the experience stops making sense?\nBaking lighting makes a scene fast but static. What kinds of experiences cannot be baked, and how would you light them on a standalone headset?\n\n\nUse these to connect the session to the greybox practical: students should leave able to name the sightlines, landmarks and comfort zones in their own Assessment 3 environment.",
     "crumbs": [
       "Week 09",
-      "Week 9 Slides"
+      "Lecture Slides"
     ]
   }
 ]
