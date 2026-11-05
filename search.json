@@ -180,7 +180,7 @@
     "href": "weeks/09-week-09/01-slides.html#environmental-storytelling",
     "title": "Lecture Slides",
     "section": "Environmental Storytelling",
-    "text": "Environmental Storytelling\n\n\n\nThe arrangement of a space can tell a story with no text at all.\n\nEmbedded narrative (Jenkins, 2004): the story happened before the user arrived, and they piece it together by looking\nClues work best at sightline points and within the mid field\nChange the space to show state: a door now open, a light now on, an object moved\n\nThink back to the experiences you analysed in Week 6: where did the space tell you something the UI did not?",
+    "text": "Environmental Storytelling\n\n\n\nThe arrangement of a space can tell a story with no text at all.\n\nEmbedded narrative (Jenkins, 2004): the story happened before the user arrived, and they piece it together by looking\nClues work best at sightline points and within the mid field\nChange the space to show state: a door now open, a light now on, an object moved",
     "crumbs": [
       "Week 09",
       "Lecture Slides"
@@ -202,7 +202,7 @@
     "href": "weeks/09-week-09/01-slides.html#lab-practical-this-week",
     "title": "Lecture Slides",
     "section": "Lab & Practical This Week",
-    "text": "Lab & Practical This Week\n\n\nPractical: greybox walkthrough\n\nBlock out your Assessment 3 environment in primitives, at true scale\nWalk it in the headset\nPeer critique: where to go, what to touch, what the space is for\n\n\nLab: lighting and environment production\n\nBake lighting for a standalone headset\nLODs and occlusion culling\nUse light to draw attention to one focal object\n\nAssessment 2 due: Wednesday 4 November 2026, 17:00 Assessment 3: core interaction working on device by Week 10",
+    "text": "Lab & Practical This Week\n\n\nPractical: greybox walkthrough\n\nBlock out your Assessment 3 environment in primitives, at true scale\nWalk it in the headset\nPeer critique: where to go, what to touch, what the space is for\n\n\nLab: lighting and environment production\n\nBake lighting for a standalone headset\nLODs and occlusion culling\nUse light to draw attention to one focal object\n\nAssessment 2 due: This week Assessment 3: core interaction working on device by Week 10",
     "crumbs": [
       "Week 09",
       "Lecture Slides"
