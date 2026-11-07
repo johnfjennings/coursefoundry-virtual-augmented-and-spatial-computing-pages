@@ -1,5 +1,148 @@
 [
   {
+    "objectID": "weeks/10-week-10/02-lecture.html",
+    "href": "weeks/10-week-10/02-lecture.html",
+    "title": "Week 10 Lecture Notes",
+    "section": "",
+    "text": "TipTL;DR\n\n\n\n\nHearing covers 360° against a headset’s roughly 100° view, so audio directs attention, confirms physical events and delivers presence cheaply, yet it is usually added last.\nThe brain locates sound from interaural time and level differences plus pinna cues, which HRTF-based binaural rendering with head tracking recreates over headphones.\nIn Unity, use a spatialiser with mono, fully 3D sources, tune attenuation curves by ear, and match reverb to the space the user can see.\nMake each sound deliberately diegetic or non-diegetic: non-diegetic sound has a presence cost, and many UI sounds can simply be played from the object instead.\nDesign haptics from physical causes using amplitude, frequency and duration, distinguishing event from continuous haptics rather than using one identical buzz for everything.\nPresence is multi-modal: trigger visual, audio and haptic feedback from the same event in the same frame, and agreeing cues can create pseudo-haptic weight and texture.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#overview",
+    "href": "weeks/10-week-10/02-lecture.html#overview",
+    "title": "Week 10 Lecture Notes",
+    "section": "1 Overview",
+    "text": "1 Overview\nDuration: 1 hour\nAudio delivers more presence per unit of development effort than any visual technique available on this hardware, and it is routinely the last thing added. This session treats sound and touch as primary design materials rather than polish.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#learning-objectives",
+    "href": "weeks/10-week-10/02-lecture.html#learning-objectives",
+    "title": "Week 10 Lecture Notes",
+    "section": "2 Learning Objectives",
+    "text": "2 Learning Objectives\nBy the end of this lecture, students will be able to:\n\nExplain how humans locate sounds, and how a spatialiser recreates those cues over headphones\nSpecify a spatial audio setup appropriate to a scene’s geometry\nDecide whether each sound should be diegetic or non-diegetic\nDesign a haptic response that reads as a physical event rather than a buzz\nExplain how sensory modalities reinforce one another to sustain presence, and where cross-modal illusions break",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#why-audio-matters",
+    "href": "weeks/10-week-10/02-lecture.html#why-audio-matters",
+    "title": "Week 10 Lecture Notes",
+    "section": "3 1. Why Audio Matters",
+    "text": "3 1. Why Audio Matters\nA headset shows roughly 100° of the world; hearing covers all 360°. That one difference makes audio uniquely useful in XR:\n\nIt directs attention. In a medium without a camera (Week 9), sound is the most reliable way to make a user turn towards something outside their view.\nIt works where vision cannot: behind the user, through walls, in the dark.\nIt confirms physical events. The sound of an object landing tells the user it has weight and what it is made of, even when the visuals are simple.\nIt is cheap. A well-placed spatialised sound often does more for presence than visual detail that costs far more to make and to render.\n\n\n\n\nSound reaches where sight cannot.\n\n\nDespite this, audio is usually the last thing added to an XR project, often as stereo music and a handful of non-spatialised effects. This session argues for designing it from the start.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#how-spatial-audio-works",
+    "href": "weeks/10-week-10/02-lecture.html#how-spatial-audio-works",
+    "title": "Week 10 Lecture Notes",
+    "section": "4 2. How Spatial Audio Works",
+    "text": "4 2. How Spatial Audio Works\n\n4.1 2.1 How We Locate Sounds\nThe brain works out where a sound comes from using three main cues:\n\nInteraural time difference (ITD): a sound from one side reaches the nearer ear slightly before the far ear, by up to a fraction of a millisecond. ITD is most useful for low frequencies.\nInteraural level difference (ILD): the head casts an acoustic shadow, so the far ear hears the sound more quietly, especially at high frequencies.\nSpectral (pinna) cues: the folds of the outer ear filter sound differently depending on whether it comes from above, below, in front or behind. These cues resolve elevation, and the front–back confusion that ITD and ILD alone cannot (Blauert, 1997).\n\nMoving the head helps too: small head turns change all three cues, and the brain uses the change to pin the source down. This is why head tracking makes headphone audio far more convincing.\n\n\n\nHow we locate sounds: time, level and spectral cues.\n\n\n\n\n4.2 2.2 HRTFs and Binaural Rendering\nA head-related transfer function (HRTF) describes how a sound from a given direction is changed by the head, torso and ears before it reaches each eardrum. Applying the right HRTF to a mono sound, separately for each ear, produces binaural audio that recreates ITD, ILD and spectral cues over headphones (Begault, 1994). With head tracking updating the direction every frame, a sound can be placed convincingly behind or above the listener.\nMost systems use a generic HRTF measured on a typical head. It works well for most people, but because ears differ, some listeners experience front–back confusion or sounds that seem to come from inside the head. Personalised HRTFs reduce this but are not yet common in consumer headsets.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#spatialisers-attenuation-and-reverb",
+    "href": "weeks/10-week-10/02-lecture.html#spatialisers-attenuation-and-reverb",
+    "title": "Week 10 Lecture Notes",
+    "section": "5 3. Spatialisers, Attenuation and Reverb",
+    "text": "5 3. Spatialisers, Attenuation and Reverb\n\n5.1 3.1 Spatialisers in Unity\nA spatialiser plugin renders each audio source binaurally from its position relative to the listener’s head, every frame.\n\n\n\n\n\n\n\n\nSetting\nValue\nWhy\n\n\n\n\nAudio Source › Spatial Blend\n1 (fully 3D)\n0 is 2D stereo that ignores position\n\n\nAudio Source › Spatialize\nOn\nRoutes the source through the spatialiser plugin\n\n\nProject Settings › Audio › Spatializer Plugin\ne.g. Meta XR Audio\nUnity’s default panning is not binaural\n\n\nAudio clip\nMono\nA stereo clip cannot be placed at a single point\n\n\n\n\n\n\nFrom audio source to the user’s ears.\n\n\n\n\n5.2 3.2 Attenuation Curves\nThe attenuation curve sets how volume falls with distance. It is one of the strongest cues to how far away a sound is.\n\nLogarithmic rolloff approximates real-world behaviour but falls off quickly: sounds can become inaudible sooner than designers expect.\nLinear rolloff is predictable and suits gameplay cues that must be heard across a space.\nCustom curves let you keep an important sound audible where the user will actually be, while still giving a sense of distance.\nMin distance is the radius inside which the sound plays at full volume; max distance is where attenuation stops.\n\n\n\n\nAttenuation: the curve decides how far away a sound feels.\n\n\nThe perceptual consequence of a wrong curve is subtle but real: a sound that is too loud for its visual distance seems to come from somewhere closer than the object, and the two stop feeling like one thing. Tune curves by ear, in the headset.\n\n\n5.3 3.3 Reverb and Acoustic Space\nReverb tells the ear how large a space is and what its surfaces are made of. A small tiled room produces short, bright reflections; a large hall produces a long, rich decay; outdoors there is almost none.\n\n\n\nReverb should match the room you can see.\n\n\nThe rule is to match reverb to what the user can see. A cathedral echo in a cupboard, or a dry studio sound in a cave, breaks Plausibility Illusion immediately (Week 6). In Unity, an Audio Reverb Zone applies a preset to sources inside a region; spatialiser SDKs such as Meta XR Audio can also model room acoustics from simple room geometry. In passthrough mixed reality, real sounds already carry the real room’s acoustics, so virtual sounds should be matched to the real room as well.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#diegetic-and-non-diegetic-sound",
+    "href": "weeks/10-week-10/02-lecture.html#diegetic-and-non-diegetic-sound",
+    "title": "Week 10 Lecture Notes",
+    "section": "6 4. Diegetic and Non-Diegetic Sound",
+    "text": "6 4. Diegetic and Non-Diegetic Sound\nThe distinction mirrors diegetic UI from Week 5:\n\n\n\n\n\n\n\n\n\nDiegetic\nNon-diegetic\n\n\n\n\nSource\nExists in the world\nNo source in the world\n\n\nExamples\nA radio, footsteps, a door creaking\nMusic score, narrator, UI beeps\n\n\nRendering\nSpatialised, attached to its object\nHead-locked stereo\n\n\nEffect on presence\nStrengthens it\nCan remind the user they are in a simulation\n\n\n\n\n\n\nDiegetic sound comes from the world; non-diegetic sound has no source in it.\n\n\nNon-diegetic sound is not wrong: a score can carry emotion, and a narrator can guide a first-time user. But it has a presence cost, so use it deliberately and keep it in the background. Many UI sounds can be made diegetic simply by playing them from the object (the button, the panel, the wrist menu) rather than from inside the user’s head.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#haptic-design",
+    "href": "weeks/10-week-10/02-lecture.html#haptic-design",
+    "title": "Week 10 Lecture Notes",
+    "section": "7 5. Haptic Design",
+    "text": "7 5. Haptic Design\n\n7.1 5.1 A Vocabulary for Haptics\nStandalone headset controllers produce vibration with a small number of parameters:\n\nAmplitude: how strong the vibration is\nFrequency: how fast it vibrates (how much control you have over this depends on the device and API)\nDuration: how long it lasts\n\n\n\n\nA vocabulary for haptics: amplitude, frequency and duration.\n\n\nTreat these like sound design. Start from the physical cause: what would this contact feel like if it were real? A light tap is short and weak; a heavy impact is short and strong; dragging across a rough surface is a low, continuous vibration that changes with speed. A single identical buzz for every event conveys only “something happened”, and users quickly learn to ignore it.\n\n\n7.2 5.2 Event and Continuous Haptics\n\nEvent haptics mark a moment: hovering over something, grabbing it, a button clicking, an impact. They are short and crisp.\nContinuous haptics convey an ongoing state: holding, dragging, a motor running. They are usually low in amplitude and modulated by speed, force or contact.\n\n\n\n\n\n\n\n\n\nState\nHaptic\nType\n\n\n\n\nHover\nTiny tick\nEvent\n\n\nSelect / grab\nFirm click\nEvent\n\n\nHold and move\nLow vibration that follows speed or contact\nContinuous\n\n\nRelease\nSoft pulse\nEvent\n\n\n\n\n\n\nHaptics across one interaction: events mark moments; continuous haptics convey contact.\n\n\nIn Unity’s XR Interaction Toolkit (2.x), the controller interactors have Haptic Events settings in the Inspector for hover and select, so simple event haptics need no code. For more control, call SendHapticImpulse(amplitude, duration) on the controller from interactable events. Save strong vibrations for moments that matter: a constant strong rumble is tiring, and it masks the events you want the user to notice.\nHand tracking has no haptics. Hand-tracked interactions have to rely more heavily on audio and visual feedback, which is one reason the Week 4 feedback triad (visual, audio, haptic) matters.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#multi-modal-feedback-and-cross-modal-illusions",
+    "href": "weeks/10-week-10/02-lecture.html#multi-modal-feedback-and-cross-modal-illusions",
+    "title": "Week 10 Lecture Notes",
+    "section": "8 6. Multi-Modal Feedback and Cross-Modal Illusions",
+    "text": "8 6. Multi-Modal Feedback and Cross-Modal Illusions\n\n8.1 6.1 Synchronised Feedback\nThe brain fuses visual, auditory and tactile signals into a single event when they arrive close together in time, within a few tens of milliseconds. When they arrive further apart, the same three cues are perceived as separate events, and the contact feels fake.\n\n\n\nFeedback must arrive together.\n\n\nPractical rules:\n\nTrigger visual, audio and haptic feedback from the same interaction event, in the same frame.\nTrim audio clips so the sound starts on the first sample: silence at the start of a clip is latency you added yourself.\nTest on the device: timing in the editor is not timing on the headset.\n\n\n\n8.2 6.2 Pseudo-Haptics\nA controller can vibrate, but it cannot push back. Pseudo-haptic techniques use vision and sound to imply forces the hardware cannot apply (Lécuyer, 2009):\n\nWeight: if a heavy virtual object moves slightly less than the hand that holds it, so that it lags behind (a control/display ratio below 1), users perceive it as heavier. Rietzler et al. (2018) showed that users accept a visible offset between real and virtual hand in exchange for a sense of weight.\nTexture: small vibrations and sounds that follow movement across a surface suggest roughness.\nImpact and material: a sharp sound and a strong, short pulse at contact suggest a hard, heavy collision; a soft sound and a weak pulse suggest something light.\n\n\n\n\nPseudo-haptics: a heavy object lags behind the hand.\n\n\nEach cue makes the others more convincing: a lagging object with a heavy sound and a stronger pulse reads as heavier than any one cue alone.\n\n\n8.3 6.3 Where the Illusion Breaks\nCross-modal illusions hold only while the cues agree with each other and with what the user sees:\n\n\n\n\n\n\n\n\nProblem\nWhy it breaks\nInstead\n\n\n\n\nHand passes through a wall\nVision says “solid”, the hand says “nothing there”\nStop the virtual hand at the surface, with a buzz on contact\n\n\nSound does not match the material\nA glass object that thuds like wood\nMatch the sound to what the object looks like\n\n\nHaptic with no visible cause\nThe user cannot tell what happened\nAlways show what caused it\n\n\nThe same buzz for everything\nConveys only “something happened”\nVary by event, weight and material\n\n\nLate audio or haptic\nCues perceived as separate events\nOne event, same frame\n\n\nConstant strong rumble\nTiring, masks important events\nSave strength for moments that matter\n\n\n\n\n\n\nWhere the illusion breaks.\n\n\nStopping the virtual hand at a wall while the real hand carries on is itself a deliberate mismatch, and it works because users prefer a hand that respects the world to one that passes through it. As with pseudo-haptic weight, the offset must stay small, and the hand should snap back smoothly when the real hand withdraws.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#accessibility",
+    "href": "weeks/10-week-10/02-lecture.html#accessibility",
+    "title": "Week 10 Lecture Notes",
+    "section": "9 7. Accessibility",
+    "text": "9 7. Accessibility\nAudio and haptics are also accessibility tools, and they need accessible alternatives:\n\nDeaf and hard-of-hearing users need important sounds mirrored visually: captions placed near the source (Week 13 covers captions in 3D), direction indicators for off-screen sounds, and haptic cues.\nUsers with low vision benefit from rich spatial audio and haptics that confirm what they cannot easily see.\nProvide separate volume controls for music, effects and speech, and a way to reduce or turn off haptics.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#summary",
+    "href": "weeks/10-week-10/02-lecture.html#summary",
+    "title": "Week 10 Lecture Notes",
+    "section": "10 Summary",
+    "text": "10 Summary\nPresence is multi-modal. A convincing interaction is usually a visual event, a spatialised sound and a haptic response arriving together within a few tens of milliseconds – and the sound is doing more of the work than most developers expect. Spatialisers recreate the cues the brain uses to locate sound; attenuation and reverb must match what the user sees; each sound should be deliberately diegetic or not; haptics are a vocabulary to be designed from physical causes; and cross-modal illusions can imply weight and texture the hardware cannot produce, as long as every cue agrees.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#self-check-questions",
+    "href": "weeks/10-week-10/02-lecture.html#self-check-questions",
+    "title": "Week 10 Lecture Notes",
+    "section": "11 Self-Check Questions",
+    "text": "11 Self-Check Questions\n\nName the three cues the brain uses to locate a sound. Which one resolves front–back confusion?\nWhy must a spatialised source use a mono audio clip?\nA sound attached to a distant object seems to come from somewhere nearer. What setting would you check first?\nGive one example each of diegetic and non-diegetic sound in an XR experience you have used. Could the non-diegetic one have been made diegetic?\nDesign the haptic feedback for picking up, shaking and dropping a heavy glass bottle. Specify amplitude, duration and whether each is event or continuous.\nWhy do visual, audio and haptic feedback need to be triggered from the same event?\nExplain how a control/display ratio below 1 can make an object feel heavy, and what could go wrong if the ratio is too low.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/02-lecture.html#references",
+    "href": "weeks/10-week-10/02-lecture.html#references",
+    "title": "Week 10 Lecture Notes",
+    "section": "12 References",
+    "text": "12 References\n\nBegault, D.R. (1994) 3-D Sound for Virtual Reality and Multimedia. Academic Press.\nBlauert, J. (1997) Spatial Hearing: The Psychophysics of Human Sound Localization (revised ed.). MIT Press.\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books / Morgan & Claypool.\nLécuyer, A. (2009) “Simulating haptic feedback using vision: a survey of research and applications of pseudo-haptic feedback.” Presence: Teleoperators and Virtual Environments, 18(1), 39-53.\nRietzler, M., Geiselhart, F., Gugenheimer, J. & Rukzio, E. (2018) “Breaking the tracking: enabling weight perception using perceivable tracking offsets.” Proceedings of CHI 2018, ACM.\nMeta. Meta XR Audio SDK documentation. developers.meta.com\nUnity Technologies. XR Interaction Toolkit and Audio Source documentation. docs.unity3d.com",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Lecture Notes"
+    ]
+  },
+  {
     "objectID": "weeks/09-week-09/03-practical.html",
     "href": "weeks/09-week-09/03-practical.html",
     "title": "Week 9 Practical",
@@ -3979,6 +4122,182 @@
     "crumbs": [
       "Week 09",
       "Lecture Notes"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#week-10-overview",
+    "href": "weeks/10-week-10/01-slides.html#week-10-overview",
+    "title": "Week 10 Slides",
+    "section": "Week 10 Overview",
+    "text": "Week 10 Overview\n\nWhy audio delivers so much presence\nHow we locate sounds, and how spatialisers recreate it\nAttenuation, reverb and diegetic sound\nHaptics as a design vocabulary\nSynchronised feedback and cross-modal illusions\n\n\nAudio is routinely the last thing added to an XR project and one of the cheapest ways to raise presence. This session treats sound and touch as primary design materials. The lab wires spatial audio and haptics to the Assessment 3 core interaction, which is demonstrated on device this week.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#why-audio-matters",
+    "href": "weeks/10-week-10/01-slides.html#why-audio-matters",
+    "title": "Week 10 Slides",
+    "section": "Why Audio Matters",
+    "text": "Why Audio Matters\n\n\n\n\nA headset shows about 100° of the world; hearing covers all 360°\nSound turns heads: the most reliable way to direct attention to something behind the user (Week 9)\nIt carries through walls and works in the dark\nIt confirms contact, weight and material that the visuals only suggest\nIt is cheap: a well-placed spatialised sound costs far less than the visual detail it can replace\n\nYet audio is usually the last thing added.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#how-we-locate-sounds",
+    "href": "weeks/10-week-10/01-slides.html#how-we-locate-sounds",
+    "title": "Week 10 Slides",
+    "section": "How We Locate Sounds",
+    "text": "How We Locate Sounds\n\n\n\nThe brain locates a sound from three cues:\n\nITD (interaural time difference): the sound reaches the nearer ear a fraction of a millisecond earlier\nILD (interaural level difference): the head shadows the far ear, especially at high frequencies\nPinna cues: the folds of the outer ear filter sound differently from above, below, in front and behind\n\nAn HRTF (head-related transfer function) recreates all three, so headphone audio can place a sound behind or above the listener: binaural rendering.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#spatialisers-in-unity",
+    "href": "weeks/10-week-10/01-slides.html#spatialisers-in-unity",
+    "title": "Week 10 Slides",
+    "section": "Spatialisers in Unity",
+    "text": "Spatialisers in Unity\n\n\n\nEvery frame, the spatialiser takes each source’s position relative to the user’s head and renders it binaurally.\n\n\n\n\n\n\n\nSetting\nValue\n\n\n\n\nAudio Source › Spatial Blend\n1 (fully 3D)\n\n\nAudio Source › Spatialize\nOn\n\n\nProject Settings › Audio › Spatializer Plugin\ne.g. Meta XR Audio\n\n\nRoom\nReverb zone or room acoustics matched to the visible space\n\n\n\nUse mono clips for spatialised sources: stereo clips cannot be placed at a point.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#attenuation",
+    "href": "weeks/10-week-10/01-slides.html#attenuation",
+    "title": "Week 10 Slides",
+    "section": "Attenuation",
+    "text": "Attenuation\n\n\n\nThe attenuation curve sets how volume falls with distance, and so how far away a sound feels.\n\nLogarithmic rolloff is realistic but falls off fast: sounds vanish sooner than expected\nLinear rolloff is predictable and suits gameplay cues\nCustom curves keep important sounds audible where the user will actually be\nMin distance: full volume inside it. Max distance: where attenuation stops.\n\nTune curves by ear, in the headset, not by numbers in the Inspector.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#reverb-and-acoustic-space",
+    "href": "weeks/10-week-10/01-slides.html#reverb-and-acoustic-space",
+    "title": "Week 10 Slides",
+    "section": "Reverb and Acoustic Space",
+    "text": "Reverb and Acoustic Space\n\n\n\n\nReverb tells the ear how big a space is and what it is made of\nSmall hard rooms: short, bright reflections. Large halls: long, rich decay. Outdoors: almost none.\nMatch reverb to what the user can see: a mismatch breaks Plausibility Illusion (Week 6)\nIn Unity: Audio Reverb Zone presets, or room acoustics in the Meta XR Audio SDK\nIn passthrough MR, the real room’s acoustics already apply to real sounds: match virtual sounds to them",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#diegetic-and-non-diegetic-sound",
+    "href": "weeks/10-week-10/01-slides.html#diegetic-and-non-diegetic-sound",
+    "title": "Week 10 Slides",
+    "section": "Diegetic and Non-Diegetic Sound",
+    "text": "Diegetic and Non-Diegetic Sound\n\n\n\nThe same distinction as diegetic UI in Week 5:\n\n\n\n\n\n\n\n\n\nDiegetic\nNon-diegetic\n\n\n\n\nSource\nIn the world\nNot in the world\n\n\nExamples\nRadio, footsteps, a door\nMusic score, narrator, UI beeps\n\n\nRendering\nSpatialised\nHead-locked stereo\n\n\nEffect\nBuilds presence\nCan pull the user out\n\n\n\nA UI sound can become diegetic: play the click from the button, not from inside the head.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#a-vocabulary-for-haptics",
+    "href": "weeks/10-week-10/01-slides.html#a-vocabulary-for-haptics",
+    "title": "Week 10 Slides",
+    "section": "A Vocabulary for Haptics",
+    "text": "A Vocabulary for Haptics\n\n\n\nController haptics are a small vocabulary, used like sound design:\n\nAmplitude — how strong: a light touch vs a heavy impact\nFrequency — how fast it vibrates: a low rumble vs a sharp buzz (support varies by device and API)\nDuration — how long: a tick vs a sustained vibration\n\nDesign from the physical cause: what would this contact feel like if it were real? A single “buzz” for every event teaches the user nothing.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#event-and-continuous-haptics",
+    "href": "weeks/10-week-10/01-slides.html#event-and-continuous-haptics",
+    "title": "Week 10 Slides",
+    "section": "Event and Continuous Haptics",
+    "text": "Event and Continuous Haptics\n\n\n\n\n\n\n\n\n\n\n\nState\nHaptic\nType\n\n\n\n\nHover\nTiny tick\nEvent\n\n\nSelect / grab\nFirm click\nEvent\n\n\nHold and move\nLow vibration that follows speed or contact\nContinuous\n\n\nRelease\nSoft pulse\nEvent\n\n\n\nIn Unity (XR Interaction Toolkit 2.x): set Haptic Events on the interactor in the Inspector, or call SendHapticImpulse(amplitude, duration) from interactable events.\nHand tracking has no haptics: lean harder on audio and visuals.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#synchronised-feedback",
+    "href": "weeks/10-week-10/01-slides.html#synchronised-feedback",
+    "title": "Week 10 Slides",
+    "section": "Synchronised Feedback",
+    "text": "Synchronised Feedback\n\n\n\n\nThe brain fuses sight, sound and touch into one event when they arrive within a few tens of milliseconds\nOut of sync, the same three cues feel like three separate events, and the contact feels fake\nTrigger visual, audio and haptic feedback from the same interaction event, in the same frame\nAvoid audio clips with silence at the start: trim them so the sound starts on the first sample\nCheck on device: latency differs between the editor and the headset",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#cross-modal-illusions",
+    "href": "weeks/10-week-10/01-slides.html#cross-modal-illusions",
+    "title": "Week 10 Slides",
+    "section": "Cross-Modal Illusions",
+    "text": "Cross-Modal Illusions\n\n\n\nPseudo-haptics use vision and sound to imply forces the controller cannot apply (Lécuyer, 2009):\n\nWeight: a heavy object lags slightly behind the hand (a control/display ratio below 1). Users read the lag as mass.\nTexture: small vibrations and sounds that follow movement across a surface\nImpact: a sharp sound and a strong, short pulse at the moment of contact\n\nCombine cues: each one makes the others more convincing.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#where-the-illusion-breaks",
+    "href": "weeks/10-week-10/01-slides.html#where-the-illusion-breaks",
+    "title": "Week 10 Slides",
+    "section": "Where the Illusion Breaks",
+    "text": "Where the Illusion Breaks\n\n\n\n\n\n\n\n\n\n\nProblem\nInstead\n\n\n\n\nHand passes through a wall\nStop the virtual hand at the surface, with a buzz on contact\n\n\nSound doesn’t match the material\nMatch the sound to what the object looks like\n\n\nHaptic with no visible cause\nAlways show what caused it\n\n\nThe same buzz for everything\nVary by event and weight\n\n\nLate audio or haptic\nOne event, same frame\n\n\nConstant strong rumble\nSave strength for moments that matter",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#lab-practical-this-week",
+    "href": "weeks/10-week-10/01-slides.html#lab-practical-this-week",
+    "title": "Week 10 Slides",
+    "section": "Lab & Practical This Week",
+    "text": "Lab & Practical This Week\n\n\nLab: spatial audio and haptics on device\n\nSpatialiser, attenuation and reverb, tuned in the headset\nHaptic events on your interactables\nVisual, audio and haptic feedback synchronised\nAssessment 3 milestone: core interaction demonstrated on device\n\n\nPractical: multi-modal A/B study\n\nFour builds: none, audio only, haptics only, both\nRandomised order, presence ratings after each\nReport what you found, including no effect",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#key-takeaways",
+    "href": "weeks/10-week-10/01-slides.html#key-takeaways",
+    "title": "Week 10 Slides",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nAudio is the highest-yield presence technique on this hardware: design it, don’t add it last\nSpatialisers recreate ITD, ILD and pinna cues; use mono sources and match reverb to the room\nDecide for every sound whether it belongs in the world\nHaptics are a vocabulary of amplitude, frequency and duration; map each pattern to a cause\nA convincing interaction is a visual event, a sound and a haptic arriving together",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#references",
+    "href": "weeks/10-week-10/01-slides.html#references",
+    "title": "Week 10 Slides",
+    "section": "References",
+    "text": "References\n\nBegault, D.R. (1994) 3-D Sound for Virtual Reality and Multimedia. Academic Press.\nBlauert, J. (1997) Spatial Hearing: The Psychophysics of Human Sound Localization (revised ed.). MIT Press.\nLécuyer, A. (2009) “Simulating haptic feedback using vision: a survey of research and applications of pseudo-haptic feedback.” Presence: Teleoperators and Virtual Environments, 18(1).\nJerald, J. (2015) The VR Book: Human-Centered Design for Virtual Reality. ACM Books.\nMeta XR Audio SDK and Unity XR Interaction Toolkit documentation: developers.meta.com, docs.unity3d.com",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
+    ]
+  },
+  {
+    "objectID": "weeks/10-week-10/01-slides.html#discussion",
+    "href": "weeks/10-week-10/01-slides.html#discussion",
+    "title": "Week 10 Slides",
+    "section": "Discussion",
+    "text": "Discussion\n\nIf audio gives so much presence for so little cost, why is it so often added last? What would change if it were designed first?\nWhen is non-diegetic music the right choice in XR, despite its presence cost?\nHand tracking has no haptics. Should hand-tracked experiences avoid interactions that depend on touch, or compensate with audio and visuals?\nPseudo-haptic weight works by making the virtual hand disagree with the real one. Where is the line between a useful illusion and a frustrating loss of control?\nHow would you design audio and haptic feedback for a user who is deaf or hard of hearing?\n\n\nUse these as a bridge to the A/B practical: students should predict which modality will matter most for their own core interaction before they measure it.",
+    "crumbs": [
+      "Week 10",
+      "Week 10 Slides"
     ]
   }
 ]
