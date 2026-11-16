@@ -2313,6 +2313,270 @@
     ]
   },
   {
+    "objectID": "01-assessments/04-assessment3.html",
+    "href": "01-assessments/04-assessment3.html",
+    "title": "Assessment 3",
+    "section": "",
+    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nStarts\nWeek 7\n\n\nDue\nWeek 14 (the week after teaching ends)",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#overview",
+    "href": "01-assessments/04-assessment3.html#overview",
+    "title": "Assessment 3",
+    "section": "",
+    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nStarts\nWeek 7\n\n\nDue\nWeek 14 (the week after teaching ends)",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#learning-outcomes",
+    "href": "01-assessments/04-assessment3.html#learning-outcomes",
+    "title": "Assessment 3",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nThis assessment covers all four module outcomes:\n\nLO1: Critical understanding of 3D systems and AR/VR principles in a spatial computing context\nLO2: Explore, critique and deconstruct modern VR, AR and spatial computing experiences\nLO3: Theoretical understanding of, and practical competence with, advanced input/output devices and sensors\nLO4: Apply HCI principles to the construction and evaluation of immersive systems",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#the-brief",
+    "href": "01-assessments/04-assessment3.html#the-brief",
+    "title": "Assessment 3",
+    "section": "The Brief",
+    "text": "The Brief\nBuild an interactive immersive application on one of the platforms used in this module.\nYour project must:\n\nrun on real hardware, not only in the editor\nsupport meaningful user interaction beyond looking around\nmake deliberate, defensible design choices about comfort, input and spatial layout\nbe evaluated with real users, however small the sample\n\nThe scope is yours to set. A small, polished, well-evaluated project scores higher than an ambitious broken one. Depth beats breadth.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#recommended-approach-build-on-assessment-2",
+    "href": "01-assessments/04-assessment3.html#recommended-approach-build-on-assessment-2",
+    "title": "Assessment 3",
+    "section": "Recommended Approach: Build on Assessment 2",
+    "text": "Recommended Approach: Build on Assessment 2\n\n\n\n\n\n\nNoteRecommendation\n\n\n\nUse the same interaction you studied and prototyped in Assessment 2 as the core mechanic of this project. Assessment 3 then becomes a polished vertical slice of that interaction, built out into a small mini game.\n\n\n\nWhat is a vertical slice?\nA vertical slice is a short, complete and playable piece of an experience. It is not a little bit of everything. It takes one core mechanic through every layer of the finished product: input, game logic, feedback, interface, and a clear start and end. Think of it as a 2–3 minute demo that you could show to a publisher or a client.\n\n\nHow the two assessments differ\n\n\n\n\n\n\n\n\n\nAssessment 2\nAssessment 3\n\n\n\n\nGoal\nAnalyse an existing app and prove you can rebuild one interaction\nExtend that interaction into a complete, polished mini game\n\n\nFidelity\nLow-fidelity prototype. Primitive shapes and free assets are fine\nPolished. Deliberate art direction, audio and visual effects\n\n\nScope\nOne interaction, no game loop\nA small game loop: a start, a goal, a challenge, feedback and an end or result\n\n\nFeedback\nClear visual feedback, plus audio or haptics where available\nMulti-modal feedback: visual effects, spatial audio and haptics working together\n\n\nInterface\nMinimal\nBasic in-world UI: instructions, score or progress, win/lose or results state\n\n\nEvaluation\nSmall user test with SSQ and SUS\nRepeat the test on the improved build and compare with your Assessment 2 results\n\n\nMarked on\nReliability of the interaction. Polish is not marked\nReliability, design quality and polish\n\n\n\n\n\nExamples of extending an Assessment 2 interaction\n\n\n\n\n\n\n\nAssessment 2 interaction\nAssessment 3 vertical slice\n\n\n\n\nThrowing a ball\nBasketball Shooting Demo: a hoop with a net, scoring, a countdown timer, a ball rack, crowd and swish audio, haptic feedback on release and on scoring, and a results screen\n\n\nHitting a block with a saber\nShort rhythm level: 60–90 seconds of beat-timed blocks, combo and score, hit sparks, spatial audio and haptics, and a results screen\n\n\nKey and lock (socket)\nMini escape room: one room with a sequence of 2–3 linked puzzles, a hint system, ambient audio and a finish state\n\n\nDraw in 3D\nCreative sculpting toy: a brush palette, undo, a challenge or target to trace, and a gallery to view the finished work\n\n\nTap-to-place object (AR)\nAR decorating game: place and arrange objects against a goal or a timer, with placement effects, sound and a final score\n\n\n\n\n\nMaking the step up\nWhen you extend the interaction, work through these layers in order. Stop when you run out of time. Do not skip ahead to polish before the earlier layers work.\n\nMake the core reliable. Fix the problems your Assessment 2 evaluation found.\nAdd a goal and a loop. Give the player something to aim for, and a clear start and end.\nAdd multi-modal feedback. Combine visual effects, spatial audio and haptics so that every success or failure is felt, seen and heard.\nAdd essential UI. Instructions, progress or score, and a results state, all placed with comfort in mind.\nPolish. Art direction, lighting, animation and performance on device.\n\n\n\n\n\n\n\nWarningKeep the scope small\n\n\n\nA vertical slice is depth, not breadth. One polished 2–3 minute loop beats several half-finished levels. The “Avoid” list from Assessment 2 still applies (multiplayer, networking, persistent or cloud anchors, full-body avatars, AI characters, large content pipelines).\n\n\n\n\nChoosing a different concept\nYou do not have to build on Assessment 2. If you have a stronger idea, you can pursue it, but it must meet the same brief and be agreed with me before you commit.\n\n\nExample directions\n\na mini game that extends your Assessment 2 interaction (recommended)\na training or procedural simulation\na spatial data or information tool\nan AR experience anchored to real surfaces or objects\nan accessibility-focused interaction study\nan experimental or artistic immersive piece\n\nTalk to me before committing if you are unsure whether your idea has enough substance.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#milestones",
+    "href": "01-assessments/04-assessment3.html#milestones",
+    "title": "Assessment 3",
+    "section": "Milestones",
+    "text": "Milestones\nThese are checkpoints, not separate submissions. They exist to stop projects failing late.\n\n\n\n\n\n\n\nPoint\nWhat you should have\n\n\n\n\nWeek 7\nConcept agreed and platform chosen (pitched in the Week 7 practical). If you are extending your Assessment 2 interaction, describe the mini game around it\n\n\nWeek 10\nCore interaction working on device, with a basic game loop (start, goal, end)\n\n\nWeek 12\nTestable build with multi-modal feedback, ready for peer evaluation\n\n\nWeek 13\nEvaluation complete, improvements applied, project showcased\n\n\nWeek 14\nSubmission (the week after teaching ends)",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#deliverables",
+    "href": "01-assessments/04-assessment3.html#deliverables",
+    "title": "Assessment 3",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nApplication build — an installable or runnable build for the target device, plus project source files.\nDemonstration video — 3 to 5 minutes, captured through the lens or in first-person, showing the application actually running.\nProject report — 2500 to 3000 words.\nEvaluation evidence — your test materials, notes or questionnaire responses.\n\n\nReport structure\n\nConcept and rationale (if you are extending your Assessment 2 interaction, explain what you are carrying forward and why)\nDesign decisions, with reference to module concepts (including how feedback is combined across visual, audio and haptic channels)\nTechnical implementation\nEvaluation method and findings (if you are extending your Assessment 2 interaction, compare your results with your Assessment 2 findings)\nCritical reflection and further work\n\n\n\n\n\n\n\nImportantWrite it fresh\n\n\n\nYou may refer to your Assessment 2 prototype and results, but do not copy text or figures from your Assessment 2 report. Summarise what you learned from it, and show how it changed this project.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#marking-criteria",
+    "href": "01-assessments/04-assessment3.html#marking-criteria",
+    "title": "Assessment 3",
+    "section": "Marking Criteria",
+    "text": "Marking Criteria\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical implementation\n30%\nRuns reliably on device. Competent use of the toolchain. Appropriate complexity. A complete, playable loop with no blocking bugs\n\n\nInteraction and experience design\n25%\nDeliberate, justified design choices. Comfort and usability taken seriously. Feedback that is coherent across visual, audio and haptic channels\n\n\nEvaluation\n20%\nA real method, honestly applied, with findings that actually informed changes. Where you build on Assessment 2, a meaningful comparison with your earlier results\n\n\nCritical reflection\n15%\nEngages with module theory. Honest about limitations.\n\n\nPresentation and documentation\n10%\nClear report and video. Professional communication.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#marking-bands",
+    "href": "01-assessments/04-assessment3.html#marking-bands",
+    "title": "Assessment 3",
+    "section": "Marking Bands",
+    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nAmbitious but controlled. Runs reliably. Design choices are explicitly grounded in module theory. Evaluation is genuine and demonstrably changed the work. Reflection is critical and self-aware.\n\n\n60–69\nSolid, working application with clear design reasoning. Evaluation carried out competently. Reflection shows good understanding.\n\n\n50–59\nApplication runs with limitations. Design reasoning present but thin or mostly implicit. Evaluation minimal. Reflection descriptive.\n\n\nBelow 50\nIncomplete or non-functional. Little design rationale, no meaningful evaluation, no critical engagement.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/04-assessment3.html#tips",
+    "href": "01-assessments/04-assessment3.html#tips",
+    "title": "Assessment 3",
+    "section": "Tips",
+    "text": "Tips\n\nLock your scope early. The most common failure in this module is a concept too large to finish.\nGet it onto hardware in week one of building. Deployment problems found late are fatal.\nTest with someone who has not seen it. You cannot evaluate your own interface.\nWrite the report as you go. Design decisions are impossible to reconstruct honestly at the end.\nReport what did not work. Honest evaluation of a flawed prototype scores better than a claim that everything worked perfectly.\nFix before you polish. Use your Assessment 2 evaluation findings as your first to-do list.\nBuild the loop before the effects. A plain mini game that works beats a beautiful one that does not.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 3"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html",
+    "href": "01-assessments/02-assessment1.html",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#overview",
+    "href": "01-assessments/02-assessment1.html#overview",
+    "title": "Assessment 1",
+    "section": "",
+    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#learning-outcomes",
+    "href": "01-assessments/02-assessment1.html#learning-outcomes",
+    "title": "Assessment 1",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nLO1: Demonstrate a critical understanding of the concepts and principles of 3D systems and augmented and virtual reality in the context of spatial computing\nLO2: Explore, critique and deconstruct modern VR, AR, and spatial computing experiences\nLO3: Demonstrate theoretical understanding of, and practical competence in the use of advanced input and output devices and sensors in an immersive environment",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#how-it-works",
+    "href": "01-assessments/02-assessment1.html#how-it-works",
+    "title": "Assessment 1",
+    "section": "How It Works",
+    "text": "How It Works\nEach laboratory and practical session ends with a stated deliverable — a working scene, a deployed build, a configured device, a documented comparison.\nFor each session you must:\n\nComplete the session deliverable and have it signed off by your tutor before you leave.\nRecord it in your portfolio — a short entry with what you built, what worked, what did not, and what you changed.\nCommit your project files to your student repository.\n\nSign-off is the primary evidence. A portfolio entry without a working deliverable behind it carries no marks.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#portfolio-requirements",
+    "href": "01-assessments/02-assessment1.html#portfolio-requirements",
+    "title": "Assessment 1",
+    "section": "Portfolio Requirements",
+    "text": "Portfolio Requirements\nMaintain a single running portfolio for the semester. Each weekly entry should contain:\n\nthe session title and date\na screenshot, screen capture, or through-the-lens video of the working result\na short technical note — 150 to 250 words — covering what you implemented and any problems you solved\na link to the relevant commit or project folder\n\nKeep entries short and specific. This is a working log, not an essay.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#what-is-being-assessed",
+    "href": "01-assessments/02-assessment1.html#what-is-being-assessed",
+    "title": "Assessment 1",
+    "section": "What Is Being Assessed",
+    "text": "What Is Being Assessed\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical execution\n40%\nDeliverables work on the target device. Correct use of the toolchain and SDKs.\n\n\nConsistency and engagement\n25%\nSustained weekly participation and sign-off across the semester.\n\n\nDocumentation quality\n20%\nClear, accurate, specific portfolio entries with usable evidence.\n\n\nProblem solving\n15%\nEvidence of diagnosing and resolving issues rather than avoiding them.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#marking-bands",
+    "href": "01-assessments/02-assessment1.html#marking-bands",
+    "title": "Assessment 1",
+    "section": "Marking Bands",
+    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nConsistent weekly deliverables, all working on device. Confident, independent use of the toolchain. Documentation is precise and shows real diagnostic reasoning.\n\n\n60–69\nMost deliverables complete and working. Good technical competence with occasional gaps. Documentation is clear.\n\n\n50–59\nDeliverables partially complete or unreliable on device. Basic competence. Documentation thin or inconsistent.\n\n\nBelow 50\nSignificant gaps in attendance or deliverables. Work does not run. Little or no usable evidence.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#practical-notes",
+    "href": "01-assessments/02-assessment1.html#practical-notes",
+    "title": "Assessment 1",
+    "section": "Practical Notes",
+    "text": "Practical Notes\n\nSign-off must happen in the session. Work shown late cannot be verified against the session it belongs to.\nDeploy to hardware wherever the session calls for it. Editor-only results do not demonstrate LO3.\nMissed a session? Speak to me the same week. Catch-up is possible; silent absence is not.\nHandle the hardware carefully and report any damage immediately.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/02-assessment1.html#tips",
+    "href": "01-assessments/02-assessment1.html#tips",
+    "title": "Assessment 1",
+    "section": "Tips",
+    "text": "Tips\n\nCapture evidence while the thing is working — not from memory afterwards.\nWrite the technical note the same day. It takes ten minutes then and an hour later.\nRecord failures as well as successes. Diagnosing a problem is assessable; hiding it is not.\nKeep your repository tidy and current. It is part of the evidence.",
+    "crumbs": [
+      "Assessments",
+      "Assessment 1"
+    ]
+  },
+  {
+    "objectID": "01-assessments/01-overview.html",
+    "href": "01-assessments/01-overview.html",
+    "title": "Assessment Overview",
+    "section": "",
+    "text": "This module is 100% continuously assessed. There is no terminal written exam.\nAssessment is split across three components: ongoing practical work, a mid-semester case study, and a final individual project.\n\n\n\n#\nAssessment\nType\nWeight\nDue\nLOs\n\n\n\n\n1\nPractical Evaluation — Continuous Lab Work\nContinuous practical\n30%\nOngoing\n1, 2, 3\n\n\n2\nXR Experience Analysis & Interaction Prototype\nCase study and prototype\n30%\nWed 4 Nov 2026, 17:00\n2, 3, 4\n\n\n3\nIndividual Project — Interactive Immersive Application\nIndividual project\n40%\nWeek 14 (after teaching ends)\n1, 2, 3, 4\n\n\n\nTotal\n\n100%",
+    "crumbs": [
+      "Assessments",
+      "Assessment Overview"
+    ]
+  },
+  {
+    "objectID": "01-assessments/01-overview.html#overview",
+    "href": "01-assessments/01-overview.html#overview",
+    "title": "Assessment Overview",
+    "section": "",
+    "text": "This module is 100% continuously assessed. There is no terminal written exam.\nAssessment is split across three components: ongoing practical work, a mid-semester case study, and a final individual project.\n\n\n\n#\nAssessment\nType\nWeight\nDue\nLOs\n\n\n\n\n1\nPractical Evaluation — Continuous Lab Work\nContinuous practical\n30%\nOngoing\n1, 2, 3\n\n\n2\nXR Experience Analysis & Interaction Prototype\nCase study and prototype\n30%\nWed 4 Nov 2026, 17:00\n2, 3, 4\n\n\n3\nIndividual Project — Interactive Immersive Application\nIndividual project\n40%\nWeek 14 (after teaching ends)\n1, 2, 3, 4\n\n\n\nTotal\n\n100%",
+    "crumbs": [
+      "Assessments",
+      "Assessment Overview"
+    ]
+  },
+  {
+    "objectID": "01-assessments/01-overview.html#how-the-three-fit-together",
+    "href": "01-assessments/01-overview.html#how-the-three-fit-together",
+    "title": "Assessment Overview",
+    "section": "How the Three Fit Together",
+    "text": "How the Three Fit Together\nAssessment 1 runs the whole way through. It rewards consistent, evidenced practical work in the lab and practical sessions, and it is the main vehicle for demonstrating hands-on competence with the hardware.\nAssessment 2 sits at the midpoint. It asks you to look outward at an existing XR experience, deconstruct it critically, and then prove you understand it by rebuilding one of its interactions.\nAssessment 3 is where you work independently. You set the concept, make and justify the design decisions, and evaluate the result with real users.\nTogether these cover all four learning outcomes, with LO4 assessed principally through the evaluation and reflection components of Assessments 2 and 3.",
+    "crumbs": [
+      "Assessments",
+      "Assessment Overview"
+    ]
+  },
+  {
+    "objectID": "01-assessments/01-overview.html#submission-and-academic-integrity",
+    "href": "01-assessments/01-overview.html#submission-and-academic-integrity",
+    "title": "Assessment Overview",
+    "section": "Submission and Academic Integrity",
+    "text": "Submission and Academic Integrity\n\nAll three assessments are individual submissions.\nDiscussing ideas and helping each other debug is encouraged. Sharing code or written work for submission is not.\nIf you use AI tools, you remain responsible for everything you submit — review it, understand it, and be able to explain it.\nLate submissions are subject to the standard institutional penalty. If something has gone wrong, talk to me before the deadline.",
+    "crumbs": [
+      "Assessments",
+      "Assessment Overview"
+    ]
+  },
+  {
+    "objectID": "01-assessments/01-overview.html#getting-help",
+    "href": "01-assessments/01-overview.html#getting-help",
+    "title": "Assessment Overview",
+    "section": "Getting Help",
+    "text": "Getting Help\nBring assessment questions to the lab and practical sessions — that is the fastest route to an answer, and usually someone else has the same question.",
+    "crumbs": [
+      "Assessments",
+      "Assessment Overview"
+    ]
+  },
+  {
     "objectID": "01-assessments/03-assessment2.html",
     "href": "01-assessments/03-assessment2.html",
     "title": "Assessment 2",
@@ -2445,267 +2709,80 @@
     ]
   },
   {
-    "objectID": "01-assessments/01-overview.html",
-    "href": "01-assessments/01-overview.html",
-    "title": "Assessment Overview",
+    "objectID": "01-assessments/05-signoff-checklist.html",
+    "href": "01-assessments/05-signoff-checklist.html",
+    "title": "Tutor Sign-Off Checklist",
     "section": "",
-    "text": "This module is 100% continuously assessed. There is no terminal written exam.\nAssessment is split across three components: ongoing practical work, a mid-semester case study, and a final individual project.\n\n\n\n#\nAssessment\nType\nWeight\nDue\nLOs\n\n\n\n\n1\nPractical Evaluation — Continuous Lab Work\nContinuous practical\n30%\nOngoing\n1, 2, 3\n\n\n2\nXR Experience Analysis & Interaction Prototype\nCase study and prototype\n30%\nWed 4 Nov 2026, 17:00\n2, 3, 4\n\n\n3\nIndividual Project — Interactive Immersive Application\nIndividual project\n40%\nWeek 14 (after teaching ends)\n1, 2, 3, 4\n\n\n\nTotal\n\n100%",
+    "text": "This is the checklist your tutor uses to sign off work for each session, each assessment phase and each milestone. Use it to check your own submissions before they are assessed.\nStudent: ______________________ Student ID: ______________ Device(s): ______________________",
     "crumbs": [
       "Assessments",
-      "Assessment Overview"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/01-overview.html#overview",
-    "href": "01-assessments/01-overview.html#overview",
-    "title": "Assessment Overview",
-    "section": "",
-    "text": "This module is 100% continuously assessed. There is no terminal written exam.\nAssessment is split across three components: ongoing practical work, a mid-semester case study, and a final individual project.\n\n\n\n#\nAssessment\nType\nWeight\nDue\nLOs\n\n\n\n\n1\nPractical Evaluation — Continuous Lab Work\nContinuous practical\n30%\nOngoing\n1, 2, 3\n\n\n2\nXR Experience Analysis & Interaction Prototype\nCase study and prototype\n30%\nWed 4 Nov 2026, 17:00\n2, 3, 4\n\n\n3\nIndividual Project — Interactive Immersive Application\nIndividual project\n40%\nWeek 14 (after teaching ends)\n1, 2, 3, 4\n\n\n\nTotal\n\n100%",
+    "objectID": "01-assessments/05-signoff-checklist.html#assessment-1-practical-evaluation-continuous-lab-work-30",
+    "href": "01-assessments/05-signoff-checklist.html#assessment-1-practical-evaluation-continuous-lab-work-30",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Assessment 1 — Practical Evaluation, Continuous Lab Work (30%)",
+    "text": "Assessment 1 — Practical Evaluation, Continuous Lab Work (30%)\nRule: sign-off happens in the session, on the target device. Editor-only results do not evidence LO3. A portfolio entry with no signed-off deliverable behind it carries no marks.\n\nPer-session sign-off\nFor every session, tick all three before signing: Works (deliverable shown working on device), Portfolio (entry recorded), Commit (project files committed to the student repository).\n\n\n\n\n\n\n\n\n\n\n\n\nWk\nSession\nWhat the tutor must see\nWorks\nPortfolio\nCommit\nInitials / date\n\n\n\n\n2\nPractical — Simulator, PDP & App Store\nUnity VR project running in Meta XR Simulator; 5+ screenshots; 60–90 s gameplay video; updated PDP; APK uploaded to Meta App Store; README in repo\n☐\n☐\n☐\n\n\n\n2\nPractical — Toolchain Verification & Platform Selection\nBuild deployed to simulator and headset; comparison matrix (measured vs quoted); platform recommendation ≤400 words naming its own strongest counter-argument\n☐\n☐\n☐\n\n\n\n2\nLab — Unity XR Setup & First Deployment\nXR scene deployed to headset; functional teleportation; at least one grabbable object\n☐\n☐\n☐\n\n\n\n3\nPractical — Comfort Audit & Research Ethics\nScored SSQ set: baseline + three conditions, plotted as change from baseline across the three subscales; written interpretation acknowledging single-participant limits; consent protocol followed\n☐\n☐\n☐\n\n\n\n3\nLab — XR Hardware Landscape (Device Stations)\nCompleted observation templates for each station; comparison table; group critical comparison write-up (ranking + justification for chosen use case)\n☐\n☐\n☐\n\n\n\n3\nLab — Perception Experiments\nUnity scene exposing all three manipulations (frame rate, scale, FOV vignette) at runtime; completed log linking each parameter to comfort/presence, interpreted against lecture theory\n☐\n☐\n☐\n\n\n\n4\nPractical — Interaction Technique Bake-Off\nThree working variants of the same task launched from one main menu in a single build; trial dataset across the group; written comparison (completion time, error rate, perceived effort) with a recommendation for two usage patterns\n☐\n☐\n☐\n\n\n\n4\nLab — Controller & Hand Tracking Interaction\nRay interactor, direct grab and hand-tracking pinch all working on device; VLE upload by end of week: scene + lab journal (observation tables, comparative reflection, reflection answers, 2+ screenshots)\n☐\n☐\n☐\n\n\n\n5\nPractical — Locomotion Comfort Study\nTwo working locomotion schemes with exposed comfort settings; peer comfort ratings before and after tuning; dimensioned paper prototype of a wrist menu validated for reach and legibility\n☐\n☐\n☐\n\n\n\n5\nLab — Locomotion & Spatial UI\nVignette, wrist menu (attach + show/hide) and diegetic vs non-diegetic score display working on device; VLE upload by end of week: scene + lab journal (comfort tables, wrist menu screenshots, user test results, UI reflection)\n☐\n☐\n☐\n\n\n\n6\nPractical — Assessment 2 Clinic & Project Pitching\nAssessment 2 draft revised to address the strongest challenge raised; Assessment 3 concept signed off (one core interaction + target platform) — see A2 Phase 1 and A3 Milestone 1 below\n☐\n☐\n☐\n\n\n\n6\nLab — Experience Analysis & Interaction Recreation\nAction-cycle, Milgram and heuristic analysis of chosen app; interaction broken down and mapped to Unity; first build tested on device; peer test done; write-up planned\n☐\n☐\n☐\n\n\n\n7\nPractical — Tracking Failure Investigation\nWritten record of 4+ distinct tracking/relocalisation failure conditions, each with observed effect on anchored content; anchoring recommendation for own project\n☐\n☐\n☐\n\n\n\n7\nLab — AR Foundation Setup & Tap-to-Place\nScreenshot/capture of AR prototype in use; Unity project files; reflection 150–200 words on what worked and limitations noticed\n☐\n☐\n☐\n\n\n\n8\nReading week\nNo session. Assessment 2 due — see below.\n—\n—\n—\n\n\n\n9\nPractical — Greybox Walkthrough & Critique\nScale-correct blockout walked in headset by the student and at least one peer; written list of changes the critique produced\n☐\n☐\n☐\n\n\n\n9\nLab — Lighting & Environment Production\nLit, culled environment running on device; focal object identifiable within three seconds by someone who has not seen the scene\n☐\n☐\n☐\n\n\n\n10\nPractical — Multi-Modal A/B Study\nShort report comparing presence ratings across the four conditions, with interpretation of which modality contributed most to the student’s interaction\n☐\n☐\n☐\n\n\n\n10\nLab — Spatial Audio & Haptics on Device\nA3 milestone: core interaction running on device with synchronised spatial audio and haptic feedback, demonstrated in session\n☐\n☐\n☐\n\n\n\n11\nPractical — Shipping the Options Menu\nWorking accessibility and comfort options menu (incl. seated-mode calibration), verified on device, holding target refresh rate\n☐\n☐\n☐\n\n\n\n11\nLab — Hitting and Holding the Frame Budget\nBuild holding target refresh rate on device under realistic load; written record of measured gain from each optimisation applied\n☐\n☐\n☐\n\n\n\n12\nPractical — Peer Evaluation Session\nA3 milestone: completed observation set for own build with 4+ participants, instrument scores and verbatim notes; consent forms used\n☐\n☐\n☐\n\n\n\n12\nLab — From Observations to a Change List\nObservations coded and ranked; prioritised, evidenced change list for the remaining fortnight\n☐\n☐\n☐\n\n\n\n13\nPractical — Project Showcase & Accessibility Audit\nPitch and demo delivered; feedback cards completed for visited projects; accessibility audit of one peer’s build completed; highest-priority accessibility finding received has been applied\n☐\n☐\n☐\n\n\n\n13\nLab — Accessibility Pass & Submission Clinic\nAccessibility/comfort options verified on device with no regression; report and video reviewed; every deliverable present and correctly named; build installs and runs on a clean device; trial upload done\n☐\n☐\n☐\n\n\n\n\nMissed session: student spoke to tutor the same week ☐ Catch-up agreed ☐ Catch-up signed off (date: ________) ☐\n\n\nEnd-of-semester portfolio check\n\nOne single running portfolio for the semester (not scattered files)\nEvery signed-off session has an entry; every entry has a sign-off behind it\nEach entry has: session title and date\nEach entry has: screenshot, screen capture or through-the-lens video of the working result\nEach entry has: technical note of 150–250 words (what was implemented, problems solved)\nEach entry has: link to the relevant commit or project folder, and the link resolves\nFailures and diagnoses are recorded, not just successes\nRepository is tidy and current\n\n\n\nAssessment 1 marking\n\n\n\n\n\n\n\n\n\nComponent\nWeight\nChecks\nMark\n\n\n\n\nTechnical execution\n40%\nDeliverables work on target device; correct use of toolchain and SDKs\n/40\n\n\nConsistency and engagement\n25%\nSustained weekly participation and sign-off across the semester (count sign-offs above)\n/25\n\n\nDocumentation quality\n20%\nClear, accurate, specific entries with usable evidence\n/20\n\n\nProblem solving\n15%\nEvidence of diagnosing and resolving issues rather than avoiding them\n/15\n\n\nTotal\n\n\n/100\n\n\n\nBand: 70–100 ☐ 60–69 ☐ 50–59 ☐ &lt;50 ☐",
     "crumbs": [
       "Assessments",
-      "Assessment Overview"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/01-overview.html#how-the-three-fit-together",
-    "href": "01-assessments/01-overview.html#how-the-three-fit-together",
-    "title": "Assessment Overview",
-    "section": "How the Three Fit Together",
-    "text": "How the Three Fit Together\nAssessment 1 runs the whole way through. It rewards consistent, evidenced practical work in the lab and practical sessions, and it is the main vehicle for demonstrating hands-on competence with the hardware.\nAssessment 2 sits at the midpoint. It asks you to look outward at an existing XR experience, deconstruct it critically, and then prove you understand it by rebuilding one of its interactions.\nAssessment 3 is where you work independently. You set the concept, make and justify the design decisions, and evaluate the result with real users.\nTogether these cover all four learning outcomes, with LO4 assessed principally through the evaluation and reflection components of Assessments 2 and 3.",
+    "objectID": "01-assessments/05-signoff-checklist.html#assessment-2-xr-experience-analysis-interaction-prototype-30",
+    "href": "01-assessments/05-signoff-checklist.html#assessment-2-xr-experience-analysis-interaction-prototype-30",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Assessment 2 — XR Experience Analysis & Interaction Prototype (30%)",
+    "text": "Assessment 2 — XR Experience Analysis & Interaction Prototype (30%)\n\nPhase 1 — Choice agreed (Week 6 practical, A2 clinic)\n\nApplication named, and it is one the student has used hands-on (not videos/reviews only)\nApplication runs on TUS equipment or the student’s own equipment\nDevice the app was used on is named\nInteraction to rebuild is named and describable in one sentence\nInteraction is Core or Developing level (not on the Avoid list: multiplayer, cloud/GPS anchors, full-body IK, whole game loop, AI characters, custom shaders)\nTarget build device is from the equipment table; “by agreement” devices (Pico, HoloLens 2, Xreal, own headset) agreed with tutor ☐\nIf analysis device ≠ build device, student knows to explain the platform change in Part 3\nDraft analysis and prototype critiqued; strongest challenge noted: ______________________________\nChoice agreed — tutor initials / date: ______________\n\n\n\nPhase 2 — Submission received (Week 8, reading week)\n\nSubmitted on time (or extension agreed before deadline ☐; late penalty applied ☐)\nReport 1500–2000 words, covering Parts 1 and 3 plus a short build description for Part 2\nUnity project zipped, excluding Library, Temp, Logs, Build\nPrototype build for target device (.apk for Quest/Pico/Android; Windows build for PC VR; iOS: video accepted in place of build)\nVideo demo 2–3 min, prototype running on a real device (headset capture or phone recording, ideally with footage of the user)\nPrototype built in Unity (XR Interaction Toolkit / AR Foundation / Meta XR SDK / Cardboard XR Plugin) — not Unreal, Godot, WebXR, Lens Studio, Reality Composer\nAssets not made by the student are credited\nIndividual work; no shared code or writing evident\n\n\n\nPhase 3 — Part 1: Experience Analysis (30%)\n\nFocuses on two or three key interactions, not the whole app\nStates which interaction was rebuilt and why\nInteraction design: Norman’s Action Cycle and Gulfs of Execution / Evaluation applied\nPresence and immersion: Slater’s Place Illusion and Plausibility Illusion applied\nSpatial design: position on Milgram’s continuum; placement of UI and content\nComfort and usability: locomotion, reach, fatigue, simulator sickness, accessibility\nStrengths and weaknesses judged against heuristics with severity ratings\nEvidence captured by the student (screenshots, photos, recordings)\nDiagrams (e.g. action-cycle table per key interaction)\nReferences to lecture concepts and readings\nCritical, not descriptive (explains why it works or fails)\n\nMark: /30\n\n\nPhase 4 — Part 2: Interaction Prototype (30%)\n\nRuns on the real device in the video (install and run the build to confirm ☐)\nWorks reliably: input causes a clear system response every time\nClearly recreates the chosen interaction\nVisual feedback present\nAudio and/or haptic feedback present where the device supports it\nDemonstrates XR input (controllers / hands / gaze / touch) and output (display / audio / haptics)\nNot marked down for scope or visual polish — a well-built Core interaction can score full marks\n\nMark: /30\n\n\nPhase 5 — HCI Application (20%)\n\nDesign decisions in the prototype are justified with HCI principles: feedback, affordances, comfort, reach, accessibility\nJustifications link to module concepts, not generic UX advice\n\nMark: /20\n\n\nPhase 6 — Part 3: Evaluation (10%)\n\nWhat works well / what doesn’t, stated honestly\nComparison with the original: differences classified as build limitation, platform limitation, or deliberate design change\nPlatform change (if any) explained\nHeuristic evaluation performed\nUser test performed: SUS as minimum; SSQ before/after if the prototype has locomotion\nConsent form used; 3–5 participants\nHonest about what a small sample can and cannot show\nRealistic improvements identified, with reasons\n\nMark: /10\n\n\nPhase 7 — Presentation (10%)\n\nClear structure and writing\nFigures labelled\nCorrect referencing\nVideo is clear and shows what it claims\n\nMark: /10\nAssessment 2 total: /100 Band: 70–100 ☐ 60–69 ☐ 50–59 ☐ &lt;50 ☐ Feedback returned ☐",
     "crumbs": [
       "Assessments",
-      "Assessment Overview"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/01-overview.html#submission-and-academic-integrity",
-    "href": "01-assessments/01-overview.html#submission-and-academic-integrity",
-    "title": "Assessment Overview",
-    "section": "Submission and Academic Integrity",
-    "text": "Submission and Academic Integrity\n\nAll three assessments are individual submissions.\nDiscussing ideas and helping each other debug is encouraged. Sharing code or written work for submission is not.\nIf you use AI tools, you remain responsible for everything you submit — review it, understand it, and be able to explain it.\nLate submissions are subject to the standard institutional penalty. If something has gone wrong, talk to me before the deadline.",
+    "objectID": "01-assessments/05-signoff-checklist.html#assessment-3-individual-project-interactive-immersive-application-40",
+    "href": "01-assessments/05-signoff-checklist.html#assessment-3-individual-project-interactive-immersive-application-40",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Assessment 3 — Individual Project, Interactive Immersive Application (40%)",
+    "text": "Assessment 3 — Individual Project, Interactive Immersive Application (40%)\n\nMilestone 1 — Week 6: concept agreed and platform chosen\n\nConcept pitched; core interaction described in one sentence with a verb\nPlatform chosen and is one used in the module (or agreed)\nScope is small enough to finish (depth over breadth); scope locked\nInteraction goes beyond looking around\nIdea has enough substance for design decisions on comfort, input and spatial layout\nConcept signed off — tutor initials / date: ______________\n\n\n\nMilestone 2 — Week 10: core interaction working on device\n\nCore interaction runs on real hardware (not editor only), demonstrated in the Week 10 lab\nSynchronised spatial audio and haptic feedback present\nDeployment pipeline proven (no late deployment surprises)\nSigned off — tutor initials / date: ______________\n\n\n\nMilestone 3 — Week 12: testable build, peer evaluation\n\nBuild is installable and stable enough for peers to test unassisted\nAccessibility/comfort options menu present (from Week 11)\nPeer evaluation run with 4+ participants in the Week 12 practical\nConsent forms and duty-of-care protocol used\nInstrument scores recorded (SUS / SSQ / IPQ / NASA-TLX as appropriate) and verbatim notes taken\nObservations coded, ranked, and turned into a prioritised evidenced change list (Week 12 lab)\nSigned off — tutor initials / date: ______________\n\n\n\nMilestone 4 — Week 13: evaluation complete, improvements applied, showcased\n\nChanges from the change list applied and evidenced\nHighest-priority peer accessibility finding applied\nProject pitched and demoed at the showcase\nAccessibility and comfort options verified on device with no regression\nSubmission package checked in the clinic: every deliverable present and correctly named\nBuild installs and runs on a clean device\nTrial upload completed\nSigned off — tutor initials / date: ______________\n\n\n\nMilestone 5 — Week 14: submission received\n\nSubmitted on time (or extension agreed before deadline ☐; late penalty applied ☐)\nApplication build: installable/runnable build for the target device\nProject source files included\nDemonstration video 3–5 min, through-the-lens or first-person, showing the application actually running\nProject report 2500–3000 words\nEvaluation evidence: test materials, notes and/or questionnaire responses\nReport follows the structure: 1 Concept and rationale · 2 Design decisions (module concepts) · 3 Technical implementation · 4 Evaluation method and findings · 5 Critical reflection and further work\nIndividual work; assets not made by the student credited\n\n\n\nMarking\nTechnical implementation (30%)\n\nRuns reliably on device (install and run it ☐)\nCompetent use of the toolchain\nAppropriate complexity for the brief\nHolds target refresh rate / no comfort-breaking performance issues\n\nMark: /30\nInteraction and experience design (25%)\n\nMeaningful interaction beyond looking around\nDeliberate, justified design choices on comfort, input and spatial layout\nComfort and usability taken seriously (locomotion, reach, seated mode, options)\nChoices explicitly grounded in module theory\n\nMark: /25\nEvaluation (20%)\n\nA real method (heuristic, think-aloud, task-based, instruments) honestly applied\nParticipants who had not seen the application before\nFindings reported honestly, including what did not work\nFindings demonstrably informed changes to the build\n\nMark: /20\nCritical reflection (15%)\n\nEngages with module theory, not just narrative\nHonest about limitations\nFurther work is realistic and follows from the evaluation\n\nMark: /15\nPresentation and documentation (10%)\n\nClear report structure and writing\nClear video showing the application running\nProfessional communication; figures labelled; referencing correct\n\nMark: /10\nAssessment 3 total: /100 Band: 70–100 ☐ 60–69 ☐ 50–59 ☐ &lt;50 ☐ Feedback returned ☐",
     "crumbs": [
       "Assessments",
-      "Assessment Overview"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/01-overview.html#getting-help",
-    "href": "01-assessments/01-overview.html#getting-help",
-    "title": "Assessment Overview",
-    "section": "Getting Help",
-    "text": "Getting Help\nBring assessment questions to the lab and practical sessions — that is the fastest route to an answer, and usually someone else has the same question.",
+    "objectID": "01-assessments/05-signoff-checklist.html#cross-cutting-checks-every-assessment",
+    "href": "01-assessments/05-signoff-checklist.html#cross-cutting-checks-every-assessment",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Cross-cutting checks (every assessment)",
+    "text": "Cross-cutting checks (every assessment)\n\nWork is the student’s own; discussion and debugging help is fine, shared code or written work is not\nAny AI tool use: student can explain and defend everything submitted\nLate submission handled per institutional penalty; extensions only if requested before the deadline\nHardware returned undamaged; any damage reported\nParticipant consent and duty-of-care protocol followed in every user test",
     "crumbs": [
       "Assessments",
-      "Assessment Overview"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/02-assessment1.html",
-    "href": "01-assessments/02-assessment1.html",
-    "title": "Assessment 1",
-    "section": "",
-    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "objectID": "01-assessments/05-signoff-checklist.html#module-summary-for-this-student",
+    "href": "01-assessments/05-signoff-checklist.html#module-summary-for-this-student",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Module summary for this student",
+    "text": "Module summary for this student\n\n\n\nAssessment\nWeight\nMark /100\nWeighted\n\n\n\n\n1 — Continuous Lab Work\n30%\n\n\n\n\n2 — Analysis & Prototype\n30%\n\n\n\n\n3 — Individual Project\n40%\n\n\n\n\nModule total\n100%\n\n\n\n\n\nSigned off by: ______________________ Date: ______________",
     "crumbs": [
       "Assessments",
-      "Assessment 1"
+      "Sign-Off Checklist"
     ]
   },
   {
-    "objectID": "01-assessments/02-assessment1.html#overview",
-    "href": "01-assessments/02-assessment1.html#overview",
-    "title": "Assessment 1",
-    "section": "",
-    "text": "Assessment 1 runs across the whole semester. Rather than a single submission, it assesses the practical work you produce week by week in the laboratory and practical sessions.\nThe purpose is to build demonstrable technical competence with XR hardware and toolchains, and to keep that competence evidenced as you go. Work is assessed on what you can show working on a device, not on what you describe.\n\n\n\n\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n30%\n\n\nType\nContinuous practical evaluation\n\n\nSubmission\nIndividual\n\n\nDue\nOngoing — evidenced weekly, portfolio submitted end of semester",
+    "objectID": "01-assessments/05-signoff-checklist.html#class-roster-grid",
+    "href": "01-assessments/05-signoff-checklist.html#class-roster-grid",
+    "title": "Tutor Sign-Off Checklist",
+    "section": "Class roster grid",
+    "text": "Class roster grid\nOne row per student. Enter a date (sign-off) or a dash (missed). A1 columns count toward “consistency and engagement”.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent\nW2\nW3\nW4\nW5\nW6\nW7\nW9\nW10\nW11\nW12\nW13\nA1 portfolio\nA2 choice (W6)\nA2 submitted (W8)\nA2 mark\nA3 concept (W6)\nA3 core (W10)\nA3 peer eval (W12)\nA3 showcase (W13)\nA3 submitted (W14)\nA3 mark",
     "crumbs": [
       "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#learning-outcomes",
-    "href": "01-assessments/02-assessment1.html#learning-outcomes",
-    "title": "Assessment 1",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\nLO1: Demonstrate a critical understanding of the concepts and principles of 3D systems and augmented and virtual reality in the context of spatial computing\nLO2: Explore, critique and deconstruct modern VR, AR, and spatial computing experiences\nLO3: Demonstrate theoretical understanding of, and practical competence in the use of advanced input and output devices and sensors in an immersive environment",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#how-it-works",
-    "href": "01-assessments/02-assessment1.html#how-it-works",
-    "title": "Assessment 1",
-    "section": "How It Works",
-    "text": "How It Works\nEach laboratory and practical session ends with a stated deliverable — a working scene, a deployed build, a configured device, a documented comparison.\nFor each session you must:\n\nComplete the session deliverable and have it signed off by your tutor before you leave.\nRecord it in your portfolio — a short entry with what you built, what worked, what did not, and what you changed.\nCommit your project files to your student repository.\n\nSign-off is the primary evidence. A portfolio entry without a working deliverable behind it carries no marks.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#portfolio-requirements",
-    "href": "01-assessments/02-assessment1.html#portfolio-requirements",
-    "title": "Assessment 1",
-    "section": "Portfolio Requirements",
-    "text": "Portfolio Requirements\nMaintain a single running portfolio for the semester. Each weekly entry should contain:\n\nthe session title and date\na screenshot, screen capture, or through-the-lens video of the working result\na short technical note — 150 to 250 words — covering what you implemented and any problems you solved\na link to the relevant commit or project folder\n\nKeep entries short and specific. This is a working log, not an essay.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#what-is-being-assessed",
-    "href": "01-assessments/02-assessment1.html#what-is-being-assessed",
-    "title": "Assessment 1",
-    "section": "What Is Being Assessed",
-    "text": "What Is Being Assessed\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical execution\n40%\nDeliverables work on the target device. Correct use of the toolchain and SDKs.\n\n\nConsistency and engagement\n25%\nSustained weekly participation and sign-off across the semester.\n\n\nDocumentation quality\n20%\nClear, accurate, specific portfolio entries with usable evidence.\n\n\nProblem solving\n15%\nEvidence of diagnosing and resolving issues rather than avoiding them.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#marking-bands",
-    "href": "01-assessments/02-assessment1.html#marking-bands",
-    "title": "Assessment 1",
-    "section": "Marking Bands",
-    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nConsistent weekly deliverables, all working on device. Confident, independent use of the toolchain. Documentation is precise and shows real diagnostic reasoning.\n\n\n60–69\nMost deliverables complete and working. Good technical competence with occasional gaps. Documentation is clear.\n\n\n50–59\nDeliverables partially complete or unreliable on device. Basic competence. Documentation thin or inconsistent.\n\n\nBelow 50\nSignificant gaps in attendance or deliverables. Work does not run. Little or no usable evidence.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#practical-notes",
-    "href": "01-assessments/02-assessment1.html#practical-notes",
-    "title": "Assessment 1",
-    "section": "Practical Notes",
-    "text": "Practical Notes\n\nSign-off must happen in the session. Work shown late cannot be verified against the session it belongs to.\nDeploy to hardware wherever the session calls for it. Editor-only results do not demonstrate LO3.\nMissed a session? Speak to me the same week. Catch-up is possible; silent absence is not.\nHandle the hardware carefully and report any damage immediately.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/02-assessment1.html#tips",
-    "href": "01-assessments/02-assessment1.html#tips",
-    "title": "Assessment 1",
-    "section": "Tips",
-    "text": "Tips\n\nCapture evidence while the thing is working — not from memory afterwards.\nWrite the technical note the same day. It takes ten minutes then and an hour later.\nRecord failures as well as successes. Diagnosing a problem is assessable; hiding it is not.\nKeep your repository tidy and current. It is part of the evidence.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 1"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html",
-    "href": "01-assessments/04-assessment3.html",
-    "title": "Assessment 3",
-    "section": "",
-    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nStarts\nWeek 7\n\n\nDue\nWeek 14 (the week after teaching ends)",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#overview",
-    "href": "01-assessments/04-assessment3.html#overview",
-    "title": "Assessment 3",
-    "section": "",
-    "text": "Assessment 3 is the capstone of this module. You will design, build, test and evaluate an original interactive immersive application for VR, AR, or a spatial computing platform.\nThis is where everything from the semester comes together: the hardware, the interaction design, the perceptual and comfort principles, and the evaluation methods. You choose the concept; you are assessed on how well you execute and justify it.\n\n\n\nItem\nDetail\n\n\n\n\nWeighting\n40%\n\n\nType\nIndividual project\n\n\nSubmission\nIndividual\n\n\nStarts\nWeek 7\n\n\nDue\nWeek 14 (the week after teaching ends)",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#learning-outcomes",
-    "href": "01-assessments/04-assessment3.html#learning-outcomes",
-    "title": "Assessment 3",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nThis assessment covers all four module outcomes:\n\nLO1: Critical understanding of 3D systems and AR/VR principles in a spatial computing context\nLO2: Explore, critique and deconstruct modern VR, AR and spatial computing experiences\nLO3: Theoretical understanding of, and practical competence with, advanced input/output devices and sensors\nLO4: Apply HCI principles to the construction and evaluation of immersive systems",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#the-brief",
-    "href": "01-assessments/04-assessment3.html#the-brief",
-    "title": "Assessment 3",
-    "section": "The Brief",
-    "text": "The Brief\nBuild an interactive immersive application on one of the platforms used in this module.\nYour project must:\n\nrun on real hardware, not only in the editor\nsupport meaningful user interaction beyond looking around\nmake deliberate, defensible design choices about comfort, input and spatial layout\nbe evaluated with real users, however small the sample\n\nThe scope is yours to set. A small, polished, well-evaluated project scores higher than an ambitious broken one. Depth beats breadth.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#recommended-approach-build-on-assessment-2",
-    "href": "01-assessments/04-assessment3.html#recommended-approach-build-on-assessment-2",
-    "title": "Assessment 3",
-    "section": "Recommended Approach: Build on Assessment 2",
-    "text": "Recommended Approach: Build on Assessment 2\n\n\n\n\n\n\nNoteRecommendation\n\n\n\nUse the same interaction you studied and prototyped in Assessment 2 as the core mechanic of this project. Assessment 3 then becomes a polished vertical slice of that interaction, built out into a small mini game.\n\n\n\nWhat is a vertical slice?\nA vertical slice is a short, complete and playable piece of an experience. It is not a little bit of everything. It takes one core mechanic through every layer of the finished product: input, game logic, feedback, interface, and a clear start and end. Think of it as a 2–3 minute demo that you could show to a publisher or a client.\n\n\nHow the two assessments differ\n\n\n\n\n\n\n\n\n\nAssessment 2\nAssessment 3\n\n\n\n\nGoal\nAnalyse an existing app and prove you can rebuild one interaction\nExtend that interaction into a complete, polished mini game\n\n\nFidelity\nLow-fidelity prototype. Primitive shapes and free assets are fine\nPolished. Deliberate art direction, audio and visual effects\n\n\nScope\nOne interaction, no game loop\nA small game loop: a start, a goal, a challenge, feedback and an end or result\n\n\nFeedback\nClear visual feedback, plus audio or haptics where available\nMulti-modal feedback: visual effects, spatial audio and haptics working together\n\n\nInterface\nMinimal\nBasic in-world UI: instructions, score or progress, win/lose or results state\n\n\nEvaluation\nSmall user test with SSQ and SUS\nRepeat the test on the improved build and compare with your Assessment 2 results\n\n\nMarked on\nReliability of the interaction. Polish is not marked\nReliability, design quality and polish\n\n\n\n\n\nExamples of extending an Assessment 2 interaction\n\n\n\n\n\n\n\nAssessment 2 interaction\nAssessment 3 vertical slice\n\n\n\n\nThrowing a ball\nBasketball Shooting Demo: a hoop with a net, scoring, a countdown timer, a ball rack, crowd and swish audio, haptic feedback on release and on scoring, and a results screen\n\n\nHitting a block with a saber\nShort rhythm level: 60–90 seconds of beat-timed blocks, combo and score, hit sparks, spatial audio and haptics, and a results screen\n\n\nKey and lock (socket)\nMini escape room: one room with a sequence of 2–3 linked puzzles, a hint system, ambient audio and a finish state\n\n\nDraw in 3D\nCreative sculpting toy: a brush palette, undo, a challenge or target to trace, and a gallery to view the finished work\n\n\nTap-to-place object (AR)\nAR decorating game: place and arrange objects against a goal or a timer, with placement effects, sound and a final score\n\n\n\n\n\nMaking the step up\nWhen you extend the interaction, work through these layers in order. Stop when you run out of time. Do not skip ahead to polish before the earlier layers work.\n\nMake the core reliable. Fix the problems your Assessment 2 evaluation found.\nAdd a goal and a loop. Give the player something to aim for, and a clear start and end.\nAdd multi-modal feedback. Combine visual effects, spatial audio and haptics so that every success or failure is felt, seen and heard.\nAdd essential UI. Instructions, progress or score, and a results state, all placed with comfort in mind.\nPolish. Art direction, lighting, animation and performance on device.\n\n\n\n\n\n\n\nWarningKeep the scope small\n\n\n\nA vertical slice is depth, not breadth. One polished 2–3 minute loop beats several half-finished levels. The “Avoid” list from Assessment 2 still applies (multiplayer, networking, persistent or cloud anchors, full-body avatars, AI characters, large content pipelines).\n\n\n\n\nChoosing a different concept\nYou do not have to build on Assessment 2. If you have a stronger idea, you can pursue it, but it must meet the same brief and be agreed with me before you commit.\n\n\nExample directions\n\na mini game that extends your Assessment 2 interaction (recommended)\na training or procedural simulation\na spatial data or information tool\nan AR experience anchored to real surfaces or objects\nan accessibility-focused interaction study\nan experimental or artistic immersive piece\n\nTalk to me before committing if you are unsure whether your idea has enough substance.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#milestones",
-    "href": "01-assessments/04-assessment3.html#milestones",
-    "title": "Assessment 3",
-    "section": "Milestones",
-    "text": "Milestones\nThese are checkpoints, not separate submissions. They exist to stop projects failing late.\n\n\n\n\n\n\n\nPoint\nWhat you should have\n\n\n\n\nWeek 7\nConcept agreed and platform chosen (pitched in the Week 7 practical). If you are extending your Assessment 2 interaction, describe the mini game around it\n\n\nWeek 10\nCore interaction working on device, with a basic game loop (start, goal, end)\n\n\nWeek 12\nTestable build with multi-modal feedback, ready for peer evaluation\n\n\nWeek 13\nEvaluation complete, improvements applied, project showcased\n\n\nWeek 14\nSubmission (the week after teaching ends)",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#deliverables",
-    "href": "01-assessments/04-assessment3.html#deliverables",
-    "title": "Assessment 3",
-    "section": "Deliverables",
-    "text": "Deliverables\n\nApplication build — an installable or runnable build for the target device, plus project source files.\nDemonstration video — 3 to 5 minutes, captured through the lens or in first-person, showing the application actually running.\nProject report — 2500 to 3000 words.\nEvaluation evidence — your test materials, notes or questionnaire responses.\n\n\nReport structure\n\nConcept and rationale (if you are extending your Assessment 2 interaction, explain what you are carrying forward and why)\nDesign decisions, with reference to module concepts (including how feedback is combined across visual, audio and haptic channels)\nTechnical implementation\nEvaluation method and findings (if you are extending your Assessment 2 interaction, compare your results with your Assessment 2 findings)\nCritical reflection and further work\n\n\n\n\n\n\n\nImportantWrite it fresh\n\n\n\nYou may refer to your Assessment 2 prototype and results, but do not copy text or figures from your Assessment 2 report. Summarise what you learned from it, and show how it changed this project.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#marking-criteria",
-    "href": "01-assessments/04-assessment3.html#marking-criteria",
-    "title": "Assessment 3",
-    "section": "Marking Criteria",
-    "text": "Marking Criteria\n\n\n\n\n\n\n\n\nComponent\nWeight\nWhat we look for\n\n\n\n\nTechnical implementation\n30%\nRuns reliably on device. Competent use of the toolchain. Appropriate complexity. A complete, playable loop with no blocking bugs\n\n\nInteraction and experience design\n25%\nDeliberate, justified design choices. Comfort and usability taken seriously. Feedback that is coherent across visual, audio and haptic channels\n\n\nEvaluation\n20%\nA real method, honestly applied, with findings that actually informed changes. Where you build on Assessment 2, a meaningful comparison with your earlier results\n\n\nCritical reflection\n15%\nEngages with module theory. Honest about limitations.\n\n\nPresentation and documentation\n10%\nClear report and video. Professional communication.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#marking-bands",
-    "href": "01-assessments/04-assessment3.html#marking-bands",
-    "title": "Assessment 3",
-    "section": "Marking Bands",
-    "text": "Marking Bands\n\n\n\n\n\n\n\nBand\nDescriptor\n\n\n\n\n70–100\nAmbitious but controlled. Runs reliably. Design choices are explicitly grounded in module theory. Evaluation is genuine and demonstrably changed the work. Reflection is critical and self-aware.\n\n\n60–69\nSolid, working application with clear design reasoning. Evaluation carried out competently. Reflection shows good understanding.\n\n\n50–59\nApplication runs with limitations. Design reasoning present but thin or mostly implicit. Evaluation minimal. Reflection descriptive.\n\n\nBelow 50\nIncomplete or non-functional. Little design rationale, no meaningful evaluation, no critical engagement.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
-    ]
-  },
-  {
-    "objectID": "01-assessments/04-assessment3.html#tips",
-    "href": "01-assessments/04-assessment3.html#tips",
-    "title": "Assessment 3",
-    "section": "Tips",
-    "text": "Tips\n\nLock your scope early. The most common failure in this module is a concept too large to finish.\nGet it onto hardware in week one of building. Deployment problems found late are fatal.\nTest with someone who has not seen it. You cannot evaluate your own interface.\nWrite the report as you go. Design decisions are impossible to reconstruct honestly at the end.\nReport what did not work. Honest evaluation of a flawed prototype scores better than a claim that everything worked perfectly.\nFix before you polish. Use your Assessment 2 evaluation findings as your first to-do list.\nBuild the loop before the effects. A plain mini game that works beats a beautiful one that does not.",
-    "crumbs": [
-      "Assessments",
-      "Assessment 3"
+      "Sign-Off Checklist"
     ]
   },
   {
