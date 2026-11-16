@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 9 Practical (Optional) – Virtual, Augmented and Spatial Computing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../weeks/10-week-10/01-slides.html" rel="next">
+<link href="../../weeks/09-week-09/04-laboratory.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../custom.css">
+<meta property="og:title" content="Week 9 Practical (Optional) – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Capturing Reality with Gaussian Splats">
+<meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/09-week-09/01-slides.html">Week 09</a></li><li class="breadcrumb-item"><a href="../../weeks/09-week-09/05-practical.html">Week 9 Practical (Optional)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Virtual, Augmented and Spatial Computing</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semester Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/01-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/02-assessment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/03-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/04-assessment3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 05</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/03-consent-form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant Consent Form</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/04-ssq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulator Sickness Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 06</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/06-sus-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Usability Scale Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 07</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 09</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/05-practical.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 9 Practical (Optional)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 10</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/05-ipq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Igroup Presence Questionnaire (IPQ) Items</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 11</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/11-week-11/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/11-week-11/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11 Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/01-bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/02-index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#part-1-capture-35-minutes" id="toc-part-1-capture-35-minutes" class="nav-link" data-scroll-target="#part-1-capture-35-minutes">Part 1: Capture (35 minutes)</a></li>
+  <li><a href="#part-2-clean-and-reduce-30-minutes" id="toc-part-2-clean-and-reduce-30-minutes" class="nav-link" data-scroll-target="#part-2-clean-and-reduce-30-minutes">Part 2: Clean and Reduce (30 minutes)</a></li>
+  <li><a href="#part-3-into-the-headset-35-minutes" id="toc-part-3-into-the-headset-35-minutes" class="nav-link" data-scroll-target="#part-3-into-the-headset-35-minutes">Part 3: Into the Headset (35 minutes)</a></li>
+  <li><a href="#part-4-compare-and-recommend-20-minutes" id="toc-part-4-compare-and-recommend-20-minutes" class="nav-link" data-scroll-target="#part-4-compare-and-recommend-20-minutes">Part 4: Compare and Recommend (20 minutes)</a></li>
+  <li><a href="#part-5" id="toc-part-5" class="nav-link" data-scroll-target="#part-5">Part 5 (Extension): A Splat in Unity on a Quest 2 (45 minutes)</a></li>
+  </ul></li>
+  <li><a href="#expected-outcome" id="toc-expected-outcome" class="nav-link" data-scroll-target="#expected-outcome">Expected Outcome</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/09-week-09/01-slides.html">Week 09</a></li><li class="breadcrumb-item"><a href="../../weeks/09-week-09/05-practical.html">Week 9 Practical (Optional)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 9 Practical (Optional)</h1>
+<p class="subtitle lead">Capturing Reality with Gaussian Splats</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Capture a real object and a room corner as Gaussian splats, clean and reduce them, view them in the headset, and measure what they gain (presence, visual fidelity) against what they cost (artefacts, frame time, no interactivity). Finish with an evidence-based recommendation for how your Assessment 3 environment should be represented. The Part 5 extension imports your splat into a Unity project and views it on a Quest 2.</p>
+</div>
+</div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p><strong>Duration:</strong> 2 hours, plus about 45 minutes for the optional Unity extension in Part 5</p>
+<p>Gaussian splatting reconstructs a real place from photos or video as millions of small, semi-transparent, view-dependent blobs. The result can look photoreal in a way a mesh rarely does, but a splat has no surfaces, no collision and no relightable materials, and it is expensive to draw. This optional practical replaces the hype with measurement: you capture a real space, put it in the headset, and test whether the fidelity is worth its cost for your own project.</p>
+<p>It builds directly on this week’s greybox: the blockout you made in the <a href="../../weeks/09-week-09/03-practical.html">main practical</a> is the baseline you compare the splat against.</p>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this practical, you will be able to:</p>
+<ul>
+<li>Plan and execute a capture that a splat reconstruction can actually use</li>
+<li>Clean and reduce a splat, and explain what each reduction trades away</li>
+<li>Measure the rendering cost of a splat against the frame budget from Week 11</li>
+<li>Judge when a splat is the right representation for a world, and when a mesh or a greybox is</li>
+<li>Import a splat into a Unity project and view it on a Quest 2 (Part 5 extension)</li>
+</ul>
+</section>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A phone with a splat-capable capture app (for example Scaniverse or Polycam), or access to a lab capture device</li>
+<li>A computer with a browser for editing (SuperSplat runs in the browser)</li>
+<li>A Quest 3 or Quest 2, and either a browser-based WebXR splat viewer or a PC VR setup over Link</li>
+<li>Your Week 9 greybox, and the four presence items from the <a href="../../weeks/10-week-10/03-practical.html">Week 10 practical</a></li>
+<li><strong>For Part 5:</strong> your Unity 6 project from the <a href="../../weeks/04-week-04/03-practical.html">Week 4 practical</a> (URP, OpenXR and an XR Origin), a Quest 2 with a Link cable or Air Link, and a Windows PC with a dedicated graphics card</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Check the toolchain first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Splat tooling changes quickly. App names, export formats (<code>.ply</code>, <code>.spz</code>, <code>.sog</code>), Unity package versions and headset support move from term to term. Confirm the capture app, the editor, the viewer and the Unity import route on a lab headset before the session, and use whichever current tool gives you a splat file you can edit and view.</p>
+</div>
+</div>
+</section>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<section id="part-1-capture-35-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-capture-35-minutes">Part 1: Capture (35 minutes)</h3>
+<ol type="1">
+<li><strong>Choose two subjects:</strong> one object on a table (about 30 cm across) and one corner of a room (about 3 × 3 m).</li>
+<li><strong>Capture each twice.</strong>
+<ul>
+<li>A <strong>careful</strong> pass: move slowly, orbit at three heights, and overlap every view with the last.</li>
+<li>A <strong>deliberately bad</strong> pass: move quickly, from one height, and leave gaps in coverage.</li>
+</ul></li>
+<li><strong>Include the hard cases</strong> in the room corner: a mirror or window, something thin (a plant or chair legs) and a plain, untextured wall. These are the same failure conditions as the <a href="../../weeks/07-week-07/03-practical.html">Week 7 tracking practical</a>, now tested against a different reconstruction method.</li>
+<li><strong>Optional:</strong> capture the same room with the Quest 3’s own room-capture feature, if it is available on the lab headsets, and compare the two.</li>
+</ol>
+</section>
+<section id="part-2-clean-and-reduce-30-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-clean-and-reduce-30-minutes">Part 2: Clean and Reduce (30 minutes)</h3>
+<ol type="1">
+<li>Open the careful room capture in <strong>SuperSplat</strong>. Crop away everything outside the room and delete floating fragments (“floaters”).</li>
+<li>Record the <strong>splat count</strong> and <strong>file size</strong>.</li>
+<li>Export three versions: <strong>full</strong>, about <strong>50 %</strong> of the splats, and about <strong>20 %</strong>.</li>
+<li>For each reduction, note what disappears first: fine detail, reflections, or the edges of the scene.</li>
+</ol>
+</section>
+<section id="part-3-into-the-headset-35-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-into-the-headset-35-minutes">Part 3: Into the Headset (35 minutes)</h3>
+<ol type="1">
+<li>View all three versions in the headset, either standalone in a WebXR splat viewer or as PC VR through Unity over Link (<a href="#part-5">Part 5</a> walks through the Unity route on a Quest 2). Desktop splat renderers for Unity generally target PC GPUs rather than standalone Quest. That limit is part of what you are investigating.</li>
+<li><strong>Stand where the camera stood, then walk to places it never went.</strong> Record where the illusion breaks: blur up close, smearing at unseen angles, floaters.</li>
+<li><strong>Measure frame rate or frame time</strong> for each version using the method from the <a href="../11-week-11/03-practical.qmd">Week 11 practical</a>. Find the largest version that holds the headset’s refresh rate.</li>
+<li><strong>Try to touch the table.</strong> Your hand passes through it, because a splat has no collider. Write down what you would have to add to make the space interactive.</li>
+</ol>
+</section>
+<section id="part-4-compare-and-recommend-20-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-compare-and-recommend-20-minutes">Part 4: Compare and Recommend (20 minutes)</h3>
+<ol type="1">
+<li>With a partner administering, rate presence for three versions of the same corner: the <strong>full splat</strong>, the <strong>20 % splat</strong>, and your <strong>greybox</strong>. Use the four presence items from Week 10 and randomise the order.</li>
+<li>Write a recommendation of <strong>no more than 300 words</strong> for your Assessment 3 environment: splat, mesh, greybox, or a hybrid (for example, a splat backdrop with simple invisible colliders). Justify it with your own frame-time and presence data.</li>
+</ol>
+</section>
+<section id="part-5" class="level3">
+<h3 class="anchored" data-anchor-id="part-5">Part 5 (Extension): A Splat in Unity on a Quest 2 (45 minutes)</h3>
+<p>The Quest 2 is the headset many of you will build for, and it is the hardest test for a splat: an older first-generation Snapdragon XR2, less memory than a Quest 3, and no colour passthrough. Splats need a GPU renderer, and Unity has none built in. This part uses <strong>Unity Gaussian Splatting</strong>, an open-source (MIT-licensed) renderer by Aras Pranckevičius. There are two routes to the headset:</p>
+<ul>
+<li><strong>PC VR over Link (main route).</strong> Unity renders the splat on the PC’s graphics card and streams the picture to the Quest 2. This is the route that reliably works.</li>
+<li><strong>A standalone Android build (stretch).</strong> The splat renders on the Quest 2’s own GPU. The renderer targets desktop GPUs, so expect this to be slow or not to run at all. Either result is a valid finding.</li>
+</ul>
+<section id="set-up-the-project" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-the-project">5.1 Set Up the Project</h4>
+<ol type="1">
+<li><p>Open your Unity 6 project from Week 4. It already has URP, OpenXR and an XR Origin.</p></li>
+<li><p><strong>Install the renderer.</strong> Open <strong>Window &gt; Package Manager</strong>, click <strong>+</strong>, choose <strong>Install package from git URL</strong> and enter:</p>
+<pre class="text"><code>https://github.com/aras-p/UnityGaussianSplatting.git?path=package</code></pre></li>
+<li><p><strong>Add the URP renderer feature.</strong> Find the <strong>Universal Renderer Data</strong> asset your project uses (it is listed in <strong>Project Settings &gt; Quality</strong> under the URP asset for each level, usually <code>PC_Renderer</code> and <code>Mobile_Renderer</code> in the <code>Settings</code> folder). Select it, click <strong>Add Renderer Feature</strong> and choose <strong>Gaussian Splat URP Feature</strong>. Without it, nothing is drawn.</p></li>
+<li><p><strong>Set the Windows graphics API.</strong> In <strong>Project Settings &gt; Player</strong>, open the <strong>Windows, Mac, Linux</strong> tab and expand <strong>Other Settings &gt; Graphics APIs for Windows</strong>. Untick <strong>Auto Graphics API</strong>, then add <strong>Direct3D12</strong> and drag it to the top. The renderer needs compute shaders and does not support Direct3D 11. Restart the editor when Unity asks you to.</p></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Direct3D 12 and the Week 4 simulator tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Week 4 suggested forcing <strong>Direct3D 11</strong> to keep the Meta XR Simulator stable. The splat renderer needs <strong>Direct3D 12</strong> (or Vulkan), so the two settings conflict. Use a copy of your project for this part, or switch the API back when you return to the simulator. If the headset shows a black view over Link with Direct3D 12, try <strong>Vulkan</strong> as the first API instead.</p>
+</div>
+</div>
+</section>
+<section id="import-the-splat" class="level4">
+<h4 class="anchored" data-anchor-id="import-the-splat">5.2 Import the Splat</h4>
+<ol type="1">
+<li>In SuperSplat, export the three versions from Part 2 (full, ~50 % and ~20 %) as <strong><code>.ply</code></strong> files. The importer reads PLY files, and some versions also read <code>.spz</code>.</li>
+<li>In Unity, open <strong>Tools &gt; Gaussian Splats &gt; Create GaussianSplatAsset</strong>.</li>
+<li>Set <strong>Input PLY/SPZ File</strong> to your full export, choose the <strong>Quality</strong> level (start with <strong>Medium</strong>; lower levels compress harder and produce smaller assets), set the output folder to <code>Assets/Splats</code>, and click <strong>Create Asset</strong>.</li>
+<li>Repeat for the 50 % and 20 % exports. Record the <strong>asset size</strong> for each one alongside the file sizes from Part 2.</li>
+</ol>
+</section>
+<section id="place-it-in-the-scene" class="level4">
+<h4 class="anchored" data-anchor-id="place-it-in-the-scene">5.3 Place It in the Scene</h4>
+<ol type="1">
+<li>Create an empty GameObject called <code>Room Splat</code>, add a <strong>Gaussian Splat Renderer</strong> component and drag the full asset into its <strong>Asset</strong> field.</li>
+<li><strong>Fix the orientation.</strong> Captures often arrive upside down or tilted. Rotate the GameObject (an X rotation of 180° is a common fix) until the floor is level.</li>
+<li><strong>Fix the scale and floor height.</strong> Splats are rarely at true scale. Place a 1 m reference cube on the table you captured and scale <code>Room Splat</code> uniformly until they match. Then move it so the captured floor sits at Y = 0, the same as your XR Origin’s floor. Do this in the headset, not on the monitor, for the same reason the greybox is judged in the headset.</li>
+<li><strong>Make it a hybrid.</strong> Add invisible <strong>Box Colliders</strong> over the floor and the table, and a <strong>Teleportation Area</strong> on the floor collider. The splat provides the look; the colliders provide the physics. This is the hybrid from Part 4.</li>
+<li><strong>Optional:</strong> add a <strong>Gaussian Cutout</strong> component to hide parts of the splat (a doorway, a person who walked through the capture) without re-editing the file.</li>
+</ol>
+</section>
+<section id="view-it-on-the-quest-2-over-link" class="level4">
+<h4 class="anchored" data-anchor-id="view-it-on-the-quest-2-over-link">5.4 View It on the Quest 2 over Link</h4>
+<ol type="1">
+<li>Connect the Quest 2 by Link cable or Air Link, open the <strong>Meta Horizon Link</strong> app on the PC, and make sure it is the <strong>active OpenXR runtime</strong> (in the app’s settings). If you used the Meta XR Simulator in Week 4, switch the simulator off first: only one OpenXR runtime can be active at a time.</li>
+<li>In <strong>Project Settings &gt; XR Plug-in Management</strong>, on the <strong>Windows, Mac, Linux</strong> tab, tick <strong>OpenXR</strong> and add the <strong>Oculus Touch Controller Profile</strong>.</li>
+<li>Press <strong>Play</strong> and put on the headset. Swap the three assets into <code>Room Splat</code> in turn.</li>
+<li><strong>Measure</strong> each version with the Unity Profiler and record the frame time against the Quest 2’s budget (13.9 ms at its default 72 Hz). Over Link the cost lands on the <strong>PC’s</strong> graphics card, so record which card it was: the same splat on a weaker PC may not hold the frame rate.</li>
+</ol>
+</section>
+<section id="stretch-a-standalone-quest-2-build" class="level4">
+<h4 class="anchored" data-anchor-id="stretch-a-standalone-quest-2-build">5.5 Stretch: A Standalone Quest 2 Build</h4>
+<ol type="1">
+<li>Switch the build profile to <strong>Meta Quest</strong> (Android). In <strong>Project Settings &gt; Player &gt; Android &gt; Other Settings</strong>, untick <strong>Auto Graphics API</strong> and leave <strong>Vulkan</strong> as the only API: the renderer needs compute shaders.</li>
+<li>Use the <strong>20 %</strong> asset at a <strong>low</strong> quality level. It is the only one with a realistic chance on the Quest 2.</li>
+<li><strong>Build And Run</strong>, then record: does it render at all, how long does it take to load, what frame rate does the OVR Metrics overlay report, and how does it look compared with the same file in the WebXR viewer?</li>
+<li>Expect a frame rate well below 72 Hz, or no image at all. Record what happened. It is evidence for the recommendation in Part 4: on a standalone Quest 2, a mesh or a greybox may be the only representation that holds the frame budget.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Ready-made scene
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your lecturer has shared the course’s Unity demo project, its <strong>Week09_GaussianSplats</strong> scene already has the renderer set up, with slots for full, 50 % and 20 % assets beside a greybox corner, a frame-time readout and the presence questions. Use it to check your results against your own project.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="expected-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="expected-outcome">Expected Outcome</h2>
+<ul>
+<li>Two captures of each subject (careful and bad), with the differences annotated</li>
+<li>A table of splat count, file size and frame time for the three reduction levels</li>
+<li>A list of at least four distinct splat failures, each tied to the capture condition that caused it</li>
+<li>Presence ratings for the full splat, the reduced splat and the greybox</li>
+<li>A recommendation of no more than 300 words for your own project, supported by that evidence</li>
+<li><strong>If you completed Part 5:</strong> your splat placed at true scale in a Unity scene and viewed on a Quest 2 over Link, a frame-time table for the three versions with the PC’s graphics card noted, and a note on whether the standalone Quest 2 build ran</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A splat is a recording of light from the places the camera went. Every artefact you find marks a position or an angle the capture never covered, so plan the capture path the way you planned sightlines in the greybox.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Capturing real spaces
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A splat records everything the camera saw, including people, screens and documents. Capture only spaces you have permission to capture, keep people out of frame, and check what is visible before you share a file. This ties into the ethics discussion in <a href="../13-week-13/02-lecture.qmd">Week 13</a>.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../weeks/09-week-09/04-laboratory.html" class="pagination-link" aria-label="Week 9 Lab">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 9 Lab</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../weeks/10-week-10/01-slides.html" class="pagination-link" aria-label="Week 10 Slides">
+        <span class="nav-page-text">Week 10 Slides</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<!-- Render ```mermaid fenced code blocks that Quarto leaves as plain code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var fenced = document.querySelectorAll('pre.mermaid:not(.mermaid-js), pre.sourceCode.mermaid');
+    if (!fenced.length) return;
+    function run() {
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      fenced.forEach(function (pre) {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        var wrapper = pre.closest('div.sourceCode') || pre;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        if (wrapper.parentNode) wrapper.parentNode.replaceChild(div, wrapper);
+      });
+      mermaid.run({ querySelector: 'div.mermaid' });
+    }
+    if (window.mermaid) {
+      run();
+    } else {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+      s.onload = run;
+      document.head.appendChild(s);
+    }
+  });
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+
+
+
+<!-- CourseFoundry feedback embed disabled -->
+</body></html>

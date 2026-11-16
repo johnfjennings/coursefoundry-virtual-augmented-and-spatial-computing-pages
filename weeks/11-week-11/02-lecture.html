@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 11 Lecture Notes – Virtual, Augmented and Spatial Computing</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../04-references/01-bibliography.html" rel="next">
+<link href="../../weeks/11-week-11/01-slides.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-axe/axe-check.js" type="module"></script>
+<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-ef989065489ca1071158b841e3b04dbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/naquiz-styles-1.0.4/buttons.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../custom.css">
+<meta property="og:title" content="Week 11 Lecture Notes – Virtual, Augmented and Spatial Computing">
+<meta property="og:description" content="Performance, Comfort &amp; Optimisation">
+<meta property="og:image" content="../../images/week11/motion-to-photon-slide-03.png">
+<meta property="og:site_name" content="Virtual, Augmented and Spatial Computing">
+<meta property="og:image:alt" content="A pipeline from head movement through tracking, rendering and display to photons reaching the eye, spanned by motion-to-photon latency; when a frame is on time the world stays put, and when it is late the world lags the head, causing sensory conflict.">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/11-week-11/01-slides.html">Week 11</a></li><li class="breadcrumb-item"><a href="../../weeks/11-week-11/02-lecture.html">Week 11 Lecture Notes</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Virtual, Augmented and Spatial Computing</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Semester Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assessments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/01-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/02-assessment1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/03-assessment2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../01-assessments/04-assessment3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assessment 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 01</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/01-week-01/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 02</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/02-week-02/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 03</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/03-week-03/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/04-week-04/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 05</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/03-consent-form.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Participant Consent Form</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/05-week-05/04-ssq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Simulator Sickness Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 06</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/06-week-06/06-sus-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">System Usability Scale Questionnaire</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 07</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/07-week-07/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Practical</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 09</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/09-week-09/05-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 Practical (Optional)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 10</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/02-lecture.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Lecture Notes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/03-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Practical</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/04-laboratory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/10-week-10/05-ipq-questionnaire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Igroup Presence Questionnaire (IPQ) Items</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
+ <span class="menu-text">Week 11</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/11-week-11/01-slides.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11 Slides</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/11-week-11/02-lecture.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Week 11 Lecture Notes</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true">
+ <span class="menu-text">References</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/01-bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../04-references/02-index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><span class="header-section-number">2</span> Learning Objectives</a></li>
+  <li><a href="#the-frame-budget-as-a-comfort-requirement" id="toc-the-frame-budget-as-a-comfort-requirement" class="nav-link" data-scroll-target="#the-frame-budget-as-a-comfort-requirement"><span class="header-section-number">3</span> 1. The Frame Budget as a Comfort Requirement</a>
+  <ul class="collapse">
+  <li><a href="#motion-to-photon-latency" id="toc-motion-to-photon-latency" class="nav-link" data-scroll-target="#motion-to-photon-latency"><span class="header-section-number">3.1</span> 1.1 Motion-to-Photon Latency</a></li>
+  <li><a href="#refresh-targets-and-frame-time" id="toc-refresh-targets-and-frame-time" class="nav-link" data-scroll-target="#refresh-targets-and-frame-time"><span class="header-section-number">3.2</span> 1.2 Refresh Targets and Frame Time</a></li>
+  <li><a href="#what-happens-when-a-frame-is-late" id="toc-what-happens-when-a-frame-is-late" class="nav-link" data-scroll-target="#what-happens-when-a-frame-is-late"><span class="header-section-number">3.3</span> 1.3 What Happens When a Frame Is Late</a></li>
+  </ul></li>
+  <li><a href="#how-a-mobile-gpu-renders" id="toc-how-a-mobile-gpu-renders" class="nav-link" data-scroll-target="#how-a-mobile-gpu-renders"><span class="header-section-number">4</span> 2. How a Mobile GPU Renders</a>
+  <ul class="collapse">
+  <li><a href="#tile-based-rendering-on-the-snapdragon-xr2" id="toc-tile-based-rendering-on-the-snapdragon-xr2" class="nav-link" data-scroll-target="#tile-based-rendering-on-the-snapdragon-xr2"><span class="header-section-number">4.1</span> 2.1 Tile-Based Rendering on the Snapdragon XR2</a></li>
+  <li><a href="#what-is-expensive-on-this-hardware" id="toc-what-is-expensive-on-this-hardware" class="nav-link" data-scroll-target="#what-is-expensive-on-this-hardware"><span class="header-section-number">4.2</span> 2.2 What Is Expensive on This Hardware</a></li>
+  <li><a href="#two-views-one-frame" id="toc-two-views-one-frame" class="nav-link" data-scroll-target="#two-views-one-frame"><span class="header-section-number">4.3</span> 2.3 Two Views, One Frame</a></li>
+  <li><a href="#heat-and-sustained-performance" id="toc-heat-and-sustained-performance" class="nav-link" data-scroll-target="#heat-and-sustained-performance"><span class="header-section-number">4.4</span> 2.4 Heat and Sustained Performance</a></li>
+  </ul></li>
+  <li><a href="#draw-calls-and-batching" id="toc-draw-calls-and-batching" class="nav-link" data-scroll-target="#draw-calls-and-batching"><span class="header-section-number">5</span> 3. Draw Calls and Batching</a>
+  <ul class="collapse">
+  <li><a href="#what-a-draw-call-is" id="toc-what-a-draw-call-is" class="nav-link" data-scroll-target="#what-a-draw-call-is"><span class="header-section-number">5.1</span> 3.1 What a Draw Call Is</a></li>
+  <li><a href="#batching-and-instancing" id="toc-batching-and-instancing" class="nav-link" data-scroll-target="#batching-and-instancing"><span class="header-section-number">5.2</span> 3.2 Batching and Instancing</a></li>
+  <li><a href="#reducing-draw-calls-in-practice" id="toc-reducing-draw-calls-in-practice" class="nav-link" data-scroll-target="#reducing-draw-calls-in-practice"><span class="header-section-number">5.3</span> 3.3 Reducing Draw Calls in Practice</a></li>
+  </ul></li>
+  <li><a href="#foveated-rendering-and-spacewarp" id="toc-foveated-rendering-and-spacewarp" class="nav-link" data-scroll-target="#foveated-rendering-and-spacewarp"><span class="header-section-number">6</span> 4. Foveated Rendering and SpaceWarp</a>
+  <ul class="collapse">
+  <li><a href="#foveated-rendering" id="toc-foveated-rendering" class="nav-link" data-scroll-target="#foveated-rendering"><span class="header-section-number">6.1</span> 4.1 Foveated Rendering</a></li>
+  <li><a href="#what-foveation-costs" id="toc-what-foveation-costs" class="nav-link" data-scroll-target="#what-foveation-costs"><span class="header-section-number">6.2</span> 4.2 What Foveation Costs</a></li>
+  <li><a href="#application-spacewarp" id="toc-application-spacewarp" class="nav-link" data-scroll-target="#application-spacewarp"><span class="header-section-number">6.3</span> 4.3 Application SpaceWarp</a></li>
+  <li><a href="#what-spacewarp-costs" id="toc-what-spacewarp-costs" class="nav-link" data-scroll-target="#what-spacewarp-costs"><span class="header-section-number">6.4</span> 4.4 What SpaceWarp Costs</a></li>
+  <li><a href="#choosing-between-the-options" id="toc-choosing-between-the-options" class="nav-link" data-scroll-target="#choosing-between-the-options"><span class="header-section-number">6.5</span> 4.5 Choosing Between the Options</a></li>
+  </ul></li>
+  <li><a href="#a-profiling-methodology" id="toc-a-profiling-methodology" class="nav-link" data-scroll-target="#a-profiling-methodology"><span class="header-section-number">7</span> 5. A Profiling Methodology</a>
+  <ul class="collapse">
+  <li><a href="#measure-change-one-thing-measure-again" id="toc-measure-change-one-thing-measure-again" class="nav-link" data-scroll-target="#measure-change-one-thing-measure-again"><span class="header-section-number">7.1</span> 5.1 Measure, Change One Thing, Measure Again</a></li>
+  <li><a href="#the-tools" id="toc-the-tools" class="nav-link" data-scroll-target="#the-tools"><span class="header-section-number">7.2</span> 5.2 The Tools</a></li>
+  <li><a href="#reading-a-capture" id="toc-reading-a-capture" class="nav-link" data-scroll-target="#reading-a-capture"><span class="header-section-number">7.3</span> 5.3 Reading a Capture</a></li>
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example"><span class="header-section-number">7.4</span> 5.4 A Worked Example</a></li>
+  </ul></li>
+  <li><a href="#cutting-scope" id="toc-cutting-scope" class="nav-link" data-scroll-target="#cutting-scope"><span class="header-section-number">8</span> 6. Cutting Scope</a>
+  <ul class="collapse">
+  <li><a href="#scope-and-assessment-3" id="toc-scope-and-assessment-3" class="nav-link" data-scroll-target="#scope-and-assessment-3"><span class="header-section-number">8.1</span> Scope and Assessment 3</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">9</span> Summary</a></li>
+  <li><a href="#self-check-questions" id="toc-self-check-questions" class="nav-link" data-scroll-target="#self-check-questions"><span class="header-section-number">10</span> Self-Check Questions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">11</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../weeks/11-week-11/01-slides.html">Week 11</a></li><li class="breadcrumb-item"><a href="../../weeks/11-week-11/02-lecture.html">Week 11 Lecture Notes</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Week 11 Lecture Notes</h1>
+<p class="subtitle lead">Performance, Comfort &amp; Optimisation</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>In XR the frame budget is a comfort requirement: motion-to-photon latency and 72/90/120Hz refresh targets link directly to sensory conflict and simulator sickness.</li>
+<li>On the Snapdragon XR2’s tile-based mobile GPU, overdraw, transparency and full-screen effects are disproportionately expensive, and material count drives CPU cost through draw calls.</li>
+<li>Batching and GPU instancing cut draw calls, while foveated rendering and Application SpaceWarp each buy performance at the cost of their own artefacts.</li>
+<li>Profile methodically with the Unity Profiler and OVR Metrics: measure, change one thing, measure again, and be willing to cut content rather than ship something uncomfortable.</li>
+</ul>
+</div>
+</div>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p><strong>Duration:</strong> 1 hour</p>
+<p>In XR, performance is not polish applied at the end. A dropped frame is a physiological event for the person wearing the headset, which makes the frame budget a comfort requirement and an accessibility requirement rather than a technical preference.</p>
+<p>This session connects three things you have already met. The sensory conflict theory from Week 3 explains <em>why</em> late frames make people unwell. The interaction and feedback work from Weeks 4 to 10 explains <em>what</em> your scene is asking the hardware to do. This week supplies the third piece: a repeatable method for finding out what that is costing, and deciding what to change.</p>
+<p>The session also prepares you for <strong>Assessment 3</strong>. A vertical slice that holds its frame rate will be rated more comfortable and more usable in your SSQ and SUS testing than a larger one that stutters.</p>
+</section>
+<section id="learning-objectives" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2</span> Learning Objectives</h2>
+<p>By the end of this lecture, students will be able to:</p>
+<ul>
+<li>Relate frame timing directly to simulator sickness risk</li>
+<li>Read a profiler capture and locate the actual bottleneck rather than the suspected one</li>
+<li>Prioritise optimisations by measured cost rather than by intuition</li>
+</ul>
+<hr>
+</section>
+<section id="the-frame-budget-as-a-comfort-requirement" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-frame-budget-as-a-comfort-requirement"><span class="header-section-number">3</span> 1. The Frame Budget as a Comfort Requirement</h2>
+<section id="motion-to-photon-latency" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="motion-to-photon-latency"><span class="header-section-number">3.1</span> 1.1 Motion-to-Photon Latency</h3>
+<p><strong>Motion-to-photon latency</strong> is the time between a head movement and the moment the matching pixels reach the eye. It includes tracking, the CPU and GPU work to render the frame, the display scan-out and the display’s own response time. Every stage adds to it.</p>
+<p>The vestibular system reports head movement almost instantly. If the picture lags behind, the visual and vestibular senses disagree about how the head has moved. This is the <strong>sensory conflict</strong> described in Week 3, and it is one of the main accepted explanations for simulator sickness. The VR literature has long suggested that motion-to-photon latency needs to stay low, with figures of around 20 ms often quoted as a target (Abrash, 2014; Jerald, 2015). The exact threshold varies between people, so treat it as a design goal rather than a pass mark.</p>
+<p>This is what separates XR from a flat-screen game. A slow frame on a monitor is ugly. A slow frame in a headset is <strong>physically unpleasant</strong>, and the user cannot look away from it because the display moves with their head.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/motion-to-photon-slide-03.png" class="img-fluid figure-img" style="width:70.0%" alt="A pipeline from head movement through tracking, rendering and display to photons reaching the eye, spanned by motion-to-photon latency; when a frame is on time the world stays put, and when it is late the world lags the head, causing sensory conflict."></p>
+<figcaption>Late frames make the world lag behind the head.</figcaption>
+</figure>
+</div>
+</section>
+<section id="refresh-targets-and-frame-time" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="refresh-targets-and-frame-time"><span class="header-section-number">3.2</span> 1.2 Refresh Targets and Frame Time</h3>
+<p>The refresh rate sets the <strong>frame time</strong>: the window in which the CPU and GPU must finish all their work for one frame. It is simply 1000 ms divided by the refresh rate.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Refresh rate</th>
+<th>Time per frame</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>60 Hz</td>
+<td>16.7 ms</td>
+<td>Common on flat screens; below the usual XR targets</td>
+</tr>
+<tr class="even">
+<td><strong>72 Hz</strong></td>
+<td><strong>13.9 ms</strong></td>
+<td>A common baseline for standalone headsets</td>
+</tr>
+<tr class="odd">
+<td><strong>90 Hz</strong></td>
+<td><strong>11.1 ms</strong></td>
+<td>A smoother option where the hardware can sustain it</td>
+</tr>
+<tr class="even">
+<td><strong>120 Hz</strong></td>
+<td><strong>8.3 ms</strong></td>
+<td>Smoothest, but leaves the least time for work</td>
+</tr>
+</tbody>
+</table>
+<p>Two points follow from the table:</p>
+<ul>
+<li><strong>A higher refresh rate is smoother but harder to hit.</strong> Choosing 120 Hz instead of 72 Hz cuts the time budget from 13.9 ms to 8.3 ms. The same scene has to cost about 40% less.</li>
+<li><strong>The target is a design decision.</strong> Choose it at the start of the project, because it determines what you can afford to put in the scene. Do not discover it in the last week.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Frame time is a ceiling, not an average
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A scene that averages 9 ms per frame at a 72 Hz target (13.9 ms) can still be uncomfortable if a few frames take 20 ms. Users feel the <strong>spikes</strong>, not the average. When you read profiler output later in this session, always look at the worst frames first.</p>
+</div>
+</div>
+</section>
+<section id="what-happens-when-a-frame-is-late" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="what-happens-when-a-frame-is-late"><span class="header-section-number">3.3</span> 1.3 What Happens When a Frame Is Late</h3>
+<p>When the app does not deliver a new frame in time, the headset runtime does not simply show a blank screen. It typically <strong>reprojects</strong> the previous frame, using the latest head pose to shift the image so that head rotation still feels correct. This is sometimes called timewarp. You can see the Meta documentation for the specific mechanism on your device.</p>
+<p>Reprojection is a safety net, not a fix:</p>
+<ul>
+<li>It corrects for <strong>head rotation</strong>, but cannot correct for things that moved on their own: animated characters, moving objects and your hands.</li>
+<li>The result is a <strong>stale frame</strong>: the same content shown again. Stale frames appear as judder in anything that moves in the scene.</li>
+<li>Repeated stale frames are exactly the condition that creates sensory conflict.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/frame-time-slide-04.png" class="img-fluid figure-img" style="width:70.0%" alt="Frame timelines at 72, 90 and 120 Hz with deadlines every 13.9, 11.1 and 8.3 milliseconds; below, a 72 Hz frame that misses its deadline is replaced by a reprojected copy of the previous frame, a stale frame in which moving objects judder."></p>
+<figcaption>Every frame has a deadline; a late frame is replaced by a stale, reprojected one.</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Frame rate is an accessibility issue
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>People differ widely in how sensitive they are to latency and judder. A frame rate that one person tolerates may make another person unwell within minutes. Treat a stable frame rate as part of designing for the most sensitive users, in the same way that you provide comfort options for locomotion (Week 5).</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="how-a-mobile-gpu-renders" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="how-a-mobile-gpu-renders"><span class="header-section-number">4</span> 2. How a Mobile GPU Renders</h2>
+<section id="tile-based-rendering-on-the-snapdragon-xr2" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="tile-based-rendering-on-the-snapdragon-xr2"><span class="header-section-number">4.1</span> 2.1 Tile-Based Rendering on the Snapdragon XR2</h3>
+<p>Standalone headsets such as the Meta Quest range use a <strong>Qualcomm Snapdragon XR2</strong> chip. Its GPU is a <strong>tile-based</strong> mobile GPU, designed around a constraint that desktop GPUs mostly avoid: <strong>memory bandwidth</strong> is expensive in power and heat, and the headset sits on the user’s face with a battery and no fan.</p>
+<p>A tile-based GPU works in the following way:</p>
+<ol type="1">
+<li>The screen is divided into small <strong>tiles</strong>.</li>
+<li>The GPU works out which geometry falls in which tile.</li>
+<li>Each tile is shaded in fast <strong>on-chip memory</strong>.</li>
+<li>The finished tile is written out to main memory <strong>once</strong>.</li>
+</ol>
+<p>This saves a great deal of bandwidth, because pixels are not repeatedly read from and written back to main memory while the tile is being built.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>A note on terminology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some sources call this “tile-based deferred rendering” (TBDR), a term which comes from GPU designs that defer shading until visibility has been resolved. Adreno GPUs, as used in the XR2, are more often described as tile-based with a binning pass. The names differ between vendors, but the practical consequences for your project are the same, and those are what this session focuses on.</p>
+</div>
+</div>
+<p>The design works well for simple, opaque scenes. It works <strong>against</strong> you whenever something forces extra reads and writes of the whole screen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/tile-rendering-slide-05.png" class="img-fluid figure-img" style="width:70.0%" alt="A screen divided into tiles; one tile is shaded in fast on-chip memory and written out to main memory once. Below, full-screen effects send the whole frame back and forth through main memory."></p>
+<figcaption>Tile-based rendering: shade each tile on chip, write it out once.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-is-expensive-on-this-hardware" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="what-is-expensive-on-this-hardware"><span class="header-section-number">4.2</span> 2.2 What Is Expensive on This Hardware</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cost</th>
+<th>Why it hurts on a tile-based GPU</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Overdraw</strong></td>
+<td>The same pixel is shaded several times by stacked surfaces, so shading work is wasted on pixels the user never sees</td>
+</tr>
+<tr class="even">
+<td><strong>Transparency</strong></td>
+<td>Transparent surfaces cannot be rejected early by the depth test, so every layer behind them is shaded as well</td>
+</tr>
+<tr class="odd">
+<td><strong>Full-screen effects</strong></td>
+<td>Bloom, depth of field, screen-space ambient occlusion and similar passes read and write the whole frame through main memory, which defeats the tile-based design</td>
+</tr>
+<tr class="even">
+<td><strong>Real-time shadows and lights</strong></td>
+<td>Extra passes, and extra shading work for every pixel each light touches</td>
+</tr>
+<tr class="odd">
+<td><strong>High resolution render targets</strong></td>
+<td>A headset renders two views, one per eye, so the pixel count is already high before any effects are added</td>
+</tr>
+</tbody>
+</table>
+<p>Typical offenders in XR scenes include particle systems, foliage cards, glass, large UI panels and fog volumes. All of them stack transparent surfaces in front of the user’s eyes.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cheap by default
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On a standalone headset, begin with <strong>opaque materials</strong>, <strong>baked lighting</strong> and <strong>simple shaders</strong>, and add expensive features only when you have measured that you can afford them. Post-processing that looks fine on a desktop GPU can halve the frame rate on a headset.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/gpu-costs-slide-06.png" class="img-fluid figure-img" style="width:70.0%" alt="Four cards showing what a mobile GPU pays for: overdraw from stacked surfaces, transparency where every layer is shaded, full-screen effects, and real-time lights and shadows, each with a fix."></p>
+<figcaption>What a mobile GPU pays for, and the cheaper alternative for each.</figcaption>
+</figure>
+</div>
+</section>
+<section id="two-views-one-frame" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="two-views-one-frame"><span class="header-section-number">4.3</span> 2.3 Two Views, One Frame</h3>
+<p>A headset has to draw the scene twice, once for each eye. Naively, that doubles the CPU work as well as the GPU work. Unity’s XR support can render both views in a <strong>single pass</strong> (Multiview on Android, or single pass instanced rendering), submitting the work for both eyes together. This is normally the right setting for standalone headsets. Check that it is enabled in your XR plug-in settings, because the alternative costs far more.</p>
+</section>
+<section id="heat-and-sustained-performance" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="heat-and-sustained-performance"><span class="header-section-number">4.4</span> 2.4 Heat and Sustained Performance</h3>
+<p>A standalone headset is a battery-powered computer worn against the face. It cannot dissipate heat as a desktop can, so it manages temperature by <strong>throttling</strong> the CPU and GPU clock speeds. A scene that runs well for the first two minutes can slow down once the device warms up.</p>
+<p>The consequence for testing is simple: <strong>profile after the headset has been running for a while</strong>, not just straight after a cold start. If you are running user testing for Assessment 3, it matters that the frame rate holds across a whole session.</p>
+<hr>
+</section>
+</section>
+<section id="draw-calls-and-batching" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="draw-calls-and-batching"><span class="header-section-number">5</span> 3. Draw Calls and Batching</h2>
+<section id="what-a-draw-call-is" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="what-a-draw-call-is"><span class="header-section-number">5.1</span> 3.1 What a Draw Call Is</h3>
+<p>A <strong>draw call</strong> is a request from the CPU to the GPU: draw this mesh with this material. Each one has CPU overhead, for validating state, setting up resources and issuing the command. A scene with thousands of small objects can therefore be <strong>CPU-bound</strong> even though the GPU has plenty of spare capacity.</p>
+<p>This is why <strong>material count</strong> matters. Objects can only be combined into one call if they share a material. Ten objects with ten different materials usually cost ten calls. Ten objects with one shared material can cost one.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/draw-calls-slide-07.png" class="img-fluid figure-img" style="width:70.0%" alt="Ten objects with ten different materials send ten draw calls and keep the CPU busy while the GPU idles; ten objects sharing one material send a single call. Chips name static batching, GPU instancing and shared atlases."></p>
+<figcaption>Draw calls cost CPU time; shared materials let objects batch.</figcaption>
+</figure>
+</div>
+</section>
+<section id="batching-and-instancing" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="batching-and-instancing"><span class="header-section-number">5.2</span> 3.2 Batching and Instancing</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>What it does</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Static batching</strong></td>
+<td>Combines non-moving meshes that share a material into larger meshes at build time</td>
+<td>Uses more memory, because combined mesh data is stored</td>
+</tr>
+<tr class="even">
+<td><strong>Dynamic batching</strong></td>
+<td>Combines small moving meshes at runtime</td>
+<td>The CPU has to combine them each frame, and it only applies to meshes with few vertices, so it often saves little</td>
+</tr>
+<tr class="odd">
+<td><strong>GPU instancing</strong></td>
+<td>Draws many copies of the same mesh and material in a single call, with per-instance data such as position and colour</td>
+<td>Only works for the same mesh and material</td>
+</tr>
+<tr class="even">
+<td><strong>SRP Batcher</strong> (URP)</td>
+<td>Reduces the CPU cost of switching between materials that use the same shader</td>
+<td>Needs a compatible shader and the Scriptable Render Pipeline</td>
+</tr>
+</tbody>
+</table>
+<p>The lesson is that these are not interchangeable. Choose the technique based on what the objects are:</p>
+<ul>
+<li><strong>Scenery that does not move:</strong> mark it <strong>Static</strong> so Unity can batch it.</li>
+<li><strong>Many copies of one object that may move</strong> (pickups, bricks, trees): use <strong>GPU instancing</strong>.</li>
+<li><strong>Many different props:</strong> give them a shared <strong>texture atlas</strong> and material, so they can batch at all.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Do not trust a draw call limit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will see numbers quoted online for how many draw calls a headset can handle. Treat them with caution. The real limit depends on the scene, the shaders, the render pipeline and the device. <strong>Measure on your own headset</strong> rather than relying on a figure.</p>
+</div>
+</div>
+</section>
+<section id="reducing-draw-calls-in-practice" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="reducing-draw-calls-in-practice"><span class="header-section-number">5.3</span> 3.3 Reducing Draw Calls in Practice</h3>
+<p>A short checklist for your own project:</p>
+<ol type="1">
+<li><strong>Share materials.</strong> Use one atlas texture for many props instead of one material for each.</li>
+<li><strong>Mark non-moving scenery as Static.</strong></li>
+<li><strong>Use GPU instancing</strong> for repeated objects.</li>
+<li><strong>Remove what the user cannot see.</strong> Use occlusion culling and keep distant detail low with levels of detail (LODs).</li>
+<li><strong>Check the result in the Frame Debugger.</strong> Batching does not always happen when you expect it to. A material difference too small to see (a different shader keyword, a property change) can silently break a batch.</li>
+</ol>
+<p>The last step is the important one. Confirm that batching worked, and do not assume it did.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/frame-debugger-slide-08.png" class="img-fluid figure-img" style="width:70.0%" alt="Two Frame Debugger panels: before, a long list of separate draw calls totalling 40; after, three batched draw calls. A note warns that a tiny material difference can silently break a batch."></p>
+<figcaption>Check in the Frame Debugger that batching actually happened.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="foveated-rendering-and-spacewarp" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="foveated-rendering-and-spacewarp"><span class="header-section-number">6</span> 4. Foveated Rendering and SpaceWarp</h2>
+<p>Batching and instancing reduce cost without changing what the user sees. The two techniques in this section are different: each <strong>buys performance</strong> by deliberately reducing quality, and each introduces its own <strong>artefacts</strong>. They are trade-offs, so use them knowingly.</p>
+<section id="foveated-rendering" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="foveated-rendering"><span class="header-section-number">6.1</span> 4.1 Foveated Rendering</h3>
+<p>The eye sees sharply only across a small central region, the <strong>fovea</strong>. Detail away from the point of gaze is perceived poorly. <strong>Foveated rendering</strong> exploits this by shading the periphery at a lower resolution and keeping the centre sharp, which reduces GPU work.</p>
+<p>There are two main forms:</p>
+<ul>
+<li><strong>Fixed foveated rendering (FFR):</strong> the high-quality region is fixed at the centre of each lens. It assumes the user is looking roughly straight ahead through the middle of the lens, which is true much of the time because users tend to turn their heads rather than their eyes.</li>
+<li><strong>Dynamic, or eye-tracked, foveated rendering (ETFR):</strong> the high-quality region follows the user’s gaze. It needs <strong>eye tracking hardware</strong>, such as that in the Meta Quest Pro, and the user’s permission to use it. Because it knows where the user is looking, it can make the sharp region smaller and save more (see the eye tracking material from Week 4).</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Fixed</th>
+<th>Eye-tracked</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Saving</strong></td>
+<td>Moderate, always on</td>
+<td>Larger, because the sharp area can be smaller</td>
+</tr>
+<tr class="even">
+<td><strong>Needs</strong></td>
+<td>Any supported headset</td>
+<td>Eye tracking hardware and user permission</td>
+</tr>
+<tr class="odd">
+<td><strong>Artefact</strong></td>
+<td>Blocky or shimmering edges in the periphery, visible when the user looks off-centre</td>
+<td>Visible if the tracking lags behind a fast eye movement</td>
+</tr>
+</tbody>
+</table>
+<p>In Unity, foveation is set through the Meta XR integration, typically with a <strong>level</strong> (low to high). Higher levels save more and are more visible.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Eye tracking data is sensitive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Gaze data can reveal attention, interests and even health information. If your build uses eye-tracked foveation, consider carefully what data is collected, whether it leaves the device, and how the user consents. This links to the consent material you used in your own testing.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/foveated-rendering-slide-09.png" class="img-fluid figure-img" style="width:70.0%" alt="Two views of a headset image: with fixed foveation the sharp region sits in the centre, so a gaze point near the edge falls in a blurry area; with eye-tracked foveation the sharp region follows the gaze."></p>
+<figcaption>Fixed foveation keeps the centre sharp; eye-tracked foveation follows the gaze.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-foveation-costs" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="what-foveation-costs"><span class="header-section-number">6.2</span> 4.2 What Foveation Costs</h3>
+<p>Foveation is not free. The artefacts show up first in:</p>
+<ul>
+<li><strong>Text and user interface elements</strong> near the edge of the view</li>
+<li><strong>Fine patterns and high-contrast edges</strong>, which can shimmer</li>
+<li><strong>Anything the user looks at off-centre</strong>, in the case of fixed foveation</li>
+</ul>
+<p>Stronger settings save more GPU time and show more artefacts, so <strong>choose the level by testing on the device, with real users</strong>. A setting that is invisible to you after ten minutes of development may be obvious to a first-time user.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/foveation-cost-slide-10.png" class="img-fluid figure-img" style="width:70.0%" alt="As foveation goes from off through low and medium to high, the GPU saving and the artefacts both grow, and text near the edge of the view becomes blockier. Cards show what suffers first: text and UI near the edge, fine patterns, and looking off-centre."></p>
+<figcaption>Higher foveation levels save more GPU time and show more artefacts.</figcaption>
+</figure>
+</div>
+</section>
+<section id="application-spacewarp" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="application-spacewarp"><span class="header-section-number">6.3</span> 4.3 Application SpaceWarp</h3>
+<p><strong>Application SpaceWarp (ASW)</strong> is a Meta technique that lets the app render at <strong>half</strong> the display’s refresh rate. For example, the app renders at 36 frames per second, while the headset still refreshes at 72 Hz. The system <strong>synthesises</strong> the in-between frames from the app’s <strong>motion vectors</strong> (how things moved) and <strong>depth</strong> (how far away they are).</p>
+<p>The benefit is large: roughly <strong>twice the time per rendered frame</strong>. It is the largest single performance trade available on Quest, and the reason it exists is to let developers spend more time per frame on richer content.</p>
+<p>It does, however, place requirements on the app. The app has to supply correct motion vectors and depth buffers, and any object without them (or with incorrect ones) will not be synthesised correctly.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/spacewarp-slide-11.png" class="img-fluid figure-img" style="width:70.0%" alt="A 72 Hz display timeline alternating frames rendered by the app with frames synthesised from motion vectors and depth; the app gets 27.8 milliseconds per rendered frame instead of 13.9."></p>
+<figcaption>SpaceWarp: the app renders half the frames and the system synthesises the rest.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-spacewarp-costs" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="what-spacewarp-costs"><span class="header-section-number">6.4</span> 4.4 What SpaceWarp Costs</h3>
+<p>SpaceWarp is a synthesis, and so the system is guessing what the missing frames should look like. The guesses go wrong in predictable places:</p>
+<ul>
+<li><strong>Ghosting and smearing</strong> around fast-moving objects</li>
+<li><strong>Warping at edges</strong>, where the system must guess what was hidden behind a moving object</li>
+<li><strong>Poor results with transparency and particles</strong>, and with anything that lacks correct motion vectors</li>
+<li><strong>A little extra latency</strong>, since it works from a frame that has already been rendered</li>
+</ul>
+<p>An artefact that is mildly distracting on a flat screen can be more noticeable, and more uncomfortable, inside a headset. It also has a subtler risk: it can <strong>hide a problem rather than fix it</strong>. If the scene is badly optimised, SpaceWarp may keep the headline frame rate up while the experience looks worse.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>A last resort, not a first step
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use SpaceWarp when you have already done the cheap optimisations from Sections 2 and 3, have measured what is left, and still need more time per frame. It is not a substitute for profiling.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/spacewarp-artefacts-slide-12.png" class="img-fluid figure-img" style="width:70.0%" alt="A fast-moving ball rendered every frame has crisp edges; with Application SpaceWarp it leaves a ghost trail and the background lines warp around it. Chips name ghosting, warped revealed edges, and transparency and particles."></p>
+<figcaption>Where SpaceWarp guesses wrong: ghosting and warping around fast-moving objects.</figcaption>
+</figure>
+</div>
+</section>
+<section id="choosing-between-the-options" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="choosing-between-the-options"><span class="header-section-number">6.5</span> 4.5 Choosing Between the Options</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>If you are…</th>
+<th>Consider first</th>
+<th>Because</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GPU-bound by pixel cost</td>
+<td>Fewer transparent layers, simpler shaders, lower render scale</td>
+<td>These reduce the work without visible artefacts</td>
+</tr>
+<tr class="even">
+<td>GPU-bound and still over budget</td>
+<td>Fixed foveated rendering</td>
+<td>Moderate saving, low risk if tested</td>
+</tr>
+<tr class="odd">
+<td>Over budget on both CPU and GPU, with correct motion vectors</td>
+<td>Application SpaceWarp</td>
+<td>It gives twice the time per frame, but with synthesis artefacts</td>
+</tr>
+<tr class="even">
+<td>CPU-bound by draw calls</td>
+<td>Batching, instancing, shared materials</td>
+<td>Foveation and SpaceWarp do not reduce draw call overhead in the same way</td>
+</tr>
+</tbody>
+</table>
+<p>The table reflects the key principle of this session: <strong>the right optimisation depends on where the bottleneck is</strong>, which is why the next section is about finding it.</p>
+<hr>
+</section>
+</section>
+<section id="a-profiling-methodology" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="a-profiling-methodology"><span class="header-section-number">7</span> 5. A Profiling Methodology</h2>
+<section id="measure-change-one-thing-measure-again" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="measure-change-one-thing-measure-again"><span class="header-section-number">7.1</span> 5.1 Measure, Change One Thing, Measure Again</h3>
+<p>The most common mistake in optimisation is to improve what you <strong>suspect</strong> rather than what you have <strong>measured</strong>. Intuition is often wrong, and effort spent on the wrong thing is wasted, or even harmful because it adds complexity to the project.</p>
+<p>Use this loop:</p>
+<ol type="1">
+<li><strong>Set a target.</strong> Choose the refresh rate and the frame time you need.</li>
+<li><strong>Measure a baseline</strong> on the headset, not in the editor.</li>
+<li><strong>Find the bottleneck.</strong> Is the frame CPU-bound or GPU-bound?</li>
+<li><strong>Change one thing.</strong></li>
+<li><strong>Measure again</strong> and compare with the baseline.</li>
+<li><strong>Keep the change</strong> if it helped. <strong>Revert it</strong> if it did not.</li>
+</ol>
+<p>Two habits make this work:</p>
+<ul>
+<li><strong>Change only one thing at a time.</strong> If you change five things and the frame rate improves, you do not know which change did it, and one of them may have made things worse.</li>
+<li><strong>Keep an optimisation log.</strong> Write down each change and its measured effect. A simple table in the project repository is enough. It is evidence for your Assessment 3 report as well.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Change</th>
+<th>Before (ms)</th>
+<th>After (ms)</th>
+<th>Keep?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Enable static batching on environment</td>
+<td>15.2</td>
+<td>13.1</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Replace particle fog with baked skybox</td>
+<td>13.1</td>
+<td>10.4</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Raise foveation to high</td>
+<td>10.4</td>
+<td>10.0</td>
+<td>No: periphery visibly blocky</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The editor is not the device
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Performance in the Unity editor tells you very little about performance on the headset. A desktop GPU hides exactly the problems that a mobile GPU exposes. <strong>Always measure on the device.</strong></p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/profiling-loop-slide-13.png" class="img-fluid figure-img" style="width:70.0%" alt="A loop of six steps: set a target, baseline on device, decide whether the frame is CPU- or GPU-bound, change one thing, measure again, keep or revert. In the centre, an optimisation log records each change with its before and after frame time."></p>
+<figcaption>Measure, change one thing, measure again, and log every change.</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-tools" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="the-tools"><span class="header-section-number">7.2</span> 5.2 The Tools</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>What it shows</th>
+<th>Use it to</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Unity Profiler</strong></td>
+<td>CPU and GPU time per frame, broken down by system, plus memory allocations</td>
+<td>Find which scripts, systems or rendering stages consume the frame</td>
+</tr>
+<tr class="even">
+<td><strong>Frame Debugger</strong></td>
+<td>Each draw call and batch, in the order they are issued</td>
+<td>Check that batching worked, and spot where overdraw comes from</td>
+</tr>
+<tr class="odd">
+<td><strong>OVR Metrics Tool</strong></td>
+<td>On-device frame rate, stale frames, CPU and GPU utilisation</td>
+<td>Measure the real headset, without the overhead of the editor</td>
+</tr>
+</tbody>
+</table>
+<p>Used together, the Unity Profiler and OVR Metrics answer different questions. <strong>The Profiler explains where the cost is. OVR Metrics confirms what the headset actually delivered.</strong></p>
+<p>To use the Unity Profiler on a Quest, build a <strong>development build</strong> with <strong>Autoconnect Profiler</strong> enabled, then attach to the running app over USB or a wireless connection. Remember that profiling has its own overhead, so use OVR Metrics for the final numbers.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/profiling-tools-slide-14.png" class="img-fluid figure-img" style="width:70.0%" alt="Three tools and the question each answers: the Unity Profiler shows frame times with spikes over the budget, the Frame Debugger lists draw calls and batches, and the OVR Metrics overlay shows on-device frame rate, stale frames, and CPU and GPU utilisation."></p>
+<figcaption>Three tools, three questions: the Profiler explains the cost, OVR Metrics confirms it on the headset.</figcaption>
+</figure>
+</div>
+</section>
+<section id="reading-a-capture" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="reading-a-capture"><span class="header-section-number">7.3</span> 5.3 Reading a Capture</h3>
+<p>A profiler capture contains a large amount of information. This sequence keeps you pointed at the right part of it:</p>
+<ol type="1">
+<li><strong>Look at the longest frames, not the average.</strong> Comfort is lost in the spikes.</li>
+<li><strong>Compare the CPU and the GPU.</strong> Which has the longer bar for that frame? <strong>Fix the longer one first.</strong> Speeding up the shorter one achieves nothing, because the frame cannot finish until both are done.</li>
+<li><strong>If the CPU is the bottleneck,</strong> look at draw calls, scripts and physics.</li>
+<li><strong>If the GPU is the bottleneck,</strong> look at overdraw, transparency, render resolution and effects.</li>
+<li><strong>Expect to be surprised.</strong> The cause is often not the one you suspected.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>First thing to check</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Regular spikes every few seconds</td>
+<td>Garbage collection, caused by allocating memory every frame</td>
+<td>The Profiler’s GC Alloc column; remove per-frame allocations in <code>Update</code></td>
+</tr>
+<tr class="even">
+<td>High CPU time, low GPU time</td>
+<td>Too many draw calls, or heavy scripts or physics</td>
+<td>Batch count in the Frame Debugger; physics object count</td>
+</tr>
+<tr class="odd">
+<td>High GPU time, low CPU time</td>
+<td>Overdraw, transparency, expensive shaders or effects</td>
+<td>Particle systems, glass, post-processing, render scale</td>
+</tr>
+<tr class="even">
+<td>Smooth at first, then gets worse</td>
+<td>Thermal throttling</td>
+<td>Profile after the headset has warmed up</td>
+</tr>
+<tr class="odd">
+<td>Fine in the editor, poor on the device</td>
+<td>Editor hides mobile GPU costs</td>
+<td>Measure on the device, not the editor</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Predict, then measure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you open the profiler, write down which part of your Assessment 3 prototype you think is the most expensive. Then compare your prediction with the capture. The difference between the two is the best argument for measuring that you will find.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/reading-capture-slide-15.png" class="img-fluid figure-img" style="width:70.0%" alt="A frame-time graph whose average sits well under the 13.9 millisecond budget while three spikes go far above it; for one spike frame the GPU bar at 16 milliseconds is longer than the CPU bar at 7, so the GPU is fixed first."></p>
+<figcaption>Read the spikes, not the average, then fix the longer of the CPU and GPU bars.</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-worked-example" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="a-worked-example"><span class="header-section-number">7.4</span> 5.4 A Worked Example</h3>
+<p>A student has built a small arcade game for a 72 Hz target (13.9 ms). In OVR Metrics, the frame rate keeps dropping to the mid-50s during play, and the stale frame count is climbing.</p>
+<ol type="1">
+<li><strong>Baseline.</strong> The Profiler shows the GPU taking around 17 ms in busy moments, while the CPU takes about 8 ms. The frame is <strong>GPU-bound</strong>, so optimising scripts would not help.</li>
+<li><strong>Hypothesis.</strong> The student suspects the large scene geometry. The Frame Debugger shows that the environment is already batched, so this is probably not the cause.</li>
+<li><strong>Finding.</strong> A single smoke particle system in front of the player covers most of the screen with overlapping transparent layers. This is heavy <strong>overdraw</strong>.</li>
+<li><strong>Change one thing.</strong> Reduce the particle count and the particle size, leaving everything else alone.</li>
+<li><strong>Measure again.</strong> GPU time falls to about 12 ms and the stale frames stop.</li>
+</ol>
+<p>The student’s first guess was the environment. The measurement pointed to one particle effect. The fix cost almost no visual quality, and it was found in minutes, not days.</p>
+<hr>
+</section>
+</section>
+<section id="cutting-scope" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="cutting-scope"><span class="header-section-number">8</span> 6. Cutting Scope</h2>
+<p>Sometimes the cheap fixes are not enough. If the scene is still over budget after batching, simpler materials and sensible use of foveation, the correct optimisation is to <strong>reduce what the scene asks for</strong>:</p>
+<ul>
+<li>Fewer objects, and simpler materials</li>
+<li>A smaller play space</li>
+<li>Fewer simultaneous effects, lights and particles</li>
+<li>Lower-detail models at a distance</li>
+<li>A lower refresh rate target, chosen deliberately and early</li>
+</ul>
+<p>This is a <strong>design decision</strong> and an <strong>accessibility decision</strong>. It is not a failure. A simpler experience that holds its frame rate is <strong>better</strong> than a rich experience that makes people feel unwell, because a user who has to stop is not experiencing your design at all.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/week11/cut-scope-slide-16.png" class="img-fluid figure-img" style="width:70.0%" alt="A crowded scene with many objects and particles takes 19 milliseconds per frame, over the 13.9 millisecond budget; a focused vertical slice with a few objects takes 11 milliseconds and holds 72 Hz."></p>
+<figcaption>Cutting scope keeps the scene inside its frame budget.</figcaption>
+</figure>
+</div>
+<section id="scope-and-assessment-3" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="scope-and-assessment-3"><span class="header-section-number">8.1</span> Scope and Assessment 3</h3>
+<p>This connects directly to the advice in the <a href="../../01-assessments/04-assessment3.html">Assessment 3 brief</a>: <strong>depth over breadth</strong>. A polished vertical slice that holds a steady frame rate will:</p>
+<ul>
+<li>Score better in your <strong>SSQ</strong> results, because stable frames cause less sensory conflict (<a href="../../weeks/05-week-05/04-ssq-questionnaire.html">SSQ</a>)</li>
+<li>Score better in your <strong>SUS</strong> results, because a stuttering scene reads as a badly made one (<a href="../../weeks/06-week-06/06-sus-questionnaire.html">SUS</a>)</li>
+<li>Leave you time to polish the core interaction, because you are not spending the final weeks fighting performance problems</li>
+</ul>
+<p>Performance problems also contaminate your evaluation data. If a participant reports nausea, you will need to know whether it came from the interaction design or from dropped frames. Record your frame rate during testing so you can tell the difference.</p>
+<hr>
+</section>
+</section>
+<section id="summary" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="summary"><span class="header-section-number">9</span> Summary</h2>
+<p>Optimisation in XR is not about squeezing out the last frame; it is about staying above a threshold below which the experience becomes physically unpleasant. Late frames cause sensory conflict, and sensory conflict causes simulator sickness. On a tile-based mobile GPU, overdraw, transparency and full-screen effects are the expensive items, and material count drives CPU cost through draw calls. Batching and instancing reduce cost without a visible penalty, whereas foveated rendering and Application SpaceWarp buy performance at the price of artefacts. Whichever you choose, measure first on the headset, change one thing at a time, and measure again. Be willing to cut content rather than ship something uncomfortable.</p>
+<hr>
+</section>
+<section id="self-check-questions" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="self-check-questions"><span class="header-section-number">10</span> Self-Check Questions</h2>
+<ol type="1">
+<li>Calculate the frame time in milliseconds for 72 Hz, 90 Hz and 120 Hz. Why does choosing a higher refresh rate make optimisation harder?</li>
+<li>Explain in your own words why a late frame can cause simulator sickness. Which theory from Week 3 does it relate to?</li>
+<li>Why is looking at the average frame time not enough to judge whether a scene is comfortable?</li>
+<li>Why are transparent surfaces more expensive than opaque ones on a tile-based mobile GPU?</li>
+<li>Ten props in a scene each use a different material and are causing a CPU bottleneck. What would you change, and how would you confirm that it worked?</li>
+<li>Describe one situation where GPU instancing is appropriate and one where it is not.</li>
+<li>Compare fixed foveated rendering and eye-tracked foveated rendering. What does each save, and what does each cost?</li>
+<li>What does Application SpaceWarp do, and what artefacts does it introduce? Why is it described as a last resort?</li>
+<li>A profiler capture shows the CPU taking 7 ms and the GPU taking 16 ms in a 72 Hz scene. Which should you optimise first, and why?</li>
+<li>Why should you change only one thing at a time when optimising?</li>
+<li>Why is performance in the Unity editor an unreliable guide to performance on a Quest?</li>
+<li>For your own Assessment 3 prototype, identify the most likely performance bottleneck and describe what you would cut first if you had to.</li>
+</ol>
+<hr>
+</section>
+<section id="references" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="references"><span class="header-section-number">11</span> References</h2>
+<ul>
+<li>Abrash, M. (2014) <em>What VR could, should, and almost certainly will be within two years</em>. Steam Dev Days keynote.</li>
+<li>Jerald, J. (2015) <em>The VR Book: Human-Centered Design for Virtual Reality</em>. ACM Books / Morgan &amp; Claypool.</li>
+<li>Kennedy, R.S., Lane, N.E., Berbaum, K.S. &amp; Lilienthal, M.G. (1993) “Simulator sickness questionnaire: an enhanced method for quantifying simulator sickness.” <em>International Journal of Aviation Psychology</em>, 3(3), 203-220.</li>
+<li>LaViola, J.J. (2000) “A discussion of cybersickness in virtual environments.” <em>ACM SIGCHI Bulletin</em>, 32(1), 47-56.</li>
+<li>Meta. <em>Meta Quest developer documentation</em>: performance, foveated rendering, Application SpaceWarp and OVR Metrics Tool. <a href="https://developers.meta.com">developers.meta.com</a></li>
+<li>Unity Technologies. <em>Unity Manual</em>: Profiler, Frame Debugger, batching and GPU instancing documentation. <a href="https://docs.unity3d.com">docs.unity3d.com</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../weeks/11-week-11/01-slides.html" class="pagination-link" aria-label="Week 11 Slides">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 11 Slides</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../04-references/01-bibliography.html" class="pagination-link" aria-label="Bibliography">
+        <span class="nav-page-text">Bibliography</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<!-- Render ```mermaid fenced code blocks that Quarto leaves as plain code -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var fenced = document.querySelectorAll('pre.mermaid:not(.mermaid-js), pre.sourceCode.mermaid');
+    if (!fenced.length) return;
+    function run() {
+      mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+      fenced.forEach(function (pre) {
+        var code = pre.querySelector('code');
+        var text = code ? code.textContent : pre.textContent;
+        var wrapper = pre.closest('div.sourceCode') || pre;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = text;
+        if (wrapper.parentNode) wrapper.parentNode.replaceChild(div, wrapper);
+      });
+      mermaid.run({ querySelector: 'div.mermaid' });
+    }
+    if (window.mermaid) {
+      run();
+    } else {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+      s.onload = run;
+      document.head.appendChild(s);
+    }
+  });
+</script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+
+
+
+
+<!-- CourseFoundry feedback embed disabled -->
+</body></html>

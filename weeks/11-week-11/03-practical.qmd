@@ -1,0 +1,74 @@
+---
+title: "Week 11 Practical"
+subtitle: "Shipping the Options Menu"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+draft: true
+---
+
+::: {.callout-note}
+## TL;DR
+Add seated/standing mode with height calibration and a persistent comfort and accessibility options menu (vignette, turn mode, locomotion, captions, input remapping), then check on device that every option holds the target frame rate and breaks nothing.
+:::
+
+## Lab Overview
+
+**Duration**: 2 hours
+**Hardware**: Meta Quest 3 / 3S (Quest 2 acceptable)
+**Software**: Unity 2022 LTS, XR Interaction Toolkit 2.x, Meta XR SDK
+**Deliverable**: Lab journal entry + Unity scene (uploaded to VLE)
+
+---
+
+## Learning Objectives
+
+By the end of this lab you will be able to:
+
+- Implement seated mode with height and reach calibration
+- Build a comfort and accessibility options menu that persists between sessions
+- Verify comfort options on device without regressing performance or function
+
+---
+
+## Part 1: Calibration (35 min)
+
+### Task 1.1
+
+Add a seated/standing toggle and a height calibration step.
+
+### Task 1.2
+
+Verify that all interactive content remains reachable in seated mode.
+
+## Part 2: Options Menu (50 min)
+
+### Task 2.1
+
+Build a persistent options menu exposing vignette strength, turn mode, locomotion type and caption visibility.
+
+### Task 2.2
+
+Save settings between sessions and apply them at startup.
+
+### Task 2.3
+
+Add remappable input for at least the primary interaction.
+
+## Part 3: Regression Test (35 min)
+
+### Task 3.1
+
+Re-measure frame time with each comfort option enabled, using the profiling method from the Week 11 lab. A vignette that drops frames is not a comfort feature.
+
+### Task 3.2
+
+Test every option combination on device and confirm nothing has broken.
+
+---
+
+## Checkpoint
+
+A working accessibility and comfort options menu, verified on device and holding the target refresh rate, ready for peer evaluation in Week 12.

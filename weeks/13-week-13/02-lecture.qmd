@@ -1,0 +1,72 @@
+---
+title: "Week 13 Lecture Notes"
+subtitle: "Accessibility, Ethics & XR Futures"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+draft: true
+---
+
+::: {.callout-tip}
+## TL;DR
+- Physical, sensory and motion access -- seated modes, reach calibration, spatial captions, comfort options and flashing thresholds -- are accessibility features designed in early, not a settings menu added at the end.
+- Immersion amplifies persuasion, so dark patterns and lingering embodiment effects carry larger ethical obligations than on a screen.
+- Eye tracking, hand tracking and room capture are biometric and spatial data, and users are owed disclosure of what is collected and what leaves the device.
+- The field is moving through OpenXR and WebXR standardisation, AI in the XR stack, the display roadmap and non-game applications, and its claims deserve sceptical reading.
+- SDKs will change; the transferable skills of reasoning about presence, comfort, spatial interaction, accessibility and evaluation are what a portfolio should foreground.
+:::
+
+## Overview
+
+**Duration:** 1 hour
+
+The closing lecture asks two questions about responsibility, then looks forward. First, who is excluded by the design decisions you have made, and what does your design do to the people it does reach? This addresses the *affecting behaviour* strand of the module's indicative syllabus. Second, where is the field going, and how should you read the confident claims made about it? The session closes the module by situating this semester's skills in the current industry landscape and in your own portfolio.
+
+## Learning Objectives
+
+By the end of this lecture, students will be able to:
+
+- Audit an experience against concrete XR accessibility criteria
+- Recognise manipulative interaction patterns amplified by immersion
+- State what biometric and spatial data an application collects, and why
+- Evaluate a claim about XR's future against available evidence
+- Articulate a portfolio narrative from this semester's work
+
+---
+
+## 1. Physical and Sensory Access
+
+Seated and standing modes, height and reach calibration, one-handed play, and designing for users who cannot turn freely or reach the floor. Captions positioned in 3D space, colour and contrast in a stereo display, audio cues with visual equivalents, and subtitle legibility at varying depths.
+
+## 2. Motion and Photosensitivity
+
+Comfort options as accessibility features rather than preferences. Vignetting, snap turn, teleport-only modes, and flashing content thresholds.
+
+## 3. Affecting Behaviour
+
+Persuasive design with a headset's leverage. Dark patterns in immersive contexts, and embodiment effects that persist after the headset comes off.
+
+## 4. Data and Governance
+
+Eye tracking, hand tracking and room capture as biometric and spatial data. What is collected, what leaves the device, and what disclosure the user is owed.
+
+## 5. Where the Field Is Going
+
+- **Standardisation:** OpenXR as a cross-vendor runtime standard and WebXR as a distribution route without a store. What portability actually costs in practice.
+- **AI in the XR stack:** scene understanding, generative environment and asset creation, and conversational agents as an interaction modality. Where this is real today and where it is a demo.
+- **The display roadmap:** waveguides, microLED and the trajectory toward lightweight glasses. The physical constraints that keep resisting solution.
+- **Applications beyond games:** enterprise training, healthcare, education and industrial visualisation, where the sustained commercial activity currently is.
+
+## 6. Reading the Claims
+
+Funding cycles, adoption curves and the recurring pattern of XR hype. How to evaluate a prediction about this field sceptically.
+
+---
+
+## Summary
+
+Accessibility in XR is not a settings menu added at the end; the decisions that exclude people were made weeks earlier. And because immersion increases influence, the ethical obligations on an XR designer are correspondingly larger than on a screen.
+
+The specific SDKs you learned this semester will change. The transferable skills -- reasoning about presence, comfort, spatial interaction, accessibility and evaluation -- will not, and those are what a portfolio should foreground.
